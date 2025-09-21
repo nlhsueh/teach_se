@@ -14,12 +14,12 @@
 test mermaid
 
 ```mermaid
-graph TD;
+graph TD
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-    
+
 [Slide](
 https://docs.google.com/presentation/d/17drPflem_2jq_6JBynaP7qkHcIwD8p5b/edit?usp=sharing&ouid=109022309423128079509&rtpof=true&sd=true)
 
