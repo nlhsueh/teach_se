@@ -11,16 +11,6 @@
 
 ---
 
-test mermaid
-
-```mermaid
-graph TD
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```    
-
 [Slide](
 https://docs.google.com/presentation/d/17drPflem_2jq_6JBynaP7qkHcIwD8p5b/edit?usp=sharing&ouid=109022309423128079509&rtpof=true&sd=true)
 
@@ -51,7 +41,24 @@ https://docs.google.com/presentation/d/17drPflem_2jq_6JBynaP7qkHcIwD8p5b/edit?us
 
 Readers of different types of requirements specification 
 
-![image](https://hackmd.io/_uploads/Hyjgd-Ipp.png)
+<!-- ![image](https://hackmd.io/_uploads/Hyjgd-Ipp.png) -->
+
+**User Requirement Definition**
+
+> **1.** The MHC-PMS shall generate monthly management reports showing the cost of drugs prescribed by each clinic during that month.
+
+**System Requirements Specification**
+
+ > 1.1 On the last working day of each month, a summary of the drugs prescribed, their cost, and the prescribing clinics shall be generated.
+
+ > 1.2 The system shall automatically generate the report for printing after 17.30 on the last working day of the month.
+ 
+ > 1.3 A report shall be created for each clinic and shall list the individual drug names, the total number of prescriptions, the number of doses prescribed, and the total cost of the prescribed drugs.
+ 
+ > 1.4 If drugs are available in different dose units (e.g., 10 mg, 20 mg) separate reports shall be created for each dose unit.
+ 
+ > 1.5 Access to all cost reports shall be restricted to authorized users listed on a management access control list.
+
 
 #### System stakeholders
 * Any person or organization who is affected by the system in some way and so who has a legitimate interest
@@ -124,7 +131,33 @@ Readers of different types of requirements specification
 
 #### Types of nonfunctional requirement 
 
-![image](https://hackmd.io/_uploads/HJYKO-8TT.png)
+<!-- ![image](https://hackmd.io/_uploads/HJYKO-8TT.png) -->
+
+```mermaid
+graph TD
+    A[Non-Functional Reqt.] --> B[Product Reqt.]
+    A ----> C[Organizational Reqt.]
+    A --> D[External Reqt.]
+
+    B --> F[Dependability Reqt.]
+    B ---> E[Efficiency Reqt.]
+    B --> G[Security Reqt.]
+    
+    C ---> H[Environmental Reqt.]
+    C --> I[Operational Reqt.]
+    C --> J[Development Reqt.]
+    C ---> K[Legislative Reqt.]
+    
+    D --> L[Regulatory Reqt.]
+    D --> M[Ethical Reqt.]
+    
+    E ---> N[Usability Reqt.]
+    E --> O[Performance Reqt.]
+    E --> P[Space Reqt.]
+    
+    K --> Q[Accounting Reqt.]
+    K --> R[Safety/Security Reqt.]
+```
 
 #### Non-functional requirements implementation
 * Non-functional requirements may affect the **overall** architecture of a system rather than the individual components. 
@@ -204,7 +237,6 @@ Property and Measure
 :::
 
 ---
----
 
 ## 3. Requirement Engineering processes
 
@@ -232,11 +264,18 @@ fig-reqt-elicitation-analysis-process
 
 ##### fig-reqt-elicitation-analysis-process
 
-<img src=https://hackmd.io/_uploads/Hk2p1MZAp.png width="400">
+<!-- <img src=https://hackmd.io/_uploads/Hk2p1MZAp.png width="400"> -->
 
-:::info
-:+1: 互動與挖掘、分類與組織、排序與協商、文件化
-:::
+
+```mermaid
+graph TD
+    A[1- Reqt. Discovery] --> B[2- Reqt. Classification and Organization]
+    B --> C[3- Reqt. Prioritization and Negotiation]
+    C --> D[4- Reqt. Specification]
+    D --> A
+```
+
+> 互動與挖掘、分類與組織、排序與協商、文件化
 
 ##### fig-reqt-elicitation
 
@@ -440,8 +479,47 @@ Scenario:
 * High-level graphical model supplemented by more detailed tabular description.
 * UML **sequence diagrams** may be used to add detail to use-cases by showing the sequence of event processing in the system.
 
-![image](https://hackmd.io/_uploads/rJ81znlJJx.png)
+<!-- ![image](https://hackmd.io/_uploads/rJ81znlJJx.png) -->
 
+
+### Mermaid 程式碼
+
+```plantuml
+@startuml
+left to right direction
+skinparam actorStyle hollow
+
+' 宣告參與者 (Actors)
+actor "Medical receptionist" as Receptionist
+actor "Manager"
+actor "Nurse"
+actor "Doctor"
+
+' 宣告系統邊界 (System Boundary)
+rectangle "Medical System" {
+    ' 宣告用例 (Use Cases)
+    (Register patient) as register
+    (View personal info.) as personal_info
+    (Export statistics) as statistics
+    (Generate report) as report
+    (View record) as view_record
+    (Edit record) as edit_record
+    (Setup consultation) as consultation
+}
+
+' 建立關聯 (Relations)
+Receptionist -- register
+Receptionist -- personal_info
+Manager -- statistics
+Manager -- report
+Nurse -- view_record
+Nurse -- edit_record
+Doctor -- view_record
+Doctor -- edit_record
+Doctor -- consultation
+
+@enduml
+```
 ---
 
 ### B. Requirements validation
