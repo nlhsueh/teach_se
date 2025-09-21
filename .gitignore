@@ -1,0 +1,20 @@
+/Lecture/*.pdf
+/Lecture/slides
+/Lecture/*.sh
+/Lecture/*.css
+/*.pdf
+/HW/
+
+# Ignore IDE directories and project files
+**/.settings/
+**/.vscode/
+
+# Ignore OS-specific files
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore log files
+**/*.log
+
+# Ignore environment configuration files
+**/.env
