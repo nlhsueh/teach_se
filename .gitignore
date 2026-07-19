@@ -4,6 +4,8 @@
 /Lecture/*.css
 /*.pdf
 /HW/
+/quiz_exam/
+/etc/
 
 # Ignore IDE directories and project files
 **/.settings/
