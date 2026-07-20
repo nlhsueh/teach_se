@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 250" width="100%" height="100%">
+  <rect x="10" y="10" width="630" height="230" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <text x="325" y="38" fill="#0b3c5d" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">White-Box Code Coverage Levels</text>
+
+  <!-- 1. Statement Coverage -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="180" height="150" rx="8" fill="#0b3c5d"/>
+    <text x="90" y="30" fill="#ffffff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Statement Coverage</text>
+    <line x1="15" y1="42" x2="165" y2="42" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="90" y="70" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">Ensures every executable</text>
+    <text x="90" y="90" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">line of code is executed</text>
+    <text x="90" y="110" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">at least once.</text>
+    <rect x="20" y="123" width="140" height="20" rx="4" fill="#328cc1"/>
+    <text x="90" y="137" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Basic Baseline</text>
+  </g>
+
+  <!-- 2. Branch / Decision Coverage -->
+  <g transform="translate(235, 60)">
+    <rect x="0" y="0" width="180" height="150" rx="8" fill="#328cc1"/>
+    <text x="90" y="30" fill="#ffffff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Branch Coverage</text>
+    <line x1="15" y1="42" x2="165" y2="42" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <text x="90" y="70" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">Ensures every True/False</text>
+    <text x="90" y="90" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">branch of control flow</text>
+    <text x="90" y="110" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">is evaluated.</text>
+    <rect x="20" y="123" width="140" height="20" rx="4" fill="#0b3c5d"/>
+    <text x="90" y="137" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Stronger Guarantee</text>
+  </g>
+
+  <!-- 3. Path Coverage -->
+  <g transform="translate(440, 60)">
+    <rect x="0" y="0" width="180" height="150" rx="8" fill="#0b3c5d"/>
+    <text x="90" y="30" fill="#ffffff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">Path Coverage</text>
+    <line x1="15" y1="42" x2="165" y2="42" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="90" y="70" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">Tests all possible</text>
+    <text x="90" y="90" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">execution paths through</text>
+    <text x="90" y="110" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">the program graph.</text>
+    <rect x="20" y="123" width="140" height="20" rx="4" fill="#328cc1"/>
+    <text x="90" y="137" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Most Rigorous</text>
+  </g>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%" height="100%">
+  <!-- Root Node -->
+  <rect x="250" y="20" width="200" height="45" rx="8" fill="#0b3c5d" stroke="none" stroke-width="0"/>
+  <text x="350" y="48" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Non-Functional Reqt.</text>
+
+  <!-- Connectors from Root -->
+  <path d="M 350 65 L 120 110 M 350 65 L 350 110 M 350 65 L 580 110" fill="none" stroke="#328cc1" stroke-width="2"/>
+
+  <!-- Level 1 Nodes -->
+  <!-- Product -->
+  <rect x="30" y="110" width="180" height="40" rx="6" fill="#328cc1" stroke="none" stroke-width="0"/>
+  <text x="120" y="135" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Product Requirements</text>
+
+  <!-- Organizational -->
+  <rect x="260" y="110" width="180" height="40" rx="6" fill="#328cc1" stroke="none" stroke-width="0"/>
+  <text x="350" y="135" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Organizational Reqt.</text>
+
+  <!-- External -->
+  <rect x="490" y="110" width="180" height="40" rx="6" fill="#328cc1" stroke="none" stroke-width="0"/>
+  <text x="580" y="135" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">External Requirements</text>
+
+  <!-- Sub-nodes Product -->
+  <rect x="20" y="180" width="90" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="65" y="200" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Usability</text>
+
+  <rect x="125" y="180" width="90" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="170" y="200" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Efficiency</text>
+
+  <rect x="20" y="220" width="90" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="65" y="240" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Dependability</text>
+
+  <rect x="125" y="220" width="90" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="170" y="240" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Security</text>
+
+  <!-- Sub-nodes Organizational -->
+  <rect x="250" y="180" width="95" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="297" y="200" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Environmental</text>
+
+  <rect x="355" y="180" width="95" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="402" y="200" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Operational</text>
+
+  <rect x="300" y="220" width="95" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="347" y="240" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Development</text>
+
+  <!-- Sub-nodes External -->
+  <rect x="480" y="180" width="95" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="527" y="200" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Regulatory</text>
+
+  <rect x="585" y="180" width="95" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="632" y="200" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Ethical</text>
+
+  <rect x="530" y="220" width="95" height="30" rx="4" fill="#e1f5fe" stroke="none" stroke-width="0"/>
+  <text x="577" y="240" fill="#0b3c5d" font-family="Arial" font-size="11" text-anchor="middle">Legislative</text>
+
+  <path d="M 120 150 L 65 180 M 120 150 L 170 180 M 120 150 L 65 220 M 120 150 L 170 220" fill="none" stroke="#b0bec5" stroke-width="1.5"/>
+  <path d="M 350 150 L 297 180 M 350 150 L 402 180 M 350 150 L 347 220" fill="none" stroke="#b0bec5" stroke-width="1.5"/>
+  <path d="M 580 150 L 527 180 M 580 150 L 632 180 M 580 150 L 577 220" fill="none" stroke="#b0bec5" stroke-width="1.5"/>
+</svg>

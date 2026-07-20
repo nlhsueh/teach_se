@@ -20,3 +20,7 @@
 
 # Ignore environment configuration files
 **/.env
+
+# Ignore agent skills and English markdown files for GitHub
+.agents/
+eng/*.md

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 270" width="100%" height="100%">
+  <rect x="10" y="10" width="660" height="250" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <text x="340" y="32" fill="#0b3c5d" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Binary Search EP Weak Coverage Test Suite (8 Test Cases R1 - R8)</text>
+
+  <!-- Table Header -->
+  <rect x="25" y="48" width="50" height="24" fill="#0b3c5d"/>
+  <text x="50" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Case</text>
+
+  <rect x="80" y="48" width="170" height="24" fill="#328cc1"/>
+  <text x="165" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Partition Rule Description</text>
+
+  <rect x="255" y="48" width="70" height="24" fill="#328cc1"/>
+  <text x="290" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Key</text>
+
+  <rect x="330" y="48" width="140" height="24" fill="#328cc1"/>
+  <text x="400" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Input Array (A)</text>
+
+  <rect x="475" y="48" width="180" height="24" fill="#0b3c5d"/>
+  <text x="565" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Expected Output (Found, Index)</text>
+
+  <!-- Row 1: R1 -->
+  <rect x="25" y="74" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="89" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R1</text>
+  <rect x="80" y="74" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="89" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">1 element, Found</text>
+  <rect x="255" y="74" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="89" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <rect x="330" y="74" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="89" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[5]</text>
+  <rect x="475" y="74" width="180" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="565" y="89" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">(Found=True, Index=0)</text>
+
+  <!-- Row 2: R2 -->
+  <rect x="25" y="98" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="113" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R2</text>
+  <rect x="80" y="98" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="113" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">1 element, Not Found</text>
+  <rect x="255" y="98" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="113" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <rect x="330" y="98" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="113" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[8]</text>
+  <rect x="475" y="98" width="180" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="565" y="113" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">(Found=False, Index=-1)</text>
+
+  <!-- Row 3: R3 -->
+  <rect x="25" y="122" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="137" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R3</text>
+  <rect x="80" y="122" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="137" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Multi elements, First Pos (c1)</text>
+  <rect x="255" y="122" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="137" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <rect x="330" y="122" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="137" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[5, 12, 20]</text>
+  <rect x="475" y="122" width="180" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="565" y="137" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">(Found=True, Index=0)</text>
+
+  <!-- Row 4: R4 -->
+  <rect x="25" y="146" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="161" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R4</text>
+  <rect x="80" y="146" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="161" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Multi elements, Mid Pos (cm)</text>
+  <rect x="255" y="146" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="161" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">12</text>
+  <rect x="330" y="146" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="161" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[5, 12, 20]</text>
+  <rect x="475" y="146" width="180" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="565" y="161" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">(Found=True, Index=1)</text>
+
+  <!-- Row 5: R5 -->
+  <rect x="25" y="170" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="185" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R5</text>
+  <rect x="80" y="170" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="185" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Multi elements, Last Pos (cl)</text>
+  <rect x="255" y="170" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="185" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">20</text>
+  <rect x="330" y="170" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="185" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[5, 12, 20]</text>
+  <rect x="475" y="170" width="180" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="565" y="185" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">(Found=True, Index=2)</text>
+
+  <!-- Row 6: R6 -->
+  <rect x="25" y="194" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="209" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R6</text>
+  <rect x="80" y="194" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="209" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Multi elements, Not Found</text>
+  <rect x="255" y="194" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="209" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">99</text>
+  <rect x="330" y="194" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="209" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[5, 12, 20]</text>
+  <rect x="475" y="194" width="180" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="565" y="209" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">(Found=False, Index=-1)</text>
+
+  <!-- Row 7: R7 -->
+  <rect x="25" y="218" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="233" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R7</text>
+  <rect x="80" y="218" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="233" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">0 elements (Empty Array)</text>
+  <rect x="255" y="218" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="233" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">5</text>
+  <rect x="330" y="218" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="233" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[]</text>
+  <rect x="475" y="218" width="180" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="565" y="233" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">(Found=False, Index=-1)</text>
+
+  <!-- Row 8: R8 -->
+  <rect x="25" y="242" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="257" fill="#c62828" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">R8</text>
+  <rect x="80" y="242" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="257" fill="#c62828" font-family="Arial" font-size="9" text-anchor="middle">Invalid Input / Null Key</text>
+  <rect x="255" y="242" width="70" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="290" y="257" fill="#c62828" font-family="Arial" font-size="9" text-anchor="middle">null</text>
+  <rect x="330" y="242" width="140" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="400" y="257" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">[5, 12, 20]</text>
+  <rect x="475" y="242" width="180" height="22" fill="#ffebee" stroke="#c62828"/>
+  <text x="565" y="257" fill="#c62828" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">ERROR: Invalid Input</text>
+</svg>

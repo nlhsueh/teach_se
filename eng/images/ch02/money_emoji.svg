@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <!-- Money Bag Emoji Vector Graphic -->
+  <!-- Bag Ties / Ribbon -->
+  <path d="M 80,42 L 68,28 C 65,24 62,28 66,33 L 74,42 Z" fill="#d97706"/>
+  <path d="M 80,42 L 92,28 C 95,24 98,28 94,33 L 86,42 Z" fill="#d97706"/>
+  <circle cx="80" cy="44" r="8" fill="#b45309"/>
+
+  <!-- Money Bag Main Body -->
+  <path d="M 52,48 C 65,46 95,46 108,48 C 128,52 142,75 138,105 C 134,135 112,148 80,148 C 48,148 26,135 22,105 C 18,75 32,52 52,48 Z" fill="#f59e0b"/>
+  <!-- Highlight & Gradient overlay -->
+  <path d="M 58,52 C 70,50 90,50 102,52 C 118,56 128,74 125,98 C 122,122 104,136 78,136 C 54,136 38,124 35,98 C 32,74 42,56 58,52 Z" fill="#fbbf24" opacity="0.6"/>
+
+  <!-- Dollar Sign Badge -->
+  <circle cx="80" cy="95" r="26" fill="#15803d"/>
+  <circle cx="80" cy="95" r="23" fill="#16a34a"/>
+
+  <!-- Dollar Symbol -->
+  <text x="80" y="106" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-size="32" font-weight="900" fill="#ffffff" text-anchor="middle">$</text>
+
+  <!-- Gold Coins Accents at base -->
+  <ellipse cx="40" cy="138" rx="14" ry="7" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+  <ellipse cx="40" cy="135" rx="14" ry="7" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+  <text x="40" y="138" font-family="Arial" font-size="8" font-weight="bold" fill="#b45309" text-anchor="middle">$</text>
+
+  <ellipse cx="120" cy="138" rx="14" ry="7" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+  <ellipse cx="120" cy="135" rx="14" ry="7" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+  <text x="120" y="138" font-family="Arial" font-size="8" font-weight="bold" fill="#b45309" text-anchor="middle">$</text>
+</svg>

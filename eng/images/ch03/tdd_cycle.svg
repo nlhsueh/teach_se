@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="100%" height="100%">
+  <!-- Definitions for arrow markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#328cc1"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: RED -->
+  <g transform="translate(50, 90)">
+    <rect x="0" y="0" width="140" height="90" rx="10" fill="#e57373" stroke="none" stroke-width="0"/>
+    <text x="70" y="38" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">1. RED</text>
+    <text x="70" y="60" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">Write a failing test</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M 200 135 L 225 135" fill="none" stroke="#328cc1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: GREEN -->
+  <g transform="translate(235, 90)">
+    <rect x="0" y="0" width="140" height="90" rx="10" fill="#81c784" stroke="none" stroke-width="0"/>
+    <text x="70" y="38" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">2. GREEN</text>
+    <text x="70" y="60" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">Make the test pass</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M 385 135 L 410 135" fill="none" stroke="#328cc1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: REFACTOR -->
+  <g transform="translate(420, 90)">
+    <rect x="0" y="0" width="140" height="90" rx="10" fill="#64b5f6" stroke="none" stroke-width="0"/>
+    <text x="70" y="38" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">3. REFACTOR</text>
+    <text x="70" y="60" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">Clean &amp; optimize code</text>
+  </g>
+
+  <!-- Loop arrow from Refactor back to Red -->
+  <path d="M 490 190 C 490 260, 120 260, 120 190" fill="none" stroke="#328cc1" stroke-dasharray="5,5" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="305" y="248" fill="#0b3c5d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Repeat for Next Requirement</text>
+</svg>
