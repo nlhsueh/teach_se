@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280">
+  <rect x="10" y="10" width="680" height="260" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <text x="350" y="34" fill="#0b3c5d" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">The SOLID Object-Oriented Design Principles</text>
+
+  <!-- SRP -->
+  <g transform="translate(25, 55)">
+    <rect x="0" y="0" width="120" height="190" rx="6" fill="#0b3c5d"/>
+    <text x="60" y="25" fill="#ffffff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">S</text>
+    <text x="60" y="45" fill="#328cc1" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Single Responsibility</text>
+    <line x1="10" y1="52" x2="110" y2="52" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="60" y="80" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">A class should</text>
+    <text x="60" y="95" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">have only ONE</text>
+    <text x="60" y="110" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">reason to change.</text>
+    <rect x="10" y="135" width="100" height="40" rx="4" fill="#328cc1"/>
+    <text x="60" y="152" fill="#ffffff" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle">High Cohesion</text>
+    <text x="60" y="165" fill="#ffffff" font-family="Arial" font-size="8" text-anchor="middle">Avoid God Classes</text>
+  </g>
+
+  <!-- OCP -->
+  <g transform="translate(155, 55)">
+    <rect x="0" y="0" width="120" height="190" rx="6" fill="#328cc1"/>
+    <text x="60" y="25" fill="#ffffff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+    <text x="60" y="45" fill="#0b3c5d" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Open / Closed</text>
+    <line x1="10" y1="52" x2="110" y2="52" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <text x="60" y="80" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">Open for</text>
+    <text x="60" y="95" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">extension,</text>
+    <text x="60" y="110" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">closed for</text>
+    <text x="60" y="125" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">modification.</text>
+    <rect x="10" y="135" width="100" height="40" rx="4" fill="#0b3c5d"/>
+    <text x="60" y="152" fill="#ffffff" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle">Polymorphism</text>
+    <text x="60" y="165" fill="#ffffff" font-family="Arial" font-size="8" text-anchor="middle">Strategy Pattern</text>
+  </g>
+
+  <!-- LSP -->
+  <g transform="translate(285, 55)">
+    <rect x="0" y="0" width="120" height="190" rx="6" fill="#0b3c5d"/>
+    <text x="60" y="25" fill="#ffffff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">L</text>
+    <text x="60" y="45" fill="#328cc1" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Liskov Substitution</text>
+    <line x1="10" y1="52" x2="110" y2="52" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="60" y="80" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">Subtypes must be</text>
+    <text x="60" y="95" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">substitutable</text>
+    <text x="60" y="110" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">for base types</text>
+    <text x="60" y="125" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">without errors.</text>
+    <rect x="10" y="135" width="100" height="40" rx="4" fill="#328cc1"/>
+    <text x="60" y="152" fill="#ffffff" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle">Subtyping Rule</text>
+    <text x="60" y="165" fill="#ffffff" font-family="Arial" font-size="8" text-anchor="middle">Square != Rectangle</text>
+  </g>
+
+  <!-- ISP -->
+  <g transform="translate(415, 55)">
+    <rect x="0" y="0" width="120" height="190" rx="6" fill="#328cc1"/>
+    <text x="60" y="25" fill="#ffffff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">I</text>
+    <text x="60" y="45" fill="#0b3c5d" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Interface Segregation</text>
+    <line x1="10" y1="52" x2="110" y2="52" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <text x="60" y="80" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">Prefer many</text>
+    <text x="60" y="95" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">small, specific</text>
+    <text x="60" y="110" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">interfaces over</text>
+    <text x="60" y="125" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">one fat interface.</text>
+    <rect x="10" y="135" width="100" height="40" rx="4" fill="#0b3c5d"/>
+    <text x="60" y="152" fill="#ffffff" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle">Role Interfaces</text>
+    <text x="60" y="165" fill="#ffffff" font-family="Arial" font-size="8" text-anchor="middle">No Unused Methods</text>
+  </g>
+
+  <!-- DIP -->
+  <g transform="translate(545, 55)">
+    <rect x="0" y="0" width="130" height="190" rx="6" fill="#0b3c5d"/>
+    <text x="65" y="25" fill="#ffffff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">D</text>
+    <text x="65" y="45" fill="#328cc1" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Dependency Inversion</text>
+    <line x1="10" y1="52" x2="120" y2="52" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="65" y="80" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">Depend on</text>
+    <text x="65" y="95" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">abstractions,</text>
+    <text x="65" y="110" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">not on concrete</text>
+    <text x="65" y="125" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">classes.</text>
+    <rect x="10" y="135" width="110" height="40" rx="4" fill="#328cc1"/>
+    <text x="65" y="152" fill="#ffffff" font-family="Arial" font-size="8" font-weight="bold" text-anchor="middle">Dependency Injection</text>
+    <text x="65" y="165" fill="#ffffff" font-family="Arial" font-size="8" text-anchor="middle">Decoupled Modules</text>
+  </g>
+</svg>

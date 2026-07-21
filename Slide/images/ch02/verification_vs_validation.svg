@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300" width="500" height="300">
+  <!-- Verification Box (Left) -->
+  <rect x="20" y="30" width="210" height="240" rx="10" fill="#0b3c5d" stroke="none" stroke-width="0"/>
+  <text x="125" y="70" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Verification</text>
+  <line x1="45" y1="85" x2="205" y2="85" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Question -->
+  <text x="125" y="120" fill="#328cc1" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">"Are we building the</text>
+  <text x="125" y="140" fill="#328cc1" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">product right?"</text>
+  
+  <!-- Description -->
+  <text x="125" y="180" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">• Conformance to Spec</text>
+  <text x="125" y="205" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">• Design Compliance</text>
+  <text x="125" y="230" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">• Inspections &amp; Testing</text>
+
+  <!-- Validation Box (Right) -->
+  <rect x="270" y="30" width="210" height="240" rx="10" fill="#328cc1" stroke="none" stroke-width="0"/>
+  <text x="375" y="70" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Validation</text>
+  <line x1="295" y1="85" x2="455" y2="85" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+  
+  <!-- Question -->
+  <text x="375" y="120" fill="#0b3c5d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">"Are we building the</text>
+  <text x="375" y="140" fill="#0b3c5d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">right product?"</text>
+  
+  <!-- Description -->
+  <text x="375" y="180" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">• Meets User Needs</text>
+  <text x="375" y="205" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">• Real-World Fitness</text>
+  <text x="375" y="230" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" text-anchor="middle">• Customer Acceptance</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" width="680" height="260">
+  <rect x="10" y="10" width="660" height="240" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <text x="340" y="35" fill="#0b3c5d" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">nextDate(month, day, year) Boundary &amp; Equivalence Classes</text>
+
+  <!-- 31-Day Months -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="195" height="170" rx="6" fill="#0b3c5d"/>
+    <text x="97" y="25" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">31-Day Months</text>
+    <text x="97" y="42" fill="#328cc1" font-family="Arial" font-size="10" text-anchor="middle">(Jan, Mar, May, Jul, Aug, Oct, Dec)</text>
+    <line x1="15" y1="52" x2="180" y2="52" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="97" y="75" fill="#e1f5fe" font-family="Arial" font-size="10" text-anchor="middle">• Day = 1 to 30 &amp;rarr; Day + 1</text>
+    <text x="97" y="100" fill="#e1f5fe" font-family="Arial" font-size="10" text-anchor="middle">• Day = 31 &amp;rarr; Next Month, Day 1</text>
+    <text x="97" y="125" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">• Dec 31 &amp;rarr; Jan 1, Year + 1</text>
+    <rect x="15" y="138" width="165" height="20" rx="4" fill="#328cc1"/>
+    <text x="97" y="152" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">End of Year Boundary</text>
+  </g>
+
+  <!-- 30-Day Months -->
+  <g transform="translate(242, 60)">
+    <rect x="0" y="0" width="195" height="170" rx="6" fill="#328cc1"/>
+    <text x="97" y="25" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">30-Day Months</text>
+    <text x="97" y="42" fill="#0b3c5d" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">(Apr, Jun, Sep, Nov)</text>
+    <line x1="15" y1="52" x2="180" y2="52" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <text x="97" y="75" fill="#ffffff" font-family="Arial" font-size="10" text-anchor="middle">• Day = 1 to 29 &amp;rarr; Day + 1</text>
+    <text x="97" y="100" fill="#ffffff" font-family="Arial" font-size="10" text-anchor="middle">• Day = 30 &amp;rarr; Next Month, Day 1</text>
+    <text x="97" y="125" fill="#ffebee" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">• Day = 31 &amp;rarr; ERROR (Invalid Day)</text>
+    <rect x="15" y="138" width="165" height="20" rx="4" fill="#0b3c5d"/>
+    <text x="97" y="152" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">30-Day Limit Boundary</text>
+  </g>
+
+  <!-- February &amp; Leap Years -->
+  <g transform="translate(455, 60)">
+    <rect x="0" y="0" width="195" height="170" rx="6" fill="#0b3c5d"/>
+    <text x="97" y="25" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">February (Leap Rules)</text>
+    <text x="97" y="42" fill="#328cc1" font-family="Arial" font-size="10" text-anchor="middle">(Feb 28 vs. Feb 29)</text>
+    <line x1="15" y1="52" x2="180" y2="52" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="97" y="75" fill="#e1f5fe" font-family="Arial" font-size="10" text-anchor="middle">• Non-Leap (2023): Feb 28 &amp;rarr; Mar 1</text>
+    <text x="97" y="100" fill="#e1f5fe" font-family="Arial" font-size="10" text-anchor="middle">• Leap Year (2024): Feb 28 &amp;rarr; Feb 29</text>
+    <text x="97" y="125" fill="#e1f5fe" font-family="Arial" font-size="10" text-anchor="middle">• Leap Year (2024): Feb 29 &amp;rarr; Mar 1</text>
+    <rect x="15" y="138" width="165" height="20" rx="4" fill="#328cc1"/>
+    <text x="97" y="152" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">Leap Century Rules</text>
+  </g>
+</svg>

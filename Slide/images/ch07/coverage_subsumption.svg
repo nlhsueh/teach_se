@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520">
+  <defs>
+    <marker id="arrow-up" viewBox="0 0 10 10" refX="5" refY="2" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 10 L 5 0 L 10 10 z" fill="#c62828" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="32" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="bold" fill="#0b3c5d" text-anchor="middle">White-Box Code Coverage Subsumption Hierarchy</text>
+  <text x="480" y="55" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#555" text-anchor="middle">Higher levels subsume (guarantee) all lower coverage criteria below them</text>
+
+  <!-- Side Indicator Arrow (Left Side) -->
+  <path d="M 50 480 L 50 100" stroke="#c62828" stroke-width="3" marker-end="url(#arrow-up)"/>
+  <text x="40" y="290" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle" transform="rotate(-90 40 290)">STRONGER / STRICTER CRITERIA</text>
+
+  <!-- Side Indicator Arrow (Right Side) -->
+  <path d="M 910 480 L 910 100" stroke="#c62828" stroke-width="3" marker-end="url(#arrow-up)"/>
+  <text x="920" y="290" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle" transform="rotate(90 920 290)">SUBSUMES LOWER LEVELS</text>
+
+  <!-- Pyramid Level 6: Path Coverage (PC) - TOP -->
+  <polygon points="480,80 340,140 620,140" fill="#b71c1c"/>
+  <text x="480" y="112" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Path Coverage (PC)</text>
+  <text x="480" y="130" font-family="Arial" font-size="11" fill="#ffcdd2" text-anchor="middle">Tests all entry-to-exit paths</text>
+
+  <!-- Pyramid Level 5: Multiple Condition Combination (MCC) -->
+  <polygon points="340,144 270,205 690,205 620,144" fill="#d84315"/>
+  <text x="480" y="174" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Multiple Condition Combination (MCC)</text>
+  <text x="480" y="194" font-family="Arial" font-size="12" fill="#ffe0b2" text-anchor="middle">Tests all 2ⁿ boolean condition combinations</text>
+
+  <!-- Pyramid Level 4: MC/DC -->
+  <polygon points="270,209 200,270 760,270 690,209" fill="#e65100"/>
+  <text x="480" y="238" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">MC/DC (Modified Condition / Decision Coverage)</text>
+  <text x="480" y="258" font-family="Arial" font-size="12" fill="#ffe0b2" text-anchor="middle">Condition Independence • DO-178B/C Safety Standard (N+1 Tests)</text>
+
+  <!-- Pyramid Level 3: Branch & Condition Coverage (BCC) -->
+  <polygon points="200,274 140,335 820,335 760,274" fill="#1565c0"/>
+  <text x="480" y="303" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Branch &amp; Condition Coverage (BCC)</text>
+  <text x="480" y="323" font-family="Arial" font-size="12" fill="#bbdefb" text-anchor="middle">Requires both decision outcomes and condition truths</text>
+
+  <!-- Pyramid Level 2: Branch / Decision Coverage (BC / DC) -->
+  <polygon points="140,339 80,400 880,400 820,339" fill="#2e7d32"/>
+  <text x="480" y="368" font-family="Arial" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Branch / Decision Coverage (BC / DC)</text>
+  <text x="480" y="388" font-family="Arial" font-size="12" fill="#c8e6c9" text-anchor="middle">Tests all Decision True/False outcomes (BC100 → SC100)</text>
+
+  <!-- Pyramid Level 1: Statement Coverage (SC) - BASE -->
+  <polygon points="80,404 20,470 940,470 880,404" fill="#43a047"/>
+  <text x="480" y="434" font-family="Arial" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Statement Coverage (SC / SC100) — Baseline Requirement</text>
+  <text x="480" y="456" font-family="Arial" font-size="13" fill="#e8f5e9" text-anchor="middle">Executes every code statement at least once (Weakest Criterion)</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="100%" height="100%">
+  <!-- US Stocks Card (Left) -->
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="300" height="240" rx="10" fill="#0b3c5d"/>
+    <text x="150" y="35" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">U.S. Stock Market</text>
+    <line x1="20" y1="50" x2="280" y2="50" stroke="#328cc1" stroke-width="1.5"/>
+
+    <text x="150" y="80" fill="#328cc1" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">15 Equities + CASH</text>
+    <text x="150" y="105" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">• Tech: AAPL, MSFT, NVDA, META</text>
+    <text x="150" y="125" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">• Finance &amp; Ind: JPM, V, XOM, CAT</text>
+    <text x="150" y="145" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">• Consumer &amp; Health: AMZN, PG, UNH</text>
+
+    <line x1="20" y1="165" x2="280" y2="165" stroke="#328cc1" stroke-width="1" opacity="0.5"/>
+    <text x="150" y="190" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Market Characteristics</text>
+    <text x="150" y="215" fill="#e1f5fe" font-family="Arial" font-size="11" text-anchor="middle">Mature, institutional, smooth price trends,</text>
+    <text x="150" y="230" fill="#e1f5fe" font-family="Arial" font-size="11" text-anchor="middle">rewards structural risk diversification.</text>
+  </g>
+
+  <!-- Polymarket Card (Right) -->
+  <g transform="translate(370, 20)">
+    <rect x="0" y="0" width="300" height="240" rx="10" fill="#328cc1"/>
+    <text x="150" y="35" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Polymarket Prediction</text>
+    <line x1="20" y1="50" x2="280" y2="50" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+
+    <text x="150" y="80" fill="#0b3c5d" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">10 Binary Contracts + CASH</text>
+    <text x="150" y="105" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">• "Fed rate cut in 2025?"</text>
+    <text x="150" y="125" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">• "US Recession in 2025?"</text>
+    <text x="150" y="145" fill="#ffffff" font-family="Arial" font-size="11" text-anchor="middle">• "Tether insolvent / USDT depeg?"</text>
+
+    <line x1="20" y1="165" x2="280" y2="165" stroke="#ffffff" stroke-width="1" opacity="0.5"/>
+    <text x="150" y="190" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Market Characteristics</text>
+    <text x="150" y="215" fill="#0b3c5d" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">Decentralized, high volatility, sharp jumps,</text>
+    <text x="150" y="230" fill="#0b3c5d" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">rewards rapid event-driven belief updating.</text>
+  </g>
+</svg>

@@ -1,0 +1,1503 @@
+// question: 0  name: Switch category to $course$/top/Design pattern/Creational DP
+$CATEGORY: $course$/top/Design pattern/Creational DP
+
+
+// question: 4783835  name: 選擇相對應的設計樣式
+::選擇相對應的設計樣式::[html]選擇相對應的設計樣式{
+	=[moodle]確保只生成一個物件 -> singleton
+	=[moodle]將物件生成延遲到子類別 -> factory method
+	=[moodle]將物件生成委託給另一物件 -> abstract factory
+	=[moodle]將一個複雜物件的建構與其表達分開 -> builder
+}
+
+
+// question: 4783844  name: Abstract factory 樣式中，abstract factory 內宣告 m 個抽象方法，表示
+::Abstract factory 樣式中，abstract factory 內宣告 m 個抽象方法，表示::[html]Abstract factory 樣式中，abstract factory 內宣告 m 個抽象方法，表示{
+	~[moodle]有 m 個系列
+	=[moodle]有 m 個零件
+}
+
+
+// question: 4783837  name: Abstract factory 樣式中，有 n 個 concrete factory，表示
+::Abstract factory 樣式中，有 n 個 concrete factory，表示::[html]Abstract factory 樣式中，有 n 個 concrete factory，表示{
+	=[moodle]有 n 個系列
+	~[moodle]有 n 個零件
+}
+
+
+// question: 4783842  name: Abstract factory 的目的為何？
+::Abstract factory 的目的為何？::[html]Abstract factory 的目的為何？{
+	~[moodle]把物件的生成延遲到子類別;
+	~[moodle]轉接兩個介面不同的物件
+	=[moodle]把同一系列的物件群的生成委託給一個物件
+	~[moodle]一次只能生成一個物件
+}
+
+
+// question: 4783840  name: Singleton 的目的為
+::Singleton 的目的為::[html]Singleton 的目的為{
+	~[moodle]快速的為陣列內每一個類別產生一個物件
+	=[moodle]讓一個類別只能產生一個物件
+	~[moodle]讓一個套件只能產生一個類別
+	~[moodle]強迫一個類別只能有一個子類別
+}
+
+
+// question: 4783841  name: static method 的定義哪一個錯誤
+::static method 的定義哪一個錯誤::[html]static method 的定義哪一個錯誤{
+	~[moodle]不需產生物件就可以呼叫
+	~[moodle]Singleton 產生物件的方法是呼叫 static method
+	=[moodle]必須引用類別中的 instance variable
+	~[moodle]可以引用類別中的 static variable
+}
+
+
+// question: 4783843  name: 在 Abstract factory 設計樣式中，"設計階段" client 會與 "哪些" 類別關聯
+::在 Abstract factory 設計樣式中，"設計階段" client 會與 "哪些" 類別關聯::[html]<p>在 Abstract factory 設計樣式中，"設計階段" client 會與 "哪些" 類別關聯</p>{
+	~%50%[moodle]abstract factory
+	~[moodle]concrete factory
+	~%50%[moodle]abstract product
+	~[moodle]concrete product
+}
+
+
+// question: 4935133  name: 設計樣式的結構，通常用何種語言來表達?
+::設計樣式的結構，通常用何種語言來表達?::[html]設計樣式的結構，通常用何種語言來表達?{
+	=[moodle]UML 模組語言
+	~[moodle]Java
+	~[moodle]python
+	~[moodle]C++
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Structural DP
+$CATEGORY: $course$/top/Design pattern/Structural DP
+
+
+// question: 4783847  name: adaptor aim
+::adaptor aim::[html]Adaptor 的目的{
+	=[moodle]把兩個介面不相容的物件可以溝通合作
+	~[moodle]讓一個類別只能產生一個物件
+	~[moodle]讓一個物件可以有很多的觀者者，物件變動時，其觀察者物件可以跟著變動
+	~[moodle]提供一個可以修改介面的介面，讓物件可以溝通
+}
+
+
+// question: 4783848  name: adaptor role
+::adaptor role::[html]在 Adaptor 中，與 client 溝通的物件為{
+	=[moodle]Target
+	~[moodle]Adaptee
+}
+
+
+// question: 4935134  name: adaptor skill
+::adaptor skill::[html]Adaptor 運用的技巧為{
+	~[moodle]讓 Target 包含一個 Adaptor 的物件，轉而呼叫 Adaptee 的方法
+	=[moodle]設計一個 Target 的子類別 Adaptor，把 client 呼叫的方法轉而呼叫 Adaptee 的方法
+	~[moodle]設計一個 Adaptor 類別，呼叫 Target 與 Adaptee ，等於是作為兩者之間的中介，以降低耦合度
+}
+
+
+// question: 4783846  name: bridge aim
+::bridge aim::[html]Bridge 的目的為{
+	=[moodle]把抽象和實作抽離開來，使得兩者可以獨立的變化
+	~[moodle]設計一個橋樑，讓兩個不同介面的物件可以相互合作
+	~[moodle]設計一平台，使物件可以通過不同的管道重送訊息
+	~[moodle]把狀態與介面抽離開來，使兩個物件可以獨立的變化。
+}
+
+
+// question: 4935135  name: composite concept
+::composite concept::[html]關於 Composite, 何者對？{
+	=[moodle]對於 client, 複合物件與單元物件具備共通性，因此耦合力低
+	~[moodle]不論是複合物件與單元物件都可以透過 addComponent() 加入元件
+	~[moodle]複合物件可以包含單元物件，不可包含複合物件
+}
+
+
+// question: 4783850  name: composite role
+::composite role::[html]在 Composite 設計樣式中，不包含哪一個角色{
+	~[moodle]component
+	~[moodle]leaf
+	~[moodle]composite
+	=[moodle]decorator
+}
+
+
+// question: 4935136  name: composite- composite role
+::composite- composite role::[html]在 Composite 設計樣式中，Composite 角色 (複選){
+	~%25%[moodle]是 Component 的子類別
+	~%25%[moodle]可以包含許多 Component
+	~%25%[moodle]具備 addComponent() 的功能
+	~%25%[moodle]收到 client 請求後，通常會將請求轉送給他所包含的物件
+}
+
+
+// question: 0  name: Switch category to $course$/top/GROUND RULES
+$CATEGORY: $course$/top/GROUND RULES
+
+
+// question: 0  name: Switch category to $course$/top/GROUND RULES/Design principle
+$CATEGORY: $course$/top/GROUND RULES/Design principle
+
+
+// question: 4924202  name: age not saved
+::age not saved::[html]<p dir\="ltr">系統僅儲存生日資料，而不儲存年齡的目的是</p>{
+	=<p dir\="ltr" style\="text-align\: left;">不重複原則。</p>
+	~<p dir\="ltr" style\="text-align\: left;">開畢原則</p>
+	~<p dir\="ltr" style\="text-align\: left;">最少知識原則</p>
+	~<p dir\="ltr" style\="text-align\: left;">防護變異原則</p>
+	~<p dir\="ltr" style\="text-align\: left;">模組化原則</p>
+}
+
+
+// question: 4783856  name: comments
+::comments::[html]關於 防臭的註解 這個 bad smell, 何者正確{
+	~[moodle]程式一定要寫註解
+	~[moodle]程式的註解一定要採用公司的定義標準
+	=[moodle]避免用註解來說明寫壞的程式碼，應改善程式碼品質
+	~[moodle]程式註解也須定期維護，否則會臭掉
+}
+
+
+// question: 4783858  name: coupling
+::coupling::[html]以下原則何者錯誤?{
+	~[moodle]「相依反轉」說的是，高階的物件不該相依相依於低階，應該都相依於抽象
+	~[moodle]LSP 告訴我們概念上的一般化，不一定都有繼承關係
+	~[moodle]不重複原則，說的是資料和程式碼應該要避免重複
+	=[moodle]設計應該模組化，達到低內聚力，高耦合度
+}
+
+
+// question: 4783855  name: data clumps
+::data clumps::[html]常常會一起出現的資料卻沒有抽象成一個類別型態，是何種臭味？{
+	=[moodle]資料泥團 Data Clumps
+	~[moodle]依戀情結 Feature Envy
+	~[moodle]基本型別偏執 Primitive Obsession
+	~[moodle]狎暱關係 Inappropriate Intimacy
+}
+
+
+// question: 4783861  name: delegation
+::delegation::[html]關於 Delegation 委託，何者錯誤{
+	~[moodle]當有多重繼承需求時，delegation 常與 inheritance 合用
+	=[moodle]可以完全取代繼承，但比繼承要多寫一點程式碼
+	~[moodle]當 A 委託給 B，表示 A 內有一個 B 的 object reference
+	~[moodle]設計階段可以委託給一個抽象的類別或介面
+}
+
+
+// question: 4924199  name: demeter
+::demeter::[html]<p dir\="ltr" style\="text-align\: left;">如果程式出現 a.getB().getC().getD().m1(10, 20);</p><p dir\="ltr" style\="text-align\: left;">可能違法哪一個設計原則？</p>{
+	=dont talk to stranger<p dir\="ltr" style\="text-align\: left;"></p>
+	~介面污染<p dir\="ltr" style\="text-align\: left;"></p>
+	~<p dir\="ltr" style\="text-align\: left;">開閉原則</p>
+	~<p dir\="ltr" style\="text-align\: left;">不重複原則</p>
+}
+
+
+// question: 4783863  name: DIP
+::DIP::[html]Dependency Inversion Principle{
+	~[moodle]高階應該相依於低階模組
+	~[moodle]低階應該相依於高階模組
+	=[moodle]兩者應該相依於抽象
+	~[moodle]高階低階應該是朋友關係
+}
+
+
+// question: 4783860  name: generalization
+::generalization::[html]一般化原則（generalization）原則{
+	=[moodle]兩個有部分共通特性或行為的類別可以建立一個共同的父類別
+	~[moodle]具備共通特性與行為的物件可以為之設計一個類別
+	~[moodle]所定義的父類別必須為抽象類別
+}
+
+
+// question: 4783870  name: generalization
+::generalization::一般化原則（generalization）原則{
+	=兩個有部分共通特性或行為的類別可以建立一個共同的父類別
+	~具備共通特性與行為的物件可以為之設計一個類別
+	~所定義的父類別必須為抽象類別
+}
+
+
+// question: 4783862  name: interface pollution
+::interface pollution::[html]X 必須為 A 型態，但因為他已經繼承了 B 無法再繼承 A，因此我們讓 B 繼承 A，因此造成何種問題{
+	=[moodle]介面污染
+	~[moodle]無法滿足 Liskov Subsitution Principle
+	~[moodle]無法滿足 Dependency Inversion Principle
+	~[moodle]控制反轉
+}
+
+
+// question: 4783859  name: IoC
+::IoC::[html]關於控制反轉, 何者錯誤{
+	~[moodle]英文是 Inversion of Control
+	~[moodle]是軟體框架的重要原則
+	~[moodle]又稱為好萊嗚原則
+	=[moodle]目的是避免介面污染
+}
+
+
+// question: 4783879  name: iterator
+::iterator::[html]<p>要取得一個集合物件內所有物件的，為何不直接從此集合物件取值？還需要先取得其瀏覽物件(iterator)？</p>{
+	~<p>瀏覽物件的功能較為強大</p>
+	~<p>瀏覽物件是View, 透過如此可以將Model 與View 分離</p>
+	=<p>可以避免修改到集合物件的內容</p>
+	~<p>避免傳遞過多的資料，速度較快</p>
+}
+
+
+// question: 4924201  name: liskov
+::liskov::[html]<p dir\="ltr" style\="text-align\: left;">以下何者是 Liskov 取代原則&nbsp;</p>{
+	~抽象類別可以取代介面<p dir\="ltr" style\="text-align\: left;"></p>
+	=引用到父類別的方法必須要能夠在不知道其子類別為何的情形下也能夠套用在子類別上。<p dir\="ltr" style\="text-align\: left;"></p>
+	~protected 的屬性可以取代 private 的屬性<p dir\="ltr" style\="text-align\: left;"></p>
+	~<p dir\="ltr" style\="text-align\: left;">當 A 物件包含 B 物件時，則 A 物件可以取代 B 物件</p>
+}
+
+
+// question: 4924200  name: ocp
+::ocp::[html]<p dir\="ltr" style\="text-align\: left;">以下何者為 Open Close Principle?</p>{
+	~<p dir\="ltr" style\="text-align\: left;">物件的屬性要能適當地 Open (宣告為 public), 以及 Close (宣告為 private)</p>
+	=<p dir\="ltr" style\="text-align\: left;">擴充程式優於修改程式; open for extension, close for modification<br></p>
+	~多使用參數設計，不要設計太多物件模組<p dir\="ltr" style\="text-align\: left;"></p>
+	~<p dir\="ltr" style\="text-align\: left;">程式碼要採考量模組化，低耦合度，高內聚力</p>
+}
+
+
+// question: 4783857  name: parameter
+::parameter::[html]當參數過多時，可使用哪個方法來解決{
+	~[moodle]Parameterize Method
+	=[moodle]Introduce Parameter Object
+	~[moodle]Replace Error Code with Exception
+	~[moodle]Pull Up Field
+}
+
+
+// question: 4783853  name: shotgun
+::shotgun::[html]下列何者為 Shotgun Surgery 的概念?{
+	~[moodle]一個類別會因為因應太多的變更原因而需修改
+	=[moodle]每次為因應同一種變更，你必須同時在許多類別上做出許多修改
+	~[moodle]常常會一起出現的資料群卻沒有抽象呈一個類別型態
+	~[moodle]一個計算要取好多其他類別的值。
+}
+
+
+// question: 4783854  name: 過多的參數
+::過多的參數::[html]關於"過多的參數"壞味道，請問底下哪一個敘述有誤？{
+	~[moodle]太長的參數列難以理解
+	=[moodle]太長的參數列執行效率差
+	~[moodle]容易造成呼叫參數順序錯誤的bug
+}
+
+
+// question: 0  name: Switch category to $course$/top/MODEL
+$CATEGORY: $course$/top/MODEL
+
+
+// question: 4783898  name: #
+::\#::[html]<p dir\="ltr"><span>UML 中，對一個成員變數加上 \# 的可視性，表示該成員變數 </span></p>{
+	~<p dir\="ltr"><span>是私有變數 (private variable)</span></p>
+	~<p dir\="ltr"><span>被註解掉（comment）</span></p>
+	~<p dir\="ltr"><span>是靜態變數（static variable）</span></p>
+	=<p dir\="ltr"><span>是保護變數（protected variable）</span></p>
+}
+
+
+// question: 4783899  name: inheritance
+::inheritance::[html]<p dir\="ltr"><span>針對 UML Fig (D) 何者為真</span></p>{
+	~%30%Icon 是一個抽象類別
+	~%40%RectangleIcon 和 ImageIcon 都是 Icon 的子類別
+	~%30%Icon 與 RectangleIcon 之間存著 Generalization（一般化）的關係
+}
+
+
+// question: 4783894  name: interface
+::interface::[html]<p dir\="ltr"><span>針對 UML Fig (A) 何者為真</span></p>{
+	~%40%上方的圓圈表示一個介面，亦即，Sortable 是一個介面
+	~%-30%String 是 Sortable 內部的一個類別
+	~%30%String 是實踐 Sortable 的一個類別
+	~%30%isEqual() 是Sortable 所宣告的方法之一
+}
+
+
+// question: 4783895  name: navigation
+::navigation::[html]<p>針對 UML Fig (B) 何者為真</p>{
+	~%50%Course 內部有一個成員變數，其型態為 Professor
+	~%-30%先執行 Course 內部的方法，之後才可執行 Professor 內部的方法
+	~%-30%Course 會傳遞資料 instructor 給 Professor
+	~%50%表示類別 Course 與 Professor 之間有關係，而一個 Professor 在此關係中扮演著 instructor 的角色
+}
+
+
+// question: 4924213  name: plantuml
+::plantuml::[html]<p dir\="ltr" style\="text-align\: left;">關於下圖，以下何者為真</p><p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid"><br></p>{
+	~%25%A 是一個介面，C 是一個抽象類別<p dir\="ltr" style\="text-align\: left;"></p>
+	~%-10%B 和 F 之間的虛線表示資料流<p dir\="ltr" style\="text-align\: left;"></p>
+	~%25%C 和 F 之間的關係，表示 C 包含 F, 且為強包含。<p dir\="ltr" style\="text-align\: left;"></p>
+	~%25%<p dir\="ltr" style\="text-align\: left;">F 與 D 的關聯，表示一個 F 物件會與多個 D 物件相關</p>
+	~%-10%F 與 D 間的連線沒有箭頭，表示兩個物件內部沒有彼此的物件參考<p dir\="ltr" style\="text-align\: left;"></p>
+	~%25%F 與 D&nbsp; 之間存在著 r 關係<p dir\="ltr" style\="text-align\: left;"></p>
+	~%-20%C 內部有一個抽象方法 m3() 及一般方法 m2()<p dir\="ltr" style\="text-align\: left;"></p>
+	~%-20%<p dir\="ltr" style\="text-align\: left;">attr1, attr2 分別是靜態屬性與非靜態屬性</p>
+}
+
+
+// question: 4783926  name: uml
+::uml::[html]<p>UML 的全文為？<br />(UML is the abbreviation for?)</p>{
+	=<p>Unified Modeling Language</p>
+	~<p>Unique Modeling Language</p>
+	~<p>Unified Metadata Language</p>
+	~<p>Unique Metadata Language</p>
+}
+
+
+// question: 4783927  name: uml
+::uml::[html]<p>Which are correct?</p>\n<p><img src\="@@PLUGINFILE@@/uml.png" width\="806" height\="529" /></p>{
+	~%25%<p>Payment is an abstract class</p>
+	~%25%<p>Cash is a subclass of Payment</p>
+	~%25%<p>一個 Order 必須屬於一個 Customer, 而且只能屬於一個 Customer</p>\n<p>(an Order must belong to a Customer, and only one)</p>
+	~%25%<p>此設計圖並沒有標示屬性的可視性，所以不知道 Order 內的 date 是否為 private</p>\n<p>(this design diagram does not show the visibility of attributes, so we don't know if date is private or public)</p>
+	~%-50%<p>必須先執行 OrderDetails，才能執行 Item</p>\n<p>(run OrderDetails first, followed by Item)</p>
+	~%-50%<p>一個 Order 可以有多個 Payment，但不可以有多個 Cash</p>\n<p>(an Order can have many Payment, but can't have many Cash)</p>
+}
+
+
+// question: 4783896  name: use
+::use::[html]<p dir\="ltr"><span>針對 UML Fig (C) 何者為真</span></p>{
+	~%40%表示 class A 與 class B 之間有 use 的關係，A use B
+	~%30%class A 的某個方法的參數有 B, 或是該方法內有宣告 B
+	~%-30%class A 執行後立即執行 class B
+	~%30%class A 有呼叫 B, 但 B 沒有呼叫 A
+}
+
+
+// question: 4783897  name: name
+::name::[html]<p dir\="ltr"><span>UML 的全名是 Unique Modeling Language</span></p>{FALSE}
+
+
+// question: 0  name: Switch category to $course$/top/BASIC/Java
+$CATEGORY: $course$/top/BASIC/Java
+
+
+// question: 4783936  name: abs method
+::abs method::[html]<p>Which is correct?</p>{
+	~%-50%<p>抽象類別有 1..* 個抽象方法</p>\n<p>(abstract class has 1 to many abstract method)</p>
+	~%50%<p>抽象類別有 0..* 個具體方法</p>\n<p>(abstract class can have zero to many concrete method)</p>
+	~%50%<p>具體類別不可以有任何抽象方法。</p>\n<p>(concrete class can't have any abstract method)</p>
+}
+
+
+// question: 4783937  name: best
+::best::[html]<p>我們設計了一個演算法可以找出三個參數中最棒的的一個（best(x, y, z)）。例如三個整數最棒的數就是最大的那個數。我們想要多應用這個演算法，讓他一般化、普及化到更多物件。</p>\n<p>以下何者正確？</p>\n<p>(We design an algorithm for getting the best (best(x,y,z)). For example the best of three integers are the biggest one. If we want to apply this algorithm and make it more general to other objects, which following description is correct?)</p>{
+	=<p>可以應用 interface 的技巧，讓整數等要比較的物件實作此 interface</p>\n<p>(apply the mechanism of <em>interface</em>, let integer and other comparable object implement the interface)</p>
+	~<p>只要把 x, y, z  的型態改為 Object 即可解決此問題</p>\n<p>(declare x, y, z as the type of <em>Object</em>)</p>
+	~<p>整數是一個原生型態的資料，不是類別因此無法處理。其他類別可以達到此功能。</p>\n<p>(integer is a primitive type, so we can't handle it in this case; but other class is ok)</p>
+}
+
+
+// question: 4783929  name: constructure
+::constructure::[html]<p>Which is incorrect?</p>{
+	~<p>建構子的名稱和類別名稱一樣 (the name of constructor is same as the class name)</p>
+	=<p>一個類別建構子只能有一個 (a class can have only one constructor)</p>
+	~<p>建構子不會有回傳值 (只能用 void) (a constructor can't have a return value; only void can be used)</p>
+}
+
+
+// question: 4783938  name: deploy d
+::deploy d::[html]<p>繪製循序圖時，可能需要參考其他的圖型，但以下何者不太可能需要參考：</p>\n<p>(When we draw the sequence diagram, we may reference some other diagrams; which diagram is seldom referred?)</p>{
+	~<p>使用案例圖 (use case diagram)</p>
+	~<p>類別圖 (class diagram)</p>
+	=<p>系統配置圖 (deployment diagram)</p>
+	~<p>活動圖 (activity diagram)</p>
+}
+
+
+// question: 4783931  name: inheritance
+::inheritance::[html]<p>X and Y are not primitive type, they are class type. Which are correct?</p>\n<p> </p>\n<p>class P \{<br />   private X x1;<br />   public void m1(Y y1) \{…\}<br />   public void setX(X x2) \{x1 \= x2;\}<br />   public P(X x) \{x1 \= x\}<br />\}</p>\n<p> </p>{
+	~%-10%<p>x1 是一個 P 的 static variable </p>\n<p>(x1 is a static variable)</p>
+	~%25%<p>P 是一個 mutable class </p>\n<p>(p is a mutable class)</p>
+	~%-10%<p>若 y2 是 「Y的子類別」所生成的物件， m1(y2) 將導致compiler 產生錯誤 </p>\n<p>(if y2 is an instance of the subclass of Y, m1(y2) will cause compiler error)</p>
+	~%25%<p>Y 可以是一個 interface </p>\n<p>(Y may be an interface)</p>
+	~%25%<p>Y 可以是一個 abstract class </p>\n<p>(Y may be an abstract class)</p>
+	~%-10%<p>P2 extends P implements L1, L2 是不可以的，因為在 java 中不可多重繼承(L1, L2 是介面) </p>\n<p>(if L1, L2 are interface, the statement\: P2 extends P implements L1, L2 is error since multiple inheritance is not allowed in Java)</p>
+	~%-10%<p>同上，P2 內不可以呼叫 m1 方法，因為它不是宣告為 protected </p>\n<p>(following the statement above, in P2 we can't call m1() since m1 is not declared as protected</p>
+	~%25%<p>P p \= new P(); 會導致編譯錯誤，因為預設建構子已失效。</p>\n<p>(P p \= new P() will cause compiler error since the default constructor doesn't work any more)</p>
+}
+
+
+// question: 4924023  name: leak
+::leak::[html]<p dir\="ltr" style\="text-align\: left;">以下哪種方法可以有效防止 Java private 洩漏？</p>{
+	~<p dir\="ltr" style\="text-align\: left;">將所有類別成員都設定為 public</p>
+	=<p dir\="ltr" style\="text-align\: left;">在回傳 private 成員之前，複製一份新的物件</p>
+	~<p dir\="ltr" style\="text-align\: left;">使用反射來存取 private 成員</p>
+	~<p dir\="ltr" style\="text-align\: left;">將類別序列化後傳遞</p>
+}
+
+
+// question: 4783934  name: ocp
+::ocp::[html]<p>關於開畢原則何者為是？(about OCP principle, what is correct)</p>{
+	~<p>檔案開啟後且使用過後一定記得關閉該檔案。(when you open a file, you have to close it)</p>
+	~<p>軟體開發專案開始時必須有規劃，結案時必須有統整分析。</p>\n<p>(you should plan for your software project, when it is closed, you should have a summary report)</p>
+	=<p>系統設計儘量允許開放擴充，避免直接修改。</p>\n<p>(when you design your system, make it easy to extend, and avoid modifying it as you can)</p>
+	~<p>一個案子必須結束後才能進行下一個案子，以求最好的效能。</p>\n<p>(You should open a new project only if you have closed a project)</p>
+}
+
+
+// question: 4783930  name: principle
+::principle::[html]<p>Which is incorrect?</p>{
+	=<p>設計應該模組化，達到低內聚力，高耦合度 (when we design a software system, the system should be modularized, to achieve the low cohesion and high coupling)</p>
+	~<p>「相依反轉」說的是，高階的物件不該相依相依於低階，應該都相依於抽象</p>\n<p>(Dependency Inversion Principle\: high level modules should not depend on the low level modules; both of them should depend on abstraction)</p>
+	~<p>LSP 告訴我們概念上的一般化，不一定都有繼承關係</p>\n<p>(Liskov Substitution Principle tells us not all generalization relationship leads to inheritance relationship)</p>
+	~<p>不重複原則，說的是資料和程式碼應該要避免重</p>\n<p>(Don't repeat yourself, means we should avoid duplication both on code and data)</p>
+}
+
+
+// question: 4924203  name: public to private
+::public to private::[html]<p dir\="ltr" style\="text-align\: left;">以下程式為什麼錯誤</p><p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid"><br></p>{
+	~<p dir\="ltr" style\="text-align\: left;">speak() 方法的返回類型不同</p>
+	=<p dir\="ltr" style\="text-align\: left;">子類別的 speak() 方法無法縮小訪問權限</p>
+	~<p dir\="ltr" style\="text-align\: left;">speak() 方法必須標記為 static</p>
+	~<p dir\="ltr" style\="text-align\: left;">Dog 不能繼承 Animal</p>
+}
+
+
+// question: 4923999  name: tostring
+::tostring::[html]<p dir\="ltr">1.下列哪一個方法定義是錯誤的？</p>{
+	~<p dir\="ltr" style\="text-align\: left;">void printMessage(String msg) \{ System.out.println(msg); \}</p>
+	~<p dir\="ltr" style\="text-align\: left;">int add(int a, int b) \{ return a + b; \}</p>
+	~<p dir\="ltr" style\="text-align\: left;">static double square(double x) \{ return x * x; \}</p>
+	~%100%<p dir\="ltr" style\="text-align\: left;">public double toString() \{ return this.value; \}</p>
+}
+
+
+// question: 4923998  name: 泛型
+::泛型::[html]<p dir\="ltr">以下哪一種聲明是正確的泛型類定義？</p>{
+	~%50%<p dir\="ltr">public class Box&lt;T&gt; \{ private T item; \}</p>
+	~%50%<p dir\="ltr">public class Box&lt;T extends Number&gt; \{ private T item; \}</p>
+	~%-25%<p dir\="ltr">public class Box&lt;T super Integer&gt; \{ private T item; \}</p>
+	~%-25%<p dir\="ltr">皆是</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern
+$CATEGORY: $course$/top/Design pattern
+
+
+// question: 4783939  name: dp
+::dp::[html]<p>選擇相對應的設計樣式 </p>\n<p>(select the mapping design pattern)</p>{
+	=[moodle]確保只生成一個物件 (make sure only one object created) -> singleton
+	=[moodle]將物件生成延遲到子類別 (delay the object creation to subclass) -> factory method
+	=[moodle]將物件生成委託給另一物件 (delegate the object creation to another object) -> abstract factory
+	=[moodle]把演算法的部分延遲到子類別決定 (delay part of algorithm to subclass) -> template method
+	=<p>把演算法委託給其他物件 (delegate algorithm to other object)</p> -> strategy
+	= -> Decorator
+	= -> Observer
+}
+
+
+// question: 4783945  name: Adapter
+::Adapter::哪一個設計樣式使得具有不相容介面的物件能夠協同工作？{
+	~Proxy
+	=Adapter
+	~Decorator
+	~Observer
+}
+
+
+// question: 4783946  name: Bridge
+::Bridge::哪一個設計樣式將抽象與實作解耦？{
+	~Observer
+	=Bridge
+	~Proxy
+	~Strategy
+}
+
+
+// question: 4783947  name: Composite
+::Composite::哪一個設計樣式允許客戶端統一地對待個別物件和物件組合？{
+	~Visitor
+	=Composite
+	~Observer
+	~Proxy
+}
+
+
+// question: 4783948  name: Decorator
+::Decorator::哪一個設計樣式能夠在不修改物件結構的情況下，動態地為物件添加職責？{
+	~Observer
+	~Composite
+	=Decorator
+	~Proxy
+}
+
+
+// question: 4783940  name: dp-uml
+::dp-uml::[html]<p>設計樣式的結構，通常用何種語言來表達?</p>\n<p>(What language is used to represent the structure of a design pattern)</p>{
+	=[moodle]UML
+	~[moodle]Java
+	~[moodle]python
+	~[moodle]C++
+}
+
+
+// question: 4783943  name: Factory Method
+::Factory Method::哪一個設計樣式由子類別決定要生成的類別？{
+	~Abstract Factory
+	~Singleton
+	=Factory Method
+	~Prototype
+}
+
+
+// question: 4783941  name: singleton intent
+::singleton intent::[html]<p>Singleton 的目的為</p>\n<p>(The intent of Singleton)</p>{
+	~[moodle]快速的為陣列內每一個類別產生一個物件 (create objects in the array quickly)
+	=[moodle]讓一個類別只能產生一個物件 (create only one object for a class)
+	~[moodle]讓一個套件只能產生一個類別
+	~[moodle]強迫一個類別只能有一個子類別 (force one class have only one subclass)
+}
+
+
+// question: 4783942  name: static method 的定義哪一個錯誤
+::static method 的定義哪一個錯誤::static method 的定義哪一個錯誤{
+	~不需產生物件就可以呼叫
+	~Singleton 產生物件的方法是呼叫 static method
+	=必須引用類別中的 instance variable
+	~可以引用類別中的 static variable
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Structural DP/DP- Adapter
+$CATEGORY: $course$/top/Design pattern/Structural DP/DP- Adapter
+
+
+// question: 4783951  name: adapter- role
+::adapter- role::[html]<p><img src\="@@PLUGINFILE@@/adapter.png" width\="400" height\="283" /></p>{
+	=<p>A</p> -> Target
+	=<p>B</p> -> Adapter
+	=<p>C</p> -> Adaptee
+}
+
+
+// question: 4783949  name: adaptor skill
+::adaptor skill::[html]<p>Adaptor 運用的技巧為</p>{
+	~[moodle]讓 Target 包含一個 Adaptor 的物件，轉而呼叫 Adaptee 的方法
+	=[moodle]設計一個 Target 的子類別 Adaptor，把 client 呼叫的方法轉而呼叫 Adaptee 的方法
+	~[moodle]設計一個 Adaptor 類別，呼叫 Target 與 Adaptee ，等於是作為兩者之間的中介，以降低耦合度
+}
+
+
+// question: 4783950  name: object adaptor
+::object adaptor::[html]<p>Adapter 可分為 class adapter 與 object adapter。當 target 與 adaptee 都是類別（非介面）時，我們應該用哪一種？</p>\n<p>(There are two kinds of adapter\: class adapter and object adapter, when both target and adaptee are classes (not interface), which adapter we will use?)</p>{
+	~[moodle]class adapter
+	=[moodle]object adapter
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Creational DP/DP- Abstract Factory
+$CATEGORY: $course$/top/Design pattern/Creational DP/DP- Abstract Factory
+
+
+// question: 4783944  name: Abstract Factory
+::Abstract Factory::哪一個設計樣式提供一個介面來創建相關或相依物件的家族？{
+	~Factory Method
+	=Abstract Factory
+	~Builder
+	~Prototype
+}
+
+
+// question: 4783956  name: af
+::af::[html]<p>Abstract factory 樣式中，abstract factory 內宣告 m 個抽象方法，表示</p>\n<p>(in Abstract factory, if the abstract factory declares m abstract methods, it means ...)</p>{
+	~[moodle]有 m 個系列 (having m series)
+	=[moodle]有 m 個零件 (having m unit object)
+}
+
+
+// question: 4783954  name: af- intent
+::af- intent::[html]<p>Abstract factory 的目的為何？</p>\n<p>(The intent of abstract factory)</p>{
+	~[moodle]把物件的生成延遲到子類別; (delay the object creation to the subclass)
+	~[moodle]轉接兩個介面不同的物件 (transform the interfaces of two objects)
+	=[moodle]把同一系列的物件群的生成委託給一個物件 (delegate the creation of a series of object to another object)
+	~[moodle]一次只能生成一個物件 (only one object is allowed to be built)
+}
+
+
+// question: 4783955  name: 在 Abstract factory 設計樣式中，"設計階段" client 會與 "哪些" 類別關聯
+::在 Abstract factory 設計樣式中，"設計階段" client 會與 "哪些" 類別關聯::[html]<p>在 Abstract factory 設計樣式中，"設計階段" client 會與 "哪些" 類別關聯</p>{
+	~%50%[moodle]abstract factory
+	~[moodle]concrete factory
+	~%50%[moodle]abstract product
+	~[moodle]concrete product
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Creational DP/DP- Factory method
+$CATEGORY: $course$/top/Design pattern/Creational DP/DP- Factory method
+
+
+// question: 4783959  name: FM
+::FM::[html]<pre>class A \{\n  public void m1() \{\n    ...\n    B b \= m2();\n    ...\n  \}\n  public ?1 m2() \{\n    ?2\n  \}\n\}\n</pre>\n<p>Which is correct?</p>{
+	~%-50%<p>?1 is A</p>
+	~%50%<p>?2 is B</p>
+	~%50%<p>if ?2 is "return new C()", then C is the subclass of B</p>
+	~%-25%<p>?2 is return new A();</p>
+}
+
+
+// question: 4783958  name: FM def
+::FM def::[html]<p>The intent of factory method?</p>{
+	~<p>可以一次產生很多物件</p>\n<p>(can create many objects in one statement)</p>
+	~<p>確保一次只產生一個物件 </p>\n<p>(make sure only one object is created)</p>
+	=<p>把物件生成延遲到子類別 </p>\n<p>(delay the object creation to the subclass)</p>
+	~<p>透過延遲生成物件來轉接物件介面</p>
+}
+
+
+// question: 4783957  name: which is FM
+::which is FM::[html]<pre>class A \{\n  public void m1() \{\n      ...\n  \}\n  public B m2() \{\n     return new B();\n  \}\n  public int m3() \{\n     int x \= 0;\n     for ....\n        ...\n     return x;\n  \}\n\}\n</pre>\n<p>以下何者可能是 factory method </p>\n<p>(which method may be the factory method?)</p>{
+	~<p>m1()</p>
+	=<p>m2()</p>
+	~<p>m3()</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Structural DP/DP- Bridge
+$CATEGORY: $course$/top/Design pattern/Structural DP/DP- Bridge
+
+
+// question: 4783960  name: bridge intent
+::bridge intent::[html]<p>Bridge 的目的為</p>\n<p>(the intent of Bridge)</p>{
+	=[moodle]把抽象和實作抽離開來，使得兩者可以獨立的變化\n(separate the abstract and implementation, make them can change independently)
+	~[moodle]設計一個橋樑，讓兩個不同介面的物件可以相互合作\n(design a bridge, let two in-compatible interfaces work together)
+	~[moodle]設計一平台，使物件可以通過不同的管道傳送訊息\n(design a platform, making objects pass messages through different route)
+	~[moodle]把狀態與介面抽離開來，使兩個物件可以獨立的變化。\n(separate the state and interface, making object changeable independently)
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Structural DP/DP- Composite
+$CATEGORY: $course$/top/Design pattern/Structural DP/DP- Composite
+
+
+// question: 4783963  name: composite concept
+::composite concept::[html]<p>關於 Composite, 何者對？(which is right)</p>{
+	=[moodle]對於 client, 複合物件與單元物件具備共通性，因此耦合力低 (Composite and Leaf objects are generalized as the same one for the Client object)
+	~[moodle]不論是複合物件與單元物件都可以透過 addComponent() 加入元件 (Both Composite or Leaf object can add components)
+	~[moodle]複合物件可以包含單元物件，不可包含複合物件 (Composite can add Leaf object, but can't add Composite object)
+}
+
+
+// question: 4783962  name: composite role
+::composite role::[html]<p>在 Composite 設計樣式中，不包含哪一個角色</p>\n<p>(what role is not in the Composite design pattern)</p>{
+	~[moodle]component
+	~[moodle]leaf
+	~[moodle]composite
+	=[moodle]decorator
+}
+
+
+// question: 4783964  name: composite role
+::composite role::[html]<p>在 Composite 設計樣式中，Composite 角色 </p>\n<p>(in the Composite design pattern, the role of Composite...)</p>{
+	~%25%[moodle]是 Component 的子類別 (is the subclass of Component)
+	~%25%[moodle]可以包含許多 Component (can contain many Components)
+	~%25%[moodle]具備 addComponent() 的功能 (has the function of addComponent())
+	~%25%[moodle]收到 client 請求後，通常會將請求轉送給他所包含的物件 (when it receive the request of the client, it will forward the request to the object it contains)
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Structural DP/DP- Decorator
+$CATEGORY: $course$/top/Design pattern/Structural DP/DP- Decorator
+
+
+// question: 4783969  name: decorator
+::decorator::[html]<p><img src\="@@PLUGINFILE@@/dec.png" width\="400" height\="268" /></p>\n<p>About the Decorator design pattern, mapping to the appropriate answer</p>{
+	=<p>A</p> -> 1
+	=<p>B</p> -> cmp.operation()
+	=<p>C</p> -> super.operation(); addedBehavior();
+	= -> for x in cmp\: x.operation();
+	= -> *
+}
+
+
+// question: 4783968  name: decorator, composite
+::decorator, composite::[html]<p>What is wrong</p>{
+	~<p>Composite 和 Decorator 都採用遞迴的架構 (Composite and Decorator both use the recursive structure)</p>
+	~<p>一個 Composite 物件可以包含多個 Composite 物件，但 Decorator 只能包含一個</p>\n<p>(A Composite can contain many Composite objects, but Decorator can only contain one object)</p>
+	~<p>Decorator 的物件必須依附在一個主體物件上</p>\n<p>(Decorator object must depend (attach) on a Component)</p>
+	=<p>一個 Decorator 物件不能包含另一個 Decorator 物件</p>\n<p>(A Decorator object can't contain another Decorator object)</p>
+}
+
+
+// question: 4783967  name: InputStream
+::InputStream::[html]<p>What design pattern are used in this model?</p>\n<p><img src\="@@PLUGINFILE@@/filestream.png" width\="400" height\="189" /></p>{
+	=<p>Decorator</p>
+	~<p>Adapter</p>
+	~<p>Composite</p>
+	~<p>Observer</p>
+	~<p>Template method</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP
+$CATEGORY: $course$/top/Design pattern/Behavior DP
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- Observer
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- Observer
+
+
+// question: 4783977  name: deleg_obs
+::deleg_obs::[html]<p><img src\="@@PLUGINFILE@@/deleg_obs.png" width\="500" height\="276" /></p>\n<p> </p>\n<p>About the delegated observer, mapping to the correct answer</p>{
+	=<p>A</p> -> Observable
+	=<p>B</p> -> \#setChanged()
+	=<p>C</p> -> +setChanged()
+	=<p>D</p> -> Observer
+	=<p>E</p> -> update()
+	= -> -setChanged()
+	= -> \#notifyObservers()
+}
+
+
+// question: 4783975  name: obs update
+::obs update::[html]<pre>class View1 implements Observer \{\n  public void update(?1 obs, ?2 obj) \{\n    ...\n  \}\n\}\n</pre>\n<p>Please mapping to the correct object</p>{
+	=<p>?1</p> -> Observable
+	=<p>?2</p> -> Object
+	= -> Observer
+	= -> Component
+	= -> ActionListener
+}
+
+
+// question: 4783976  name: obs_notify
+::obs_notify::[html]<pre>class Stock extends Observable \{\n  public void increasePrice() \{ \n    price++;\n    ?1\n    ?2\n  \}\n\}\n</pre>\n<p>當價格改變時，欲通知所有的觀察者，?1, ?2 的程式碼應該為何</p>{
+	=<p>?1</p> -> setChanged()
+	=<p>?2</p> -> notifyObservers(new Float(price));
+	= -> update(price);
+	= -> this.changed \= true;
+	= -> update(new Float(price));
+	= -> notifyObservers(price);
+}
+
+
+// question: 4783973  name: obs_java
+::obs_java::[html]<p>java API 中實踐 Subject 的類別為</p>{
+	~<p>Object</p>
+	~<p>Subject</p>
+	=<p>Observable</p>
+	~<p>Observer</p>
+}
+
+
+// question: 4783974  name: obs_swing
+::obs_swing::[html]<p>Java 的 Swing 架構使用 Observer，其中 ActionListener 相當於 Observer 樣式中的？</p>{
+	~<p>Subject</p>
+	=<p>Observer</p>
+	~<p>Concrete Observer</p>
+	~<p>Concrete Subject</p>
+}
+
+
+// question: 4783972  name: obs1
+::obs1::[html]<p>關於 Observer 樣式，何者為真：</p>\n<p>(About Observer design pattern, which is correct?)</p>{
+	~<p>Observer 變動時，Subject 被通知</p>\n<p>(when Observer changes, Subject will be notified)</p>
+	~<p>Observer 定時查詢 Subject 狀態</p>\n<p>(Observer will query the state of Subject repeatedly)</p>
+	~<p>Subject 定期查詢 Observer 狀態</p>\n<p>(Subject will query the state of Observer repeatedly)</p>
+	=<p>Subject 變動時，Observer 會被通知</p>\n<p>(when Subject changes, Observer will be notified)</p>
+}
+
+
+// question: 4783971  name: observer
+::observer::[html]<p>Observer 設計樣式主要有兩個物件：Subject 與 Observer, 以下何者為對</p>\n<p>(About Observer design pattern, which is correct?)</p>{
+	=<p>一個 subject，會有多個 observer 與之關聯</p>\n<p>(one subject object is associated with many observer objects)</p>
+	~<p>一個 observer，會有多個 subject 與之關聯</p>\n<p>(one observer is associated with many subject objects)</p>
+	~<p>一個 observer 只能對應一個 subject</p>\n<p>(one observer is associated with one subject)</p>
+	~<p>subject 與 observer 之間的關聯式多對多的關聯</p>\n<p>(there is a many to many association between subject and observer)</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- Strategy
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- Strategy
+
+
+// question: 4783982  name: input verifier
+::input verifier::[html]<p>關於 InputVerifier, 以下何者錯誤</p>\n<p>(About InputVerifier, which is incorrect?)</p>{
+	~<p>採用了 Strategy 來提升檢查欄位的彈性，降低修改程式的範圍</p>\n<p>(use Strategy to improve the flexibility of checking the inputs, thus reduce the effort of modifying code_</p>
+	~<p>透過新增 InputVerifier 的子類別來產生新的檢查器 (Creating a input verification by designing a subclass of InputVerifier)</p>
+	~<p>TextField 透過 setInputVerifier() 來設定不同的檢查器</p>\n<p>(TextField can use setinputVerfier() to set different verifier)</p>
+	=<p>TextField 一旦設定了檢查器，就不可更換</p>\n<p>(Once TextField set the verifier, it can't be changed)</p>
+}
+
+
+// question: 4783981  name: layout
+::layout::[html]<p>Swing 的排版設計採用了 Strategy 的設計，其中 BorderLayout 相對於 Strategy 樣式中的哪一個角色？</p>\n<p>(Swing use strategy to do the layout management, where BorderLayout are mapped to what role?)</p>{
+	~<p>Context</p>
+	~<p>Abstract Strategy</p>
+	=<p>Concrete Strategy</p>
+	~<p>execute()</p>
+}
+
+
+// question: 4783980  name: strategy
+::strategy::[html]<p>Strategy 設計樣式是把策略</p>\n<p>(What skills are used in Strategy design pattern)</p>{
+	~<p>延遲到子類別決定 (postpone the strategy to the subclass)</p>
+	=<p>委託給另一個物件 (delegate the strategy to another object)</p>
+	~<p>包裝成一個複合物件 (encapsulate the strategy to a composite object)</p>
+	~<p>限制只能產生一份演算法 (allow only one strategy or algorithm)</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Creational DP/DP- Singleton
+$CATEGORY: $course$/top/Design pattern/Creational DP/DP- Singleton
+
+
+// question: 4783983  name: logger
+::logger::[html]<p dir\="ltr" style\="text-align\: left;">程式執行時，我們會透過 Logger 來記錄系統狀態，這個 Logger 通常只會有一個，該用什麼樣式？<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Singleton</p>
+	~<p dir\="ltr" style\="text-align\: left;">Abstract factory</p>
+	~<p dir\="ltr" style\="text-align\: left;">Observer</p>
+	~<p dir\="ltr" style\="text-align\: left;">Adapter</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- Template method
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- Template method
+
+
+// question: 4783984  name: tm
+::tm::[html]<p>Template Method 的目的 </p>\n<p>(The intent of template method)</p>{
+	~<p>把兩個介面不相容的物件可以溝通合作</p>\n<p>(make two in-compatible objects communicate each other)</p>
+	~<p>把物件的生成延遲到子類別 </p>\n<p>(delay the object creation to the subclass)</p>
+	~<p>讓一個物件可以有很多的觀者者，物件變動時，其觀察者物件可以跟著變動</p>\n<p>(one object can have many observers; when the object changes state, other observers will be notified and change)</p>
+	=<p>定義一個演算法的架構，讓細部的做法延遲到子類別做決定</p>\n<p>(define a skeleton of an algorithm, and delay some details to the subclass)</p>
+}
+
+
+// question: 4783986  name: tm (送分)
+::tm (送分)::[html]<pre>class A \{\n    int a;\n	public void m1() \{\n	   ...\n	   m2();\n	   ... m3();\n	   ...\n	\}\n	public abstract void m2();\n	public int m3() \{ return a;\}\n	public final int m4() \{ return a*a; \}\n\}\n</pre>\n<p>Which method may be the factory method?</p>{
+	=<p>m1()</p>
+	=<p>m2()</p>
+	=<p>m3()</p>
+	=<p>m4()</p>
+}
+
+
+// question: 4783985  name: tm- final
+::tm- final::[html]<p>在 Template Method 中，template method 被宣告為 </p>\n<p>(In template method, the template method are declared as)</p>{
+	=<p>final</p>
+	~<p>static</p>
+	~<p>interface</p>
+	~<p>generic type</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- MVC
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- MVC
+
+
+// question: 4783988  name: web_mvc
+::web_mvc::[html]<p><img src\="@@PLUGINFILE@@/web_mvc.png" width\="500" height\="208" /></p>\n<p> </p>\n<p>JSP 的架構符合 MVC, 請做正確的對應</p>\n<p>(JSP conforms the architecture of MVC, please map to the correct role)</p>{
+	=<p>A</p> -> Controller
+	=<p>B</p> -> View
+	=<p>C</p> -> Model
+}
+
+
+// question: 4783987  name: mvc
+::mvc::[html]<p>Observer 樣式中的 Subject 和 Observer 分別是 MVC 中的？</p>\n<p>(The roles Subject and Observer in Observer design pattern map to what roles in MVC?)</p>{
+	~<p>Controller-Model</p>
+	~<p>Model-Controller</p>
+	=<p>Model-View</p>
+	~<p>View-Model</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- State
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- State
+
+
+// question: 4783989  name: state1
+::state1::[html]<p>State 樣式中，保存物件狀態的類別為<br />(In state design pattern, which object stores the the object state?)</p>{
+	=<p>Context</p>
+	~<p>Observer </p>
+	~<p>Strategy </p>
+	~<p>Proxy</p>
+}
+
+
+// question: 4783990  name: state2
+::state2::[html]<p>為何 State.handle() 需要帶 Context 參數？<br />(why does the handle() method need the the Context parameter?)</p>{
+	~<p>需要觀看 context 物件的值 <br />(see the object value of context)</p>
+	=<p>需要設定 context 的新狀態 <br />(set the new state of the context object)</p>
+	~<p>需要讀取 context 的狀態值</p>\n<p>(read the object state of context)</p>
+}
+
+
+// question: 4783991  name: state3
+::state3::[html]<p>關於 State 樣式，何者錯誤？<br />(about State design pattern, which is incorrect?)</p>{
+	=<p>Context 把改變物件狀態的動作延遲到其子類別<br />(delay the change state to its subclass)</p>
+	~<p>State 內所宣告的方法為可能改變狀態的方法 <br />(The operations declared in State will change state)</p>
+	~<p>若有 n 種可能狀態則會宣告 n 個 concrete state 類別 <br />(if we have n possible states, then we need to declare n concrete states)</p>
+	=<p>Context 把狀態改變的工作委託給 State 物件</p>\n<p>(Context delegates the task of changing state to the State object)</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP-Mediator
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP-Mediator
+
+
+// question: 4783992  name: colleague
+::colleague::[html]<p>在 Mediator 設計樣式中，是為了降低哪個角色物件之間溝通的複雜度</p>{
+	=<p>Colleague</p>
+	~<p>Adaptee</p>
+	~<p>Observer</p>
+	~<p>Friend</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- CoR
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- CoR
+
+
+// question: 4783994  name: CoR
+::CoR::[html]<p>Chain of responsibility 的目的為何？</p>{
+	~<p>把物件串連起來，生成時一起生成。<br></p>
+	~<p>把事件的請求者與處理者抽離開來，降低彼此的耦合度。</p>
+	=<p>把事件處理的責任順序是先定義好，以便後續的層層處理。</p>
+	=<p>設定一個事件的代理者，先由代理者處理，無法處理時在由真正的物件處理。</p>
+}
+
+
+// question: 4783995  name: CoR vs Decorator
+::CoR vs Decorator::[html]<p>關於 Chain of Reponsible 與 Decorator, 以下論述，何者錯誤<br></p>{
+	~<p>Chain of responsible 和 Decorator 都用到繼承的技術</p>
+	~<p>Chain of responsible 和 Decorator 都用到 delegation 的技術; 前者是 Handler 委託給 Handler, 後者是 Decorator 委託給 Component</p>
+	=<p>Decorator 通常包含多個 Component</p>
+	~<p>Handler 通常包含單個 Handler</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/Design pattern/Behavior DP/DP- Iterator
+$CATEGORY: $course$/top/Design pattern/Behavior DP/DP- Iterator
+
+
+// question: 4783996  name: iterator
+::iterator::[html]<p>要取得一個集合物件內所有物件的，為何不直接從此集合物件取值？還需要先取得其瀏覽物件 (iterator)？<br></p>{
+	~<p>瀏覽物件的功能較為強大<br></p>
+	~<p>瀏覽物件是 View, 透過如此可以將 Model 與 View 分離<br></p>
+	=<p>可以避免修改到集合物件的內容<br></p>
+	~<p>避免傳遞過多的資料，速度較快<br></p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/BASIC/python-object
+$CATEGORY: $course$/top/BASIC/python-object
+
+
+// question: 4784000  name: py- abstract
+::py- abstract::[html]<p dir\="ltr" style\="text-align\: left;">Python 中，如何宣告一個 abstract method</p>{
+	~<p dir\="ltr" style\="text-align\: left;">無需宣告，所有的 method 都是 abstract 的</p>
+	=<p dir\="ltr" style\="text-align\: left;">方法前面加上 @abstractmethod</p>
+	~<p dir\="ltr" style\="text-align\: left;">方法前面加上 abstract</p>
+	~<p dir\="ltr" style\="text-align\: left;">方法前面加上 \#abs</p>
+}
+
+
+// question: 4783999  name: py-inheritance
+::py-inheritance::[html]<p dir\="ltr" style\="text-align\: left;">Python 中, 以下的宣告意義為何？</p><p dir\="ltr" style\="text-align\: left;">class X (Y)</p>{
+	=<p dir\="ltr" style\="text-align\: left;">X 是 Y 的子類別</p>
+	~<p dir\="ltr" style\="text-align\: left;">Y 是 X 的一個方法</p>
+	~<p dir\="ltr" style\="text-align\: left;">Y 是 X 的一個屬性</p>
+	~<p dir\="ltr" style\="text-align\: left;">Y 是 X 的子類別</p>
+}
+
+
+// question: 4783998  name: py-property
+::py-property::[html]<p dir\="ltr" style\="text-align\: left;">Python 中的 @property 作用為何？</p>{
+	=用來宣告一個取得物件屬性的方法，相當於 getter
+	~<p dir\="ltr" style\="text-align\: left;">定義私有的特徵</p>
+	~<p dir\="ltr" style\="text-align\: left;">宣告物件的屬性來自於父類別</p>
+	~<p dir\="ltr" style\="text-align\: left;">用來加速程式的執行</p>
+}
+
+
+// question: 0  name: Switch category to $course$/top/AI questions
+$CATEGORY: $course$/top/AI questions
+
+
+// question: 4932819  name: 01_易_Decorator_InputStream
+::01_易_Decorator_InputStream::在 Java I/O API 中，`java.io.InputStream` 及其子類別如 `BufferedInputStream`、`DataInputStream` 等，是哪種設計樣式的經典應用？{
+	=Decorator
+	~Adapter
+	~Strategy
+	~Observer
+}
+
+
+// question: 4932794  name: 01_易_工廠
+::01_易_工廠::哪一個設計樣式提供了創建一系列相關或相互依賴對象的介面，而無需指定其具體類別？{
+	=Abstract Factory
+	~Factory Method
+	~Builder
+	~Singleton
+}
+
+
+// question: 4932820  name: 02_中_Singleton_Runtime
+::02_中_Singleton_Runtime::以下哪一個 Java API 中的類別被設計為單例 (Singleton) 模式，以確保在 Java 虛擬機 (JVM) 中只有一個實例？{
+	=java.lang.Runtime
+	~java.util.ArrayList
+	~java.lang.String
+	~java.io.File
+}
+
+
+// question: 4932795  name: 02_易_觀察者
+::02_易_觀察者::當一個對象的狀態改變時，所有依賴於它的對象都會得到通知並自動更新，這是哪一種設計樣式的核心思想？{
+	=Observer
+	~Strategy
+	~Decorator
+	~Mediator
+}
+
+
+// question: 4932796  name: 03_中_結構
+::03_中_結構::Composite 樣式的主要目的是什麼？{
+	=將對象組合為樹形結構，以表示「部分-整體」的層次結構，並讓客戶端對單個對象和組合對象保持一致的處理方式。
+	~動態地給對象添加額外的職責。
+	~分離抽象與其實現，使它們可以獨立變化。
+	~提供一個訪問聚合對象中各個元素而又不暴露其內部表示的方法。
+}
+
+
+// question: 4935138  name: 03_易_FactoryMethod_Calendar
+::03_易_FactoryMethod_Calendar::[html]`java.util.Calendar.getInstance()` 方法是哪種設計樣式的典型範例？{
+	=[moodle]Factory Method
+	~[moodle]Abstract Factory
+	~[moodle]Builder
+	~[moodle]Singleton
+}
+
+
+// question: 4932822  name: 04_中_Observer_EventListener
+::04_中_Observer_EventListener::Java Swing/AWT 中的事件處理機制，例如 `ActionListener` 或 `MouseListener`，是哪種設計樣式的應用？{
+	=Observer
+	~Strategy
+	~Command
+	~Mediator
+}
+
+
+// question: 4932797  name: 04_易_行為
+::04_易_行為::Strategy 樣式允許在執行時選擇演算法。這意味著：{
+	=客戶端可以在運行時選擇不同的演算法。
+	~每個演算法都必須是一個抽象類別。
+	~演算法的變更需要修改客戶端程式碼。
+	~它主要用於創建複雜的對象。
+}
+
+
+// question: 4932798  name: 05_中_行為
+::05_中_行為::Template Method 樣式與 Strategy 樣式的主要區別是什麼？{
+	=Template Method 定義了演算法的骨架，但將某些步驟延遲到子類別實現；Strategy 則允許在運行時替換整個演算法。
+	~Template Method 關注於行為的演變，而 Strategy 關注於結構的變動。
+	~Template Method 主要用於創建對象，而 Strategy 主要用於管理對象。
+	~它們之間沒有本質區別，只是名稱不同。
+}
+
+
+// question: 4935139  name: 05_難_Adapter_InputStreamReader
+::05_難_Adapter_InputStreamReader::[html]當你需要在一個預期 `Reader` 對象的 API 中使用 `InputStream` 時，你會使用 `InputStreamReader`。這體現了哪種設計樣式？{
+	=[moodle]Adapter
+	~[moodle]Bridge
+	~[moodle]Decorator
+	~[moodle]Strategy
+}
+
+
+// question: 4932824  name: 06_中_Composite_AWT
+::06_中_Composite_AWT::Java AWT 或 Swing 中的 `Container` 類別，允許將多個 `Component` (包括其他 `Container`) 組合起來，並對它們進行統一操作。這體現了哪種設計樣式？{
+	=Composite
+	~Decorator
+	~Proxy
+	~Flyweight
+}
+
+
+// question: 4932799  name: 06_中_結構
+::06_中_結構::Decorator 樣式的目的不包括：{
+	=在不修改原始類別的情況下，添加新的基本行為。
+	~動態地為對象添加新功能。
+	~通過組合而不是繼承來擴展功能。
+	~透明地包裝對象，使其行為得以增強。
+}
+
+
+// question: 4932825  name: 07_易_Iterator_Collection
+::07_易_Iterator_Collection::在 Java 集合框架中，`java.util.Iterator` 介面允許你遍歷集合中的元素，而無需了解集合的內部結構。這體現了哪種設計樣式？{
+	=Iterator
+	~Strategy
+	~Visitor
+	~Template Method
+}
+
+
+// question: 4932800  name: 07_易_創建
+::07_易_創建::Singleton 樣式確保一個類別只有一個實例，並提供一個全域訪問點。這通常透過什麼方式實現？{
+	=將建構函式私有化，並提供一個靜態方法來獲取實例。
+	~使用抽象類別和工廠方法。
+	~動態創建多個實例。
+	~透過繼承來實現唯一性。
+}
+
+
+// question: 4932826  name: 08_中_TemplateMethod_HttpServlet
+::08_中_TemplateMethod_HttpServlet::在 Java Servlet API 中，`HttpServlet` 類別的 `doGet()`、`doPost()` 等方法，允許子類別覆寫特定行為，而其核心處理流程 (如 HTTP 請求的解析和回應的生成) 則保持不變。這體現了哪種設計樣式？{
+	=Template Method
+	~Strategy
+	~Chain of Responsibility
+	~Command
+}
+
+
+// question: 4932801  name: 08_中_結構
+::08_中_結構::Adapter 樣式的作用是什麼？{
+	=將一個類別的介面轉換為客戶端期望的另一個介面，使得原本由於介面不相容而不能一起工作的類別可以一起工作。
+	~在不修改原始程式碼的情況下增加對象的功能。
+	~定義一系列操作的骨架，將一些步驟延遲到子類別。
+	~確保一個類別只有一個實例。
+}
+
+
+// question: 4932802  name: 09_易_行為
+::09_易_行為::Iterator 樣式提供了一種什麼機制？{
+	=遍歷聚合對象中各個元素而又不暴露其內部表示的方法。
+	~動態地為對象添加責任。
+	~定義對象之間一對多的依賴關係。
+	~將複雜的物件建構過程分解成一系列簡單的步驟。
+}
+
+
+// question: 4935140  name: 09_難_Strategy_Comparator
+::09_難_Strategy_Comparator::[html]`java.util.Collections.sort()` 方法接受一個 `Comparator` 對象作為參數，允許你定義不同的排序演算法。這體現了哪種設計樣式？{
+	=[moodle]Strategy
+	~[moodle]Command
+	~[moodle]Observer
+	~[moodle]Bridge
+}
+
+
+// question: 4932828  name: 10_中_ChainOfResponsibility_Logging
+::10_中_ChainOfResponsibility_Logging::在某些日誌框架中，日誌訊息會被傳遞給一系列的處理器 (Handler)，每個處理器都有機會處理或將其傳遞給下一個處理器。這體現了哪種設計樣式？{
+	=Chain of Responsibility
+	~Mediator
+	~Visitor
+	~State
+}
+
+
+// question: 4932803  name: 10_中_行為
+::10_中_行為::Chain of Responsibility 樣式的主要特點是什麼？{
+	=將請求沿著一條鏈傳遞，直到有一個處理器處理它，從而避免請求的發送者與接收者之間的耦合。
+	~允許多個對象同時觀察一個對象的變化。
+	~定義一個介面來創建對象，但讓子類別決定實例化哪個類別。
+	~動態地為對象添加新功能。
+}
+
+
+// question: 4932804  name: 11_難_比較
+::11_難_比較::Factory Method 與 Abstract Factory 樣式的主要差異點在哪裡？{
+	=Factory Method 關注於創建單一產品的類別，而 Abstract Factory 關注於創建一系列相關產品的家族。
+	~Factory Method 是結構型樣式，Abstract Factory 是行為型樣式。
+	~Factory Method 透過繼承實現，Abstract Factory 透過組合實現。
+	~Factory Method 只能創建具體類別，Abstract Factory 只能創建抽象類別。
+}
+
+
+// question: 4932805  name: 12_中_結構
+::12_中_結構::Bridge 樣式解決了什麼問題？{
+	=將抽象與其實現分離，使它們可以獨立變化，從而避免了繼承的爆炸式增長。
+	~確保一個類別只有一個實例。
+	~動態地為對象添加額外責任。
+	~將對象組合為樹形結構。
+}
+
+
+// question: 4932806  name: 13_中_行為
+::13_中_行為::Mediator 樣式在何種情況下特別有用？{
+	=當系統中對象之間的交互變得非常複雜和緊密耦合時，它可以通過引入一個中介者對象來集中管理這些交互，降低耦合度。
+	~需要動態添加對象功能時。
+	~需要遍歷集合中的元素時。
+	~需要將抽象與實現分離時。
+}
+
+
+// question: 4932807  name: 14_難_綜合
+::14_難_綜合::以下哪組設計樣式都屬於行為型樣式？{
+	=Observer, Strategy, Iterator, Chain of Responsibility, Mediator
+	~Abstract Factory, Singleton, Decorator
+	~Composite, Bridge, Adapter
+	~Template Method, Factory Method, Abstract Factory
+}
+
+
+// question: 4932808  name: 15_中_綜合
+::15_中_綜合::Singleton 樣式與全局變數的主要區別是什麼？{
+	=Singleton 樣式可以控制實例的創建過程和生命週期，而全局變數則沒有這種控制能力，且可能存在命名衝突。
+	~Singleton 樣式是介面，全局變數是類別。
+	~Singleton 樣式總是被延遲加載，全局變數總是立即加載。
+	~它們之間沒有區別，都是為了提供全域訪問點。
+}
+
+
+// question: 4932809  name: 16_易_創建
+::16_易_創建::Factory Method 樣式的目的是什麼？{
+	=定義一個用於創建對象的介面，但讓子類別決定實例化哪個類別。
+	~在不指定具體類別的情況下創建一系列相關對象。
+	~確保一個類別只有一個實例。
+	~將抽象與其實現分離。
+}
+
+
+// question: 4932810  name: 17_難_比較
+::17_難_比較::Adapter 樣式與 Decorator 樣式的根本區別是什麼？{
+	=Adapter 關注於轉換介面以使其兼容，Decorator 關注於在不改變介面的情況下增加功能。
+	~Adapter 是結構型，Decorator 是行為型。
+	~Adapter 透過繼承實現，Decorator 透過組合實現。
+	~Adapter 只能用於類別，Decorator 只能用於對象。
+}
+
+
+// question: 4932811  name: 18_中_行為
+::18_中_行為::哪個設計樣式使得一個類別的行為可以在執行時被改變，並且客戶端程式碼對此變化是透明的？{
+	=Strategy
+	~Template Method
+	~Observer
+	~Mediator
+}
+
+
+// question: 4932812  name: 19_難_綜合
+::19_難_綜合::當一個大型系統需要處理多種請求，並且請求的處理邏輯可能隨時間變化時，哪種設計樣式最能幫助實現靈活的請求處理流程？{
+	=Chain of Responsibility
+	~Observer
+	~Singleton
+	~Factory Method
+}
+
+
+// question: 4932813  name: 20_中_結構
+::20_中_結構::當你想要為一個對象動態地添加新的職責，同時避免產生大量的子類別時，你會選擇哪種設計樣式？{
+	=Decorator
+	~Adapter
+	~Composite
+	~Bridge
+}
+
+
+// question: 4932814  name: 21_易_創建
+::21_易_創建::哪種設計樣式保證一個類別只有一個實例，並提供了一個全域訪問點？{
+	=Singleton
+	~Abstract Factory
+	~Factory Method
+	~Builder
+}
+
+
+// question: 4932815  name: 22_中_行為
+::22_中_行為::Observer 樣式中的「主體 (Subject)」負責什麼？{
+	=維護它所依賴的觀察者列表，並在狀態改變時通知它們。
+	~接收並處理所有請求。
+	~定義演算法的骨架。
+	~將一個介面轉換為另一個介面。
+}
+
+
+// question: 4932816  name: 23_難_應用
+::23_難_應用::在設計一個圖形編輯器時，你希望用戶能夠將單個圖形元素（如圓、方塊）和組合圖形（如由多個圓和方塊組成的群組）都視為相同的類型進行操作（移動、縮放等），最適合使用哪種設計樣式？{
+	=Composite
+	~Decorator
+	~Bridge
+	~Adapter
+}
+
+
+// question: 4932817  name: 24_中_行為
+::24_中_行為::在一個複雜的 UI 應用程式中，各個 UI 組件之間有大量的直接通信，導致耦合度過高。為了降低耦合度，哪種設計樣式會是最佳選擇？{
+	=Mediator
+	~Observer
+	~Strategy
+	~Template Method
+}
+
+
+// question: 4932818  name: 25_難_綜合
+::25_難_綜合::以下哪個選項不是創建型設計樣式？{
+	=Decorator
+	~Abstract Factory
+	~Factory Method
+	~Singleton
+}
+
+
+// question: 0  name: Switch category to $course$/top/程式問答題
+$CATEGORY: $course$/top/程式問答題
+
+
+// question: 4783867  name: principle- DIP-冷氣
+::principle- DIP-冷氣::[html]<p><span id\="docs-internal-guid-fd1040ce-7fff-c2ff-934b-918396880a37"></span></p><p dir\="ltr" style\="">請參考 DIP 原則（Dependency Inversion Principle）設計一個通用型的 遙控器 RemoteController, 可以對電視 (TV) 或冷氣 (AirConditioner) 做開、關、上、下（on, off, up, down）等動作。畫出重點 UML 設計圖與模擬程式碼（可執行），並說明之 。</p>上傳必須是 .png or .jpg<br><br><p></p>{}
+
+
+// question: 4932829  name: principle- door
+::principle- door::[html]<p>Explain the design below, including the problem it encounters and its solution.</p>\n<p><img src\="@@PLUGINFILE@@/adaptor.png" width\="500" /></p>{}
+
+
+// question: 4783935  name: principle- lamp
+::principle- lamp::[html]<p>What is the problem of the code? explain how to improve it</p>\n<p><img src\="@@PLUGINFILE@@/lamp.png" width\="680" height\="511" /></p>{}
+
+
+// question: 4783874  name: remote controller
+::remote controller::[html]<p>請參考 DIP 原則（Dependency Inversion Principle）設計一個通用型的遙控器 RemoteController, 可以對電視 (TV) 或冷氣 (AirConditioner) 做開、關、上、下（on, off, up, down）等動作。TV 預設的頻道是第七台，上下會在 1-15 間變化。冷氣預設 25 度，會在 20-30 度間變化。畫出 UML 的類別圖。</p>\n<p>(Apply <strong>DIP</strong> principle to design a general <em>RemoteController</em>; which can control the TV or AC by the action of on, off, up, down. The TV channel is ranged between 1-15; and AC is ranged between 20-30. Draw the class diagram)</p>\n<p>(upload the image file)</p>{}
+
+
+// question: 0  name: Switch category to $course$/top/程式問答題/問答
+$CATEGORY: $course$/top/程式問答題/問答
+
+
+// question: 4783875  name: basic- control
+::basic- control::[html]<p>有 getter, setter 來存取修改變數, 那為什麼不直接把該變數宣告為 public 就好了？</p>\n<p>(<em>getter</em> and <em>setter</em> are used to access and modify variables, why don't we declare the variable as public directly? what is difference?)</p>{}
+
+
+// question: 4783933  name: basic- data hiding
+::basic- data hiding::[html]<p>What is the problem of the following code</p>\n<p><img src\="@@PLUGINFILE@@/swap.png" width\="625" height\="464" /></p>{}
+
+
+// question: 4783997  name: iterator
+::iterator::[html]關於以下的程式，你覺得該如何改善，為什麼？<p><br>&nbsp;\n\n</p><pre>class Student \{\n    private int score;\n    int getScore() \{ return score;\}\n\}\n ...\nclass GradeComputer \{\n     public double computeAverage(ArrayList&lt;Student&gt;<student> s) \{\n        ... \n     \}\n\}\n</student></pre><p></p>{}
+
+
+// question: 4783993  name: mediator vs obs
+::mediator vs obs::[html]<p>如果某個 Medicator 收到訊息後都必須通知其他所有的 Colleague, 那們 Medicator 的角色和 Observer 樣式中的 Observable 是不是一樣？有何差異？ Colleague 和 Observer 有何差異？</p>{}
+
+
+// question: 4783932  name: principle- delegation
+::principle- delegation::[html]<p>Rewrite the program, using <em><strong>delegation</strong></em> mechanism to replace <strong><em>inheritance</em></strong> mechanism.</p>\n<p><img src\="@@PLUGINFILE@@/delegation.png" width\="632" height\="502" /></p>\n<p>(please upload image file)</p>{}
+
+
+// question: 0  name: Switch category to $course$/top/程式問答題/期中考卷
+$CATEGORY: $course$/top/程式問答題/期中考卷
+
+
+// question: 4783893  name: UML_fig
+::UML_fig::[html]<p><img src\="@@PLUGINFILE@@/UML_fig.png" alt\="" width\="600" /></p>
+
+// question: 4783880  name: basic-BMI
+::basic-BMI::[html]<p>我們若用功能導向來設計一個計算 BMI 的函式，會宣告一個 computeBMI(w, h) 的函式，若用物件導向來思考，我們會宣告一個 People, 內含一些屬性的設定如身高體重，以及一些方法如 getBMI() 來回傳其 BMI 值。</p><p>1. 請以 Java 或其他程式語言完成此物件類別的實作 (50%，需程式碼)</p><p>2. 單純回傳 BMI 對我們用處並不大，我們想要知道該人的 BMI 過高，過低或是正常。但不同的年齡、性別、國家對於 BMI 的範圍界定不同，我們該如何設計？考慮到擴充性設計我們不希望經常修改程式碼，而是以擴充的方式來設計，我們該如何做？（50%; 設計圖及解說即可）</p><p><br></p><p>空格說明完成度; 附件包含程式碼、設計圖與解說</p>{}
+
+
+// question: 4923308  name: Mid_b- getMax 棒球比賽
+::Mid_b- getMax 棒球比賽::[html]<p dir\="ltr" style\="text-align\: left;"><a href\="https\://docs.google.com/document/d/17ncu69saFXnk1pMpGWoCVLB9Z_ATE-_XCZXK4znK48I/edit?usp\=sharing" target\="_blank" title\="試題連接">試題連接</a></p><p dir\="ltr" style\="text-align\: left;">請完成程式碼，以及 UML 截圖、執行截圖</p><p dir\="ltr" style\="text-align\: left;">下方處請自評完成狀況（每題），例如</p><p dir\="ltr" style\="text-align\: left;"></p><ul><li>1. 完全完成</li><li>2. 僅完成 UML, 程式碼沒有完成</li></ul><p></p>{}
+
+
+// question: 4783901  name: uml 七龍珠
+::uml 七龍珠::[html]<a href\="https\://docs.google.com/document/d/1udUqR8wpB-rlONOr41xQKZ-5tN7RqihvmZbcadYLMII/edit?usp\=sharing" target\="_blank">https\://docs.google.com/document/d/1udUqR8wpB-rlONOr41xQKZ-5tN7RqihvmZbcadYLMII/edit?usp\=sharing</a>{}
+
+
+// question: 4783864  name: 台中捷運
+::台中捷運::[html]<p><span id\="docs-internal-guid-d8b9ae97-7fff-c8fa-1208-be439be5f8e1"></span></p><p dir\="ltr" style\="">台中捷運在 2020年底前開幕，交通更便利。</p><br><p dir\="ltr" style\="">情境</p><ol style\=""><li dir\="ltr"><p dir\="ltr" role\="presentation">John 購買了一張悠遊卡，並且跟他的身分證字號進行綁定</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">John 存了 500 元到悠遊卡</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">John 用悠遊卡到逢甲 iBike 站借了車，車樁上顯示他還有 500 元</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">John 到市政府站還了車，因為沒有超過 30 min 系統沒有扣款，還是顯示 500 元</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">John 用悠遊卡進了捷運站搭車到高鐵烏日站下車，被扣了 30 元</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">John 用悠遊卡進了高鐵站搭車到台北站下車，餘額不足無法出站</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">John 到儲值機存了 1000 元，扣款 750 後出站。</p></li></ol><br><p dir\="ltr" style\="">請繪製 UML diagram, 找出可能的物件類別，及其相關的屬性，方法。（注意：你不需要寫出程式碼）</p><br><p dir\="ltr" style\="">Hint\: 相關英文：悠遊卡/EasyCard; 捷運/MRT; 台灣高鐵/THSR; 車樁/BikePile; 餘款/balance; 扣款/charge; 儲值/deposit; 騎車/ride; 還車/return; 烏日/Wuri (以上不一定都會用到，用到的可能也不會只有這些）</p><ul style\=""><li dir\="ltr"><p dir\="ltr" role\="presentation">請考慮物件之間的關係及特性，例如人和卡片是什麼關係？哪些是 navigation, 哪些是 use 關係？</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">請考慮可能的一般化關係，例如不同的交通工具是否有共通性？</p></li><li dir\="ltr"><p dir\="ltr" role\="presentation">考慮降低耦合度，是否會定義任何的介面？誰去實踐介面？誰又是介面的使用者？</p></li></ul><p><br></p><p>空格說明完成度，附件請繳交 PDF 報告檔，內含 UML diagram 及適當的說明。</p><br><br><p></p>{}
+
+
+// question: 4923307  name: 字串解析 打怪
+::字串解析 打怪::[html]<p dir\="ltr" style\="text-align\: left;"><a href\="https\://docs.google.com/document/d/1w4SyX1-KtAllRJkd5mlzTnFsY4qiEEXaWqtCnoxvv3U/edit?usp\=sharing" target\="_blank">試題連接</a></p><p dir\="ltr" style\="text-align\: left;">請完成程式碼，以及 UML 截圖、執行截圖</p><p dir\="ltr" style\="text-align\: left;">下方處請自評完成狀況（每題），例如</p><p dir\="ltr" style\="text-align\: left;"><ul><li>1. 完全完成</li><li>2. 僅完成 UML, 程式碼沒有完成</li></ul></p>{}
+
+
+// question: 4783928  name: 美食外送
+::美食外送::[html]<p>如 Food Panda, Uber Eat 等美食外送等系統目前在台灣很盛行，身為一個資訊人員，我們可以來規劃想想看此一系統。</p>\n<ol>\n<li>透過 use case 的方法論，請找出系統的 actor 以及主要的 use case; 請繪製 use case diagram, 並簡約的說明 每個 use case 的情境</li>\n<li>找出系統可能的物件類別，繪製物件類別圖。請說明每個物件的功能。</li>\n</ol>\n<p> </p>\n<p>請以 UML diagram 加上文字的說明（google doc），最後輸出成 PDF 繳交。</p>{}
+
+
+// question: 4783892  name: 通用 getMax
+::通用 getMax::[html]應用 interface Comparable, 來設計一個 「通用型的 getMax」，它可以找出任何陣列內 最大的元素，例如可以找到最 max 的 People。<p><br></p><p>(請複製以下程式碼到答案區，並修正使之完整）</p><p>&nbsp;\n\n</p><pre>interface Comparable \{\n  public int compare(Comparable other);\n\}\nclass GeneralMax \{\n    public static ? getMax(?[] data) \{\n       ? \n  \}\n\}\nclass Main \{\n   ?\n\}\nclass People ? \{\n   ?\n\}\n</pre><p></p>{}
+
+
+// question: 0  name: Switch category to $course$/top/程式問答題/期末考卷
+$CATEGORY: $course$/top/程式問答題/期末考卷
+
+
+// question: 4783952  name: Adaptor- vector
+::Adaptor- vector::[html]<p><img src\="@@PLUGINFILE@@/VectorUtility.png" width\="400" height\="209" /></p>\n<p>這是課堂上採用 Adapter design pattern 的一個範例，請宣告一個 Vector 加入兩個學生 (.add())，並透過 VectorUtility 來做一個複製。</p>{}
+
+
+// question: 4932994  name: Adaptor- 雙向
+::Adaptor- 雙向::[html]<img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid"><br><br>附件包含ＵＭＬ、程式碼及執行結果。空白處描述完成程度<br><p></p>{}
+
+
+// question: 4783961  name: Bridge- draw
+::Bridge- draw::[html]<p>用 Bridge 來設計一個畫形狀的系統</p>\n<ul>\n<li>Shape 有 Rectangle 和 Square 等形狀，透過 draw 來畫圖</li>\n<li>draw() 是透過一連串的呼叫 drawLine() 來完成的</li>\n<li>drawLine() 在不同的平台，例如 Window2D, Window3D 是不同的</li>\n</ul>\n<p>請用 StarUML 畫圖，並匯出圖片檔上傳</p>{}
+
+
+// question: 4783966  name: Composite- draw
+::Composite- draw::[html]<p>當我們在電腦畫圖時，一個面板上 (Panel) 可以放置 面板（Panel)、方形（Rectangle）與圓形（Circle)。每當我們要繪製一個面板時，會繪製該面板及其所包含的內容圖形。</p>\n<p> </p>\n<p>我們可以用何種設計樣式來設計？請回答，並繪製 UML diagram, 寫出局部重要程式碼。</p>{}
+
+
+// question: 4935152  name: Composite- file and folder
+::Composite- file and folder::[html]<img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid"><br>請畫出 UML 及對應的程式碼<br><p></p>{}
+
+
+// question: 4935142  name: Decorator- Snowman (code)
+::Decorator- Snowman (code)::[html]<p dir\="ltr" style\="text-align\: left;"><img src\="https\://ilearn.fcu.edu.tw/pluginfile.php/3101136/mod_workshop/intro/image%20%281%29.png"><br></p>{}
+
+
+// question: 4783970  name: Decorator- XY
+::Decorator- XY::[html]<p>有一個物件 A 其基本的功能為 Basic，可以從兩方面去擴充，分別為&nbsp;X, Y 。假設 X 方面可以有 X1, X2 兩種選項，Y 有 Y1, Y2, Y3 三種選項。</p>\n<p>若以 Decorator 設計樣式來設計，該如何設計？請畫出 UML&nbsp;設計圖及程式碼。<br><br></p>{}
+
+
+// question: 4783845  name: final
+::final::[html]<p dir\="ltr" style\="text-align\: left;">請完成以下測驗</p><p dir\="ltr" style\="text-align\: left;">&nbsp; &nbsp;<a href\="https\://docs.google.com/document/d/1ZDdhUTXXkPDX1MX1elunQ77U2a8b81mJmCsdM13P6xY/edit?usp\=sharing" target\="_blank">連接</a></p>{}
+
+
+// question: 4935150  name: Mediator- 班級活動(code)
+::Mediator- 班級活動(code)::[html]<p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid" style\="font-size\: 0.9375rem;"></p><p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image%20%281%29.png" alt\="" role\="presentation" class\="img-fluid"><br></p><p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image%20%282%29.png" alt\="" role\="presentation" class\="img-fluid"><br></p><p dir\="ltr" style\="text-align\: left;">請完成 UML 及程式碼</p>{}
+
+
+// question: 4783978  name: Observer- Stock
+::Observer- Stock::[html]<p>股票（Stock）物件內包含上次價格、現價與成交量三個屬性，會不時的波動。</p>\n<p>現有三個面板會呈現不同的資訊：</p>\n<ul>\n<li>CurrentPriceBoard\: 呈現昨日價格 (Y)、目前價格 (C)、及波動百</li>\n<li>分比 ((C-Y)/C)。</li>\n<li>AmountBoard\: 呈現現價、成交量。</li>\n<li>GreenRedBoard\: 最近三次的價格，如果連三漲，背景設為綠色，</li>\n</ul>\n<p>我們想用 Observer 設計樣式設計，請繪製 UML diagram, 並寫出重點程式碼。</p>{}
+
+
+// question: 4933000  name: Observer- Tariff
+::Observer- Tariff::[html]<p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid"><br></p><p dir\="ltr" style\="text-align\: left;"></p><p>附件包含ＵＭＬ、程式碼及執行結果。空白處描述完成程度</p><br><p></p>{}
+
+
+// question: 4935143  name: Observer- Tariff
+::Observer- Tariff::[html]<p dir\="ltr" style\="text-align\: left;"><img src\="https\://ilearn.fcu.edu.tw/pluginfile.php/3101136/mod_workshop/intro/image.png"><br></p>{}
+
+
+// question: 4935141  name: Observer- 氣象局
+::Observer- 氣象局::[html]<p dir\="ltr" style\="text-align\: left;"><b id\="docs-internal-guid-9ee0f8b5-7fff-4a34-c76f-b000485ccdf8">氣溫是大家重視的數據，不同的人或事務對溫度變化都有不同的反應與處置方式，例如氣象局 (Weather Bureau) 超過 38 度會發布高溫特報、低於 10 度時農業部漁業署(FishAgency) 會發布低溫特報。請用 Observer 設計樣式，畫出 UML 並寫出程式（含測試）。</b><br></p>{}
+
+
+// question: 4783979  name: Observer- 水庫
+::Observer- 水庫::[html]<p>水庫 (Reservoir) 的水量大家都很關注，低於某個限度時就需要採取不同的措施。我們想用 Observer 設計樣式來設計此一系統，目前至少有兩個物件 Government 和 Factory 關心水情。請以 Java 語言，描述程式設計必要的處理細節。</p>{}
+
+
+// question: 4935153  name: Decorator Snowman (連)
+::Decorator Snowman (連)::[html]<p dir\="ltr" style\="text-align\: left;"><img src\="@@PLUGINFILE@@/image.png" alt\="" role\="presentation" class\="img-fluid"><br></p>{
+	=Snowman<p dir\="ltr" style\="text-align\: left;"></p> -> ConcreteComponent
+	=<p dir\="ltr" style\="text-align\: left;">SnowmanDecorator</p> -> Decorator
+	=<p dir\="ltr" style\="text-align\: left;">Gloves</p> -> ConcreteDecorator
+	= -> Border
+	= -> Strategy
+	= -> FactoryMethod
+}
+
+
+// question: 4935151  name: Mediator- 班級活動 (連連看)
+::Mediator- 班級活動 (連連看)::[html]依據 Mediator-班級活動的題目，連接對應的設計樣式角色<p dir\="ltr" style\="text-align\: left;"></p>{
+	=Teacher<p dir\="ltr" style\="text-align\: left;"></p> -> Mediator
+	=ClassOfficer<p dir\="ltr" style\="text-align\: left;"></p> -> Colleague
+	=ClassLeader<p dir\="ltr" style\="text-align\: left;"></p> -> ConcreteColleague
+	= -> Observer
+	= -> AbstractFactory
+}
+
+

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" width="100%" height="100%">
+  <!-- Archetype 1: Defensive / Cash Heavy -->
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="300" height="220" rx="10" fill="#f0f4f8" stroke="#0b3c5d" stroke-width="2"/>
+    <text x="150" y="35" fill="#0b3c5d" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">Defensive Archetype</text>
+    <text x="150" y="55" fill="#666" font-family="Arial" font-size="11" text-anchor="middle">(DeepSeek-R1, Claude-4)</text>
+    <line x1="20" y1="65" x2="280" y2="65" stroke="#0b3c5d" stroke-width="1"/>
+
+    <!-- Cash vs Equity Bar -->
+    <rect x="30" y="90" width="190" height="25" fill="#0b3c5d" rx="3"/>
+    <rect x="220" y="90" width="50" height="25" fill="#328cc1" rx="3"/>
+    <text x="125" y="107" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">CASH: 80% - 90%</text>
+    <text x="245" y="107" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">Assets</text>
+
+    <text x="150" y="145" fill="#333" font-family="Arial" font-size="11" text-anchor="middle">• Low Drawdown, Minimal Risk</text>
+    <text x="150" y="165" fill="#333" font-family="Arial" font-size="11" text-anchor="middle">• Preserves capital during market drops</text>
+    <text x="150" y="185" fill="#333" font-family="Arial" font-size="11" text-anchor="middle">• May miss rapid upside rallies</text>
+  </g>
+
+  <!-- Archetype 2: Aggressive / High Risk -->
+  <g transform="translate(370, 20)">
+    <rect x="0" y="0" width="300" height="220" rx="10" fill="#f0f4f8" stroke="#328cc1" stroke-width="2"/>
+    <text x="150" y="35" fill="#328cc1" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">Aggressive Archetype</text>
+    <text x="150" y="55" fill="#666" font-family="Arial" font-size="11" text-anchor="middle">(Grok-3, GPT-5, Qwen-235B)</text>
+    <line x1="20" y1="65" x2="280" y2="65" stroke="#328cc1" stroke-width="1"/>
+
+    <!-- Cash vs Equity Bar -->
+    <rect x="30" y="90" width="30" height="25" fill="#0b3c5d" rx="3"/>
+    <rect x="60" y="90" width="210" height="25" fill="#328cc1" rx="3"/>
+    <text x="45" y="107" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">CASH</text>
+    <text x="165" y="107" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">High Asset Allocation: 85% - 95%</text>
+
+    <text x="150" y="145" fill="#333" font-family="Arial" font-size="11" text-anchor="middle">• High Return Potential &amp; High Volatility</text>
+    <text x="150" y="165" fill="#333" font-family="Arial" font-size="11" text-anchor="middle">• Highly responsive to live news signals</text>
+    <text x="150" y="185" fill="#333" font-family="Arial" font-size="11" text-anchor="middle">• Subject to larger drawdowns</text>
+  </g>
+</svg>

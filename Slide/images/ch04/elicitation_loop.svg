@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 280" width="600" height="280">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#328cc1"/>
+    </marker>
+  </defs>
+
+  <g transform="translate(60, 30)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#0b3c5d"/>
+    <text x="100" y="35" fill="#ffffff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">1. Reqt. Discovery</text>
+  </g>
+
+  <path d="M 260 60 L 330 60" fill="none" stroke="#328cc1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(340, 30)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#328cc1"/>
+    <text x="100" y="30" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">2. Reqt. Classification</text>
+    <text x="100" y="46" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">&amp; Organization</text>
+  </g>
+
+  <path d="M 440 90 L 440 160" fill="none" stroke="#328cc1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(340, 170)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#0b3c5d"/>
+    <text x="100" y="30" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">3. Prioritization</text>
+    <text x="100" y="46" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">&amp; Negotiation</text>
+  </g>
+
+  <path d="M 340 200 L 270 200" fill="none" stroke="#328cc1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(60, 170)">
+    <rect x="0" y="0" width="200" height="60" rx="8" fill="#328cc1"/>
+    <text x="100" y="35" fill="#ffffff" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle">4. Reqt. Specification</text>
+  </g>
+
+  <path d="M 160 170 L 160 100" fill="none" stroke="#328cc1" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

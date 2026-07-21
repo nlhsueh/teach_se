@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 270" width="680" height="270">
+  <rect x="10" y="10" width="660" height="250" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <text x="340" y="32" fill="#0b3c5d" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">nextDate(month, day, year) Concrete Test Suite (TC1 - TC8)</text>
+
+  <!-- Table Header -->
+  <rect x="25" y="48" width="50" height="24" fill="#0b3c5d"/>
+  <text x="50" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Case</text>
+
+  <rect x="80" y="48" width="170" height="24" fill="#328cc1"/>
+  <text x="165" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Boundary / Rule Category</text>
+
+  <rect x="255" y="48" width="175" height="24" fill="#328cc1"/>
+  <text x="342" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Input Date (m, d, y)</text>
+
+  <rect x="435" y="48" width="220" height="24" fill="#0b3c5d"/>
+  <text x="545" y="64" fill="#ffffff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Expected Result / Output</text>
+
+  <!-- Row 1: TC1 -->
+  <rect x="25" y="74" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="89" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC1</text>
+  <rect x="80" y="74" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="89" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Normal Day Increment</text>
+  <rect x="255" y="74" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="89" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">month=3, day=15, year=2024</text>
+  <rect x="435" y="74" width="220" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="545" y="89" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">2024-03-16</text>
+
+  <!-- Row 2: TC2 -->
+  <rect x="25" y="98" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="113" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC2</text>
+  <rect x="80" y="98" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="113" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">31-Day Month End</text>
+  <rect x="255" y="98" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="113" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">month=1, day=31, year=2024</text>
+  <rect x="435" y="98" width="220" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="545" y="113" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">2024-02-01 (Month Rollover)</text>
+
+  <!-- Row 3: TC3 -->
+  <rect x="25" y="122" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="137" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC3</text>
+  <rect x="80" y="122" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="137" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">30-Day Month End</text>
+  <rect x="255" y="122" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="137" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">month=4, day=30, year=2024</text>
+  <rect x="435" y="122" width="220" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="545" y="137" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">2024-05-01 (April Rollover)</text>
+
+  <!-- Row 4: TC4 -->
+  <rect x="25" y="146" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="161" fill="#c62828" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC4</text>
+  <rect x="80" y="146" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="161" fill="#c62828" font-family="Arial" font-size="9" text-anchor="middle">30-Day Invalid Day</text>
+  <rect x="255" y="146" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="161" fill="#c62828" font-family="Arial" font-size="9" text-anchor="middle">month=4, day=31, year=2024</text>
+  <rect x="435" y="146" width="220" height="22" fill="#ffebee" stroke="#c62828"/>
+  <text x="545" y="161" fill="#c62828" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">ERROR: Apr 31 Invalid</text>
+
+  <!-- Row 5: TC5 -->
+  <rect x="25" y="170" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="185" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC5</text>
+  <rect x="80" y="170" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="185" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Leap Year Feb 28</text>
+  <rect x="255" y="170" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="185" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">month=2, day=28, year=2024</text>
+  <rect x="435" y="170" width="220" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="545" y="185" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">2024-02-29 (Leap Day)</text>
+
+  <!-- Row 6: TC6 -->
+  <rect x="25" y="194" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="209" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC6</text>
+  <rect x="80" y="194" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="209" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">Non-Leap Year Feb 28</text>
+  <rect x="255" y="194" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="209" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">month=2, day=28, year=2023</text>
+  <rect x="435" y="194" width="220" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="545" y="209" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">2023-03-01 (March 1)</text>
+
+  <!-- Row 7: TC7 -->
+  <rect x="25" y="218" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="233" fill="#0b3c5d" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC7</text>
+  <rect x="80" y="218" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="233" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">End of Year Rollover</text>
+  <rect x="255" y="218" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="233" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">month=12, day=31, year=2024</text>
+  <rect x="435" y="218" width="220" height="22" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="545" y="233" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">2025-01-01 (New Year)</text>
+
+  <!-- Row 8: TC8 -->
+  <rect x="25" y="242" width="50" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="50" y="257" fill="#c62828" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">TC8</text>
+  <rect x="80" y="242" width="170" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="165" y="257" fill="#c62828" font-family="Arial" font-size="9" text-anchor="middle">Out-of-Bounds Month</text>
+  <rect x="255" y="242" width="175" height="22" fill="#ffffff" stroke="#cccccc"/>
+  <text x="342" y="257" fill="#c62828" font-family="Arial" font-size="9" text-anchor="middle">month=13, day=15, year=2024</text>
+  <rect x="435" y="242" width="220" height="22" fill="#ffebee" stroke="#c62828"/>
+  <text x="545" y="257" fill="#c62828" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">ERROR: Invalid Month</text>
+</svg>

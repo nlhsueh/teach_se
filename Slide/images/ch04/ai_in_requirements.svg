@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 270" width="680" height="270">
+  <rect x="10" y="10" width="660" height="250" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <text x="340" y="34" fill="#0b3c5d" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">How AI / LLMs Assist Requirements Engineering (RE Copilot)</text>
+
+  <!-- Box 1: Elicitation &amp; Parsing -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="135" height="185" rx="8" fill="#0b3c5d"/>
+    <text x="67" y="25" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">1. Elicitation</text>
+    <line x1="10" y1="35" x2="125" y2="35" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="67" y="60" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">• Transcripts to</text>
+    <text x="67" y="75" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">  User Stories</text>
+    <text x="67" y="100" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">• Gherkin syntax</text>
+    <text x="67" y="115" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">  (Given-When-Then)</text>
+    <text x="67" y="140" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">• Domain Terms</text>
+    <text x="67" y="155" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">  Extraction</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 170 147 L 190 147" stroke="#328cc1" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Box 2: Quality &amp; Ambiguity Check -->
+  <g transform="translate(195, 55)">
+    <rect x="0" y="0" width="135" height="185" rx="8" fill="#328cc1"/>
+    <text x="67" y="25" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">2. Quality Check</text>
+    <line x1="10" y1="35" x2="125" y2="35" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <text x="67" y="60" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">• Detect Vague</text>
+    <text x="67" y="75" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">  Adjectives</text>
+    <text x="67" y="100" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">• Find Logic</text>
+    <text x="67" y="115" fill="#ffffff" font-family="Arial" font-size="9" text-anchor="middle">  Contradictions</text>
+    <text x="67" y="140" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">• Uncover Missing</text>
+    <text x="67" y="155" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">  Edge Cases</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 335 147 L 355 147" stroke="#328cc1" stroke-width="3" fill="none"/>
+
+  <!-- Box 3: NFR Metric Derivation -->
+  <g transform="translate(360, 55)">
+    <rect x="0" y="0" width="135" height="185" rx="8" fill="#0b3c5d"/>
+    <text x="67" y="25" fill="#ffffff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">3. Metric Quant</text>
+    <line x1="10" y1="35" x2="125" y2="35" stroke="#328cc1" stroke-width="1.5"/>
+    <text x="67" y="60" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">• GQM Metric</text>
+    <text x="67" y="75" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">  Suggestion</text>
+    <text x="67" y="100" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">• SLA &amp; NFR</text>
+    <text x="67" y="115" fill="#e1f5fe" font-family="Arial" font-size="9" text-anchor="middle">  Quantification</text>
+    <text x="67" y="140" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">• Verifiable</text>
+    <text x="67" y="155" fill="#ffffff" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">  Acceptance Test</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 500 147 L 520 147" stroke="#328cc1" stroke-width="3" fill="none"/>
+
+  <!-- Box 4: Traceability &amp; Impact -->
+  <g transform="translate(525, 55)">
+    <rect x="0" y="0" width="125" height="185" rx="8" fill="#e8f5e9" stroke="none" stroke-width="0"/>
+    <text x="62" y="25" fill="#2e7d32" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">4. Traceability</text>
+    <line x1="10" y1="35" x2="115" y2="35" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="62" y="60" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">• Auto RTM</text>
+    <text x="62" y="75" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">  Generation</text>
+    <text x="62" y="100" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">• Change Impact</text>
+    <text x="62" y="115" fill="#333" font-family="Arial" font-size="9" text-anchor="middle">  Prediction</text>
+    <text x="62" y="140" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">• Human-in-the-</text>
+    <text x="62" y="155" fill="#2e7d32" font-family="Arial" font-size="9" font-weight="bold" text-anchor="middle">  Loop Review</text>
+  </g>
+</svg>
