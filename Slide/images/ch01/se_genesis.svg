@@ -1,0 +1,50 @@
+<svg viewBox="0 0 400 300" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Card -->
+  <rect width="400" height="300" rx="12" fill="#ffffff" stroke="none"/>
+  
+  <!-- Connecting Dotted Lines first so they render underneath circles -->
+  <line x1="60" y1="87" x2="60" y2="128" stroke="#cfd8dc" stroke-width="2" stroke-dasharray="4,4" />
+  <line x1="60" y1="172" x2="60" y2="213" stroke="#cfd8dc" stroke-width="2" stroke-dasharray="4,4" />
+  
+  <!-- Milestone 1: Early Computing -->
+  <g>
+    <circle cx="60" cy="65" r="22" fill="#e3f2fd" />
+    <!-- Punch card -->
+    <path d="M 48,53 L 67,53 L 72,58 L 72,77 L 48,77 Z" fill="#bbdefb" stroke="#0b3c5d" stroke-width="2" stroke-linejoin="round" />
+    <rect x="52" y="58" width="2" height="3" fill="#0b3c5d" />
+    <rect x="58" y="58" width="2" height="3" fill="#0b3c5d" />
+    <rect x="64" y="62" width="2" height="3" fill="#0b3c5d" />
+    <rect x="54" y="67" width="2" height="3" fill="#0b3c5d" />
+    <rect x="66" y="58" width="2" height="3" fill="#0b3c5d" />
+    
+    <text x="100" y="60" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" fill="#0b3c5d">1940s-1950s: Early Computing</text>
+    <text x="100" y="78" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#7f8c8d">Hardware-focused, informal processes</text>
+  </g>
+  
+  <!-- Milestone 2: Software Crisis -->
+  <g>
+    <circle cx="60" cy="150" r="22" fill="#ffebee" />
+    <!-- Warning Sign -->
+    <path d="M 60,136 L 75,162 C 76,164 75,166 73,166 L 47,166 C 45,166 44,164 45,162 Z" fill="#ffcdd2" stroke="#c0392b" stroke-width="2" stroke-linejoin="round" />
+    <line x1="60" y1="145" x2="60" y2="153" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="60" cy="159" r="1.5" fill="#c0392b" />
+    
+    <text x="100" y="145" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" fill="#c0392b">1960s: The Software Crisis</text>
+    <text x="100" y="163" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#7f8c8d">Complexity outpaced capability; projects failed</text>
+  </g>
+  
+  <!-- Milestone 3: NATO Conference -->
+  <g>
+    <circle cx="60" cy="235" r="22" fill="#e8f5e9" />
+    <!-- Blueprint Compass -->
+    <rect x="48" y="223" width="24" height="24" rx="2" fill="#c8e6c9" stroke="#27ae60" stroke-width="2" />
+    <line x1="56" y1="223" x2="56" y2="247" stroke="#a5d6a7" stroke-width="1" />
+    <line x1="64" y1="223" x2="64" y2="247" stroke="#a5d6a7" stroke-width="1" />
+    <line x1="48" y1="231" x2="72" y2="231" stroke="#a5d6a7" stroke-width="1" />
+    <line x1="48" y1="239" x2="72" y2="239" stroke="#a5d6a7" stroke-width="1" />
+    <path d="M 52,243 L 60,227 L 68,243 M 56,237 L 64,237" fill="none" stroke="#27ae60" stroke-width="2" stroke-linecap="round" />
+    
+    <text x="100" y="230" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">1968: Birth of Software Engineering</text>
+    <text x="100" y="248" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#7f8c8d">NATO Conference formalized SE as a discipline</text>
+  </g>
+</svg>

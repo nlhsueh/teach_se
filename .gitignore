@@ -2,10 +2,7 @@
 /Lecture/slides
 /Lecture/*.sh
 /Lecture/*.css
-/*.pdf
-/HW/
-/quiz_exam/
-/etc/
+/-hidden/
 
 # Ignore IDE directories and project files
 **/.settings/
@@ -23,3 +20,5 @@
 
 # Ignore agent skills and English markdown files for GitHub
 .agents/
+
+.github/
