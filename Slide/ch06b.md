@@ -159,8 +159,8 @@ style: |
     height: 720px;
   }
   section.full-image-slide div.centered-image img {
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
   }
   section.title-image-slide {
