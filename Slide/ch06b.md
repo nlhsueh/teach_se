@@ -150,6 +150,13 @@ Feng Chia University
    * Designing relational schemas, object graphs, or data persistence models.
 
 ---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/07_zoom_in.jpeg" alt="Zooming In: The 4 Fundamental Design Activities" />
+</div>
+
+---
 
 ## General Design Principles (Part 1)
 
@@ -171,13 +178,20 @@ Feng Chia University
   * Splitting software into distinct features that overlap as little as possible (e.g. decoupling UI rendering from database access).
 
 ---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/08_tenets.jpeg" alt="The Core Tenets of Software Design" />
+</div>
+
+---
 
 ## High Cohesion vs. Low Coupling
 
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="images/ch06b/cohesion_coupling.svg" alt="High Cohesion vs Low Coupling" />
+  <img src="images/ch05_nb/09_low_coupling.jpeg" alt="High Cohesion & Low Coupling" />
 </div>
 
 ---
@@ -279,7 +293,7 @@ In software design, what does "Low Coupling" combined with "High Cohesion" achie
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="images/ch06b/solid_principles.svg" alt="The SOLID Principles" />
+  <img src="images/ch05_nb/10_solid.jpeg" alt="The SOLID Principles: Visual Analogies" />
 </div>
 
 ---
@@ -546,13 +560,27 @@ class OrderService {
 </div>
 
 ---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/11_solid_table.jpeg" alt="SOLID: The Good vs. Bad Matrix" />
+</div>
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/12_micro_macro.jpeg" alt="The Micro-Macro Harmony Matrix" />
+</div>
+
+---
 
 ## AI in Software Design & Refactoring
 
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="images/ch06b/ai_in_software_design.svg" alt="AI in Software Design" />
+  <img src="images/ch05_nb/13_ai_design.jpeg" alt="The AI Architect Copilot Dashboard" />
 </div>
 
 ---
@@ -578,6 +606,13 @@ class OrderService {
 * **The Golden Rule:**
   > AI Proposes Refactoring; Developers Validate Software Quality!
   > Engineers must ensure that refactored designs actually simplify code readability and long-term maintainability.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/14_risk.jpeg" alt="Human-in-the-Loop: Risks & Blind Spots" />
+</div>
 
 ---
 

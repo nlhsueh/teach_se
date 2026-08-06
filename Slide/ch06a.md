@@ -148,20 +148,18 @@ Feng Chia University
 
 ## What is Architectural Design?
 
-<div class="split55">
-  <div class="left">
+* **System Structure:**
+  * Architectural design is concerned with understanding how a software system should be organized and designing its overall structure.
+* **Critical Link:**
+  * Connects **requirements engineering** to **detailed software design** by identifying principal structural components and their relationships.
+* **Architectural Model:**
+  * Outlines communicating components and system boundary interfaces.
 
-  * **System Structure:**
-    * Architectural design is concerned with understanding how a software system should be organized and designing its overall structure.
-  * **Critical Link:**
-    * Connects **requirements engineering** to **detailed software design** by identifying principal structural components and their relationships.
-  * **Architectural Model:**
-    * Outlines communicating components and system boundary interfaces.
+---
+<!-- _class: full-image-slide -->
 
-  </div>
-  <div class="right">
-    <img src="images/ch06/robot_packing.png" alt="Robot Packing System Architecture" />
-  </div>
+<div class="centered-image">
+  <img src="images/ch05_nb/02_connection.jpeg" alt="Connecting the 'What' to the 'How'" />
 </div>
 
 ---
@@ -197,22 +195,27 @@ Feng Chia University
 * **Maintainability:** Use fine-grained, loosely coupled, replaceable components.
 
 ---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/03_system_characteristics.jpeg" alt="Deliberate Structure Drives System Behavior" />
+</div>
+
+---
 
 ## Architectural Views (Kruchten's 4+1 Model)
 
-<div class="split55">
-  <div class="left">
+* **Logical View:** Shows key domain abstractions as object classes.
+* **Process View:** Shows runtime interacting processes and threads.
+* **Development View:** Shows code structure, packages, and sub-systems.
+* **Physical View:** Shows hardware deployment and network distribution.
+* **+1 Use Cases / Scenarios:** Connects all 4 views together.
 
-  * **Logical View:** Shows key domain abstractions as object classes.
-  * **Process View:** Shows runtime interacting processes and threads.
-  * **Development View:** Shows code structure, packages, and sub-systems.
-  * **Physical View:** Shows hardware deployment and network distribution.
-  * **+1 Use Cases / Scenarios:** Connects all 4 views together.
+---
+<!-- _class: full-image-slide -->
 
-  </div>
-  <div class="right">
-    <img src="images/ch06/4plus1_views.png" alt="4+1 Architectural Views" />
-  </div>
+<div class="centered-image">
+  <img src="images/ch05_nb/04_five_perspective.jpeg" alt="Five Perspectives, One Unified Blueprint" />
 </div>
 
 ---
@@ -263,6 +266,13 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
   * Defines the pattern name, description, example usage, when to use, advantages, and disadvantages.
 * **Common Patterns:**
   * **MVC**, **Layered Architecture**, **Repository Architecture**, **Client-Server**, **Pipe & Filter**, **Microservices**.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/05_arch-pattern.jpeg" alt="Architectural Patterns" />
+</div>
 
 ---
 
@@ -363,8 +373,10 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 
 ## Microservices Architecture (MSA) vs. Monolith
 
-<div style="text-align: center; margin-top: 10px;">
-  <img src="images/ch06/monolith_vs_microservices.svg" style="max-height: 480px;" alt="MSA vs Monolith" />
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/06_monolithic_microservice.jpeg" alt="Monolith vs. Microservice" />
 </div>
 
 ---
@@ -387,12 +399,14 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 * **The Architect Copilot Paradigm:**
   * LLMs assist software architects in structuring complex systems, selecting architectural patterns, and evaluating trade-offs.
   * Translates high-level non-functional requirements into structural blueprints.
-
-<div style="text-align: center; margin-top: 10px;">
-  <img src="images/ch06/ai_in_architecture.svg" style="max-height: 250px;" alt="AI in Architectural Design" />
-</div>
-
 * **Key Benefit:** Accelerates architecture trade-off evaluation and interface contract drafting.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/13_ai_design.jpeg" alt="The AI Architect Copilot Dashboard" />
+</div>
 
 ---
 
@@ -417,6 +431,13 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 * **The Golden Rule:**
   > **AI Proposes Trade-offs; Lead Architects Make Decisions!**
   > Human Architects must own final architectural decisions and long-term system maintainability.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="images/ch05_nb/14_risk.jpeg" alt="Human-in-the-Loop: Risks & Blind Spots" />
+</div>
 
 ---
 
