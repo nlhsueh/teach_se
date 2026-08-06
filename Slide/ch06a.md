@@ -65,6 +65,26 @@ style: |
     width: 100%;
     max-width: 180px;
   }
+  div.discussion-columns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  div.discussion-text {
+    flex: 75%;
+    font-size: 1.25em;
+    line-height: 1.4;
+  }
+  div.discussion-logo {
+    flex: 25%;
+    text-align: center;
+  }
+  div.discussion-logo img {
+    width: 100%;
+    max-width: 150px;
+  }
   div.fill-blank-columns {
     display: flex;
     align-items: center;
@@ -120,6 +140,50 @@ style: |
   div.split55 > div.right img {
     width: 100%;
     max-width: 400px;
+  }
+  section.full-image-slide {
+    padding: 0 !important;
+  }
+  section.full-image-slide::after {
+    display: none !important;
+  }
+  section.full-image-slide header,
+  section.full-image-slide footer {
+    display: none !important;
+  }
+  section.full-image-slide div.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 720px;
+  }
+  section.full-image-slide div.centered-image img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+  }
+  section.title-image-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  section.title-image-slide h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  section.title-image-slide div.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 480px;
+  }
+  section.title-image-slide div.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 header: 'Software Engineering | Chapter 6: Architectural Design'
 footer: 'Prof. Nien-Lin Hsueh'

@@ -29,31 +29,23 @@ style: |
   blockquote {
     background: transparent;
     border-left: 4px solid #328cc1;
-    padding-left: 20px;
-    margin: 20px 0;
+    margin: 1em 0;
+    padding: 5px 20px;
     font-style: italic;
-    color: #555;
+    color: inherit;
+    opacity: 0.85;
   }
-  div.centered-image {
+  blockquote::before {
+    content: none !important;
+  }
+  table {
+    font-size: 20px;
+  }
+  section:has(div.ccq-columns),
+  section:has(div.discussion-columns),
+  section:has(div.fill-blank-columns) {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-  }
-  div.centered-image img {
-    max-width: 90%;
-    max-height: 480px;
-    object-fit: contain;
-  }
-  .full-image-slide {
-    padding: 20px !important;
-  }
-  .full-image-slide div.centered-image {
-    height: 100% !important;
-  }
-  .full-image-slide div.centered-image img {
-    max-width: 98% !important;
-    max-height: 600px !important;
+    flex-direction: column;
   }
   div.ccq-columns {
     display: flex;
@@ -63,13 +55,33 @@ style: |
     margin-bottom: auto;
   }
   div.ccq-text {
-    flex: 75%;
+    flex: 70%;
   }
   div.ccq-logo {
-    flex: 25%;
+    flex: 30%;
     text-align: center;
   }
   div.ccq-logo img {
+    width: 100%;
+    max-width: 180px;
+  }
+  div.discussion-columns {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  div.discussion-text {
+    flex: 75%;
+    font-size: 1.25em;
+    line-height: 1.4;
+  }
+  div.discussion-logo {
+    flex: 25%;
+    text-align: center;
+  }
+  div.discussion-logo img {
     width: 100%;
     max-width: 150px;
   }
@@ -91,16 +103,87 @@ style: |
     width: 100%;
     max-width: 150px;
   }
-  div.split55 {
+  div.split64, div.split46, div.split55 {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
+  }
+  div.split64 > div.left {
+    flex: 60%;
+  }
+  div.split64 > div.right {
+    flex: 40%;
+    text-align: center;
+  }
+  div.split64 > div.right img {
+    width: 100%;
+    max-width: 320px;
+  }
+  div.split46 > div.left {
+    flex: 40%;
+  }
+  div.split46 > div.right {
+    flex: 60%;
+    text-align: center;
+  }
+  div.split46 > div.right img {
+    width: 100%;
+    max-width: 480px;
   }
   div.split55 > div.left {
     flex: 50%;
   }
   div.split55 > div.right {
     flex: 50%;
+    text-align: center;
+  }
+  div.split55 > div.right img {
+    width: 100%;
+    max-width: 400px;
+  }
+  section.full-image-slide {
+    padding: 0 !important;
+  }
+  section.full-image-slide::after {
+    display: none !important;
+  }
+  section.full-image-slide header,
+  section.full-image-slide footer {
+    display: none !important;
+  }
+  section.full-image-slide div.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 720px;
+  }
+  section.full-image-slide div.centered-image img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+  }
+  section.title-image-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  section.title-image-slide h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  section.title-image-slide div.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 480px;
+  }
+  section.title-image-slide div.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
   }
 header: 'Software Engineering | Chapter 6b: Software Design'
 footer: 'Prof. Nien-Lin Hsueh'
