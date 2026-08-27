@@ -2,7 +2,11 @@
 /Lecture/slides
 /Lecture/*.sh
 /Lecture/*.css
+/Video/
+client_secret*.json
+token.pickle
 /-hidden/
+/scripts/
 
 # Ignore IDE directories and project files
 **/.settings/
