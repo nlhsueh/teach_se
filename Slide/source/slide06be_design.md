@@ -236,7 +236,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/07_zoom_in.jpeg" alt="Zooming In: The 4 Fundamental Design Activities" />
+  <img src="../../img/ch05/07_zoom_in.jpeg" alt="Zooming In: The 4 Fundamental Design Activities" />
 </div>
 
 ---
@@ -264,7 +264,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/08_tenets.jpeg" alt="The Core Tenets of Software Design" />
+  <img src="../../img/ch05/08_tenets.jpeg" alt="The Core Tenets of Software Design" />
 </div>
 
 ---
@@ -274,7 +274,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/09_low_coupling.jpeg" alt="High Cohesion & Low Coupling" />
+  <img src="../../img/ch05/09_low_coupling.jpeg" alt="High Cohesion & Low Coupling" />
 </div>
 
 ---
@@ -376,7 +376,7 @@ In software design, what does "Low Coupling" combined with "High Cohesion" achie
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/10_solid.jpeg" alt="The SOLID Principles: Visual Analogies" />
+  <img src="../../img/ch05/10_solid.jpeg" alt="The SOLID Principles: Visual Analogies" />
 </div>
 
 ---
@@ -646,14 +646,14 @@ class OrderService {
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/11_solid_table.jpeg" alt="SOLID: The Good vs. Bad Matrix" />
+  <img src="../../img/ch05/11_solid_table.jpeg" alt="SOLID: The Good vs. Bad Matrix" />
 </div>
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/12_micro_macro.jpeg" alt="The Micro-Macro Harmony Matrix" />
+  <img src="../../img/ch05/12_micro_macro.jpeg" alt="The Micro-Macro Harmony Matrix" />
 </div>
 
 ---
@@ -663,7 +663,7 @@ class OrderService {
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/13_ai_design.jpeg" alt="The AI Architect Copilot Dashboard" />
+  <img src="../../img/ch05/13_ai_design.jpeg" alt="The AI Architect Copilot Dashboard" />
 </div>
 
 ---
@@ -694,7 +694,7 @@ class OrderService {
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/14_risk.jpeg" alt="Human-in-the-Loop: Risks & Blind Spots" />
+  <img src="../../img/ch05/14_risk.jpeg" alt="Human-in-the-Loop: Risks & Blind Spots" />
 </div>
 
 ---

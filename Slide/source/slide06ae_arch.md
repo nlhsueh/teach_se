@@ -223,7 +223,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/02_connection.jpeg" alt="Connecting the 'What' to the 'How'" />
+  <img src="../../img/ch05/02_connection.jpeg" alt="Connecting the 'What' to the 'How'" />
 </div>
 
 ---
@@ -262,7 +262,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/03_system_characteristics.jpeg" alt="Deliberate Structure Drives System Behavior" />
+  <img src="../../img/ch05/03_system_characteristics.jpeg" alt="Deliberate Structure Drives System Behavior" />
 </div>
 
 ---
@@ -279,7 +279,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/04_five_perspective.jpeg" alt="Five Perspectives, One Unified Blueprint" />
+  <img src="../../img/ch05/04_five_perspective.jpeg" alt="Five Perspectives, One Unified Blueprint" />
 </div>
 
 ---
@@ -335,7 +335,7 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/05_arch-pattern.jpeg" alt="Architectural Patterns" />
+  <img src="../../img/ch05/05_arch-pattern.jpeg" alt="Architectural Patterns" />
 </div>
 
 ---
@@ -440,7 +440,7 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/06_monolithic_microservice.jpeg" alt="Monolith vs. Microservice" />
+  <img src="../../img/ch05/06_monolithic_microservice.jpeg" alt="Monolith vs. Microservice" />
 </div>
 
 ---
@@ -469,7 +469,7 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/13_ai_design.jpeg" alt="The AI Architect Copilot Dashboard" />
+  <img src="../../img/ch05/13_ai_design.jpeg" alt="The AI Architect Copilot Dashboard" />
 </div>
 
 ---
@@ -500,7 +500,7 @@ Which architectural view in Kruchten's 4+1 View Model illustrates how software c
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch05_nb/14_risk.jpeg" alt="Human-in-the-Loop: Risks & Blind Spots" />
+  <img src="../../img/ch05/14_risk.jpeg" alt="Human-in-the-Loop: Risks & Blind Spots" />
 </div>
 
 ---

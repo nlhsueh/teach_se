@@ -203,7 +203,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/02_evolution.jpeg" alt="Evolution of Software Development" />
+  <img src="../../img/ch03/02_evolution.jpeg" alt="Evolution of Software Development" />
 </div>
 
 ---
@@ -223,7 +223,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/03_comparison.jpeg" alt="Plan-Driven vs. Agile Comparison" />
+  <img src="../../img/ch03/03_comparison.jpeg" alt="Plan-Driven vs. Agile Comparison" />
 </div>
 
 ---
@@ -243,7 +243,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/04_manifesto.jpeg" alt="The Agile Manifesto Values" />
+  <img src="../../img/ch03/04_manifesto.jpeg" alt="The Agile Manifesto Values" />
 </div>
 
 ---
@@ -260,7 +260,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/05_principle.jpeg" alt="Principles of Agile Methods" />
+  <img src="../../img/ch03/05_principle.jpeg" alt="Principles of Agile Methods" />
 </div>
 
 ---
@@ -285,7 +285,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/06_xp_iterative.jpeg" alt="XP Iterative Release Cycle" />
+  <img src="../../img/ch03/06_xp_iterative.jpeg" alt="XP Iterative Release Cycle" />
 </div>
 
 ---
@@ -309,7 +309,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/07_ten_principles.jpeg" alt="XP Core Practices" />
+  <img src="../../img/ch03/07_ten_principles.jpeg" alt="XP Core Practices" />
 </div>
 
 ---
@@ -334,7 +334,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/09_code_ownship.jpeg" alt="Collective Code Ownership" />
+  <img src="../../img/ch03/09_code_ownship.jpeg" alt="Collective Code Ownership" />
 </div>
 
 ---
@@ -358,7 +358,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/10_story_card.jpeg" alt="User Story and Task Cards" />
+  <img src="../../img/ch03/10_story_card.jpeg" alt="User Story and Task Cards" />
 </div>
 
 ---
@@ -407,7 +407,7 @@ In 2001, 17 software developers created the **Agile Manifesto**, valuing:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/08_regression_test.jpeg" alt="Regression Testing in TDD" />
+  <img src="../../img/ch03/08_regression_test.jpeg" alt="Regression Testing in TDD" />
 </div>
 
 ---
@@ -462,7 +462,7 @@ Which of the following is ONE of the 4 core values stated in the Agile Manifesto
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/11_scrum.jpeg" alt="Scrum Framework Overview" />
+  <img src="../../img/ch03/11_scrum.jpeg" alt="Scrum Framework Overview" />
 </div>
 
 ---
@@ -489,7 +489,7 @@ Which of the following is ONE of the 4 core values stated in the Agile Manifesto
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/12_scrum_roles.jpeg" alt="Scrum Roles and Artifacts" />
+  <img src="../../img/ch03/12_scrum_roles.jpeg" alt="Scrum Roles and Artifacts" />
 </div>
 
 ---
@@ -506,14 +506,14 @@ Which of the following is ONE of the 4 core values stated in the Agile Manifesto
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/13_sprint.jpeg" alt="Scrum Sprint Ceremonies" />
+  <img src="../../img/ch03/13_sprint.jpeg" alt="Scrum Sprint Ceremonies" />
 </div>
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/14_xp_scrum.jpeg" alt="XP and Scrum Comparison" />
+  <img src="../../img/ch03/14_xp_scrum.jpeg" alt="XP and Scrum Comparison" />
 </div>
 
 ---
@@ -598,7 +598,7 @@ Here are the completed concepts:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch03_nb/15_checklist.jpeg" alt="Agile Development Checklist" />
+  <img src="../../img/ch03/15_checklist.jpeg" alt="Agile Development Checklist" />
 </div>
 
 ---

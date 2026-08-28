@@ -24,5 +24,7 @@ token.pickle
 
 # Ignore agent skills and English markdown files for GitHub
 .agents/
+AGENTS.md
+Agents.md
 
 .github/

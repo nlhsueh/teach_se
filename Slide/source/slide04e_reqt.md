@@ -195,7 +195,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/02_cost_of_ambiguity.jpeg" alt="The Exponential Cost of Ambiguity" />
+  <img src="../../img/ch04/02_cost_of_ambiguity.jpeg" alt="The Exponential Cost of Ambiguity" />
 </div>
 
 ---
@@ -212,7 +212,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/03_translation.jpeg" alt="The Ultimate High-Stakes Translation" />
+  <img src="../../img/ch04/03_translation.jpeg" alt="The Ultimate High-Stakes Translation" />
 </div>
 
 ---
@@ -240,7 +240,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/04_types_of_reqts.jpeg" alt="The Audience & Scope Matrix" />
+  <img src="../../img/ch04/04_types_of_reqts.jpeg" alt="The Audience & Scope Matrix" />
 </div>
 
 ---
@@ -269,7 +269,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/05_triad_of_requirements.jpeg" alt="The Triad of Requirements" />
+  <img src="../../img/ch04/05_triad_of_requirements.jpeg" alt="The Triad of Requirements" />
 </div>
 
 ---
@@ -288,7 +288,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/06_impresion.jpeg" alt="The Imprecision Trap" />
+  <img src="../../img/ch04/06_impresion.jpeg" alt="The Imprecision Trap" />
 </div>
 
 ---
@@ -305,7 +305,7 @@ Feng Chia University
 <!-- _class: enlarged-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/07_nfr.jpeg" alt="The Structural Base of NFRs" />
+  <img src="../../img/ch04/07_nfr.jpeg" alt="The Structural Base of NFRs" />
 </div>
 
 ---
@@ -331,7 +331,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/08_GQM.jpeg" alt="Forging Metrics from Ambiguity" />
+  <img src="../../img/ch04/08_GQM.jpeg" alt="Forging Metrics from Ambiguity" />
 </div>
 
 ---
@@ -399,7 +399,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: enlarged-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/09_clarity_cycle.jpeg" alt="The Engine of Clarity" />
+  <img src="../../img/ch04/09_clarity_cycle.jpeg" alt="The Engine of Clarity" />
 </div>
 
 ---
@@ -434,7 +434,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/10_use_case.jpeg" alt="Anatomy of a Use Case" />
+  <img src="../../img/ch04/10_use_case.jpeg" alt="Anatomy of a Use Case" />
 </div>
 
 ---
@@ -454,7 +454,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/11_validation.jpeg" alt="The 5 Pillars of Validation" />
+  <img src="../../img/ch04/11_validation.jpeg" alt="The 5 Pillars of Validation" />
 </div>
 
 ---
@@ -472,7 +472,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/12_handle_change.jpeg" alt="Architecting for Inevitable Change" />
+  <img src="../../img/ch04/12_handle_change.jpeg" alt="Architecting for Inevitable Change" />
 </div>
 
 ---
@@ -488,7 +488,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/13_AI.jpeg" alt="The Modern Catalyst" />
+  <img src="../../img/ch04/13_AI.jpeg" alt="The Modern Catalyst" />
 </div>
 
 ---
@@ -508,7 +508,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/14_AI_RE.jpeg" alt="The AI-Enhanced RE Loop" />
+  <img src="../../img/ch04/14_AI_RE.jpeg" alt="The AI-Enhanced RE Loop" />
 </div>
 
 ---
@@ -527,7 +527,7 @@ Which category of requirements specifies constraints on system performance, reli
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch04_nb/15_human_in_the_loop.jpeg" alt="The Human-in-the-Loop Imperative" />
+  <img src="../../img/ch04/15_human_in_the_loop.jpeg" alt="The Human-in-the-Loop Imperative" />
 </div>
 
 ---

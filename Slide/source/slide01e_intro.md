@@ -10,6 +10,23 @@ style: |
     font-family: 'Helvetica Neue', Arial, sans-serif;
     padding: 40px;
     font-size: 24px;
+    line-height: 1.6;
+  }
+  ul, ol {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  li {
+    margin-bottom: 14px;
+    line-height: 1.55;
+  }
+  li > ul, li > ol {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  li > ul > li, li > ol > li {
+    margin-bottom: 6px;
+    font-size: 0.9em;
   }
   h1 {
     color: #0b3c5d;
@@ -17,14 +34,36 @@ style: |
   h2 {
     color: #328cc1;
   }
-  footer {
+  header {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    text-align: right;
     font-size: 0.5em;
+    line-height: 1;
+    color: #aaa;
+    margin: 0;
+    padding: 0;
+  }
+  footer,
+  section::after {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.5em;
+    line-height: 1;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    left: 40px;
+    text-align: left;
     color: #777;
   }
-  header {
-    font-size: 0.5em;
-    color: #aaa;
+  section::after {
+    right: 40px;
     text-align: right;
+    color: #777;
   }
   blockquote {
     background: transparent;
@@ -39,7 +78,19 @@ style: |
     content: none !important;
   }
   table {
-    font-size: 20px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 19px;
+  }
+  th {
+    border-bottom: 2px solid #0b3c5d;
+    padding: 8px 14px;
+    text-align: left;
+    background-color: #f0f4f8;
+  }
+  td {
+    padding: 8px 14px;
+    border-bottom: 1px solid #e0e0e0;
   }
   section:has(div.ccq-columns),
   section:has(div.discussion-columns),
@@ -47,12 +98,17 @@ style: |
     display: flex;
     flex-direction: column;
   }
+  section:has(div.ccq-columns) h2,
+  section:has(div.discussion-columns) h2,
+  section:has(div.fill-blank-columns) h2 {
+    text-align: center;
+  }
   div.ccq-columns {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
   }
   div.ccq-text {
     flex: 70%;
@@ -69,13 +125,13 @@ style: |
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
   }
   div.discussion-text {
     flex: 75%;
-    font-size: 1.25em;
-    line-height: 1.4;
+    font-size: 1.15em;
+    line-height: 1.5;
   }
   div.discussion-logo {
     flex: 25%;
@@ -89,8 +145,8 @@ style: |
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
   }
   div.fill-blank-text {
     flex: 75%;
@@ -117,7 +173,7 @@ style: |
   }
   div.split64 > div.right img {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
   }
   div.split46 > div.left {
     flex: 40%;
@@ -185,568 +241,104 @@ style: |
     max-height: 100%;
     object-fit: contain;
   }
-header: 'Software Engineering | Chapter 1: Introduction'
-footer: 'Prof. Nien-Lin Hsueh'
+  section.lead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  section.lead h1 {
+    margin: 0 0 20px 0;
+  }
+  section.lead h2 {
+    margin: 0 0 20px 0;
+  }
+  section.lead h3 {
+    margin: 0 0 20px 0;
+    color: #328cc1;
+  }
+  section.lead p {
+    margin: 0;
+    font-size: 0.75em;
+    line-height: 1.6;
+  }
+  section.lead p strong {
+    color: #0b3c5d;
+  }
+  section.lead header,
+  section.lead footer,
+  section.lead::after {
+    display: none !important;
+  }
+header: 'Software Engineering | Ch 01: Introduction'
+footer: 'Ch 01 · Introduction to Software Engineering'
 ---
 
 # Software Engineering
 
-### Lecture 1: Introduction To Software Engineering
-**Prof. Nien-Lin Hsueh**
-Department of Information Engineering and Computer Science
+### Lecture 1: Introduction to Software Engineering
+
+**Instructor: Professor Nien-Lin Hsueh (with Gemini AI)**  
+Department of Information Engineering and Computer Science  
 Feng Chia University
 
 ---
 
-## Key Topics in This Chapter
+## Chapter 1: Roadmap & Key Topics
 
-* **Evolution of Industry**
-* **The Importance of Software**
-* **Why We Need Software Engineering**
-  * Historical failure cases
-  * Issues SE aims to solve
-* **What is Software?** Systems and types
-* **Coding vs. Software Engineering**
-  * Activities and components of SE
-* **Code of Ethics for Software Engineers**
-* **Software Engineering FAQ**
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/01_code2reality.jpeg" alt="From Code to Cyber-Physical Reality" />
-</div>
+* **1.1 The Technological Arc:** From Mechanization to Ubiquitous AI
+* **1.2 The Genesis of SE & The "Software Crisis":** NATO 1968 & Catastrophic Failures
+* **1.3 Demystifying Software:** Beyond Source Code (Programs, Data, SOP, Docs)
+* **1.4 ISO 9126 Quality Model:** 6 Characteristics & Operational Sub-Attributes
+* **1.5 Modern Software Landscape:** Web, Mobile, ERP, Embedded, AI/ML
+* **1.6 What is SE?:** Definition, Process, Constraints, 4 Core Activities, Principles & Myths
+* **1.7 Modern Toolchains & AI:** CI/CD Pipelines & AI Benefits/Risks Matrix
+* **1.8 Professional Ethics & Dark Patterns:** ACM/IEEE Code & Monochrome Comic
+* **1.9 FAQ & Conceptual Recap**
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01_nb/02_evolution.jpeg" alt="The Evolution of Industrial Complexity" />
+  <img src="../../img/ch01/01_code2reality.jpeg" alt="From Code to Cyber-Physical Reality" />
 </div>
 
 ---
-
-## Industrial Revolutions Overview
-
-* **Industry 1.0:** The Age of Mechanization (Late 18th - Mid 19th Century)
-* **Industry 2.0:** The Age of Mass Production (Late 19th - Early 20th Century)
-* **Industry 3.0:** The Digital Revolution & Dawn of Software (Mid - Late 20th Century)
-* **Industry 4.0:** The Era of Connectivity, AI, and Robotics (Early 21st Century - Present)
-
----
-
-## Industry 1.0 & Industry 2.0
-
-### **Industry 1.0: Mechanization**
-* **Key Innovation:** Steam engine, water power.
-* **Focus:** Transition from manual labor to machine-based manufacturing.
-* **Impact:** Factories emerged, shifting production to centralized locations.
-* **Software's Role:** Non-existent. Purely physical and mechanical.
-
-### **Industry 2.0: Mass Production**
-* **Key Innovations:** Electricity, assembly lines, internal combustion engines.
-* **Focus:** Mass production, standardization of goods, new energy sources.
-* **Impact:** Large-scale production (automobiles, appliances), telegraph/telephone.
-* **Software's Role:** Absent. Automation was electro-mechanical.
-
----
-
-## Industry 3.0: The Digital & Software Revolution
-
-* **Key Innovations:** Computers, semiconductors, internet, PLCs (Programmable Logic Controllers).
-* **Focus:** Automation of production through electronics and IT.
-* **Impact:**
-  * **Birth of Software:** Complex programming required, laying foundations for software engineering.
-  * **PC Democratization:** Spread of office applications (word processors, spreadsheets).
-  * **Automation in Manufacturing:** PLCs enabled precise machinery control.
-* **Software's Role:** Emerged as a distinct discipline. Software started controlling machines and managing data.
-
----
-
-## Industry 4.0: Connectivity, AI, and Robotics
-
-* **Key Innovations:** IoT, Cloud Computing, AI, Machine Learning, Big Data, Advanced Robotics.
-* **Focus:** Smart factories, interconnected systems, data-driven decisions, intelligent automation.
-* **Impact:**
-  * **Ubiquitous Software:** Backbone of almost every aspect of life and industry.
-  * **AI & Machine Learning:** Systems learn from data and adapt autonomously.
-  * **Advanced Robotics:** Collaborative robots (cobots) performing complex tasks.
-  * **IoT & Cloud:** Massive data generation, real-time control, and scalable deployment.
-* **Software's Role:** Central and pervasive. Making systems intelligent, adaptive, and interconnected.
-
----
-
-## Concept Check Question (CCQ 1)
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-**During which industrial revolution did software first emerge as a distinct discipline to control machines and manage data?**
-
-* **A.** Industry 1.0 (Mechanization)
-* **B.** Industry 2.0 (Mass Production)
-* **C.** Industry 3.0 (Digital & Software Automation)
-* **D.** Industry 4.0 (Connectivity, AI, & Robotics)
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/question_icon.svg" alt="Question" />
-  </div>
-</div>
-
----
-
-## CCQ 1 - Answer & Explanation
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-### **Correct Answer: C. Industry 3.0**
-
-* **Explanation:** 
-  * **Industry 3.0** introduced computers, semiconductors, and PLCs in the mid-to-late 20th century, which established software as a distinct engineering discipline.
-  * Industry 1.0 and 2.0 were purely mechanical and electro-mechanical. Industry 4.0 is built on top of Industry 3.0's foundations, introducing smart connectivity and AI.
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/answer_icon.svg" alt="Answer" />
-  </div>
-</div>
-
----
-
-## The Genesis of Software Engineering (1/2)
-
-<div class="split55">
-  <div class="left">
-
-  * **Early Computing (1940s-1950s):**
-    * Hardware-focused; software was rudimentary and custom-built.
-    * Development processes were informal.
-
-  * **The Software Crisis (1960s-1970s):**
-    * Software projects grew rapidly in scale and complexity.
-    * Inherent difficulties led to project failures, budget overruns, and late deliveries.
-
-  </div>
-  <div class="right">
-    <img src="../../img/ch01/creation_physical_digital.jpeg" alt="Genesis of Software Engineering" />
-  </div>
-</div>
-
----
-
+<!-- header: '1.1 The Technological Arc' -->
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01_nb/03_crisis.jpeg" alt="Surviving the Software Crisis" />
+  <img src="../../img/ch01/02_evolution.jpeg" alt="Industrial Revolutions Evolution" />
 </div>
 
 ---
 
-## The Genesis of Software Engineering (2/2)
+## 1.1 The Four Industrial Eras
 
-* **Formalization and Conferences (Late 1960s - 1970s):**
-  * The term **"Software Engineering"** gained formal traction at the **NATO Software Engineering Conferences (1968 & 1969)**.
-  * Experts gathered to address the challenges of the software crisis.
-
-* **Establishment as a Discipline (1980s onwards):**
-  * Solidified alongside computer science.
-  * Emergence of Waterfall model, structured programming, and Object-Oriented programming (OOP) to bring predictability.
-
----
-
-## Why Early SE Struggled & The Need for Agile
-
-* **Difficulties of Early Plan-Driven SE:**
-  * **Manufacturing Analogy Mismatch:** Software was treated like civil engineering (e.g. building bridges). It assumed requirements are fixed and predictable.
-  * **Rigid Sequential Phases:** Testing and integration happened at the very end. Design flaws or bugs were discovered too late, leading to high cost of change.
-  * **Low Visibility:** Customers only saw working software at the end of the project lifecycle.
-
-* **The Agile Solution:**
-  * **Embracing Change:** Welcomes evolving requirements throughout development.
-  * **Iterative & Incremental:** Delivers value in short, active sprint cycles for early feedback.
-  * **Frequent Integration:** Continually tests and integrates to minimize risk.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/07_process.jpeg" alt="Resolving the Manufacturing Analogy Mismatch" />
-</div>
+* **Industry 1.0 — Mechanization (Late 18th - Mid 19th C.):**
+  * Steam and water power replace physical muscle; rise of centralized factories.
+  * *Software's Role:* Non-existent. Purely physical mechanics.
+* **Industry 2.0 — Mass Production (Late 19th - Early 20th C.):**
+  * Electricity, moving assembly lines, standardization of manufactured goods.
+  * *Software's Role:* Non-existent. Automation was hardwired electro-mechanical.
+* **Industry 3.0 — Digital Automation (Mid to Late 20th C.):**
+  * Semiconductors, microprocessors, PLCs, and PCs.
+  * *Software's Role:* **Emerged as a distinct discipline** to control hardware and process data.
+* **Industry 4.0 — Connectivity, Cloud, & AI (21st C. - Present):**
+  * Cyber-physical systems, IoT, Cloud, LLMs, and autonomous systems.
+  * *Software's Role:* **The central infrastructure** powering modern civilization.
 
 ---
 
-## Software Engineering in the 2000s
-
-* **The Agile Revolution:**
-  * Emphasizes flexibility, active team collaboration, and customer involvement.
-  * Promotes iterative development and responding to change over following rigid plans.
-* **Open Source Software (OSS) & Git:**
-  * The maturity of open-source frameworks (e.g. Spring, Rails) dramatically accelerated development.
-  * Git (2005) and platform ecosystems (GitHub, 2008) democratized global code collaboration and sharing.
-* **Web 2.0 & SaaS Era:**
-  * Transitioned software delivery from physical media (CDs) to cloud-based Web Applications.
-  * Laid the groundwork for Continuous Integration (CI) and modern DevOps practices.
-
----
-
-## Industry 4.0: AI & Cyber-Physical Systems
-
-* **AI-Powered Software Engineering:**
-  * **LLMs (2022) Emerged:** The launch of ChatGPT catalyzed LLM integration, driving the shift to prompt-based coding.
-  * Automates boilerplate generation, reviews code quality, and provides intelligent debugging insights.
-  * Shifts developer focus from writing low-level syntax to system design, prompt engineering, and architectural orchestration.
-* **Cyber-Physical Systems (Robotics & IoT):**
-  * Software acts as the nervous system connecting advanced sensors, hardware robots, and smart factories.
-  * Requires real-time computing, edge deployments, and high safety-critical engineering standards.
-
----
-
-## Why We Can't Avoid Software Failure?
-
-### Root Causes
-* **Complexity of Software:** Software systems are highly complex, invisible, and non-linear.
-* **Inadequate Methods:** The development methodologies applied fail to scale with complexity.
-
-### Key Goals of Software Engineering
-* **Improve Quality** of the software.
-* **Increase Productivity** of developers.
-* **Reduce Development Effort** (lower costs).
-* **Reduce Cycle Time** (faster time to market).
-
----
-
-## What is Software?
-
-> **IEEE Definition:**
-> Computer **programs**, **procedures**, and possibly associated **documentation** and **data** pertaining to the operation of a computer system.
-
-* **Beyond Code:** Includes procedures, data, and documentation. Many system failures (e.g., flight incidents) stem from operational/procedural issues.
-
-> Programs must be written for people to read, and only incidentally for machines to execute. — Abelson & Sussman
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/04_not_only_code.jpeg" alt="The Anatomy of Software Exceeds Source Code" />
-</div>
-
----
-
-## Concept Check Question (CCQ 2)
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-**True or False?**
-
-> According to the IEEE definition, "software" refers solely to the executable computer programs (source code) and does not include operational procedures or documentation.
-
-* **A.** True
-* **B.** False
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/question_icon.svg" alt="Question" />
-  </div>
-</div>
-
----
-
-## CCQ 2 - Answer & Explanation
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-### **Correct Answer: B. False**
-
-* **Explanation:**
-  * Software is **more than just executable code**.
-  * The IEEE definition explicitly includes four parts: **programs**, **procedures**, **documentation**, and **data**.
-  * Operational procedures and documentation are vital parts of a complete software system.
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/answer_icon.svg" alt="Answer" />
-  </div>
-</div>
-
----
-
-## Concept Check Question (CCQ 3)
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-**According to the IEEE definition, which of the following is NOT considered an essential component of "software"?**
-
-* **A.** Computer programs (source code)
-* **B.** Computer hardware and physical memory circuits
-* **C.** Operating and execution procedures
-* **D.** Associated documentation and system data
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/question_icon.svg" alt="Question" />
-  </div>
-</div>
-
----
-
-## CCQ 3 - Answer & Explanation
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-### **Correct Answer: B. Computer hardware & physical memory circuits**
-
-* **Explanation:**
-  * Software consists of **programs (code), procedures, documentation, and data** necessary for operating a system.
-  * Physical hardware and circuits are the domain of hardware/system engineering, not software itself.
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/answer_icon.svg" alt="Answer" />
-  </div>
-</div>
-
----
-
-## Software Quality (1/2)
-
-What makes a software system "good"? Consider these definitions:
-
-1. **Conformance to Requirements (Crosby, 1979):**
-   > The degree to which a system, component, or process meets specified requirements.
-   * _Critique:_ Requirements are often incomplete. A system meeting the spec might still fail to satisfy the user.
-
-2. **Fit for Purpose (Juran, 1998):**
-   > The degree to which a system, component, or process meets customer or user needs or expectations.
-   * _Critique:_ Is user expectation alone enough? What about non-functional qualities like maintainability?
-
----
-
-## Software Quality (2/2)
-
-3. **Professional Standards (Pressman):**
-   > Conformance to explicitly stated functional and performance requirements, explicitly documented development standards, and implicit characteristics expected of all professionally developed software.
-
-* **Insight:** Testing skills can be acquired quickly, but building a **quality culture** takes time.
-* Quality Model: **ISO 9126** (Functionality, Reliability, Usability, Efficiency, Maintainability, Portability).
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/06_quality.jpeg" alt="The Multidimensional Nature of Software Quality" />
-</div>
-
----
-
-## Types of Software Applications (1/2)
-
-1. **Web Applications:** E-commerce (Amazon), CMS (WordPress), Social Media, SaaS (Salesforce).
-2. **Mobile Applications:** Utility apps, networking, games, health trackers, e-learning.
-3. **Desktop Applications:** Productivity (Office), IDEs (VS Code), design (Figma).
-4. **Enterprise Applications:** ERP (SAP), CRM (Salesforce), HRMS (Workday).
-5. **Embedded Software:** Firmware in smart TVs, cars, medical devices, IoT.
-
-<div style="text-align: center; margin-top: 15px;">
-  <img src="../../img/ch01/software_types_1.png" height="250" alt="Software Categories 1-5" />
-</div>
-
----
-
-## Types of Software Applications (2/2)
-
-6. **Game Development:** Console, PC, and mobile games.
-7. **AI & Machine Learning:** Virtual assistants (Siri, Alexa), recommendation engines (Netflix), chatbots.
-8. **Data Analytics & BI:** Power BI, Tableau, Hadoop, Spark, R.
-9. **Cloud-based Applications:** Cloud storage (Google Drive), VM infra (AWS, Azure), databases (Firebase).
-10. **Scientific & Engineering:** CAD (AutoCAD), simulation tools (MATLAB).
-
-<div style="text-align: center; margin-top: 15px;">
-  <img src="../../img/ch01/software_types_2.png" height="250" alt="Software Categories 6-10" />
-</div>
----
-
-## General Issues Affecting Software
-
-* **Heterogeneity:** Software must run across diverse, distributed networks and hardware environments.
-* **Business & Social Change:** Businesses need rapid development to keep up with changing markets.
-* **Security & Trust:** We must ensure systems are secure against malicious attacks and trustworthy.
-* **Scale:** Software must scale from tiny embedded sensors to massive cloud infrastructures.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/11_modern_sw_landscape.jpeg" alt="Navigating the Modern Software Landscape" />
-</div>
-
----
-
-* **Technical Debt:** Accumulated quick-fixes that slow down future progress.
-* **Project & Team Management:** Ineffective communication, poor QA, or bad planning.
-
----
-<!-- _class: title-image-slide -->
-
-## Why Software Engineering?
-
-<div class="image-wrapper">
-  <img src="../../img/ch01/complexity_growth.png" alt="Complexity Growth" />
-</div>
-
----
-
-## What is Engineering?
-
-> **Engineering** is the application of scientific, economic, and practical knowledge to design and build structures, machines, devices, and systems.
-
-* **What is Engineering:**
-  * Applying rigorous science & math to solve practical problems.
-  * Designing under constraints (budget, safety, materials).
-* **What is NOT Engineering:**
-  * **Pure Science:** Discovery of knowledge without building systems.
-  * **Ad-hoc Crafting / Art:** Building by intuition without systematic methods, planning, or safety margins.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/05_engineering.jpeg" alt="The Pursuit of Predictable Systems" />
-</div>
-
----
-
-## What is Software Engineering?
-
-* **SE is a branch of Engineering:**
-  * Just as civil engineering applies physics to build bridges, software engineering applies computer science and mathematical logic to build software systems.
-  * It shares the same engineering core: systematic planning, quantitative measurement, risk management, and rigorous quality assurance.
-* **An Engineering Discipline:**
-  * Concerned with all aspects of software production from early specification to post-deployment maintenance.
-* **Systematic and Organized:**
-  * Follows a structured, methodical process to minimize errors, optimize collaboration, and deliver on time/budget.
-* **Pragmatic Choices:**
-  * Uses appropriate tools and techniques depending on the problem, constraints, and resources available.
-
----
-
-## SE Approaches and Activities
-
-  ### Core Development Models
-  * **Waterfall model:** Sequential and plan-driven.
-  * **Spiral model:** Risk-driven iterative model.
-  * **Agile methods:** Incremental and collaborative.
-
-  ### Fundamental Activities
-  * **Specification:** Defining functions and constraints.
-  * **Development:** Designing and programming.
-  * **Validation:** Checking against customer needs.
-  * **Evolution:** Modifying for changing markets.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/se_activities.png" alt="SE Activities" />
-</div>
-
----
-
-## The Discipline of Software Engineering
-
-<div class="split64">
-  <div class="left">
-
-  Professional engineering requires **discipline**:
-  * Write comments and document code.
-  * Specify requirements before design; design before implementation.
-  * Manage requirement changes systematically.
-  * Design with interfaces, not concrete implementations.
-  * Estimate efforts before developing.
-  * Manage risks and record design rationales.
-
-  </div>
-  <div class="right">
-    <img src="../../img/ch01/discipline_logo.png" alt="Discipline Checklist" />
-  </div>
-</div>
-
----
-
-## SE Myths and Principles
-
-### Common Myths
-* *Myth 1:* If we fall behind schedule, we can just add more programmers to catch up.
-* *Myth 2:* Software is easy to change.
-* *Myth 3:* If we outsource the project, we can just sit back and relax.
-
-### Core Principles
-* **Open-Closed Principle (OCP):** Open for extension, closed for modification.
-* **Anticipation of Change:** Design for future flexibility.
-* **KISS Principle:** Keep It Simple, Stupid.
-* **Continuous Validation:** Perform early and frequent testing.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/09_myth.jpeg" alt="Professional Discipline: Myths vs. Reality" />
-</div>
-
----
-
-## Concept Check Question (CCQ 4)
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-**True or False?**
-
-> If a software project falls behind schedule, adding more programmers to the team will help us catch up and meet the deadline.
-
-* **A.** True
-* **B.** False
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/question_icon.svg" alt="Question" />
-  </div>
-</div>
-
----
-
-## CCQ 4 - Answer & Explanation
-
-<div class="ccq-columns">
-  <div class="ccq-text">
-
-### **Correct Answer: B. False**
-
-* **Explanation:**
-  * This is a famous software engineering myth known as **Brooks' Law**: *"Adding human power to a late software project makes it later."*
-  * New programmers require training, ramp-up time, and introduce communication overhead, which slows down the existing team.
-
-  </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/answer_icon.svg" alt="Answer" />
-  </div>
-</div>
-
----
-
-## Discussion Topic 1
+## 1.1 Interactive Activity: Classroom Poll & Discussion
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-Based on your own experience, develop a software development principle or myth, or share one you strongly agree with and explain why.
+  **Classroom Poll & Discussion:**
+  * **Poll:** What percentage of systems you interact with daily run on deterministic Industry 3.0 logic vs. adaptive, connected Industry 4.0 AI?
+  * **Pair Discussion:** Identify one legacy manual system (e.g., campus parking, hospital triage, public transit dispatch). What unique software engineering challenges arise when transitioning it to Industry 4.0?
 
   </div>
   <div class="discussion-logo">
@@ -755,56 +347,115 @@ Based on your own experience, develop a software development principle or myth, 
 </div>
 
 ---
-
-## Nielsen's 10 Usability Heuristics
-
-1. **Visibility of system status**
-2. **Match between system and the real world**
-3. **User control and freedom**
-4. **Consistency and standards**
-5. **Error prevention**
-6. **Recognition rather than recall**
-7. **Flexibility and efficiency of use**
-8. **Aesthetic and minimalist design**
-9. **Help users recognize, diagnose, and recover from errors**
-10. **Help and documentation**
-
----
-
-## Software Engineering Tools (1/2)
-
-* **Version Control:** Git, SVN (tracks history, enables collaboration).
-* **IDEs:** IntelliJ, VS Code (rich environments for writing/debugging).
-* **Agile Management:** Scrum, Kanban (Jira, Trello for tasks & sprint cycles).
-* **Automated Testing:** JUnit, Jest, Selenium (ensures correctness early).
-* **CI/CD:** Jenkins, GitHub Actions (automates build, test, and release).
-* **Architecture & Design:** Lucidchart, UML tools (models architectures & design patterns).
-
----
-
-## Software Engineering Tools (2/2)
-
-* **AI-Powered Coding Assistants:** GitHub Copilot, Amazon CodeWhisperer.
-* **AI Documentation Generators:** Automatically keeps API specs, READMEs, and user stories aligned with code.
-* **AI Security & Code Analyzers:** Snyk, DeepCode AI (detects vulnerabilities, suggests refactoring).
-* **Performance Monitoring:** New Relic, JProfiler (profiling and optimization).
-* **Database Management:** MySQL Workbench, Postman (API and query tools).
-
----
+<!-- header: '1.2 Genesis of SE & The Software Crisis' -->
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01_nb/10_automating.jpeg" alt="Automating Discipline: The Modern Toolchain" />
+  <img src="../../img/ch01/03_crisis.jpeg" alt="The Software Crisis" />
 </div>
 
 ---
 
-## Discussion Topic 2
+## 1.2 The Software Crisis of the Late 1960s
+
+<div class="split55">
+  <div class="left">
+
+  * As hardware costs plummeted, software demand and complexity exploded.
+  * **The Symptoms of Crisis:**
+    * Chronic budget overruns (often 3x–4x initial estimates).
+    * Critical project delays and abandoned deliveries.
+    * Severe defects, system crashes, and unmaintainability.
+  * **The Core Problem:** Informal, craft-like programming does not scale to large teams and complex systems.
+
+  </div>
+  <div class="right">
+    <img src="../../img/ch01/nato_conference.png" alt="NATO Conference 1968" />
+  </div>
+</div>
+
+---
+
+## 1.2 The 1968 NATO Garmisch Conference
+
+* **October 1968 in Garmisch, Germany:**
+  * 50 leading computer scientists and industry managers convened.
+  * Formally established the term **"Software Engineering"**.
+* **The Mission:**
+  * Transition software development from an undisciplined, artisanal craft into a **formal engineering discipline**.
+  * Establish structured methodologies, rigorous cost estimation, formal verification, and project management.
+
+---
+
+## 1.2 The High Cost of Software Failure
+
+<div class="split55">
+  <div class="left">
+
+  * **Nagoya Airbus A300 Crash (1994):**
+    * Autopilot / human flight-control conflict led to 264 fatalities.
+  * **Mars Climate Orbiter (1999):**
+    * $327M spacecraft lost due to English vs. Metric force unit mismatch.
+  * **Ariane 5 Flight 501 (1996):**
+    * 64-bit float to 16-bit integer overflow destroyed a $370M rocket in 37 seconds.
+
+  </div>
+  <div class="right">
+    <img src="../../img/ch01/mars_climate_orbiter_unit_mismatch.jpg" alt="Mars Climate Orbiter Failure" />
+  </div>
+</div>
+
+---
+
+## Concept Check: The Software Crisis (CCQ 1)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**Why couldn't the 1968 Software Crisis be solved simply by purchasing faster computer hardware or larger memory?**
+
+* **A.** Hardware manufacturing stopped advancing in the late 1960s.
+* **B.** The crisis was fundamentally a problem of cognitive complexity, communication overhead, and lack of engineering discipline.
+* **C.** Programming languages lacked mathematical calculation capabilities.
+* **D.** Hardware was incompatible with cloud infrastructure.
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
+
+---
+<!-- header: '1.3 Demystifying Software' -->
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/04_not_only_code.jpeg" alt="The Anatomy Beyond Source Code" />
+</div>
+
+---
+
+## 1.3 The IEEE Anatomy of Software
+
+> **Software (IEEE Standard):** Computer programs, procedures, and possibly associated documentation and data pertaining to the operation of a computer system.
+
+* **1. Programs:** Executable binaries and source code files (Python, Java, C++, TypeScript).
+* **2. Data & Schemas:** Database tables, migration scripts, configuration files, and AI model weights.
+* **3. Operational Procedures:** Deployment scripts, CI/CD pipelines, backup routines, and runbooks.
+* **4. Documentation:** Architecture Decision Records (ADRs), API specs (OpenAPI), user guides, and SRS.
+
+---
+
+## 1.3 Interactive Activity: Pair Discussion
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  Write down the software development tool that you find most useful, particularly one that others might commonly overlook.
+  **Pair Discussion: The Software Iceberg in Action**
+  * Select a popular service: **Google Maps**, **Uber**, or **Spotify**.
+  * Identify at least one specific artifact for each of the 4 pillars:
+    1. *Program* | 2. *Data* | 3. *Procedure* | 4. *Documentation*
+  * **Debate:** If an engineering team lost all database schemas and operational runbooks, could they restore production using only source code?
 
   </div>
   <div class="discussion-logo">
@@ -813,70 +464,47 @@ Based on your own experience, develop a software development principle or myth, 
 </div>
 
 ---
-
-## Constraints and Resources in SE
-
-To deliver a successful project, engineers must balance constraints with available resources.
-
-| **Constraints (Limitations)** | **Resources (Assets)** |
-|---|---|
-| **Time:** Deadlines & schedule | **Human Resources:** Developers, testers, managers |
-| **Budget:** Financial limits | **Technology:** Hardware, software, infrastructure |
-| **Technology Stack:** Required stack | **Knowledge:** Team's expertise & experience |
-| **Compliance/Regulations:** GDPR, HIPAA | **Time & Budget:** Allocation limits |
-
----
-
-## Balancing Constraints & Resources (Example)
-
-### **Scenario:** A startup must launch a secure, scalable mobile app in 6 months with a tight budget and a team of 4 JS developers.
-
-* **Approach:**
-  * **Technology Choice:** React Native (cross-platform, saves time).
-  * **Security:** Use SSL and OAuth 2.0.
-  * **Hosting:** Leverage AWS Free Tier (scale up later).
-  * **Process:** Adopt Agile/Scrum with 2-week sprints to build an MVP first.
-  * **Automation:** Setup GitHub Actions for CI/CD.
-
----
+<!-- header: '1.4 ISO 9126 Quality Model' -->
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01_nb/08_engineering_balance.jpeg" alt="The Engineering Balancing Act" />
+  <img src="../../img/ch01/iso_9126_subattributes.jpg" alt="ISO 9126 Quality Model Sub-Attributes" />
 </div>
 
 ---
 
-## ACM/IEEE Code of Ethics
+## 1.4 ISO 9126: 6 Characteristics & Sub-Attributes
 
-ACM/IEEE outline 6 primary ethical pillars for software engineers:
-1. **Public:** Act consistently with the public interest (safety, health, welfare).
-2. **Client and Employer:** Act in the best interests of clients and employers.
-3. **Product:** Ensure products meet high professional standards.
-4. **Judgment:** Maintain integrity and independence in judgment.
-5. **Management:** Promote ethical management practices.
-6. **Profession:** Advance the integrity and reputation of the profession.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01_nb/12_code_ethics.jpeg" alt="Engineering for Humanity: The ACM/IEEE Code" />
-</div>
+* **Functionality:** Suitability, Accuracy, Interoperability, Security, Compliance.
+* **Reliability:** Maturity, Fault Tolerance, Recoverability, Compliance.
+* **Usability:** Understandability, Learnability, Operability, Attractiveness.
+* **Efficiency:** Time Behavior (Latency / Throughput), Resource Utilization.
+* **Maintainability:** Analyzability, Changeability, Stability, Testability.
+* **Portability:** Adaptability, Installability, Co-existence, Replaceability.
 
 ---
 
-## Concept Check Question (CCQ 5)
+## 1.4 ISO 9126 Sub-Attributes & Practical Examples
+
+* **Fault Tolerance (Reliability):** Primary payment gateway times out $\rightarrow$ system automatically retries with backup gateway without crashing.
+* **Recoverability (Reliability):** Database server crashes $\rightarrow$ Write-Ahead Log restores transactional consistency in $<30$ seconds.
+* **Time Behavior (Efficiency):** E-commerce search API returns 99% of query responses in $<80$ ms (p99 latency).
+* **Testability (Maintainability):** Code structured with Dependency Injection so external APIs can be mocked easily in unit tests.
+* **Installability (Portability):** Complete local microservices stack spins up in 60s via `docker compose up`.
+
+---
+
+## Concept Check: Software Quality (CCQ 2)
 
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**According to the ACM/IEEE Software Engineering Code of Ethics, what is the highest priority that software engineers must always uphold?**
+**A backend service uses Dependency Injection and structured JSON logging. When a production bug occurs, developers locate and fix the defect within 5 minutes without side effects. Which quality dimension is showcased?**
 
-* **A.** The financial interests of the Client and Employer
-* **B.** The technical complexity of the Product
-* **C.** The Public Interest (safety, health, and welfare)
-* **D.** The professional development of their team
+* **A.** Portability
+* **B.** Maintainability (Analyzability & Changeability)
+* **C.** Usability
+* **D.** Functionality Compliance
 
   </div>
   <div class="ccq-logo">
@@ -886,81 +514,342 @@ ACM/IEEE outline 6 primary ethical pillars for software engineers:
 
 ---
 
-## CCQ 5 - Answer & Explanation
+## 1.4 Interactive Activity: Quality Trade-Off Poll
 
-<div class="ccq-columns">
-  <div class="ccq-text">
+<div class="discussion-columns">
+  <div class="discussion-text">
 
-### **Correct Answer: C. The Public Interest**
-
-* **Explanation:**
-  * The first and most critical ethical pillar is **Public Interest**. 
-  * Software engineers must always place the health, safety, and welfare of the public above the interests of their clients, employers, or personal advancement.
+  **Quality Trade-off Poll & Discussion:**
+  * **System A:** Hospital ICU Automated Insulin Pump Controller
+  * **System B:** Mobile Casual Viral Game
+  * **Poll:** What are the top 2 non-negotiable ISO 9126 attributes for System A vs. System B?
+  * **Key Question:** Why is prioritizing *Time to Market* over *Fault Tolerance* fatal for System A, but acceptable for System B?
 
   </div>
-  <div class="ccq-logo">
-    <img src="../../img/ch01/answer_icon.svg" alt="Answer" />
+  <div class="discussion-logo">
+    <img src="../../img/ch01/discussion_icon.svg" alt="Discussion" />
   </div>
 </div>
 
 ---
+<!-- header: '1.5 Modern Software Landscape' -->
+<!-- _class: full-image-slide -->
 
-## Ethical Failures in the Industry
+<div class="centered-image">
+  <img src="../../img/ch01/11_modern_sw_landscape.jpeg" alt="Modern Software Landscape" />
+</div>
 
-* **Planned Obsolescence (Phoebus Cartel):** Designing hardware/software to artificially expire.
-* **Forced Subscriptions & Locked Ecosystems:** Disrupting user control through restrictive licensing.
-* **Volkswagen's "Dieselgate":** Software designed specifically to cheat emission tests.
-* **Dark UX Patterns:** Deceptive UI designed to trick users (e.g., hard-to-cancel subscriptions).
-* **Cambridge Analytica:** Misusing user data for political targeting.
+---
+
+## 1.5 Key Application Domains
+
+* **Web & SaaS Platforms:** Elastic cloud, high availability, microservices (Slack, Netflix).
+* **Mobile Applications:** Constrained battery, touch UI, intermittent networks (iOS/Android).
+* **Enterprise ERP / CRM:** ACID transactions, complex business logic, data governance (SAP, Salesforce).
+* **Embedded & IoT Firmware:** Strict real-time constraints, limited memory, zero-fail avionics & automotive.
+* **AI & Machine Learning:** Data pipelines, vector databases, GPU acceleration, LLM inference.
+* **Scientific & CAD:** Floating-point precision, simulation physics, hardware acceleration.
+
+---
+
+## 1.5 Interactive Activity: System Classification
+
+<div class="discussion-columns">
+  <div class="discussion-text">
+
+  **System Classification & Hybrid Architectures:**
+  * Consider a modern **Connected Electric Vehicle (e.g., Tesla)**.
+  * Which application domains does it encompass?
+    * Real-time embedded firmware for braking / motor control.
+    * Touchscreen UI for navigation & entertainment.
+    * Cloud-native backend for fleet telemetry and OTA updates.
+    * Edge AI models for autonomous vision.
+  * **Discussion:** Why do update cadences differ dramatically across these subsystems?
+
+  </div>
+  <div class="discussion-logo">
+    <img src="../../img/ch01/discussion_icon.svg" alt="Discussion" />
+  </div>
+</div>
+
+---
+<!-- header: '1.6 What is Software Engineering?' -->
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/coding_vs_se_loc_bw.jpg" alt="Coding vs Software Engineering" />
+</div>
+
+---
+
+## 1.6 What is Software Engineering?
+
+> **Software Engineering:** An engineering discipline concerned with all aspects of software production—from initial specification through to system maintenance and evolution.
+
+* **1. Engineering Discipline (Work Under Constraints):** Engineering applies scientific rigor and heuristics to solve real human problems under **strict constraints using finite resources**.
+* **2. All Aspects of Production (The Software Process):** Governed by a systematic **Software Engineering Process (SE Process)** that guides activities, roles, and deliverables reliably from inception to evolution.
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01_nb/13_cases.jpeg" alt="When Engineering Fails: The Cost of Ethical Breach" />
+  <img src="../../img/ch01/08_engineering_balance.jpeg" alt="The Engineering Balancing Act" />
 </div>
 
 ---
 
-## Ethical Case Studies 1
+## 1.6 The Engineering Equation: Constraints vs. Resources
 
-<div class="split55">
-  <div class="left">
+* **Constraints (The Limitations):**
+  * **Time:** Hard deadlines, release windows.
+  * **Budget:** Developer salaries, cloud hosting bills, license fees.
+  * **Technology & Platform:** Legacy databases, mobile OS limits.
+  * **Regulations:** GDPR data privacy, HIPAA, PCI-DSS.
+* **Resources (The Assets):**
+  * **Human:** Developer skill, QA engineers, UX designers.
+  * **Tools & Infrastructure:** Cloud compute, CI/CD pipelines, open-source libraries.
+  * **Domain Knowledge:** Understanding user workflows and business logic.
 
-  * [Read the story](https://g.co/gemini/share/022dd19085b9) of Mizuho Securities and the Tokyo Stock Exchange
-  * Who do you think should bear the responsibility for this enormous loss? Should it be Tanaka from Mizuho Securities? The Tokyo Stock Exchange? Or the system developer, Fujitsu?
+---
 
-  </div>
-  <div class="right">
-    <img src="../../img/developer_user_entanglements.png" alt="Developer & User Entanglements" />
-  </div>
+## 1.6 Case Study: Healthcare Startup MVP
+
+* **Problem:** Launch a HIPAA-compliant telemedicine app in 6 months on a tight $80k budget.
+* **The Engineering Balancing Solution:**
+  1. **Scope Prioritization:** Build an MVP for video consults and booking; postpone insurance billing to Phase 2.
+  2. **Cross-Platform Tooling:** Use **Flutter** / **React Native** to maintain a single codebase for iOS and Android (saves 40% effort).
+  3. **Managed Backend:** Use HIPAA-compliant cloud BaaS (Supabase/Firebase) instead of bare-metal servers.
+  4. **Automated CI/CD:** **GitHub Actions** runs unit tests on every PR, keeping QA overhead low for a 3-person team.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/se_process_models_4_activities.jpg" alt="Universal Core Activities Across Different Process Models" />
 </div>
 
 ---
 
-## Ethical Case Studies 2
+## 1.6 The 4 Universal Lifecycle Activities
 
-<div class="split55">
-  <div class="left">
-
-  * Read the story [Data is Gold](https://g.co/gemini/share/2da5d25a4cca)
-  
-  The digital town became more real and full of wisdom, because everyone understood that true power lay in their own judgment, not in being quietly guided by others.
-
-  </div>
-  <div class="right">
-    <img src="../../img/data_is_gold.png" alt="Data is Gold" />
-  </div>
-</div>
+| Activity | Key Artifacts | Risk If Neglected |
+|:---|:---|:---|
+| **1. Specification** (Requirements) | User Stories, SRS, Use Cases, Acceptance Criteria | Building the wrong product; 100x rework cost |
+| **2. Design & Implementation** | Architecture ADD, ERD, API Specs, Codebase | Spaghetti code, unscalable architecture, technical debt |
+| **3. Validation** (Testing / V&V) | Unit/Integration Tests, CI Reports, Bug Trackers | Critical production outages, data loss, security breaches |
+| **4. Evolution** (Maintenance) | Release Notes, DB Migrations, Post-Mortems | Software rot, security vulnerabilities, obsolescence |
 
 ---
 
-## Discussion Topic 3
+## 1.6 Interactive Activity: Scenario Analysis
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  Provide examples of Dark UX Patterns, preferably ones you have personally encountered.
+  **Interactive Scenario: Which Activity Failed?**
+  * *Scenario:* A startup built a lightning-fast in-app crypto wallet for a community grocery delivery app. The code had 100% test coverage and zero crashes. After launch, zero users adopted it because community shoppers exclusively preferred cash-on-delivery.
+  * **Question:** Which fundamental activity failed: *Specification*, *Design*, *Validation*, or *Evolution*?
+  * **Key Lesson:** Why can 100% code test coverage never compensate for a failure in Requirements Specification?
+
+  </div>
+  <div class="discussion-logo">
+    <img src="../../img/ch01/discussion_icon.svg" alt="Discussion" />
+  </div>
+</div>
+
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/se_elements_infographic.jpg" alt="Core Elements of Software Engineering" />
+</div>
+
+---
+
+## 1.6 Elements Encompassed by Software Engineering
+
+* **Disciplines (Best Practices):** Spec before design, Design before code, Interface-based, Change management, ADRs, Code reviews, ...
+* **Principles (Foundations):** Abstraction, Modularity, Anticipation of Change, Open-Closed (OCP), KISS, POLA, ...
+* **Methods & Methodologies:** Waterfall, Agile / Scrum, Spiral, TDD, CI/CD & DevOps, ...
+* **Heuristics & Guidelines:** Nielsen's 10 UX Heuristics, SOLID design, Clean Code, DRY, YAGNI, ...
+
+---
+
+## 1.6 Dispelling Common Software Myths
+
+* **Myth 1: "We're behind schedule—let's add 5 developers to catch up."**
+  * **Reality (Brooks's Law):** Adding manpower to a late project makes it later ($O(n^2)$ communication overhead).
+* **Myth 2: "Software is digital, so changing requirements late is cheap."**
+  * **Reality:** Late changes invalidate schemas and architectures, costing up to 100x more.
+* **Myth 3: "Outsource the coding and we don't need technical management."**
+  * **Reality:** Outsourcing requires rigorous technical governance.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/late_change_cost_comic.jpg" alt="Late Requirement Change Cost Comic" />
+</div>
+
+---
+
+## Concept Check: Brooks's Law (CCQ 3)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**A project is 3 weeks behind schedule with 2 weeks remaining before release. The manager hires 4 junior programmers to speed up progress. What will happen according to Brooks's Law?**
+
+* **A.** The project will finish 1 week early.
+* **B.** The project will be delayed further because senior engineers must spend time onboarding and mentoring new hires.
+* **C.** The existing developers will code twice as fast.
+* **D.** Communication complexity remains unchanged.
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
+
+---
+<!-- header: '1.7 Modern Toolchains & AI' -->
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/10_automating.jpeg" alt="Modern Toolchains and Automation" />
+</div>
+
+---
+
+## 1.7 The Modern Engineering Toolchain
+
+* **Version Control (Git):** Branching strategies, pull requests, collaborative code review.
+* **Modern IDEs (VS Code, IntelliJ):** Real-time linting, static analysis, refactoring.
+* **CI/CD Pipelines (GitHub Actions, GitLab CI):** Automated building, testing, security scanning, and containerized deployment upon every commit.
+* **Automated Testing:** Unit (PyTest/JUnit), Integration, E2E (Playwright).
+* **Observability & APM:** Telemetry, structured logs, OpenTelemetry, Sentry.
+* **AI Coding Assistants:** Copilot, Cursor, Gemini AI for intelligent pair programming.
+
+---
+
+## 1.7 AI in SE: Benefits vs. Risks Matrix
+
+| Phase | Benefits of AI | Risks & Drawbacks |
+|:---|:---|:---|
+| **Requirements** | Drafts user stories, finds ambiguity | Hallucinates constraints, misses tacit context |
+| **Architecture** | Recommends patterns, drafts ERDs | Over-engineering, ignores latency/security SLAs |
+| **Coding** | Fast boilerplate, algorithm suggestions | "Vibe coding" bugs, security vulnerabilities |
+| **Testing** | Generates synthetic edge-case tests | Echo-chamber tests (validating buggy code) |
+| **Maintenance** | Explains legacy code, drafts docs | Silent regression bugs during refactoring |
+
+---
+
+## 1.7 Interactive Activity: The "Vibe Coding" Challenge
+
+<div class="discussion-columns">
+  <div class="discussion-text">
+
+  **Classroom Poll & Discussion: AI in Practice**
+  * **Poll:** When using GitHub Copilot or ChatGPT, how often do you inspect and understand every line before committing?
+    *(Always / Usually / Rarely / Never)*
+  * **Discussion:** Suppose an AI assistant writes a 200-line asynchronous database handler that passes 2 basic tests. Is it safe to deploy? What verification steps must a professional engineer execute?
+
+  </div>
+  <div class="discussion-logo">
+    <img src="../../img/ch01/discussion_icon.svg" alt="Discussion" />
+  </div>
+</div>
+
+---
+<!-- header: '1.8 Ethics, Social Responsibility & Dark Patterns' -->
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/12_code_ethics.jpeg" alt="ACM/IEEE Code of Ethics" />
+</div>
+
+---
+
+## 1.8 ACM/IEEE Code of Ethics: 8 Core Principles
+
+1. **Public:** Prioritize public safety, health, and welfare above all.
+2. **Client & Employer:** Act in their best interest, consistent with public interest.
+3. **Product:** Ensure software meets high professional standards.
+4. **Judgment:** Maintain integrity and independence in technical evaluation.
+5. **Management:** Promote ethical management and realistic project estimates.
+6. **Profession:** Advance the integrity and reputation of software engineering.
+7. **Colleagues:** Be fair to, support, and mentor peers.
+8. **Self:** Participate in lifelong learning and ethical practice.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/13_cases.jpeg" alt="When Engineering Fails" />
+</div>
+
+---
+
+## 1.8 High-Profile Ethical Breaches
+
+* **Volkswagen "Dieselgate" (2015):**
+  * Engineers wrote engine software to detect laboratory test cycles and hide toxic $NO_x$ emissions (up to 40x legal limit on the road).
+  * Resulted in billions in fines, criminal convictions, and severe environmental harm.
+* **Cambridge Analytica (2018):**
+  * Improper harvesting of personal data for covert political manipulation.
+* **Planned Obsolescence:**
+  * Software updates engineered to artificially degrade legacy device performance.
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/dark_patterns_comic.png" alt="Deceptive Dark Patterns 4-Panel Comic" />
+</div>
+
+---
+
+## 1.8 Deceptive "Dark Patterns" in UI/UX Design
+
+* **1. Roach Motel (Subscription Labyrinth):**
+  * Signing up takes 1 click; cancelling requires navigating hidden menus or making a phone call.
+* **2. Confirmshaming:**
+  * Emotionally manipulative text on decline buttons (*"No thanks, I hate saving money"*).
+* **3. Hidden Costs & Sneak into Basket:**
+  * Pre-ticking add-on insurance or fees at the final checkout step.
+* **4. Fabricated Urgency & Scarcity:**
+  * Fake countdown timers (*"Only 2 minutes left!"*) and fabricated demand alerts.
+
+---
+
+## Concept Check: Engineering Ethics (CCQ 4)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**Under the ACM/IEEE Code of Ethics, if an employer directs an engineer to implement an algorithm that falsifies safety compliance reports, what is the engineer's obligation?**
+
+* **A.** Comply, because the employer pays the engineer's salary.
+* **B.** Refuse and escalate, because the Public Interest takes precedence over Employer loyalty.
+* **C.** Implement the code but omit documentation.
+* **D.** Outsource the code to an external vendor.
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
+
+---
+
+## 1.8 Interactive Activity: Dark Pattern Detective
+
+<div class="discussion-columns">
+  <div class="discussion-text">
+
+  **Dark Pattern Detective Activity:**
+  * **Identify:** Recall a deceptive dark pattern you encountered on a real-world app or e-commerce platform.
+  * **Analyze:** Which ACM/IEEE ethical principle (Public Interest, Product Quality, Professional Judgment) was violated?
+  * **Redesign:** How would you redesign that interaction to achieve legitimate business conversion while remaining transparent and user-respecting?
 
   </div>
   <div class="discussion-logo">
@@ -972,22 +861,54 @@ ACM/IEEE outline 6 primary ethical pillars for software engineers:
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01_nb/14_midset.jpeg" alt="The Mindset of a Software Engineer" />
+  <img src="../../img/ch01/14_midset.jpeg" alt="The Mindset of a Software Engineer" />
 </div>
 
 ---
 
-## Recap: Fill-in-the-blank Quiz
+## 1.8 Mindset: Data, Developers, and Users
+
+<div class="split55">
+  <div class="left">
+
+  * **Developer & User Entanglements:**
+    * Software is not created in isolation—it directly impacts real human workflows, livelihoods, and safety.
+  * **Data is Gold:**
+    * Data integrity, privacy governance, and algorithmic fairness are core engineering responsibilities.
+
+  </div>
+  <div class="right">
+    <img src="../../img/ch01/data_is_gold.png" alt="Data is Gold" />
+  </div>
+</div>
+
+---
+<!-- header: '1.9 FAQ & Recap' -->
+
+## 1.9 Frequently Asked Questions (FAQ)
+
+* **Q: Computer Science vs. Software Engineering?**
+  * *CS:* Mathematical and theoretical foundations (algorithms, automata, complexity).
+  * *SE:* Practical engineering of reliable software under time, cost, and human constraints.
+* **Q: Where do software costs go?**
+  * Initial build: $\approx 60\%$ development, $\approx 40\%$ testing.
+  * Total lifecycle: Evolution/maintenance accounts for **$70\% - 80\%$** of total costs.
+* **Q: Is there one universal "best" language or methodology?**
+  * No. Tool and process selection depends on application domain, safety constraints, and business goals.
+
+---
+
+## Recap: Fill-in-the-Blank Quiz
 
 <div class="fill-blank-columns">
   <div class="fill-blank-text">
 
-Test your understanding of the core concepts in this chapter:
+Test your mastery of Chapter 1 fundamentals:
 
-1. According to the IEEE definition, **software** consists of computer programs, procedures, associated **___**, and data.
-2. The four essential attributes of **good** software are: usability, dependability, efficiency (performance), and **___**.
-3. **Software Engineering** is an **___** discipline that is concerned with all aspects of software production.
-4. Computer Science focuses on theory and fundamentals, while **Software Engineering** focuses on the **___** development of useful software.
+1. According to the IEEE definition, software consists of programs, data, operational procedures, and **[ _________ ]**.
+2. Adding manpower to a late software project makes it later is known as **[ _________ ]** Law.
+3. The **[ _________ ]** Quality Model defines 6 characteristics including Functionality, Reliability, Usability, Efficiency, Maintainability, and Portability.
+4. The first principle of the ACM/IEEE Code of Ethics prioritizes the **[ _________ ]** interest.
 
   </div>
   <div class="fill-blank-logo">
@@ -997,29 +918,10 @@ Test your understanding of the core concepts in this chapter:
 
 ---
 
-## Recap: Answers & Summary
+## References & Further Reading
 
-<div class="fill-blank-columns">
-  <div class="fill-blank-text">
-
-Here are the completed concepts:
-
-1. According to the IEEE definition, software consists of computer programs, procedures, associated **documentation**, and data.
-2. The four essential attributes of good software are: usability, dependability, efficiency (performance), and **maintainability**.
-3. Software Engineering is an **engineering** discipline that is concerned with all aspects of software production.
-4. Computer Science focuses on theory and fundamentals, while Software Engineering focuses on the **practical** development of useful software.
-
-  </div>
-  <div class="fill-blank-logo">
-    <img src="../../img/ch01/fill_blank_answer_icon.svg" alt="Quiz Answers" />
-  </div>
-</div>
-
----
-
-## References
-
-* **Sommerville Software Engineering Book**
-  * [Official Website](https://software-engineering-book.com/)
-  * [All Slides Folder](https://drive.google.com/drive/u/0/folders/1aU-KsrwQsNMk3Gzlj15wihctOioIMBjN)
-  * [Chapter Slides Link](https://docs.google.com/presentation/d/1CLQaKE9g9EQE0XWGd2yiA9TnyB8-H-qf/edit?usp=sharing&ouid=109022309423128079509&rtpof=true&sd=true)
+* Sommerville, Ian. *Software Engineering* (10th Edition). Pearson. [Official Website](https://software-engineering-book.com/)
+* Brooks, Frederick P. *The Mythical Man-Month: Essays on Software Engineering*. Addison-Wesley.
+* ISO/IEC 9126-1:2001. *Software engineering — Product quality — Part 1: Quality model*.
+* ACM/IEEE Joint Task Force on Software Engineering Ethics. *Software Engineering Code of Ethics*. [IEEE CS](https://www.computer.org/education/code-of-ethics)
+* Brignull, Harry. *Deceptive Patterns: Exposing the Tricks Tech Companies Use to Control You*.

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<title>Software Processes</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 22mm 18mm 20mm 18mm;
+    @bottom-right {
+      content: counter(page);
+    }
+  }
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    h1, h2, h3, h4, h5 {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    img, table, blockquote, pre {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft JhengHei", "Microsoft YaHei", sans-serif;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #24292e;
+    background-color: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    word-wrap: break-word;
+  }
+  h1 {
+    font-size: 26px;
+    color: #0b3c5d;
+    border-bottom: 2px solid #0b3c5d;
+    padding-bottom: 8px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 20px;
+    color: #0b3c5d;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 6px;
+    margin-top: 22px;
+    margin-bottom: 12px;
+  }
+  h3 {
+    font-size: 17px;
+    color: #1f2328;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  h4, h5 {
+    font-size: 15px;
+    color: #24292e;
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+  hr {
+    height: 1px;
+    background-color: #e1e4e8;
+    border: none;
+    margin: 22px 0;
+  }
+  p, ul, ol {
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+  li {
+    margin-bottom: 4px;
+    line-height: 1.6;
+  }
+  blockquote {
+    border-left: 4px solid #328cc1;
+    background: #f6f8fa;
+    padding: 10px 18px;
+    margin: 14px 0;
+    color: #333333;
+    border-radius: 0 4px 4px 0;
+  }
+  img {
+    max-width: 100%;
+    max-height: 150mm;
+    display: block;
+    margin: 16px auto;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 16px 0;
+    font-size: 13.5px;
+  }
+  th, td {
+    border: 1px solid #d0d7de;
+    padding: 8px 12px;
+    text-align: left;
+  }
+  th {
+    background: #f6f8fa;
+    font-weight: 600;
+  }
+  code {
+    background: #f6f8fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 85%;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+  pre code {
+    display: block;
+    padding: 12px;
+    overflow-x: auto;
+    line-height: 1.45;
+  }
+  a {
+    color: #0969da;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<h1>Software Processes</h1>
+<p><strong>Lecture Outline &amp; Key Points</strong></p>
+<blockquote>
+<ul>
+<li><strong>Software Process Models</strong>: Core concepts, trade-offs, and applicable scenarios of Waterfall, Incremental, Iterative, Combined, and Integration &amp; Configuration (COTS) models.</li>
+<li><strong>Core Process Activities</strong>: Requirements engineering (Elicitation, Specification, Validation), Software design and implementation, Verification &amp; Validation (V&amp;V, Testing stages, V-Model), and Evolution.</li>
+<li><strong>Coping with Change</strong>: Strategies to minimize rework costs through Change Anticipation, Change Tolerance, System Prototyping, and Incremental Delivery.</li>
+<li><strong>Process Improvement Framework (CMMI)</strong>: 5 maturity levels (Initial, Managed, Defined, Quantitatively Managed, Optimizing) and their process areas.</li>
+<li><strong>Software Engineering Metrics</strong>: Measuring code quality, developer productivity, defect management, system performance, reliability, process flow, security, and user experience.</li>
+</ul>
+</blockquote>
+<p><a href="https://docs.google.com/presentation/d/1e6reT4VGHE7UspwQ4amJlr6TDspo2FQm/edit?usp=sharing&ouid=109022309423128079509&rtpof=true&sd=true">Slide Deck: Ch2 Software Processes</a></p>
+<hr>
+<p><a href="https://g.co/gemini/share/82f63f87854f"><img src="../../img/ch02/gemini_share_ch2.png" width="200"></a></p>
+<h2>1. Software Process Models</h2>
+<ul>
+<li>A <strong>software process</strong> is a structured set of activities required to develop a software system.</li>
+<li>While many different software processes exist, all must include four fundamental activities:<ul>
+<li><strong>Specification</strong> – Defining what the system should do and its operational constraints;</li>
+<li><strong>Design and Implementation</strong> – Defining the architecture of the system and producing the executable code;</li>
+<li><strong>Validation</strong> – Checking and testing that the software conforms to specifications and meets customer expectations;</li>
+<li><strong>Evolution</strong> – Modifying and enhancing the software in response to changing customer and market needs.</li>
+</ul>
+</li>
+<li>A <strong>software process model</strong> is an abstract, simplified representation of a process from a specific perspective.</li>
+</ul>
+<hr>
+<blockquote>
+<p>👍 <strong>Core Insight</strong>: A software development process is essentially a <em>human-based algorithm</em>. A good process acts as an efficient algorithm that delivers software projects on time, on budget, and with high quality.</p>
+</blockquote>
+<p><img src="../../img/ch02/02_human_algorithm.jpeg" alt="Human Algorithm &amp; Universal Process"></p>
+<hr>
+<h3>Major Categories of Process Models</h3>
+<ol>
+<li><strong>The Waterfall Model</strong>: A plan-driven model with separate, distinct sequential phases of specification and development.</li>
+<li><strong>Incremental Development</strong>: Specification, development, and validation activities are interleaved and executed in small steps.</li>
+<li><strong>Integration and Configuration</strong>: The system is assembled from existing configurable, reusable components (COTS).</li>
+</ol>
+<p>In practice, most large commercial systems are developed using hybrid processes that incorporate elements from all of these models.</p>
+<hr>
+<h3>Waterfall Model</h3>
+<img src="../../img/ch02/waterfall_model.png" width="500"><p><img src="../../img/ch02/04_waterfall.jpeg" alt="The Waterfall Model"></p>
+<ul>
+<li><strong>Key Characteristics</strong>:<ul>
+<li>Linear-sequential life cycle model where each phase must be signed off before the next phase begins.</li>
+<li>Plan-driven approach with extensive documentation generated at each milestone.</li>
+</ul>
+</li>
+<li><strong>Drawbacks</strong>:<ul>
+<li><strong>Difficulty accommodating change</strong>: Inflexible partitioning of the project makes it very difficult to respond to evolving customer requirements.</li>
+<li><strong>Late risk discovery</strong>: Integration and testing occur near the end, meaning major architectural defects are discovered late when fixing them is most expensive.</li>
+<li><strong>Delayed value delivery</strong>: The customer sees a working system only at the final stage of the lifecycle.</li>
+</ul>
+</li>
+<li><strong>Applicable Scenarios</strong>:<ul>
+<li>Embedded systems where software must interface tightly with inflexible hardware.</li>
+<li>Critical safety/defense systems requiring formal verification and extensive upfront certification.</li>
+<li>Large, multi-site engineering projects where a strict plan is necessary to coordinate distributed contractors.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3>Incremental Development Model</h3>
+<p>An <strong>incremental</strong> process focuses on delivering software in functional, self-contained pieces called <strong>increments</strong>. You build and deliver one functional slice of the product, then the next, with each increment adding new capabilities. </p>
+<p>A helpful analogy is building a house: you lay the foundation first, then construct the ground floor (kitchen and living room), followed by the upper floor bedrooms. Each increment adds a complete, functional part to the whole.</p>
+<ul>
+<li><strong>Focus</strong>: Early delivery of prioritized functionality; incrementally completing the full scope.</li>
+<li><strong>Outcome</strong>: A working product is delivered after the first increment, with subsequent increments expanding its feature set.</li>
+<li><strong>Use Case</strong>: Best suited when requirements are well-understood and can be broken down into distinct, prioritized modules.</li>
+</ul>
+<p><img src="../../img/ch02/incremental_development.png" alt="Incremental Development"></p>
+<hr>
+<h4>Benefits of the Incremental Approach</h4>
+<ul>
+<li><strong>Rapid Delivery &amp; Early Value</strong>: Customers can start using and deriving business value from core software features much earlier than with a waterfall process.</li>
+<li><strong>Early Customer Feedback</strong>: Stakeholders can interact with running demonstrations and provide feedback on implemented functionality to guide subsequent increments.</li>
+<li><strong>Reduced Cost of Change</strong>: The amount of analysis and documentation that has to be reworked is much smaller than in a plan-driven waterfall model.</li>
+</ul>
+<hr>
+<h3>Iterative Development Model</h3>
+<p>An <strong>iterative</strong> process focuses on <strong>continuous refinement</strong>. You construct a rough, working end-to-end version of the product first, and then in repeated cycles (&quot;iterations&quot;), you continuously improve, polish, and optimize the existing system based on feedback.</p>
+<p>Think of it like a sculptor starting with a rough block of clay: each pass refines the proportions, contours, and fine details until the final sculpture emerges.</p>
+<ul>
+<li><strong>Focus</strong>: Refining, evolving, and improving existing capabilities.</li>
+<li><strong>Outcome</strong>: A progressively more complete, robust, and polished version of the entire product with each cycle.</li>
+<li><strong>Use Case</strong>: Ideal when initial requirements are vague, uncertain, or highly dynamic, allowing teams to explore design options through continuous feedback.</li>
+</ul>
+<p><img src="../../img/ch02/iterative_sculptor.png" alt="Iterative Sculptor Analogy"></p>
+<hr>
+<h3>Incremental vs. Iterative: Key Differences</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Dimension</th>
+<th align="left">Incremental Development</th>
+<th align="left">Iterative Development</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Primary Goal</strong></td>
+<td align="left">Adding new functional modules in successive steps.</td>
+<td align="left">Refining, improving, and polishing existing functionality.</td>
+</tr>
+<tr>
+<td align="left"><strong>Deliverables</strong></td>
+<td align="left">Each increment delivers an additional working subsystem.</td>
+<td align="left">Each iteration delivers an improved version of the whole system.</td>
+</tr>
+<tr>
+<td align="left"><strong>Management Focus</strong></td>
+<td align="left">Progressively expanding feature coverage according to a roadmap.</td>
+<td align="left">Exploring requirements, reducing technical risks, and enhancing quality.</td>
+</tr>
+<tr>
+<td align="left"><strong>Best Used When</strong></td>
+<td align="left">System modules can be cleanly decoupled and prioritized for delivery.</td>
+<td align="left">Requirements are ambiguous or market feedback is critical to product direction.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>💡 <strong>Key Takeaway</strong>: <em>Incremental</em> focuses on delivering functional pieces early according to a planned roadmap; <em>Iterative</em> focuses on continuous enhancement and adaptation driven by user feedback.</p>
+</blockquote>
+<p><img src="../../img/ch02/incremental_vs_iterative.png" alt="Incremental vs. Iterative"></p>
+<hr>
+<h3>Combined Approach: Iterative &amp; Incremental</h3>
+<p>In modern software engineering (such as <strong>Scrum</strong> and <strong>Agile methodologies</strong>), both approaches are combined into an <strong>iterative and incremental model</strong>. The team builds the product in small, functional slices (incremental) and repeatedly refines and adapts them based on stakeholder feedback (iterative).</p>
+<blockquote>
+<p>💡 <strong>Principle</strong>: Even with a planned functional roadmap, every release must incorporate user feedback to continuously improve both software architecture and user experience.</p>
+</blockquote>
+<p><img src="../../img/ch02/05_incremental_iterative.jpeg" alt="Iterative &amp; Incremental Combined"></p>
+<hr>
+<h4>The MVP Analogy (Mona Lisa &amp; Mobility)</h4>
+<p><img src="../../img/ch02/monalisa_development_analogy.png" alt="Mona Lisa Development Analogy"></p>
+<ul>
+<li><strong>Poor Incremental Analogy</strong>: Delivering a single wheel, then an axle, then a chassis gives the customer no usable transportation until the final automobile is finished.</li>
+<li><strong>True Agile (Iterative &amp; Incremental)</strong>: Deliver a skateboard first, then a scooter, then a bicycle, then a motorcycle, and finally a car. At every stage, the customer possesses a usable transportation solution, and feedback guides the next evolution.</li>
+</ul>
+<p><img src="../../img/ch02/06_MVP_Sculptor.jpeg" alt="MVP Evolution Analogy"></p>
+<hr>
+<blockquote>
+<p>💡💬 <strong>Discussion Activity</strong>: Choose one of the following systems and propose both an <strong>Incremental plan</strong> and an <strong>Iterative plan</strong> showing how releases would evolve:</p>
+<ol>
+<li>University Department Portal</li>
+<li>E-Commerce Marketplace</li>
+<li>Online Food Delivery Platform</li>
+<li>Travel &amp; Vacation Planning System</li>
+<li>Major League Baseball Analytics Dashboard</li>
+</ol>
+</blockquote>
+<h4>Case Study: University Department Web Portal</h4>
+<ul>
+<li>Introduce department vision and academic programs.</li>
+<li>Synchronize with university faculty databases for live profiles.</li>
+<li>Events Management: Course workshops, academic speeches, spotlight stories.</li>
+<li>Alumni networking and career hub.</li>
+<li>💡💬 <em>How would you structure development sprints across Waterfall, Incremental, and Agile processes for this project?</em></li>
+</ul>
+<hr>
+<h3>Integration and Configuration Model (COTS)</h3>
+<ul>
+<li>Based on <strong>software reuse</strong>, where systems are assembled and customized from existing pre-built components or commercial-off-the-shelf (COTS) applications.</li>
+<li>Reusable elements are configured to adapt their workflows, schemas, and user interfaces to specific organizational requirements.</li>
+</ul>
+<h4>Categories of Reusable Software:</h4>
+<ol>
+<li><strong>COTS Application Systems</strong>: Off-the-shelf platforms configured for a specific domain (e.g., SAP ERP, Salesforce CRM, WordPress CMS).</li>
+<li><strong>Component Framework Packages</strong>: Collections of reusable libraries integrated into a runtime framework (e.g., Spring Boot, .NET, Node.js packages).</li>
+<li><strong>Cloud Web Services &amp; APIs</strong>: Standardized services deployed in the cloud and invoked remotely via REST/GraphQL APIs (e.g., Stripe for payments, Firebase for auth, Twilio for messaging).</li>
+</ol>
+<blockquote>
+<p>💡💬 <strong>Discussion</strong>: Which modern software frameworks and cloud services do you rely on to rapidly assemble full-stack web applications?</p>
+</blockquote>
+<hr>
+<h2>2. Core Process Activities</h2>
+<h3>Requirements Engineering Process</h3>
+<img src="../../img/ch02/requirements_process.png" width="500"><blockquote>
+<p>✅ <strong>Requirements Engineering</strong> is the disciplined process of establishing what services stakeholders expect from a system and the constraints under which it must operate.</p>
+</blockquote>
+<p>The process comprises three main sub-activities:</p>
+<ol>
+<li><strong>Requirements Elicitation &amp; Analysis</strong>: Discovering stakeholder needs, business constraints, and system boundaries through interviews, observation, and user stories.</li>
+<li><strong>Requirements Specification</strong>: Translating informal customer requirements into a precise, structured specification document.</li>
+<li><strong>Requirements Validation</strong>: Checking that the documented specifications are realistic, consistent, complete, and accurately reflect user needs.</li>
+</ol>
+<blockquote>
+<p>💡💬 <strong>Discussion</strong>: For a campus food ordering system, identify 2 high-level user requirements and specify their detailed technical system specifications.</p>
+</blockquote>
+<hr>
+<h3>Design and Implementation</h3>
+<blockquote>
+<p>✅ The process of transforming a system specification into an executable, deployable software system.</p>
+</blockquote>
+<img src="../../img/ch02/design_process.png" width="500"><ul>
+<li><strong>Software Design</strong>: Creating a software architecture, data model, and component interfaces that realize the specification.</li>
+<li><strong>Implementation</strong>: Translating the design structures into executable source code programs.</li>
+<li>In modern development, design and implementation activities are tightly coupled and iteratively interleaved.</li>
+</ul>
+<h4>Four Key Design Stages:</h4>
+<ul>
+<li><strong>Architectural Design</strong>: Identifying the high-level system structure, major sub-systems, their relationships, and deployment topology.</li>
+<li><strong>Database Design</strong>: Designing relational schemas, document stores, and data structures.</li>
+<li><strong>Interface Design</strong>: Defining clear contracts (APIs, method signatures, REST endpoints) between components.</li>
+<li><strong>Component Selection &amp; Design</strong>: Selecting reusable libraries or designing custom component internals.</li>
+</ul>
+<hr>
+<h3>Verification and Validation (V&amp;V)</h3>
+<blockquote>
+<p>✅ <strong>Verification and Validation (V&amp;V)</strong> demonstrates that a system conforms to its specification (&quot;building the product right&quot;) and meets the true operational needs of the customer (&quot;building the right product&quot;).</p>
+</blockquote>
+<img src="../../img/ch02/testing_stages.png" width="450"><h4>Testing Stages in the Software Process:</h4>
+<ol>
+<li><strong>Component / Unit Testing</strong>: Individual functions, classes, or modules are tested independently by developers to verify internal logic.</li>
+<li><strong>System / Integration Testing</strong>: Testing integrated subsystems as a whole to uncover interface mismatches and evaluate emergent properties (performance, reliability, security).</li>
+<li><strong>Customer / Acceptance Testing</strong>: Testing the system with real-world customer data and operational scenarios to ensure it satisfies business requirements prior to sign-off.</li>
+</ol>
+<p><img src="../../img/ch02/v_model.png" alt="V-Model Process Diagram"></p>
+<p>👉 <strong>The V-Model</strong>: Pairs each development phase (Requirements, Architecture, Detailed Design) directly with its corresponding testing phase (Acceptance Testing, System Testing, Unit Testing).</p>
+<hr>
+<h3>Software Evolution</h3>
+<ul>
+<li>Software is inherently malleable and must continuously change throughout its operational lifetime.</li>
+<li>As business needs evolve, regulations change, and new platforms emerge, software must be updated and maintained.</li>
+<li>The traditional boundary between initial development and long-term maintenance is disappearing—modern systems undergo continuous delivery and perpetual evolution.</li>
+</ul>
+<p><img src="../../img/ch02/evolution_process.png" alt="Evolution Process Flow"></p>
+<hr>
+<h2>3. Coping with Change</h2>
+<p>Change is inevitable in all software projects due to business shifts, emerging technologies, changing platforms, and evolving user preferences.</p>
+<p>Because changes cause <strong>rework</strong> (e.g., re-analyzing requirements, re-architecting, re-testing), engineering processes must be designed to minimize change costs:</p>
+<ol>
+<li><strong>Change Anticipation</strong>: Activities designed to foresee potential changes before extensive rework occurs (e.g., building rapid prototypes to validate risky assumptions early).</li>
+<li><strong>Change Tolerance</strong>: Structuring the architecture and development workflow so changes can be accommodated at low cost (e.g., loose coupling, incremental delivery).</li>
+</ol>
+<hr>
+<h3>System Prototyping</h3>
+<p>A <strong>prototype</strong> is an initial, executable version of a system used to demonstrate concepts, evaluate UI designs, and explore technical feasibility.</p>
+<p><img src="../../img/ch02/07_prototyping.jpeg" alt="Prototyping &amp; AI Workflows"></p>
+<h4>Primary Uses of Prototypes:</h4>
+<ul>
+<li><strong>Requirements Engineering</strong>: Helps stakeholders clarify ambiguous needs and validate requirements.</li>
+<li><strong>Design Exploration</strong>: Allows developers to experiment with architectural patterns, UI layouts, and technology stacks.</li>
+<li><strong>Feasibility Testing</strong>: Validates performance bottlenecks and third-party API capabilities.</li>
+</ul>
+<h4>Benefits of Prototyping:</h4>
+<ul>
+<li>Significantly improved system usability and user satisfaction.</li>
+<li>Closer alignment with true customer workflows.</li>
+<li>Lower risk of major architectural surprises late in development.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Throw-away Prototypes</strong>: Prototypes should typically be discarded rather than used as production code because they are often poorly structured, lack error handling, omit non-functional requirements (security, scaling), and lack documentation.</p>
+</blockquote>
+<hr>
+<h3>Incremental Delivery</h3>
+<p>In an <strong>incremental delivery</strong> strategy, finished increments of the software are deployed into the hands of real end-users for production use.</p>
+<p><img src="../../img/ch02/incremental_delivery.png" alt="Incremental Delivery"></p>
+<h4>Advantages of Incremental Delivery:</h4>
+<ul>
+<li><strong>Immediate Customer Value</strong>: Users gain real utility from early increments while subsequent features are being developed.</li>
+<li><strong>Realistic Validation</strong>: Real-world usage generates genuine feedback that cannot be replicated in artificial testing labs.</li>
+<li><strong>Lower Total Project Risk</strong>: If a project must be paused or canceled early, the organization still retains working, valuable software in production.</li>
+</ul>
+<hr>
+<h2>4. Process Improvement &amp; CMMI</h2>
+<p>Process improvement helps software organizations elevate their development capability, reduce defects, lower costs, and achieve predictable delivery schedules.</p>
+<p><img src="../../img/ch02/11_CMMI.jpeg" alt="CMMI Maturity Model"></p>
+<h3>The CMMI Framework</h3>
+<p>The <strong>Capability Maturity Model Integration (CMMI)</strong> is a globally recognized process improvement framework that defines <strong>5 Maturity Levels</strong> assessing an organization&#39;s process capability:</p>
+<p><img src="../../img/ch02/cmmi_maturity_levels.png" alt="CMMI Maturity Levels"></p>
+<ol>
+<li><strong>Level 1: Initial (Ad-hoc / Chaotic)</strong><ul>
+<li>Processes are unpredictable, reactive, and poorly controlled. Success relies on individual heroics rather than institutional practices.</li>
+</ul>
+</li>
+<li><strong>Level 2: Managed</strong><ul>
+<li>Basic project management processes are established to control cost, schedule, and scope. Processes are planned and tracked at the project level.</li>
+</ul>
+</li>
+<li><strong>Level 3: Defined</strong><ul>
+<li>Processes are standard across the entire organization. Standard procedures, training, and methodologies are documented and tailored across projects.</li>
+</ul>
+</li>
+<li><strong>Level 4: Quantitatively Managed</strong><ul>
+<li>The organization uses statistical and quantitative techniques to measure process performance and product quality with high predictability.</li>
+</ul>
+</li>
+<li><strong>Level 5: Optimizing</strong><ul>
+<li>The organization continuously improves its processes based on quantitative feedback, root-cause defect analysis, and technological innovation.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3>CMMI Process Areas by Maturity Level</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Maturity Level</th>
+<th align="left">Key Process Areas (PAs)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Level 1 - Initial</strong></td>
+<td align="left"><em>No formal process areas (Ad-hoc execution).</em></td>
+</tr>
+<tr>
+<td align="left"><strong>Level 2 - Managed</strong></td>
+<td align="left">• Requirements Management (REQM)<br/>• Project Planning (PP)<br/>• Project Monitoring &amp; Control (PMC)<br/>• Supplier Agreement Management (SAM)<br/>• Measurement &amp; Analysis (MA)<br/>• Process &amp; Product Quality Assurance (PPQA)<br/>• Configuration Management (CM)</td>
+</tr>
+<tr>
+<td align="left"><strong>Level 3 - Defined</strong></td>
+<td align="left">• Requirements Development (RD)<br/>• Technical Solution (TS)<br/>• Product Integration (PI)<br/>• Verification (VER)<br/>• Validation (VAL)<br/>• Organizational Process Focus (OPF)<br/>• Organizational Process Definition (OPD)<br/>• Organizational Training (OT)<br/>• Integrated Project Management (IPM)<br/>• Risk Management (RSKM)<br/>• Decision Analysis &amp; Resolution (DAR)</td>
+</tr>
+<tr>
+<td align="left"><strong>Level 4 - Quantitatively Managed</strong></td>
+<td align="left">• Organizational Process Performance (OPP)<br/>• Quantitative Project Management (QPM)</td>
+</tr>
+<tr>
+<td align="left"><strong>Level 5 - Optimizing</strong></td>
+<td align="left">• Organizational Innovation &amp; Deployment (OID)<br/>• Causal Analysis &amp; Resolution (CAR)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>5. Software Engineering Metrics</h2>
+<p>Metrics provide objective, data-driven indicators to monitor product quality, developer productivity, process health, and user satisfaction.</p>
+<p><img src="../../img/ch02/12_metrics.jpeg" alt="Software Engineering Metrics"></p>
+<h3>1. Code Quality Metrics</h3>
+<ul>
+<li><strong>Cyclomatic Complexity</strong>: Measures the number of linearly independent execution paths through code. Higher complexity correlates with higher defect rates and harder maintenance.</li>
+<li><strong>Code Coverage</strong>: The percentage of codebase statements or branches executed during automated test runs.</li>
+<li><strong>Code Churn</strong>: The volume of lines added, modified, or deleted over time; excessive churn indicates architectural instability.</li>
+</ul>
+<img src="../../img/ch02/code_coverage.png" width="450"><hr>
+<h3>2. Productivity Metrics</h3>
+<ul>
+<li><strong>Lines of Code (LOC)</strong>: Traditional volume metric; should be evaluated carefully as higher LOC does not necessarily equal higher value.</li>
+<li><strong>Sprint Velocity</strong>: The number of story points or user stories delivered by an Agile team per sprint iteration.</li>
+<li><strong>Commit Frequency</strong>: The cadence of source code check-ins, indicating active continuous integration.</li>
+</ul>
+<hr>
+<h3>3. Defect Metrics</h3>
+<ul>
+<li><strong>Defect Density</strong>: Number of confirmed defects per thousand lines of code (KLOC) or per function point.</li>
+<li><strong>Defect Leakage</strong>: Percentage of defects that escape early testing stages into production.</li>
+<li><strong>Mean Time to Detect (MTTD)</strong>: Average time elapsed between bug introduction and identification.</li>
+<li><strong>Mean Time to Repair (MTTR)</strong>: Average time required to debug, fix, and verify a reported defect.</li>
+</ul>
+<img src="../../img/ch02/defect_density.png" width="450"><hr>
+<h3>4. Performance &amp; Reliability Metrics</h3>
+<ul>
+<li><strong>Response Time &amp; Latency</strong>: System round-trip duration when responding to client requests.</li>
+<li><strong>Throughput</strong>: Transactions or requests handled per unit time.</li>
+<li><strong>MTBF / MTTF</strong>: Mean Time Between Failures and Mean Time to Failure, measuring system reliability.</li>
+<li><strong>Technical Debt Ratio</strong>: Estimated remediation cost of code shortcuts relative to total system replacement cost.</li>
+</ul>
+<hr>
+<h3>5. Process &amp; Agile Metrics</h3>
+<ul>
+<li><strong>Cycle Time &amp; Lead Time</strong>: Total duration from task inception/commitment to production deployment.</li>
+<li><strong>Sprint Burndown Chart</strong>: Visual representation of remaining sprint work over time, highlighting team trajectory and blockers.</li>
+</ul>
+<img src="../../img/ch02/burndown_chart.png" width="500"><hr>
+<h3>6. Security &amp; UX Metrics</h3>
+<ul>
+<li><strong>Vulnerability Count &amp; Time to Patch (TTP)</strong>: Tracking unresolved CVEs and remediation speed.</li>
+<li><strong>Net Promoter Score (NPS)</strong>: Standard index measuring customer willingness to recommend the software.</li>
+<li><strong>Task Completion Rate &amp; Error Rate</strong>: UX indicators tracking whether users achieve their goals intuitively without application faults.</li>
+</ul>
+<hr>
+<h2>Summary &amp; Key Takeaways</h2>
+<ol>
+<li><strong>Universal Activities</strong>: All software processes require specification, design &amp; implementation, validation, and evolution.</li>
+<li><strong>Process Selection</strong>: <ul>
+<li>Use <strong>Waterfall</strong> when requirements are fixed, stable, and safety/hardware constraints demand strict upfront sign-offs.</li>
+<li>Use <strong>Iterative &amp; Incremental (Agile)</strong> for dynamic business applications where early value delivery and adaptability are vital.</li>
+</ul>
+</li>
+<li><strong>Coping with Change</strong>: Minimize rework costs through rapid prototyping, change tolerance design, and incremental delivery.</li>
+<li><strong>Maturity &amp; Metrics</strong>: Adopt CMMI principles and objective software metrics to foster continuous, data-driven engineering improvement.</li>
+</ol>
+
+
+</body>
+</html>
