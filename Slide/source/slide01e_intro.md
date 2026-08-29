@@ -294,7 +294,7 @@ Feng Chia University
 * **1.5 Modern Software Landscape:** Web, Mobile, ERP, Embedded, AI/ML
 * **1.6 What is SE?:** Definition, Process, Constraints, 4 Core Activities, Principles & Myths
 * **1.7 Modern Toolchains & AI:** CI/CD Pipelines & AI Benefits/Risks Matrix
-* **1.8 Professional Ethics & Dark Patterns:** ACM/IEEE Code & Monochrome Comic
+* **1.8 Professional Ethics & Dark Patterns:** ACM/IEEE Code & Deceptive UI
 * **1.9 FAQ & Conceptual Recap**
 
 ---
@@ -393,11 +393,11 @@ Feng Chia University
   <div class="left">
 
   * **Nagoya Airbus A300 Crash (1994):**
-    * Autopilot / human flight-control conflict led to 264 fatalities.
+    * Autopilot Go-Around mode stayed active; fought pilot's manual steering, leading to trim nose-up stall and 264 fatalities.
   * **Mars Climate Orbiter (1999):**
-    * $327M spacecraft lost due to English vs. Metric force unit mismatch.
+    * $327M probe lost because ground software calculated thrust in imperial $lbf\cdot s$, while onboard computer expected metric $N\cdot s$.
   * **Ariane 5 Flight 501 (1996):**
-    * 64-bit float to 16-bit integer overflow destroyed a $370M rocket in 37 seconds.
+    * 64-bit float representation of horizontal velocity overflowed 16-bit signed integer ($>32,767$), crashing processors in 37 seconds.
 
   </div>
   <div class="right">
@@ -412,10 +412,10 @@ Feng Chia University
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**Why couldn't the 1968 Software Crisis be solved simply by purchasing faster computer hardware or larger memory?**
+**Why couldn't the 1968 Software Crisis be resolved simply by purchasing faster computer hardware or larger memory?**
 
 * **A.** Hardware manufacturing stopped advancing in the late 1960s.
-* **B.** The crisis was fundamentally a problem of cognitive complexity, communication overhead, and lack of engineering discipline.
+* **B.** The crisis was fundamentally a cognitive and organizational problem of intellectual complexity, system architecture, and communication overhead, which faster hardware only amplified.
 * **C.** Programming languages lacked mathematical calculation capabilities.
 * **D.** Hardware was incompatible with cloud infrastructure.
 
@@ -440,9 +440,37 @@ Feng Chia University
 > **Software (IEEE Standard):** Computer programs, procedures, and possibly associated documentation and data pertaining to the operation of a computer system.
 
 * **1. Programs:** Executable binaries and source code files (Python, Java, C++, TypeScript).
-* **2. Data & Schemas:** Database tables, migration scripts, configuration files, and AI model weights.
-* **3. Operational Procedures:** Deployment scripts, CI/CD pipelines, backup routines, and runbooks.
-* **4. Documentation:** Architecture Decision Records (ADRs), API specs (OpenAPI), user guides, and SRS.
+* **2. Data & Schemas:** Database tables, config files, AI weights (e.g. Knight Capital's config error).
+* **3. Operational Procedures:** Deployment scripts, backups, recovery runbooks (e.g. GitLab's backup failure).
+* **4. Documentation:** Architecture ADDs, API specs (OpenAPI), user guides (e.g. Therac-25 undocumented bugs).
+
+---
+
+## 1.3 The Software Iceberg Trap
+
+* Many software projects fail because developers and managers fall into the trap of only focusing on the visible "tip" of the software iceberg—the **Source Code**.
+* They view progress solely by lines of code written, ignoring database schemas, operational backup runbooks, and design API documentation.
+* Without all four pillars, a system is not "professional software"—it is merely a brittle program that cannot be deployed or maintained safely.
+
+---
+
+## Concept Check: The Software Definition (CCQ 2)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**According to the IEEE standard definition of software, which of the following is NOT considered a component of software?**
+
+* **A.** Executable computer programs and source code files.
+* **B.** System database schemas and configuration files.
+* **C.** CPU processor hardware and physical memory units.
+* **D.** Software installation and deployment procedures.
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
 
 ---
 
@@ -494,17 +522,17 @@ Feng Chia University
 
 ---
 
-## Concept Check: Software Quality (CCQ 2)
+## Concept Check: Software Quality Factors (CCQ 3)
 
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**A backend service uses Dependency Injection and structured JSON logging. When a production bug occurs, developers locate and fix the defect within 5 minutes without side effects. Which quality dimension is showcased?**
+**Which of the following matches a real-world software issue with its corresponding ISO 9126 quality characteristic?**
 
-* **A.** Portability
-* **B.** Maintainability (Analyzability & Changeability)
-* **C.** Usability
-* **D.** Functionality Compliance
+* **A.** A database query taking 15 seconds to return results $\rightarrow$ Maintainability (Testability)
+* **B.** A system crash occurring when a third-party API goes offline $\rightarrow$ Reliability (Fault Tolerance)
+* **C.** Developers struggling to write unit tests due to tight coupling $\rightarrow$ Portability (Adaptability)
+* **D.** The application failing to run on a new macOS version $\rightarrow$ Usability (Operability)
 
   </div>
   <div class="ccq-logo">
@@ -523,7 +551,7 @@ Feng Chia University
   * **System A:** Hospital ICU Automated Insulin Pump Controller
   * **System B:** Mobile Casual Viral Game
   * **Poll:** What are the top 2 non-negotiable ISO 9126 attributes for System A vs. System B?
-  * **Key Question:** Why is prioritizing *Time to Market* over *Fault Tolerance* fatal for System A, but acceptable for System B?
+  * **Key Question:** Why is prioritizing *Time to Market* over *Fault Tolerance* fatal for System A, but acceptable for System B? In your opinion, what constraints or factors impair software quality or make high quality hard to achieve?
 
   </div>
   <div class="discussion-logo">
@@ -536,8 +564,20 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/11_modern_sw_landscape.jpeg" alt="Modern Software Landscape" />
+  <img src="../../img/ch01/youbike_system.jpg" alt="YouBike Smart Bicycle Sharing System Diagram" />
 </div>
+
+---
+
+## 1.5 Heterogeneous Systems: The YouBike Example
+
+* A modern software system is rarely a single homogeneous program.
+* **YouBike** combines multiple application domains in a single system:
+  * **Embedded Firmware:** Bike IoT hub locks, docking stations (樁).
+  * **Mobile App:** Touch-screen UI, booking, unlocking, map search.
+  * **Web Application:** Official site, customer registration.
+  * **Enterprise Backend:** Cloud database schemas, ACID transactions, billing.
+* Successful software engineering requires coordinating these diverse domains.
 
 ---
 
@@ -616,16 +656,19 @@ Feng Chia University
 
 * **Problem:** Launch a HIPAA-compliant telemedicine app in 6 months on a tight $80k budget.
 * **The Engineering Balancing Solution:**
-  1. **Scope Prioritization:** Build an MVP for video consults and booking; postpone insurance billing to Phase 2.
-  2. **Cross-Platform Tooling:** Use **Flutter** / **React Native** to maintain a single codebase for iOS and Android (saves 40% effort).
-  3. **Managed Backend:** Use HIPAA-compliant cloud BaaS (Supabase/Firebase) instead of bare-metal servers.
-  4. **Automated CI/CD:** **GitHub Actions** runs unit tests on every PR, keeping QA overhead low for a 3-person team.
+  1. **Scope Prioritization:** Focus MVP strictly on video consults and booking; postpone insurance billing.
+  2. **Cross-Platform Tooling:** Use Flutter/React Native for a single codebase (saves 40% effort).
+  3. **Managed Backend:** Use HIPAA-compliant cloud BaaS instead of bare-metal servers.
+  4. **Automated CI/CD:** unit tests on PRs, keeping QA overhead low.
+* **Why Not "Perfect" Technical Solutions?**
+  * Custom native apps and custom microservices are technically superior, but rejected because they violate constraints ($80k budget, 6 months).
+  * **Satisficing:** Find the solution that meets all constraints through trade-offs.
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/se_process_models_4_activities.jpg" alt="Universal Core Activities Across Different Process Models" />
+  <img src="../../img/ch01/se_core_activities.jpg" alt="The Four Core Activities of the Software Engineering Process" />
 </div>
 
 ---
@@ -634,10 +677,30 @@ Feng Chia University
 
 | Activity | Key Artifacts | Risk If Neglected |
 |:---|:---|:---|
-| **1. Specification** (Requirements) | User Stories, SRS, Use Cases, Acceptance Criteria | Building the wrong product; 100x rework cost |
+| **1. Specification** (Requirements) | User Stories, SRS, Acceptance Criteria | Building the wrong product; 100x rework cost |
 | **2. Design & Implementation** | Architecture ADD, ERD, API Specs, Codebase | Spaghetti code, unscalable architecture, technical debt |
 | **3. Validation** (Testing / V&V) | Unit/Integration Tests, CI Reports, Bug Trackers | Critical production outages, data loss, security breaches |
 | **4. Evolution** (Maintenance) | Release Notes, DB Migrations, Post-Mortems | Software rot, security vulnerabilities, obsolescence |
+
+---
+
+## Concept Check: Core Activities (CCQ 4)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**Which of the following pairs correctly matches a specific software engineering action with its corresponding universal core activity?**
+
+* **A.** Conducting stakeholder interviews to draft user stories $\rightarrow$ Software Specification
+* **B.** Writing automated unit tests to mock database responses $\rightarrow$ Software Design & Implementation
+* **C.** Refactoring database schemas to improve query speed $\rightarrow$ Software Validation
+* **D.** Swapping a third-party payment API for a new gateway $\rightarrow$ Software Specification
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
 
 ---
 
@@ -657,6 +720,7 @@ Feng Chia University
   </div>
 </div>
 
+---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
@@ -679,7 +743,7 @@ Feng Chia University
 * **Myth 1: "We're behind schedule—let's add 5 developers to catch up."**
   * **Reality (Brooks's Law):** Adding manpower to a late project makes it later ($O(n^2)$ communication overhead).
 * **Myth 2: "Software is digital, so changing requirements late is cheap."**
-  * **Reality:** Late changes invalidate schemas and architectures, costing up to 100x more.
+  * **Reality:** Late changes invalidate database schemas and architectures, costing up to 100x more.
 * **Myth 3: "Outsource the coding and we don't need technical management."**
   * **Reality:** Outsourcing requires rigorous technical governance.
 
@@ -692,7 +756,7 @@ Feng Chia University
 
 ---
 
-## Concept Check: Brooks's Law (CCQ 3)
+## Concept Check: Brooks's Law (CCQ 5)
 
 <div class="ccq-columns">
   <div class="ccq-text">
@@ -712,22 +776,19 @@ Feng Chia University
 
 ---
 <!-- header: '1.7 Modern Toolchains & AI' -->
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/10_automating.jpeg" alt="Modern Toolchains and Automation" />
-</div>
-
----
 
 ## 1.7 The Modern Engineering Toolchain
 
-* **Version Control (Git):** Branching strategies, pull requests, collaborative code review.
+* **Version Control (Git):** Branching strategies, PR collaborative code review.
 * **Modern IDEs (VS Code, IntelliJ):** Real-time linting, static analysis, refactoring.
-* **CI/CD Pipelines (GitHub Actions, GitLab CI):** Automated building, testing, security scanning, and containerized deployment upon every commit.
-* **Automated Testing:** Unit (PyTest/JUnit), Integration, E2E (Playwright).
-* **Observability & APM:** Telemetry, structured logs, OpenTelemetry, Sentry.
-* **AI Coding Assistants:** Copilot, Cursor, Gemini AI for intelligent pair programming.
+* **CI/CD Pipelines (GitHub Actions, GitLab CI):** Automated compiling, unit testing, security scanning, and deployment upon every commit.
+* **Testing & QA Suites:** Unit (PyTest), Integration, E2E (Playwright).
+* **Observability & APM:** Telemetry, logs, OpenTelemetry, Sentry APM.
+* **Containerization:** Docker containers, Kubernetes cluster management.
+* **Project Management:** Sprint backlogs, bug tracking (Jira, Linear).
+* **Static Code Analysis:** linting, code smells, vulnerabilities (SonarQube).
+* **API Collaboration:** Design, mock, document, and test APIs (Postman).
+* **Infrastructure as Code (IaC):** Cloud provisioning configs (Terraform).
 
 ---
 
@@ -742,6 +803,13 @@ Feng Chia University
 | **Maintenance** | Explains legacy code, drafts docs | Silent regression bugs during refactoring |
 
 ---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/vibe_coding_comic.jpg" alt="The Vibe Coding Trap" />
+</div>
+
+---
 
 ## 1.7 Interactive Activity: The "Vibe Coding" Challenge
 
@@ -749,8 +817,7 @@ Feng Chia University
   <div class="discussion-text">
 
   **Classroom Poll & Discussion: AI in Practice**
-  * **Poll:** When using GitHub Copilot or ChatGPT, how often do you inspect and understand every line before committing?
-    *(Always / Usually / Rarely / Never)*
+  * **Poll:** When using AI coding assistants, how often do you inspect and understand every line before committing?
   * **Discussion:** Suppose an AI assistant writes a 200-line asynchronous database handler that passes 2 basic tests. Is it safe to deploy? What verification steps must a professional engineer execute?
 
   </div>
@@ -764,7 +831,7 @@ Feng Chia University
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/12_code_ethics.jpeg" alt="ACM/IEEE Code of Ethics" />
+  <img src="../../img/ch01/code_of_ethics_principles.jpg" alt="The Eight Principles of the ACM/IEEE Software Engineering Code of Ethics" />
 </div>
 
 ---
@@ -779,13 +846,6 @@ Feng Chia University
 6. **Profession:** Advance the integrity and reputation of software engineering.
 7. **Colleagues:** Be fair to, support, and mentor peers.
 8. **Self:** Participate in lifelong learning and ethical practice.
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/13_cases.jpeg" alt="When Engineering Fails" />
-</div>
 
 ---
 
@@ -821,7 +881,7 @@ Feng Chia University
 
 ---
 
-## Concept Check: Engineering Ethics (CCQ 4)
+## Concept Check: Engineering Ethics (CCQ 6)
 
 <div class="ccq-columns">
   <div class="ccq-text">
@@ -858,43 +918,18 @@ Feng Chia University
 </div>
 
 ---
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/14_midset.jpeg" alt="The Mindset of a Software Engineer" />
-</div>
-
----
-
-## 1.8 Mindset: Data, Developers, and Users
-
-<div class="split55">
-  <div class="left">
-
-  * **Developer & User Entanglements:**
-    * Software is not created in isolation—it directly impacts real human workflows, livelihoods, and safety.
-  * **Data is Gold:**
-    * Data integrity, privacy governance, and algorithmic fairness are core engineering responsibilities.
-
-  </div>
-  <div class="right">
-    <img src="../../img/ch01/data_is_gold.png" alt="Data is Gold" />
-  </div>
-</div>
-
----
 <!-- header: '1.9 FAQ & Recap' -->
 
 ## 1.9 Frequently Asked Questions (FAQ)
 
-* **Q: Computer Science vs. Software Engineering?**
-  * *CS:* Mathematical and theoretical foundations (algorithms, automata, complexity).
-  * *SE:* Practical engineering of reliable software under time, cost, and human constraints.
-* **Q: Where do software costs go?**
-  * Initial build: $\approx 60\%$ development, $\approx 40\%$ testing.
-  * Total lifecycle: Evolution/maintenance accounts for **$70\% - 80\%$** of total costs.
-* **Q: Is there one universal "best" language or methodology?**
-  * No. Tool and process selection depends on application domain, safety constraints, and business goals.
+* **Q1: Programming vs. Software Engineering?**
+  * *Answer:* Programming is writing code. Software engineering is programming integrated over time, managing team collaboration, constraints (budget/schedule), quality attributes, and long-term evolution.
+* **Q2: Why do correct programs with 100% test coverage fail?**
+  * *Answer:* Software requires Data, Operational Procedures, and Documentation. Deficiencies in these non-code pillars or in Specification lead to failure.
+* **Q3: Satisficing vs. Optimizing?**
+  * *Answer:* Real-world constraints (time, budget) require a "satisficing" solution (sufficient to meet constraints) rather than a technically "optimized" one.
+* **Q4: The risk of "Vibe Coding" with AI?**
+  * *Answer:* Blindly accepting AI code without review leads to bugs. Prevent with code reviews, specification-first testing, and treating AI output as drafts.
 
 ---
 

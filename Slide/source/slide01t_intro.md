@@ -7,7 +7,7 @@ backgroundColor: #f5f5f5
 color: #333
 style: |
   section {
-    font-family: 'Helvetica Neue', Arial, 'Noto Sans TC', sans-serif;
+    font-family: 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
     padding: 40px;
     font-size: 24px;
     line-height: 1.6;
@@ -271,36 +271,37 @@ style: |
   section.lead::after {
     display: none !important;
   }
-header: '軟體工程 | 第 1 章：導論'
-footer: '第 1 章 · 軟體工程導論'
+header: '軟體工程 | Ch 01: 導論'
+footer: 'Ch 01 · 軟體工程導論'
 ---
 
-# 軟體工程導論
+# 軟體工程
 
-### 第一講：軟體工程導論與核心概念
+### 第一課：軟體工程導論
 
-**授課教師：薛念林教授 (with Gemini AI)**  
-逢甲大學 資訊工程學系
+**授課教授：薛念林 教授 (與 Gemini AI 協作)**  
+資訊工程學系  
+逢甲大學
 
 ---
 
-## 本章學習導覽與核心議題
+## 第一章：課程大綱與核心概念
 
 * **1.1 技術演進脈絡：** 從機械化到普及化 AI
-* **1.2 軟體工程起源與軟體危機：** 1968 NATO 會議與歷史重大失敗案例
-* **1.3 軟體本質剖析：** 超越原始碼（程式、數據、SOP、文檔）
+* **1.2 軟體工程起源與「軟體危機」：** 1968 年 NATO 會議與重大歷史災難
+* **1.3 軟體本質剖析：** 超越原始碼的四大支柱（程式、資料、程序、文檔）
 * **1.4 ISO 9126 品質模型：** 6 大特徵與關鍵子屬性實務案例
-* **1.5 現代軟體多元樣貌：** Web、Mobile、ERP、嵌入式與 AI 平台
-* **1.6 何謂軟體工程？：** 定義、工程流程 (SE Process)、約束與資源、4 大核心活動、工程要素與迷思
-* **1.7 現代工具鏈與 AI 雙面刃：** CI/CD 流程與 AI 生命週期效益／風險矩陣
-* **1.8 專業倫理與黑暗模式：** ACM/IEEE 守則與 UI/UX 黑暗模式黑白漫畫
-* **1.9 常見問答與觀念總結**
+* **1.5 現代軟體多元樣貌：** Web、Mobile、ERP、嵌入式 IoT、AI 平台
+* **1.6 何謂軟體工程？：** 定義、流程、約束權衡天平、四大核心活動與迷思
+* **1.7 現代工具鏈與 AI 雙面刃：** CI/CD 自動化與 AI 效益/風險矩陣
+* **1.8 專業倫理與黑暗模式：** ACM/IEEE 倫理守則與 UI 欺騙模式
+* **1.9 FAQ 與觀念檢測**
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/01_code2reality.jpeg" alt="從代碼到虛實整合" />
+  <img src="../../img/ch01/01_code2reality.jpeg" alt="From Code to Cyber-Physical Reality" />
 </div>
 
 ---
@@ -308,36 +309,36 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/02_evolution.jpeg" alt="四次工業革命演進" />
+  <img src="../../img/ch01/02_evolution.jpeg" alt="Industrial Revolutions Evolution" />
 </div>
 
 ---
 
 ## 1.1 四大工業革命時代
 
-* **工業 1.0 —— 機械化時代（18 世紀末至 19 世紀中葉）：**
-  * 蒸汽機與水力動力取代人體肌肉，工廠制度誕生。
-  * *軟體角色：* 不存在，純粹物理機械範疇。
-* **工業 2.0 —— 大規模量產時代（19 世紀末至 20 世紀初）：**
-  * 電力、流水線裝配作業、標準化商品大規模製造。
-  * *軟體角色：* 不存在，自動化純由硬體電路硬焊決定。
-* **工業 3.0 —— 數位革命與軟體萌芽（20 世紀中葉至末期）：**
-  * 半導體、微處理器、PLC 與個人電腦普及。
-  * *軟體角色：* **正式獨立為專業學科**，用於控制硬體與處理數據。
-* **工業 4.0 —— 互聯、雲端與 AI 時代（21 世紀至今）：**
-  * 虛實整合系統 (CPS)、物聯網、雲端運算與生成式 AI。
-  * *軟體角色：* **成為現代文明運轉的基礎中樞神經**。
+* **工業 1.0 — 機械化時代（18 世紀末至 19 世紀中葉）：**
+  * 蒸汽與水力動力取代人體肌肉；工廠制度應運而生。
+  * *軟體角色：* 無。純物理機械範疇。
+* **工業 2.0 — 大規模量產時代（19 世紀末至 20 世紀初）：**
+  * 電力、流水線裝配作業，推動標準化大規模生產。
+  * *軟體角色：* 無。控制邏輯由物理電路硬焊決定。
+* **工業 3.0 — 數位革命時代（20 世紀中葉至末期）：**
+  * 半導體、微處理器、PLC 與 PC 普及。
+  * *軟體角色：* **獨立成為一門專業領域**，用於控制硬體與處理資料。
+* **工業 4.0 — 互聯、雲端與 AI 時代（21 世紀至今）：**
+  * 虛實整合系統 (CPS)、物聯網 (IoT)、雲端與自適應 AI。
+  * *軟體角色：* **支撐現代社會運轉的中樞神經與核心基礎建設**。
 
 ---
 
-## 1.1 課堂互動活動：隨堂投票與討論
+## 1.1 隨堂討論：課堂互動投票與討論
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  **課堂投票與分組討論：**
-  * **投票：** 檢視你日常使用的數位服務與裝置，有多少比例屬於工業 3.0 確定性邏輯，又有多少屬於工業 4.0 自適應 AI 聯網系統？
-  * **分組討論：** 請列舉一項你認為急需進行「工業 4.0 轉型」的傳統流程（如校園停車、醫院急診分流）。在軟體轉型過程中會面臨哪些工程挑戰？
+  **隨堂投票與小組討論：**
+  * **投票：** 檢視你每天使用的各項數位服務與裝置，你認為其中有多少比例屬於工業 3.0 確定性邏輯，又有多少比例屬於工業 4.0 的自適應 AI 聯網軟體？
+  * **雙人討論：** 請列舉一個急需進行「工業 4.0 軟體轉型」的傳統流程（如校園停車、急診分流、公車排班）。在轉型過程中會面臨哪些獨特的軟體工程挑戰？
 
   </div>
   <div class="discussion-logo">
@@ -350,7 +351,7 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/03_crisis.jpeg" alt="軟體危機" />
+  <img src="../../img/ch01/03_crisis.jpeg" alt="The Software Crisis" />
 </div>
 
 ---
@@ -360,16 +361,16 @@ footer: '第 1 章 · 軟體工程導論'
 <div class="split55">
   <div class="left">
 
-  * 隨著硬體成本驟降，軟體需求與規模呈爆炸性增長。
-  * **危機典型徵兆：**
-    * 成本嚴重超支（經常為預算的 3～4 倍）。
-    * 交付嚴重延宕，大量專案中途被迫放棄。
-    * 缺陷頻傳、系統脆弱且完全無法維護。
-  * **核心根源：** 個人隨意編程的手工作法，完全無法應對跨團隊的大型複雜系統。
+  * 隨著硬體成本急劇下降，軟體需求與複雜度呈爆炸性增長。
+  * **軟體危機的病徵：**
+    * 專案時程嚴重延宕，甚至完成前即遭廢棄。
+    * 預算超支嚴重（常達最初預算的 3~4 倍）。
+    * 系統品質低劣、頻繁崩潰且極難維護。
+  * **根本根源：** 將軟體開發視為孤立的手工藝做法，無法因應大型複雜系統。
 
   </div>
   <div class="right">
-    <img src="../../img/ch01/nato_conference.png" alt="1968 NATO 會議" />
+    <img src="../../img/ch01/nato_conference.png" alt="NATO Conference 1968" />
   </div>
 </div>
 
@@ -377,46 +378,66 @@ footer: '第 1 章 · 軟體工程導論'
 
 ## 1.2 1968 年 NATO Garmisch 會議
 
-* **1968 年 10 月於德國加米施 (Garmisch)：**
-  * 50 位頂尖電腦科學家與業界主管齊聚一堂。
-  * 正式確立並採用 **「軟體工程 (Software Engineering)」** 一詞。
-* **學科使命：**
-  * 推動軟體開發從個人手工藝，轉型為**具備科學嚴謹度的工程學科**。
-  * 確立結構化方法論、形式化規格、成本估算、測試驗證與專案管理規範。
+* **1968 年 10 月於德國加米施 (Garmisch) 召開：**
+  * 50 位頂尖電腦科學家、業界主管與學者匯聚。
+  * 正式確立了 **「軟體工程 (Software Engineering)」** 一詞。
+* **歷史使命：**
+  * 引導軟體開發從隨意無序的手工編程，轉型為**具備嚴謹紀律的工程學科**。
+  * 引進結構化方法論、形式化規格、成本估算、嚴格驗證與專案管理。
 
 ---
 
-## 1.2 缺乏工程紀律的重大歷史代價
+## 1.2 軟體工程失敗的真實代價
 
 <div class="split55">
   <div class="left">
 
   * **名古屋空難 (1994)：**
-    * 自動駕駛與機師手動操作產生人機介面 (HMI) 邏輯衝突，奪走 264 條生命。
+    * 飛機自動駕駛重飛模式與飛行員手動操作產生軟體邏輯衝突，導致水平安定面被 trimmed 至極限，失速墜毀釀 264 死。
   * **火星氣候探測器 (1999)：**
-    * 價值 3.27 億美元的探測器因英制與公制力學單位未校驗而墜毀。
-  * **阿利安 5 號火箭 (1996)：**
-    * 64 位元浮點數轉 16 位元整數未做溢位例外處理，升空 37 秒引爆損失 3.7 億美元。
+    * 地面軟體輸出英制單位 $lbf\cdot s$，太空船導航電腦預期公制單位 $N\cdot s$，因介面單位未驗證導致 3.27 億美元探測器毀滅。
+  * **阿利安 5 號火箭 501 航班 (1996)：**
+    * 64 位元浮點數轉 16 位元有號整數發生溢位例外，缺乏處理程序導致電腦雙雙當機，發射 37 秒後自行引爆，損失 3.7 億美元。
 
   </div>
   <div class="right">
-    <img src="../../img/ch01/mars_climate_orbiter_unit_mismatch.jpg" alt="火星探測器失敗案例" />
+    <img src="../../img/ch01/mars_climate_orbiter_unit_mismatch.jpg" alt="Mars Climate Orbiter Failure" />
   </div>
 </div>
 
 ---
 
-## 觀念檢驗題：軟體危機的本質 (CCQ 1)
+## 觀念檢驗：軟體工程會議的召開 (CCQ 1)
 
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**為何 1968 年的軟體危機無法僅透過採購運算速度更快的電腦或擴充記憶體來解決？**
+**第一次軟體工程會議在何時召開？**
 
-* **A.** 1960 年代後期硬體製造技術停滯不前。
-* **B.** 危機本質上是人類心智面對複雜度、溝通成本與缺乏架構紀律的認知危機，更快的硬體只會放大問題規模。
-* **C.** 當時的程式語言缺乏數學運算能力。
-* **D.** 當時的硬體無法連接雲端架構。
+* **A.** 1928
+* **B.** 1968
+* **C.** 1948
+* **D.** 1988
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
+
+---
+
+## 觀念檢驗：軟體危機的本質 (CCQ 2)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**為何 1968 年的軟體危機無法僅透過採購運算速度更快的超級電腦或擴充硬體記憶體來解決？**
+
+* **A.** 危機是由 1960 年代後期的硬體製造延遲與矽晶片短缺所導致的。
+* **B.** 危機是管理系統複雜度的認知與組織失敗，更快的硬體只會放大這個問題。
+* **C.** 危機源於早期的程式語言缺乏基本的數學與計算功能。
+* **D.** 危機發生是因為早期大型主機與現代的分散式雲端架構不相容。
 
   </div>
   <div class="ccq-logo">
@@ -429,32 +450,59 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/04_not_only_code.jpeg" alt="軟體冰山解剖圖" />
+  <img src="../../img/ch01/04_not_only_code.jpeg" alt="The Anatomy Beyond Source Code" />
 </div>
 
 ---
 
-## 1.3 IEEE 對軟體的標準定義
+## 1.3 軟體冰山：超越原始碼的四大支柱
 
-> **軟體 (IEEE 標準)：** 與計算機系統運作相關的電腦程式、程序、以及可能伴隨的相關文件與資料。
+> **軟體 (IEEE 標準定義)：** 與計算機系統運作相關的電腦程式、程序、以及可能伴隨的相關文件與資料。
 
-* **1. Programs（程式碼與二進制檔）：** Python, Java, C++, TypeScript 撰寫的執行邏輯。
-* **2. Data & Schemas（資料與綱要）：** 資料庫表格、設定檔、種子資料集與 AI 模型權重檔。
-* **3. Operational Procedures（維運程序）：** 部署腳本、備份例程、災難復原演練與 CI/CD 流程。
-* **4. Documentation（架構文檔）：** 架構決策記錄 (ADR)、OpenAPI 介面規格書、SRS 與使用手冊。
+* **1. 程式 (Programs)：** 可執行的機器碼與原始程式碼檔案（邏輯核心）。
+* **2. 資料 (Data & Schemas)：** 資料庫綱要、設定檔、AI 模型權重（如 Knight Capital 設定檔出錯釀 4.4 億美元損失）。
+* **3. 程序 (Procedures)：** 部署腳本、CI/CD 管線、災難備援 SOP（如 GitLab 刪庫且備份程序失效事件）。
+* **4. 文檔 (Documentation)：** 架構設計 ADD、API OpenAPI 規格、使用者手冊（如 Therac-25 程式碼重用且無文件說明導致過載致死）。
 
 ---
 
-## 1.3 課堂互動活動：雙人分組討論
+## 1.3 軟體冰山陷阱
+
+* 許多軟體專案之所以失敗，是因為開發人員與專案經理掉入了只關注軟體冰山頂端——**程式原始碼**的陷阱中。
+* 他們僅以寫了多少行程式碼或交付了多少功能來衡量進度，卻忽略了資料庫遷移（資料）、CI/CD 部署管線與復原守則（程序）、以及系統設計與 API 規格（文檔）。
+* 缺乏這四大支柱中的任何一項，系統就稱不上是「專業軟體」，而只是一個無法順暢部署、難以維護且運作危險的脆弱程式。
+
+---
+
+## 觀念檢驗：IEEE 軟體標準定義 (CCQ 3)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**根據 IEEE 標準對軟體的正式定義，以下哪一項不被視為軟體的組成部分？**
+
+* **A.** 可執行的電腦程式與原始程式碼檔案。
+* **B.** 系統資料庫綱要與組態設定檔案。
+* **C.** CPU 處理器硬體與物理記憶體單元。
+* **D.** 軟體的安裝說明與系統部署程序。
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
+
+---
+
+## 1.3 雙人分組活動：實務中的軟體冰山
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  **雙人討論：實務中的軟體冰山**
-  * 挑選一項知名數位服務：**Google Maps**、**Uber** 或 **Spotify**。
-  * 兩人合作為四大支柱各列出一項具體產出物：
-    1. *程式 (Program)* | 2. *資料 (Data)* | 3. *程序 (Procedure)* | 4. *文檔 (Documentation)*
-  * **反思：** 如果團隊遺失了所有部署程序與資料庫綱要，能否單憑原始程式碼在產線上順利重建業務？
+  **雙人分組互動活動：**
+  * 挑選一項熱門數位服務（如 **Google Maps**、**Uber** 或 **Spotify**）。
+  * 兩人合作針對四大支柱（程式、資料、程序、文檔）各列出一項具體產出物。
+  * **深入探討：** 如果一個工程團隊遺失了所有部署腳本與資料庫綱要，他們能否單憑原始程式碼在產線上順利重建並維運業務？為什麼？
 
   </div>
   <div class="discussion-logo">
@@ -467,43 +515,43 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/iso_9126_subattributes.jpg" alt="ISO 9126 品質模型子屬性" />
+  <img src="../../img/ch01/iso_9126_subattributes.jpg" alt="ISO 9126 Quality Model Sub-Attributes" />
 </div>
 
 ---
 
-## 1.4 ISO 9126 六大特徵與關鍵子屬性
+## 1.4 ISO 9126 六大品質特徵
 
-* **Functionality（功能性）：** 適用性 (Suitability)、準確性 (Accuracy)、互操作性 (Interoperability)、資安性 (Security)。
-* **Reliability（可靠性）：** 成熟度 (Maturity)、容錯性 (Fault Tolerance)、可復原性 (Recoverability)。
-* **Usability（易用性）：** 易理解性 (Understandability)、易學習性 (Learnability)、易操作性 (Operability)、吸引力。
-* **Efficiency（效率性）：** 時間行為（延遲 / 吞吐量）、資源利用率 (CPU / 記憶體)。
-* **Maintainability（可維護性）：** 可分析性 (Analyzability)、可變更性 (Changeability)、穩定性、可測試性 (Testability)。
-* **Portability（可移植性）：** 適應性 (Adaptability)、可安裝性 (Installability)、可替換性。
-
----
-
-## 1.4 ISO 9126 子屬性實務案例
-
-* **容錯性 (Fault Tolerance)：** 主金流閘道逾時 $\rightarrow$ 系統自動重試備援金流，結帳不當機。
-* **可復原性 (Recoverability)：** 資料庫當機 $\rightarrow$ 30 秒內透過 Write-Ahead Log 復原交易一致性。
-* **時間行為 (Time Behavior)：** 搜尋 API 在 99% 的請求中延遲小於 80ms (p99 latency $<80$ms)。
-* **可測試性 (Testability)：** 採用依賴注入 (DI)，讓單元測試能輕鬆 Mock 外部 API。
-* **可安裝性 (Installability)：** 透過 `docker compose up` 在 60 秒內啟動完整本機環境。
+* **功能性 (Functionality)：** 適用性、準確性、互操作性、安全保密性。
+* **可靠性 (Reliability)：** 成熟性、容錯性、易回復性。
+* **易用性 (Usability)：** 易理解性、易學習性、易操作性、美觀性。
+* **效率性 (Efficiency)：** 時間特性（回應時間、吞吐量）、資源利用性。
+* **可維護性 (Maintainability)：** 可分析性、可修改性、穩定性、可測試性。
+* **可攜性 (Portability)：** 可適應性、易安裝性、共存性、易替換性。
 
 ---
 
-## 觀念檢驗題：軟體品質維度 (CCQ 2)
+## 1.4 品質子屬性實務案例
+
+* **容錯性 (Reliability)：** 主要支付閘道故障時，系統自動捕捉異常並改走備用閘道重試，使用者無感。
+* **易回復性 (Reliability)：** 資料庫系統意外斷電重啟後，在 30 秒內透過預寫式日誌 (WAL) 自動恢復一致性。
+* **時間特性 (Efficiency)：** 搜尋 API 的回應延遲，在 99% 的情況下皆小於 80 毫秒（p99 延遲 < 80ms）。
+* **可測試性 (Maintainability)：** 程式碼採用相依性注入設計，讓單元測試時能輕鬆 Mock 資料庫與外部 API。
+* **易安裝性 (Portability)：** 本地開發環境能透過 `docker compose up` 在 60 秒內自動建構完成。
+
+---
+
+## 觀念檢驗：實務問題與品質因素對應 (CCQ 5)
 
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**一個後端微服務採用依賴注入 (DI) 架構並建立結構化 JSON 日誌。當產線發生異常時，工程師在 5 分鐘內精準鎖定錯誤並安全修復。此案例展現了哪一項品質維度？**
+**以下哪一個選項正確將真實世界的軟體問題與其對應的 ISO 9126 品質特徵進行了配對？**
 
-* **A.** 可移植性 (Portability)
-* **B.** 可維護性（可分析性 Analyzability 與可變更性 Changeability）
-* **C.** 易用性 (Usability)
-* **D.** 功能合規性 (Functionality Compliance)
+* **A.** 資料庫查詢需要 15 秒才能回傳結果 $\rightarrow$ Maintainability (Testability)
+* **B.** 當第三方 API 斷線時，系統發生崩潰 $\rightarrow$ Reliability (Fault Tolerance)
+* **C.** 由於程式碼緊密耦合，開發人員難以撰寫單元測試 $\rightarrow$ Portability (Adaptability)
+* **D.** 應用程式無法在新版本的 macOS 上運行 $\rightarrow$ Usability (Operability)
 
   </div>
   <div class="ccq-logo">
@@ -513,16 +561,16 @@ footer: '第 1 章 · 軟體工程導論'
 
 ---
 
-## 1.4 課堂互動活動：品質屬性權衡投票
+## 1.4 課堂互動活動：品質權衡隨堂投票
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  **品質屬性權衡投票與討論：**
-  * **系統 A：** 加護病房 (ICU) 自動胰島素注射幫浦控制系統
-  * **系統 B：** 行動裝置熱門休閒手機小遊戲
-  * **投票：** 請為系統 A 與系統 B 分別選出最不可妥協的「前兩大」ISO 9126 品質屬性。
-  * **討論：** 為何在醫療設備中犧牲「容錯性」以換取「上市速度」是致命的，而休閒遊戲卻可適度接受非致命 Bug 以換取快速迭代？
+  **品質權衡隨堂投票與小組討論：**
+  * **系統 A：** 醫療型自動胰島素注射控制器
+  * **系統 B：** 爆紅的手機休閒小遊戲
+  * **投票：** 針對這兩類系統，挑選出最關鍵、不容妥協的 2 項 ISO 9126 品質特徵。
+  * **討論：** 為什麼在胰島素注射器中犧牲容錯性是致命的；而在休閒小遊戲中，卻能為搶快上線容忍非關鍵臭蟲？有哪些約束會損害品質？
 
   </div>
   <div class="discussion-logo">
@@ -535,34 +583,48 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/11_modern_sw_landscape.jpeg" alt="現代軟體多元樣貌" />
+  <img src="../../img/ch01/youbike_system.jpg" alt="YouBike Smart Bicycle Sharing System Diagram" />
 </div>
 
 ---
 
-## 1.5 主要軟體應用領域
+## 1.5 現代異質系統：以 YouBike 為例
 
-* **Web 與 SaaS 雲端平台：** 彈性架構、高可用性、微服務、零停機部署（Slack、Netflix）。
-* **行動應用程式 (Mobile Apps)：** 電池受限、觸控互動、離線同步（iOS/Android 原生與跨平台）。
-* **企業級核心系統 (ERP / CRM)：** 嚴格 ACID 資料庫交易、工作流管理（SAP、Salesforce）。
-* **嵌入式韌體與物聯網 (IoT)：** 嚴苛即時性、極限記憶體、零容錯航電與車載韌體。
-* **AI 與機器學習平台：** 資料管線、向量資料庫、GPU 運算加速與大語言模型推理。
-* **科學運算與 CAD：** 高精度浮點數運算、物理模擬與硬體加速。
+* 現代的軟體系統很少是單一形態的程式，而是整合多領域的異質系統。
+* **YouBike 智慧單車系統** 融合了多種軟體類別：
+  * **嵌入式韌體：** 自行車上的 IoT 車機、智慧鎖控制、智慧車柱（樁）。
+  * **行動 App：** 行動地圖查詢、車輛預約、掃碼扣款解鎖。
+  * **網頁應用程式：** 官方網站、會員帳戶管理、即時站點狀態查詢。
+  * **企業後端系統：** 資料庫交易處理、悠遊卡/信用卡支付後端、調度管理。
+* 軟體工程的核心挑戰在於協調這些領域的軟體，平衡不同的約束與部署週期。
 
 ---
 
-## 1.5 課堂互動活動：系統分類與混合架構
+## 1.5 關鍵應用領域
+
+* **Web & SaaS 平台：** 強調高可用性、彈性伸縮、微服務與不停機部署（如 Netflix）。
+* **行動 App：** 考量電力消耗、觸控介面與不穩定行動網路（React Native/Flutter）。
+* **企業系統 (ERP/CRM)：** 重視 ACID 交易、複雜商務邏輯與資料治理（SAP）。
+* **嵌入式韌體與 IoT：** 即時性系統，記憶體資源受限，且不容許系統當機（醫材/車控）。
+* **AI & 機器學習：** 機器學習管線 (MLOps)、GPU 加速計算、向量資料庫與 LLM 推理。
+* **科學與 CAD 應用：** 高運算效能模擬套件，極度要求浮點數運算精確度。
+
+---
+
+## 1.5 課堂互動活動：系統分類
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  **系統分類與混合架構探討：**
-  * 剖析現代 **Tesla 自駕智慧電動車** 涵蓋了哪些軟體範疇？
-    * 煞車與動力控制的即時嵌入式韌體。
-    * 中控觸控導航與娛樂系統 UI。
-    * 車隊遙測與 OTA 遠端更新的雲端原生微服務。
-    * 邊緣端 FSD 全自動輔助駕駛 AI 模型。
-  * **討論：** 為何各子系統的發布與驗證週期具有巨大差異？
+  **現代智慧系統的多元領域分類：**
+  * 思考一台現代的 **特斯拉智慧聯網電動車**。
+  * 它涵蓋了本節所提到的哪些軟體領域？
+    * 煞車與動力控制（即時嵌入式軟體）
+    * 導航與車控螢幕（平板 UI 系統）
+    * 車主手機搖控（行動 App）
+    * 遙測數據傳輸與 OTA 系統（雲端 SaaS 與後端）
+    * 自動輔助駕駛（邊緣 AI 模型）
+  * **討論：** 為何這些子系統的更新發布週期會有如此巨大的差異？
 
   </div>
   <div class="discussion-logo">
@@ -575,79 +637,102 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/coding_vs_se_loc_bw.jpg" alt="寫程式 vs 軟體工程" />
+  <img src="../../img/ch01/coding_vs_se_loc_bw.jpg" alt="Coding vs Software Engineering" />
 </div>
 
 ---
 
-## 1.6 何謂軟體工程？
+## 1.6 軟體工程的核心定義
 
-> **軟體工程 (Software Engineering)：** 是一門工程學科，關注軟體生產的所有層面——從前期的系統需求規格定義，到系統上線後的維護與長期演進。
+> **軟體工程 (Software Engineering)**：一門關於軟體生產所有階段的工程學科——從初始的需求規格書制定，直到系統上線後的維護與演進。
 
-* **1. 工程學科（在約束與資源下工作）：** 工程運用科學嚴謹度與啟發準則，在**嚴苛的約束下善用有限資源**解決實際問題。
-* **2. 軟體生產的所有層面（軟體工程流程 SE Process）：** 由一套系統化的流程組織活動、方法、角色與產出物，確保系統全生命週期的可控性。
+* **1. 工程學科 (Engineering Discipline)：** 工程並非不計代價追求完美，而是要在**有限資源與嚴格約束條件下妥協出合適解決方案**的科學。
+* **2. 軟體流程所有階段 (All Aspects of Production)：** 軟體開發是由一整套系統化的**軟體工程流程 (SE Process)** 所引導，明確規範各活動、角色分工、產出物件與品質檢查點。
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/08_engineering_balance.jpeg" alt="軟體工程權衡天平" />
+  <img src="../../img/ch01/08_engineering_balance.jpeg" alt="The Engineering Balancing Act" />
 </div>
 
 ---
 
-## 1.6 工程方程式：約束與資源的平衡
+## 1.6 約束管理與資源優化
 
-* **Constraints（現實約束）：**
-  * **時間 (Time)：** 專案死線、市場搶先發布窗口。
-  * **預算 (Budget)：** 薪資上限、雲端費用配額、第三方軟體授權費。
-  * **技術與平台 (Tech)：** 遺留資料庫相容性、手機 OS 版本限制。
-  * **法規 (Regulations)：** GDPR 個資隱私法、HIPAA 醫療法規、PCI-DSS。
-* **Resources（可用資源）：**
-  * **人力 (Human)：** 開發者技術專長、UI/UX 設計師、QA 測試員。
-  * **工具與基建 (Tools)：** 雲端運算配額、CI/CD 自動化、開源函式庫。
-  * **領域知識 (Knowledge)：** 業務邏輯理解度與設計模式掌握度。
+* **約束條件 (Constraints - 限制)：**
+  * **時間：** 專案交付死線、市場搶灘時間窗。
+  * **預算：** 開發人員薪資、雲端託管費、第三方套件授權費。
+  * **技術限制：** 舊系統相容性、硬體 CPU/記憶體限制。
+  * **法規標準：** GDPR 隱私法、HIPAA 醫療法規、PCI-DSS 金融支付標準。
+* **資源資產 (Resources)：**
+  * **人力資源：** 開發人員技能、UI/UX 設計師、QA 團隊。
+  * **技術資產：** 雲端設施 (AWS)、CI/CD 自動化、成熟開源套件。
+  * **領域知識：** 對業務流程的理解與專案開發經驗。
 
 ---
 
-## 1.6 實務案例：醫療新創團隊 MVP 突圍戰
+## 1.6 案例研究：醫療新創公司 MVP 上線
 
-* **情境：** 在 6 個月內以 8 萬美元有限預算推出符合 HIPAA 法規的遠距醫療問診 App。
-* **工程權衡解決方案：**
-  1. **範疇精簡：** 先打造具備視訊問診與處方預約的 MVP，推遲複雜保險理賠。
-  2. **跨平台開發：** 使用 **Flutter** 建立單一代碼庫發布雙平台，節省 40% 人力。
-  3. **託管雲端服務：** 採用符合 HIPAA 的託管 BaaS (Supabase/Firebase) 替代自建伺服器。
-  4. **全自動化 CI/CD：** **GitHub Actions** 自動執行 Lint 與測試，維持 3 人小團隊的高代碼品質。
+* **挑戰：** 6 個月內推出一款病患醫生視訊 App，且預算極為吃緊，僅有 8 萬美元。
+* **工程權衡方案：**
+  1. **範疇優先級：** MVP 僅專注核心視訊與掛號；將保險給付延至 Phase 2。
+  2. **跨平台開發：** 使用 Flutter/React Native 單一程式碼庫，節省 40% 前端人力。
+  3. **託管式雲端：** 採用 HIPAA 合規的安全託管服務 (Firebase)，避免自建伺服器。
+  4. **自動化 CI/CD：** GitHub Actions 自動測試，降低 QA 測試人力。
+* **為什麼不選擇技術上「完美」的方案？**
+  * 自建分散式微服務架構在技術上最完美，但因違反 8 萬美元與 6 個月的死線而被否決。
+  * **滿意解 (Satisficing)**：在所有約束內找出「足夠好」的妥協方案，這才是正確的工程決策。
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/se_process_models_4_activities.jpg" alt="不同流程模型中的四大核心活動" />
+  <img src="../../img/ch01/se_core_activities.jpg" alt="The Four Core Activities of the Software Engineering Process" />
 </div>
 
 ---
 
 ## 1.6 軟體工程流程四大核心活動
 
-| 核心活動 | 關鍵產出物 (Artifacts) | 若忽視此活動的嚴重代價 |
+| 活動 | 關鍵產出物 | 忽略後的嚴重後果 |
 |:---|:---|:---|
-| **1. 需求規格** (Specification) | 使用者故事、SRS 規格書、驗收條件 | 打造出完全錯誤的產品；重工成本高達 100 倍 |
-| **2. 設計與實作** (Design & Impl) | 系統架構 ADD、資料庫 ERD、原始碼 | 義大利麵混亂代碼、無法擴展、累積巨額技術債 |
-| **3. 驗證與確認** (Validation V&V) | 自動化測試套件、CI 報告、缺陷清單 | 產線重大當機事故、資料遺失、資安漏洞爆發 |
-| **4. 系統演進** (Evolution) | 發布說明、資料庫 Migration 腳本 | 軟體腐化、相依套件過期漏洞、系統被迫報廢 |
+| **1. Specification** (需求規格) | 需求規格書 (SRS), 使用者故事 | 建構出完全錯誤的產品；面臨後期 100 倍修改成本 |
+| **2. Design & Implementation** | 架構設計 ADD, 資料庫 ERD, API 規格 | 系統緊密耦合，產生大量技術債，架構崩塌 |
+| **3. Validation** (驗證與確認) | 自動化測試套件, CI 測試報告 | 上線後頻繁崩潰、資料遺失或遭遇嚴重資安破壞 |
+| **4. Evolution** (維護與演進) | 版本發布日誌, 資料庫遷移腳本 | 系統面臨軟體老化，技術債堆疊，最終報廢 |
 
 ---
 
-## 1.6 課堂互動活動：情境分析
+## 觀念檢驗：工程動作與核心活動配對 (CCQ 6)
+
+<div class="ccq-columns">
+  <div class="ccq-text">
+
+**以下哪一個配對正確將特定的軟體工程動作與其對應的通用核心活動進行了對應？**
+
+* **A.** 進行利害關係人訪談以撰寫使用者故事 $\rightarrow$ Software Specification
+* **B.** 撰寫自動化單元測試以模擬資料庫回應 $\rightarrow$ Software Design & Implementation
+* **C.** 重構資料庫綱要以改善查詢速度 $\rightarrow$ Software Validation
+* **D.** 將第三方的付款 API 替換為新的金流閘道 $\rightarrow$ Software Specification
+
+  </div>
+  <div class="ccq-logo">
+    <img src="../../img/ch01/question_icon.svg" alt="Question" />
+  </div>
+</div>
+
+---
+
+## 1.6 課堂互動活動：案例情境分析
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  **情境分析：哪一項核心活動失敗了？**
-  * *情境：* 一個技術團隊耗時 6 個月，為社區生鮮外送 App 打造了極致流暢、零 Bug 的加密貨幣結帳功能。該代碼通過了 100% 的單元測試且產線上零當機。然而上線後使用率為 0%，因為社區長輩只習慣使用「貨到付款」。
-  * **問題：** 四項核心活動中，哪一項發生了根本性失敗？
-  * **核心啟示：** 為何 100% 的代碼測試覆蓋率完全無法挽救需求規格 (Specification) 的失敗？
+  **小組案例情境分析討論：**
+  * *情境：* 某團隊花了 6 個月，為生鮮 App 開發了效能卓越、安全無虞的加密貨幣付款閘道。系統具備 100% 測試覆蓋率。然而上線後發現，社區長輩使用率為 0%，因為他們習慣只用現金與一般信用卡。
+  * **問題：** 這四大核心活動中，哪一個活動失效了？
+  * **關鍵教訓：** 為什麼 100% 的測試覆蓋率無法挽救本案例的失敗？（驗證 Verification vs. 確認 Validation）
 
   </div>
   <div class="discussion-logo">
@@ -655,52 +740,52 @@ footer: '第 1 章 · 軟體工程導論'
   </div>
 </div>
 
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/se_elements_infographic.jpg" alt="軟體工程所涵蓋的核心要素" />
-</div>
-
----
-
-## 1.6 軟體工程所涵蓋的各項要素
-
-* **工程實務紀律 (Disciplines)：** 先規格後設計、先設計後編碼、基於介面開發、變更管理、ADR 架構決策記錄、代碼審查...
-* **核心設計原則 (Principles)：** 抽象化、模組化、預期變更、開閉原則 (OCP)、KISS、最小驚訝原則 (POLA)...
-* **流程方法論 (Methods)：** 瀑布模型、敏捷 / Scrum、螺旋模型、測試驅動開發 (TDD)、CI/CD & DevOps...
-* **實務啟發準則 (Heuristics)：** 尼爾森 10 大易用性準則、SOLID 物件導向原則、Clean Code、DRY、YAGNI...
-
----
-
-## 1.6 破除常見的軟體開發迷思
-
-* **迷思 1：** *「專案進度落後了，只要多加幾位工程師就能趕上。」*
-  * **現實（布魯克斯法則）：** 為落後的專案增加人手只會讓進度更落後（溝通通道呈 $O(n^2)$ 增長）。
-* **迷思 2：** *「軟體具有數位彈性，後期變更需求成本很低。」*
-  * **現實：** 後期修改核心架構的成本可高達初期的 100 倍。
-* **迷思 3：** *「把專案外包後，我們就不需要技術管理了。」*
-  * **現實：** 外包若缺乏架構治理，交付的系統往往充斥技術債。
-
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/late_change_cost_comic.jpg" alt="後期需求變更成本迷思漫畫" />
+  <img src="../../img/ch01/se_elements_infographic.jpg" alt="Core Elements of Software Engineering" />
 </div>
 
 ---
 
-## 觀念檢驗題：布魯克斯法則 (CCQ 3)
+## 1.6 軟體工程的多元維度
+
+* **專業紀律 (Disciplines):** 開發前設計規格、API 優先設計、落實 Code Review、撰寫架構決策 ADR。
+* **基礎原則 (Foundational Principles):** 軟體理論根基：模組化、抽象化、預測變更、開閉原則 (OCP)。
+* **流程方法論 (Process Methodologies):** 引導團隊運作框架：Waterfall、敏捷 (Agile/Scrum)、DevOps 自動化交付。
+* **啟發式法則 (Heuristics):** 前人實務經驗：SOLID 設計原則、Clean Code 乾淨程式碼、DRY、YAGNI 原則。
+
+---
+
+## 1.6 破解常見的軟體迷思
+
+* **迷思 1：「專案進度落後了，招募新工程師進來就能解決。」**
+  * **現實 (Brooks's Law)**：在落後的專案中加入人手，只會讓專案更落後（新人培訓成本與 $O(n^2)$ 溝通管道暴增）。
+* **迷思 2：「軟體具有高度彈性，在後期修改需求很便宜。」**
+  * **現實**：後期修改會迫使已完成的資料庫、API 與代碼打掉重練，修改成本常是前期的 100 倍。
+* **迷思 3：「只要把程式外包，我們就不需要懂技術管理。」**
+  * **現實**：外包專案若缺乏技術管理、持續整合與嚴格架構監督，最終交付的系統往往是一場災難。
+
+---
+<!-- _class: full-image-slide -->
+
+<div class="centered-image">
+  <img src="../../img/ch01/late_change_cost_comic.jpg" alt="Late Requirement Change Cost Comic" />
+</div>
+
+---
+
+## 觀念檢驗：布魯克斯法則 (CCQ 7)
 
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**專案目前落後 3 週且離上線只剩 2 週，專案經理決定立即招聘 4 位新進工程師加快進度。依據布魯克斯法則，最可能的結果為何？**
+**專案目前落後進度 3 週，距離預定上線日僅剩 2 週。專案經理決定緊急招募 4 名新工程師來加速開發。根據布魯克斯法則（Brooks's Law），最可能發生的結果為何？**
 
-* **A.** 專案將提早 1 週完成。
-* **B.** 專案將更為延宕，因為資深成員必須停下手邊工作去培訓新成員，且溝通成本劇增。
-* **C.** 現有工程師的寫代碼速度將翻倍。
-* **D.** 團隊整體的溝通複雜度保持不變。
+* **A.** 專案將會提早 1 週順利上線。
+* **B.** 專案將會面臨更嚴重的延遲，因為資深開發人員必須停下工作來培訓與協調新進人員。
+* **C.** 新進人員的加入對專案時程完全沒有任何影響。
 
   </div>
   <div class="ccq-logo">
@@ -710,46 +795,50 @@ footer: '第 1 章 · 軟體工程導論'
 
 ---
 <!-- header: '1.7 現代工具鏈與 AI 雙面刃' -->
+
+## 1.7 現代工程自動化工具鏈
+
+* **Version Control (Git)：** 分支管理策略，協作程式碼審查。
+* **現代 IDE（如 VS Code）：** 即時語法錯誤檢查、重構輔助與除錯環境。
+* **CI/CD 自動化管線：** 自動編譯、單元測試、弱點掃描並容器化部置 (GitHub Actions)。
+* **自動化測試：** 單元測試（JUnit、PyTest）、整合測試與 E2E 測試。
+* **可觀測性與 APM：** OpenTelemetry 鏈路追蹤、日誌整合與 Sentry APM。
+* **容器化編排：** 隔離應用依賴（Docker 容器）與伺服器叢集編排（Kubernetes）。
+* **專案追蹤管理：** Scrum 看板、缺陷與功能待辦追蹤（Jira、Linear）。
+* **靜態代碼分析：** 不執行代碼下，掃描原始碼中的潛在臭蟲與 code smell (SonarQube)。
+* **API 開發協作：** API 設計、Mock、測試與共享規格（Postman）。
+* **基礎設施即代碼 (IaC)：** 透過版本控制的設定檔宣告雲端資源 (Terraform)。
+
+---
+
+## 1.7 AI 在生命週期各階段的效益與風險
+
+| 生命週期階段 | AI 帶來的效益 | AI 伴隨的風險與隱憂 |
+|:---|:---|:---|
+| **1. 需求與分析** | 快速草擬 User Stories、提煉驗收條件 | 幻覺不實需求與約束、遺漏隱性組織知識 |
+| **2. 架構與設計** | 推薦合適架構模式、自動產生資料庫 ERD | 過度設計、忽略系統實體延遲與安全隔離阻斷 |
+| **3. 實現與編碼** | 自動補齊程式碼、加速樣板程式代碼產生 | **「Vibe Coding」** 陷阱、安全漏洞、授權疑慮 |
+| **4. 測試與 QA** | 自動生成單元測試案例、生成邊界測試數據 | **「迴音室測試」**（只在驗證 AI 出錯的代碼） |
+| **5. 演進與維護** | 自動解讀遺留代碼、自動草擬 API 文檔 | 自動重構時引入隱性迴歸臭蟲 (Regression Bugs) |
+
+---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/10_automating.jpeg" alt="現代工具鏈與自動化" />
+  <img src="../../img/ch01/vibe_coding_comic.jpg" alt="The Vibe Coding Trap" />
 </div>
 
 ---
 
-## 1.7 現代軟體工程核心工具鏈
-
-* **版本控制系統 (Git)：** 分支管理、Pull Request 協同審查與變更追蹤。
-* **現代開發環境 (IDEs)：** VS Code、IntelliJ 提供即時靜態分析、智慧重構與除錯。
-* **CI/CD 自動化管線：** GitHub Actions 於每次 Commit 自動編譯、測試、資安掃描與部署。
-* **自動化測試套件：** 單元測試 (PyTest/Jest)、整合測試與 E2E 測試 (Playwright)。
-* **可觀測性與監控：** Datadog、Prometheus、Sentry 捕獲即時遙測與產線 Error Trace。
-* **AI 編程助理：** GitHub Copilot、Cursor、Gemini AI 提供智慧配對編程。
-
----
-
-## 1.7 AI 在軟體生命週期的效益與風險矩陣
-
-| 生命週期階段 | AI 帶來的核心效益 | 潛在風險與技術陷阱 |
-|:---|:---|:---|
-| **1. 需求分析** | 快速草擬使用者故事、整理 Gherkin 驗收條件 | 憑空**幻覺 (Hallucination)** 出虛構業務規則；遺漏隱性組織文化 |
-| **2. 架構設計** | 推薦合適架構模式、自動生成 UML 與 ERD | **過度工程化 (Over-engineering)**；忽略網路延遲與資安隔離 SLA |
-| **3. 程式編程** | 自動完成樣板代碼、加速演算法撰寫、減少疲勞 | **「盲目相信代碼 (Vibe Coding)」** 陷阱；引入隱蔽資安漏洞與授權污染 |
-| **4. 測試驗證** | 自動生成邊界測試數據、合成測試案例 | **「回音室測試 (Echo-chamber)」**（測試只驗證了 AI 寫出的錯誤邏輯） |
-| **5. 維護演進** | 解讀老舊無文件代碼、自動生成 API 規格書 | 自動重構引發無感**行為退化 (Regression)**；累積不易察覺技術債 |
-
----
-
-## 1.7 課堂互動活動：Vibe Coding 大挑戰
+## 1.7 隨堂討論：AI 的「Vibe Coding」工程挑戰
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
-  **隨堂投票與討論：AI 實務應用反思**
-  * **投票：** 使用 GitHub Copilot 或 ChatGPT 產生代碼時，你在按 Commit 前有多常逐行審查並完全理解每行邏輯？
-    *(1: 總是逐行理解 | 2: 大部分時候 | 3: 很少 | 4: 從不)*
-  * **討論：** 假設 AI 產生了一段 200 行複雜非同步資料庫操作代碼，且順利通過了 2 個基本測試。這段代碼可以直接推向產線嗎？專業工程師必須補足哪些驗證紀律？
+  **「Vibe Coding」的現場投票與討論：**
+  * **投票：** 當你使用 AI 程式助理（如 Copilot 或 ChatGPT）時，你在按下 Commit 提交前，有多少比例會逐行閱讀並完全理解它所產生的每一行程式碼？
+    *(每次都逐行看懂 / 大部分時候會看 / 很少看 / 從來不看)*
+  * **討論：** 假設 AI 幫你寫了一段高複雜度的非同步資料庫處理邏輯，且順利通過了本地端 2 項單元測試，但你其實看不懂其內部原理。在軟體工程紀律下，你是否應該直接將其 Merge 到正式分支？你該採取哪些步驟來驗證其安全？
 
   </div>
   <div class="discussion-logo">
@@ -762,74 +851,66 @@ footer: '第 1 章 · 軟體工程導論'
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/12_code_ethics.jpeg" alt="ACM/IEEE 倫理守則" />
+  <img src="../../img/ch01/code_of_ethics_principles.jpg" alt="The Eight Principles of the ACM/IEEE Software Engineering Code of Ethics" />
 </div>
 
 ---
 
-## 1.8 ACM/IEEE 軟體工程倫理守則：八大原則
+## 1.8 ACM/IEEE 倫理守則 8 大核心原則
 
-1. **Public（公眾利益）：** 將公眾的健康、安全與福祉置於首位。
-2. **Client & Employer（客戶與雇主）：** 在符合公眾利益前提下維護雇主利益。
-3. **Product（產品品質）：** 確保軟體產品與維護符合最高專業標準。
-4. **Judgment（獨立判斷）：** 在技術評估中保持誠信與獨立性。
-5. **Management（工程管理）：** 推廣倫理管理實務，給予合理估算與健康環境。
-6. **Profession（專業聲譽）：** 維護並增進軟體工程專業的誠信與聲譽。
-7. **Colleagues（同儕互助）：** 公平對待同儕，建立良性指導與回饋。
-8. **Self（自我提升）：** 終身學習，精進專業技能並推廣倫理實務。
-
----
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/13_cases.jpeg" alt="當工程倫理失敗" />
-</div>
+1. **Public（公眾）：** 以公眾利益為最高指導原則，優先保障安全、健康與福祉。
+2. **Client & Employer：** 在符合公眾利益的前提下，維護客戶與雇主的利益。
+3. **Product（產品）：** 確保交付的產品符合專業最高可靠度與安全標準。
+4. **Judgment（判斷）：** 保持專業評估的獨立自主性，拒絕對不實技術宣稱簽署背書。
+5. **Management（管理）：** 推動合乎道德的管理，不給予不實估算或強加不合理壓縮。
+6. **Profession（專業）：** 藉由同儕審查與分享知識，維護軟體工程的誠信與聲譽。
+7. **Colleagues（同事）：** 待同事公平客氣，營造互助與正面建設性回饋的氛圍。
+8. **Self（自身）：** 終身學習，精進技術，落實道德的開發實踐。
 
 ---
 
-## 1.8 重大工程倫理失守事件
+## 1.8 當工程倫理失效時：真實世界的案例
 
 * **福斯汽車「柴油門」事件 (2015)：**
-  * 工程師依指示撰寫作弊軟體，在檢驗狀態下掩飾高達法定 40 倍的 toxic $NO_x$ 廢氣排放。
-  * 引發數百億美元天價罰款、刑事定罪與嚴重的環境公害。
-* **劍橋分析事件 (2018)：**
-  * 不當收集數千萬社群用戶個資進行政治操控，凸顯隱私設計的重要。
-* **計畫性報廢 (Planned Obsolescence)：**
-  * 透過軟體更新蓄意降低舊款硬體效能，迫使消費者換機。
+  * 工程師受命編寫軟體偵測車輛是否在實驗室進行排氣檢測，以暫時降低 $NO_x$ 排放；實際道路排放高達法定 40 倍。導致數百億罰款與嚴重污染。
+* **劍橋分析數據醜聞 (2018)：**
+  * 工程人員協助不正當收集與濫用數千萬社交使用者的數據以操弄政治選舉。
+* **計劃性報廢 (Planned Obsolescence)：**
+  * 在系統更新中加入限速機制，刻意拖慢舊硬體效能以逼迫消費者換新機。
 
 ---
 <!-- _class: full-image-slide -->
 
 <div class="centered-image">
-  <img src="../../img/ch01/dark_patterns_comic.png" alt="黑暗模式純黑白線條四格漫畫" />
+  <img src="../../img/ch01/dark_patterns_comic.png" alt="Deceptive Dark Patterns 4-Panel Comic" />
 </div>
 
 ---
 
-## 1.8 欺騙性「黑暗模式」(Dark Patterns) 解析
+## 1.8 UI/UX 中的欺騙性「黑暗模式」
 
-* **1. Roach Motel（蟑螂屋／訂閱迷宮）：**
-  * 1 鍵快速訂閱容易，取消訂閱卻隱藏在層層選單或強迫打電話。
-* **2. Confirmshaming（羞辱性確認）：**
-  * 拒絕按鈕使用情緒勒索文案（*「不要，我討厭省錢與小狗」*）。
-* **3. Hidden Costs & Sneak into Basket（偷塞購物車）：**
-  * 結帳最後一步自動預先勾選附加保險或偷加手續費。
-* **4. Fake Urgency（製造虛假緊迫感）：**
-  * 虛假倒數計時器（*「優惠只剩 5 秒鐘！」*）逼迫衝動下單。
+* **1. 蟑螂屋 (Roach Motel)：**
+  * 訂閱只需一鍵完成；取消訂閱卻需要打電話給客服或在隱密選單迷宮中摸索。
+* **2. 誘導式確認 (Confirmshaming)：**
+  * 在拒絕按鈕上加上帶有道德羞辱性或傀疚感的字眼（如*「不，謝謝，我討厭省錢」*）。
+* **3. 悄悄塞入購物車 (Sneak into Basket)：**
+  * 在最後結帳點自動預先勾選加購險、加購商品，利用粗心誘導使用者付錢。
+* **4. 虛假緊急 (Fake Urgency)：**
+  * 製造虛假的搶購人數（*「34 人正在看此房」*）或虛假的特價倒數計時器逼迫下單。
 
 ---
 
-## 觀念檢驗題：工程倫理判斷 (CCQ 4)
+## 觀念檢驗：工程倫理守則 (CCQ 5 - 續)
 
 <div class="ccq-columns">
   <div class="ccq-text">
 
-**依據 ACM/IEEE 倫理守則，若雇主指示工程師實作一段會偽造安全合規檢驗報告的作弊演算法，工程師的倫理義務為何？**
+** under the ACM/IEEE Code of Ethics, if an employer directs an engineer to implement an algorithm that falsifies safety compliance reports, what is the engineer's obligation?**
 
-* **A.** 順從照做，因為雇主支付工程師薪資。
-* **B.** 拒絕實作並向上回報，因為「公眾利益」永遠高於對雇主的忠誠。
-* **C.** 照常實作代碼，但刻意不寫文檔。
-* **D.** 將代碼外包給第三方廠商以規避法律責任。
+* **A.** 順從雇主，因為雇主支付工程師的薪水。
+* **B.** 拒絕並向上陳報，因為公眾利益的優先權高於對雇主的忠誠。
+* **C.** 實作程式碼，但不要寫任何系統文件。
+* **D.** 將此程式碼外包給外部廠商開發以規避責任。
 
   </div>
   <div class="ccq-logo">
@@ -839,15 +920,15 @@ footer: '第 1 章 · 軟體工程導論'
 
 ---
 
-## 1.8 課堂互動活動：黑暗模式偵探
+## 1.8 課堂活動：黑暗模式偵探
 
 <div class="discussion-columns">
   <div class="discussion-text">
 
   **黑暗模式偵探活動：**
-  * **調查：** 回想你最近在 App 或網站上遇過的一個欺騙性黑暗模式。
-  * **剖析：** 該設計違反了 ACM/IEEE 倫理守則中的哪一項原則（公眾利益、產品品質、或獨立判斷）？
-  * **重構：** 你會如何重新設計該流程，使其既能兼顧合理的商業轉化，又能保持完全的誠信與透明？
+  * **找尋：** 回想你最近在使用哪些 App 或網站時，曾遇過哪種類型的黑暗模式？
+  * **分析：** 這項惡意設計違反了 ACM/IEEE 倫理守則中的哪一條原則？
+  * **重新設計：** 如果由你主導，你會如何重新設計該操作流程，使其既符合商業轉換率，又尊重使用者的自主權與知情權？
 
   </div>
   <div class="discussion-logo">
@@ -856,57 +937,32 @@ footer: '第 1 章 · 軟體工程導論'
 </div>
 
 ---
-<!-- _class: full-image-slide -->
-
-<div class="centered-image">
-  <img src="../../img/ch01/14_midset.jpeg" alt="軟體工程師的心態" />
-</div>
-
----
-
-## 1.8 專業心態：數據、開發者與使用者
-
-<div class="split55">
-  <div class="left">
-
-  * **開發者與使用者的糾葛：**
-    * 軟體絕非孤立的代碼——它直接牽動真實人類的工作流程、生計與安全。
-  * **Data is Gold（數據即黃金）：**
-    * 數據真實性、隱私治理與演算法公平性是現代工程師的核心責任。
-
-  </div>
-  <div class="right">
-    <img src="../../img/ch01/data_is_gold.png" alt="數據即黃金" />
-  </div>
-</div>
-
----
-<!-- header: '1.9 常見問答與觀念總結' -->
+<!-- header: '1.9 FAQ 與複習' -->
 
 ## 1.9 軟體工程常見問答 (FAQ)
 
-* **Q：電腦科學 (CS) vs. 軟體工程 (SE)？**
-  * *CS：* 數學與計算理論基礎（演算法、資料結構、複雜度）。
-  * *SE：* 實務應用工程——在時間、預算與現實約束下打造可靠軟體。
-* **Q：軟體成本主要花在哪裡？**
-  * 初始開發：約 60% 開發，40% 驗證測試。
-  * 完整生命週期：上線後的維護與演進佔據總成本的 **70%～80%**。
-* **Q：是否存在放之四海皆準的「最佳方法論」？**
-  * 不存在。關鍵在於根據領域約束與商業目標**為特定問題挑選最適當的工具與流程**。
+* **Q1：寫程式與軟體工程有何不同？**
+  * *回答：* 寫程式是撰寫原始碼。軟體工程是融入時間軸的程式開發，包含多人協作、在時間與預算等限制下折衷出「滿意解」、維護品質特徵與規畫長期演進。
+* **Q2：為何程式正確且測試 coverage 100% 仍會失敗？**
+  * *回答：* 軟體有四大支柱。資料出錯、維運程序出包、或文檔缺失皆會失敗。且若需求規格 (Specification) 階段錯誤，就只會「正確地蓋出沒人要的產品」。
+* **Q3：滿意解 (Satisficing) 與最優解 (Optimized) 有何差別？**
+  * *回答：* 受限於預算與時程约束，技術上完美的「最優解」往往不可行。工程的核心在於找出符合所有限制且「足夠好」的「滿意解」。
+* **Q4：AI 的 Vibe Coding 風險與防範？**
+  * *回答：* 憑感覺盲目使用 AI 程式碼會引入安全性漏洞。防範之道在於落實 Code Review、寫程式前先寫測試案例，並將 AI 代碼視為需專業工程審查的初稿。
 
 ---
 
-## 本章觀念總結：填空挑戰
+## 課堂總複習：隨堂填空挑戰
 
 <div class="fill-blank-columns">
   <div class="fill-blank-text">
 
-檢驗你對第 1 章核心觀念的掌握程度：
+檢測你對本章基礎概念的掌握度：
 
-1. 依據 IEEE 定義，軟體包含程式、數據、維運程序以及 **[ _________ ]**。
-2. 為落後的軟體專案增加人手只會讓進度更為延宕，此現象稱為 **[ _________ ]** 法則。
-3. **[ _________ ]** 品質模型定義了包含功能性、可靠性、易用性、效率性、可維護性與可移植性 6 大維度。
-4. ACM/IEEE 軟體工程倫理守則的第一原則優先保障 **[ _________ ]** 利益。
+1. 根據 IEEE 正式定義，軟體由程式、資料、程序以及 **[ ＿＿＿＿＿ ]** 共同組成。
+2. 指出「在已經落後的專案中招募人手，只會讓專案更落後」的法則是 **[ ＿＿＿＿＿ ]** 法則。
+3. **[ ＿＿＿＿＿ ]** 品質模型定義了包含功能性、可靠性與可維護性在內的 6 大軟體品質特徵。
+4. ACM/IEEE 軟體工程倫理守則的第一條原則，要求將 **[ ＿＿＿＿＿ ]** 利益放在第一位。
 
   </div>
   <div class="fill-blank-logo">
@@ -918,8 +974,8 @@ footer: '第 1 章 · 軟體工程導論'
 
 ## 參考文獻與延伸閱讀
 
-* Sommerville, Ian. *Software Engineering* (10th Edition). Pearson. [官方網站](https://software-engineering-book.com/)
-* Brooks, Frederick P. *人月神話 (The Mythical Man-Month)*.
+* Sommerville, Ian. *Software Engineering* (10th Edition). Pearson. [Official Website](https://software-engineering-book.com/)
+* Brooks, Frederick P. *The Mythical Man-Month: Essays on Software Engineering*. Addison-Wesley.
 * ISO/IEC 9126-1:2001. *Software engineering — Product quality — Part 1: Quality model*.
-* ACM/IEEE 軟體工程倫理與專業實務守則. [IEEE CS 官網](https://www.computer.org/education/code-of-ethics)
+* ACM/IEEE Joint Task Force on Software Engineering Ethics. *Software Engineering Code of Ethics*. [IEEE CS](https://www.computer.org/education/code-of-ethics)
 * Brignull, Harry. *Deceptive Patterns: Exposing the Tricks Tech Companies Use to Control You*.

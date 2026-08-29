@@ -82,21 +82,40 @@ The conference formally established the term **Software Engineering** with a del
 
 When engineering discipline is missing, the consequences are not just financial—they can be catastrophic:
 
-* **Nagoya Airbus A300 Crash (1994)**: A subtle Human-Machine Interface (HMI) software conflict occurred when the autopilot fought the pilots' manual control inputs, resulting in the tragic loss of 264 lives.
-* **Mars Climate Orbiter (1999)**: A $327 million spacecraft was destroyed in the Martian atmosphere due to an unverified unit mismatch between two software modules (metric Newtons vs. imperial pound-force).
-* **Ariane 5 Flight 501 (1996)**: A rocket self-destructed 37 seconds after launch because a 64-bit floating-point value was converted into a 16-bit signed integer without exception handling, costing over $370 million.
+* **Nagoya Airbus A300 Crash (1994)**: During the approach of China Airlines Flight 140, the co-pilot accidentally triggered the Go-Around (TO/GA) mode. The pilot attempted to override this by pushing the control column forward to descend. However, the autopilot remained engaged in Go-Around mode and fought the pilot's manual inputs, trim-adjusting the horizontal stabilizer to its maximum nose-up limit. Because the software architecture did not prioritize manual pilot override in this specific mode, the plane stalled, causing 264 fatalities.
+* **Mars Climate Orbiter (1999)**: The spacecraft was lost in the Martian atmosphere because ground station software produced thruster performance data in imperial unit pound-force seconds ($lbf \cdot s$), whereas the onboard navigation computer expected these values in metric Newton-seconds ($N \cdot s$). The lack of unit verification across the software interface caused the spacecraft to enter the atmosphere too low, destroying the $327 million orbiter.
+* **Ariane 5 Flight 501 (1996)**: The rocket self-destructed 37 seconds after launch due to an unhandled software exception in the inertial reference system. A 64-bit floating-point value representing horizontal velocity (horizontal bias) was converted into a 16-bit signed integer. The value exceeded 32,767, causing an integer overflow. Lacking exception-handling routines, both the primary and backup computers shut down, and the diagnostic data on the bus was misinterpreted as flight control commands, triggering self-destruction.
 
 ---
 
-> 💡🧠 **Concept Check (CCQ 1) — The Nature of the Software Crisis**:
+> 💡🧠 **Concept Check (CCQ 1) — The First Software Engineering Conference**:
+> 
+> *Question*: When was the first software engineering conference held?
+> * A) 1928
+> * B) 1968
+> * C) 1948
+> * D) 1988
+> 
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-1--the-first-software-engineering-conference)
+
+---
+
+> 💡🧠 **Concept Check (CCQ 2) — The Nature of the Software Crisis**:
 > 
 > *Question*: Why couldn't the 1968 Software Crisis be resolved simply by manufacturing faster computer hardware or purchasing more memory?
-> * A) Hardware manufacturing stopped advancing in the late 1960s.
-> * B) The crisis was fundamentally a cognitive and organizational problem of intellectual complexity, system architecture, and communication overhead, which faster hardware only amplified.
-> * C) Early programming languages lacked arithmetic calculation capabilities.
-> * D) Hardware was incompatible with cloud infrastructure.
+> * A) The crisis was caused by hardware manufacturing delays and silicon shortages in the late 1960s.
+> * B) The crisis was a cognitive and organizational failure in managing system complexity, which faster hardware only amplified.
+> * C) The crisis stemmed from early programming languages lacking basic mathematical and calculation capabilities.
+> * D) The crisis occurred because early mainframes were incompatible with modern distributed cloud infrastructure.
 > 
-> [👉 View Answer & Detailed Explanation in Appendix](#ccq-1--the-nature-of-the-software-crisis)
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-2--the-nature-of-the-software-crisis)
+
+---
+
+> 💡👥 **Pair Discussion Activity — Software Failures in the Wild**:
+> * Think of or search for a real-world software failure example that is not mentioned in this section (e.g., the Knight Capital Group trading glitch, the Therac-25 radiation machine bug, or the CrowdStrike outage of 2024).
+> * Discuss with your partner: What was the root technical or procedural cause of the failure?
+> * How could modern software engineering practices, testing methodologies, or design disciplines have prevented it?
 
 ---
 
@@ -118,11 +137,29 @@ The IEEE standard formally defines software as:
 Under this definition, professional software consists of four essential pillars:
 1. **Programs (Source Code & Binaries)**: The executable logic written in languages like Python, Java, or C++ that instructs the CPU.
 2. **Data & Schemas**: Databases, configuration files, seed datasets, and AI training weights required for the program to function.
+   * *Real-World Example*: In 2012, **Knight Capital Group** went bankrupt after a $440 million loss in 45 minutes. The root cause was configuration data: an inactive flag in a configuration file was left set to "true", activating obsolete, dead code in a newly deployed server, which triggered a massive loop of unintended trades.
 3. **Operational Procedures**: Deployment scripts, backup routines, system maintenance manuals, disaster recovery runbooks, and CI/CD automation rules.
+   * *Real-World Example*: In 2017, **GitLab** suffered a major outage when a database engineer accidentally deleted a 300GB production database instead of a staging database due to unclear operational boundary naming. Because their backup procedures were not automated or periodically tested, five different backup mechanisms failed, leading to 18 hours of downtime and permanent data loss.
 4. **Documentation**: Architecture design documents (ADDs), API specifications (OpenAPI/Swagger), user manuals, requirement traceability matrices, and inline code documentation.
+   * *Real-World Example*: The infamous **Therac-25 radiation therapy machine (1985–1987)** overdosed six patients due to a software race condition. The manufacturer had reused code from an older model without documenting its internal safety assumptions. Furthermore, because the user manuals lacked documentation explaining cryptic error codes (like "Malfunction 54"), operators ignored the warnings and repeated the treatments, causing severe injury and death.
+
+### 1.3.3 The Software Iceberg Trap
+Many software projects fail because developers and managers fall into the trap of only focusing on the visible "tip" of the software iceberg—the **Source Code**. They view progress solely by lines of code written or features shipped, ignoring database migrations (Data), CI/CD pipelines and recovery manuals (Procedures), and design or API specs (Documentation). Without all four pillars, a system is not "professional software"—it is merely a brittle program that cannot be deployed, maintained, or operated safely.
 
 As computer scientist Harold Abelson famously noted:
 > *"Programs must be written for people to read, and only incidentally for machines to execute."*
+
+---
+
+> 💡🧠 **Concept Check (CCQ 3) — The IEEE Definition of Software**:
+> 
+> *Question*: According to the IEEE standard definition of software, which of the following is NOT considered a component of software?
+> * A) Executable computer programs and source code files.
+> * B) System database schemas and configuration files.
+> * C) CPU processor hardware and physical memory units.
+> * D) Software installation and deployment procedures.
+> 
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-3--ieee-definition-of-software)
 
 ---
 
@@ -201,22 +238,46 @@ The ease with which software can be transferred from one hardware, operating sys
 
 ---
 
+> 💡🧠 **Concept Check (CCQ 4) — ISO 9126 Quality Characteristics**:
+> 
+> *Question*: Which of the following sets of attributes represents the six primary quality characteristics defined by the ISO 9126 model?
+> * A) Functionality, Reliability, Usability, Efficiency, Maintainability, Portability.
+> * B) Performance, Security, Scalability, Availability, Testability, Readability.
+> * C) Accuracy, Correctness, Modularity, Reusability, Interoperability, Safety.
+> * D) Simplicity, Flexibility, Robustness, Extensibility, Compatibility, Deployability.
+> 
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-4--iso-9126-quality-characteristics)
+
+---
+
+> 💡🧠 **Concept Check (CCQ 5) — Matching Real-World Issues to Quality Factors**:
+> 
+> *Question*: Which of the following matches a real-world software issue with its corresponding ISO 9126 quality characteristic?
+> * A) A database query taking 15 seconds to return results $\rightarrow$ Maintainability (Testability)
+> * B) A system crash occurring when a third-party API goes offline $\rightarrow$ Reliability (Fault Tolerance)
+> * C) Developers struggling to write unit tests due to tight coupling $\rightarrow$ Portability (Adaptability)
+> * D) The application failing to run on a new macOS version $\rightarrow$ Usability (Operability)
+> 
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-5--matching-real-world-issues-to-quality-factors)
+
+---
+
 > 💡📊 **Interactive Activity — Quality Trade-Off Poll**:
 > * **Scenario**: In real-world engineering, you cannot maximize all quality attributes simultaneously due to budget and performance trade-offs.
 > * **Poll**: Rank the top 2 non-negotiable ISO 9126 quality attributes for each of these two systems:
 >   1. *An automated insulin pump controller*.
 >   2. *A viral mobile casual game*.
-> * **Discussion**: Why is it disastrous to optimize for "Time to Market" over "Fault Tolerance" in an insulin pump, whereas a casual game might deliberately accept occasional non-critical bugs in exchange for rapid feature deployment?
+> * **Discussion**: Why is it disastrous to optimize for "Time to Market" over "Fault Tolerance" in an insulin pump, whereas a casual game might deliberately accept occasional non-critical bugs in exchange for rapid feature deployment? In your opinion, what are the primary factors or constraints (e.g., budget, developer skill, scheduling pressure, changing requirements) that impair software quality or make high quality hard to achieve?
 
 ---
 
 ## 1.5 Navigating the Modern Software Landscape
 
-Software systems are deployed across vastly diverse environments, each demanding distinct architectural patterns, testing methodologies, and operational constraints.
+Software systems are deployed across vastly diverse environments, each demanding distinct architectural patterns, testing methodologies, and operational constraints. A modern software system is rarely a single homogeneous program. Instead, it is typically a heterogeneous ecosystem combining multiple software types.
 
-![Navigating the Modern Software Landscape](../../img/ch01/11_modern_sw_landscape.jpeg)
+![The YouBike Smart Bicycle Sharing System Diagram](../../img/ch01/youbike_system.jpg)
 
-*Figure 1.5: The modern software landscape—spanning cloud-native web apps, mobile apps, enterprise ERPs, embedded IoT systems, and AI platforms.*
+*Figure 1.5: The heterogeneous architecture of a YouBike Smart Bicycle Sharing System. A single real-world service integrates embedded software (the smart dock and bicycle IoT hub), a mobile application (user app), a web application (official site), and an enterprise backend system (cloud servers).*
 
 ### 1.5.1 Key Application Domains
 
@@ -226,6 +287,9 @@ Software systems are deployed across vastly diverse environments, each demanding
 * **Embedded Software & IoT**: Real-time firmware operating inside medical equipment, automotive engine controllers, smart thermostats, and avionics where hardware resources are limited and failure is not an option.
 * **AI & Machine Learning Applications**: Data-intensive systems leveraging Large Language Models (LLMs), computer vision, and recommendation engines, requiring specialized MLOps pipelines.
 * **Scientific & CAD Applications**: High-performance simulation packages (e.g., MATLAB, ANSYS, AutoCAD) requiring floating-point numerical accuracy and hardware acceleration.
+
+### 1.5.2 Heterogeneous Systems in the Modern Era
+In the modern era, large-scale systems are rarely built as a single standalone application type. Instead, they are complex, heterogeneous ecosystems that integrate multiple domains. For example, a modern autonomous vehicle (like a Tesla) is not just embedded software—it is a combination of real-time embedded software (engine controls, braking), edge AI systems (computer vision models), mobile applications (the companion app), cloud SaaS (telemetry and OTA update systems), and enterprise CRM backends. Successful software engineering requires coordinating development across these vastly different domains, balancing their conflicting constraints and release cadences.
 
 ---
 
@@ -282,15 +346,21 @@ All engineering disciplines share a fundamental defining characteristic: **solvi
   3. **Managed Cloud Backend (Infrastructure Leverage)**: Use managed backend services (e.g., Supabase / Firebase with HIPAA-compliant encryption) rather than provisioning custom bare-metal servers.
   4. **Automated CI/CD (Quality Assurance)**: Set up **GitHub Actions** for automated linting and unit testing on every pull request, allowing a small 3-person team to maintain high code quality without a dedicated QA department.
 
+#### Why Not Select the "Perfect" Technical Solution?
+In engineering, the "best" architectural design from a purely technical standpoint is often not the selected one. A custom, microservices-based, multi-region distributed system built from scratch with native Swift and Kotlin apps might be the most scalable and performant. However, that solution is rejected because it violates the $80,000 budget and 6-month time constraint. 
+Engineering is about finding a **satisficing solution**—one that is sufficient to meet all constraints, negotiated through trade-offs. The chosen MVP design (cross-platform framework, managed backend) might have performance trade-offs, but it is the correct engineering solution because it satisfies the critical constraints of time and budget.
+
 ---
 
 ### 1.6.3 The Core Activities of the Software Engineering Process
 
 At the very heart of software engineering, every software process model (whether Waterfall, Spiral, Scrum, or Continuous DevOps) organizes and contains **Four Universal Core Activities**:
 
-![Universal Core Activities Across Different Process Models](../../img/ch01/se_process_models_4_activities.jpg)
+![The Four Core Activities of the Software Engineering Process](../../img/ch01/se_core_activities.jpg)
 
-*Figure 1.6.3: How the four universal activities (Specification, Design & Implementation, Validation, Evolution) are structured across major software process models—from linear Waterfall cascades and iterative Agile sprint cycles to risk-driven Spiral quadrants and continuous DevOps infinity loops.*
+*Figure 1.6.3: A conceptual diagram illustrating the four universal core activities of software engineering (Specification, Design & Implementation, Validation, and Evolution). Each activity is characterized by specific actions, inputs, and artifacts that guide the lifecycle of a software system.*
+
+The four activities are detailed below:
 
 #### Detailed Breakdown of the 4 Core Activities
 
@@ -327,6 +397,18 @@ At the very heart of software engineering, every software process model (whether
      * *Preventive*: Refactoring code and updating libraries to prevent future security vulnerabilities.
    * *Artifacts*: Release Notes, Migration Scripts, Incident Post-Mortems.
    * *Consequences of Neglect*: "Software rot," accumulated technical debt, and system obsolescence.
+
+---
+
+> 💡🧠 **Concept Check (CCQ 6) — Matching Engineering Actions to Core Activities**:
+> 
+> *Question*: Which of the following pairs correctly matches a specific software engineering action with its corresponding universal core activity?
+> * A) Conducting stakeholder interviews to draft user stories $\rightarrow$ Software Specification
+> * B) Writing automated unit tests to mock database responses $\rightarrow$ Software Design & Implementation
+> * C) Refactoring database schemas to improve query speed $\rightarrow$ Software Validation
+> * D) Swapping a third-party payment API for a new gateway $\rightarrow$ Software Specification
+> 
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-6--matching-engineering-actions-to-core-activities)
 
 ---
 
@@ -405,14 +487,14 @@ Professional software engineering relies on empirical reality rather than wishfu
 
 ---
 
-> 💡🧠 **Concept Check (CCQ 2) & Pair Discussion**:
+> 💡🧠 **Concept Check (CCQ 7) & Pair Discussion**:
 > 
 > *Question*: A project is 3 weeks behind schedule with 2 weeks left before product launch. The project manager wants to add 4 junior developers to finish coding faster. What is the most likely outcome according to Brooks's Law?
 > * A) The project will finish 1 week early.
 > * B) The project will be delayed even further because senior developers must stop coding to train and coordinate the new hires.
 > * C) Adding developers has no measurable effect on software delivery time.
 > 
-> [👉 View Answer & Detailed Explanation in Appendix](#ccq-2--brookss-law-and-project-dynamics)
+> [👉 View Answer & Detailed Explanation in Appendix](#ccq-7--brookss-law-and-project-dynamics)
 > 
 > *Pair Discussion*: Share an example of a software shortcut ("technical debt") you took in a past project to meet a tight deadline. How did that shortcut affect you when you tried to add new features later?
 
@@ -422,16 +504,17 @@ Professional software engineering relies on empirical reality rather than wishfu
 
 Modern software engineering teams leverage sophisticated automation toolchains and Artificial Intelligence across every stage of the lifecycle.
 
-<img src="../../img/ch01/10_automating.jpeg" width="550">
-
-*Figure 1.7: Structural design patterns (such as the Decorator pattern shown here) combined with automated CI/CD pipelines provide architectural modularity and eliminate error-prone manual deployments.*
-
 ### 1.7.1 The Modern Engineering Toolchain
 * **Version Control (Git)**: Tracks revisions, supports branch-based feature development, and facilitates collaborative code reviews.
 * **Integrated Development Environments (IDEs)**: Environments like VS Code and IntelliJ IDEA providing automated refactoring, syntax analysis, and integrated debugging.
 * **Continuous Integration & Continuous Deployment (CI/CD)**: Automated pipelines (e.g., GitHub Actions, GitLab CI) that test, lint, build, and deploy software upon every commit.
 * **Automated Testing Suites**: Unit testing frameworks (JUnit, PyTest, Jest), integration test harnesses, and end-to-end testing tools (Playwright, Cypress).
 * **Observability & APM**: Monitoring platforms (Datadog, Prometheus, Sentry) capturing real-time telemetry, error stack traces, and performance bottlenecks.
+* **Containerization & Orchestration (Docker, Kubernetes)**: Packages applications and dependencies into isolated containers, automating deployment and scaling across server clusters.
+* **Issue Tracking & Agile Management (Jira, Linear, GitHub Issues)**: Manages team backlogs, plans sprint boards, and tracks bugs and features.
+* **Static Code Analysis (SonarQube, ESLint, Pylint)**: Scans source code without executing it to detect bugs, code smells, styling violations, and security flaws.
+* **API Development & Collaboration (Postman, Insomnia)**: Provides environments to design, mock, test, document, and share RESTful, GraphQL, and gRPC APIs.
+* **Infrastructure as Code (IaC) (Terraform, Ansible, Pulumi)**: Provisions and manages cloud resources via version-controlled configuration files, ensuring environment reproducibility.
 
 ---
 
@@ -449,6 +532,12 @@ The integration of Large Language Models (LLMs) and AI agents is transforming so
 
 ---
 
+![The Vibe Coding Trap](../../img/ch01/vibe_coding_comic.jpg)
+
+*Figure 1.7: Humorous illustration of the "Vibe Coding" trap—relying completely on AI-prompted code without solid software engineering validation.*
+
+---
+
 > 💡📊 **Classroom Poll & Pair Discussion — The "Vibe Coding" Challenge**:
 > * **Poll**: When you use an AI coding assistant (like GitHub Copilot or ChatGPT), how often do you read and understand every line of code it outputs before hitting commit? (1: Always | 2: Most of the time | 3: Rarely | 4: Never)
 > * **Pair Discussion**: Suppose an AI assistant generates a complex SQL query that passes your 2 basic unit tests, but you don't fully understand its nested subquery structure. What engineering disciplines should you apply before merging this code into a production branch?
@@ -459,9 +548,9 @@ The integration of Large Language Models (LLMs) and AI agents is transforming so
 
 Because software controls critical aspects of human life—from medical ventilators and aircraft flight controllers to banking networks and voting systems—software engineers carry profound ethical responsibilities to society.
 
-![Engineering for Humanity: The ACM/IEEE Code](../../img/ch01/12_code_ethics.jpeg)
+![The Eight Principles of the ACM/IEEE Software Engineering Code of Ethics](../../img/ch01/code_of_ethics_principles.jpg)
 
-*Figure 1.8.1: The ACM/IEEE Software Engineering Code of Ethics—establishing eight fundamental ethical pillars for practicing professionals.*
+*Figure 1.8.1: The eight fundamental ethical pillars of the ACM/IEEE Software Engineering Code of Ethics.*
 
 ### 1.8.1 The ACM/IEEE Code of Ethics: 8 Core Principles
 
@@ -477,11 +566,6 @@ Because software controls critical aspects of human life—from medical ventilat
 ---
 
 ### 1.8.2 When Engineering Ethics Fail: Real-World Lessons
-
-![When Engineering Fails: The Cost of Ethical Breach](../../img/ch01/13_cases.jpeg)
-
-*Figure 1.8.2: Real-world ethical breaches—highlighting the devastating societal, legal, and financial costs when engineering integrity is compromised.*
-
 * **Volkswagen "Dieselgate" (2015)**: Software engineers intentionally programmed engine management software to detect when the car was undergoing laboratory emissions testing and artificially reduce toxic nitrogen oxide ($NO_x$) output. In real driving conditions, the cars emitted up to 40 times the legal limit. This deliberate ethical breach resulted in tens of billions of dollars in fines, criminal convictions, and severe environmental damage.
 * **Cambridge Analytica Scandal (2018)**: Improper harvesting and misuse of private personal data from millions of social media users for targeted political manipulation, demonstrating the vital importance of data privacy by design.
 * **Planned Obsolescence**: Writing software updates that artificially slow down older hardware or arbitrarily disable interoperability to force consumers into purchasing new devices.
@@ -494,7 +578,7 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
 
 ![Deceptive Dark Patterns Comic](../../img/ch01/dark_patterns_comic.png)
 
-*Figure 1.8.3: Monochrome comic strip illustrating common deceptive Dark Patterns in UI/UX—1. Roach Motel, 2. Confirmshaming, 3. Fake Urgency, and 4. Sneak into Basket.*
+*Figure 1.8.2: Monochrome comic strip illustrating common deceptive Dark Patterns in UI/UX—1. Roach Motel, 2. Confirmshaming, 3. Fake Urgency, and 4. Sneak into Basket.*
 
 #### Major Types of Deceptive Dark Patterns:
 1. **Roach Motel (Subscription Labyrinth)**: Making it effortless to sign up with a single click, but making cancellation an infuriating maze of hidden settings, mandatory phone calls, or artificial delays.
@@ -503,10 +587,6 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
 4. **False Urgency & Fabricated Scarcity**: Artificial countdown timers (*"Only 2 minutes left to claim this deal!"*) or misleading alerts (*"34 other people are looking at this room right now!"*) designed to pressure users into impulsive purchases.
 
 > **The Ethical Engineer's Duty**: Professional software engineers must refuse to implement deceptive dark patterns, advocating instead for transparent, honest, and user-respecting user experiences.
-
-![The Mindset of a Software Engineer](../../img/ch01/14_midset.jpeg)
-
-*Figure 1.8.4: The professional mindset of a software engineer—recognizing our profound responsibility toward data integrity, operational reliability, and end-user trust.*
 
 ---
 
@@ -519,27 +599,69 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
 
 ## 1.9 Frequently Asked Questions (FAQ) in Software Engineering
 
-### 1.9.1 Core Distinctions and Lifecycle Realities
+**Q1: Why is programming not the same as software engineering?**
+* **Answer**: Programming is the act of writing code to solve a specific problem. Software engineering is a disciplined engineering practice that covers the entire software lifecycle. It involves coordinating team collaboration, managing constraints (such as budget, schedule, and regulatory compliance), ensuring system quality attributes (such as reliability, maintainability, and portability), and planning for long-term evolution. As computer scientist Titus Winters famously summarized, software engineering is programming integrated over time.
 
-**Q1: What is the fundamental difference between Computer Science and Software Engineering?**
-* **Computer Science** focuses on the mathematical and theoretical foundations of computation—such as algorithm complexity, data structures, compiler design, and automata theory.
-* **Software Engineering** is an applied engineering discipline focused on the practical, economic, and organizational realities of designing, constructing, testing, and maintaining reliable software systems on time and within budget.
+**Q2: Why do software projects fail even if the code itself is functionally correct and has 100% test coverage?**
+* **Answer**: Professional software consists of four essential pillars: Programs, Data, Operational Procedures, and Documentation. A project can easily fail due to deficiencies in the other three non-code pillars—such as configuration data errors (e.g., Knight Capital Group's $440M trading loop), untested or manual recovery procedures (e.g., GitLab's 2017 database incident), or undocumented safety constraints (e.g., Therac-25 radiation overdoses). Additionally, if the **Specification** activity fails, the team will build the wrong product entirely: they verify that the code meets specifications, but fail to validate that it solves the user's real-world problem.
 
-**Q2: What are the cost breakdowns across the software lifecycle?**
-* During initial construction, roughly **60% of costs go toward development (specification, architecture, coding)** and **40% toward verification and testing**.
-* For long-lived enterprise software, **post-release maintenance and evolution costs often account for 70% to 80% of total lifecycle expenditures**.
+**Q3: What is the difference between a "satisficing" solution and an "optimized" one in software engineering?**
+* **Answer**: In professional software engineering, projects operate under real-world constraints like time, budget, and technologies. An "optimized" solution might be technically perfect (e.g., a highly scalable microservice system built from scratch with native apps), but it is often rejected if it violates time or budget constraints. A "satisficing" solution is one that is sufficient to meet all constraints, negotiated through trade-offs. The correct engineering solution is not the "perfect" code, but the one that best satisfies the constraints of the project.
 
-**Q3: Is there a single "best" methodology or programming language for all software?**
-* No. Different applications operate under entirely different constraints. A AAA video game requires rapid prototyping and graphics performance (C++/Unreal Engine); an aircraft flight controller demands rigorous formal verification and deterministic execution (Ada/Rust); a web startup prioritizes rapid developer iteration and fast feedback loops (TypeScript/Python). Professional software engineering is about selecting the right tool and process for the specific problem at hand.
+**Q4: What is the risk of "vibe coding" with AI assistants, and how do we prevent it?**
+* **Answer**: "Vibe coding" occurs when developers accept AI-generated code without fully understanding its architecture, boundary cases, or safety implications. The risks include introducing subtle logic bugs, security vulnerabilities, license contamination, and creating "echo-chamber tests" (automated tests that merely validate the buggy code generated by the AI rather than checking it against the actual specification). To prevent this, teams must apply rigorous peer code reviews, write test suites based on independent requirements before generating code, and treat AI output strictly as unverified drafts that require professional engineering validation.
 
 ---
 
 ## Appendix: Solutions & Explanations to Interactive Activities
 
-### CCQ 1 — The Nature of the Software Crisis
-* **Correct Answer**: **B** (The crisis was fundamentally a cognitive and organizational problem of intellectual complexity, system architecture, and communication overhead, which faster hardware only amplified).
+### CCQ 1 — The First Software Engineering Conference
+* **Correct Answer**: **B** (1968)
+* **Explanation**: The NATO Science Committee convened a landmark conference in Garmisch, Germany, in October 1968, where the term "Software Engineering" was formally adopted to address the Software Crisis and establish engineering rigor for software.
+* [⬆ Return to Section 1.2](#12-the-genesis-of-software-engineering-and-the-software-crisis)
+
+---
+
+### CCQ 2 — The Nature of the Software Crisis
+* **Correct Answer**: **B** (The crisis was a cognitive and organizational failure in managing system complexity, which faster hardware only amplified).
 * **Explanation**: Increasing hardware capacity allowed organizations to dream up systems of unprecedented scale. However, because human programmers were still using ad-hoc, informal techniques, larger codebases rapidly exceeded human intellectual limits. Faster CPU chips do not fix missing requirements, tangled spaghetti dependencies, or miscommunicated interface contracts.
 * [⬆ Return to Section 1.2](#12-the-genesis-of-software-engineering-and-the-software-crisis)
+
+---
+
+### CCQ 3 — The IEEE Definition of Software
+* **Correct Answer**: **C** (CPU processor hardware and physical memory units)
+* **Explanation**: The IEEE standard defines software as computer programs, procedures, and possibly associated documentation and data. CPU hardware and physical memory are physical electronic devices (hardware) that execute software, rather than components of the software itself.
+* [⬆ Return to Section 1.3.1](#131-the-ieee-definition-of-software)
+
+---
+
+### CCQ 4 — ISO 9126 Quality Characteristics
+* **Correct Answer**: **A** (Functionality, Reliability, Usability, Efficiency, Maintainability, Portability.)
+* **Explanation**: The ISO 9126 model defines exactly these six primary characteristics of software quality. Other attributes like Performance, Security, and Availability are either sub-characteristics under these primary categories (e.g., Security is under Functionality, Availability is under Reliability) or general engineering metrics.
+* [⬆ Return to Section 1.4](#14-what-defines-a-good-software-system-the-iso-9126-quality-model)
+
+---
+
+### CCQ 5 — Matching Real-World Issues to Quality Factors
+* **Correct Answer**: **B** (A system crash occurring when a third-party API goes offline $\rightarrow$ Reliability (Fault Tolerance))
+* **Explanation**: 
+  * **B** is correct: A system's ability to cope with external service failures without crashing is the definition of Fault Tolerance (a sub-characteristic of Reliability).
+  * **A** is incorrect: slow query performance is an Efficiency (Time Behavior) issue.
+  * **C** is incorrect: testability issues belong to Maintainability, not Portability.
+  * **D** is incorrect: OS compatibility issues belong to Portability (Adaptability), not Usability.
+* [⬆ Return to Section 1.4](#14-what-defines-a-good-software-system-the-iso-9126-quality-model)
+
+---
+
+### CCQ 6 — Matching Engineering Actions to Core Activities
+* **Correct Answer**: **A** (Conducting stakeholder interviews to draft user stories $\rightarrow$ Software Specification)
+* **Explanation**: 
+  * **A** is correct: Eliciting and modeling requirements through stakeholder interviews is a direct action in Software Specification.
+  * **B** is incorrect: Writing automated unit tests belongs to Software Validation (specifically verification testing), not Design & Implementation.
+  * **C** is incorrect: Refactoring database schemas is a Software Evolution activity (preventive/perfective maintenance), not Validation.
+  * **D** is incorrect: Swapping APIs belongs to Design & Implementation (or Evolution), not Specification.
+* [⬆ Return to Section 1.6.3](#163-the-core-activities-of-the-software-engineering-process)
 
 ---
 
@@ -550,7 +672,7 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
 
 ---
 
-### CCQ 2 — Brooks's Law and Project Dynamics
+### CCQ 7 — Brooks's Law and Project Dynamics
 * **Correct Answer**: **B** (The project will be delayed even further because senior developers must stop coding to train and coordinate the new hires).
 * **Explanation**: Frederick Brooks demonstrated in *The Mythical Man-Month* that complex software tasks are not cleanly partitionable like manual labor (e.g., digging a ditch). When new engineers join a project in its final critical phase:
   1. Senior developers must context-switch away from coding to onboard and mentor the newcomers.
