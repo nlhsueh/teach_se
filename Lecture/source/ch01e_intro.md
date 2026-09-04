@@ -615,35 +615,53 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
 
 ## Appendix: Solutions & Explanations to Interactive Activities
 
+<!-- id: ase-ch01-ccq1 -->
 ### CCQ 1 — The First Software Engineering Conference
+
 * **Correct Answer**: **B** (1968)
 * **Explanation**: The NATO Science Committee convened a landmark conference in Garmisch, Germany, in October 1968, where the term "Software Engineering" was formally adopted to address the Software Crisis and establish engineering rigor for software.
 * [⬆ Return to Section 1.2](#12-the-genesis-of-software-engineering-and-the-software-crisis)
 
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq1)
+
 ---
 
+<!-- id: ase-ch01-ccq2 -->
 ### CCQ 2 — The Nature of the Software Crisis
+
 * **Correct Answer**: **B** (The crisis was a cognitive and organizational failure in managing system complexity, which faster hardware only amplified).
 * **Explanation**: Increasing hardware capacity allowed organizations to dream up systems of unprecedented scale. However, because human programmers were still using ad-hoc, informal techniques, larger codebases rapidly exceeded human intellectual limits. Faster CPU chips do not fix missing requirements, tangled spaghetti dependencies, or miscommunicated interface contracts.
 * [⬆ Return to Section 1.2](#12-the-genesis-of-software-engineering-and-the-software-crisis)
 
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq2)
+
 ---
 
+<!-- id: ase-ch01-ccq3 -->
 ### CCQ 3 — The IEEE Definition of Software
+
 * **Correct Answer**: **C** (CPU processor hardware and physical memory units)
 * **Explanation**: The IEEE standard defines software as computer programs, procedures, and possibly associated documentation and data. CPU hardware and physical memory are physical electronic devices (hardware) that execute software, rather than components of the software itself.
 * [⬆ Return to Section 1.3.1](#131-the-ieee-definition-of-software)
 
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq3)
+
 ---
 
+<!-- id: ase-ch01-ccq4 -->
 ### CCQ 4 — ISO 9126 Quality Characteristics
+
 * **Correct Answer**: **A** (Functionality, Reliability, Usability, Efficiency, Maintainability, Portability.)
 * **Explanation**: The ISO 9126 model defines exactly these six primary characteristics of software quality. Other attributes like Performance, Security, and Availability are either sub-characteristics under these primary categories (e.g., Security is under Functionality, Availability is under Reliability) or general engineering metrics.
 * [⬆ Return to Section 1.4](#14-what-defines-a-good-software-system-the-iso-9126-quality-model)
 
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq4)
+
 ---
 
+<!-- id: ase-ch01-ccq5 -->
 ### CCQ 5 — Matching Real-World Issues to Quality Factors
+
 * **Correct Answer**: **B** (A system crash occurring when a third-party API goes offline $\rightarrow$ Reliability (Fault Tolerance))
 * **Explanation**: 
   * **B** is correct: A system's ability to cope with external service failures without crashing is the definition of Fault Tolerance (a sub-characteristic of Reliability).
@@ -652,9 +670,13 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
   * **D** is incorrect: OS compatibility issues belong to Portability (Adaptability), not Usability.
 * [⬆ Return to Section 1.4](#14-what-defines-a-good-software-system-the-iso-9126-quality-model)
 
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq5)
+
 ---
 
+<!-- id: ase-ch01-ccq6 -->
 ### CCQ 6 — Matching Engineering Actions to Core Activities
+
 * **Correct Answer**: **A** (Conducting stakeholder interviews to draft user stories $\rightarrow$ Software Specification)
 * **Explanation**: 
   * **A** is correct: Eliciting and modeling requirements through stakeholder interviews is a direct action in Software Specification.
@@ -662,6 +684,8 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
   * **C** is incorrect: Refactoring database schemas is a Software Evolution activity (preventive/perfective maintenance), not Validation.
   * **D** is incorrect: Swapping APIs belongs to Design & Implementation (or Evolution), not Specification.
 * [⬆ Return to Section 1.6.3](#163-the-core-activities-of-the-software-engineering-process)
+
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq6)
 
 ---
 
@@ -672,12 +696,16 @@ A **Dark Pattern** is a user interface carefully crafted to trick users into doi
 
 ---
 
+<!-- id: ase-ch01-ccq7 -->
 ### CCQ 7 — Brooks's Law and Project Dynamics
+
 * **Correct Answer**: **B** (The project will be delayed even further because senior developers must stop coding to train and coordinate the new hires).
 * **Explanation**: Frederick Brooks demonstrated in *The Mythical Man-Month* that complex software tasks are not cleanly partitionable like manual labor (e.g., digging a ditch). When new engineers join a project in its final critical phase:
   1. Senior developers must context-switch away from coding to onboard and mentor the newcomers.
   2. The number of inter-personal communication channels increases quadratically according to $\frac{n(n-1)}{2}$.
 * [⬆ Return to Section 1.6.5](#165-dispelling-common-software-myths)
+
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq7)
 
 ---
 
