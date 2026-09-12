@@ -19,7 +19,7 @@ Welcome to the **Software Engineering** course repository maintained by **Prof. 
 ## 🎓 資訊多元專班 (大學部課程專區 — Undergraduate Track)
 
 ### 📋 課程大綱 (Syllabus)
-* **大綱投影片 PDF：** [📄 **點此下載 / 查看大綱 PDF (`syllabus115-1_under.pdf`)**](Slide/pdf-tw/syllabus115-1_under.pdf)
+* **大綱投影片 PDF：** [📄 **點此下載 / 查看大綱 PDF (`syllabus115-1_under.pdf`)**](syllabus115-1_under.pdf)
 * **大綱 Markdown 原始碼：** [📝 `syllabus115-1_under.md`](syllabus115-1_under.md)
 * **修課核心重點：**
   * **善用跨領域領域經驗 (Domain Knowledge)：** 鼓勵同學結合非資訊背景或職場經驗，針對真實世界痛點設計系統。
@@ -28,28 +28,28 @@ Welcome to the **Software Engineering** course repository maintained by **Prof. 
 
 ### 📚 專班專屬課程教材與講義表 (Course Materials)
 
-| 單元 | 課程主題與核心概念 | 繁體中文講義 (Lecture Notes) | 簡報投影片 (Slide Decks) |
-| :--- | :--- | :---: | :---: |
-| **第 1 單元** | **軟體工程導論 (Introduction to SE)**<br/>軟體危機、工程紀律、ISO 品質模型、軟體多元樣貌與專業倫理守則。 | [📝 中文講義](Lecture/tw/ch01t_intro.md) / [📄 PDF](Lecture/tw/ch01t_intro.pdf) | [📄 繁中投影片 PDF](Slide/pdf-tw/slide01t_intro.pdf) |
-| **第 2 單元** | **軟體流程與 AI 驅動開發 (Software Processes)**<br/>瀑布模型、疊代增量、CMMI、現代 AI 流程 (Spec-Driven AI, Vibe Coding)。 | [📝 英文講義](Lecture/en/ch02e_process.md) / [📄 PDF](Lecture/en/ch02e_process.pdf) | [📄 投影片 PDF](Slide/pdf-en/slide02e_process.pdf) |
-| **第 3 單元** | **敏捷軟體開發 (Agile Development)**<br/>敏捷宣言、極限編程 (XP)、Scrum 框架、使用者故事 (User Story) 與 TDD。 | [📝 中文講義](Lecture/tw/ch03t_agile.md) | [📄 投影片 PDF](Slide/pdf-en/slide03e_agile.pdf) |
-| **第 4 單元** | **需求工程 (Requirements Engineering)**<br/>功能性 vs. 非功能性需求規格、需求獲取與分析、使用案例 (Use Cases) 塑模。 | [📝 中文講義](Lecture/tw/ch04t_reqt.md) | [📄 投影片 PDF](Slide/pdf-en/slide04e_reqt.pdf) |
-| **第 5 單元** | **系統塑模 (System Modeling & UML)**<br/>UML 視角、使用案例圖、互動循序圖、類別圖與 AI 輔助塑模。 | [📝 中文講義](Lecture/tw/ch05t_model.md) | [📄 投影片 PDF](Slide/pdf-en/slide05e_model.pdf) |
-| **第 5a 單元** | **UML 使用案例圖深度剖析 (Use Case Diagrams)** | — | [📄 投影片 PDF](Slide/pdf-en/slide05ae_usecase.pdf) |
-| **第 5b 單元** | **UML 循序圖深度剖析 (Sequence Diagrams)** | — | [📄 投影片 PDF](Slide/pdf-en/slide05be_sequence.pdf) |
-| **第 5c 單元** | **UML 類別圖深度剖析 (Class Diagrams)** | — | [📄 投影片 PDF](Slide/pdf-en/slide05ce_class.pdf) |
-| **第 6a 單元** | **軟體架構設計 (Architectural Design)**<br/>4+1 視圖、MVC、分層式 (Layered)、微服務 (Microservices) 架構模式。 | [📝 中文講義](Lecture/tw/ch06t_arch.md) | [📄 投影片 PDF](Slide/pdf-en/slide06ae_arch.pdf) |
-| **第 6b 單元** | **軟體設計原則 (Design Principles & SOLID)**<br/>高內聚低耦合、SOLID 5 大設計原則、壞程式 vs. 好程式對比。 | — | [📄 投影片 PDF](Slide/pdf-en/slide06be_design.pdf) |
-| **第 7a 單元** | **軟體測試基礎概念與方法 (Testing Fundamentals)**<br/>驗證與確認 (V&V)、測試金字塔、回歸測試、單元測試自動化。 | [📝 中文講義](Lecture/tw/ch07t_testing.md) | [📄 投影片 PDF](Slide/pdf-en/slide07ae_testing.pdf) |
-| **第 7b 單元** | **黑箱測試技術 (Black-Box Testing)**<br/>等價劃分法 (EP)、邊界值分析 (BVA)、決策表與成對測試 (All-Pairs)。 | — | [📄 投影片 PDF](Slide/pdf-en/slide07be_blackbox.pdf) |
-| **第 7c 單元** | **白箱結構測試 (White-Box Testing)**<br/>陳述/分支/條件/路徑覆蓋率階層、MC/DC 安全規範與基本路徑測試。 | — | [📄 投影片 PDF](Slide/pdf-en/slide07ce_whitebox.pdf) |
+| 單元　　　　　 | 課程主題與核心概念　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | 繁體中文講義 (Lecture Notes)　　　　　　　　　　　　　　　　　　　　　　　　　　　　| 簡報投影片 (Slide Decks)　　　　　　　　　　　　　　 |
+| :---------------| :---------------------------------------------------------------------------------------------------------------------------| :-----------------------------------------------------------------------------------:| :----------------------------------------------------:|
+| **第 1 單元**　| **軟體工程導論 (Introduction to SE)**<br/>軟體危機、工程紀律、ISO 品質模型、軟體多元樣貌與專業倫理守則。　　　　　　　　　 | [📝 中文講義](Lecture/tw/ch01t_intro.md) / [📄 PDF](Lecture/tw/ch01t_intro.pdf)　　 | [📄 繁中投影片 PDF](Slide/pdf-tw/slide01t_intro.pdf) |
+| **第 2 單元**　| **軟體流程與 AI 驅動開發 (Software Processes)**<br/>瀑布模型、疊代增量、CMMI、現代 AI 流程 (Spec-Driven AI, Vibe Coding)。 | [📝 英文講義](Lecture/en/ch02e_process.md) / [📄 PDF](Lecture/en/ch02e_process.pdf) | [📄 投影片 PDF](Slide/pdf-en/slide02e_process.pdf)　 |
+| **第 3 單元**　| **敏捷軟體開發 (Agile Development)**<br/>敏捷宣言、極限編程 (XP)、Scrum 框架、使用者故事 (User Story) 與 TDD。　　　　　　 | [📝 中文講義](Lecture/tw/ch03t_agile.md)　　　　　　　　　　　　　　　　　　　　　　| [📄 投影片 PDF](Slide/pdf-en/slide03e_agile.pdf)　　 |
+| **第 4 單元**　| **需求工程 (Requirements Engineering)**<br/>功能性 vs. 非功能性需求規格、需求獲取與分析、使用案例 (Use Cases) 塑模。　　　 | [📝 中文講義](Lecture/tw/ch04t_reqt.md)　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide04e_reqt.pdf)　　　|
+| **第 5 單元**　| **系統塑模 (System Modeling & UML)**<br/>UML 視角、使用案例圖、互動循序圖、類別圖與 AI 輔助塑模。　　　　　　　　　　　　　| [📝 中文講義](Lecture/tw/ch05t_model.md)　　　　　　　　　　　　　　　　　　　　　　| [📄 投影片 PDF](Slide/pdf-en/slide05e_model.pdf)　　 |
+| **第 5a 單元** | **UML 使用案例圖深度剖析 (Use Case Diagrams)**　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | —　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide05ae_usecase.pdf)　|
+| **第 5b 單元** | **UML 循序圖深度剖析 (Sequence Diagrams)**　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | —　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide05be_sequence.pdf) |
+| **第 5c 單元** | **UML 類別圖深度剖析 (Class Diagrams)**　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　| —　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide05ce_class.pdf)　　|
+| **第 6a 單元** | **軟體架構設計 (Architectural Design)**<br/>4+1 視圖、MVC、分層式 (Layered)、微服務 (Microservices) 架構模式。　　　　　　 | [📝 中文講義](Lecture/tw/ch06t_arch.md)　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide06ae_arch.pdf)　　 |
+| **第 6b 單元** | **軟體設計原則 (Design Principles & SOLID)**<br/>高內聚低耦合、SOLID 5 大設計原則、壞程式 vs. 好程式對比。　　　　　　　　 | —　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide06be_design.pdf)　 |
+| **第 7a 單元** | **軟體測試基礎概念與方法 (Testing Fundamentals)**<br/>驗證與確認 (V&V)、測試金字塔、回歸測試、單元測試自動化。　　　　　　 | [📝 中文講義](Lecture/tw/ch07t_testing.md)　　　　　　　　　　　　　　　　　　　　　| [📄 投影片 PDF](Slide/pdf-en/slide07ae_testing.pdf)　|
+| **第 7b 單元** | **黑箱測試技術 (Black-Box Testing)**<br/>等價劃分法 (EP)、邊界值分析 (BVA)、決策表與成對測試 (All-Pairs)。　　　　　　　　 | —　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide07be_blackbox.pdf) |
+| **第 7c 單元** | **白箱結構測試 (White-Box Testing)**<br/>陳述/分支/條件/路徑覆蓋率階層、MC/DC 安全規範與基本路徑測試。　　　　　　　　　　 | —　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 | [📄 投影片 PDF](Slide/pdf-en/slide07ce_whitebox.pdf) |
 
 ---
 
 ## 🏛️ Graduate Seminar: Advanced Software Engineering — English (EMI) Track
 
 ### 📋 Course Syllabus
-* **Syllabus Slide Deck PDF:** [📄 **View / Download Syllabus PDF (`syllabus115-1_graduate.pdf`)**](Slide/pdf-en/syllabus115-1_graduate.pdf)
+* **Syllabus Slide Deck PDF:** [📄 **View / Download Syllabus PDF (`syllabus115-1_graduate.pdf`)**](syllabus115-1_graduate.pdf)
 * **Syllabus Markdown Source:** [📝 `syllabus115-1_graduate.md`](syllabus115-1_graduate.md)
 * **Pedagogical Pillars:**
   * **English-Medium Instruction (EMI):** Fostering global collaboration with international exchange students.
