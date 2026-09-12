@@ -2,8 +2,9 @@
 /Lecture/slides
 /Lecture/*.sh
 /Lecture/*.css
-/Video/*
-!/Video/handout*
+/Video/
+/Slide/source/
+/slide/source/
 client_secret*.json
 token.pickle
 /-hidden/
