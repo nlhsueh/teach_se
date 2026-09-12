@@ -11,7 +11,6 @@
 
 ---
 
-<a href="https://g.co/gemini/share/82f63f87854f"><img src="../../img/ch02/gemini_share_ch2.png" width="200"></a>
 
 ## 2.1 Software Process Models
 
