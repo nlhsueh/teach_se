@@ -5,6 +5,7 @@
 /Video/
 /Slide/source/
 /slide/source/
+*.pptx
 client_secret*.json
 token.pickle
 /-hidden/
@@ -31,3 +32,7 @@ Agents.md
 
 .github/
 /Papers/
+
+# Ignore syllabus markdown files (maintain locally, only publish PDFs to GitHub)
+syllabus*.md
+/syllabus*.md

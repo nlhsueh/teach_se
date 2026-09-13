@@ -20,7 +20,6 @@ Welcome to the **Software Engineering** course repository maintained by **Prof. 
 
 ### 📋 課程大綱 (Syllabus)
 * **大綱投影片 PDF：** [📄 **點此下載 / 查看大綱 PDF (`syllabus115-1_under.pdf`)**](syllabus115-1_under.pdf)
-* **大綱 Markdown 原始碼：** [📝 `syllabus115-1_under.md`](syllabus115-1_under.md)
 * **修課核心重點：**
   * **善用跨領域領域經驗 (Domain Knowledge)：** 鼓勵同學結合非資訊背景或職場經驗，針對真實世界痛點設計系統。
   * **三大專題成果：** 完整需求規格書 (SRS) + 系統架構設計書 (SDD) + 可運行的垂直切片系統雛形 (Working Prototype)。
@@ -50,7 +49,6 @@ Welcome to the **Software Engineering** course repository maintained by **Prof. 
 
 ### 📋 Course Syllabus
 * **Syllabus Slide Deck PDF:** [📄 **View / Download Syllabus PDF (`syllabus115-1_graduate.pdf`)**](syllabus115-1_graduate.pdf)
-* **Syllabus Markdown Source:** [📝 `syllabus115-1_graduate.md`](syllabus115-1_graduate.md)
 * **Pedagogical Pillars:**
   * **English-Medium Instruction (EMI):** Fostering global collaboration with international exchange students.
   * **Interactive CCQs:** Concept Check Questions with live real-time cloud polling.
