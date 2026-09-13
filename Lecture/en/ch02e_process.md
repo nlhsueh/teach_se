@@ -98,12 +98,12 @@ Think of it like a sculptor starting with a rough block of clay: each pass refin
 
 ### Incremental vs. Iterative: Key Differences
 
-| Dimension | Incremental Development | Iterative Development |
-| :--- | :--- | :--- |
-| **Primary Goal** | Adding new functional modules in successive steps. | Refining, improving, and polishing existing functionality. |
-| **Deliverables** | Each increment delivers an additional working subsystem. | Each iteration delivers an improved version of the whole system. |
-| **Management Focus** | Progressively expanding feature coverage according to a roadmap. | Exploring requirements, reducing technical risks, and enhancing quality. |
-| **Best Used When** | System modules can be cleanly decoupled and prioritized for delivery. | Requirements are ambiguous or market feedback is critical to product direction. |
+| Dimension            | Incremental Development                                               | Iterative Development                                                           |
+| :---------------------| :----------------------------------------------------------------------| :--------------------------------------------------------------------------------|
+| **Primary Goal**     | Adding new functional modules in successive steps.                    | Refining, improving, and polishing existing functionality.                      |
+| **Deliverables**     | Each increment delivers an additional working subsystem.              | Each iteration delivers an improved version of the whole system.                |
+| **Management Focus** | Progressively expanding feature coverage according to a roadmap.      | Exploring requirements, reducing technical risks, and enhancing quality.        |
+| **Best Used When**   | System modules can be cleanly decoupled and prioritized for delivery. | Requirements are ambiguous or market feedback is critical to product direction. |
 
 > 💡 **Key Takeaway**: *Incremental* focuses on delivering functional pieces early according to a planned roadmap; *Iterative* focuses on continuous enhancement and adaptation driven by user feedback.
 
