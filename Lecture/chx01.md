@@ -153,7 +153,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -176,7 +176,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -198,7 +198,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -220,7 +220,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -242,7 +242,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -264,7 +264,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -286,7 +286,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -308,7 +308,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -330,7 +330,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -352,7 +352,7 @@ E) Security
 F) Maintainability  
 G) Portability  
 H) Compatibility  
-Time: 20
+Time: 30
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
