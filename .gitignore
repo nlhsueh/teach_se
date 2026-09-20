@@ -38,3 +38,7 @@ Agents.md
 # Ignore syllabus markdown files (maintain locally, only publish PDFs to GitHub)
 syllabus*.md
 /syllabus*.md
+
+# Ignore scratch files
+/scratch/
+scratch/

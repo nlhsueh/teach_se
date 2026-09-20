@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 580" width="540" height="580">
+  <defs>
+    <filter id="boxShadow" x="-3%" y="-3%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- Background container -->
+  <rect x="0" y="0" width="540" height="580" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Header Section -->
+  <text x="270" y="32" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">The Agile Ecosystem Hierarchy</text>
+  <text x="270" y="50" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5" text-anchor="middle">How Philosophy, Management, Engineering &amp; Automation Co-exist</text>
+
+  <!-- LAYER 1: AGILE (Umbrella / Mindset) -->
+  <g transform="translate(25, 66)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="490" height="95" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+    <rect x="0" y="0" width="490" height="28" rx="10" fill="#2563eb"/>
+    <rect x="0" y="16" width="490" height="12" fill="#2563eb"/>
+    
+    <text x="20" y="19" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700">1. AGILE: The Overarching Philosophy &amp; Mindset</text>
+    <rect x="395" y="5" width="85" height="18" rx="4" fill="#1d4ed8"/>
+    <text x="437" y="17" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">UMBRELLA</text>
+    
+    <text x="20" y="46" fill="#1e40af" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600">Focus: Values, Principles &amp; Human Collaboration (Agile Manifesto 2001)</text>
+    <text x="20" y="64" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Working software over extensive documentation; individuals over processes.</text>
+    <text x="20" y="80" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Not a rigid step-by-step model, but an umbrella for adaptive methodologies.</text>
+  </g>
+
+  <!-- Connection Link -->
+  <path d="M 270 161 L 270 178" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3,3"/>
+  <polygon points="270,182 266,174 274,174" fill="#94a3b8"/>
+
+  <!-- LAYER 2: SCRUM (Management Wrapper) -->
+  <g transform="translate(25, 184)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="490" height="95" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <rect x="0" y="0" width="490" height="28" rx="10" fill="#16a34a"/>
+    <rect x="0" y="16" width="490" height="12" fill="#16a34a"/>
+    
+    <text x="20" y="19" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700">2. SCRUM: The Project Management Framework</text>
+    <rect x="380" y="5" width="100" height="18" rx="4" fill="#15803d"/>
+    <text x="430" y="17" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">MANAGEMENT</text>
+    
+    <text x="20" y="46" fill="#166534" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600">Focus: Roles, Events, Backlogs &amp; Delivery Cadences</text>
+    <text x="20" y="64" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Roles: Product Owner, Scrum Master, Developers | Events: Sprints, Retros.</text>
+    <text x="20" y="80" fill="#dc2626" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="600">⚠️ Note: Scrum does NOT prescribe technical engineering or coding practices!</text>
+  </g>
+
+  <!-- Connection Link -->
+  <path d="M 270 279 L 270 296" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3,3"/>
+  <polygon points="270,300 266,292 274,292" fill="#94a3b8"/>
+
+  <!-- LAYER 3: XP (Engineering Disciplines) -->
+  <g transform="translate(25, 302)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="490" height="95" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5"/>
+    <rect x="0" y="0" width="490" height="28" rx="10" fill="#d97706"/>
+    <rect x="0" y="16" width="490" height="12" fill="#d97706"/>
+    
+    <text x="20" y="19" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700">3. EXTREME PROGRAMMING (XP): Engineering Methodology</text>
+    <rect x="380" y="5" width="100" height="18" rx="4" fill="#b45309"/>
+    <text x="430" y="17" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">ENGINEERING</text>
+    
+    <text x="20" y="46" fill="#92400e" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600">Focus: Technical Excellence &amp; Daily Coding Disciplines</text>
+    <text x="20" y="64" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Test-Driven Development (TDD), Pair Programming, Continuous Refactoring.</text>
+    <text x="20" y="80" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Fills the technical void of Scrum; ensures high internal code quality.</text>
+  </g>
+
+  <!-- Connection Link -->
+  <path d="M 270 397 L 270 414" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3,3"/>
+  <polygon points="270,418 266,410 274,410" fill="#94a3b8"/>
+
+  <!-- LAYER 4: CI/CD (Automation Engine) -->
+  <g transform="translate(25, 420)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="490" height="95" rx="10" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1.5"/>
+    <rect x="0" y="0" width="490" height="28" rx="10" fill="#7c3aed"/>
+    <rect x="0" y="16" width="490" height="12" fill="#7c3aed"/>
+    
+    <text x="20" y="19" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700">4. CI/CD &amp; DEVOPS: Automated Toolchain &amp; Pipeline</text>
+    <rect x="380" y="5" width="100" height="18" rx="4" fill="#6d28d9"/>
+    <text x="430" y="17" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">AUTOMATION</text>
+    
+    <text x="20" y="46" fill="#6b21a8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="600">Focus: Continuous Verification &amp; Frictionless Deployment</text>
+    <text x="20" y="64" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Automated build, test, and containerized deployment on every Git push.</text>
+    <text x="20" y="80" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5">• Not a standalone process model; the technical engine that makes Agile flow.</text>
+  </g>
+
+  <!-- Bottom Synergy Banner -->
+  <rect x="25" y="528" width="490" height="36" rx="6" fill="#0f172a"/>
+  <text x="270" y="550" fill="#38bdf8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+    Agile = Mindset  |  Scrum = Management  |  XP = Engineering  |  CI/CD = Engine
+  </text>
+</svg>

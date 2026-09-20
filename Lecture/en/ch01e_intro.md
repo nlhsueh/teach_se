@@ -97,9 +97,6 @@ When software is built without engineering discipline, the consequences can be f
 <!-- id: ase-ch01-ccq1 -->
 #### 🙋 **Concept Check (CCQ 1) — The Software Crisis**
 
-
-
-
 **Question**
 
 Why couldn't the 1968 Software Crisis be resolved simply by purchasing faster computer hardware or larger memory?
@@ -108,6 +105,10 @@ Why couldn't the 1968 Software Crisis be resolved simply by purchasing faster co
 * B) The crisis was fundamentally an intellectual and organizational challenge of system complexity, which faster hardware only amplified.
 * C) Programming languages of that era strictly lacked mathematical calculation primitives and compiler memory allocation capabilities.
 * D) Early mainframe computers were physically incompatible with shared telecommunication networks and multi-terminal architectures.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq1)
+
+<img src="../../img/ch01/ase-ch01-ccq1.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -177,9 +178,6 @@ In production systems, **over 80% of total engineering effort, complexity, and c
 <!-- id: ase-ch01-ccq2 -->
 #### 🙋 **Concept Check (CCQ 2) — The IEEE Definition of Software**
 
-
-
-
 **Question**
 
 According to the IEEE standard definition of software, which of the following is NOT considered a component of software?
@@ -188,6 +186,10 @@ According to the IEEE standard definition of software, which of the following is
 * B) System database schemas and configuration files.
 * C) CPU processor hardware and physical memory units.
 * D) Software installation and deployment procedures.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq2)
+
+<img src="../../img/ch01/ase-ch01-ccq2.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -300,9 +302,6 @@ Regardless of whether a team follows Agile, Scrum, Kanban, or Waterfall, every s
 <!-- id: ase-ch01-ccq3 -->
 #### 🙋 **Concept Check (CCQ 3) — Core Universal Activities of the Software Process**
 
-
-
-
 **Question**
 
 Which of the following pairs correctly matches a specific software engineering action with its corresponding universal core activity?
@@ -311,6 +310,10 @@ Which of the following pairs correctly matches a specific software engineering a
 * B) Writing automated unit tests to mock database responses $\rightarrow$ Software Design & Implementation
 * C) Refactoring database schemas to improve query speed $\rightarrow$ Software Validation
 * D) Swapping a third-party payment API for a new gateway $\rightarrow$ Software Specification
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq3)
+
+<img src="../../img/ch01/ase-ch01-ccq3.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -361,9 +364,6 @@ When engineering principles are ignored, intuition leads to expensive fallacies:
 <!-- id: ase-ch01-ccq4 -->
 #### 🙋 **Concept Check (CCQ 4) — Brooks's Law and Project Dynamics**
 
-
-
-
 **Question**
 
 A project is 3 weeks behind schedule with 2 weeks remaining before release. The manager hires 4 junior programmers to speed up progress. What will happen according to Brooks's Law?
@@ -372,6 +372,10 @@ A project is 3 weeks behind schedule with 2 weeks remaining before release. The 
 * B) The project will be delayed further because senior engineers must spend time onboarding and mentoring new hires.
 * C) The existing developers will code twice as fast.
 * D) Communication complexity remains unchanged.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq4)
+
+<img src="../../img/ch01/ase-ch01-ccq4.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -387,9 +391,6 @@ Explanation: Frederick Brooks demonstrated in The Mythical Man-Month that comple
 <!-- id: ase-ch01-ccq5 -->
 #### 🙋 **Concept Check (CCQ 5) — Fundamental Design Principles**
 
-
-
-
 **Question**
 
 An order-processing module directly handles HTTP requests, executes payment transactions, queries the SQL database, and generates HTML receipt emails. Which fundamental design principle is most severely violated?
@@ -398,6 +399,10 @@ An order-processing module directly handles HTTP requests, executes payment tran
 * B) YAGNI: Speculative future features are implemented before actual business requirements emerge.
 * C) Brooks's Law: Adding developers to the order module increases communication complexity exponentially.
 * D) Anticipation of Change: System configurations are hardcoded into compiled production binaries.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq5)
+
+<img src="../../img/ch01/ase-ch01-ccq5.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -475,9 +480,6 @@ ISO/IEC 25010 (Software product Quality Requirements and Evaluation) superseded 
 <!-- id: ase-ch01-ccq6 -->
 #### 🙋 **Concept Check (CCQ 6) — Matching Real-World Issues to ISO 25010 Quality Characteristics**
 
-
-
-
 **Question**
 
 Which of the following matches a real-world software issue with its corresponding ISO 25010 quality characteristic?
@@ -486,6 +488,10 @@ Which of the following matches a real-world software issue with its correspondin
 * B) A system crash occurring when a third-party API goes offline $\rightarrow$ Reliability (Fault Tolerance)
 * C) Developers struggling to write unit tests due to tight coupling $\rightarrow$ Portability (Adaptability)
 * D) An unencrypted session cookie allowing account takeover $\rightarrow$ Usability (Operability)
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq6)
+
+<img src="../../img/ch01/ase-ch01-ccq6.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -546,9 +552,6 @@ A **Dark Pattern** is a user interface maliciously crafted to trick or coerce us
 <!-- id: ase-ch01-ccq7 -->
 #### 🙋 **Concept Check (CCQ 7) — Engineering Ethics and the Public Interest**
 
-
-
-
 **Question**
 
 Under the ACM/IEEE Code of Ethics, if an employer directs an engineer to implement an algorithm that falsifies safety compliance reports, what is the engineer's obligation?
@@ -557,6 +560,10 @@ Under the ACM/IEEE Code of Ethics, if an employer directs an engineer to impleme
 * B) Refuse and escalate, because the Public Interest takes precedence over Employer loyalty.
 * C) Implement the code but omit documentation.
 * D) Outsource the code to an external vendor.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq7)
+
+<img src="../../img/ch01/ase-ch01-ccq7.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -631,9 +638,6 @@ AI is not a hazard to be rejected; when governed with engineering discipline, it
 <!-- id: ase-ch01-ccq8 -->
 #### 🙋 **Concept Check (CCQ 8) — AI Coding & Code Churn**
 
-
-
-
 **Question**
 
 In empirical studies evaluating AI coding assistants (such as GitClear's analysis of 150M lines of code), "Code Churn" emerged as a major warning sign. What does high Code Churn indicate in an AI-assisted codebase?
@@ -642,6 +646,10 @@ In empirical studies evaluating AI coding assistants (such as GitClear's analysi
 * B) Compilers and bundlers are aggressively removing unreachable dead code from application binaries during automated deployment.
 * C) Software engineering teams are switching programming languages frequently due to automated polyglot syntax translation.
 * D) Automated test cases are executing too quickly and depleting available CI/CD pipeline virtual machine compute resources.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq8)
+
+<img src="../../img/ch01/ase-ch01-ccq8.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -657,9 +665,6 @@ Explanation: Code churn measures the percentage of code that is modified, replac
 <!-- id: ase-ch01-ccq9 -->
 #### 🙋 **Concept Check (CCQ 9) — AI Verification & Echo-Chamber Testing**
 
-
-
-
 **Question**
 
 An engineer prompts an AI to generate a complex payment calculation module, and then asks the same AI to write unit tests without providing a formal specification. All tests pass. What is the primary risk?
@@ -668,6 +673,10 @@ An engineer prompts an AI to generate a complex payment calculation module, and 
 * B) Performance bottleneck: AI-generated test assertions take significantly longer to execute than human-written assertions.
 * C) Compilation failure: Testing frameworks cannot parse automated mock datasets generated by large language models.
 * D) Version lock-in: The test suite becomes tightly coupled to a single specific cloud runtime environment.
+
+[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq9)
+
+<img src="../../img/ch01/ase-ch01-ccq9.png" width="120">
 
 <details>
 <summary>Click to view Answer & Explanation</summary>

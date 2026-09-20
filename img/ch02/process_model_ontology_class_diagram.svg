@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <defs>
+    <filter id="cardShdw" x="-4%" y="-6%" width="108%" height="116%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+    <!-- Generalization triangle (hollow) -->
+    <marker id="generalize" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <polygon points="1,2 12,7 1,12" fill="#ffffff" stroke="#334155" stroke-width="1.8"/>
+    </marker>
+    <!-- Standard arrows -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#475569" stroke-width="1.8"/>
+    </marker>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+    </marker>
+    <marker id="greenArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#16a34a" stroke-width="1.8"/>
+    </marker>
+    <marker id="purpleArrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#7c3aed" stroke-width="1.8"/>
+    </marker>
+    <marker id="synergyStart" markerWidth="10" markerHeight="10" refX="2" refY="5" orient="auto">
+      <path d="M 8 1 L 0 5 L 8 9" fill="none" stroke="#d97706" stroke-width="1.8"/>
+    </marker>
+    <marker id="synergyEnd" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 1 L 8 5 L 0 9" fill="none" stroke="#d97706" stroke-width="1.8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="960" height="540" fill="#f8fafc"/>
+
+  <!-- Top Title Banner -->
+  <rect x="25" y="14" width="910" height="42" rx="8" fill="#0f172a"/>
+  <text x="480" y="33" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    Software Engineering Process Metamodel: Conceptual Class Diagram
+  </text>
+  <text x="480" y="47" fill="#94a3b8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" text-anchor="middle">
+    Domain Entities: Philosophy, Process Models, Management Frameworks, Engineering Methodologies &amp; Toolchains
+  </text>
+
+  <!-- ==================== LEFT COLUMN: PROCESS & MODELS ==================== -->
+
+  <!-- SoftwareProcess (Entity only) -->
+  <g transform="translate(35, 75)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="210" height="45" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+    <text x="105" y="28" fill="#0369a1" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">SoftwareProcess</text>
+  </g>
+
+  <!-- Association: SoftwareProcess is governed by SoftwareProcessModel -->
+  <line x1="140" y1="120" x2="140" y2="170" stroke="#475569" stroke-width="1.8"/>
+  <text x="148" y="149" fill="#475569" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold">governed by ▼</text>
+  <text x="124" y="133" fill="#475569" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9">1..*</text>
+  <text x="126" y="164" fill="#475569" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9">1</text>
+
+  <!-- SoftwareProcessModel (Abstract Entity only) -->
+  <g transform="translate(35, 170)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="210" height="45" rx="6" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="105" y="28" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="bold" font-style="italic" text-anchor="middle">SoftwareProcessModel</text>
+  </g>
+
+  <!-- Generalization Fork from SoftwareProcessModel -->
+  <path d="M 140 215 L 140 248 M 76 248 L 204 248 M 76 248 L 76 270 M 204 248 L 204 270" stroke="#334155" stroke-width="1.8" fill="none" marker-start="url(#generalize)"/>
+
+  <!-- Subclass 1: PlanDrivenModel (Entity only) -->
+  <g transform="translate(20, 270)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="112" height="40" rx="6" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.8"/>
+    <text x="56" y="25" fill="#0369a1" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">PlanDrivenModel</text>
+  </g>
+
+  <!-- Subclass 2: EvolutionaryModel (Entity only) -->
+  <g transform="translate(148, 270)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="112" height="40" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+    <text x="56" y="25" fill="#b45309" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">EvolutionaryModel</text>
+  </g>
+
+  <!-- ==================== CENTER COLUMN: AGILE, SCRUM & XP ==================== -->
+
+  <!-- AgileMindset (Entity only) -->
+  <g transform="translate(315, 75)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="335" height="45" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="167" y="28" fill="#1d4ed8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="bold" text-anchor="middle">AgileMindset</text>
+  </g>
+
+  <!-- Association: AgileMindset guides SoftwareProcessModel -->
+  <path d="M 315 97 L 270 97 L 270 192 L 245 192" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#blueArrow)"/>
+  <text x="274" y="148" fill="#2563eb" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold">guides ▼</text>
+
+  <!-- Line from AgileMindset down to Scrum -->
+  <line x1="390" y1="120" x2="390" y2="170" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#blueArrow)"/>
+  <text x="396" y="149" fill="#2563eb" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold">embodies ▼</text>
+
+  <!-- Line from AgileMindset down to XP -->
+  <line x1="575" y1="120" x2="575" y2="170" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#blueArrow)"/>
+  <text x="581" y="149" fill="#2563eb" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold">embodies ▼</text>
+
+  <!-- Scrum (Entity only) -->
+  <g transform="translate(315, 170)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="150" height="45" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    <text x="75" y="28" fill="#15803d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Scrum</text>
+  </g>
+
+  <!-- ExtremeProgramming (Entity only) -->
+  <g transform="translate(500, 170)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="150" height="45" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+    <text x="75" y="28" fill="#b45309" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="bold" text-anchor="middle">ExtremeProgramming</text>
+  </g>
+
+  <!-- Synergy Link between Scrum & XP -->
+  <line x1="465" y1="192" x2="500" y2="192" stroke="#d97706" stroke-width="2" stroke-dasharray="3,3" marker-start="url(#synergyStart)" marker-end="url(#synergyEnd)"/>
+  <rect x="454" y="176" width="56" height="15" rx="3" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="482" y="187" fill="#b45309" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">Synergy</text>
+
+  <!-- Scrum manages SoftwareProcess -->
+  <path d="M 315 200 L 280 200 L 280 102 L 245 102" fill="none" stroke="#16a34a" stroke-width="1.8" marker-end="url(#greenArrow)"/>
+  <text x="284" y="130" fill="#16a34a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="bold">manages workflow ◄</text>
+
+  <!-- ==================== RIGHT COLUMN: DEVOPS & SPEC-DRIVEN AI ==================== -->
+
+  <!-- DevOpsMovement (Entity only) -->
+  <g transform="translate(690, 75)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="235" height="45" rx="6" fill="#faf5ff" stroke="#9333ea" stroke-width="2"/>
+    <text x="117" y="28" fill="#6b21a8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">DevOpsMovement</text>
+  </g>
+
+  <!-- Downward arrow from DevOps to SpecDrivenAI / CICD -->
+  <line x1="807" y1="120" x2="807" y2="170" stroke="#9333ea" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#purpleArrow)"/>
+  <text x="813" y="149" fill="#9333ea" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="bold">influences ▼</text>
+
+  <!-- SpecDrivenAI (Entity only) -->
+  <g transform="translate(690, 170)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="235" height="45" rx="6" fill="#fdf4ff" stroke="#c026d3" stroke-width="2"/>
+    <text x="117" y="28" fill="#86198f" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">SpecDrivenAI</text>
+  </g>
+
+  <!-- ==================== LOWER LEVEL: AUTOMATION ENGINE ==================== -->
+
+  <!-- CICD_Pipeline (Entity only) -->
+  <g transform="translate(315, 270)" filter="url(#cardShdw)">
+    <rect x="0" y="0" width="610" height="42" rx="6" fill="#f8fafc" stroke="#7c3aed" stroke-width="2"/>
+    <text x="305" y="26" fill="#581c87" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">CICD_Pipeline</text>
+  </g>
+
+  <!-- Line from XP down to CICD -->
+  <line x1="575" y1="215" x2="575" y2="270" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text x="581" y="247" fill="#d97706" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="bold">automated by ▼</text>
+
+  <!-- Line from SpecDrivenAI down to CICD -->
+  <line x1="807" y1="215" x2="807" y2="270" stroke="#c026d3" stroke-width="1.8" marker-end="url(#purpleArrow)"/>
+  <text x="813" y="247" fill="#c026d3" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="bold">verified by ▼</text>
+
+  <!-- Line from CICD left to SoftwareProcess -->
+  <path d="M 315 291 L 292 291 L 292 114 L 245 114" fill="none" stroke="#7c3aed" stroke-width="1.8" marker-end="url(#purpleArrow)"/>
+  <text x="296" y="235" fill="#7c3aed" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8.5" font-weight="bold">automates &amp; deploys ◄</text>
+
+  <!-- ==================== BOTTOM SYNERGY BANNER ==================== -->
+  <rect x="25" y="355" width="910" height="85" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  
+  <text x="480" y="382" fill="#38bdf8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">
+    Core Architectural Takeaway: Four Complementary Dimensions
+  </text>
+
+  <g transform="translate(45, 398)">
+    <!-- Box 1 -->
+    <rect x="0" y="0" width="200" height="30" rx="5" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+    <text x="100" y="19" fill="#93c5fd" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Agile = Mindset &amp; Values</text>
+    
+    <text x="212" y="20" fill="#64748b" font-size="14" font-weight="bold">+</text>
+    
+    <!-- Box 2 -->
+    <rect x="225" y="0" width="205" height="30" rx="5" fill="#1e293b" stroke="#16a34a" stroke-width="1.2"/>
+    <text x="327" y="19" fill="#86efac" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Scrum = Management Wrapper</text>
+    
+    <text x="442" y="20" fill="#64748b" font-size="14" font-weight="bold">+</text>
+    
+    <!-- Box 3 -->
+    <rect x="455" y="0" width="205" height="30" rx="5" fill="#1e293b" stroke="#d97706" stroke-width="1.2"/>
+    <text x="557" y="19" fill="#fde68a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">XP = Engineering Disciplines</text>
+    
+    <text x="672" y="20" fill="#64748b" font-size="14" font-weight="bold">+</text>
+    
+    <!-- Box 4 -->
+    <rect x="685" y="0" width="185" height="30" rx="5" fill="#1e293b" stroke="#9333ea" stroke-width="1.2"/>
+    <text x="777" y="19" fill="#d8b4fe" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">CI/CD = Automation Engine</text>
+  </g>
+
+  <!-- Legend at very bottom -->
+  <text x="480" y="472" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" text-anchor="middle">
+    Notation: Solid arrows denote structural/operational relationships; Dashed arrows denote philosophy &amp; governance.
+  </text>
+  <text x="480" y="488" fill="#94a3b8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" text-anchor="middle">
+    They are NOT competing process models — they occupy distinct, cooperative layers in modern software engineering.
+  </text>
+</svg>

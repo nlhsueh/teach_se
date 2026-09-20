@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540">
+  <!-- Slide background matching #f5f5f5 -->
+  <rect x="0" y="0" width="960" height="540" fill="#f5f5f5"/>
+
+  <!-- Title -->
+  <text x="480" y="44" fill="#0b3c5d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Diagnosing the Difference: Incremental vs. Iterative</text>
+  <text x="480" y="68" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" text-anchor="middle">A side-by-side comparison of strategic focus, deliverables, risk profiles, and engineering feedback</text>
+
+  <!-- Table Container -->
+  <g transform="translate(60, 95)">
+    <!-- Header Row -->
+    <!-- Dimension Header -->
+    <rect x="0" y="0" width="170" height="46" rx="8" fill="#0b3c5d"/>
+    <text x="85" y="28" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Dimension</text>
+
+    <!-- Incremental Header -->
+    <rect x="185" y="0" width="320" height="46" rx="8" fill="#0284c7"/>
+    <text x="345" y="28" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Incremental Development</text>
+
+    <!-- Iterative Header -->
+    <rect x="520" y="0" width="320" height="46" rx="8" fill="#d97706"/>
+    <text x="680" y="28" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">Iterative Development</text>
+
+    <!-- ROW 1: Strategic Focus -->
+    <g transform="translate(0, 56)">
+      <!-- Label Box -->
+      <rect x="0" y="0" width="170" height="74" rx="6" fill="#e2e8f0"/>
+      <text x="85" y="34" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Strategic</text>
+      <text x="85" y="52" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Focus</text>
+
+      <!-- Incremental Card -->
+      <rect x="185" y="0" width="320" height="74" rx="6" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+      <text x="205" y="26" fill="#0284c7" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold">Early Delivery &amp; Functional Growth</text>
+      <text x="205" y="46" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">Adding new, distinct functional modules in</text>
+      <text x="205" y="62" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">prioritized sequential increments.</text>
+
+      <!-- Iterative Card -->
+      <rect x="520" y="0" width="320" height="74" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+      <text x="540" y="26" fill="#d97706" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold">Refinement &amp; Quality Depth</text>
+      <text x="540" y="46" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">Revising and deepening existing features</text>
+      <text x="540" y="62" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">based on continuous stakeholder feedback.</text>
+    </g>
+
+    <!-- ROW 2: Primary Deliverable -->
+    <g transform="translate(0, 138)">
+      <!-- Label Box -->
+      <rect x="0" y="0" width="170" height="74" rx="6" fill="#e2e8f0"/>
+      <text x="85" y="34" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Primary</text>
+      <text x="85" y="52" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Deliverable</text>
+
+      <!-- Incremental Card -->
+      <rect x="185" y="0" width="320" height="74" rx="6" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+      <text x="205" y="26" fill="#0284c7" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold">Deployable Functional Slices</text>
+      <text x="205" y="46" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">Fully finished, usable subsets of the system</text>
+      <text x="205" y="62" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">that expand operational system scope.</text>
+
+      <!-- Iterative Card -->
+      <rect x="520" y="0" width="320" height="74" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+      <text x="540" y="26" fill="#d97706" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold">Successive System Versions</text>
+      <text x="540" y="46" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">Cycles of polish, architectural hardening,</text>
+      <text x="540" y="62" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">and UX refinement across the whole system.</text>
+    </g>
+
+    <!-- ROW 3: Risk Addressed -->
+    <g transform="translate(0, 220)">
+      <!-- Label Box -->
+      <rect x="0" y="0" width="170" height="74" rx="6" fill="#e2e8f0"/>
+      <text x="85" y="34" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Risk</text>
+      <text x="85" y="52" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Mitigation</text>
+
+      <!-- Incremental Card -->
+      <rect x="185" y="0" width="320" height="74" rx="6" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+      <text x="205" y="26" fill="#0284c7" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold">Time-to-Market &amp; Scope Risk</text>
+      <text x="205" y="46" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">Prevents project abandonment by delivering</text>
+      <text x="205" y="62" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">tangible business value in early releases.</text>
+
+      <!-- Iterative Card -->
+      <rect x="520" y="0" width="320" height="74" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+      <text x="540" y="26" fill="#d97706" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold">Architecture &amp; Usability Risk</text>
+      <text x="540" y="46" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">De-risks complex integration and wrong user</text>
+      <text x="540" y="62" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11.5">assumptions via rapid empirical validation.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Takeaway Banner -->
+  <g transform="translate(60, 470)">
+    <rect x="0" y="0" width="840" height="46" rx="8" fill="#ffffff" stroke="#0b3c5d" stroke-width="1.5"/>
+    <text x="420" y="22" fill="#0b3c5d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">
+      Incremental progressively delivers the system in parts. Iterative iteratively refines the whole.
+    </text>
+    <text x="420" y="38" fill="#16a34a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">
+      ★ Modern Software Engineering Synergizes Both: Deliver an MVP early, then iterate and increment concurrently!
+    </text>
+  </g>
+</svg>

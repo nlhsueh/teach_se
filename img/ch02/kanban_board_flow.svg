@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="960" height="480">
+  <defs>
+    <filter id="kCardShdw" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+    <marker id="kArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 1 L 6 4 L 0 7" fill="none" stroke="#2563eb" stroke-width="1.8"/>
+    </marker>
+    <marker id="kLeadArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 1 L 6 4 L 0 7" fill="none" stroke="#7c3aed" stroke-width="1.8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="960" height="480" fill="#f8fafc"/>
+
+  <!-- Top Title Banner -->
+  <rect x="30" y="15" width="900" height="45" rx="8" fill="#0f172a"/>
+  <text x="480" y="36" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">
+    The Kanban System: Visual Work, Pull-Based Flow &amp; WIP Limits
+  </text>
+  <text x="480" y="51" fill="#94a3b8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" text-anchor="middle">
+    "Stop Starting, Start Finishing" — Visualizing bottlenecks and optimizing delivery throughput
+  </text>
+
+  <!-- ==================== KANBAN BOARD COLUMNS ==================== -->
+  
+  <!-- Column 1: Backlog / To Do -->
+  <g transform="translate(30, 75)">
+    <rect x="0" y="0" width="205" height="310" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="205" height="36" rx="8" fill="#f1f5f9"/>
+    <rect x="0" y="24" width="205" height="12" fill="#f1f5f9"/>
+    <text x="102" y="23" fill="#334155" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">1. To Do / Backlog</text>
+    <text x="190" y="23" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="end">(4)</text>
+
+    <!-- Card 1 -->
+    <g transform="translate(10, 48)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#3b82f6"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#104: Stripe Webhook</text>
+      <text x="14" y="38" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Backend · Est: 3 pts</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(10, 110)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#10b981"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#105: Checkout Modal</text>
+      <text x="14" y="38" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Frontend · Est: 2 pts</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(10, 172)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#f59e0b"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#106: Email Receipt PDF</text>
+      <text x="14" y="38" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Service · Est: 5 pts</text>
+    </g>
+  </g>
+
+  <!-- Column 2: In Progress (WIP: 3) -->
+  <g transform="translate(255, 75)">
+    <rect x="0" y="0" width="215" height="310" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.8"/>
+    <rect x="0" y="0" width="215" height="36" rx="8" fill="#dbeafe"/>
+    <rect x="0" y="24" width="215" height="12" fill="#dbeafe"/>
+    <text x="95" y="23" fill="#1d4ed8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">2. In Progress</text>
+    <rect x="150" y="8" width="55" height="20" rx="10" fill="#2563eb"/>
+    <text x="177" y="22" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">WIP: 3</text>
+
+    <!-- Card 1 -->
+    <g transform="translate(15, 48)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#3b82f6"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#101: OAuth2 Login</text>
+      <text x="14" y="38" fill="#2563eb" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Dev: Alice · Day 2</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(15, 110)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#ec4899"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#102: Order API Schema</text>
+      <text x="14" y="38" fill="#2563eb" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Dev: Bob · Day 1</text>
+    </g>
+
+    <!-- Capacity indicator -->
+    <rect x="15" y="172" width="185" height="42" rx="6" fill="#f8fafc" stroke="#93c5fd" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="107" y="197" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-style="italic" text-anchor="middle">+ 1 Slot Available</text>
+  </g>
+
+  <!-- Column 3: Code Review & Test (WIP: 2) - Bottleneck -->
+  <g transform="translate(490, 75)">
+    <rect x="0" y="0" width="215" height="310" rx="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.8"/>
+    <rect x="0" y="0" width="215" height="36" rx="8" fill="#fee2e2"/>
+    <rect x="0" y="24" width="215" height="12" fill="#fee2e2"/>
+    <text x="90" y="23" fill="#b91c1c" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">3. Code Review</text>
+    <rect x="148" y="8" width="57" height="20" rx="10" fill="#dc2626"/>
+    <text x="176" y="22" fill="#ffffff" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">WIP: 2/2</text>
+
+    <!-- Card 1 -->
+    <g transform="translate(15, 48)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#ef4444"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#99: Cart Sync Fix</text>
+      <text x="14" y="38" fill="#dc2626" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Reviewer: Carol · Waiting</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(15, 110)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#fecaca" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#ef4444"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#100: Auth JWT Cache</text>
+      <text x="14" y="38" fill="#dc2626" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Reviewer: Dave · Blocked</text>
+    </g>
+
+    <!-- WIP Warning Banner -->
+    <rect x="15" y="172" width="185" height="38" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+    <text x="107" y="195" fill="#991b1b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="bold" text-anchor="middle">⚠️ At WIP Limit: Pull Blocked!</text>
+  </g>
+
+  <!-- Column 4: Done (Released) -->
+  <g transform="translate(725, 75)">
+    <rect x="0" y="0" width="205" height="310" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+    <rect x="0" y="0" width="205" height="36" rx="8" fill="#dcfce7"/>
+    <rect x="0" y="24" width="205" height="12" fill="#dcfce7"/>
+    <text x="102" y="23" fill="#15803d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">4. Done (Deployed)</text>
+    <text x="190" y="23" fill="#166534" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="end">✓</text>
+
+    <!-- Card 1 -->
+    <g transform="translate(10, 48)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#22c55e"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#97: Product Catalog v1</text>
+      <text x="14" y="38" fill="#15803d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Deployed to Prod ✓</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(10, 110)" filter="url(#kCardShdw)">
+      <rect x="0" y="0" width="185" height="52" rx="6" fill="#ffffff" stroke="#bbf7d0" stroke-width="1.2"/>
+      <rect x="0" y="0" width="6" height="52" rx="3" fill="#22c55e"/>
+      <text x="14" y="20" fill="#1e293b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="bold">#98: User Registration</text>
+      <text x="14" y="38" fill="#15803d" font-family="'Helvetica Neue', Arial, sans-serif" font-size="9.5">Deployed to Prod ✓</text>
+    </g>
+  </g>
+
+  <!-- ==================== FLOW METRICS BANNERS ==================== -->
+  
+  <!-- Cycle Time Bracket (In Progress to Done) -->
+  <path d="M 255 402 L 930 402" stroke="#2563eb" stroke-width="2" marker-end="url(#kArrow)"/>
+  <rect x="520" y="392" width="150" height="20" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="595" y="406" fill="#1d4ed8" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">
+    Cycle Time (Active Work)
+  </text>
+
+  <!-- Lead Time Bracket (Backlog to Done) -->
+  <path d="M 30 435 L 930 435" stroke="#7c3aed" stroke-width="2" marker-end="url(#kLeadArrow)"/>
+  <rect x="420" y="425" width="170" height="20" rx="4" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="505" y="439" fill="#6d28d9" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="bold" text-anchor="middle">
+    Lead Time (Clock Time to Value)
+  </text>
+
+  <!-- Footer Explanation -->
+  <text x="480" y="468" fill="#64748b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="10" text-anchor="middle">
+    Pull System Rule: Upstream stages cannot push work until downstream stages have available WIP capacity.
+  </text>
+</svg>
