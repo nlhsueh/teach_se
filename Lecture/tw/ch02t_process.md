@@ -9,7 +9,7 @@
 > * **2.6 速度背後的隱形成本 — 技術債 (Technical Debt)**：Ward Cunningham 金融借貸隱喻、技術債本金 vs. 複利利息、技術債四象限、Martin Fowler 的「疲軟 Scrum」嚴正警告，以及軟體架構侵蝕的四部曲。
 > * **2.7 卓越技術紀律 — 極限編程 (Extreme Programming · XP)**：Kent Beck 將優良實踐推向極致的工程哲學、測試驅動開發 (TDD) 紅-綠-重構循環、持續重構技術、Kent Beck 簡單設計四大原則、結對編程 (Pair Programming) 駕駛員與領航員之動態協同、消除巴士係數與集體程式碼所有權。
 > * **2.8 系統架構與協同文化 — DevOps**：推倒開發 (Dev) 與維運 (Ops) 之間的「混亂之牆」、CALMS 文化框架、主幹開發與持續整合 (CI) 自動化流水線、持續交付 (Continuous Delivery) vs. 持續部署 (Continuous Deployment) 之業務決策邊界、基礎設施即程式碼 (IaC)、生產可觀測性三支柱，以及 Google DORA 四大研發效能與穩定度度量指標。
-> * **2.9 現代新前沿 — AI 規格驅動流程 (AI Spec-Driven Engineering)**：生成式 AI 時代的生產力轉移、隨性「感覺編程 (Vibe Coding)」引發的代碼流失陷阱、感覺編程 vs. 規格驅動 AI 之全景維度對照表、代理人回饋迴路三部曲 (形式化規格 $ightarrow$ 代理人安全沙盒實作 $ightarrow$ 確定性自動化驗證守門員)，以及 AI 軟體工程四大黃金法則。
+> * **2.9 現代新前沿 — AI 規格驅動流程 (AI Spec-Driven Engineering)**：生成式 AI 時代的生產力轉移、隨性「感覺編程 (Vibe Coding)」引發的代碼流失陷阱、感覺編程 vs. 規格驅動 AI 之全景維度對照表、代理人回饋迴路三部曲 (形式化規格 $\rightarrow$ 代理人安全沙盒實作 $\rightarrow$ 確定性自動化驗證守門員)，以及 AI 軟體工程四大黃金法則。
 > * **2.10 重點總結、填空測驗與經典文獻**：本章核心觀念全景盤點、10 道精選填空自我檢測、常見實務問答 (FAQ)，以及五大傳世巨著推薦。
 > * **附錄：14 道課堂互動觀念檢測 (CCQ 1～14) 題目、解析與答案匯總**。
 
@@ -186,7 +186,7 @@
 * C) 在執行過程中完全消除了元件測試與系統整合測試的需求。
 * D) 無法在跨國多據點的大型軟體工程組織中進行團隊協同。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq1)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq1)
 
 <img src="../../img/ch02/ase-ch02-ccq1.png" width="120">
 
@@ -261,7 +261,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 完全消除了對詳細架構設計文件與介面合約的依賴。
 * D) 允許客戶在實作編程階段隨意動態變更需求且完全不衍生額外成本。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq2)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq2)
 
 <img src="../../img/ch02/ase-ch02-ccq2.png" width="120">
 
@@ -350,7 +350,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 ![Henrik Kniberg MVP 演進全圖漫畫](../../img/ch02/comic_combined_model.jpg)
 
-*圖 2.3.4：Henrik Kniberg 著名的 MVP 隱喻。上方為錯誤的反模式（一顆孤立的輪子無法提供位移價值）；下方為真正的 MVP 演進（滑板 $ightarrow$ 滑板車 $ightarrow$ 腳踏車 $ightarrow$ 機車 $ightarrow$ 汽車），從第一天起解決移動痛點，全程獲取實證反饋。*
+*圖 2.3.4：Henrik Kniberg 著名的 MVP 隱喻。上方為錯誤的反模式（一顆孤立的輪子無法提供位移價值）；下方為真正的 MVP 演進（滑板 $\rightarrow$ 滑板車 $\rightarrow$ 腳踏車 $\rightarrow$ 機車 $\rightarrow$ 汽車），從第一天起解決移動痛點，全程獲取實證反饋。*
 
 * **上方橫列 (反模式：組件拼貼)：** 客戶期望一輛汽車。第 1 階段給他一顆車輪；第 2 階段給他兩顆車輪與一根輪軸；第 3 階段給他汽車底盤。在漫長等待的前三階段，客戶完全無法位移，感到無比憤怒與沮喪。
 * **下方橫列 (真正的 MVP 演進)：** 客戶的根本痛點是「從 A 點快速移動到 B 點」。
@@ -400,7 +400,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 增量由專案經理負責主導；疊代完全由外部監管機構決策。
 * D) 增量嚴格遵循瀑布規範；疊代完全不產生任何工程文檔。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq3)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq3)
 
 <img src="../../img/ch02/ase-ch02-ccq3.png" width="120">
 
@@ -425,7 +425,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 因為在現代工業設計中汽車輪子無法直接升級為機車輪胎。
 * D) 因為軟體工程標準禁止團隊在第一期專案中開發圓形幾何物件。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq4)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq4)
 
 <img src="../../img/ch02/ase-ch02-ccq4.png" width="120">
 
@@ -532,7 +532,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 專案進度完全不需要撰寫程式碼，只需由客戶口頭認可即可。
 * D) 將所有軟體文檔直接替換為行銷部門的投影片。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq5)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq5)
 
 <img src="../../img/ch02/ase-ch02-ccq5.png" width="120">
 
@@ -557,7 +557,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 限制開發團隊每天最多只能撰寫五十行以內的原始碼。
 * D) 確保軟體永遠不需要在生產環境中進行重大版本發行。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq6)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq6)
 
 <img src="../../img/ch02/ase-ch02-ccq6.png" width="120">
 
@@ -613,7 +613,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 *圖 2.5.3：具備 WIP 限制的看板。各欄位上方的數字代表在製品上限。當下游塞車時，上游工程師停止盲目開新票，全員協力掃除瓶頸，實踐「停止開新工，專注推完手頭事」。*
 
 #### 看板四大核心實踐
-1. **工作流程可視化 (Visualize the Workflow)：** 將所有任務切分成卡片，展示於多階段看板欄位中：`[Backlog]` $ightarrow$ `[Ready]` $ightarrow$ `[In Progress]` $ightarrow$ `[Code Review]` $ightarrow$ `[Done]`。
+1. **工作流程可視化 (Visualize the Workflow)：** 將所有任務切分成卡片，展示於多階段看板欄位中：`[Backlog]` $\rightarrow$ `[Ready]` $\rightarrow$ `[In Progress]` $\rightarrow$ `[Code Review]` $\rightarrow$ `[Done]`。
 2. **限制在製品數量 (Limit Work In Progress · WIP 限制)：** 
    * 強制在特定欄位設定同時並行卡片上限（如 `Code Review [上限: 2]`）。
    * **核心哲學：** *"Stop starting, start finishing!" (停止盲目開新工，專注把手頭任務做完！)* 當卡片達上限，上游工程師必須停筆，協助下游同事審查代碼，掃除塞車。
@@ -654,7 +654,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 迫使軟體團隊必須恢復傳統瀑布模型的年度驗收測試。
 * D) 確保軟體專案的所有架構設計皆由外部顧問獨立完成。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq7)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq7)
 
 <img src="../../img/ch02/ase-ch02-ccq7.png" width="120">
 
@@ -679,7 +679,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 * C) 針對落後進度的工程師個人進行公開績效檢討與懲處。
 * D) 將整個軟體專案的所有產品待辦清單全面銷毀重來。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq8)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq8)
 
 <img src="../../img/ch02/ase-ch02-ccq8.png" width="120">
 
@@ -758,7 +758,7 @@ Martin Fowler 提出「疲軟 Scrum」以抨擊業界的畸形現象：
 * C) 發放給全體資深軟體架構師的年度專案分紅獎金。
 * D) 購買商業專利編譯器軟體授權的固定折舊費用。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq9)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq9)
 
 <img src="../../img/ch02/ase-ch02-ccq9.png" width="120">
 
@@ -783,7 +783,7 @@ Martin Fowler 提出著名的**「疲軟 Scrum (Flaccid Scrum)」**一詞，是�
 * C) 允許產品負責人在衝刺規劃會議進行期間微調待辦清單的排序。
 * D) 強制在每一次 Git Commit 提交時必須由自動化 CI 流水線執行單元測試。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq10)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq10)
 
 <img src="../../img/ch02/ase-ch02-ccq10.png" width="120">
 
@@ -807,10 +807,10 @@ Martin Fowler 提出著名的**「疲軟 Scrum (Flaccid Scrum)」**一詞，是�
 ### 2.7.1 為何稱為「極限 (Extreme)」？
 
 Kent Beck 提出了激進的工程原則：**若一項工程習慣被證明對軟體品質有益，我們就該將其推向日常極致！**
-* *代碼審查很好？* $ightarrow$ 結對編程 (Pair Programming)：每秒鐘都在進行雙人即時審查！
-* *測試很好？* $ightarrow$ 測試驅動開發 (TDD)：在寫生產代碼前，**必須先寫出會報錯的自動化測試**！
-* *整合很好？* $ightarrow$ 持續整合 (CI)：每天主幹整合數十次！
-* *簡潔很好？* $ightarrow$ 簡單設計 (Simple Design)：只設計能通過今日測試的最精簡架構！
+* *代碼審查很好？* $\rightarrow$ 結對編程 (Pair Programming)：每秒鐘都在進行雙人即時審查！
+* *測試很好？* $\rightarrow$ 測試驅動開發 (TDD)：在寫生產代碼前，**必須先寫出會報錯的自動化測試**！
+* *整合很好？* $\rightarrow$ 持續整合 (CI)：每天主幹整合數十次！
+* *簡潔很好？* $\rightarrow$ 簡單設計 (Simple Design)：只設計能通過今日測試的最精簡架構！
 
 ![XP 核心實踐圖標漫畫](../../img/ch02/comic_xp_practices.jpg)
 
@@ -890,7 +890,7 @@ TDD 顛覆了直覺順序：**沒有失敗的自動化測試，絕不准寫任�
 * C) 擔任專屬的 Scrum 敏捷教練並負責在 Jira 系統中拖動任務卡片。
 * D) 負責與客戶進行法律合約協商並審批團隊年度工程預算。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq11)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq11)
 
 <img src="../../img/ch02/ase-ch02-ccq11.png" width="120">
 
@@ -915,7 +915,7 @@ TDD 顛覆了直覺順序：**沒有失敗的自動化測試，絕不准寫任�
 * C) 徹底刪除所有執行時間超過一秒的自動化單元測試以加速 CI 構建。
 * D) 將應用系統從物件導向語言強行全盤改寫為純函式語言。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq12)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq12)
 
 <img src="../../img/ch02/ase-ch02-ccq12.png" width="120">
 
@@ -1026,7 +1026,7 @@ Google **DORA (DevOps Research and Assessment)** 團隊經過數千家企業大�
 * C) 持續交付專門用於行動 App 開發；持續部署專門用於關聯式資料庫。
 * D) 持續交付完全不需單元測試；持續部署強制要求結對編程。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq13)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq13)
 
 <img src="../../img/ch02/ase-ch02-ccq13.png" width="120">
 
@@ -1111,7 +1111,7 @@ Google **DORA (DevOps Research and Assessment)** 團隊經過數千家企業大�
 * C) 將自然語言提示詞直接轉換為公有雲端供應商的月度扣款帳單。
 * D) 全面廢除傳統軟體規格書，改以未經驗證的龐雜聊天歷史紀錄替代。
 
-[Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq14)
+[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq14)
 
 <img src="../../img/ch02/ase-ch02-ccq14.png" width="120">
 
