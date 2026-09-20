@@ -276,6 +276,23 @@ Explanation: The V-Model's definitive breakthrough is horizontal symmetry: test 
 
 ---
 
+### 🗣️ Classroom Interactive Activity 1 — Process Model Matchmaker (Pair Discussion)
+
+> 💡 **Pair Discussion Scenario: Selecting the Right Software Process Model**
+> 
+> You are senior software engineering consultants advising three different client organizations. Analyze each system's risk profile, regulatory compliance constraints, and requirement volatility:
+> 
+> * **System A (Deep-Brain Neurostimulator Firmware)**: An implantable life-critical medical device requiring strict FDA Class III pre-market approval. A single software runtime defect can cause fatal patient injury, and firmware updates post-implantation require surgical intervention.
+> * **System B (Campus Viral Food Delivery & Group-Buying App)**: A student startup developing a localized food delivery application. Competitor services launch features weekly, consumer preferences fluctuate rapidly, and business survival depends on launching an MVP in 30 days and iterating based on real user feedback.
+> * **System C (National Corporate Tax Calculation Engine Overhaul)**: Modernizing a 20-year-old government legacy tax system. The tax statutes, accounting equations, and calculation rules are mathematically fixed by statutory law, with an immutable national filing deadline of May 1st.
+> 
+> **Discussion Questions for Pairs/Groups**:
+> 1. **Model Selection**: Which process model (Linear Waterfall, Symmetrical V-Model, Agile Scrum, or Spiral/Risk-Driven) would your team recommend for System A, System B, and System C? Justify your architectural reasoning.
+> 2. **Failure Analysis**: What specific catastrophe would happen if an inexperienced engineering team used "Agile/Vibe coding with minimal upfront testing" on System A, or "Pure Waterfall with frozen 6-month specifications" on System B?
+> 3. **Hybrid Strategies**: For System C, how can a team blend plan-driven rigor (for the core tax calculation logic) with agile delivery (for the taxpayer web portal and accountant UI)?
+
+---
+
 ## 2.3 The Mechanics of Change — Incremental and Iterative Development
 
 As the software industry entered the 1980s and 1990s, the fatal integration risks of plan-driven sequential models sparked a fundamental engineering re-evaluation. Software systems were growing too dynamic, and commercial markets too volatile, to tolerate 18-month sequential delivery schedules.
@@ -439,6 +456,29 @@ In Henrik Kniberg's famous Minimum Viable Product (MVP) analogy (Skateboard to C
 Correct Answer: B
 Explanation: An MVP must deliver standalone, end-to-end usable value that solves a real user problem. A single wheel cannot transport a person, leaving the user dissatisfied and generating zero empirical feedback on transportation needs.
 </details>
+
+---
+
+### 🗣️ Classroom Interactive Activity 2 — Slicing a Chess App (Group Discussion)
+
+> 💡 **Group Discussion Scenario: Incremental Delivery vs. Iterative Refinement**
+> 
+> Your team has been tasked with designing and implementing a modern Web-Based Chess Platform from scratch during a single academic semester. To prevent project failure, your team must carefully distinguish between **Incremental Development** (delivering distinct functional slices of value) and **Iterative Refinement** (deepening and polishing existing capabilities through feedback).
+> 
+> **Discussion Questions for Groups**:
+> 1. **Incremental Feature Slices (Horizontal & Functional Breadth)**:
+>    * Propose 4 sequential releases that each provide immediate, end-to-end usable value to chess players:
+>      * *Increment 1*: Local 2-player pass-and-play chessboard on a single screen with basic piece movement rules.
+>      * *Increment 2*: Check/checkmate validation, move history notation (PGN export), captured piece displays, and a chess clock timer.
+>      * *Increment 3*: Single-player mode with an AI engine opponent (heuristic Minimax or Stockfish web worker integration).
+>      * *Increment 4*: Real-time online multiplayer lobby via WebSockets with Elo matchmaking and user ratings.
+> 2. **Iterative Refinement Cycles (Vertical & Qualitative Depth)**:
+>    * Select the **Chessboard & Piece UI** component and demonstrate how it evolves iteratively across releases:
+>      * *Iteration 1 (Functional Baseline / Rough Prototype)*: A lightweight HTML table or ASCII console grid that validates board coordinates and piece arrays.
+>      * *Iteration 2 (Usability Refinement)*: A 2D responsive canvas board with SVG vector pieces, valid move dot indicators, and turn highlight overlays.
+>      * *Iteration 3 (Production Delight & Polish)*: Smooth piece drag-and-drop animations, audio sound effects for captures/checks, premove queuing, and accessibility screen-reader support.
+> 3. **The MVP Anti-Pattern**:
+>    * Explain why a team that spends 8 weeks building a photorealistic 3D piece rendering engine before the board can even calculate a valid Pawn move has committed the "standalone car wheel" anti-pattern.
 
 ---
 
@@ -796,6 +836,24 @@ Martin Fowler coined the term **"Flaccid Scrum"** to describe which critical sof
 Correct Answer: A
 Explanation: Flaccid Scrum occurs when organizations adopt agile project management rituals but ignore engineering craftsmanship. Without automated tests, refactoring, and clean architecture, code quickly becomes fragile and unmaintainable.
 </details>
+
+---
+
+### 🗣️ Classroom Interactive Activity 3 — The Technical Debt Dilemma (Pair Discussion)
+
+> 💡 **Pair Discussion Scenario: Balancing Commercial Velocity with Engineering Rigor**
+> 
+> You are the lead software engineer at a Series-A financial technology startup. In exactly three weeks, your executive team will conduct a high-stakes live product demonstration to top-tier venture capital investors to secure a $5,000,000 growth investment round. If the funding round fails, company cash reserves will be depleted within 60 days.
+> 
+> * **The Engineering Reality**: The core payment microservice was hastily hacked together during a weekend prototype hackathon. It has 0% automated test coverage, convoluted spaghetti dependencies, and suffers from intermittent race-condition database locks when concurrent transaction volume exceeds 20 requests/second.
+> * **The Product Manager's Demand**: The Chief Product Officer insists: *"We must announce and demo a flashy new 'One-Click Multi-Currency Crypto Payment' feature during the VC pitch! If we don't wow them with crypto, our competitor will win the term sheet."*
+> 
+> **Discussion Questions for Pairs**:
+> 1. **Strategic Decision-Making**: Which path should your engineering team take?
+>    * *Option A (The Purist)*: Flatly refuse the new feature and dedicate the next 3 weeks entirely to refactoring the payment service, paying down technical debt, and writing test suites.
+>    * *Option B (The Gambler)*: Hastily tack the crypto checkout code onto the existing unstable codebase, crossing your fingers that the demo won't trigger a race condition in front of investors.
+>    * *Option C (The Pragmatic Architect)*: Engineer a sandbox/mock UI flow for the VC demo that isolates the crypto checkout from the core database, while securing an executive covenant to freeze new feature work for the next 2 sprints to pay down the architectural principal.
+> 2. **Martin Fowler's Debt Quadrant**: Does incurring technical debt under these circumstances represent *Prudent & Deliberate Debt* or *Reckless Debt*? What engineering practices prevent deliberate debt from turning into permanent "Flaccid Scrum"?
 
 ---
 
