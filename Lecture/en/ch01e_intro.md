@@ -108,7 +108,7 @@ Why couldn't the 1968 Software Crisis be resolved simply by purchasing faster co
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq1)
 
-<img src="../../img/ch01/ase-ch01-ccq1.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq1" target="_blank"><img src="../../img/ch01/ase-ch01-ccq1.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -118,8 +118,6 @@ Explanation: The crisis was fundamentally an intellectual and organizational fai
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq1)
 
 ## 1.3 What is Software? Beyond Source Code
 
@@ -189,7 +187,7 @@ According to the IEEE standard definition of software, which of the following is
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq2)
 
-<img src="../../img/ch01/ase-ch01-ccq2.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq2" target="_blank"><img src="../../img/ch01/ase-ch01-ccq2.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -199,8 +197,6 @@ Explanation: The IEEE standard defines software as computer programs, procedures
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq2)
 
 ## 1.4 What is Engineering? Constraints, Resources & Pragmatic Optimization
 
@@ -313,7 +309,7 @@ Which of the following pairs correctly matches a specific software engineering a
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq3)
 
-<img src="../../img/ch01/ase-ch01-ccq3.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq3" target="_blank"><img src="../../img/ch01/ase-ch01-ccq3.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -323,8 +319,6 @@ Explanation: Eliciting and modeling requirements through stakeholder interviews 
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq3)
 
 ### 1.5.2 The Software Engineering Body of Knowledge (BOK)
 
@@ -375,7 +369,7 @@ A project is 3 weeks behind schedule with 2 weeks remaining before release. The 
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq4)
 
-<img src="../../img/ch01/ase-ch01-ccq4.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq4" target="_blank"><img src="../../img/ch01/ase-ch01-ccq4.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -385,8 +379,6 @@ Explanation: Frederick Brooks demonstrated in The Mythical Man-Month that comple
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq4)
 
 <!-- id: ase-ch01-ccq5 -->
 #### 🙋 **Concept Check (CCQ 5) — Fundamental Design Principles**
@@ -402,7 +394,7 @@ An order-processing module directly handles HTTP requests, executes payment tran
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq5)
 
-<img src="../../img/ch01/ase-ch01-ccq5.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq5" target="_blank"><img src="../../img/ch01/ase-ch01-ccq5.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -412,8 +404,6 @@ Explanation: Separation of Concerns (and the Single Responsibility Principle) di
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq5)
 
 ### 1.5.4 Enforcing Disciplines at Scale: The Modern Toolchain
 
@@ -491,7 +481,7 @@ Which of the following matches a real-world software issue with its correspondin
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq6)
 
-<img src="../../img/ch01/ase-ch01-ccq6.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq6" target="_blank"><img src="../../img/ch01/ase-ch01-ccq6.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -501,8 +491,6 @@ Explanation: A system's ability to cope with external service failures without c
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq6)
 
 ## 1.7 Professional Ethics, Social Responsibility & Deceptive Dark Patterns
 
@@ -563,7 +551,7 @@ Under the ACM/IEEE Code of Ethics, if an employer directs an engineer to impleme
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq7)
 
-<img src="../../img/ch01/ase-ch01-ccq7.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq7" target="_blank"><img src="../../img/ch01/ase-ch01-ccq7.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -573,8 +561,6 @@ Explanation: Principle 1 of the ACM/IEEE Software Engineering Code of Ethics sta
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq7)
 
 ## 1.8 AI in Software Engineering: Paradigm Shift, Pitfalls & Rigor
 
@@ -649,7 +635,7 @@ In empirical studies evaluating AI coding assistants (such as GitClear's analysi
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq8)
 
-<img src="../../img/ch01/ase-ch01-ccq8.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq8" target="_blank"><img src="../../img/ch01/ase-ch01-ccq8.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -659,8 +645,6 @@ Explanation: Code churn measures the percentage of code that is modified, replac
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq8)
 
 <!-- id: ase-ch01-ccq9 -->
 #### 🙋 **Concept Check (CCQ 9) — AI Verification & Echo-Chamber Testing**
@@ -676,7 +660,7 @@ An engineer prompts an AI to generate a complex payment calculation module, and 
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq9)
 
-<img src="../../img/ch01/ase-ch01-ccq9.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq9" target="_blank"><img src="../../img/ch01/ase-ch01-ccq9.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -686,8 +670,6 @@ Explanation: When AI writes both the implementation and its own test cases witho
 </details>
 
 ---
-
-[課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq9)
 
 ## 1.9 Frequently Asked Questions (FAQ) in Software Engineering
 

@@ -188,7 +188,7 @@
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq1)
 
-<img src="../../img/ch02/ase-ch02-ccq1.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq1" target="_blank"><img src="../../img/ch02/ase-ch02-ccq1.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -263,7 +263,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq2)
 
-<img src="../../img/ch02/ase-ch02-ccq2.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq2" target="_blank"><img src="../../img/ch02/ase-ch02-ccq2.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -419,7 +419,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq3)
 
-<img src="../../img/ch02/ase-ch02-ccq3.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq3" target="_blank"><img src="../../img/ch02/ase-ch02-ccq3.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -444,7 +444,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq4)
 
-<img src="../../img/ch02/ase-ch02-ccq4.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq4" target="_blank"><img src="../../img/ch02/ase-ch02-ccq4.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -574,7 +574,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq5)
 
-<img src="../../img/ch02/ase-ch02-ccq5.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq5" target="_blank"><img src="../../img/ch02/ase-ch02-ccq5.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -599,7 +599,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq6)
 
-<img src="../../img/ch02/ase-ch02-ccq6.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq6" target="_blank"><img src="../../img/ch02/ase-ch02-ccq6.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -696,7 +696,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq7)
 
-<img src="../../img/ch02/ase-ch02-ccq7.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq7" target="_blank"><img src="../../img/ch02/ase-ch02-ccq7.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -721,7 +721,7 @@ V-模型的精髓在於左右對稱的**水平連結關係**：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq8)
 
-<img src="../../img/ch02/ase-ch02-ccq8.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq8" target="_blank"><img src="../../img/ch02/ase-ch02-ccq8.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -800,7 +800,7 @@ Martin Fowler 提出「疲軟 Scrum」以抨擊業界的畸形現象：
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq9)
 
-<img src="../../img/ch02/ase-ch02-ccq9.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq9" target="_blank"><img src="../../img/ch02/ase-ch02-ccq9.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -825,7 +825,7 @@ Martin Fowler 提出著名的**「疲軟 Scrum (Flaccid Scrum)」**一詞，是�
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq10)
 
-<img src="../../img/ch02/ase-ch02-ccq10.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq10" target="_blank"><img src="../../img/ch02/ase-ch02-ccq10.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -950,7 +950,7 @@ TDD 顛覆了直覺順序：**沒有失敗的自動化測試，絕不准寫任�
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq11)
 
-<img src="../../img/ch02/ase-ch02-ccq11.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq11" target="_blank"><img src="../../img/ch02/ase-ch02-ccq11.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -975,7 +975,7 @@ TDD 顛覆了直覺順序：**沒有失敗的自動化測試，絕不准寫任�
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq12)
 
-<img src="../../img/ch02/ase-ch02-ccq12.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq12" target="_blank"><img src="../../img/ch02/ase-ch02-ccq12.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -1086,7 +1086,7 @@ Google **DORA (DevOps Research and Assessment)** 團隊經過數千家企業大�
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq13)
 
-<img src="../../img/ch02/ase-ch02-ccq13.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq13" target="_blank"><img src="../../img/ch02/ase-ch02-ccq13.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>
@@ -1171,7 +1171,7 @@ Google **DORA (DevOps Research and Assessment)** 團隊經過數千家企業大�
 
 [課堂互動](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq14)
 
-<img src="../../img/ch02/ase-ch02-ccq14.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq14" target="_blank"><img src="../../img/ch02/ase-ch02-ccq14.png" width="120"></a>
 
 <details>
 <summary>點擊展開查看答案與詳細解析</summary>

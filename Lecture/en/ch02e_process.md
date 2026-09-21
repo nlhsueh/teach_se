@@ -189,7 +189,7 @@ What is the primary operational drawback of the traditional Waterfall model?
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq1)
 
-<img src="../../img/ch02/ase-ch02-ccq1.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq1" target="_blank"><img src="../../img/ch02/ase-ch02-ccq1.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -265,7 +265,7 @@ What is the primary engineering advantage of the V-Model over the classic Waterf
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq2)
 
-<img src="../../img/ch02/ase-ch02-ccq2.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq2" target="_blank"><img src="../../img/ch02/ase-ch02-ccq2.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -423,7 +423,7 @@ In software process engineering, what is the fundamental conceptual difference b
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq3)
 
-<img src="../../img/ch02/ase-ch02-ccq3.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq3" target="_blank"><img src="../../img/ch02/ase-ch02-ccq3.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -448,7 +448,7 @@ In Henrik Kniberg's famous Minimum Viable Product (MVP) analogy (Skateboard to C
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq4)
 
-<img src="../../img/ch02/ase-ch02-ccq4.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq4" target="_blank"><img src="../../img/ch02/ase-ch02-ccq4.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -574,7 +574,7 @@ The Agile Manifesto states: *"Working software over comprehensive documentation.
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq5)
 
-<img src="../../img/ch02/ase-ch02-ccq5.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq5" target="_blank"><img src="../../img/ch02/ase-ch02-ccq5.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -599,7 +599,7 @@ Agile Principle 8 states: *"Agile processes promote sustainable development. The
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq6)
 
-<img src="../../img/ch02/ase-ch02-ccq6.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq6" target="_blank"><img src="../../img/ch02/ase-ch02-ccq6.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -695,7 +695,7 @@ In the Kanban process framework, what is the primary operational purpose of enfo
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq7)
 
-<img src="../../img/ch02/ase-ch02-ccq7.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq7" target="_blank"><img src="../../img/ch02/ase-ch02-ccq7.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -720,7 +720,7 @@ In the Scrum framework, what is the primary operational objective of the **Sprin
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq8)
 
-<img src="../../img/ch02/ase-ch02-ccq8.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq8" target="_blank"><img src="../../img/ch02/ase-ch02-ccq8.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -803,7 +803,7 @@ According to Ward Cunningham's Technical Debt metaphor, what represents the "com
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq9)
 
-<img src="../../img/ch02/ase-ch02-ccq9.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq9" target="_blank"><img src="../../img/ch02/ase-ch02-ccq9.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -828,7 +828,7 @@ Martin Fowler coined the term **"Flaccid Scrum"** to describe which critical sof
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq10)
 
-<img src="../../img/ch02/ase-ch02-ccq10.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq10" target="_blank"><img src="../../img/ch02/ase-ch02-ccq10.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -959,7 +959,7 @@ In Extreme Programming (XP), what is the primary role of the "Navigator" during 
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq11)
 
-<img src="../../img/ch02/ase-ch02-ccq11.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq11" target="_blank"><img src="../../img/ch02/ase-ch02-ccq11.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -984,7 +984,7 @@ In Extreme Programming's Test-Driven Development (TDD), what is the specific obj
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq12)
 
-<img src="../../img/ch02/ase-ch02-ccq12.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq12" target="_blank"><img src="../../img/ch02/ase-ch02-ccq12.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -1097,7 +1097,7 @@ What is the defining operational distinction between "Continuous Delivery" and "
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq13)
 
-<img src="../../img/ch02/ase-ch02-ccq13.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq13" target="_blank"><img src="../../img/ch02/ase-ch02-ccq13.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
@@ -1190,7 +1190,7 @@ In modern AI Specification-Driven development, what is the primary role of autom
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq14)
 
-<img src="../../img/ch02/ase-ch02-ccq14.png" width="120">
+<a href="https://nlhsueh.github.io/nickedupocket/#/student/ase-ch02-ccq14" target="_blank"><img src="../../img/ch02/ase-ch02-ccq14.png" width="120"></a>
 
 <details>
 <summary>Click to view Answer & Explanation</summary>
