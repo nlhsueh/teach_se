@@ -4,7 +4,7 @@
 > * **1.1 技術演進脈絡**：從機械化、數位革命到普及化人工智慧（Industry 1.0～4.0）。
 > * **1.2 軟體工程起源與「軟體危機」**：1968 年 NATO Garmisch 會議為何宣告軟體開發必須從個人工藝走向工程紀律，以及三大歷史災難細節。
 > * **1.3 軟體本質剖析**：軟體為何遠超過程式碼（程式、數據、SOP、文檔）以及軟體冰山陷阱。
-> * **1.4 ISO 9126 品質模型**：6 大特徵與關鍵子屬性實務案例圖解。
+> * **1.4 ISO 25010 品質模型**：品質不只是「沒有 Bug」、ISO/IEC 25010 (SQuaRE) 8 大產品特徵、關鍵子屬性與實務架構權衡分析。
 > * **1.5 現代軟體多元樣貌**：從雲端 SaaS、行動應用、企業 ERP 到嵌入式物聯網與 AI 平台，以及 YouBike 等現代異質系統。
 > * **1.6 何謂軟體工程？**：正式定義、約束與資源權衡天平、滿足約束的折衷決策、四大通用核心活動（Specification, Design, Validation, Evolution）。
 > * **1.7 現代工具鏈與 AI 雙面刃**：新增 5 種現代工具、CI/CD 自動化流程與 AI 在生命週期各階段的效益與風險矩陣，以及 Vibe Coding 漫畫圖解。
@@ -170,97 +170,125 @@ IEEE 標準對軟體的正式定義為：
 
 ---
 
-## 1.4 何謂「好」軟體？ISO 9126 品質模型
+## 1.4 何謂「好」軟體？現代 ISO/IEC 25010 品質模型
 
-軟體品質具有多維度特性。國際標準組織制定了 **ISO/IEC 9126** 品質模型，將軟體品質劃分為 6 大特徵與多個可測試的子屬性。
+> **軟體品質 (Software Quality)**：軟體產品在特定使用條件下，滿足明示（Stated）與隱含（Implied）需求的程度。
 
-![ISO 9126 品質模型子屬性圖解](../../img/ch01/iso_9126_subattributes.jpg)
+### 1.4.1 為什麼「品質」不能只等於「沒有臭蟲 (No Bugs)」？
 
-*圖 1.4：ISO 9126 軟體品質 6 大特徵與關鍵子屬性完整架構圖解。*
+一個軟體系統完全可以順利編譯通過，且在執行時不拋出任何例外錯誤，但它對使用者或企業來說依然可能是**徹底毫無價值**的：
+* 載入管理儀表板需要耗費 45 秒（嚴重違反 **效能效率 / Performance Efficiency**）。
+* 在資料庫中以明文（Cleartext）儲存使用者密碼（嚴重違反 **資訊安全 / Security**）。
+* 只要 iOS 或 Android 系統一升級，App 就閃退崩潰無法啟動（嚴重違反 **可攜性 / Portability**）。
+* 程式碼內部充斥強烈緊密耦合的義大利麵條代碼，修改一個欄位需耗時三週（嚴重違反 **可維護性 / Maintainability**）。
 
-### 1.4.1 ISO 9126 六大特徵與子屬性深度解析
+**軟體品質模型 (Software Quality Model)** 的目的，就是將「品質」這個抽象且主觀的概念，拆解為結構化的階層體系：**主要特徵 (Characteristics)**、**關鍵子屬性 (Sub-characteristics)** 以及**可量測的客觀指標 (Measurable Metrics)**。
 
-#### 1. Functionality（功能性）
-軟體滿足明確指定與隱含業務及技術需求的能力。
-* **Suitability（適用性）**：系統是否提供符合預期任務的完整功能？（如電商支援購物車、折扣券與多幣別結帳）。
-* **Accuracy（準確性）**：運算結果是否精確無誤？（如財務會計引擎計算扣稅額達零分位漂移）。
-* **Interoperability（互操作性）**：能否與外部系統順暢交換數據？（如醫療系統透過標準 HL7/FHIR API 傳輸病歷）。
-* **Security（資安性）**：能否防範未授權存取與攻擊？（如強制 MFA、RBAC 權限控管與 AES-256 資料庫加密）。
+### 1.4.2 現代國際標準：ISO/IEC 25010 (SQuaRE)
 
-#### 2. Reliability（可靠性）
-軟體在規定條件下與時間內維持規定效能水準的能力。
-* **Maturity（成熟性）**：軟體因設計缺陷而引發失效的頻率有多低？
-* **Fault Tolerance（容錯性）**：軟體能否在面臨執行期錯誤或第三方服務中斷時，不發生系統崩潰？
-  * *實務案例*：若主要刷卡交易閘道逾時，結帳服務能捕捉例外，並立即改走備用信用卡交易閘道重試。
-* **Recoverability（易回復性）**：當系統當機後，能否重新建立其運作狀態並復原遺失的資料？
-  * *實務案例*：PostgreSQL 資料庫在無預警斷電重啟後，能在 30 秒內透過預寫式日誌 (WAL) 自動復原並確保交易一致性。
-* **Reliability Compliance（可靠性遵循）**：是否符合規定的可靠性與可用性服務等級協議（例如：99.99% 的系統可用時間）。
+在軟體工程發展史上，國際標準化組織發布的 **ISO/IEC 25010**（系統與軟體品質需求與評估標準，SQuaRE）正式取代了早期的 ISO 9126 標準。相較於舊版，ISO 25010 最顯著的演進是**將「資訊安全 (Security)」與「相容性 (Compatibility)」提升為第一級的核心品質支柱**，以因應現代網際網路、雲端原生與分散式微服務生態系的高強度挑戰。
 
-#### 3. Usability（易用性）
-使用者理解、學習、操作以及喜愛軟體所需耗費的精力。
-* **Understandability（易理解性）**：新使用者能否輕易理解軟體如何運作、其功能如何組織？
-* **Learnability（易學習性）**：使用者能否在短時間內學會操作此系統以執行其日常工作？
-  * *實務案例*：新進護理人員只需觀看 15 分鐘的教學影片，即可學會如何在電子病歷 (EHR) App 中登錄患者生命徵象。
-* **Operability（易操作性）**：使用者在不同維度下是否能順暢控制軟體（包括快捷鍵、螢幕閱讀器與符合 WCAG 2.1 網頁無障礙標準）？
-* **Attractiveness（介面美觀性）**：介面是否視覺整潔、排列井然有序、符合美學且沒有雜亂的視覺資訊？
+![ISO/IEC 25010 軟體產品品質模型](../../img/ch01/iso_25010_subattributes.jpg)
 
-#### 4. Efficiency（效率性／效能）
-軟體效能水準與所耗用之計算資源之間的關係。
-* **Time Behavior（時間特性）**：系統在尖峰流量下的回應時間、延遲分佈與交易吞吐量表現為何？
-  * *實務案例*：API 搜尋服務的回應時間，在 99% 的情況下皆小於 80 毫秒（p99 延遲 < 80ms）。
-* **Resource Utilization（資源利用性）**：軟體在執行時對 CPU、記憶體、硬碟 I/O 以及網路頻寬的消耗效率為何？
-  * *實務案例*：一項經高度優化的微服務在處理 10,000 個併發 WebSocket 連線時，所佔用的記憶體小於 250 MB。
+*圖 1.4：ISO/IEC 25010 軟體產品品質模型——定義 8 大核心特徵及其關鍵子屬性架構圖解。*
 
-#### 5. Maintainability（可維護性）
-修改軟體所需的精力（包括臭蟲修正、效能調整與新功能擴充）。
-* **Analyzability（可分析性）**：開發人員能否輕易檢查日誌、診斷軟體缺陷並找出根本原因？
-  * *實務案例*：使用 OpenTelemetry 分散式追蹤與結構化 JSON 日誌，在數秒內精確找出跨服務呼叫中出錯的微服務節點。
-* **Changeability（可修改性）**：開發人員是否能安全地實現程式碼修改，而不需要進行大規模重寫？
-* **Stability（穩定性）**：在引入修改後，系統是否能抵抗意外的副作用或迴歸錯誤？
-* **Testability（可測試性）**：程式碼庫是否能輕鬆地透過自動化單元測試、整合測試與迴歸測試套件進行檢驗？
-  * *實務案例*：在設計程式時使用相依性注入 (Dependency Injection)，以便在自動化單元測試中輕鬆 Mock 資料庫連線。
+#### 產品品質八大核心特徵深度解析
 
-#### 6. Portability（可攜性）
-軟體從一個硬體、作業系統或雲端環境轉移到另一個環境的難易程度。
-* **Adaptability（可適應性）**：軟體能否在不同的 OS 平台運行，而不需要修改程式碼？
-  * *實務案例*：同一個 Node.js 後端程式在 Linux x86_64、macOS ARM64 與 Windows Server 上執行結果完全一致。
-* **Installability（易安裝性）**：部署軟體到目標環境的簡易程度為何？
-  * *實務案例*：藉由在終端機輸入 `docker compose up`，能在 60 秒內於本地端架構出完整的開發微服務環境。
-* **Co-existence（共存性）**：該軟體能否與同主機上的其他獨立軟體和諧共存，且不發生相依性套件衝突？
-* **Replaceability（易替換性）**：該元件能否輕易替換掉其他類似的元件（例如：藉由 ORM 介面，將資料庫從 MySQL 無痛切換成 PostgreSQL）？
+1. **Functional Suitability（功能適合性）**
+   軟體功能滿足使用者明確指定與隱含業務需求的程度。
+   * **Functional Completeness（功能完整性）**：系統提供的功能覆蓋所有指定任務與使用者目標的程度（如電商完整涵蓋瀏覽、購物車、折扣券與多幣別結帳）。
+   * **Functional Correctness（功能正確性）**：系統提供正確結果或精確運算輸出的程度（如財務會計引擎計算扣稅額達零分位漂移）。
+   * **Functional Appropriateness（功能適切性）**：功能是否有助於使用者有效達成特定任務，不提供冗餘累贅或妨礙操作的設計。
+
+2. **Performance Efficiency（效能效率）**
+   在特定執行條件下，軟體效能表現與其所耗用之運算資源之間的比例關係。
+   * **Time Behaviour（時間特性）**：系統在尖峰流量下的回應時間、處理延遲與吞吐量（如 API 搜尋服務在 99% 的情況下回應小於 80 毫秒，$p99 < 80\text{ms}$）。
+   * **Resource Utilization（資源利用性）**：軟體運作時對 CPU、記憶體、磁碟 I/O 與網路頻寬的消耗效率（如一個微服務節點在維持 10,000 個連線時，記憶體佔用小於 250 MB）。
+   * **Capacity（容量性）**：系統所能負載的最大併發使用者數或尖峰資料傳輸容量上限。
+
+3. **Compatibility（相容性）**
+   產品在共享相同的軟硬體環境下，能夠與其他產品順暢交換資訊並和平共存的程度。
+   * **Co-existence（互存性／共存性）**：在同一主機或環境中，與其他獨立軟體和諧運行，不互相搶佔資源或引發套件版本衝突。
+   * **Interoperability（互通性／互操作性）**：兩個或多個系統間透過標準協定（如 REST API、gRPC、FHIR、OpenAPI）順暢交換資料並有效利用該資料的能力。
+
+4. **Usability（易用性／互動能力）**
+   特定使用者在特定情境下使用軟體，達成特定目標時的有效性、效率與滿意度。
+   * **Appropriateness Recognizability（適切性可辨識性）**：使用者能否迅速一眼辨識該軟體是否滿足其需求。
+   * **Learnability（易學習性）**：新使用者在短時間內學會操作軟體的容易程度（如新進人員觀看 15 分鐘教學即可上手）。
+   * **Operability（易操作性）**：使用者控制與操作軟體的順暢度（包含快捷鍵支援、友善的操作邏輯）。
+   * **User Error Protection（使用者防錯性）**：系統防範使用者犯錯的能力（如關鍵危險動作提供二次確認或防呆保護）。
+   * **User Interface Aesthetics（使用者介面美學）**：介面視覺整潔、排列井然有序、符合人因美學且無雜亂視覺噪訊。
+   * **Accessibility（無障礙親和力）**：系統能被各類能力特徵的族群（包含身心障礙者、螢幕閱讀器使用者，符合 WCAG 規範）完整操作的程度。
+
+5. **Reliability（可靠性）**
+   軟體在規定條件與指定時間內，維持規定效能水準的能力。
+   * **Maturity（成熟性）**：正常運作下系統因軟體缺陷引發失效的頻率有多低。
+   * **Availability（可用性）**：系統在需要時隨時可被存取並正常服務的時間比例（例如達 99.99% 的全年運行 SLA）。
+   * **Fault Tolerance（容錯性）**：當面臨執行期硬體故障、軟體錯誤或第三方依賴服務斷線時，系統能妥善降級而不發生系統崩潰的能力。
+   * **Recoverability（易回復性）**：當系統遭受非預期當機中斷後，能夠迅速重建運作狀態並復原受影響資料的能力（如 PostgreSQL 透過 WAL 預寫式日誌在 30 秒內自動復原交易一致性）。
+
+6. **Security（資訊安全）**
+   保護資訊與資料，使未經授權的人員或系統無法讀取或修改，並確保合法授權者隨時能正常存取。
+   * **Confidentiality（機密性）**：確保資料僅有經授權身分才能存取（如 AES-256 加密儲存、嚴格的 RBAC 角色授權控管）。
+   * **Integrity（完整性）**：防止軟體、資料與通訊傳輸遭到未授權的竄改或惡意破壞。
+   * **Non-repudiation（不可否認性／不可抵賴性）**：系統能夠無可置辯地證明某個特定行為或交易是由特定實體所發起（如數位簽章）。
+   * **Accountability（可歸責性／可究責性）**：系統能夠將每位使用者的所有操作行為追溯至其唯一的身分實體（如 Audit Trail 稽核日誌追蹤）。
+   * **Authenticity（真實性／身分鑑別）**：系統能夠可靠驗證主體或資源身分的真實性（如多因素驗證 MFA、JWT 簽章）。
+
+7. **Maintainability（可維護性）**
+   開發與維運團隊修改、修正缺陷、提升效能或調適軟體以應對新需求的難易程度。
+   * **Modularity（模組化）**：系統由多個離散元件組成，對單一元件的修改對其他元件的負面連鎖波及極低。
+   * **Reusability（可重用性）**：程式碼資產或模組能夠被其他元件或跨系統重複使用的程度。
+   * **Analyzability（可分析性）**：開發人員診斷缺陷、評估修改衝擊並找出故障根本原因的容易程度（如 OpenTelemetry 分散式追蹤與結構化日誌）。
+   * **Modifiability（可修改性）**：在不破壞現有軟體品質與結構的前提下，安全且有效地實現程式碼修改的能力。
+   * **Testability（可測試性）**：為軟體建立測試條件並透過自動化單元測試、整合測試進行驗證的難易程度（如透過相依性注入 DI 方便進行 Mock 測試）。
+
+8. **Portability（可攜性／可移植性）**
+   軟體系統從一個硬體、作業系統、瀏覽器或雲端環境轉移到另一個運作環境的難易程度。
+   * **Adaptability（可適應性）**：系統適應不同硬體架構或作業系統環境的能力（如 Node.js 或 Go 跨 Linux x86_64、macOS ARM64 與 Windows 順暢執行）。
+   * **Installability（易安裝性）**：軟體成功安裝與部署至目標生產或開發環境的容易程度（如透過單一 `docker compose up` 指令在 60 秒內建置完整環境）。
+   * **Replaceability（易替換性）**：在相同環境中，該元件替換其他指定類似元件的容易度（如藉由 ORM 介面，將底層資料庫從 MySQL 無痛替換為 PostgreSQL）。
+
+### 1.4.3 真實世界實務場景對照 (Practical Real-World Scenarios)
+
+* **容錯性 (Fault Tolerance · 可靠性)**：當主要信用卡刷卡閘道逾時連線失敗時，電商結帳系統在 500ms 內自動捕捉例外並重試次要備用閘道，完全不中斷顧客的購物結帳體驗。
+* **完整性與真實性 (Integrity & Authenticity · 資訊安全)**：微服務架構間的所有內部 REST 呼叫全面採用以非對稱 RS256 金鑰簽署的 JWT Token，杜絕中間人竄改授權參數。
+* **時間行為與容量 (Time Behavior & Capacity · 效能效率)**：機票即時搜尋引擎在面對每秒 15,000 次高併發查詢時，第 99 百分位 ($p99$) 回應延遲嚴格維持在 80 毫秒以內。
+* **可測試性與模組化 (Testability & Modularity · 可維護性)**：後端服務全面透過介面進行相依性注入 (Dependency Injection)，使單元測試能在數毫秒內透過記憶體 Mock 取代實體資料庫連線。
+* **易安裝性 (Installability · 可攜性)**：新進工程師只需在終端機執行 `docker compose up`，60 秒內即可在乾淨筆電上完整啟動整套多容器微服務開發環境。
 
 ---
 
-> 💡🧠 **觀念檢驗題 (CCQ 4) —— ISO 9126 品質特徵**：
+> 💡🧠 **觀念檢驗題 (CCQ 4) —— ISO 25010 品質特徵**：
 > 
-> *問題*：以下哪一組屬性代表了 ISO 9126 模型所定義的六大主要品質特徵？
-> * A) Functionality, Reliability, Usability, Efficiency, Maintainability, Portability.
-> * B) Performance, Security, Scalability, Availability, Testability, Readability.
-> * C) Accuracy, Correctness, Modularity, Reusability, Interoperability, Safety.
-> * D) Simplicity, Flexibility, Robustness, Extensibility, Compatibility, Deployability.
+> *問題*：以下哪一組屬性完整代表了 ISO/IEC 25010 模型所定義的八大主要產品品質特徵？
+> * A) Functional Suitability, Performance Efficiency, Compatibility, Usability, Reliability, Security, Maintainability, Portability.
+> * B) Performance, Security, Scalability, Availability, Testability, Readability, Modularity, Simplicity.
+> * C) Accuracy, Correctness, Modularity, Reusability, Interoperability, Safety, Robustness, Flexibility.
+> * D) Simplicity, Flexibility, Robustness, Extensibility, Compatibility, Deployability, Scalability, Observability.
 > 
-> [👉 前往附錄查看解答與詳細解析](#ccq-4--iso-9126-品質特徵)
+> [👉 前往附錄查看解答與詳細解析](#ccq-4--iso-25010-品質特徵)
 
 ---
 
-> 💡🧠 **觀念檢驗題 (CCQ 5) —— 實務問題與品質因素對應**：
+> 💡🧠 **觀念檢驗題 (CCQ 5) —— 實務問題與 ISO 25010 品質特徵對應**：
 > 
-> *問題*：以下哪一個選項正確將真實世界的軟體問題與其對應的 ISO 9126 品質特徵進行了配對？
+> *問題*：以下哪一個選項正確將真實世界的軟體問題與其對應的 ISO 25010 品質特徵進行了配對？
 > * A) 資料庫查詢需要 15 秒才能回傳結果 $\rightarrow$ Maintainability (Testability)
-> * B) 當第三方 API 斷線時，系統發生崩潰 $\rightarrow$ Reliability (Fault Tolerance)
-> * C) 由於程式碼緊密耦合，開發人員難以撰寫單元測試 $\rightarrow$ Portability (Adaptability)
-> * D) 應用程式無法在新版本的 macOS 上運行 $\rightarrow$ Usability (Operability)
+> * B) 當第三方外部 API 離線時，整個系統瞬間全面崩潰停擺 $\rightarrow$ Reliability (Fault Tolerance)
+> * C) 由於模組間強烈緊密耦合，開發者極難為其撰寫單元測試 $\rightarrow$ Portability (Adaptability)
+> * D) 未加密的 Session Cookie 導致惡意攻擊者輕易竊取身分登入他人帳號 $\rightarrow$ Usability (Operability)
 > 
-> [👉 前往附錄查看解答與詳細解析](#ccq-5--實務問題與品質因素對應)
+> [👉 前往附錄查看解答與詳細解析](#ccq-5--實務問題與-iso-25010-品質特徵對應)
 
 ---
 
 > 💡📊 **課堂互動活動 —— 品質權衡隨堂投票與討論**：
 > * **情境**：在真實的工程世界中，受限於專案時程與資源，你無法在同一個軟體中將所有品質特徵最大化。
-> * **投票**：請針對以下兩種類型的系統，挑選出最關鍵、不容妥協的 2 項 ISO 9126 品質特徵：
+> * **投票**：請針對以下兩種類型的系統，挑選出最關鍵、不容妥協的 2 項 ISO 25010 品質特徵：
 >   1. *醫療型自動胰島素注射控制器*
 >   2. *爆紅的手機休閒小遊戲*
-> * **討論**：為什麼在胰島素注射控制器中，為了搶快上線（Time to Market）而犧牲容錯性（Fault Tolerance）是極為災難性的決定；而在休閒小遊戲中，卻能為了快速推出新功能而容忍一些不影響核心遊玩的非關鍵臭蟲？在你的觀點中，有哪些主要因素或約束（例如：預算、開發者技能、時程壓力、頻繁變更的需求）會損害軟體品質，或使高品質難以達成？
+> * **討論**：為什麼在胰島素注射控制器中，為了搶快上線（Time to Market）而犧牲容錯性（Fault Tolerance）或資訊安全（Security）是極為災難性的決定；而在休閒小遊戲中，卻能為了快速推出新功能而容忍一些不影響核心遊玩的非關鍵臭蟲？在你的觀點中，有哪些主要因素或約束（例如：預算、開發者技能、時程壓力、頻繁變更的需求）會損害軟體品質，或使高品質難以達成？
 
 ---
 
@@ -578,24 +606,24 @@ Large Language Models (LLMs) 與 AI 代理程式正在徹底改變軟體開發�
 </details>
 
 <details>
-<summary>👉 點擊展開查看：CCQ 4 解答與詳細解析（ISO 9126 品質特徵）</summary>
+<summary>👉 點擊展開查看：CCQ 4 解答與詳細解析（ISO 25010 品質特徵）</summary>
 
-* **正確答案**：**A** (Functionality, Reliability, Usability, Efficiency, Maintainability, Portability.)
-* **詳細解析**：ISO 9126 標準明確規範了軟體品質的這六大主要特徵。其他如效能 (Performance)、資安 (Security) 與可用性 (Availability) 則是這些主要特徵底下的子屬性特徵（如資安屬於功能性，可用性屬於可靠性）。
-* [⬆ 返回 Section 1.4](#14-何謂好軟體iso-9126-品質模型)
+* **正確答案**：**A** (Functional Suitability, Performance Efficiency, Compatibility, Usability, Reliability, Security, Maintainability, Portability.)
+* **詳細解析**：ISO/IEC 25010 標準將軟體產品品質明確劃分為這八大主要特徵（相較於舊版 ISO 9126，獨立新增了「資訊安全 Security」與「相容性 Compatibility」為第一級核心支柱）。其他如效能 (Performance)、可用性 (Availability) 與可測試性 (Testability) 則是隸屬於這些主要特徵底下的子屬性（例如：可用性屬於可靠性，可測試性屬於可維護性）。
+* [⬆ 返回 Section 1.4](#14-何謂好軟體現代-isoiec-25010-品質模型)
 
 </details>
 
 <details>
-<summary>👉 點擊展開查看：CCQ 5 解答與詳細解析（實務問題與品質因素對應）</summary>
+<summary>👉 點擊展開查看：CCQ 5 解答與詳細解析（實務問題與 ISO 25010 品質特徵對應）</summary>
 
-* **正確答案**：**B** (當第三方 API 斷線時，系統發生崩潰 $\rightarrow$ Reliability (Fault Tolerance))
+* **正確答案**：**B** (當第三方外部 API 離線時，整個系統瞬間全面崩潰停擺 $\rightarrow$ Reliability (Fault Tolerance))
 * **詳細解析**：
-  * **B** 正確：系統在面臨外部第三方 API 故障時不崩潰、能妥善處理例外並維持基本運作，這正是**可靠性**中的**容錯性 (Fault Tolerance)** 子特徵的定義。
-  * **A** 錯誤：資料庫查詢耗時 10 餘秒屬於效能（效率性 - Time Behavior）問題。
-  * **C** 錯誤：難以撰寫單元測試屬於可維護性 (Testability) 範疇。
-  * **D** 錯誤：無法在特定 OS 上執行屬於可攜性 (Adaptability) 問題。
-* [⬆ 返回 Section 1.4](#14-何謂好軟體iso-9126-品質模型)
+  * **B** 正確：系統在面臨外部第三方服務或 API 故障時不崩潰、能妥善捕捉例外並維持基本運作，這正是**可靠性 (Reliability)** 中**容錯性 (Fault Tolerance)** 子特徵的定義。
+  * **A** 錯誤：資料庫查詢耗時 15 秒屬於效能效率（Performance Efficiency - Time Behavior）問題。
+  * **C** 錯誤：難以撰寫單元測試屬於可維護性（Maintainability - Testability）範疇。
+  * **D** 錯誤：未加密 Cookie 遭竊取屬於資訊安全（Security - Confidentiality）問題。
+* [⬆ 返回 Section 1.4](#14-何謂好軟體現代-isoiec-25010-品質模型)
 
 </details>
 
@@ -636,6 +664,6 @@ Large Language Models (LLMs) 與 AI 代理程式正在徹底改變軟體開發�
 
 * Sommerville, Ian. *Software Engineering* (10th Edition). Pearson. [Official Website](https://software-engineering-book.com/)
 * Brooks, Frederick P. *The Mythical Man-Month: Essays on Software Engineering*. Addison-Wesley.
-* ISO/IEC 9126-1:2001. *Software engineering — Product quality — Part 1: Quality model*.
+* ISO/IEC 25010:2011. *Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models*.
 * ACM/IEEE Joint Task Force on Software Engineering Ethics and Professional Practices. *Software Engineering Code of Ethics*. [IEEE CS](https://www.computer.org/education/code-of-ethics)
 * Brignull, Harry. *Deceptive Patterns: Exposing the Tricks Tech Companies Use to Control You*.

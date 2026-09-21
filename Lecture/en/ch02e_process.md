@@ -768,9 +768,9 @@ When technical debt is ignored, organizations enter a deadly spiral:
 4. **More Shortcuts Taken:** Under pressure, engineers take even dirtier shortcuts to hit the next release.
 5. **Architectural Gridlock:** Velocity collapses asymptotically toward zero.
 
-![Technical Debt Velocity Impact Handwritten Sketch](../../img/ch02/tech_debt_handwrite.jpg)
+![Martin Fowler's Technical Debt Quadrant](../../img/ch02/tech_debt_handwrite.jpg)
 
-*Figure 2.6.2: Velocity over Time. Teams that accumulate technical debt (red line) start with high initial velocity, but suffer an exponential collapse as compounding interest consumes developer hours. Disciplined teams practicing refactoring and TDD (green line) maintain predictable, high velocity indefinitely.*
+*Figure 2.6.2: Martin Fowler's Technical Debt Quadrant. Organizing technical debt along two dimensions: Deliberate vs. Inadvertent, and Prudent vs. Reckless. Only Prudent & Deliberate debt functions as a manageable strategic loan; Reckless debt inevitably causes architectural erosion and velocity collapse.*
 
 ### 2.6.2 Martin Fowler's Warning: "Flaccid Scrum"
 
