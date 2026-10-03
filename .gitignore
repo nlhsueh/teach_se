@@ -5,8 +5,10 @@
 /Video/
 /pptx/
 pptx/
-/Slide/source/
-/slide/source/
+/Slide/md-en/
+/Slide/md-tw/
+/slide/md-en/
+/slide/md-tw/
 *.pptx
 client_secret*.json
 token.pickle
@@ -42,3 +44,6 @@ syllabus*.md
 # Ignore scratch files
 /scratch/
 scratch/
+
+# Ignore local image backups
+*_original.*

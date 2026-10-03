@@ -149,7 +149,7 @@ First formally described by **Winston W. Royce in 1970** in his landmark paper *
 4. **Integration & System Testing:** The individually developed modules are integrated into a single unified system and tested against functional requirements, performance thresholds, and security benchmarks.
 5. **Operations & Maintenance:** The software is deployed to the customer's production site. Ongoing maintenance involves patching defects and supporting operational upgrades.
 
-![The Waterfall Software Lifecycle](../../img/ch02/comic_waterfall_model.jpg)
+![The Waterfall Software Lifecycle](../../img/ch02/comic_waterfall_model.png)
 
 *Figure 2.2.1: The Waterfall Model. Progress cascades downward like water over rocks. Reversing direction to fix a requirements defect uncovered during integration requires climbing upstream against a crushing current of documentation and rework.*
 
@@ -224,7 +224,7 @@ The V-Model bends the linear waterfall downward and upward into a symmetrical "V
              +--------------------------------------+
 ```
 
-![The Software V-Model](../../img/ch02/comic_v_model.jpg)
+![The Software V-Model](../../img/ch02/comic_v_model.png)
 
 *Figure 2.2.2: The V-Model. The left downward arm specifies and decomposes the system; the right upward arm integrates and validates components. Horizontal arrows illustrate that test suites are designed concurrently with specifications.*
 
@@ -327,7 +327,7 @@ Rather than horizontal slicing (e.g., building 100% of the database in Month 1, 
 * **Increment 2:** Core Product Browsing & Search (Deployed on top of Increment 1).
 * **Increment 3:** Shopping Cart & Checkout (Deployed on top of Increments 1 and 2).
 
-![The Incremental Delivery Process Whiteboard Sketch](../../img/ch02/incremental_delivery_handwrite.jpg)
+![The Incremental Delivery Process Whiteboard Sketch](../../img/ch02/incremental_delivery_handwrite.png)
 
 *Figure 2.3.1: Incremental Delivery. High-priority functional slices are designed, implemented, tested, and shipped in sequential increments, delivering early business value while establishing an operational baseline.*
 
@@ -624,7 +624,7 @@ The Agile Manifesto established values and principles, but intentionally refrain
 
 Scrum, created by Ken Schwaber and Jeff Sutherland, is an iterative, timeboxed management framework based on cross-functional self-organizing teams.
 
-![Complete Scrum Lifecycle](../../img/ch02/comic_scrum_framework.jpg)
+![Complete Scrum Lifecycle](../../img/ch02/comic_scrum_framework.png)
 
 *Figure 2.5.2: The Complete Scrum Framework Lifecycle. The Product Owner prioritizes the Product Backlog. During Sprint Planning, the team selects items into the Sprint Backlog. Across a 1–4 week timebox, the team synchronizes daily, producing a Potentially Shippable Increment verified in the Sprint Review and reflected upon in the Sprint Retrospective.*
 
@@ -648,7 +648,7 @@ Scrum, created by Ken Schwaber and Jeff Sutherland, is an iterative, timeboxed m
 
 Originating from Taiichi Ohno's **Toyota Production System (TPS)** in lean automotive manufacturing, Kanban abandons fixed timeboxes in favor of optimizing **Continuous Flow** through a **Pull System**.
 
-![Kanban Board Flow Comic](../../img/ch02/comic_kanban_flow.jpg)
+![Kanban Board Flow Comic](../../img/ch02/comic_kanban_flow.png)
 
 *Figure 2.5.3: The Kanban Board with WIP Limits. Limiting Work in Progress (WIP) on columns forces developers to swarm on bottlenecks rather than starting new tickets, living by the motto: "Stop starting, start finishing!"*
 
@@ -768,7 +768,7 @@ When technical debt is ignored, organizations enter a deadly spiral:
 4. **More Shortcuts Taken:** Under pressure, engineers take even dirtier shortcuts to hit the next release.
 5. **Architectural Gridlock:** Velocity collapses asymptotically toward zero.
 
-![Martin Fowler's Technical Debt Quadrant](../../img/ch02/tech_debt_handwrite.jpg)
+![Martin Fowler's Technical Debt Quadrant](../../img/ch02/tech_debt_handwrite.png)
 
 *Figure 2.6.2: Martin Fowler's Technical Debt Quadrant. Organizing technical debt along two dimensions: Deliberate vs. Inadvertent, and Prudent vs. Reckless. Only Prudent & Deliberate debt functions as a manageable strategic loan; Reckless debt inevitably causes architectural erosion and velocity collapse.*
 
@@ -875,7 +875,7 @@ Beck's guiding philosophy was simple: **If a practice is good for software quali
 * *If integration is good?* Don't integrate once a month; integrate **multiple times a day** through **Continuous Integration (CI)**.
 * *If simplicity is good?* Don't anticipate future hypothetical needs; design for the **simplest solution that passes current tests today** (**Simple Design**).
 
-![Core XP Practices](../../img/ch02/comic_xp_practices.jpg)
+![Core XP Practices](../../img/ch02/comic_xp_practices.png)
 
 *Figure 2.7.2: Core XP Practices. Interlocking technical habits that reinforce one another to sustain rapid, defect-free software evolution.*
 
@@ -897,7 +897,7 @@ Development proceeds in tight 3-to-5 minute cycles known as the **Red-Green-Refa
   desired behavior           pass (even hardcoded)      all tests remain green!
 ```
 
-![TDD Red-Green-Refactor Cycle](../../img/ch02/comic_tdd_cycle.jpg)
+![TDD Red-Green-Refactor Cycle](../../img/ch02/comic_tdd_cycle.png)
 
 *Figure 2.7.3: The TDD Cycle. 1. Red: Write a failing unit test; 2. Green: Make it pass with minimal code; 3. Refactor: Eliminate duplication and improve structure while all tests stay green.*
 
@@ -1004,7 +1004,7 @@ For decades, IT organizations suffered from the **"Wall of Confusion"**:
 * **Operations (Ops) Incentives:** Evaluated on server uptime, reliability, and stability ("Keep things stable and avoid change").
 * **The Result:** Developers tossed raw binary artifacts over the wall to Ops. When servers crashed at 2:00 AM due to unconfigured dependencies or missing database migrations, Dev blamed Ops for poor maintenance, and Ops blamed Dev for writing unstable code.
 
-![The DevOps Wall of Confusion Comic](../../img/ch02/comic_28_devops.jpg)
+![The DevOps Wall of Confusion Comic](../../img/ch02/comic_28_devops.png)
 
 *Figure 2.8.1: The Wall of Confusion. Development throws code over the wall to Operations, triggering deployment failures, finger-pointing, and severe organizational friction.*
 
@@ -1029,7 +1029,7 @@ The foundational pillars of DevOps are captured in the **CALMS Framework**:
   3. *Automated Unit & Integration Tests:* Run thousands of tests. If even one test fails, the build breaks (**Fail Fast**), and fixing the mainline becomes the team's top priority.
   4. *Artifact Packaging:* Package passing builds into immutable Docker container images.
 
-![DevOps CI/CD Pipeline Comic](../../img/ch02/comic_cicd_pipeline.jpg)
+![DevOps CI/CD Pipeline Comic](../../img/ch02/comic_cicd_pipeline.png)
 
 *Figure 2.8.2: End-to-End Automated CI/CD Pipeline. From local Git commit to cloud production deployment, automated testing, container packaging, and canary deployments create a smooth, reliable software factory.*
 
@@ -1114,7 +1114,7 @@ We have arrived at the newest frontier in software process engineering: **The Ge
 
 With Large Language Models (LLMs) and autonomous coding agents (Claude Code, Gemini CLI, Cursor, Devin), the marginal cost of writing raw code is collapsing toward zero. However, this explosion of synthetic code introduces an existential engineering challenge.
 
-![Vibe Coding vs. Specification-Driven AI Comic](../../img/ch02/comic_29_ai_spec_driven.jpg)
+![Vibe Coding vs. Specification-Driven AI Comic](../../img/ch02/comic_29_ai_spec_driven.png)
 
 *Figure 2.9.1: Vibe Coding vs. Specification-Driven AI. Blindly accepting unstructured AI code snippets (left) creates brittle toys and skyrocketing code churn. Governing AI agents with formal specifications and automated verification gates (right) builds sustainable, industrial-grade systems.*
 

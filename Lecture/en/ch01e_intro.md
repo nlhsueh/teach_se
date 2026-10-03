@@ -123,7 +123,7 @@ Explanation: The crisis was fundamentally an intellectual and organizational fai
 
 Novices and short-sighted managers often equate software strictly with visible source code lines. However, the IEEE formal engineering definition reveals that executable programs are merely one element of a four-pillar structure.
 
-![The Anatomy Beyond Source Code](../../img/ch01/04_not_only_code.jpeg)
+![The Anatomy Beyond Source Code](../../img/ch01/04_not_only_code.png)
 
 *Figure 1.3.1: The IEEE Anatomy of Software—comprising Programs, Data & Schemas, Operational Procedures, and Documentation.*
 
@@ -202,7 +202,7 @@ Explanation: The IEEE standard defines software as computer programs, procedures
 
 Before defining software engineering, we must establish what makes any human activity an "engineering" discipline.
 
-![The Nature of Engineering](../../img/ch01/05_what_is_engineering.jpeg)
+![The Nature of Engineering](../../img/ch01/05_what_is_engineering.png)
 
 *Figure 1.4.1: The Nature of Engineering—transforming scientific principles and finite resources into useful societal artifacts under strict real-world constraints.*
 
@@ -248,7 +248,7 @@ $$\text{Engineering Solution} = \text{Optimize}(\text{Goals}) \quad \text{subjec
 
 ## 1.5 What is Software Engineering? Core Activities & Body of Knowledge
 
-![Coding vs Software Engineering](../../img/ch01/coding_vs_se_loc_bw.jpg)
+![Coding vs Software Engineering](../../img/ch01/coding_vs_se_loc_bw.png)
 
 *Figure 1.5.1: Coding vs. Software Engineering—Coding is writing a few hundred lines of code in isolation; Software Engineering is governing millions of lines of code over decades with teams, dependencies, and continuous refactoring.*
 
@@ -258,7 +258,7 @@ $$\text{Engineering Solution} = \text{Optimize}(\text{Goals}) \quad \text{subjec
 
 Regardless of whether a team follows Agile, Scrum, Kanban, or Waterfall, every software system must undergo four universal activities:
 
-![The Four Core Activities of the Software Engineering Process](../../img/ch01/se_core_activities.jpg)
+![The Four Core Activities of the Software Engineering Process](../../img/ch01/se_core_activities.png)
 
 *Figure 1.5.2: The four universal lifecycle activities: Software Specification, Software Design & Implementation, Software Validation, and Software Evolution.*
 
@@ -324,7 +324,7 @@ Explanation: Eliciting and modeling requirements through stakeholder interviews 
 
 Software engineering is governed by a structured **Body of Knowledge (BOK)**:
 
-![Core Elements of Software Engineering](../../img/ch01/se_elements_infographic.jpg)
+![Core Elements of Software Engineering](../../img/ch01/se_elements_infographic.png)
 
 *Figure 1.5.3: The Software Engineering Body of Knowledge: Disciplines, Principles, Methods & Methodologies, and Heuristics & Guidelines.*
 
@@ -345,7 +345,7 @@ When engineering principles are ignored, intuition leads to expensive fallacies:
   * *Violates:* **"Spec Before Design" & Architectural Coupling**.
   * *Reality:* Late changes invalidate schemas, APIs, and tests. A requirement change that costs $1 during specification costs **$100 in production**.
 
-![Late Requirement Change Cost Comic](../../img/ch01/late_change_cost_comic.jpg)
+![Late Requirement Change Cost Comic](../../img/ch01/late_change_cost_comic.png)
 
 *Figure 1.5.4: The cost of changing requirements—cheap when redrawing a blueprint, catastrophic when moving the skyscraper's foundation after construction.*
 
@@ -434,7 +434,7 @@ A **Software Quality Model** decomposes the abstract concept of quality into a s
 
 ISO/IEC 25010 (Software product Quality Requirements and Evaluation) superseded the older ISO 9126 standard.
 
-![ISO/IEC 25010 Software Product Quality Model](../../img/ch01/iso_25010_subattributes.jpg)
+![ISO/IEC 25010 Software Product Quality Model](../../img/ch01/iso_25010_subattributes.png)
 
 *Figure 1.6.1: The ISO/IEC 25010 Product Quality Model—defining 8 core characteristics and their sub-attributes.*
 
@@ -496,7 +496,7 @@ Explanation: A system's ability to cope with external service failures without c
 
 Because software controls aviation, medical devices, financial markets, and democratic elections, software engineers hold a fiduciary duty to public welfare.
 
-![Code of Ethics Covenant](../../img/ch01/code_of_ethics_covenant.jpg)
+![Code of Ethics Covenant](../../img/ch01/code_of_ethics_covenant.png)
 
 *Figure 1.7.1: A Code of Ethics is a formal covenant establishing moral duties, professional standards, and public accountability.*
 
@@ -504,7 +504,7 @@ Because software controls aviation, medical devices, financial markets, and demo
 
 ### 1.7.1 The ACM/IEEE Code of Ethics: 8 Core Principles
 
-![ACM/IEEE Software Engineering Code of Ethics](../../img/ch01/code_of_ethics_principles.jpg)
+![ACM/IEEE Software Engineering Code of Ethics](../../img/ch01/code_of_ethics_principles.png)
 
 *Figure 1.7.2: The eight core principles of the ACM/IEEE Software Engineering Code of Ethics.*
 
