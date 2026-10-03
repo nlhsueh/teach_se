@@ -1,0 +1,119 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam roundCorner 8
+skinparam shadowing false
+
+skinparam class {
+  BackgroundColor #ffffff
+  BorderColor #0b3c5d
+  BorderThickness 1.5
+  FontColor #0b3c5d
+  HeaderBackgroundColor #e8eff5
+  AttributeFontColor #1d2731
+  AttributeFontSize 11
+  OperationFontColor #1d2731
+  OperationFontSize 11
+}
+
+skinparam arrow {
+  Color #0b3c5d
+  FontColor #333333
+  FontSize 11
+}
+
+abstract class User {
+  # userId: String
+  # fullName: String
+  # phone: String
+  # email: String
+  + login(): Boolean
+  + updateProfile(): void
+}
+
+class Customer {
+  - defaultDeliveryAddress: String
+  - paymentCardToken: String
+  + placeOrder(cart: Cart): Order
+  + rateDelivery(orderId: String, stars: Integer): void
+}
+
+class Courier {
+  - vehicleType: String
+  - currentGPS: GeoLocation
+  - isAvailable: Boolean
+  + acceptDeliveryTask(taskId: String): Boolean
+  + updateLocation(coords: GeoLocation): void
+  + completeDropoff(): void
+}
+
+class Restaurant {
+  - restaurantId: String
+  + name: String
+  - address: String
+  + isOpen: Boolean
+  + acceptOrder(orderId: String): Boolean
+  + markMealReady(orderId: String): void
+}
+
+class MenuItem {
+  - itemId: String
+  + title: String
+  + price: Double
+  + isAvailable: Boolean
+  + getPrice(): Double
+}
+
+class Order {
+  - orderId: String
+  - createdAt: DateTime
+  - status: OrderStatus
+  - totalAmount: Double
+  + calculateTotal(): Double
+  + updateStatus(newStatus: OrderStatus): void
+  + cancel(): Boolean
+}
+
+class OrderItem {
+  - quantity: Integer
+  - unitPrice: Double
+  - specialInstructions: String
+  + getSubtotal(): Double
+}
+
+class DeliveryTask {
+  - taskId: String
+  - pickupTime: DateTime
+  - deliveryETA: DateTime
+  - deliveryFee: Double
+  + assignCourier(c: Courier): void
+  + recordDropoff(): void
+}
+
+class Payment {
+  - transactionId: String
+  - amount: Double
+  - paymentMethod: String
+  - paidAt: DateTime
+  + executeCharge(): Boolean
+  + refund(): Boolean
+}
+
+' Generalization (Inheritance)
+User <|-- Customer
+User <|-- Courier
+
+' Composition (Strong Whole-Part: filled diamond)
+Restaurant "1" *-- "1..*" MenuItem : publishes >
+Order "1" *-- "1..*" OrderItem : contains >
+
+' Association
+OrderItem "0..*" --> "1" MenuItem : references >
+Customer "1" --> "0..*" Order : places >
+Order "1" -- "1" Payment : settled by >
+Order "1" -- "0..1" DeliveryTask : fulfilled via >
+
+' Aggregation (Weak Whole-Part: open diamond)
+DeliveryTask "0..*" o-- "1" Courier : assigned to >
+
+@enduml

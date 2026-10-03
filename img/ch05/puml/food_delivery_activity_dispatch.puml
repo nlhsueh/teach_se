@@ -1,0 +1,50 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam roundCorner 8
+skinparam shadowing false
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #0b3c5d
+  BorderThickness 1.5
+  FontColor #1d2731
+  DiamondBackgroundColor #e8eff5
+  DiamondBorderColor #0b3c5d
+  FontSize 13
+}
+
+skinparam arrow {
+  Color #0b3c5d
+  FontColor #333333
+  FontSize 11
+}
+
+|#e8eff5|Platform Core|
+start
+:Detect "READY FOR PICKUP" event;
+fork
+  :Push "Meal Ready" alert to Customer;
+fork again
+  :Dispatch task to nearest Courier;
+end fork
+
+|#fbf9f1|Courier|
+:Accept delivery assignment;
+:Navigate to restaurant & pick up meal;
+:Scan QR receipt & confirm pickup;
+:Drive to Customer delivery address;
+:Deliver meal at door / hand over;
+:Confirm dropoff in Courier App;
+
+|#e8eff5|Platform Core|
+:Capture final credit card charge;
+:Release payout to Merchant & Courier;
+:Update order status to "COMPLETED";
+
+|#f0f4f8|Customer|
+:Receive warm food delivery;
+:Submit star rating & courier tip;
+stop
+
+@enduml

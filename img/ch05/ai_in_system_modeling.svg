@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 270" width="680" height="270">
-  <rect x="10" y="10" width="660" height="250" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <rect x="10" y="10" width="660" height="250" rx="10" fill="none" stroke="none" stroke-width="0"/>
   <text x="340" y="34" fill="#0b3c5d" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">How AI Assists System Modeling (UML &amp; Diagramming Copilot)</text>
 
   <!-- Box 1: Text-to-UML -->

@@ -1,0 +1,61 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam roundCorner 10
+skinparam shadowing false
+
+skinparam package {
+  BackgroundColor #e8eff5
+  BorderColor #0b3c5d
+  BorderThickness 2
+  FontColor #0b3c5d
+  FontStyle bold
+}
+
+skinparam component {
+  BackgroundColor #ffffff
+  BorderColor #328cc1
+  BorderThickness 1.5
+  FontColor #1d2731
+}
+
+skinparam actor {
+  BackgroundColor #d9b310
+  BorderColor #0b3c5d
+  FontColor #0b3c5d
+  FontStyle bold
+}
+
+skinparam arrow {
+  Color #0b3c5d
+  FontColor #333333
+  FontSize 12
+}
+
+actor "Customer\n(Mobile App)" as Customer
+actor "Delivery Courier\n(Driver App)" as Courier
+actor "Restaurant Partner\n(Merchant Portal)" as Restaurant
+
+package "Food Delivery Platform Boundary" {
+  component [Order & Dispatch Engine\n(FoodieGo Core System)] as CoreSystem
+  component [Menu & Inventory Catalog] as Catalog
+  component [Live Tracking Service] as Tracking
+  
+  Catalog -[hidden]down- CoreSystem
+  CoreSystem -[hidden]down- Tracking
+}
+
+actor "Payment Gateway\n(ApplePay / Stripe)" as Payment
+actor "Navigation Service\n(Google Maps GPS)" as Maps
+actor "Notification Cloud\n(Firebase Push / SMS)" as Notification
+
+Customer --> CoreSystem : 1. Browse menu & place order
+Customer <-- Tracking : 2. Stream real-time delivery GPS
+Restaurant --> CoreSystem : 3. Confirm order & update prep status
+Courier --> CoreSystem : 4. Accept task & confirm pickup / delivery
+
+CoreSystem --> Payment : Authorize & capture charge
+CoreSystem --> Maps : Calculate distance & route ETA
+CoreSystem --> Notification : Push real-time order alerts to users
+
+@enduml

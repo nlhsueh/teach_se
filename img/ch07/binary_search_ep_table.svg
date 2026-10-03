@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 270" width="680" height="270">
-  <rect x="10" y="10" width="660" height="250" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <rect x="10" y="10" width="660" height="250" rx="10" fill="none" stroke="none" stroke-width="0"/>
   <text x="340" y="32" fill="#0b3c5d" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Binary Search EP Weak Coverage Test Suite (8 Test Cases R1 - R8)</text>
 
   <!-- Table Header -->

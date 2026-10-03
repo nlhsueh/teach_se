@@ -1,0 +1,104 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam shadowing false
+left to right direction
+
+skinparam actor {
+  BackgroundColor #d9b310
+  BorderColor #0b3c5d
+  FontColor #0b3c5d
+  FontStyle bold
+  FontSize 13
+}
+
+skinparam usecase {
+  BackgroundColor #ffffff
+  BorderColor #328cc1
+  BorderThickness 1.5
+  FontColor #0b3c5d
+  FontSize 13
+}
+
+skinparam package {
+  BackgroundColor #fdfdfd
+  BorderColor #0b3c5d
+  BorderThickness 2
+  FontColor #0b3c5d
+  FontStyle bold
+  FontSize 14
+}
+
+skinparam arrow {
+  Color #0b3c5d
+  FontColor #333333
+  FontSize 11
+}
+
+' Left Actors
+actor "Customer" as Customer
+actor "Restaurant Partner" as Restaurant
+
+' Right Actors
+actor "Payment Gateway\n«Supporting»" as Payment
+actor "Delivery Courier" as Courier
+
+Customer -[hidden]right- Restaurant
+Payment -[hidden]right- Courier
+
+rectangle "Food Delivery System Boundary" {
+  ' Left Column (Customer)
+  usecase "Browse Menus & Dishes" as UC_Browse
+  usecase "Place Food Order" as UC_PlaceOrder
+  usecase "Apply Promo Voucher" as UC_Voucher
+  usecase "Track Delivery Live" as UC_Track
+  usecase "Cancel Order" as UC_Cancel
+  
+  ' Left Column (Restaurant)
+  usecase "Manage Restaurant Menu" as UC_Menu
+  usecase "Accept / Reject Order" as UC_AcceptOrder
+  usecase "Update Prep Status" as UC_PrepStatus
+  
+  ' Right Column (Payment & Courier)
+  usecase "Process Payment" as UC_Payment
+  usecase "Accept Delivery Task" as UC_AcceptTask
+  usecase "Confirm Meal Pickup" as UC_Pickup
+  usecase "Confirm Dropoff" as UC_Dropoff
+}
+
+' Customer connections
+Customer -- UC_Browse
+Customer -- UC_PlaceOrder
+Customer -- UC_Track
+Customer -- UC_Cancel
+
+' Restaurant connections
+Restaurant -- UC_Menu
+Restaurant -- UC_AcceptOrder
+Restaurant -- UC_PrepStatus
+
+' Include & Extend
+UC_PlaceOrder ..> UC_Payment : <<include>>
+UC_Voucher .> UC_PlaceOrder : <<extend>>
+
+' Right actor connections
+UC_Payment -- Payment
+UC_AcceptTask -- Courier
+UC_Pickup -- Courier
+UC_Dropoff -- Courier
+
+' Vertical alignment left column
+UC_Browse -[hidden]right- UC_PlaceOrder
+UC_PlaceOrder -[hidden]right- UC_Voucher
+UC_Voucher -[hidden]right- UC_Track
+UC_Track -[hidden]right- UC_Cancel
+UC_Cancel -[hidden]right- UC_Menu
+UC_Menu -[hidden]right- UC_AcceptOrder
+UC_AcceptOrder -[hidden]right- UC_PrepStatus
+
+' Vertical alignment right column
+UC_Payment -[hidden]right- UC_AcceptTask
+UC_AcceptTask -[hidden]right- UC_Pickup
+UC_Pickup -[hidden]right- UC_Dropoff
+
+@enduml

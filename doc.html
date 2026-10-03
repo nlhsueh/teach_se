@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>軟體工程專案規格與設計書閱讀器 | ASE 軟體工程</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Highlight.js CSS (GitHub Theme) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+
+  <!-- KaTeX CSS for Mathematical & Symbol Formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+  <!-- Marked, Highlight.js, Mermaid & KaTeX Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #0b3c5d;
+      --primary-dark: #07263d;
+      --primary-light: #e0f2fe;
+      --accent: #328cc1;
+      --accent-dark: #246d97;
+      --accent-glow: #38bdf8;
+      --surface: #ffffff;
+      --background: #f8fafc;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-dark: #cbd5e1;
+      --radius: 12px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 10px -1px rgba(11, 60, 93, 0.08), 0 2px 4px -2px rgba(11, 60, 93, 0.04);
+      --shadow-lg: 0 12px 24px -4px rgba(11, 60, 93, 0.12), 0 4px 6px -2px rgba(11, 60, 93, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      line-height: 1.75;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Reading Progress Bar */
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent) 0%, var(--accent-glow) 100%);
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Top Sticky Navbar */
+    .top-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-back:hover {
+      background: var(--primary-light);
+      border-color: #93c5fd;
+      transform: translateX(-2px);
+    }
+
+    .breadcrumb-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 320px;
+    }
+
+    .breadcrumb-path {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      margin-left: 4px;
+      background: #f1f5f9;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .nav-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #f1f5f9;
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .doc-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 7px;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .doc-tab:hover {
+      color: var(--primary);
+    }
+
+    .doc-tab.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 4px 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .lang-btn.active {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    }
+
+    .btn-nav-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-nav-action:hover {
+      color: var(--primary);
+      border-color: #93c5fd;
+      background: #f8fafc;
+    }
+
+    /* Main Container & Dual-Column Layout */
+    .layout-container {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 24px 80px 24px;
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+      flex: 1;
+    }
+
+    /* Main Document Article */
+    .document-body {
+      flex: 1;
+      min-width: 0;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 44px 52px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Sticky Table of Contents Sidebar */
+    .toc-sidebar {
+      width: 310px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 76px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .toc-item a {
+      display: block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      font-size: 13px;
+      text-decoration: none;
+      line-height: 1.45;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .toc-item a:hover {
+      color: var(--primary);
+      background: #f1f5f9;
+    }
+
+    .toc-item.active a {
+      color: var(--primary);
+      background: var(--primary-light);
+      font-weight: 700;
+    }
+
+    .toc-level-2 {
+      margin-left: 0;
+      font-weight: 600;
+    }
+
+    .toc-level-3 {
+      margin-left: 14px;
+      font-size: 12.5px;
+    }
+
+    .toc-level-4 {
+      margin-left: 26px;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    /* Markdown Typography & Elements */
+    .document-body h1 {
+      font-size: 29px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      line-height: 1.3;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 14px;
+    }
+
+    .document-body h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-top: 36px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    .document-body h3 {
+      font-size: 17.5px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-top: 26px;
+      margin-bottom: 10px;
+    }
+
+    .document-body h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #334155;
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .document-body p {
+      margin-bottom: 16px;
+      color: #334155;
+    }
+
+    .document-body ul,
+    .document-body ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+
+    .document-body li {
+      margin-bottom: 6px;
+      color: #334155;
+    }
+
+    .document-body strong {
+      color: var(--primary-dark);
+    }
+
+    .document-body a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed rgba(50, 140, 193, 0.4);
+      transition: all 0.15s ease;
+    }
+
+    .document-body a:hover {
+      color: var(--primary);
+      border-bottom-style: solid;
+    }
+
+    .document-body hr {
+      border: 0;
+      height: 1px;
+      background: var(--border);
+      margin: 36px 0;
+    }
+
+    /* Images and Figures */
+    .document-body img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(11, 60, 93, 0.08);
+      border: 1px solid var(--border);
+      background-color: #f8fafc;
+    }
+
+    .document-body figure {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .document-body figcaption,
+    .document-body p em {
+      display: block;
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Tables */
+    .document-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+      line-height: 1.6;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .document-body th {
+      background-color: #f1f5f9;
+      color: var(--primary);
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+    }
+
+    .document-body td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: #334155;
+    }
+
+    .document-body tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    /* Code & Syntax Highlighting */
+    .document-body code:not(pre code) {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      background: #f1f5f9;
+      color: #be123c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .code-wrapper {
+      position: relative;
+      margin: 20px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #f8fafc;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .code-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 16px;
+      background: #eef2f6;
+      border-bottom: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .btn-copy {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 3px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.15s ease;
+    }
+
+    .btn-copy:hover {
+      color: var(--primary);
+      border-color: #93c5fd;
+    }
+
+    .document-body pre {
+      margin: 0;
+      padding: 16px 20px;
+      overflow-x: auto;
+      background: #ffffff !important;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+
+    /* Blockquotes & Callouts */
+    .document-body blockquote {
+      border-left: 4px solid var(--accent);
+      background: #f0f9ff;
+      padding: 14px 18px;
+      margin: 20px 0;
+      border-radius: 0 8px 8px 0;
+      color: #334155;
+    }
+
+    .document-body blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Landing Card Grids */
+    .landing-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .spec-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .spec-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #93c5fd;
+    }
+
+    .spec-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: var(--primary-light);
+      color: var(--primary);
+      width: fit-content;
+      margin-bottom: 14px;
+    }
+
+    .spec-card h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .spec-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .spec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+
+    .spec-tag {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 11.5px;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .spec-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .spec-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--primary);
+      color: white;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      flex: 1;
+    }
+
+    .spec-btn:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .spec-btn-outline {
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+
+    .spec-btn-outline:hover {
+      background: #f8fafc;
+      border-color: #93c5fd;
+    }
+
+    /* Print Optimization */
+    @media print {
+      .top-navbar,
+      .toc-sidebar,
+      #progressBar {
+        display: none !important;
+      }
+
+      .layout-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .document-body {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .toc-sidebar {
+        display: none;
+      }
+
+      .document-body {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="progressBar"></div>
+
+  <!-- Top Sticky Header -->
+  <header class="top-navbar">
+    <div class="nav-left">
+      <a href="index.html" class="btn-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span id="backText">返回課程首頁</span>
+      </a>
+      <div class="breadcrumb-title" id="pageTitle">軟體工程專案規格與設計書閱讀器</div>
+      <span class="breadcrumb-path" id="filePathDisplay"></span>
+    </div>
+
+    <!-- Center Document Switching Tabs -->
+    <nav class="nav-center">
+      <a href="javascript:void(0)" onclick="switchDoc('srs')" class="doc-tab" id="tabSRS">
+        📘 <span id="labelSRS">需求規格書 (SRS)</span>
+      </a>
+      <a href="javascript:void(0)" onclick="switchDoc('sdd')" class="doc-tab" id="tabSDD">
+        📐 <span id="labelSDD">系統設計書 (SDD)</span>
+      </a>
+    </nav>
+
+    <div class="nav-right">
+      <!-- Language Switcher -->
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langZh" onclick="setLanguage('zh')">🇹🇼 中文</button>
+        <button class="lang-btn" id="langEn" onclick="setLanguage('en')">🇬🇧 EN</button>
+      </div>
+
+      <button class="btn-nav-action" onclick="window.print()" title="列印或另存為 PDF 文件">
+        🖨️ <span id="printText">列印 / 存為 PDF</span>
+      </button>
+      <a href="https://github.com/nlhsueh/teach_se" class="btn-nav-action" target="_blank" rel="noopener noreferrer"
+        id="githubLink" title="前往 GitHub 專案庫">
+        ⭐ GitHub
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Layout -->
+  <main class="layout-container">
+    <article class="document-body" id="contentArea">
+      <div style="text-align: center; padding: 60px 0;">
+        <div style="font-size: 28px; margin-bottom: 12px;">⏳ Loading Specifications...</div>
+        <p style="color: var(--text-muted);">Rendering Markdown, Diagrams & LaTeX Math Formulas</p>
+      </div>
+    </article>
+
+    <!-- Sticky Table of Contents Sidebar -->
+    <aside class="toc-sidebar" id="tocSidebar">
+      <div class="toc-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        <span id="tocTitleText">本頁章節目錄 (TOC)</span>
+      </div>
+      <ul class="toc-list" id="tocList"></ul>
+    </aside>
+  </main>
+
+  <script>
+    // State management
+    let currentLang = 'zh'; // 'zh' or 'en'
+    let currentDocType = 'srs'; // 'srs' or 'sdd'
+
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progressBar').style.width = scrolled + '%';
+    });
+
+    // Helper: Get ?file= query parameter
+    function getFileParam() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('file');
+    }
+
+    // Path Resolver Helper
+    function resolvePath(baseDir, relativePath) {
+      if (relativePath.startsWith('/')) return relativePath.substring(1);
+      if (relativePath.startsWith('./')) relativePath = relativePath.substring(2);
+
+      const stack = baseDir ? baseDir.split('/').filter(Boolean) : [];
+      const parts = relativePath.split('/');
+
+      for (let p of parts) {
+        if (p === '..') {
+          if (stack.length > 0) stack.pop();
+        } else if (p !== '.' && p !== '') {
+          stack.push(p);
+        }
+      }
+      return stack.join('/');
+    }
+
+    // Fix Relative Paths for Images and Links
+    function fixRelativePaths(baseDir) {
+      const images = document.querySelectorAll('#contentArea img');
+      images.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !/^(https?:|\/\/|data:)/i.test(src)) {
+          img.src = resolvePath(baseDir, src);
+        }
+      });
+
+      const links = document.querySelectorAll('#contentArea a');
+      links.forEach(a => {
+        const href = a.getAttribute('href');
+        if (!href) return;
+        if (/^(#|mailto:|javascript:)/i.test(href)) return;
+
+        if (/^(https?:|\/\/)/i.test(href)) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          return;
+        }
+
+        const hashIdx = href.indexOf('#');
+        const cleanPath = hashIdx !== -1 ? href.substring(0, hashIdx) : href;
+        const hashPart = hashIdx !== -1 ? href.substring(hashIdx) : '';
+
+        const resolved = resolvePath(baseDir, cleanPath);
+
+        if (cleanPath.endsWith('.md')) {
+          a.href = `doc.html?file=${encodeURIComponent(resolved)}${hashPart}`;
+        } else if (cleanPath.endsWith('.html') || cleanPath.endsWith('.htm')) {
+          a.href = `${resolved}${hashPart}`;
+        }
+      });
+    }
+
+    // Build Table of Contents & Scroll-Spy
+    function buildTOC() {
+      const content = document.getElementById('contentArea');
+      const tocList = document.getElementById('tocList');
+      tocList.innerHTML = '';
+
+      const headings = content.querySelectorAll('h2, h3, h4');
+      if (headings.length === 0) {
+        document.getElementById('tocSidebar').style.display = 'none';
+        return;
+      }
+
+      headings.forEach((heading, index) => {
+        let id = heading.id;
+        if (!id) {
+          id = 'heading-' + index + '-' + heading.textContent.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-');
+          heading.id = id;
+        }
+
+        const li = document.createElement('li');
+        li.className = `toc-item toc-level-${heading.tagName.toLowerCase().charAt(1)}`;
+        li.dataset.targetId = id;
+
+        const a = document.createElement('a');
+        a.href = '#' + id;
+        a.textContent = heading.textContent.trim();
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, null, '#' + id);
+        });
+
+        li.appendChild(a);
+        tocList.appendChild(li);
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocList.querySelectorAll('.toc-item').forEach(item => {
+              item.classList.toggle('active', item.dataset.targetId === id);
+            });
+          }
+        });
+      }, {
+        rootMargin: '-80px 0px -75% 0px'
+      });
+
+      headings.forEach(h => observer.observe(h));
+    }
+
+    // Enhance Code Blocks with Language Badges and Copy Buttons
+    function enhanceCodeBlocks() {
+      document.querySelectorAll('#contentArea pre').forEach(pre => {
+        const code = pre.querySelector('code');
+        if (!code) return;
+
+        let lang = 'code';
+        const classes = code.className.split(' ');
+        for (let c of classes) {
+          if (c.startsWith('language-')) {
+            lang = c.replace('language-', '');
+            break;
+          }
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+
+        const header = document.createElement('div');
+        header.className = 'code-header';
+        header.innerHTML = `<span>${lang.toUpperCase()}</span>`;
+
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'btn-copy';
+        copyBtn.textContent = currentLang === 'zh' ? '📋 複製程式碼' : '📋 Copy Code';
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(code.innerText).then(() => {
+            copyBtn.textContent = currentLang === 'zh' ? '✅ 已複製！' : '✅ Copied!';
+            setTimeout(() => {
+              copyBtn.textContent = currentLang === 'zh' ? '📋 複製程式碼' : '📋 Copy Code';
+            }, 2000);
+          });
+        });
+
+        header.appendChild(copyBtn);
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(header);
+        wrapper.appendChild(pre);
+      });
+    }
+
+    // Switch Document Type
+    function switchDoc(type) {
+      currentDocType = type;
+      let targetFile = '';
+      if (type === 'srs') {
+        targetFile = currentLang === 'en' 
+          ? 'Lecture/food_delivery/srs_food_delivery_en.md' 
+          : 'Lecture/food_delivery/srs_food_delivery.md';
+      } else {
+        targetFile = currentLang === 'en' 
+          ? 'Lecture/food_delivery/sdd_food_delivery_en.md' 
+          : 'Lecture/food_delivery/sdd_food_delivery.md';
+      }
+      history.pushState(null, null, `doc.html?file=${encodeURIComponent(targetFile)}`);
+      loadMarkdown();
+    }
+
+    // Switch Language
+    function setLanguage(lang) {
+      currentLang = lang;
+      updateUIStrings();
+
+      const currentFile = getFileParam();
+      if (!currentFile) {
+        renderLanding();
+        return;
+      }
+
+      // Switch existing file to corresponding language version
+      let newFile = currentFile;
+      if (lang === 'en') {
+        if (currentFile.includes('srs_food_delivery.md')) {
+          newFile = 'Lecture/food_delivery/srs_food_delivery_en.md';
+        } else if (currentFile.includes('sdd_food_delivery.md')) {
+          newFile = 'Lecture/food_delivery/sdd_food_delivery_en.md';
+        }
+      } else {
+        if (currentFile.includes('srs_food_delivery_en.md')) {
+          newFile = 'Lecture/food_delivery/srs_food_delivery.md';
+        } else if (currentFile.includes('sdd_food_delivery_en.md')) {
+          newFile = 'Lecture/food_delivery/sdd_food_delivery.md';
+        }
+      }
+
+      history.pushState(null, null, `doc.html?file=${encodeURIComponent(newFile)}`);
+      loadMarkdown();
+    }
+
+    // Update UI Strings based on current language
+    function updateUIStrings() {
+      const isZh = currentLang === 'zh';
+      document.getElementById('langZh').classList.toggle('active', isZh);
+      document.getElementById('langEn').classList.toggle('active', !isZh);
+      document.getElementById('backText').textContent = isZh ? '返回課程首頁' : 'Course Home';
+      document.getElementById('labelSRS').textContent = isZh ? '需求規格書 (SRS)' : 'Requirements Spec (SRS)';
+      document.getElementById('labelSDD').textContent = isZh ? '系統設計書 (SDD)' : 'Software Design (SDD)';
+      document.getElementById('printText').textContent = isZh ? '列印 / 存為 PDF' : 'Print / Save PDF';
+      document.getElementById('tocTitleText').textContent = isZh ? '本頁章節目錄 (TOC)' : 'Table of Contents';
+    }
+
+    // Render Landing Directory View
+    function renderLanding() {
+      const contentArea = document.getElementById('contentArea');
+      const pageTitle = document.getElementById('pageTitle');
+      const filePathDisplay = document.getElementById('filePathDisplay');
+      const isZh = currentLang === 'zh';
+
+      pageTitle.textContent = isZh 
+        ? "軟體工程實務專案案例庫：美食外送平台"
+        : "Software Engineering Capstone Case Study: QuickBite Platform";
+      filePathDisplay.textContent = "";
+
+      contentArea.innerHTML = `
+        <div style="margin-bottom: 28px;">
+          <div style="display: inline-block; background: var(--primary-light); color: var(--primary); padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 700; margin-bottom: 12px;">
+            ${isZh ? '🚀 逢甲軟體工程課程實務示範專案' : '🚀 Capstone Case Study — Feng Chia University'}
+          </div>
+          <h1 style="border: none; margin-bottom: 10px;">
+            ${isZh ? 'QuickBite 饗速配 — 美食外送與智慧派單平台' : 'QuickBite — Food Delivery & Intelligent Dispatch Platform'}
+          </h1>
+          <p style="font-size: 16px; color: var(--text-muted); line-height: 1.7;">
+            ${isZh 
+              ? '本案例專為<strong>軟體工程 (Software Engineering)</strong> 課程打造，緊扣「Ch03 需求工程」、「Ch04 系統塑模」與「Ch05 軟體架構與設計」，提供業界級中英雙語規格與設計範本供同學研讀對照。'
+              : 'Designed specifically for the <strong>Software Engineering (ASE)</strong> curriculum, aligning directly with Slide Modules Ch03 (Requirements), Ch04 (System Modeling), and Ch05 (Architecture & Design) in both Traditional Chinese and English.'}
+          </p>
+        </div>
+
+        <div class="landing-card-grid">
+          <!-- SRS Card -->
+          <div class="spec-card">
+            <div>
+              <div class="spec-badge">${isZh ? '📋 需求工程核心實務' : '📋 Requirements Engineering'}</div>
+              <h3>${isZh ? '軟體需求規格書 (SRS)' : 'Software Requirements Specification'}</h3>
+              <p>
+                ${isZh 
+                  ? '遵循 IEEE 830 / ISO 29148 規範。涵蓋系統脈絡圖 (Context Diagram)、總體用例圖、包含與擴展機制 (<code>&lt;&lt;include&gt;&gt;</code> 與 <code>&lt;&lt;extend&gt;&gt;</code>)、雙階段泳道活動圖、Sommerville 階層化量化 NFR 指標、Gherkin BDD 劇本及 GQM 品質模型。'
+                  : 'Conforms to IEEE 830 / ISO 29148. Features System Context, Use Case Model, Include vs. Extend mechanics, Swimlane Activity Workflows, Verifiable Sommerville NFR metrics, Gherkin BDD acceptance tests, and GQM matrix.'}
+              </p>
+              <div class="spec-tags">
+                <span class="spec-tag">System Context</span>
+                <span class="spec-tag">Use Case Model</span>
+                <span class="spec-tag">Activity Diagram</span>
+                <span class="spec-tag">Verifiable NFRs</span>
+                <span class="spec-tag">BDD Scenarios</span>
+              </div>
+            </div>
+            <div class="spec-actions">
+              <a href="doc.html?file=${isZh ? 'Lecture/food_delivery/srs_food_delivery.md' : 'Lecture/food_delivery/srs_food_delivery_en.md'}" class="spec-btn">
+                📖 ${isZh ? '線上閱讀 (Markdown)' : 'Read Online (MD)'}
+              </a>
+              <a href="${isZh ? 'Lecture/food_delivery/srs_food_delivery.pdf' : 'Lecture/food_delivery/srs_food_delivery_en.pdf'}" class="spec-btn spec-btn-outline" target="_blank">
+                📄 PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- SDD Card -->
+          <div class="spec-card">
+            <div>
+              <div class="spec-badge">${isZh ? '📐 系統設計與架構核心實務' : '📐 Architecture & Design'}</div>
+              <h3>${isZh ? '軟體架構與系統設計說明書 (SDD)' : 'Software Architecture & Design Document'}</h3>
+              <p>
+                ${isZh 
+                  ? '遵循 IEEE 1016 與 Kruchten 4+1 架構視圖模型。涵蓋微服務與 Kafka 事件驅動架構、UML 領域類別圖 (Class Diagram)、GoF 設計模式 (策略模式、狀態模式、觀察者模式)、端到端非同步循序圖、狀態機圖、RESTful API 規範與 CAP 權衡。'
+                  : 'Conforms to IEEE 1016 and Kruchten 4+1 Views. Covers Microservices & Kafka Event-Driven Architecture, UML Domain Class Diagram, GoF Patterns (Strategy, State, Observer), Sequence & State Machine Diagrams, and CAP trade-offs.'}
+              </p>
+              <div class="spec-tags">
+                <span class="spec-tag">4+1 Views</span>
+                <span class="spec-tag">Class Diagram</span>
+                <span class="spec-tag">Design Patterns</span>
+                <span class="spec-tag">Sequence Diagram</span>
+                <span class="spec-tag">State Machine</span>
+              </div>
+            </div>
+            <div class="spec-actions">
+              <a href="doc.html?file=${isZh ? 'Lecture/food_delivery/sdd_food_delivery.md' : 'Lecture/food_delivery/sdd_food_delivery_en.md'}" class="spec-btn">
+                📖 ${isZh ? '線上閱讀 (Markdown)' : 'Read Online (MD)'}
+              </a>
+              <a href="${isZh ? 'Lecture/food_delivery/sdd_food_delivery.pdf' : 'Lecture/food_delivery/sdd_food_delivery_en.pdf'}" class="spec-btn spec-btn-outline" target="_blank">
+                📄 PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 22px; background: #f1f5f9; border-radius: 12px; border: 1px solid var(--border);">
+          <h4 style="margin-top: 0; color: var(--primary); font-size: 15px;">💡 ${isZh ? '教學指引 (Teaching & Learning Tips)' : 'Learning Guidance'}</h4>
+          <p style="font-size: 13.5px; color: #475569; margin-bottom: 0;">
+            ${isZh 
+              ? '建議同學在研讀 <strong>Slide 03 需求工程</strong> 與 <strong>Slide 04 UML 系統塑模</strong> 投影片時，同步開啟本頁兩份規格書。比對投影片中的抽象觀念（如 GQM 指標、泳道活動圖、類別多重性、狀態轉移守衛條件）如何在真實雲端大型專案中落地為嚴謹、可驗收的工程文件。可點擊右上角隨時切換繁體中文與英文版本。'
+              : 'Students are encouraged to review these specifications concurrently with Slide 03 (Requirements Engineering) and Slide 04 (UML System Modeling). Compare theoretical principles with industry-grade engineering specifications. Toggle the top-right button anytime to switch between Traditional Chinese and English.'}
+          </p>
+        </div>
+      `;
+      document.getElementById('tocSidebar').style.display = 'none';
+    }
+
+    // Main Markdown Loader
+    async function loadMarkdown() {
+      const file = getFileParam();
+      const contentArea = document.getElementById('contentArea');
+      const pageTitle = document.getElementById('pageTitle');
+      const filePathDisplay = document.getElementById('filePathDisplay');
+      const tabSRS = document.getElementById('tabSRS');
+      const tabSDD = document.getElementById('tabSDD');
+
+      // Detect language from file path
+      if (file) {
+        currentLang = file.includes('_en.md') ? 'en' : 'zh';
+        currentDocType = file.includes('srs_food_delivery') ? 'srs' : 'sdd';
+      }
+      updateUIStrings();
+
+      // Update Active Navigation Tab
+      if (file && file.includes('srs_food_delivery')) {
+        tabSRS.classList.add('active');
+        tabSDD.classList.remove('active');
+      } else if (file && file.includes('sdd_food_delivery')) {
+        tabSDD.classList.add('active');
+        tabSRS.classList.remove('active');
+      } else {
+        tabSRS.classList.remove('active');
+        tabSDD.classList.remove('active');
+      }
+
+      // If no file specified, render Landing View
+      if (!file) {
+        renderLanding();
+        return;
+      }
+
+      filePathDisplay.textContent = `(${file})`;
+
+      // Calculate base directory of the markdown file
+      const lastSlash = file.lastIndexOf('/');
+      const baseDir = lastSlash !== -1 ? file.substring(0, lastSlash + 1) : '';
+
+      try {
+        const response = await fetch(file);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} ${response.statusText}`);
+        }
+        let markdown = await response.text();
+
+        // Pre-process arrows and math formulas to guarantee flawless rendering
+        markdown = markdown.replace(/\$\\rightarrow\$/g, '→')
+                           .replace(/\\rightarrow/g, '→')
+                           .replace(/\$→\$/g, '→')
+                           .replace(/\$\\le\$/g, '≤')
+                           .replace(/\$\\ge\$/g, '≥');
+
+        // Extract first heading as title
+        const headingMatch = markdown.match(/^#+\s+(.+)$/m);
+        if (headingMatch) {
+          const title = headingMatch[1].replace(/[*_`]/g, '').trim();
+          pageTitle.textContent = title;
+          document.title = `${title} | QuickBite`;
+        }
+
+        // Configure marked options
+        marked.setOptions({
+          gfm: true,
+          breaks: true
+        });
+
+        // Parse markdown to HTML
+        contentArea.innerHTML = marked.parse(markdown);
+
+        // Render KaTeX math in the rendered HTML
+        if (typeof renderMathInElement === 'function') {
+          renderMathInElement(contentArea, {
+            delimiters: [
+              { left: '$$', right: '$$', display: true },
+              { left: '$', right: '$', display: false }
+            ],
+            throwOnError: false
+          });
+        }
+
+        // Highlight code blocks
+        contentArea.querySelectorAll('pre code').forEach((block) => {
+          hljs.highlightElement(block);
+        });
+
+        // Enhance GitHub Callouts / Alerts (> [!NOTE], > [!TIP], etc.)
+        contentArea.querySelectorAll('blockquote').forEach((bq) => {
+          const firstP = bq.querySelector('p');
+          if (!firstP) return;
+          const text = firstP.innerHTML;
+          const alertMatch = text.match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(<br\s*\/?>)?/i);
+          if (alertMatch) {
+            const type = alertMatch[1].toUpperCase();
+            firstP.innerHTML = text.replace(alertMatch[0], '');
+            const badges = {
+              NOTE: { icon: 'ℹ️', title: 'NOTE', color: '#0284c7', bg: '#f0f9ff', border: '#0284c7' },
+              TIP: { icon: '💡', title: 'TIP', color: '#16a34a', bg: '#f0fdf4', border: '#16a34a' },
+              IMPORTANT: { icon: '📌', title: 'IMPORTANT', color: '#854d0e', bg: '#fefce8', border: '#ca8a04' },
+              WARNING: { icon: '⚠️', title: 'WARNING', color: '#c2410c', bg: '#fff7ed', border: '#ea580c' },
+              CAUTION: { icon: '🛑', title: 'CAUTION', color: '#b91c1c', bg: '#fef2f2', border: '#dc2626' }
+            };
+            const b = badges[type] || badges.NOTE;
+            bq.style.borderLeftColor = b.border;
+            bq.style.backgroundColor = b.bg;
+
+            const titleEl = document.createElement('div');
+            titleEl.style.fontWeight = '700';
+            titleEl.style.color = b.color;
+            titleEl.style.marginBottom = '6px';
+            titleEl.style.display = 'flex';
+            titleEl.style.alignItems = 'center';
+            titleEl.style.gap = '6px';
+            titleEl.innerHTML = `<span>${b.icon}</span><span>${b.title}</span>`;
+            bq.insertBefore(titleEl, firstP);
+          }
+        });
+
+        // Post-processing
+        fixRelativePaths(baseDir);
+        enhanceCodeBlocks();
+        buildTOC();
+
+        // Scroll to hash fragment if present
+        if (window.location.hash) {
+          const targetId = decodeURIComponent(window.location.hash.substring(1));
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            setTimeout(() => targetEl.scrollIntoView({ behavior: 'smooth' }), 200);
+          }
+        }
+
+      } catch (error) {
+        console.error("載入規格書失敗:", error);
+        pageTitle.textContent = currentLang === 'zh' ? "無法載入規格書檔案" : "Failed to Load Specification";
+        contentArea.innerHTML = `
+          <div style="text-align: center; padding: 48px 20px;">
+            <div style="font-size: 32px; color: #dc2626; margin-bottom: 12px;">⚠️ ${currentLang === 'zh' ? '載入規格書失敗' : 'Error Loading Document'}</div>
+            <p style="margin: 8px 0; font-size: 15px;">檔案路徑 / File Path：<code>${file}</code></p>
+            <p style="color: var(--text-muted); font-size: 13.5px;">${error.message}</p>
+            <div style="margin-top: 24px;">
+              <a href="doc.html" class="btn-back" style="display: inline-flex;">⬅️ ${currentLang === 'zh' ? '返回專案案例總覽' : 'Return to Directory'}</a>
+            </div>
+          </div>
+        `;
+        document.getElementById('tocSidebar').style.display = 'none';
+      }
+    }
+
+    // Initialize on DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', loadMarkdown);
+  </script>
+</body>
+
+</html>

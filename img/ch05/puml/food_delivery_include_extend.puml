@@ -1,0 +1,42 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam shadowing false
+
+skinparam usecase {
+  BackgroundColor #ffffff
+  BorderColor #0b3c5d
+  BorderThickness 1.5
+  FontColor #0b3c5d
+  FontSize 14
+}
+
+skinparam arrow {
+  Color #0b3c5d
+  FontColor #333333
+  FontSize 12
+  FontStyle bold
+}
+
+left to right direction
+
+usecase "Place Food Order\n(Base Use Case)" as Base
+usecase "Process Payment\n(Included Subroutine)" as Inc
+usecase "Apply Promo Voucher\n(Optional Extension)" as Ext
+
+Base ..> Inc : <<include>>\n(Mandatory: Always runs)
+Ext .> Base : <<extend>>\n[Condition: User has valid voucher]\n(Extension Point: Before Payment)
+
+note bottom of Inc
+  <b><<include>> Rule:</b>
+  Points FROM base TO included.
+  Base cannot finish without it.
+end note
+
+note bottom of Ext
+  <b><<extend>> Rule:</b>
+  Points FROM extension TO base.
+  Runs only when condition is true.
+end note
+
+@enduml

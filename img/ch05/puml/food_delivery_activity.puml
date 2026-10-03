@@ -1,0 +1,73 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam roundCorner 8
+skinparam shadowing false
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #0b3c5d
+  BorderThickness 1.5
+  FontColor #1d2731
+  DiamondBackgroundColor #e8eff5
+  DiamondBorderColor #0b3c5d
+}
+
+skinparam arrow {
+  Color #0b3c5d
+  FontColor #333333
+}
+
+|#f0f4f8|Customer|
+start
+:Browse restaurant menus\n& select meal items;
+:Submit delivery order\nwith delivery address;
+
+|#e8eff5|Platform Core|
+:Validate cart & calculate total;
+:Authorize payment via\nPayment Gateway;
+if (Payment Authorized?) then (yes)
+  :Generate OrderRecord\nwith status "PLACED";
+else (no)
+  :Notify Customer payment failed;
+  detach
+endif
+
+|#ffffff|Restaurant Partner|
+:Receive order notification;
+if (Accept Order?) then (yes)
+  :Confirm order & start cooking;
+else (no)
+  |Platform Core|
+  :Refund payment & notify customer;
+  detach
+endif
+
+|#ffffff|Restaurant Partner|
+:Mark order "READY FOR PICKUP";
+
+|#e8eff5|Platform Core|
+fork
+  :Push "Meal Ready" alert to Customer;
+fork again
+  :Dispatch nearest available Courier;
+end fork
+
+|#fbf9f1|Courier|
+:Accept delivery dispatch;
+:Navigate to restaurant & pick up meal;
+:Confirm pickup in Courier App;
+:Navigate to customer delivery address;
+:Hand over meal to Customer;
+:Confirm delivery completed;
+
+|Platform Core|
+:Capture final payment payout;
+:Update order status to "COMPLETED";
+
+|Customer|
+:Receive warm meal;
+:Submit rating & driver tip;
+stop
+
+@enduml

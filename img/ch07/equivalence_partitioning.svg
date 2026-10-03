@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 250" width="650" height="250">
   <!-- Container -->
-  <rect x="10" y="10" width="630" height="230" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <rect x="10" y="10" width="630" height="230" rx="10" fill="none" stroke="none" stroke-width="0"/>
   <text x="325" y="38" fill="#0b3c5d" font-family="Arial" font-size="15" font-weight="bold" text-anchor="middle">Equivalence Partitioning &amp; Boundary Value Analysis</text>
 
   <!-- Number Line Bar -->

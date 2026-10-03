@@ -1,0 +1,64 @@
+@startuml
+skinparam backgroundColor #f5f5f5
+skinparam defaultFontName "Helvetica Neue", Arial, sans-serif
+skinparam roundCorner 8
+skinparam shadowing false
+
+skinparam sequence {
+  ArrowColor #0b3c5d
+  LifeLineBorderColor #328cc1
+  LifeLineBackgroundColor #e8eff5
+  ParticipantBorderColor #0b3c5d
+  ParticipantBackgroundColor #ffffff
+  ParticipantFontColor #0b3c5d
+  ParticipantFontStyle bold
+  ActorBorderColor #0b3c5d
+  ActorBackgroundColor #d9b310
+  ActorFontColor #0b3c5d
+}
+
+autonumber
+
+actor "Customer" as Customer
+boundary "CheckoutUI\n<<Boundary>>" as UI
+control "OrderController\n<<Control>>" as Controller
+boundary "PaymentGatewayAPI\n<<Boundary>>" as PaymentAPI
+entity "Order\n<<Entity>>" as Order
+entity "Restaurant\n<<Entity>>" as Restaurant
+control "DispatchService\n<<Control>>" as Dispatch
+
+Customer -> UI: clickCheckout(cartItems, address)
+activate UI
+
+UI -> Controller: submitOrder(cartItems, address, paymentToken)
+activate Controller
+
+Controller -> Controller: validateCart(cartItems)
+
+Controller -> PaymentAPI: authorizeCharge(amount, paymentToken)
+activate PaymentAPI
+PaymentAPI --> Controller: 200 OK (authCode: "AUTH_8849")
+deactivate PaymentAPI
+
+Controller -> Order: create(items, total, "PAID")
+activate Order
+Order --> Controller: orderId: "ORD-9201"
+deactivate Order
+
+Controller -> Restaurant: notifyNewOrder(orderId, items)
+activate Restaurant
+Restaurant --> Controller: orderAcknowledged
+deactivate Restaurant
+
+Controller -> Dispatch: queueForCourierDispatch(orderId, restaurantGPS)
+activate Dispatch
+Dispatch --> Controller: dispatchQueued
+deactivate Dispatch
+
+Controller --> UI: returnOrderSuccess(orderId, estimatedMinutes: 25)
+deactivate Controller
+
+UI --> Customer: displayOrderConfirmed(orderId, liveTrackingURL)
+deactivate UI
+
+@enduml

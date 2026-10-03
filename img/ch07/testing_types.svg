@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280">
-  <rect x="10" y="10" width="680" height="260" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <rect x="10" y="10" width="680" height="260" rx="10" fill="none" stroke="none" stroke-width="0"/>
   <text x="350" y="36" fill="#0b3c5d" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Spectrum of Software Testing Types</text>
 
   <!-- Column 1: Functional Testing -->

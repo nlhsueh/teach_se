@@ -6,7 +6,7 @@
   </defs>
 
   <!-- Background container -->
-  <rect x="0" y="0" width="540" height="580" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="0" y="0" width="540" height="580" rx="14" fill="none" stroke="none" stroke-width="0"/>
 
   <!-- Header Section -->
   <text x="270" y="32" fill="#0f172a" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">The Agile Ecosystem Hierarchy</text>

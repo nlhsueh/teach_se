@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
   <!-- Outer Frame -->
-  <rect x="10" y="10" width="580" height="280" rx="10" fill="#f8f9fa" stroke="none" stroke-width="0"/>
+  <rect x="10" y="10" width="580" height="280" rx="10" fill="none" stroke="none" stroke-width="0"/>
   <text x="300" y="38" fill="#0b3c5d" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">The Software Testing Pyramid</text>
 
   <!-- Pyramid Layers -->
