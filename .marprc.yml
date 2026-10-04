@@ -1,2 +1,3 @@
 themeSet:
   - themes/ase-theme.css
+html: true

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" data-lang="zh-tw">
 
 <head>
   <meta charset="UTF-8">
@@ -16,8 +16,8 @@
       --primary: #0b3c5d;
       --primary-dark: #07263d;
       --primary-light: #e0f2fe;
-      --accent: #328cc1;
-      --accent-dark: #246d97;
+      --accent: #0284c7;
+      --accent-dark: #0369a1;
       --accent-glow: #38bdf8;
       --surface: #ffffff;
       --background: #f8fafc;
@@ -46,12 +46,123 @@
     }
 
     /* ==========================================================================
+       Language Switch Display Rules (Instant, Zero-Flicker)
+       ========================================================================== */
+    html[data-lang="zh-tw"] [data-lang="en"] {
+      display: none !important;
+    }
+    html[data-lang="en"] [data-lang="zh-tw"] {
+      display: none !important;
+    }
+
+    /* ==========================================================================
+       Sticky Navigation Bar with Bilingual Switcher
+       ========================================================================== */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 25, 39, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 20px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-container {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 14.5px;
+      color: #f8fafc;
+      letter-spacing: -0.2px;
+      text-decoration: none;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Elegant Pill Switcher */
+    .lang-switcher-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lang-switcher-label {
+      font-size: 12px;
+      color: #94a3b8;
+      font-weight: 600;
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      .lang-switcher-label {
+        display: inline-block;
+      }
+    }
+
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 3px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: #bae6fd;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.09);
+    }
+
+    .lang-btn.active {
+      background: #38bdf8;
+      color: #071927;
+      box-shadow: 0 2px 8px rgba(56, 189, 248, 0.45);
+    }
+
+    /* ==========================================================================
        Hero Banner
        ========================================================================== */
     .hero {
       background: linear-gradient(135deg, #071927 0%, #0b3c5d 50%, #1d5f8a 100%);
       color: white;
-      padding: 68px 24px 56px 24px;
+      padding: 56px 24px 52px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -99,11 +210,11 @@
     }
 
     .hero p {
-      font-size: 17px;
+      font-size: 16.5px;
       color: #bae6fd;
-      max-width: 820px;
+      max-width: 840px;
       margin: 0 auto 24px auto;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .hero-links {
@@ -120,7 +231,7 @@
       gap: 8px;
       background: rgba(255, 255, 255, 0.95);
       color: var(--primary);
-      padding: 9px 18px;
+      padding: 10px 20px;
       border-radius: 999px;
       font-size: 13.5px;
       font-weight: 700;
@@ -150,11 +261,21 @@
       transform: translateY(-2px);
     }
 
+    .hero-btn.hero-btn-disabled {
+      background: rgba(255, 255, 255, 0.12) !important;
+      color: #94a3b8 !important;
+      border: 1px dashed rgba(255, 255, 255, 0.3) !important;
+      pointer-events: none;
+      cursor: not-allowed;
+      box-shadow: none !important;
+      opacity: 0.85;
+    }
+
     /* ==========================================================================
        Container & Layout
        ========================================================================== */
     .container {
-      max-width: 1120px;
+      max-width: 1160px;
       margin: -24px auto 0 auto;
       padding: 0 20px;
       position: relative;
@@ -188,6 +309,18 @@
       border-color: #93c5fd;
     }
 
+    .module-card.card-disabled {
+      background: #fafbfc;
+      border-color: #e2e8f0;
+      opacity: 0.9;
+    }
+
+    .module-card.card-disabled:hover {
+      transform: none;
+      box-shadow: var(--shadow-sm);
+      border-color: #cbd5e1;
+    }
+
     .card-top {
       margin-bottom: 20px;
     }
@@ -211,10 +344,16 @@
       display: inline-block;
     }
 
-    .card-tag.highlight {
-      background: #eff6ff;
-      color: #1d4ed8;
-      border: 1px solid #bfdbfe;
+    .card-tag.card-tag-disabled {
+      background: #f1f5f9;
+      color: #64748b;
+      border: 1px solid #e2e8f0;
+    }
+
+    .card-tag.quiz-tag {
+      background: #ecfdf5;
+      color: #047857;
+      border: 1px solid #a7f3d0;
     }
 
     .lang-indicator {
@@ -225,6 +364,12 @@
       padding: 3px 8px;
       border-radius: 5px;
       border: 1px solid #e2e8f0;
+    }
+
+    .lang-indicator.lang-indicator-prep {
+      color: #b45309;
+      background: #fef3c7;
+      border-color: #fde68a;
     }
 
     .module-card h2 {
@@ -251,7 +396,7 @@
 
     /* Sub-units list for multi-topic cards */
     .subtopics-list {
-      margin-top: 10px;
+      margin-top: 12px;
       padding-top: 10px;
       border-top: 1px dashed var(--border);
       display: flex;
@@ -290,6 +435,19 @@
       border-color: var(--primary);
     }
 
+    .subtopic-link-disabled {
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      background: #f8fafc !important;
+      color: #94a3b8 !important;
+      border: 1px dashed #cbd5e1 !important;
+      pointer-events: none;
+      cursor: not-allowed;
+      display: inline-block;
+    }
+
     /* ==========================================================================
        Action Sections & Buttons
        ========================================================================== */
@@ -309,7 +467,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       color: var(--text-muted);
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 5px;
@@ -326,7 +484,7 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      padding: 8px 12px;
+      padding: 9px 12px;
       border-radius: var(--radius-sm);
       font-size: 13px;
       font-weight: 600;
@@ -358,7 +516,18 @@
     .btn-primary-accent:hover {
       background-color: var(--accent-dark);
       border-color: var(--accent-dark);
-      box-shadow: 0 4px 10px rgba(50, 140, 193, 0.3);
+      box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-primary-quiz {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+      border: 1px solid #059669;
+    }
+
+    .btn-primary-quiz:hover {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
     }
 
     /* Secondary PDF buttons */
@@ -386,12 +555,20 @@
       border-color: #7dd3fc;
     }
 
+    /* Disabled button state */
     .btn-disabled {
-      background-color: #f8fafc;
-      color: #94a3b8;
-      border: 1px dashed #cbd5e1;
-      pointer-events: none;
-      cursor: not-allowed;
+      background-color: #f1f5f9 !important;
+      color: #94a3b8 !important;
+      border: 1px dashed #cbd5e1 !important;
+      pointer-events: none !important;
+      cursor: not-allowed !important;
+      box-shadow: none !important;
+      opacity: 0.85;
+      user-select: none;
+    }
+
+    .btn-full {
+      width: 100%;
     }
 
     /* ==========================================================================
@@ -522,23 +699,76 @@
 
 <body>
 
+  <!-- Sticky Top Navigation with Bilingual Switcher -->
+  <nav class="top-nav">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <span class="nav-logo">⚡</span>
+        <span data-lang="zh-tw">逢甲大學 軟體工程 (Software Engineering)</span>
+        <span data-lang="en">FCU Software Engineering · Course Hub</span>
+      </a>
+
+      <div class="lang-switcher-wrap">
+        <span class="lang-switcher-label" data-lang="zh-tw">語言 / Language:</span>
+        <span class="lang-switcher-label" data-lang="en">Language:</span>
+        <div class="lang-switcher" role="tablist" aria-label="Language Selector">
+          <button class="lang-btn active" id="btn-tw" onclick="setLanguage('zh-tw')" role="tab" aria-selected="true">
+            <span>🇹🇼</span> 繁體中文
+          </button>
+          <button class="lang-btn" id="btn-en" onclick="setLanguage('en')" role="tab" aria-selected="false">
+            <span>🇬🇧</span> English
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- Hero Header -->
   <header class="hero">
-    <div class="hero-badge-group">
-      <span class="hero-badge">🎓 逢甲大學 資訊工程學系</span>
-      <span class="hero-badge">👨‍🏫 授課教師：薛念林 教授 (Prof. Nien-Lin Hsueh)</span>
-      <span class="hero-badge">🌐 雙語數位教材 (Bilingual Hub)</span>
+    <!-- Traditional Chinese Hero Content -->
+    <div data-lang="zh-tw">
+      <div class="hero-badge-group">
+        <span class="hero-badge">🎓 逢甲大學 資訊工程學系</span>
+        <span class="hero-badge">👨‍🏫 授課教師：薛念林 教授 (Prof. Nien-Lin Hsueh)</span>
+        <span class="hero-badge">🌐 規格驅動與現代軟工</span>
+      </div>
+      <h1>軟體工程 (Software Engineering)</h1>
+      <p>結合經典工程嚴謹性、現代工具鏈與 AI 規格驅動工程 (Spec-Driven AI Engineering)，涵蓋全生命週期模型、需求塑模、系統架構與品質保證。</p>
+      
+      <div class="hero-links">
+        <span class="hero-btn hero-btn-disabled" title="案例規格書編整中 (Coming Soon)">
+          🍕 美食外送專案規格與設計書 (編整中)
+        </span>
+        <a href="Slide/html/slide99t_quiz.html" class="hero-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);" target="_blank">
+          🧠 觀念測驗題庫 🇹🇼 (Ch 1–3 Quiz)
+        </a>
+        <a href="https://github.com/nlhsueh" class="hero-btn hero-btn-outline" target="_blank">
+          🐙 GitHub 課程專案庫
+        </a>
+      </div>
     </div>
-    <h1>軟體工程 (Software Engineering)</h1>
-    <p>結合經典工程嚴謹性、現代工具鏈與 AI 規格驅動工程 (Spec-Driven AI Engineering)，涵蓋全生命週期模型、需求塑模、系統架構與品質保證。</p>
-    
-    <div class="hero-links">
-      <a href="doc.html" class="hero-btn" style="background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);">
-        🍕 美食外送專案規格與設計書 (Case Study)
-      </a>
-      <a href="https://github.com/nlhsueh" class="hero-btn hero-btn-outline" target="_blank">
-        🐙 GitHub 課程專案庫
-      </a>
+
+    <!-- English Hero Content -->
+    <div data-lang="en">
+      <div class="hero-badge-group">
+        <span class="hero-badge">🎓 Feng Chia University · Dept. of CSIE</span>
+        <span class="hero-badge">👨‍🏫 Instructor: Prof. Nien-Lin Hsueh</span>
+        <span class="hero-badge">🌐 Spec-Driven AI Engineering</span>
+      </div>
+      <h1>Software Engineering</h1>
+      <p>Bridging foundational engineering rigor, modern toolchains, and Spec-Driven AI Engineering. Covering SDLC models, requirements engineering, UML modeling, architecture design, and automated QA testing.</p>
+      
+      <div class="hero-links">
+        <span class="hero-btn hero-btn-disabled" title="Case study in preparation (Coming Soon)">
+          🍕 Food Delivery Case Study (In Preparation)
+        </span>
+        <a href="Slide/html/slide99e_quiz.html" class="hero-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);" target="_blank">
+          🧠 Concept Check Quiz Deck 🇬🇧 (Ch 1–3)
+        </a>
+        <a href="https://github.com/nlhsueh" class="hero-btn hero-btn-outline" target="_blank">
+          🐙 GitHub Course Repository
+        </a>
+      </div>
     </div>
   </header>
 
@@ -549,45 +779,67 @@
            Unit 01: 課程導論
            ========================================================================== -->
       <div class="module-card">
-        <div class="card-top">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
             <span class="card-tag">Unit 01</span>
-            <span class="lang-indicator">🇹🇼 中文 / 🇬🇧 EN 完整雙語</span>
+            <span class="lang-indicator">🇹🇼 中文簡報</span>
           </div>
           <h2>軟體工程導論</h2>
           <div class="en-subtitle">Introduction to Software Engineering</div>
           <p class="desc">從 1968 年軟體危機到現代 AI 典範轉移、新軟體危機（Slopsquatting、Vibe Coding）、高品質軟體四大核心屬性、專業倫理規範與 Sommerville 經典軟工原則。</p>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag">Unit 01</span>
+            <span class="lang-indicator">🇬🇧 English Deck</span>
+          </div>
+          <h2>Introduction to Software Engineering</h2>
+          <div class="en-subtitle">Foundations & Principles</div>
+          <p class="desc">From the 1968 Software Crisis to modern AI paradigm shifts, the New Software Crisis (Slopsquatting, Vibe Coding), four essential software attributes, ACM/IEEE ethics, and Sommerville's core principles.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <div class="btn-row">
-              <a href="Slide/html/slide01t_intro.html?transition=fade" class="btn btn-primary" target="_blank">
-                🇹🇼 中文簡報
-              </a>
-              <a href="Slide/html/slide01e_intro.html?transition=fade" class="btn btn-primary-accent" target="_blank">
-                🇬🇧 English Slide
-              </a>
-            </div>
+            <a href="Slide/html/slide01t_intro.html?transition=fade" class="btn btn-primary btn-full" target="_blank">
+              🇹🇼 開啟中文線上簡報
+            </a>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
               <a href="Slide/pdf-tw/slide01t_intro.pdf" class="btn btn-secondary" target="_blank">
-                📄 簡報 (中)
+                📄 簡報 PDF
               </a>
-              <a href="Slide/pdf-en/slide01e_intro.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide (EN)
+              <a href="Lecture/tw/ch01t_intro.pdf" class="btn btn-outline" target="_blank">
+                📖 課堂講義
               </a>
             </div>
-            <div class="btn-row" style="margin-top: 6px;">
-              <a href="Lecture/tw/ch01t_intro.pdf" class="btn btn-outline" target="_blank">
-                📖 講義 (中)
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <a href="Slide/html/slide01e_intro.html?transition=fade" class="btn btn-primary-accent btn-full" target="_blank">
+              🇬🇧 Open English Slides
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-en/slide01e_intro.pdf" class="btn btn-secondary" target="_blank">
+                📄 Slide PDF
               </a>
               <a href="Lecture/en/ch01e_intro.pdf" class="btn btn-outline" target="_blank">
-                📖 Notes (EN)
+                📖 Lecture Notes
               </a>
             </div>
           </div>
@@ -597,46 +849,68 @@
       <!-- ==========================================================================
            Unit 02: 流程與模型
            ========================================================================== -->
-      <div class="module-card" style="border-color: #93c5fd; box-shadow: 0 4px 14px rgba(11,60,93,0.08);">
-        <div class="card-top">
+      <div class="module-card">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
-            <span class="card-tag highlight">Unit 02 ★ 核心單元</span>
-            <span class="lang-indicator">🇹🇼 中文 / 🇬🇧 EN 完整雙語</span>
+            <span class="card-tag">Unit 02</span>
+            <span class="lang-indicator">🇹🇼 中文簡報</span>
           </div>
           <h2>軟體開發流程與模型</h2>
           <div class="en-subtitle">Software Development Processes & Methodologies</div>
           <p class="desc">軟體流程活動與生命週期、瀑布與 V 模型、敏捷宣言心法、Scrum 與 Kanban 專案管理、技術債務治理、XP 極限編程實務、DevOps 管線與現代 AI 規格驅動流程。</p>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag">Unit 02</span>
+            <span class="lang-indicator">🇬🇧 English Deck</span>
+          </div>
+          <h2>Software Development Processes & Models</h2>
+          <div class="en-subtitle">Processes & Methodologies</div>
+          <p class="desc">Software lifecycle activities, Waterfall vs. V-Model, Agile Manifesto philosophy, Scrum and Kanban workflows, technical debt management, XP engineering practices, DevOps pipelines, and Spec-Driven AI workflows.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <div class="btn-row">
-              <a href="Slide/html/slide02t_process.html?transition=fade" class="btn btn-primary" target="_blank">
-                🇹🇼 中文簡報
-              </a>
-              <a href="Slide/html/slide02e_process.html?transition=fade" class="btn btn-primary-accent" target="_blank">
-                🇬🇧 English Slide
-              </a>
-            </div>
+            <a href="Slide/html/slide02t_process.html?transition=fade" class="btn btn-primary btn-full" target="_blank">
+              🇹🇼 開啟中文線上簡報
+            </a>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
               <a href="Slide/pdf-tw/slide02t_process.pdf" class="btn btn-secondary" target="_blank">
-                📄 簡報 (中)
+                📄 簡報 PDF
               </a>
-              <a href="Slide/pdf-en/slide02e_process.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide (EN)
+              <a href="Lecture/tw/ch02t_process.pdf" class="btn btn-outline" target="_blank">
+                📖 課堂講義
               </a>
             </div>
-            <div class="btn-row" style="margin-top: 6px;">
-              <a href="Lecture/tw/ch02t_process.pdf" class="btn btn-outline" target="_blank">
-                📖 講義 (中)
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <a href="Slide/html/slide02e_process.html?transition=fade" class="btn btn-primary-accent btn-full" target="_blank">
+              🇬🇧 Open English Slides
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-en/slide02e_process.pdf" class="btn btn-secondary" target="_blank">
+                📄 Slide PDF
               </a>
               <a href="Lecture/en/ch02e_process.pdf" class="btn btn-outline" target="_blank">
-                📖 Notes (EN)
+                📖 Lecture Notes
               </a>
             </div>
           </div>
@@ -647,180 +921,281 @@
            Unit 03: 需求工程
            ========================================================================== -->
       <div class="module-card">
-        <div class="card-top">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
             <span class="card-tag">Unit 03</span>
-            <span class="lang-indicator">🇹🇼 中文 / 🇬🇧 EN 完整雙語</span>
+            <span class="lang-indicator">🇹🇼 中文簡報</span>
           </div>
           <h2>需求工程與規格分析</h2>
           <div class="en-subtitle">Requirements Engineering (RE)</div>
           <p class="desc">使用者需求 vs. 系統需求、功能性／非功能性規格 (NFR) 與可驗證量測指標、需求探索循環 (Elicitation Loop)、UML 使用案例塑模、五大驗證支柱與 LLM 需求副駕駛。</p>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag">Unit 03</span>
+            <span class="lang-indicator">🇬🇧 English Deck</span>
+          </div>
+          <h2>Requirements Engineering & Specification</h2>
+          <div class="en-subtitle">Requirements Engineering (RE)</div>
+          <p class="desc">User vs. system requirements, functional vs. non-functional requirements (NFRs) with verifiable metrics, elicitation discovery loops, UML use cases, 5 validation pillars, and LLM requirements copilot.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <div class="btn-row">
-              <a href="Slide/html/slide03t_reqt.html?transition=fade" class="btn btn-primary" target="_blank">
-                🇹🇼 中文簡報
-              </a>
-              <a href="Slide/html/slide03e_reqt.html?transition=fade" class="btn btn-primary-accent" target="_blank">
-                🇬🇧 English Slide
-              </a>
-            </div>
+            <a href="Slide/html/slide03t_reqt.html?transition=fade" class="btn btn-primary btn-full" target="_blank">
+              🇹🇼 開啟中文線上簡報
+            </a>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
               <a href="Slide/pdf-tw/slide03t_reqt.pdf" class="btn btn-secondary" target="_blank">
-                📄 簡報 (中)
+                📄 簡報 PDF
               </a>
-              <a href="Slide/pdf-en/slide03e_reqt.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide (EN)
+              <a href="Lecture/tw/ch04t_reqt.md" class="btn btn-outline" target="_blank">
+                📖 課堂講義
               </a>
             </div>
-            <div class="btn-row" style="margin-top: 6px;">
-              <a href="Lecture/tw/ch04t_reqt.md" class="btn btn-outline" target="_blank">
-                📖 中文需求講義
+            <div style="margin-top: 6px;">
+              <span class="btn btn-outline btn-full btn-disabled" title="案例規格書編整中 (Coming Soon)">
+                🍕 美食外送案例需求規格書 (編整中)
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <a href="Slide/html/slide03e_reqt.html?transition=fade" class="btn btn-primary-accent btn-full" target="_blank">
+              🇬🇧 Open English Slides
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-en/slide03e_reqt.pdf" class="btn btn-secondary" target="_blank">
+                📄 Slide PDF
               </a>
-              <a href="doc.html?file=Lecture/food_delivery/srs_food_delivery.md" class="btn btn-outline" style="border-color: #38bdf8; color: #0284c7; font-weight: 700;" title="觀看美食外送實務需求規格書 (含 NFR 與 GQM 指標)">
-                🍕 案例需求規格 (SRS)
+              <a href="Lecture/en/ch03e_reqt.md" class="btn btn-outline" target="_blank">
+                📖 Lecture Notes
               </a>
+            </div>
+            <div style="margin-top: 6px;">
+              <span class="btn btn-outline btn-full btn-disabled" title="Case study in preparation (Coming Soon)">
+                🍕 Food Delivery Case Study (In Preparation)
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- ==========================================================================
-           Unit 04: 系統塑模與 UML
+           Unit 04: 系統塑模與 UML (In Preparation)
            ========================================================================== -->
-      <div class="module-card">
-        <div class="card-top">
+      <div class="module-card card-disabled">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
-            <span class="card-tag">Unit 04 · 系統塑模</span>
-            <span class="lang-indicator">🇬🇧 EN 簡報 / 視覺化塑模</span>
+            <span class="card-tag card-tag-disabled">Unit 04 · 編整中</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ 即將推出</span>
           </div>
           <h2>物件導向系統塑模與 UML</h2>
           <div class="en-subtitle">Object-Oriented System Modeling & UML</div>
           <p class="desc">四大塑模視圖、系統邊界與情境圖、活動圖工作流程。深度整合使用案例 (Use Cases)、循序圖 (Sequence Diagrams)、類別圖 (Class Diagrams)、狀態機 (State Machines) 與 AI 輔助塑模。</p>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag card-tag-disabled">Unit 04 · In Prep</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ Coming Soon</span>
+          </div>
+          <h2>Object-Oriented System Modeling & UML</h2>
+          <div class="en-subtitle">System Modeling & Visual Design</div>
+          <p class="desc">Four modeling perspectives, system boundaries and context models, activity diagrams, Use Case diagrams, Sequence Diagrams, Class Diagrams, State Machine models, and AI-assisted diagram generation.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <a href="Slide/html/slide04e_model.html?transition=fade" class="btn btn-primary" style="width: 100%;" target="_blank">
-              🖥️ 開啟系統塑模簡報 (HTML)
-            </a>
+            <span class="btn btn-disabled btn-full">
+              🔒 中文線上簡報 (編整中)
+            </span>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
-              <a href="Slide/pdf-en/slide04e_model.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide PDF (EN)
-              </a>
-              <a href="Lecture/tw/ch05t_model.md" class="btn btn-outline" target="_blank">
-                📖 中文塑模講義
-              </a>
+              <span class="btn btn-disabled">📄 簡報 PDF</span>
+              <span class="btn btn-disabled">📖 課堂講義</span>
             </div>
-            <div class="btn-row" style="margin-top: 6px;">
-              <a href="doc.html?file=Lecture/food_delivery/srs_food_delivery.md" class="btn btn-outline" style="border-color: #38bdf8; color: #0284c7; font-weight: 700;">
-                🍕 案例需求書 (SRS)
-              </a>
-              <a href="doc.html?file=Lecture/food_delivery/sdd_food_delivery.md" class="btn btn-outline" style="border-color: #0b3c5d; color: #0b3c5d; font-weight: 700;">
-                📐 系統設計書 (SDD)
-              </a>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <span class="btn btn-disabled btn-full">
+              🔒 English Slides (In Preparation)
+            </span>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <span class="btn btn-disabled">📄 Slide PDF</span>
+              <span class="btn btn-disabled">📖 Lecture Notes</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- ==========================================================================
-           Unit 05: 軟體架構與物件導向設計
+           Unit 05: 軟體架構與物件導向設計 (In Preparation)
            ========================================================================== -->
-      <div class="module-card">
-        <div class="card-top">
+      <div class="module-card card-disabled">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
-            <span class="card-tag">Unit 05 · 架構與設計</span>
-            <span class="lang-indicator">🇬🇧 EN 簡報 / 經典架構模式</span>
+            <span class="card-tag card-tag-disabled">Unit 05 · 編整中</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ 即將推出</span>
           </div>
           <h2>軟體架構與物件導向設計</h2>
           <div class="en-subtitle">Software Architecture & OO Design</div>
           <p class="desc">Kruchten 4+1 視圖、經典架構模式 (分層、倉儲、管線與過濾器、MVC、微服務) 與品質屬性權衡。深入高內聚低耦合、SOLID 五大物件導向設計原則與 AI 輔助重構。</p>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag card-tag-disabled">Unit 05 · In Prep</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ Coming Soon</span>
+          </div>
+          <h2>Software Architecture & Object-Oriented Design</h2>
+          <div class="en-subtitle">Architecture Patterns & SOLID Principles</div>
+          <p class="desc">Kruchten 4+1 Views, classic architecture styles (Layered, Repository, Pipe-and-Filter, MVC, Microservices), cohesion vs. coupling, SOLID OO principles, and AI-assisted refactoring.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <a href="Slide/html/slide05e_design.html?transition=fade" class="btn btn-primary" style="width: 100%;" target="_blank">
-              🖥️ 開啟軟體架構與設計簡報 (HTML)
-            </a>
+            <span class="btn btn-disabled btn-full">
+              🔒 中文線上簡報 (編整中)
+            </span>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
-              <a href="Slide/pdf-en/slide05e_design.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide PDF (EN)
-              </a>
-              <a href="Lecture/tw/ch06t_arch.md" class="btn btn-outline" target="_blank">
-                📖 中文架構講義
-              </a>
+              <span class="btn btn-disabled">📄 簡報 PDF</span>
+              <span class="btn btn-disabled">📖 課堂講義</span>
             </div>
-            <div class="btn-row" style="margin-top: 6px;">
-              <a href="doc.html?file=Lecture/food_delivery/sdd_food_delivery.md" class="btn btn-outline" style="border-color: #0b3c5d; color: #0b3c5d; font-weight: 700; grid-column: span 2;">
-                📐 美食外送系統架構與設計說明書 (SDD) ➔
-              </a>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <span class="btn btn-disabled btn-full">
+              🔒 English Slides (In Preparation)
+            </span>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <span class="btn btn-disabled">📄 Slide PDF</span>
+              <span class="btn btn-disabled">📖 Lecture Notes</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- ==========================================================================
-           Unit 06: 使用者體驗設計與人機互動
+           Unit 06: 使用者體驗設計與人機互動 (In Preparation)
            ========================================================================== -->
-      <div class="module-card">
-        <div class="card-top">
+      <div class="module-card card-disabled">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
-            <span class="card-tag">Unit 06 · 使用者體驗</span>
-            <span class="lang-indicator">🇬🇧 EN 簡報 / 人機互動與 AI</span>
+            <span class="card-tag card-tag-disabled">Unit 06 · 編整中</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ 即將推出</span>
           </div>
           <h2>使用者體驗設計與人機互動</h2>
           <div class="en-subtitle">User Experience (UX) Design & Human-Centered AI</div>
           <p class="desc">認知人因工程、Norman 門與示能指標、尼爾森 10 大可用性原則 (Nielsen Heuristics)。深入探討 AI for UX (設計流程賦能、RTCF 提示詞工程) 與 UX for AI (AI 產品體驗設計、透明度、人類主導權)。</p>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag card-tag-disabled">Unit 06 · In Prep</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ Coming Soon</span>
+          </div>
+          <h2>User Experience (UX) Design & Human-Centered AI</h2>
+          <div class="en-subtitle">Human-Computer Interaction & AI UX</div>
+          <p class="desc">Cognitive ergonomics, Norman Doors & affordances, Nielsen's 10 Usability Heuristics. Exploring AI for UX (design workflow acceleration, RTCF prompt framing) and UX for AI (explainability, user autonomy, feedback loops).</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <a href="Slide/html/slide06e_ux.html?transition=fade" class="btn btn-primary" style="width: 100%;" target="_blank">
-              🖥️ 開啟使用者體驗簡報 (HTML)
-            </a>
+            <span class="btn btn-disabled btn-full">
+              🔒 中文線上簡報 (編整中)
+            </span>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
-              <a href="Slide/pdf-en/slide06e_ux.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide PDF (EN)
-              </a>
-              <a href="Lecture/tw/ch07t_testing.md" class="btn btn-outline" target="_blank">
-                📖 延伸講義
-              </a>
+              <span class="btn btn-disabled">📄 簡報 PDF</span>
+              <span class="btn btn-disabled">📖 課堂講義</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <span class="btn btn-disabled btn-full">
+              🔒 English Slides (In Preparation)
+            </span>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <span class="btn btn-disabled">📄 Slide PDF</span>
+              <span class="btn btn-disabled">📖 Lecture Notes</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- ==========================================================================
-           Unit 07: 軟體測試與品質保證
+           Unit 07: 軟體測試與品質保證 (In Preparation)
            ========================================================================== -->
-      <div class="module-card">
-        <div class="card-top">
+      <div class="module-card card-disabled">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
           <div class="card-header-bar">
-            <span class="card-tag">Unit 07 · 品質保證</span>
-            <span class="lang-indicator">測試原理與黑白箱實戰</span>
+            <span class="card-tag card-tag-disabled">Unit 07 · 編整中</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ 即將推出</span>
           </div>
           <h2>軟體測試理論與品質保證</h2>
           <div class="en-subtitle">Software Testing & Quality Assurance</div>
@@ -828,45 +1203,160 @@
 
           <div class="subtopics-list">
             <div class="subtopic-item">
-              <span>7.1 測試基礎 (Testing)</span>
+              <span>7.1 測試基礎 (Foundations)</span>
               <div class="subtopic-links">
-                <a href="Slide/html/slide07ae_testing.html?transition=fade" class="subtopic-link" target="_blank">HTML</a>
-                <a href="Slide/pdf-en/slide07ae_testing.pdf" class="subtopic-link" target="_blank">PDF</a>
+                <span class="subtopic-link-disabled">HTML</span>
+                <span class="subtopic-link-disabled">PDF</span>
               </div>
             </div>
             <div class="subtopic-item">
               <span>7.2 黑箱測試 (Blackbox)</span>
               <div class="subtopic-links">
-                <a href="Slide/html/slide07be_blackbox.html?transition=fade" class="subtopic-link" target="_blank">HTML</a>
-                <a href="Slide/pdf-en/slide07be_blackbox.pdf" class="subtopic-link" target="_blank">PDF</a>
+                <span class="subtopic-link-disabled">HTML</span>
+                <span class="subtopic-link-disabled">PDF</span>
               </div>
             </div>
             <div class="subtopic-item">
               <span>7.3 白箱測試 (Whitebox)</span>
               <div class="subtopic-links">
-                <a href="Slide/html/slide07ce_whitebox.html?transition=fade" class="subtopic-link" target="_blank">HTML</a>
-                <a href="Slide/pdf-en/slide07ce_whitebox.pdf" class="subtopic-link" target="_blank">PDF</a>
+                <span class="subtopic-link-disabled">HTML</span>
+                <span class="subtopic-link-disabled">PDF</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="card-actions">
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag card-tag-disabled">Unit 07 · In Prep</span>
+            <span class="lang-indicator lang-indicator-prep">⏳ Coming Soon</span>
+          </div>
+          <h2>Software Testing & Quality Assurance</h2>
+          <div class="en-subtitle">Testing Principles & Verification</div>
+          <p class="desc">V-Model verification & validation, Test Pyramid, Equivalence Partitioning (EP), Boundary Value Analysis (BVA), Control Flow Graphs (CFG), branch coverage, and automated testing toolchains.</p>
+
+          <div class="subtopics-list">
+            <div class="subtopic-item">
+              <span>7.1 Testing Foundations</span>
+              <div class="subtopic-links">
+                <span class="subtopic-link-disabled">HTML</span>
+                <span class="subtopic-link-disabled">PDF</span>
+              </div>
+            </div>
+            <div class="subtopic-item">
+              <span>7.2 Blackbox Testing</span>
+              <div class="subtopic-links">
+                <span class="subtopic-link-disabled">HTML</span>
+                <span class="subtopic-link-disabled">PDF</span>
+              </div>
+            </div>
+            <div class="subtopic-item">
+              <span>7.3 Whitebox Testing</span>
+              <div class="subtopic-links">
+                <span class="subtopic-link-disabled">HTML</span>
+                <span class="subtopic-link-disabled">PDF</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
           <div>
             <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
-            <a href="Slide/html/slide07e_test.html?transition=fade" class="btn btn-primary" style="width: 100%;" target="_blank">
-              🖥️ 開啟軟體測試整合簡報 (HTML)
-            </a>
+            <span class="btn btn-disabled btn-full">
+              🔒 中文線上簡報 (編整中)
+            </span>
           </div>
 
           <div>
             <div class="action-group-label">📄 投影片與講義下載 (PDF)</div>
             <div class="btn-row">
-              <a href="Slide/pdf-en/slide07e_test.pdf" class="btn btn-secondary" target="_blank">
-                📄 Slide PDF (EN)
+              <span class="btn btn-disabled">📄 簡報 PDF</span>
+              <span class="btn btn-disabled">📖 課堂講義</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <span class="btn btn-disabled btn-full">
+              🔒 English Slides (In Preparation)
+            </span>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF / Notes)</div>
+            <div class="btn-row">
+              <span class="btn btn-disabled">📄 Slide PDF</span>
+              <span class="btn btn-disabled">📖 Lecture Notes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           Unit 99: 觀念檢測題庫 (CCQ Quiz Deck)
+           ========================================================================== -->
+      <div class="module-card" style="border-color: #a7f3d0; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
+          <div class="card-header-bar">
+            <span class="card-tag quiz-tag">Quiz Deck ★ 實戰題庫</span>
+            <span class="lang-indicator">🇹🇼 中文題庫</span>
+          </div>
+          <h2>軟體工程觀念測驗題庫</h2>
+          <div class="en-subtitle">Concept Check Questions (CCQ) Deck</div>
+          <p class="desc">涵蓋第 1 至第 3 章所有精選 Concept Check Questions (CCQ) 互動題，提供即時作答回饋、鍵盤快捷鍵、解析提示與重複演練，助你精準掌握核心概念。</p>
+        </div>
+
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag quiz-tag">Quiz Deck ★ Practice Hub</span>
+            <span class="lang-indicator">🇬🇧 English Deck</span>
+          </div>
+          <h2>Concept Check Questions (CCQ) Deck</h2>
+          <div class="en-subtitle">Interactive Practice & Rationales</div>
+          <p class="desc">Comprehensive quiz deck covering Chapters 1–3 Concept Check Questions (CCQs) with immediate answer verification, keyboard navigation, hints, and detailed explanations.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
+          <div>
+            <div class="action-group-label">🖥️ 線上互動測驗 (HTML Slides)</div>
+            <a href="Slide/html/slide99t_quiz.html" class="btn btn-primary-quiz btn-full" target="_blank">
+              🧠 開啟中文測驗題庫 (HTML)
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 題庫下載 (PDF)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-tw/slide99t_quiz.pdf" class="btn btn-secondary btn-full" target="_blank" style="grid-column: span 2;">
+                📄 測驗題庫 PDF 下載
               </a>
-              <a href="Lecture/tw/ch07t_testing.md" class="btn btn-outline" target="_blank">
-                📖 中文測試講義
+            </div>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive Quiz (HTML Slides)</div>
+            <a href="Slide/html/slide99e_quiz.html" class="btn btn-primary-quiz btn-full" target="_blank">
+              🧠 Open Quiz Deck (HTML)
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-en/slide99e_quiz.pdf" class="btn btn-secondary btn-full" target="_blank" style="grid-column: span 2;">
+                📄 Quiz PDF Download
               </a>
             </div>
           </div>
@@ -879,7 +1369,8 @@
          Bottom Guide: Marp Presentation Guide & Shortcuts
          ========================================================================== -->
     <div class="guide-card">
-      <div class="guide-grid">
+      <!-- ZH-TW Guide -->
+      <div class="guide-grid" data-lang="zh-tw">
         <!-- Section 1: Presentation Navigation Guide -->
         <div class="guide-section">
           <div class="guide-section-header">
@@ -918,14 +1409,109 @@
           </div>
         </div>
       </div>
+
+      <!-- EN Guide -->
+      <div class="guide-grid" data-lang="en">
+        <!-- Section 1: Presentation Navigation Guide -->
+        <div class="guide-section">
+          <div class="guide-section-header">
+            <span>🧭</span>
+            <span>Interactive HTML Slides Navigation Guide</span>
+          </div>
+          <ul class="guide-list">
+            <li>
+              <span class="guide-badge">Fade Motion</span>
+              <span>All HTML slide decks feature smooth <code>?transition=fade</code> animations for presentation clarity.</span>
+            </li>
+            <li>
+              <span class="guide-badge">Controller</span>
+              <span>Bottom-right on-screen controller supports navigation, fullscreen, and presenter mode.</span>
+            </li>
+            <li>
+              <span class="guide-badge">CCQ Quizzes</span>
+              <span>Slides feature interactive concept check quizzes with live rationale and mobile-friendly QR codes.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Section 2: Keyboard Guide -->
+        <div class="guide-section">
+          <div class="guide-section-header">
+            <span>⌨️</span>
+            <span>Presentation Keyboard Shortcuts</span>
+          </div>
+          <div class="shortcuts-list">
+            <span class="shortcut-badge"><kbd>F</kbd> Fullscreen</span>
+            <span class="shortcut-badge"><kbd>→</kbd> / <kbd>Space</kbd> Next Slide</span>
+            <span class="shortcut-badge"><kbd>←</kbd> Prev Slide</span>
+            <span class="shortcut-badge"><kbd>P</kbd> Presenter Notes</span>
+            <span class="shortcut-badge"><kbd>Num</kbd>+<kbd>Enter</kbd> Jump to Slide</span>
+            <span class="shortcut-badge"><kbd>Esc</kbd> Exit Fullscreen</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer>
-      <p><strong>軟體工程 (Software Engineering)</strong> | 逢甲大學 資訊工程學系</p>
-      <p>授課教師：<a href="mailto:nlhsueh@gmail.com">薛念林 教授 (Prof. Nien-Lin Hsueh)</a> · 本站託管於 GitHub Pages</p>
+      <div data-lang="zh-tw">
+        <p><strong>軟體工程 (Software Engineering)</strong> | 逢甲大學 資訊工程學系</p>
+        <p>授課教師：<a href="mailto:nlhsueh@gmail.com">薛念林 教授 (Prof. Nien-Lin Hsueh)</a> · 本站託管於 GitHub Pages</p>
+      </div>
+      <div data-lang="en">
+        <p><strong>Software Engineering</strong> | Feng Chia University · Dept. of CSIE</p>
+        <p>Instructor: <a href="mailto:nlhsueh@gmail.com">Prof. Nien-Lin Hsueh</a> · Hosted on GitHub Pages</p>
+      </div>
     </footer>
   </main>
+
+  <script>
+    function setLanguage(lang) {
+      if (lang !== 'zh-tw' && lang !== 'en') lang = 'zh-tw';
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang === 'zh-tw' ? 'zh-TW' : 'en');
+
+      // Update button active state
+      const btnTw = document.getElementById('btn-tw');
+      const btnEn = document.getElementById('btn-en');
+      if (btnTw && btnEn) {
+        btnTw.classList.toggle('active', lang === 'zh-tw');
+        btnTw.setAttribute('aria-selected', lang === 'zh-tw');
+        btnEn.classList.toggle('active', lang === 'en');
+        btnEn.setAttribute('aria-selected', lang === 'en');
+      }
+
+      // Sync URL hash without jumping page scroll
+      if (history.replaceState) {
+        history.replaceState(null, '', '#' + (lang === 'en' ? 'en' : 'tw'));
+      }
+
+      // Persist in localStorage
+      try {
+        localStorage.setItem('ase_course_lang', lang);
+      } catch (e) {}
+    }
+
+    // Auto-detect on load
+    (function () {
+      const hash = (window.location.hash || '').toLowerCase();
+      let preferred = 'zh-tw';
+
+      if (hash === '#en') {
+        preferred = 'en';
+      } else if (hash === '#tw') {
+        preferred = 'zh-tw';
+      } else {
+        try {
+          const stored = localStorage.getItem('ase_course_lang');
+          if (stored === 'en' || stored === 'zh-tw') {
+            preferred = stored;
+          }
+        } catch (e) {}
+      }
+      setLanguage(preferred);
+    })();
+  </script>
 
 </body>
 
