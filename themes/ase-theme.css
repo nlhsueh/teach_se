@@ -611,7 +611,7 @@ div.two-columns li {
 }
 
 .card {
-  background: white;
+  background: transparent;
   padding: 18px 24px;
   border-radius: 10px;
   box-shadow: none !important;
