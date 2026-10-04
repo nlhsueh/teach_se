@@ -1,0 +1,1320 @@
+<!DOCTYPE html><html lang="C"><head><title>軟體工程</title><meta property="og:title" content="軟體工程"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent{inset:0;position:absolute}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container :is(.bespoke-marp-presenter-info-page-area,.bespoke-marp-presenter-info-time,.bespoke-marp-presenter-info-timer){box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent :is(svg.bespoke-marp-slide:active,svg.bespoke-marp-slide:focus-visible,svg.bespoke-marp-slide:hover){--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :where(:is(h1, marp-h1)){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section section:where(:is(h1, marp-h1)){--marpit-root-font-size: 2em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{top:0;left:0}div#\:\$p > svg > foreignObject > section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);color-scheme:light;background-color:var(--color-background);background-image:linear-gradient(135deg, var(--color-background), color-mix(in srgb, var(--color-background) 98%, #888 2%) 50%, var(--color-background) 50%, color-mix(in srgb, var(--color-background) 95%, #fff 5%));color:var(--color-foreground);font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;overflow-wrap:break-word}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{right:0;bottom:0;font-size:80%}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){place-content:safe center center;flex-flow:column nowrap;align-items:stretch}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"]{direction:ltr}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] > svg{overflow:visible;min-height:1px;min-width:1px}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] > svg a{fill:blue;stroke:blue}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][display="true"]{display:block;text-align:center;margin:1em 0}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][display="true"][width="full"]{display:flex}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][justify="left"]{text-align:left}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][justify="right"]{text-align:right}div#\:\$p > svg > foreignObject > section g[data-mml-node="merror"] > g{fill:red;stroke:red}div#\:\$p > svg > foreignObject > section g[data-mml-node="merror"] > rect[data-background]{fill:yellow;stroke:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > line[data-line], div#\:\$p > svg > foreignObject > section svg[data-table] > g > line[data-line]{stroke-width:70px;fill:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > rect[data-frame], div#\:\$p > svg > foreignObject > section svg[data-table] > g > rect[data-frame]{stroke-width:70px;fill:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > .mjx-dashed, div#\:\$p > svg > foreignObject > section svg[data-table] > g > .mjx-dashed{stroke-dasharray:140}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > .mjx-dotted, div#\:\$p > svg > foreignObject > section svg[data-table] > g > .mjx-dotted{stroke-linecap:round;stroke-dasharray:0,140}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > g > svg{overflow:visible}div#\:\$p > svg > foreignObject > section [jax="SVG"] mjx-tool{display:inline-block;position:relative;width:0;height:0}div#\:\$p > svg > foreignObject > section [jax="SVG"] mjx-tool > mjx-tip{position:absolute;top:0;left:0}div#\:\$p > svg > foreignObject > section mjx-tool > mjx-tip{display:inline-block;padding:.2em;border:1px solid #888;font-size:70%;background-color:#F8F8F8;color:black;box-shadow:2px 2px 5px #AAAAAA}div#\:\$p > svg > foreignObject > section g[data-mml-node="maction"][data-toggle]{cursor:pointer}div#\:\$p > svg > foreignObject > section mjx-status{display:block;position:fixed;left:1em;bottom:1em;min-width:25%;padding:.2em .4em;border:1px solid #888;font-size:90%;background-color:#F8F8F8;color:black}div#\:\$p > svg > foreignObject > section foreignObject[data-mjx-xml]{font-family:initial;line-height:normal;overflow:visible}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] path[data-c], div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] use[data-c]{stroke-width:3}@media print{div#\:\$p > svg > foreignObject > section mjx-container[jax=SVG] path[data-c],div#\:\$p > svg > foreignObject > section mjx-container[jax=SVG] use[data-c]{stroke-width:0}}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section{font-family:'Helvetica Neue', Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif;padding:40px;font-size:24px;line-height:1.55;background-color:#f5f5f5;color:#333}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 24px}div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin-top:10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section li{margin-bottom:12px;line-height:1.5}div#\:\$p > svg > foreignObject > section li > ul, div#\:\$p > svg > foreignObject > section li > ol{margin-top:4px;margin-bottom:4px}div#\:\$p > svg > foreignObject > section li > ul > li, div#\:\$p > svg > foreignObject > section li > ol > li{margin-bottom:4px;font-size:0.88em;line-height:1.35}div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns)) > ul, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns)) > ol, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns, .lead, .quote-slide)) > p, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns, .lead, .quote-slide)) > blockquote{max-width:980px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){color:#0b3c5d}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#328cc1;margin-top:0;margin-bottom:14px;font-size:1.35em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){color:#0b3c5d;margin-top:0;margin-bottom:12px;font-size:1.15em;font-weight:bold}div#\:\$p > svg > foreignObject > section header{position:absolute;top:18px;right:40px!important;left:auto!important;text-align:right;font-size:14px;line-height:1.4;color:#64748b;margin:0;padding:0!important;height:auto!important;min-height:0!important;overflow:visible!important;z-index:1000}div#\:\$p > svg > foreignObject > section header a.header-nav-arrow{display:inline-block;padding:2px 6px;border-radius:4px;color:#475569;text-decoration:none;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;font-size:13px;line-height:1;transition:background 0.15s ease, color 0.15s ease}div#\:\$p > svg > foreignObject > section header a.header-nav-arrow:hover{background:#e2e8f0;color:#1e293b}div#\:\$p > svg > foreignObject > section .header-nav-wrapper{position:relative;display:inline-block}div#\:\$p > svg > foreignObject > section .header-nav-title{display:inline-flex;align-items:center;cursor:pointer;padding:3px 8px;border-radius:6px;font-weight:500;color:#475569;transition:background 0.15s ease, color 0.15s ease}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .header-nav-title, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .header-nav-title{background:#e0f2fe;color:#0369a1}div#\:\$p > svg > foreignObject > section .nav-caret{font-size:10px;margin-left:4px;opacity:0.6;transition:transform 0.2s ease;display:inline-block}div#\:\$p > svg > foreignObject > section section.nav-caret{--marpit-root-font-size: 10px}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .nav-caret, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .nav-caret{transform:rotate(180deg);opacity:1}div#\:\$p > svg > foreignObject > section .nav-dropdown{display:none;position:absolute;right:0;top:100%;margin-top:4px;width:480px;max-height:480px;background:rgba(255, 255, 255, 0.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 16px 36px -4px rgba(15, 23, 42, 0.18), 0 6px 12px -2px rgba(15, 23, 42, 0.08);padding:12px 14px;text-align:left;z-index:99999;overflow-y:auto;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .nav-dropdown::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px;background:transparent}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .nav-dropdown, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .nav-dropdown{display:block;animation:navFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1)}@keyframes navFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}div#\:\$p > svg > foreignObject > section .nav-dropdown-header{font-size:13px;font-weight:700;color:#1e293b;border-bottom:1px solid #e2e8f0;padding-bottom:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}div#\:\$p > svg > foreignObject > section section.nav-dropdown-header{--marpit-root-font-size: 13px}div#\:\$p > svg > foreignObject > section .nav-dropdown-grid{display:grid;grid-template-columns:1fr;gap:4px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item{display:flex;align-items:center;padding:6px 8px;border-radius:6px;text-decoration:none;color:#334155!important;font-size:12.5px;line-height:1.3;transition:all 0.12s ease;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}div#\:\$p > svg > foreignObject > section section.nav-dropdown-item{--marpit-root-font-size: 12.5px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item:hover{background:#eff6ff!important;color:#1d4ed8!important;font-weight:600;transform:translateX(2px)}div#\:\$p > svg > foreignObject > section .nav-dropdown-item.active{background:#dbeafe!important;color:#1e40af!important;font-weight:700}div#\:\$p > svg > foreignObject > section .nav-dropdown-item .badge{display:inline-block;font-size:11px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;font-weight:600;color:#64748b;background:#f1f5f9;padding:1px 5px;border-radius:4px;margin-right:6px;flex-shrink:0}div#\:\$p > svg > foreignObject > section .nav-dropdown-item div#\:\$p > svg > foreignObject > section section.badge{--marpit-root-font-size: 11px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item:hover .badge{background:#bfdbfe;color:#1e40af}div#\:\$p > svg > foreignObject > section .nav-dropdown-item.active .badge{background:#3b82f6;color:#ffffff}div#\:\$p > svg > foreignObject > section .nav-dropdown-item .item-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}div#\:\$p > svg > foreignObject > section script{display:none!important}@media print{div#\:\$p > svg > foreignObject > section .nav-dropdown, div#\:\$p > svg > foreignObject > section .nav-caret, div#\:\$p > svg > foreignObject > section script, div#\:\$p > svg > foreignObject > section header a.header-nav-arrow{display:none!important}div#\:\$p > svg > foreignObject > section header{z-index:auto!important}}div#\:\$p > svg > foreignObject > section footer, div#\:\$p > svg > foreignObject > section::after{position:absolute;bottom:20px;font-size:0.5em;line-height:1;height:auto;margin:0;padding:0}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 0.5em}div#\:\$p > svg > foreignObject > section footer{left:40px;text-align:left;color:#777}div#\:\$p > svg > foreignObject > section::after{right:40px;text-align:right;color:#777}div#\:\$p > svg > foreignObject > section blockquote{font-family:'Georgia', 'Songti TC', 'Noto Serif TC', serif;font-style:italic;background:rgba(2, 132, 199, 0.05);border-left:4px solid #0284c7;margin:0.8em 0;padding:10px 20px;font-size:22.5px;line-height:1.55;color:#334155;border-radius:0 6px 6px 0}div#\:\$p > svg > foreignObject > section blockquote strong{font-weight:700;color:#0b3c5d}div#\:\$p > svg > foreignObject > section blockquote::before{content:none!important}div#\:\$p > svg > foreignObject > section table{margin:20px auto;border-collapse:collapse;font-size:20px}div#\:\$p > svg > foreignObject > section th{border-bottom:2px solid #0b3c5d;padding:8px 14px;text-align:left;background-color:#f0f4f8}div#\:\$p > svg > foreignObject > section td{padding:8px 14px;border-bottom:1px solid #e0e0e0}div#\:\$p > svg > foreignObject > section div.matrix-table table{margin:10px auto;font-size:15.5px;line-height:1.35}div#\:\$p > svg > foreignObject > section div.matrix-table th{padding:6px 12px}div#\:\$p > svg > foreignObject > section div.matrix-table td{padding:6px 12px}div#\:\$p > svg > foreignObject > section:has(div.ccq-columns), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns){display:flex;flex-direction:column;justify-content:center}div#\:\$p > svg > foreignObject > section:has(div.ccq-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.ccq-columns) :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns) :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns) :is(h3, marp-h3){text-align:left;color:#0b3c5d;margin-top:0;margin-bottom:24px}div#\:\$p > svg > foreignObject > section div.ccq-columns, div#\:\$p > svg > foreignObject > section div.discussion-columns{display:flex;align-items:center;gap:32px;margin-top:0!important;margin-bottom:0!important}div#\:\$p > svg > foreignObject > section div.ccq-text, div#\:\$p > svg > foreignObject > section div.discussion-text{flex:70%;font-size:23px;line-height:1.55}div#\:\$p > svg > foreignObject > section div.ccq-text ul, div#\:\$p > svg > foreignObject > section div.ccq-text ol, div#\:\$p > svg > foreignObject > section div.discussion-text ul, div#\:\$p > svg > foreignObject > section div.discussion-text ol{margin-top:8px;margin-bottom:8px}div#\:\$p > svg > foreignObject > section div.ccq-text li, div#\:\$p > svg > foreignObject > section div.discussion-text li{margin-bottom:8px;line-height:1.5}div#\:\$p > svg > foreignObject > section div.ccq-logo, div#\:\$p > svg > foreignObject > section div.discussion-logo{flex:30%;text-align:center;display:flex;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section div.ccq-logo img, div#\:\$p > svg > foreignObject > section div.discussion-logo img{width:100%;max-width:180px;height:auto}div#\:\$p > svg > foreignObject > section div.fill-blank-columns{display:flex;align-items:center;gap:30px;margin-top:0!important;margin-bottom:0!important}div#\:\$p > svg > foreignObject > section div.fill-blank-text{flex:75%}div#\:\$p > svg > foreignObject > section div.fill-blank-columns:has(> div.fill-blank-text:only-child) div.fill-blank-text{flex:100%}div#\:\$p > svg > foreignObject > section div.fill-blank-logo{flex:25%;text-align:center}div#\:\$p > svg > foreignObject > section div.fill-blank-logo img{width:100%;max-width:150px}div#\:\$p > svg > foreignObject > section div.split64, div#\:\$p > svg > foreignObject > section div.split46, div#\:\$p > svg > foreignObject > section div.split55{display:flex;align-items:center;gap:20px}div#\:\$p > svg > foreignObject > section div.split64 > div.left{flex:60%}div#\:\$p > svg > foreignObject > section div.split64 > div.right{flex:40%;text-align:center}div#\:\$p > svg > foreignObject > section div.split64 > div.right img{width:100%;max-width:330px}div#\:\$p > svg > foreignObject > section div.split46 > div.left{flex:40%}div#\:\$p > svg > foreignObject > section div.split46 > div.right{flex:60%;text-align:center}div#\:\$p > svg > foreignObject > section div.split46 > div.right img{width:100%;max-width:480px}div#\:\$p > svg > foreignObject > section div.split55 > div.left{flex:50%}div#\:\$p > svg > foreignObject > section div.split55 > div.right{flex:50%;text-align:center}div#\:\$p > svg > foreignObject > section div.split55 > div.right img{width:100%;max-width:400px}div#\:\$p > svg > foreignObject > section div.split73{display:flex;align-items:center;gap:28px}div#\:\$p > svg > foreignObject > section div.split73 > div.left{flex:70%}div#\:\$p > svg > foreignObject > section div.split73 > div.right{flex:30%;text-align:center;display:flex;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section div.split73 > div.right img{width:auto;max-width:100%;max-height:420px;object-fit:contain;background:transparent!important;box-shadow:none!important;border:none!important}div#\:\$p > svg > foreignObject > section div.two-columns{display:flex;gap:28px;font-size:0.85em;line-height:1.35}div#\:\$p > svg > foreignObject > section div.two-columns > div{flex:1}div#\:\$p > svg > foreignObject > section div.two-columns ol{margin:0;padding-left:20px}div#\:\$p > svg > foreignObject > section div.two-columns li{margin-bottom:6px}div#\:\$p > svg > foreignObject > section .card-deck{display:flex;flex-direction:column;width:100%;box-sizing:border-box;margin-top:auto!important;margin-bottom:auto!important;gap:16px}div#\:\$p > svg > foreignObject > section .card-deck > *{margin:0!important}div#\:\$p > svg > foreignObject > section .card-deck > ul, div#\:\$p > svg > foreignObject > section .card-deck > ul > li{list-style:none!important;margin:0!important;padding:0!important;width:100%}div#\:\$p > svg > foreignObject > section .two-columns-64{display:grid;grid-template-columns:6fr 4fr;gap:20px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .two-columns-73{display:grid;grid-template-columns:7fr 3fr;gap:20px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .three-columns{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .card{background:white;padding:18px 24px;border-radius:10px;box-shadow:none!important;border:1px solid #cbd5e1;font-size:18.5px;line-height:1.5;text-align:left!important;box-sizing:border-box}div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 18.5px}div#\:\$p > svg > foreignObject > section .card :is(h3, marp-h3){font-size:22px;margin-top:0;margin-bottom:12px;color:#0b3c5d;border-bottom:2px solid #e2e8f0;padding-bottom:8px;text-align:left!important}div#\:\$p > svg > foreignObject > section .card :is(h4, marp-h4){font-size:19px;margin-top:0;margin-bottom:6px;color:#328cc1;text-align:left!important}div#\:\$p > svg > foreignObject > section .card ul, div#\:\$p > svg > foreignObject > section .card ol{margin-top:6px!important;margin-bottom:6px!important;padding-left:20px!important;text-align:left!important;list-style-position:outside!important}div#\:\$p > svg > foreignObject > section .card li{margin-bottom:8px!important;line-height:1.5!important;text-align:left!important;font-size:18px!important}div#\:\$p > svg > foreignObject > section .card p{margin-top:0;margin-bottom:8px;text-align:left!important}div#\:\$p > svg > foreignObject > section .two-columns .card{padding:16px 20px;font-size:16px;line-height:1.4}div#\:\$p > svg > foreignObject > section .two-columns div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section .two-columns .card :is(h3, marp-h3){font-size:20px;margin-top:0;margin-bottom:10px;padding-bottom:6px}div#\:\$p > svg > foreignObject > section .two-columns .card ol, div#\:\$p > svg > foreignObject > section .two-columns .card ul{padding-left:20px!important;margin:4px 0!important}div#\:\$p > svg > foreignObject > section .two-columns .card li{font-size:15.5px!important;margin-bottom:6px!important;line-height:1.36!important}div#\:\$p > svg > foreignObject > section .three-columns .card{padding:14px 16px;font-size:16.5px}div#\:\$p > svg > foreignObject > section .three-columns div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 16.5px}div#\:\$p > svg > foreignObject > section .three-columns .card :is(h3, marp-h3){font-size:19px;margin-bottom:8px;padding-bottom:6px}div#\:\$p > svg > foreignObject > section .three-columns .card li{font-size:16px!important;margin-bottom:6px!important}div#\:\$p > svg > foreignObject > section div.content-columns{display:flex;align-items:center;gap:36px;width:100%;margin-top:auto!important;margin-bottom:auto!important;box-sizing:border-box}div#\:\$p > svg > foreignObject > section div.content-text{flex:66%;font-size:23.5px;line-height:1.55}div#\:\$p > svg > foreignObject > section div.content-text ul, div#\:\$p > svg > foreignObject > section div.content-text ol{margin-top:6px;margin-bottom:6px}div#\:\$p > svg > foreignObject > section div.content-text li{margin-bottom:10px;line-height:1.5}div#\:\$p > svg > foreignObject > section div.content-text li > ul > li, div#\:\$p > svg > foreignObject > section div.content-text li > ol > li{font-size:0.88em;line-height:1.35;margin-bottom:4px}div#\:\$p > svg > foreignObject > section div.content-figure{flex:34%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}div#\:\$p > svg > foreignObject > section div.content-figure img{max-width:360px;max-height:480px;width:auto;height:auto;object-fit:contain;background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card{background:#ffffff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:none!important;overflow:hidden;width:290px;max-width:290px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;margin:0 auto}div#\:\$p > svg > foreignObject > section div.content-figure .name-card img{width:100%!important;max-width:100%!important;height:330px!important;max-height:330px!important;object-fit:cover!important;object-position:center top!important;border-radius:0!important;box-shadow:none!important;display:block!important;margin:0!important;padding:0!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card img.contain-fit{object-fit:contain!important;padding:24px!important;box-sizing:border-box!important;background:#ffffff!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-caption{width:100%;padding:10px 12px 12px 12px;background:#ffffff;display:flex;flex-direction:column;align-items:center;gap:3px;box-sizing:border-box;border-top:1px solid #f1f5f9}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-name{font-size:16px;font-weight:700;color:#1e293b;line-height:1.3}div#\:\$p > svg > foreignObject > section div.content-figure div#\:\$p > svg > foreignObject > section section.name-card-name{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc, div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc a{font-size:11.5px;color:#64748b;text-decoration:none;line-height:1.2}div#\:\$p > svg > foreignObject > section div.content-figure div#\:\$p > svg > foreignObject > section section.name-card-cc{--marpit-root-font-size: 11.5px}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc a:hover{color:#0284c7;text-decoration:underline}div#\:\$p > svg > foreignObject > section.outline, div#\:\$p > svg > foreignObject > section.outline-slide{display:flex;flex-direction:column;justify-content:flex-start}div#\:\$p > svg > foreignObject > section.outline > ul, div#\:\$p > svg > foreignObject > section.outline-slide > ul, div#\:\$p > svg > foreignObject > section.outline > ol, div#\:\$p > svg > foreignObject > section.outline-slide > ol{columns:2;-webkit-columns:2;column-gap:40px;margin-top:auto!important;margin-bottom:auto!important;padding-left:24px!important;font-size:18px!important;line-height:1.48!important}div#\:\$p > svg > foreignObject > section.outline > ul > li, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li, div#\:\$p > svg > foreignObject > section.outline > ol > li, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li{break-inside:avoid;page-break-inside:avoid;margin-bottom:10px!important;line-height:1.42!important}div#\:\$p > svg > foreignObject > section.outline > ul > li > ul, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li > ul, div#\:\$p > svg > foreignObject > section.outline > ol > li > ol, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li > ol{margin-top:3px!important;margin-bottom:5px!important}div#\:\$p > svg > foreignObject > section.outline > ul > li > ul > li, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li > ul > li, div#\:\$p > svg > foreignObject > section.outline > ol > li > ol > li, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li > ol > li{font-size:15.5px!important;color:#475569;margin-bottom:3px!important}div#\:\$p > svg > foreignObject > section .outline-columns{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:auto!important;margin-bottom:auto!important;align-items:start;font-size:17.5px;line-height:1.42}div#\:\$p > svg > foreignObject > section section.outline-columns{--marpit-root-font-size: 17.5px}div#\:\$p > svg > foreignObject > section .outline-columns :is(h3, marp-h3){font-size:21px;color:#0b3c5d;margin-top:0;margin-bottom:10px;border-bottom:2px solid #cbd5e1;padding-bottom:4px}div#\:\$p > svg > foreignObject > section .outline-columns ul{margin:0!important;padding-left:20px!important}div#\:\$p > svg > foreignObject > section .outline-columns li{margin-bottom:8px!important;line-height:1.4!important}div#\:\$p > svg > foreignObject > section .outline-columns li > ul{margin-top:3px!important;margin-bottom:5px!important}div#\:\$p > svg > foreignObject > section .outline-columns li > ul > li{font-size:15.5px!important;margin-bottom:3px!important;color:#475569}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){margin-top:8px;margin-bottom:8px;font-size:22px;line-height:1.45;border-radius:6px}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{font-size:22px}div#\:\$p > svg > foreignObject > section code{font-family:'Fira Code', 'Consolas', 'Courier New', monospace}div#\:\$p > svg > foreignObject > section.full-image-slide{padding:0!important}div#\:\$p > svg > foreignObject > section.full-image-slide::after{display:none!important}div#\:\$p > svg > foreignObject > section.full-image-slide header, div#\:\$p > svg > foreignObject > section.full-image-slide footer{display:none!important}div#\:\$p > svg > foreignObject > section.full-image-slide div.centered-image{display:flex;justify-content:center;align-items:center;width:100%;height:720px}div#\:\$p > svg > foreignObject > section.full-image-slide div.centered-image img{width:100%;height:100%;object-fit:contain}div#\:\$p > svg > foreignObject > section.title-image-slide{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}div#\:\$p > svg > foreignObject > section.title-image-slide :is(h2, marp-h2){margin-top:0;margin-bottom:10px}div#\:\$p > svg > foreignObject > section.title-image-slide div.image-wrapper{display:flex;justify-content:center;align-items:center;flex-grow:1;height:480px}div#\:\$p > svg > foreignObject > section.title-image-slide:has(.image-source) div.image-wrapper, div#\:\$p > svg > foreignObject > section.title-image-slide:has(.image-caption) div.image-wrapper{height:456px}div#\:\$p > svg > foreignObject > section.title-image-slide div.image-wrapper img{max-width:100%;max-height:100%;object-fit:contain}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption{font-size:13px!important;color:#64748b!important;text-align:center!important;margin-top:8px!important;margin-bottom:0!important;line-height:1.3!important}div#\:\$p > svg > foreignObject > section.title-image-slide div#\:\$p > svg > foreignObject > section section.image-source, div#\:\$p > svg > foreignObject > section.title-image-slide div#\:\$p > svg > foreignObject > section section.image-caption{--marpit-root-font-size: 13px !important}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source a, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption a{color:#475569!important;text-decoration:underline!important;text-underline-offset:2px!important}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source a:hover, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption a:hover{color:#0284c7!important}div#\:\$p > svg > foreignObject > section.lead{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1){margin:0 0 16px 0}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2){margin:0 0 16px 0}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3){margin:0 0 16px 0;color:#328cc1}div#\:\$p > svg > foreignObject > section.lead p{margin:0;font-size:0.75em;line-height:1.55}div#\:\$p > svg > foreignObject > section.lead p strong{color:#0b3c5d}div#\:\$p > svg > foreignObject > section.lead blockquote{font-size:1.1em;line-height:1.5;margin-top:20px;padding:10px 24px;text-align:left;display:inline-block}div#\:\$p > svg > foreignObject > section.lead header{display:block!important}div#\:\$p > svg > foreignObject > section.lead footer, div#\:\$p > svg > foreignObject > section.lead::after{display:none!important}div#\:\$p > svg > foreignObject > section.quote-slide{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 100px;background-color:#f5f5f5!important;background:none!important;color:#333!important}div#\:\$p > svg > foreignObject > section.quote-slide header, div#\:\$p > svg > foreignObject > section.quote-slide footer, div#\:\$p > svg > foreignObject > section.quote-slide::after{display:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote{background:transparent!important;border:none!important;margin:0 0 20px 0!important;padding:0!important;font-style:normal!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote::before, div#\:\$p > svg > foreignObject > section.quote-slide blockquote::after{content:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote strong{display:block;font-size:2.05em;line-height:1.35;color:#0b3c5d!important;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;text-shadow:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote em{display:block;font-size:1.15em;color:#328cc1!important;font-style:italic;opacity:0.95;margin-bottom:10px}div#\:\$p > svg > foreignObject > section.quote-slide p:not(blockquote p){font-size:0.82em;color:#555!important;line-height:1.6;font-weight:500;max-width:820px;margin:20px auto 0 auto;border-top:1px solid #cbd5e1;padding-top:20px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-header="軟體工程 | 第五章：軟體架構與物件導向設計原則" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--header:軟體工程 | 第五章：軟體架構與物件導向設計原則;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>軟體工程 | 第五章：軟體架構與物件導向設計原則</header>
+
+<h1 id="%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B">軟體工程</h1>
+<h3 id="%E7%AC%AC%E4%BA%94%E8%AA%B2%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E8%88%87%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87-software-architecture--design">第五課：軟體架構與物件導向設計原則 (Software Architecture &amp; Design)</h3>
+<p><strong>授課教師：薛念林 教授</strong><br />
+資訊工程學系<br />
+逢甲大學</p>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-marpit-fragments="8" data-paginate="true" data-header="軟體工程 | 第五章：軟體架構與物件導向設計原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="2" style="--paginate:true;--header:軟體工程 | 第五章：軟體架構與物件導向設計原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>軟體工程 | 第五章：軟體架構與物件導向設計原則</header>
+<h2 id="%E7%AC%AC%E4%BA%94%E7%AB%A0%E8%AA%B2%E7%A8%8B%E8%97%8D%E5%9C%96%E8%88%87%E6%A0%B8%E5%BF%83%E4%B8%BB%E9%A1%8C">第五章：課程藍圖與核心主題</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>5.1 軟體架構基礎</strong> (從需求到設計的關鍵橋樑、微觀與巨觀架構層次)</li>
+<li data-marpit-fragment="2"><strong>5.2 Kruchten 的 4+1 架構視圖</strong> (邏輯、程序、開發、實體視圖與核心使用案例場景)</li>
+<li data-marpit-fragment="3"><strong>5.3 經典軟體架構模式</strong> (分層架構、儲存庫、客戶端-伺服器、管線與過濾器、MVC、微服務架構)</li>
+<li data-marpit-fragment="4"><strong>5.4 架構與系統非功能品質屬性</strong> (效能、安全性、可靠度與可用性之架構權衡)</li>
+<li data-marpit-fragment="5"><strong>5.5 軟體設計核心根本原則</strong> (四大設計活動、模組化、資訊隱藏、高凝聚度與低耦合度)</li>
+<li data-marpit-fragment="6"><strong>5.6 SOLID 物件導向設計原則</strong> (SRP 單一職責、OCP 開放封閉、LSP 里氏替換、ISP 介面隔離、DIP 相依反轉)</li>
+<li data-marpit-fragment="7"><strong>5.7 AI 在架構與軟體設計中的賦能</strong> (AI 副駕駛、自動化重構、設計模式推薦與防範架構盲點)</li>
+<li data-marpit-fragment="8"><strong>5.8 核心概念統整與參考文獻</strong> (重點填空小測驗與經典學術專著)</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-fragments="7" data-paginate="true" data-header="軟體工程 | 第五章：軟體架構與物件導向設計原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="3" style="--paginate:true;--header:軟體工程 | 第五章：軟體架構與物件導向設計原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>軟體工程 | 第五章：軟體架構與物件導向設計原則</header>
+<h2 id="%E6%9C%AC%E7%AB%A0%E6%A0%B8%E5%BF%83%E6%80%9D%E8%80%83%E5%95%8F%E9%A1%8C-focus-questions">本章核心思考問題 (Focus Questions)</h2>
+<ul>
+<li data-marpit-fragment="1">什麼是<strong>軟體架構 (Software Architecture)</strong>？為什麼它是連結需求與詳細設計的關鍵樞紐？</li>
+<li data-marpit-fragment="2"><strong>微觀架構 (Architecture in the Small)</strong> 與 <strong>巨觀架構 (Architecture in the Large)</strong> 有何本質區別？</li>
+<li data-marpit-fragment="3">Kruchten 的 <strong>4+1 架構視圖模型</strong>包含哪些視角？如何滿足不同利害關係人的多樣化訴求？</li>
+<li data-marpit-fragment="4">經典<strong>架構模式</strong>（分層、儲存庫、主從式、管線過濾器、MVC、微服務）如何組織軟體系統？</li>
+<li data-marpit-fragment="5">為什麼<strong>高凝聚度 (High Cohesion) 與低耦合度 (Low Coupling)</strong> 是軟體工程不可動搖的黃金法則？</li>
+<li data-marpit-fragment="6">物件導向 <strong>SOLID 五大原則</strong>（SRP、OCP、LSP、ISP、DIP）如何預防架構僵化與腐化？</li>
+<li data-marpit-fragment="7"><strong>生成式 AI</strong> 能如何有效輔助軟體架構師？人類架構師又該如何守護架構邊界，避免踩入盲點？</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-header="5.1 軟體架構基礎" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="4" style="--paginate:true;--header:5.1 軟體架構基礎;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.1 軟體架構基礎</header>
+
+<h1 id="51-%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E5%9F%BA%E7%A4%8E"><strong>5.1 軟體架構基礎</strong></h1>
+<blockquote>
+<p>&quot;Software architecture is the set of design decisions which, if made incorrectly, may cause your project to fail.&quot;<br />
+<em>(軟體架構是一組關鍵的設計決策，這些決策一旦做錯，將可能直接導致你的專案走向徹底失敗。)</em><br />
+— <em>Eoin Woods</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="2" data-paginate="true" data-header="5.1 軟體架構基礎" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="5" style="--paginate:true;--header:5.1 軟體架構基礎;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.1 軟體架構基礎</header>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B-what-is-software-architecture">什麼是軟體架構？ (What is Software Architecture?)</h2>
+<blockquote>
+<p>軟體系統的根本組織方式，體現於系統各組件之中、組件彼此之間與環境的關係，以及引導系統設計與演進的指導原則。</p>
+</blockquote>
+<ul>
+<li data-marpit-fragment="1"><strong>關鍵的「橋樑 (Bridge)」角色：</strong>
+<ul>
+<li>將<strong>需求工程</strong> (<em>客戶需要什麼 / What</em>) 銜接至<strong>詳細軟體設計</strong> (<em>組件如何建構 / How</em>)。</li>
+<li>識別關鍵結構組件，並嚴格定義彼此之間的公開通訊介面契約。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>架構即核心設計決策：</strong>
+<ul>
+<li>架構代表專案生命週期早期所做的重大決策，這些決策在後續實作階段<strong>變更成本最為高昂</strong>。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-header="5.1 軟體架構基礎" data-footer="Ch 05 · 軟體架構與設計" data-class="full-image-slide" data-theme="ase-theme" lang="C" class="full-image-slide" data-marpit-pagination="6" style="--paginate:true;--header:5.1 軟體架構基礎;--footer:Ch 05 · 軟體架構與設計;--class:full-image-slide;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.1 軟體架構基礎</header>
+<div class="centered-image">
+  <img src="../../img/ch05/02_connection.jpeg" alt="連接需求 (What) 與實作 (How) 的架構橋樑" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="2" data-paginate="true" data-header="5.1 軟體架構基礎" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="7" style="--paginate:true;--header:5.1 軟體架構基礎;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.1 軟體架構基礎</header>
+<h2 id="%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E7%9A%84%E6%8A%BD%E8%B1%A1%E5%B1%A4%E6%AC%A1%E5%BE%AE%E8%A7%80-vs-%E5%B7%A8%E8%A7%80">軟體架構的抽象層次：微觀 vs. 巨觀</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>微觀架構 (Architecture in the Small)：</strong>
+<ul>
+<li>關注單一程式、獨立微服務或用戶端應用程式內部的結構設計。</li>
+<li>重點在於單一程式如何拆解為子組件、套件（Packages）與物件類別。</li>
+<li>直接決定內部程式碼的可讀性、可測試性與日常重構的迭代速度。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>巨觀架構 (Architecture in the Large)：</strong>
+<ul>
+<li>關注跨越多個系統、高度複雜的企業級分散式系統網絡。</li>
+<li>系統跨越多台伺服器、多個雲端服務區域（Cloud Regions）與外部廠商 SaaS 平台。</li>
+<li>涵蓋大型既有傳統資料庫整合、非同步訊息中介佇列與跨組織 API 整合合約。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-header="5.1 軟體架構基礎" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="8" style="--paginate:true;--header:5.1 軟體架構基礎;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.1 軟體架構基礎</header>
+<h2 id="%E5%B0%87%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E6%98%8E%E7%A2%BA%E9%A1%AF%E6%80%A7%E5%8C%96%E7%9A%84-3-%E5%A4%A7%E5%84%AA%E5%8B%A2">將軟體架構明確顯性化的 3 大優勢</h2>
+<ol>
+<li><strong>促進利害關係人溝通 (Stakeholder Communication)：</strong>
+<ul>
+<li>高階架構圖作為技術團隊、業務主管與外部客戶溝通的共同焦點，無需陷入繁複的程式碼細節即可對焦共識。</li>
+</ul>
+</li>
+<li><strong>早期系統分析與非功能品質驗證 (System Analysis &amp; Verification)：</strong>
+<ul>
+<li>能在寫下第一行程式碼之前，提早分析驗證所提議的設計是否能滿足關鍵的<strong>非功能性需求</strong>（例如高並發低延遲、容錯災難復原、合規稽核）。</li>
+</ul>
+</li>
+<li><strong>大規模架構與資產重用 (Large-Scale Reuse)：</strong>
+<ul>
+<li>經過驗證的架構風格、微服務底座（Chassis）與組件框架，能有系統地在同一領域的多個產品線中大規模重用。</li>
+</ul>
+</li>
+</ol>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-header="5.2 Kruchten 的 4+1 視圖" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="9" style="--paginate:true;--header:5.2 Kruchten 的 4+1 視圖;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.2 Kruchten 的 4+1 視圖</header>
+
+<h1 id="52-kruchten-%E7%9A%84-41-%E6%9E%B6%E6%A7%8B%E8%A6%96%E5%9C%96%E6%A8%A1%E5%9E%8B"><strong>5.2 Kruchten 的 4+1 架構視圖模型</strong></h1>
+<blockquote>
+<p>&quot;If you look at an architecture from only one perspective, you are blind to three-quarters of its reality.&quot;<br />
+<em>(如果你只從單一視角觀察架構，你將對它四分之三的真實面貌視而不見。)</em><br />
+— <em>Philippe Kruchten</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="5" data-paginate="true" data-header="5.2 Kruchten 的 4+1 視圖" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="10" style="--paginate:true;--header:5.2 Kruchten 的 4+1 視圖;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.2 Kruchten 的 4+1 視圖</header>
+<h2 id="kruchten-%E7%9A%84-41-%E6%9E%B6%E6%A7%8B%E8%A6%96%E5%9C%96%E6%A8%A1%E5%9E%8B-41-view-model">Kruchten 的 4+1 架構視圖模型 (4+1 View Model)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 邏輯視圖 (Logical View / 領域與物件視角)：</strong>
+<ul>
+<li>展現核心領域抽象、物件類別、屬性與彼此間的關聯結構 (<em>目標受眾：系統分析師、架構師與客戶</em>)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 程序視圖 (Process View / 並發與運行時序視角)：</strong>
+<ul>
+<li>展現執行時期程序（Processes）、執行緒（Threads）、並發並行機制與跨程序通訊 (<em>目標受眾：系統整合者與效能工程師</em>)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 開發視圖 (Development View / 模組與實作視角)：</strong>
+<ul>
+<li>展現軟體原始碼模組、套件相依性、建置成品（Artifacts）與專案結構 (<em>目標受眾：軟體開發工程師</em>)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. 實體視圖 (Physical View / 部署與基礎設施視角)：</strong>
+<ul>
+<li>展現底層伺服器硬體節點、雲端容器叢集與實體網路拓撲配置 (<em>目標受眾：DevOps 與系統維運管理員</em>)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="5"><strong>+1 核心情境 (Scenarios / 使用案例串聯)：</strong>
+<ul>
+<li>透過走訪真實的使用者情境旅程，貫穿並驗證上述四大視圖的協同一致性。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-header="5.2 Kruchten 的 4+1 視圖" data-footer="Ch 05 · 軟體架構與設計" data-class="full-image-slide" data-theme="ase-theme" lang="C" class="full-image-slide" data-marpit-pagination="11" style="--paginate:true;--header:5.2 Kruchten 的 4+1 視圖;--footer:Ch 05 · 軟體架構與設計;--class:full-image-slide;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.2 Kruchten 的 4+1 視圖</header>
+<div class="centered-image">
+  <img src="../../img/ch05/04_five_perspective.jpeg" alt="五大視角：單一統一藍圖" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-header="5.2 Kruchten 的 4+1 視圖" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="12" style="--paginate:true;--header:5.2 Kruchten 的 4+1 視圖;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.2 Kruchten 的 4+1 視圖</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-1-ccq-1">觀念檢核測驗 1 (CCQ 1)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在 Kruchten 的 4+1 架構視圖模型中，哪一個視圖專門用以展示軟體組件在運行時如何分派部署於實體伺服器硬體、雲端容器叢集與網路拓撲之上？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 邏輯視圖 (Logical View)</p>
+</li>
+<li>
+<p><strong>B.</strong> 程序視圖 (Process View)</p>
+</li>
+<li>
+<p><strong>C.</strong> 開發視圖 (Development View)</p>
+</li>
+<li>
+<p><strong>D.</strong> 實體 / 部署視圖 (Physical / Deployment View)</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch06/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="13" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+
+<h1 id="53-%E7%B6%93%E5%85%B8%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E6%A8%A1%E5%BC%8F"><strong>5.3 經典軟體架構模式</strong></h1>
+<blockquote>
+<p>&quot;Good architects borrow; great architects reuse proven architectural patterns.&quot;<br />
+<em>(優秀的架構師懂得借鑒；卓越的架構師則善於重用經過實戰驗證的經典架構模式。)</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-fragments="2" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="14" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E6%A8%A1%E5%BC%8F-architectural-patterns">什麼是軟體架構模式？ (Architectural Patterns)</h2>
+<blockquote>
+<p>對良好設計實踐的一種風格化、經過實證檢驗的描述，已在多種不同環境中獲得成功驗證，適用於常見的架構設計情境。</p>
+</blockquote>
+<ul>
+<li data-marpit-fragment="1"><strong>架構模式的構成要素：</strong>
+<ul>
+<li><strong>模式名稱 (Name)：</strong> 具備明確意義的專用術語（如 <em>MVC</em>、<em>分層架構</em>、<em>儲存庫模式</em>）。</li>
+<li><strong>背景與問題 (Context &amp; Problem)：</strong> 該模式旨在解決的通用結構性挑戰。</li>
+<li><strong>解決方案 (Solution)：</strong> 核心組件的職責劃分及其間的通訊互動關係。</li>
+<li><strong>工程權衡 (Trade-offs)：</strong> 清晰闡明該模式帶來的架構優勢與伴隨的代價代償。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>為什麼架構模式如此重要？</strong>
+<ul>
+<li>為跨職能工程團隊建立共同且精確的高階溝通語彙。</li>
+<li>避免團隊閉門造車，重複發明具備已知缺陷的錯誤結構。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-marpit-fragments="2" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="15" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h2 id="1-%E6%A8%A1%E5%9E%8B-%E8%A6%96%E5%9C%96-%E6%8E%A7%E5%88%B6%E5%99%A8-mvc-%E6%A8%A1%E5%BC%8F">1. 模型-視圖-控制器 (MVC) 模式</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>核心職責分離：</strong>
+<ul>
+<li><strong>模型 (Model)：</strong> 管理核心商業領域邏輯、資料狀態與持久化驗證規則。</li>
+<li><strong>視圖 (View)：</strong> 負責使用者介面渲染，將資料視覺化呈現給人類使用者。</li>
+<li><strong>控制器 (Controller)：</strong> 攔截使用者輸入事件（點擊、HTTP 請求），呼叫模型更新，並決定呈現的視圖。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>核心工程優勢：</strong>
+<ul>
+<li><strong>資料與展示徹底解耦：</strong> 多個不同視圖（Web 儀表板、手機原生 App、純 JSON API）可同時觀察同一個底層 Model，無須重複撰寫任何商業邏輯。</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="../../img/ch06/mvc_structure.png" style="max-height: 280px; width: auto;" alt="MVC 架構結構圖" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="3" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="16" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h2 id="2-%E5%88%86%E5%B1%A4%E6%9E%B6%E6%A7%8B%E6%A8%A1%E5%BC%8F-layered-architecture">2. 分層架構模式 (Layered Architecture)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>堆疊式抽象層設計：</strong>
+<ul>
+<li>將系統功能組織為垂直有序的層級。每一層僅為其<strong>正上方</strong>的相鄰層級提供服務，且僅依賴其<strong>正下方</strong>的底層服務。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>現代企業級標準四層架構：</strong>
+<ul>
+<li><strong>展示層 (Presentation Layer)：</strong> 使用者介面、REST API 端點、視圖控制器。</li>
+<li><strong>應用 / 服務層 (Service Layer)：</strong> 業務工作流程編排、跨領域交易事務邊界。</li>
+<li><strong>領域 / 業務層 (Domain Layer)：</strong> 純粹的領域商業規則、實體與領域演算法。</li>
+<li><strong>基礎設施 / 資料層 (Infrastructure Layer)：</strong> 資料庫讀寫存取、外部第三方服務整合。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>關鍵架構價值：</strong>
+<ul>
+<li><strong>隔離變更與高可替換性：</strong> 只要介面合約維持不變，更換底層實作（例如將 Oracle 換成 PostgreSQL）完全不會波及上層商業領域邏輯。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-marpit-fragments="3" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="17" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h2 id="3-%E5%84%B2%E5%AD%98%E5%BA%AB%E6%9E%B6%E6%A7%8B%E6%A8%A1%E5%BC%8F-repository-architecture">3. 儲存庫架構模式 (Repository Architecture)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>集中式資料共享機制：</strong>
+<ul>
+<li>各個獨立子系統透過一個共用的中央儲存庫（Repository / Data Store）交換大規模、高關聯的複雜資料。</li>
+<li>各子系統獨立運作，彼此不直接溝通；一切互動均嚴格透過對中央儲存庫的狀態讀寫來達成。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>業界經典應用場景：</strong>
+<ul>
+<li>現代整合開發環境 (IDE，如 VS Code 語法伺服器、Eclipse 工作區 AST 儲存庫)。</li>
+<li>電腦輔助設計 (CAD) 大型工程繪圖套件。</li>
+<li>醫院電子病歷 (EHR) 中央病患核心資料庫。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>架構優劣權衡：</strong>
+<ul>
+<li><em>優勢：</em> 高效共享海量、高維度的互聯資料集，避免在處理程序間頻繁傳輸大量資料。</li>
+<li><em>劣勢：</em> 中央儲存庫極易淪為系統的<strong>單點故障 (Single Point of Failure, SPOF)</strong> 與效能瓶頸。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="2" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="18" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h2 id="4-%E4%B8%BB%E5%BE%9E%E5%BC%8F%E6%9E%B6%E6%A7%8B%E8%88%87%E7%AE%A1%E7%B7%9A%E9%81%8E%E6%BF%BE%E5%99%A8%E6%A8%A1%E5%BC%8F">4. 主從式架構與管線過濾器模式</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>客戶端-伺服器架構 (Client-Server Architecture)：</strong>
+<ul>
+<li>系統功能分派由提供專屬服務（運算、資料儲存、身分認證）的<strong>伺服器端 (Server)</strong>，與透過網路發出請求的<strong>客戶端 (Client)</strong> 共同組成。</li>
+<li><em>權衡：</em> 易於在通用硬體上水平擴展，但本質上受制於網路延遲與連線飽和度瓶頸。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>管線與過濾器架構 (Pipe-and-Filter Architecture)：</strong>
+<ul>
+<li>資料處理被組織為一系列獨立的轉換步驟（<strong>Filters / 過濾器</strong>），彼此透過資料串流（<strong>Pipes / 管線</strong>）相互串接。</li>
+<li>第 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg></mjx-container> 個過濾器的輸出，直接作為第 <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.186ex;" xmlns="http://www.w3.org/2000/svg" width="5.906ex" height="1.731ex" role="img" focusable="false" viewBox="0 -683 2610.4 765"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(1110.2,0)"><path data-c="2B" d="M56 237T56 250T70 270H369V420L370 570Q380 583 389 583Q402 583 409 568V270H707Q722 262 722 250T707 230H409V-68Q401 -82 391 -82H389H387Q375 -82 369 -68V230H70Q56 237 56 250Z"></path></g><g data-mml-node="mn" transform="translate(2110.4,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></svg></mjx-container> 個過濾器的輸入串流。</li>
+<li><em>經典範例：</em> Unix 終端機管線指令 (<code>cat log.txt | grep 'ERROR' | sort | uniq -c</code>)。</li>
+<li><em>最佳適用情境：</em> 批次帳單結算、大數據分析管線、編譯器語法解析。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-marpit-fragments="2" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="19" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h2 id="5-%E5%BE%AE%E6%9C%8D%E5%8B%99%E6%9E%B6%E6%A7%8B-microservices-msa-vs-%E5%96%AE%E9%AB%94%E6%9E%B6%E6%A7%8B">5. 微服務架構 (Microservices, MSA) vs. 單體架構</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>單體架構 (Monolithic Architecture)：</strong>
+<ul>
+<li>所有的系統功能、業務邏輯與資料庫存取，皆打包並部署為單一、不可分割的可執行二進位檔。</li>
+<li><em>優點：</em> 初期開發極速、除錯直觀、零跨網路序列化額外開銷。</li>
+<li><em>痛點：</em> 擴展時必須複製整個應用；單一模組 Memory Leak 或崩潰將拖垮全系統。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>微服務架構 (Microservices Architecture)：</strong>
+<ul>
+<li>圍繞著<strong>業務領域能力 (Business Capabilities)</strong>，將系統拆解為一套由微小、可獨立部署的服務所組成的叢集。</li>
+<li>每個微服務擁有<strong>自己完全獨立的私有資料庫</strong>（去中心化資料管理）。</li>
+<li>服務間透過輕量級 REST/gRPC 或非同步訊息中介（Kafka / RabbitMQ）進行通訊。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-class="full-image-slide" data-theme="ase-theme" lang="C" class="full-image-slide" data-marpit-pagination="20" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--class:full-image-slide;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<div class="centered-image">
+  <img src="../../img/ch05/06_monolithic_microservice.jpeg" alt="單體架構 vs 微服務架構生動對比" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-header="5.3 經典架構模式" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="21" style="--paginate:true;--header:5.3 經典架構模式;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.3 經典架構模式</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-2-ccq-2">觀念檢核測驗 2 (CCQ 2)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>哪一個經典架構模式明確將使用者介面呈現與畫面佈局，從底層商業領域資料管理與使用者輸入事件處理中徹底解耦分離？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 管線與過濾器模式 (Pipe and Filter Pattern)</p>
+</li>
+<li>
+<p><strong>B.</strong> 模型-視圖-控制器模式 (Model-View-Controller, MVC)</p>
+</li>
+<li>
+<p><strong>C.</strong> 儲存庫模式 (Repository Pattern)</p>
+</li>
+<li>
+<p><strong>D.</strong> 主從式架構模式 (Client-Server Pattern)</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch06/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-header="5.4 架構與品質屬性" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="22" style="--paginate:true;--header:5.4 架構與品質屬性;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.4 架構與品質屬性</header>
+
+<h1 id="54-%E6%9E%B6%E6%A7%8B%E8%88%87%E7%B3%BB%E7%B5%B1%E5%93%81%E8%B3%AA%E5%B1%AC%E6%80%A7"><strong>5.4 架構與系統品質屬性</strong></h1>
+<blockquote>
+<p>&quot;Architecture is where requirements meet reality through trade-off analysis.&quot;<br />
+<em>(架構，是軟體需求透過權衡分析與工程現實交會的所在。)</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="5" data-paginate="true" data-header="5.4 架構與品質屬性" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="23" style="--paginate:true;--header:5.4 架構與品質屬性;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.4 架構與品質屬性</header>
+<h2 id="%E8%BB%9F%E9%AB%94%E6%9E%B6%E6%A7%8B%E7%9B%B4%E6%8E%A5%E6%B1%BA%E5%AE%9A%E9%9D%9E%E5%8A%9F%E8%83%BD%E5%93%81%E8%B3%AA%E5%B1%AC%E6%80%A7">軟體架構直接決定非功能品質屬性</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>效能表現 (Performance)：</strong>
+<ul>
+<li><em>架構手段：</em> 將關鍵核心計算封裝於高凝聚組件中，盡量減少跨行程與跨網路的遠端呼叫；引入多層級分散式快取（如 Redis / Memcached）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>資訊安全性 (Security)：</strong>
+<ul>
+<li><em>架構手段：</em> 採用縱深防禦（Defense-in-Depth）多層安全架構；將高價值資產置於內部受保護核心層；外圍由 API 閘道強制執行身分認證。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>系統安全性 (Safety，如航空/醫療)：</strong>
+<ul>
+<li><em>架構手段：</em> 將關乎生命安全的關鍵邏輯嚴格隔離於獨立、具備硬體冗餘備援的子系統，杜絕故障擴散。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>高可用性 (Availability)：</strong>
+<ul>
+<li><em>架構手段：</em> 全面消除單點故障（SPOF）；部署叢集冗餘實例、自動化健康檢查心跳與跨區域主動容錯移轉（Active-Active Failover）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="5"><strong>可維護性 (Maintainability)：</strong>
+<ul>
+<li><em>架構手段：</em> 拆解為細粒度、低耦合的模組，組件間一律嚴格透過穩定的抽象介面溝通。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-header="5.4 架構與品質屬性" data-footer="Ch 05 · 軟體架構與設計" data-class="full-image-slide" data-theme="ase-theme" lang="C" class="full-image-slide" data-marpit-pagination="24" style="--paginate:true;--header:5.4 架構與品質屬性;--footer:Ch 05 · 軟體架構與設計;--class:full-image-slide;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.4 架構與品質屬性</header>
+<div class="centered-image">
+  <img src="../../img/ch05/03_system_characteristics.jpeg" alt="精心設計的結構驅動系統行為特性" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-header="5.5 軟體設計核心原則" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="25" style="--paginate:true;--header:5.5 軟體設計核心原則;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.5 軟體設計核心原則</header>
+
+<h1 id="55-%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%89%87"><strong>5.5 軟體設計核心原則</strong></h1>
+<blockquote>
+<p>&quot;There are two ways of constructing a software design: One way is to make it so simple that there are obviously no deficiencies, and the other way is to make it so complicated that there are no obvious deficiencies.&quot;<br />
+<em>(建構軟體設計有兩種方式：一種是讓它簡單到明顯看不出任何缺陷；另一種則是讓它複雜到看不出任何明顯的缺陷。)</em><br />
+— <em>C. A. R. Hoare (圖靈獎得主)</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-header="5.5 軟體設計核心原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="26" style="--paginate:true;--header:5.5 軟體設計核心原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.5 軟體設計核心原則</header>
+<h2 id="%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88%E7%9A%84-4-%E5%A4%A7%E5%9F%BA%E6%9C%AC%E6%B4%BB%E5%8B%95-4-design-activities">軟體設計的 4 大基本活動 (4 Design Activities)</h2>
+<ol>
+<li><strong>架構設計 (Architectural Design / 巨觀結構)：</strong>
+<ul>
+<li>識別關鍵子系統、定義服務邊界，以及設計模組間的主要通訊管線。</li>
+</ul>
+</li>
+<li><strong>介面設計 (Interface Design / 契約規範)：</strong>
+<ul>
+<li>明確定義各組件之間公開、精確且無歧義的契約介面（REST API 規範、介面方法簽章）。</li>
+</ul>
+</li>
+<li><strong>組件與詳細設計 (Component Design / 微觀實作)：</strong>
+<ul>
+<li>深入設計各類別內部的資料結構、核心演算法與私有輔助方法邏輯。</li>
+</ul>
+</li>
+<li><strong>資料庫與資料結構設計 (Data Persistence Design / 持久化)：</strong>
+<ul>
+<li>設計關聯式實體關聯圖（ERD）、文件集合（Collections）綱要或記憶體資料結構。</li>
+</ul>
+</li>
+</ol>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-marpit-fragments="4" data-paginate="true" data-header="5.5 軟體設計核心原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="27" style="--paginate:true;--header:5.5 軟體設計核心原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.5 軟體設計核心原則</header>
+<h2 id="%E7%B6%93%E5%85%B8%E8%A8%AD%E8%A8%88%E6%BA%96%E5%89%87%E6%A8%A1%E7%B5%84%E5%8C%96%E6%8A%BD%E8%B1%A1%E5%8C%96%E8%88%87%E9%97%9C%E6%B3%A8%E9%BB%9E%E5%88%86%E9%9B%A2">經典設計準則：模組化、抽象化與關注點分離</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 抽象化 (Abstraction)：</strong>
+<ul>
+<li>將低階繁複的實作細節隱藏在清晰的高階概念介面之後。讓工程師在思考複雜系統時不至於大腦認知超載。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 封裝與資訊隱藏 (Encapsulation &amp; Information Hiding)：</strong>
+<ul>
+<li><em>David Parnas 原則：</em> 將狀態資料與專屬操作緊密綁定於模組內部，並將私有變數徹底隱藏。杜絕外部程式碼非法修改內部狀態所帶來的災難性副作用。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 關注點分離 (Separation of Concerns, SoC)：</strong>
+<ul>
+<li>將軟體拆解為互不重疊的獨立功能面向（例如：徹底分離 UI 渲染排版邏輯與資料庫 SQL 查詢）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. 模組化 (Modularity)：</strong>
+<ul>
+<li>將系統劃分為內聚完整、可獨立測試且能隨時替換抽換的獨立單元。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-marpit-fragments="3" data-paginate="true" data-header="5.5 軟體設計核心原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="28" style="--paginate:true;--header:5.5 軟體設計核心原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.5 軟體設計核心原則</header>
+<h2 id="%E8%87%B3%E9%AB%98%E9%BB%83%E9%87%91%E6%B3%95%E5%89%87%E9%AB%98%E5%87%9D%E8%81%9A%E5%BA%A6%E8%88%87%E4%BD%8E%E8%80%A6%E5%90%88%E5%BA%A6">至高黃金法則：高凝聚度與低耦合度</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>凝聚度 (Cohesion)：</strong>
+<ul>
+<li>衡量單一類別或模組內部職責彼此關聯的緊密與專注程度。</li>
+<li><strong>軟體工程目標：</strong> <strong>高凝聚度 (High Cohesion)</strong>（一個類別應該只專注做好一件事，並且把它做到極致）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>耦合度 (Coupling)：</strong>
+<ul>
+<li>衡量不同獨立模組之間直接相互依賴的強烈程度。</li>
+<li><strong>軟體工程目標：</strong> <strong>低耦合度 (Low Coupling)</strong>（模組之間透過抽象介面溝通，對彼此內部實作細節一無所知）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>不可動搖的通用黃金法則：</strong>
+<blockquote>
+<p><strong>最大化凝聚度，最小化耦合度！ (Maximize Cohesion, Minimize Coupling!)</strong><br />
+高凝聚讓程式碼極易理解與維護；低耦合讓單一模組的修改絕不會在全系統引發連鎖骨牌效應。</p>
+</blockquote>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-header="5.5 軟體設計核心原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="29" style="--paginate:true;--header:5.5 軟體設計核心原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.5 軟體設計核心原則</header>
+<h2 id="%E5%87%9D%E8%81%9A%E5%BA%A6%E8%88%87%E8%80%A6%E5%90%88%E5%BA%A6%E4%B8%8D%E8%89%AF%E8%A8%AD%E8%A8%88-vs-%E5%84%AA%E8%89%AF%E8%A8%AD%E8%A8%88%E5%B0%8D%E6%AF%94">凝聚度與耦合度：不良設計 vs. 優良設計對比</h2>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> BAD: 低凝聚度、高耦合度的反面教材（萬能上帝類別 &quot;God Class&quot;）</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderManager</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">processOrder</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// 直接編寫並執行 MySQL 原生 SQL 字串語法</span>
+        <span class="hljs-comment">// 混雜複雜的 VIP 會員折扣商業數學計算</span>
+        <span class="hljs-comment">// 拼接組裝訂單發票的純 HTML 字串</span>
+        <span class="hljs-comment">// 建立低階 TCP/SMTP Socket 網路連線發送電子郵件</span>
+    }
+}
+</code></pre>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> GOOD: 高凝聚度、低耦合度的優良設計（解耦的單一職責協同類別）</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderProcessor</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> DiscountCalculator discountCalculator;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> OrderRepository orderRepository;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> NotificationService notificationService;
+
+    <span class="hljs-type">public</span> <span class="hljs-title function_">OrderProcessor</span><span class="hljs-params">(DiscountCalculator dc, OrderRepository repo, NotificationService ns)</span> {
+        <span class="hljs-built_in">this</span>.discountCalculator = dc;
+        <span class="hljs-built_in">this</span>.orderRepository = repo;
+        <span class="hljs-built_in">this</span>.notificationService = ns;
+    }
+    <span class="hljs-comment">// 嚴格透過乾淨的抽象介面編排協調整體下單工作流程！</span>
+}
+</code></pre>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-header="5.5 軟體設計核心原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="30" style="--paginate:true;--header:5.5 軟體設計核心原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.5 軟體設計核心原則</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-3-ccq-3">觀念檢核測驗 3 (CCQ 3)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在軟體系統設計中，將<strong>高凝聚度 (High Cohesion)</strong> 與 <strong>低耦合度 (Low Coupling)</strong> 兩大工程原則結合應用，所帶來最核心的實務效益為何？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 透過將所有函式內聯整合至單一二進位檔案，最大化 CPU 執行時的運算效能。</p>
+</li>
+<li>
+<p><strong>B.</strong> 打造出高度模組化的程式碼架構，使得單一類別的規格修改對其他模組產生極小連鎖影響。</p>
+</li>
+<li>
+<p><strong>C.</strong> 強制規範系統內部所有的核心資料結構，必須全部集中儲存於全域共享變數空間中。</p>
+</li>
+<li>
+<p><strong>D.</strong> 徹底消除生產環境持續交付流程中，編寫自動化整合測試與回歸測試的必要性。</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch06b/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="31" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+
+<h1 id="56-solid-%E7%89%A9%E4%BB%B6%E5%B0%8E%E5%90%91%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87"><strong>5.6 SOLID 物件導向設計原則</strong></h1>
+<blockquote>
+<p>&quot;Clean code always looks like it was written by someone who cares.&quot;<br />
+<em>(乾淨的程式碼讀起來，永遠就像是由深具責任心與熱忱的人所撰寫。)</em><br />
+— <em>Robert C. Martin (Uncle Bob)</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-marpit-fragments="5" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="32" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h2 id="%E6%A6%82%E8%A6%BDsolid-%E4%BA%94%E5%A4%A7%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87">概覽：SOLID 五大設計原則</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>S – 單一職責原則 (Single Responsibility Principle, SRP)：</strong>
+<ul>
+<li>一個類別應該有且僅有一個引起它改變的原因。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>O – 開放封閉原則 (Open / Closed Principle, OCP)：</strong>
+<ul>
+<li>軟體實體應對擴充開放，但對修改封閉。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>L – 里氏替換原則 (Liskov Substitution Principle, LSP)：</strong>
+<ul>
+<li>子型別必須能夠替換掉其基礎父型別，且不破壞程式的正確性。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>I – 介面隔離原則 (Interface Segregation Principle, ISP)：</strong>
+<ul>
+<li>用戶端不應被迫依賴其不需要的肥大介面方法。</li>
+</ul>
+</li>
+<li data-marpit-fragment="5"><strong>D – 相依反轉原則 (Dependency Inversion Principle, DIP)：</strong>
+<ul>
+<li>高階模組不應依賴低階模組；兩者皆應依賴抽象介面。</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin-top: 10px;">
+  <img src="../../img/ch06b/solid_principles.svg" style="max-height: 250px; width: auto;" alt="SOLID 物件導向設計五大原則綜整圖" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-marpit-fragments="2" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="33" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h2 id="s-%E2%80%93-%E5%96%AE%E4%B8%80%E8%81%B7%E8%B2%AC%E5%8E%9F%E5%89%87-single-responsibility-principle-srp">S – 單一職責原則 (Single Responsibility Principle, SRP)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>核心原則：</strong>
+<blockquote>
+<p>一個類別應該有且僅有一個引起它改變的原因。</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>為什麼 SRP 至關重要？</strong>
+<ul>
+<li>當一個類別承擔多重職責時（例如資料庫存取 + PDF 報表渲染 + 電子郵件寄送），行銷團隊要求更換 Email 格式的修改，極易在無意間引發資料庫儲存邏輯的致命錯誤！</li>
+</ul>
+</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> 違反 SRP：擁有 3 個截然不同的改變理由（資料庫存取、PDF 渲染、SMTP 郵件協定）</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">UserReportManager</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">fetchUserData</span><span class="hljs-params">()</span> { <span class="hljs-comment">/* 執行資料庫 SQL 查詢 */</span> }
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">generatePdfReport</span><span class="hljs-params">()</span> { <span class="hljs-comment">/* 複雜的 PDF 排版繪圖引擎 */</span> }
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">sendEmailReport</span><span class="hljs-params">()</span> { <span class="hljs-comment">/* SMTP 網路協定傳輸郵件 */</span> }
+}
+
+<span class="hljs-comment">// <img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> 遵循 SRP：拆解為 3 個職責專一、各司其職的獨立類別</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">UserRepository</span> { <span class="hljs-keyword">public</span> <span class="hljs-type">User</span> <span class="hljs-title function_">fetchUserData</span><span class="hljs-params">()</span> { ... } }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">PdfReportFormatter</span> { <span class="hljs-keyword">public</span> <span class="hljs-type">byte</span>[] <span class="hljs-title function_">generatePdf</span><span class="hljs-params">(User u)</span> { ... } }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">EmailService</span> { <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">sendEmail</span><span class="hljs-params">(String to, <span class="hljs-type">byte</span>[] data)</span> { ... } }
+</code></pre>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-marpit-fragments="2" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="34" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h2 id="o-%E2%80%93-%E9%96%8B%E6%94%BE%E5%B0%81%E9%96%89%E5%8E%9F%E5%89%87-open--closed-principle-ocp">O – 開放封閉原則 (Open / Closed Principle, OCP)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>核心原則：</strong>
+<blockquote>
+<p>軟體實體（類別、模組、函式）應當對擴充開放，但對修改封閉。</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>關鍵工程實踐機制：</strong>
+<ul>
+<li>善用<strong>介面與多型 (Polymorphism)</strong>（例如策略模式 Strategy Pattern），徹底取代脆弱、層層巢狀且頻繁修改的 <code>if-else</code> 或 <code>switch</code> 型別檢查判斷。</li>
+</ul>
+</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> 違反 OCP：每當行銷部門推出全新折扣活動，就必須被迫修改既有已測試的程式碼！</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">DiscountCalculator</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">double</span> <span class="hljs-title function_">calculate</span><span class="hljs-params">(String tier, <span class="hljs-type">double</span> price)</span> {
+        <span class="hljs-keyword">if</span> (tier.equals(<span class="hljs-string">&quot;VIP&quot;</span>)) <span class="hljs-keyword">return</span> price * <span class="hljs-number">0.8</span>;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tier.equals(<span class="hljs-string">&quot;STUDENT&quot;</span>)) <span class="hljs-keyword">return</span> price * <span class="hljs-number">0.9</span>;
+        <span class="hljs-keyword">return</span> price; <span class="hljs-comment">// 每次新增促銷活動，都必須冒險修改這個核心方法！</span>
+    }
+}
+
+<span class="hljs-comment">// <img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> 遵循 OCP：透過新增實作介面的全新類別來完成擴充，零修改既有程式碼！</span>
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">DiscountStrategy</span> { <span class="hljs-type">double</span> <span class="hljs-title function_">apply</span><span class="hljs-params">(<span class="hljs-type">double</span> price)</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">VipDiscount</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">DiscountStrategy</span> { <span class="hljs-keyword">public</span> <span class="hljs-type">double</span> <span class="hljs-title function_">apply</span><span class="hljs-params">(<span class="hljs-type">double</span> p)</span> { <span class="hljs-keyword">return</span> p * <span class="hljs-number">0.8</span>; } }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">StudentDiscount</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">DiscountStrategy</span> { <span class="hljs-keyword">public</span> <span class="hljs-type">double</span> <span class="hljs-title function_">apply</span><span class="hljs-params">(<span class="hljs-type">double</span> p)</span> { <span class="hljs-keyword">return</span> p * <span class="hljs-number">0.9</span>; } }
+<span class="hljs-comment">// 未來若要新增 &quot;雙十一折扣 (BlackFridayDiscount)&quot;，既有程式碼完全無須改動任何一行！</span>
+</code></pre>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-marpit-fragments="2" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="35" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h2 id="l-%E2%80%93-%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8F%9B%E5%8E%9F%E5%89%87-liskov-substitution-principle-lsp">L – 里氏替換原則 (Liskov Substitution Principle, LSP)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>核心原則：</strong>
+<blockquote>
+<p>子型別必須能夠在程式中無縫替換掉其父型別，且不影響任何既有程式執行的正確性。</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>經典反面教材：正方形繼承長方形 (Square extends Rectangle)：</strong>
+<ul>
+<li>在幾何學上，正方形是長方形的一種。但在物件導向程式碼中，修改正方形的寬度必須連帶強制改變高度，徹底打破了長方形呼叫端既有的不變量假設！</li>
+</ul>
+</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> 違反 LSP：Square 破壞了調用端對 Rectangle 不變量行為的合理期待！</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Rectangle</span> {
+    <span class="hljs-keyword">protected</span> <span class="hljs-type">int</span> width, height;
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">setWidth</span><span class="hljs-params">(<span class="hljs-type">int</span> w)</span> { <span class="hljs-built_in">this</span>.width = w; }
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">setHeight</span><span class="hljs-params">(<span class="hljs-type">int</span> h)</span> { <span class="hljs-built_in">this</span>.height = h; }
+    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getArea</span><span class="hljs-params">()</span> { <span class="hljs-keyword">return</span> width * height; }
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Square</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Rectangle</span> {
+    <span class="hljs-meta">@Override</span> <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">setWidth</span><span class="hljs-params">(<span class="hljs-type">int</span> w)</span> { <span class="hljs-built_in">this</span>.width = w; <span class="hljs-built_in">this</span>.height = w; }
+    <span class="hljs-meta">@Override</span> <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">setHeight</span><span class="hljs-params">(<span class="hljs-type">int</span> h)</span> { <span class="hljs-built_in">this</span>.width = h; <span class="hljs-built_in">this</span>.height = h; }
+}
+<span class="hljs-comment">// 呼叫端執行：rect.setWidth(5); rect.setHeight(4); 期待面積為 20，若傳入 Square 卻得到 16！</span>
+
+<span class="hljs-comment">// <img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> 遵循 LSP：抽離為平行的獨立抽象形狀介面</span>
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Shape</span> { <span class="hljs-type">int</span> <span class="hljs-title function_">getArea</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Rectangle</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Shape</span> { ... }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Square</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Shape</span> { ... }
+</code></pre>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-marpit-fragments="2" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="36" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h2 id="i-%E2%80%93-%E4%BB%8B%E9%9D%A2%E9%9A%94%E9%9B%A2%E5%8E%9F%E5%89%87-interface-segregation-principle-isp">I – 介面隔離原則 (Interface Segregation Principle, ISP)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>核心原則：</strong>
+<blockquote>
+<p>用戶端不應該被迫依賴它所不需要使用的介面方法。</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>「肥大介面 (Fat Interface)」所帶來的危害：</strong>
+<ul>
+<li>避免設計包山包海、動輒包含數十個方法的龐大介面。應積極拆解為小巧、專精且針對特定角色的專用介面。</li>
+</ul>
+</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> 違反 ISP：「肥大介面」迫使陽春印表機必須去實作它根本不具備的掃描與傳真功能！</span>
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">MultiFunctionDevice</span> {
+    <span class="hljs-type">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">()</span>;
+    <span class="hljs-type">void</span> <span class="hljs-title function_">scan</span><span class="hljs-params">()</span>;
+    <span class="hljs-type">void</span> <span class="hljs-title function_">fax</span><span class="hljs-params">()</span>;
+}
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">SimplePrinter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">MultiFunctionDevice</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">()</span> { <span class="hljs-comment">/* 正常列印 */</span> }
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">scan</span><span class="hljs-params">()</span> { <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">UnsupportedOperationException</span>(); } <span class="hljs-comment">// 經典反模式！</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">fax</span><span class="hljs-params">()</span> { <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">UnsupportedOperationException</span>(); }
+}
+
+<span class="hljs-comment">// <img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> 遵循 ISP：依功能角色精細隔離的專用介面</span>
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Printer</span> { <span class="hljs-type">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Scanner</span> { <span class="hljs-type">void</span> <span class="hljs-title function_">scan</span><span class="hljs-params">()</span>; }
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Fax</span> { <span class="hljs-type">void</span> <span class="hljs-title function_">fax</span><span class="hljs-params">()</span>; }
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">SimplePrinter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Printer</span> { <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">()</span> { ... } }
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">AllInOneMachine</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Printer</span>, Scanner, Fax { ... }
+</code></pre>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-marpit-fragments="2" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="37" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h2 id="d-%E2%80%93-%E7%9B%B8%E4%BE%9D%E5%8F%8D%E8%BD%89%E5%8E%9F%E5%89%87-dependency-inversion-principle-dip">D – 相依反轉原則 (Dependency Inversion Principle, DIP)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>核心原則：</strong>
+<blockquote>
+<p>高階模組不應依賴低階模組，兩者皆應依賴抽象介面；抽象不應依賴細節，細節應依賴抽象。</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>關鍵工程實踐：相依性注入 (Dependency Injection, DI)：</strong>
+<ul>
+<li>高階商業邏輯服務<strong>絕不可以在內部直接以 <code>new MySQLDatabase()</code> 寫死具體資料庫</strong>！應該透過建構子注入抽象的 <code>Database</code> 介面。</li>
+</ul>
+</li>
+</ul>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-java"><span class="hljs-comment">// <img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> 違反 DIP：高階商業邏輯直接硬編碼寫死綁定具體的 MySQL 實作！無法抽換與測試！</span>
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderService</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-type">MySQLDatabase</span> <span class="hljs-variable">db</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MySQLDatabase</span>(); <span class="hljs-comment">// 緊密耦合！單元測試時無法替換！</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-type">void</span> <span class="hljs-title function_">completeOrder</span><span class="hljs-params">(Order o)</span> { db.insert(o); }
+}
+
+<span class="hljs-comment">// <img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> 遵循 DIP：高低階雙方均依賴抽象介面；透過建構子落實相依性注入 (DI)</span>
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">Database</span> { <span class="hljs-type">void</span> <span class="hljs-title function_">insert</span><span class="hljs-params">(Order o)</span>; }
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderService</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> Database db; <span class="hljs-comment">// 嚴格只依賴抽象介面！</span>
+    <span class="hljs-type">public</span> <span class="hljs-title function_">OrderService</span><span class="hljs-params">(Database db)</span> { <span class="hljs-built_in">this</span>.db = db; } <span class="hljs-comment">// 相依性注入</span>
+}
+<span class="hljs-comment">// 正式環境注入 MySQLDatabase；單元測試時注入記憶體內的 MockDatabase！</span>
+</code></pre>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-class="full-image-slide" data-theme="ase-theme" lang="C" class="full-image-slide" data-marpit-pagination="38" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--class:full-image-slide;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<div class="centered-image">
+  <img src="../../img/ch05/11_solid_table.jpeg" alt="SOLID 原則優劣對照總覽矩陣" />
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-header="5.6 SOLID 原則" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="39" style="--paginate:true;--header:5.6 SOLID 原則;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.6 SOLID 原則</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-4-ccq-4">觀念檢核測驗 4 (CCQ 4)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>哪一個 SOLID 物件導向設計原則明確主張：當需要為系統引入新功能時，應當透過「新增新的類別」來擴充，而非直接修改既有已通過測試的原始碼？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 單一職責原則 (Single Responsibility Principle, SRP)</p>
+</li>
+<li>
+<p><strong>B.</strong> 開放封閉原則 (Open / Closed Principle, OCP)</p>
+</li>
+<li>
+<p><strong>C.</strong> 介面隔離原則 (Interface Segregation Principle, ISP)</p>
+</li>
+<li>
+<p><strong>D.</strong> 里氏替換原則 (Liskov Substitution Principle, LSP)</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch06b/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-header="5.7 AI 在架構中的應用" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="40" style="--paginate:true;--header:5.7 AI 在架構中的應用;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.7 AI 在架構中的應用</header>
+
+<h1 id="57-ai-%E5%9C%A8%E6%9E%B6%E6%A7%8B%E8%88%87%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88%E4%B8%AD%E7%9A%84%E8%B3%A6%E8%83%BD%E8%88%87%E7%9B%B2%E9%BB%9E"><strong>5.7 AI 在架構與軟體設計中的賦能與盲點</strong></h1>
+<blockquote>
+<p>&quot;AI can recommend design patterns and refactor code smells, but human architects must steer the system's destiny.&quot;<br />
+<em>(AI 能夠推薦設計模式並重構不良程式碼氣味，但唯有身為人類的架構師，才能真正掌舵系統的終極命運。)</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-marpit-fragments="2" data-paginate="true" data-header="5.7 AI 在架構中的應用" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="41" style="--paginate:true;--header:5.7 AI 在架構中的應用;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.7 AI 在架構中的應用</header>
+<h2 id="ai-%E5%9C%A8%E6%9E%B6%E6%A7%8B%E8%88%87%E8%A8%AD%E8%A8%88%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E5%89%AF%E9%A7%95%E9%A7%9B%E5%85%B8%E7%AF%84-the-copilot-paradigm">AI 在架構與設計中的角色：副駕駛典範 (The Copilot Paradigm)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>分析型架構副駕駛的跨越：</strong>
+<ul>
+<li>LLM 能深入解析複雜系統規格，針對特定場景推薦適配的架構模式（如微服務 vs. 事件驅動架構）。</li>
+<li>能在數秒內極速產出系統間通訊的介面契約（OpenAPI / Swagger 規格書、gRPC <code>.proto</code> 檔案與資料庫 DDL）。</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin-top: 15px;">
+  <img src="../../img/ch06/ai_in_architecture.svg" style="max-height: 280px; width: auto;" alt="AI 輔助軟體架構設計工作流程" />
+</div>
+<ul>
+<li data-marpit-fragment="2"><strong>核心架構價值：</strong> 大幅加速跨方案權衡分析（Trade-off Analysis），並自動化生成子系統間純淨無瑕的標準化介面契約樣板。</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-marpit-fragments="4" data-paginate="true" data-header="5.7 AI 在架構中的應用" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="42" style="--paginate:true;--header:5.7 AI 在架構中的應用;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.7 AI 在架構中的應用</header>
+<h2 id="ai-%E5%9C%A8%E8%BB%9F%E9%AB%94%E8%A8%AD%E8%A8%88%E4%B8%AD%E7%9A%84-4-%E5%A4%A7%E6%A0%B8%E5%BF%83%E8%90%BD%E5%9C%B0%E6%87%89%E7%94%A8">AI 在軟體設計中的 4 大核心落地應用</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 自動化 SOLID 重構建議 (Automated SOLID Refactoring)：</strong>
+<ul>
+<li>掃描分析老舊巨石程式庫，精準揪出違反 SRP 的萬能上帝類別，並主動提議套用策略模式或工廠模式以落實 OCP。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 程式碼不良氣味與耦合度偵測 (Code Smell &amp; Coupling Detection)：</strong>
+<ul>
+<li>跨模組靜態偵測高度依賴、循環參照（Circular Dependencies）、重複程式碼與「散彈式修改 (Shotgun Surgery)」熱點。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 經典設計模式精準推薦 (Design Pattern Recommendation)：</strong>
+<ul>
+<li>針對反覆發生的架構摩擦阻力，智慧推薦最契合的 GoF 設計模式（如觀察者 Observer、裝飾者 Decorator、轉接器 Adapter、建造者 Builder）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. TDD 測試導向設計之介面與 Mock 模擬自動生成：</strong>
+<ul>
+<li>自動為具體業務邏輯抽離解耦介面，並生成 Mock 測試替身物件，極速推進測試驅動開發流程。</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-fragments="2" data-paginate="true" data-header="5.7 AI 在架構中的應用" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="43" style="--paginate:true;--header:5.7 AI 在架構中的應用;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.7 AI 在架構中的應用</header>
+<h2 id="%E4%BA%BA%E6%A9%9F%E5%8D%94%E5%90%8C%E9%98%B2%E8%AD%B7%E9%98%B2%E7%AF%84-ai-%E6%9E%B6%E6%A7%8B%E7%9B%B2%E9%BB%9E-architectural-blind-spots">人機協同防護：防範 AI 架構盲點 (Architectural Blind Spots)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>未經驗證而盲目採納 AI 架構建議的潛在風險：</strong>
+<ul>
+<li><strong>過早引入分散式複雜度 (Premature Distributed Complexity)：</strong> 針對三個工程師兩週就能以單體架構搞定的單純內部工具，AI 卻動輒推薦微服務、Kubernetes 與 Kafka 叢集。</li>
+<li><strong>組織脈絡盲目 (Context Blindness)：</strong> AI 完全不知道你們團隊的真實技術棧深度、雲端預算上限，或是企業特有的資安合規紅線。</li>
+<li><strong>表面性無效重構 (Superficial Refactoring)：</strong> 僅僅更換變數命名或套用空洞外殼，未真正解決深層的演算法與架構耦合。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>軟體架構至高黃金守則：</strong>
+<blockquote>
+<p><strong>「AI 負責提出權衡分析方案；主架構師全權承擔最終決策！」</strong><br />
+<em>(AI Proposes Trade-offs; Lead Architects Make Decisions!)</em><br />
+人類工程師必須深入評估團隊組織脈絡，為系統的長治久安承擔最終責任。</p>
+</blockquote>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-header="5.8 核心複習與參考文獻" data-footer="Ch 05 · 軟體架構與設計" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="44" style="--paginate:true;--header:5.8 核心複習與參考文獻;--footer:Ch 05 · 軟體架構與設計;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.8 核心複習與參考文獻</header>
+
+<h1 id="58-%E6%A0%B8%E5%BF%83%E8%A4%87%E7%BF%92%E8%88%87%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><strong>5.8 核心複習與參考文獻</strong></h1>
+<blockquote>
+<p>&quot;Architecture is the decisions that you wish you could get right the first time.&quot;<br />
+<em>(架構，就是那些你希望自己在第一次做的時候就能做對的關鍵決策。)</em></p>
+</blockquote>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-header="5.8 核心複習與參考文獻" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="45" style="--paginate:true;--header:5.8 核心複習與參考文獻;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.8 核心複習與參考文獻</header>
+<h2 id="%E6%A0%B8%E5%BF%83%E8%A7%80%E5%BF%B5%E7%B5%B1%E6%95%B4%E4%BA%92%E5%8B%95%E5%A1%AB%E7%A9%BA%E5%B0%8F%E6%B8%AC%E9%A9%97">核心觀念統整：互動填空小測驗</h2>
+<p>測試你對本章核心概念的掌握度：</p>
+<ol>
+<li><strong><code>___</code></strong> 架構將系統組織為垂直有序的層級，每一層僅為其正上方的相鄰層級提供服務。</li>
+<li>在 <strong><code>___</code></strong> 模式中，多個獨立的子系統完全圍繞並透過一個共用的中央資料庫進行資訊交換。</li>
+<li>Kruchten 的 <strong><code>___</code></strong> 視圖模型結合了邏輯、程序、開發與實體視圖，並以使用案例情境為串聯核心。</li>
+<li><strong><code>___</code></strong> 衡量單一模組內部的專注程度，而 <strong><code>___</code></strong> 則衡量不同模組之間的依賴緊密程度。</li>
+<li><strong><code>___</code></strong> 原則主張軟體實體應該對擴充開放，但對修改封閉。</li>
+<li><strong><code>___</code></strong> 原則規定高階商業邏輯絕不應直接依賴低階模組，兩者皆應依賴抽象介面。</li>
+</ol>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-marpit-fragments="2" data-paginate="true" data-header="5.8 核心複習與參考文獻" data-footer="Ch 05 · 軟體架構與設計" data-theme="ase-theme" lang="C" data-marpit-pagination="46" style="--paginate:true;--header:5.8 核心複習與參考文獻;--footer:Ch 05 · 軟體架構與設計;--theme:ase-theme;" data-marpit-pagination-total="46">
+<header>5.8 核心複習與參考文獻</header>
+<h2 id="%E7%B6%93%E5%85%B8%E6%96%87%E7%8D%BB%E8%88%87%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80-references">經典文獻與延伸閱讀 (References)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>奠基經典教科書與權威文獻：</strong>
+<ul>
+<li>Sommerville, I. (2016). <em>Software Engineering</em> (10th ed.). Chapter 6 (Architecture) &amp; Chapter 7 (Design). Pearson.</li>
+<li>Kruchten, P. (1995). &quot;Architectural Blueprints — The '4+1' View Model of Software Architecture.&quot; <em>IEEE Software</em>, 12(6), 42-50.</li>
+<li>Gamma, E., Helm, R., Johnson, R., &amp; Vlissides, J. (1994). <em>Design Patterns: Elements of Reusable Object-Oriented Software</em>. Addison-Wesley.</li>
+<li>Martin, R. C. (2017). <em>Clean Architecture: A Craftsman's Guide to Software Structure and Design</em>. Prentice Hall.</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>現代分散式系統與微服務架構指引：</strong>
+<ul>
+<li>Fowler, M. (2014). <em>Microservices: A definition of this new architectural term</em>. <a href="https://martinfowler.com/articles/microservices.html">martinfowler.com</a></li>
+<li>Richards, M., &amp; Ford, N. (2020). <em>Fundamentals of Software Architecture</em>. O'Reilly Media.</li>
+</ul>
+</li>
+</ul>
+<footer>Ch 05 · 軟體架構與設計</footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o),l=Symbol();let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[l];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();a()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[l]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>各位好，歡迎來到軟體工程第五課：軟體架構與物件導向設計。
+
+在前面的章節中，我們透過需求工程探討了客戶的真實需求，並透過系統塑模勾勒出系統的視覺邊界。今天，我們將回答軟體工程中最具決定性的關鍵課題：我們究竟該如何組織與建構系統，才能讓它在歷經數年甚至數十年的演進中，依然保持穩健、可擴展且易於維護？
+
+軟體架構與設計是連結抽象需求與具體實作的關鍵橋樑。在今天的課堂中，我們將探討 Kruchten 的 4+1 視圖模型、剖析從 MVC 到微服務的經典架構模式、掌握「高凝聚、低耦合」的永恆黃金律、透徹理解 SOLID 物件導向設計五大原則，並看看現代 AI 副駕駛如何協助架構師進行權衡分析與重構。
+
+總結這張投影片，請記住這個核心觀念：架構與設計奠定了系統的根本組織骨幹，決定了軟體能否禁得起長期的擴展、演進與考驗。</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>這是我們第五章的學習藍圖。
+
+我們從 5.1 節出發，建立軟體架構的核心定義，並釐清微觀架構與巨觀架構的範疇差別。
+
+在 5.2 節，我們學習 Philippe Kruchten 著名的 4+1 視圖模型，理解如何針對不同利害關係人展現全方位的架構視角。
+
+在 5.3 節，我們深入探討經典架構模式：分層架構、儲存庫模式、主從式架構、管線過濾器、MVC，以及現代分散式微服務架構。
+
+在 5.4 節，我們檢視架構如何直接主導效能與安全性等非功能品質屬性。
+
+在 5.5 節，我們聚焦於微觀軟體設計，掌握資訊隱藏與軟工至高法則：高凝聚與低耦合。
+
+在 5.6 節，我們透過具體對比程式碼，徹底掌握物件導向的 SOLID 五大原則。
+
+最後在 5.7 節探討 AI 如何作為架構副駕駛，並在 5.8 節進行觀念統整。
+
+總結這張投影片，請記住這個核心觀念：這份藍圖將引領我們從巨觀的企業級架構，一路深入到微觀的卓越物件導向程式碼設計。</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>在今天的課堂中，請大家隨時帶著這幾個核心問題來思考：
+
+第一，為什麼軟體架構是軟體專案中最重大、牽一髮動全身的技術決策？
+
+第二，Kruchten 的 4+1 視圖如何弭平商業管理層、核心開發者與維運基礎架構工程師之間的溝通鴻溝？
+
+第三，單體資料庫與分散式微服務之間，本質上的工程權衡是什麼？
+
+第四，為什麼我們在設計類別與模組時，必須堅持不懈地追求高凝聚與低耦合？
+
+最後，SOLID 五大原則如何保護專案程式碼，避免隨時間淪為無法維護的陳年巨石？
+
+總結這張投影片，請記住這個核心觀念：這些核心思考問題構成了我們評估軟體架構與程式設計品質的思考框架。</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>歡迎來到 5.1 節：軟體架構基礎。
+
+軟體架構絕非決定用 for 迴圈還是 while 迴圈這種瑣事。它是系統的高階宏觀藍圖，定義了重大子系統如何切分、跨越程序邊界如何通訊，以及資料如何在整個企業系統中安全流動。
+
+在這一節中，我們將剖析架構的橋樑角色、闡明讓架構顯性化的重大優勢，並清楚界定微觀架構與巨觀架構的範疇。
+
+總結這張投影片，請記住這個核心觀念：軟體架構確立了系統的根本組織結構，規範其核心結構組件與彼此間的互動法則。</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>讓我們為軟體架構建立正式定義。
+
+軟體架構是系統的根本組織方式，體現於其組件、相互關係、與環境的互動，以及引導系統設計與演進的原則。
+
+請注意它的橋樑定位：需求工程告訴我們「需要做什麼 (What)」，具體編碼則是「寫出程式碼 (How)」。架構正是座落於兩者之間的基石橋樑——決定了核心模組如何拆解、資料持久化策略，以及網路通訊協定。
+
+由於架構決策在日後最難修改、代價最高，在專案初期建立正確的架構是專案成敗的關鍵。
+
+總結這張投影片，請記住這個核心觀念：軟體架構透過確立高階組件結構與通訊邊界，在需求與具體程式碼之間架起不可或缺的橋樑。</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>請看這張生動的示意圖：「連接需求 (What) 與實作 (How)」。
+
+左側是需求工程：利害關係人訪談、使用者故事與非功能約束條件——定義了「要解決什麼問題 (What)」。
+
+右側是實作編碼：成千上萬行的原始碼、單元測試與資料庫查詢——體現了「系統如何運作 (How)」。
+
+而矗立於中央深谷、將兩者緊密連接的，正是軟體架構！架構將混亂繁複的人類期待，轉化為結構化的子系統、服務介面與部署拓撲。
+
+總結這張投影片，請記住這個核心觀念：架構是將抽象需求轉化為可執行軟體實體的智慧樞紐。</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>我們在架構抽象層次上做出了關鍵區分：
+
+微觀架構（Architecture in the Small）聚焦於單一應用程式或單一微服務：我們如何將類別組織成套件？控制器如何與資料庫倉儲解耦？
+
+巨觀架構（Architecture in the Large）則放眼整個企業全貌：數十個獨立服務、傳統主機、手機 App 與外部第三方 SaaS 如何在分散式雲端網路中協同運作？
+
+資深軟體工程師必須具備穿梭於兩者之間的能力——既能確保微觀層面的程式碼乾淨無瑕，又能駕馭巨觀層面的分散式整合。
+
+總結這張投影片，請記住這個核心觀念：架構橫跨了微觀層面的套件拆解與巨觀層面的分散式企業生態系統。</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>為什麼軟體團隊要花時間將架構正式繪製顯性化，而不直接動手寫 code 呢？
+
+三大不可忽視的理由：
+第一，溝通對焦：架構圖能讓非技術的主管與客戶一看就懂，讓所有人對系統全貌達成共識。
+第二，早期系統分析：在寫程式碼之前，就能透過資料庫瓶頸與網路跳轉分析，預先評估系統能否承受黑色星期五的百萬級流量。
+第三，大規模重用：成熟的工程組織能將優質的架構模板與微服務底座跨專案廣泛複用。
+
+總結這張投影片，請記住這個核心觀念：顯性架構促進多方共識、支援早期品質驗證，並推動系統組件的大規模重用。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>我們現在進入 5.2 節：Philippe Kruchten 的 4+1 架構視圖模型。
+
+不同的利害關係人所關心的系統面向截然不同。商業分析師在乎領域業務概念；軟體開發者在乎套件依賴與函式庫；系統維運人員在乎伺服器硬體與網路負載。
+
+在這一節中，我們將學習 Kruchten 經典的 4+1 視圖模型，探討邏輯、程序、開發與實體視圖如何透過核心使用者情境完美統合成單一整體。
+
+總結這張投影片，請記住這個核心觀念：Kruchten 的 4+1 模型提供多重視角框架，全方位滿足所有軟體利害關係人的專業關注點。</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>細看 Philippe Kruchten 享譽全球的 4+1 視圖模型：
+
+邏輯視圖展現功能領域——類別、實體與領域服務。
+程序視圖捕捉動態執行行為——行程、執行緒、競爭狀態與訊息佇列。
+開發視圖組織原始碼工程——模組、套件、框架與建置腳本。
+實體視圖對應到基礎設施——雲端叢集、Docker 容器、負載平衡器與防火牆。
+
+而正中央的「+1」就是使用案例情境：它們以真實的商業操作把四大視圖緊緊貫穿縫合在一起。
+
+總結這張投影片，請記住這個核心觀念：Kruchten 4+1 模型將邏輯、程序、開發與實體視圖融會貫通，並以使用案例情境為驗證核心。</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>請看這張視覺綜整圖：「五大視角，單一架構藍圖」。
+
+請注意周圍四個方格視圖如何環繞著中央的「+1 使用案例情境」核心圓。
+
+沒有任何單一架構圖能同時討好所有人。與 DBA 開會時，你開啟實體視圖與程序視圖；為新進工程師進行 Onboarding 培訓時，你打開開發視圖與邏輯視圖；而與產品經理確認功能時，你們共同聚焦於中央的使用案例情境。
+
+總結這張投影片，請記住這個核心觀念：多視圖架構為開發者、維運人員與業務團隊提供了量身定制的結構化視角。</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>讓我們透過觀念測驗 1 來檢核對 4+1 視圖模型的掌握。
+
+題目問：哪一個視圖展現軟體如何分派部署於伺服器、雲端容器與網路拓撲上？
+
+檢驗選項：
+選項 A，邏輯視圖，展示領域類別與實體。
+選項 B，程序視圖，展示行程執行緒與並發時序。
+選項 C，開發視圖，展示原始碼套件與建置架構。
+
+正確答案是 D：實體（或部署）視圖！實體視圖將軟體構件精確映射到實體或虛擬執行環境，呈現伺服器、負載平衡器與網路節點。
+
+總結這張投影片，請記住這個核心觀念：實體視圖（Physical View）專門塑模軟體組件在硬體與雲端基礎設施上的部署拓撲。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>現在我們邁入 5.3 節：經典軟體架構模式。
+
+架構師很少需要從零發明一套前所未有的系統結構。在軟體工程數十年的演進歷史中，面對反覆出現的結構性挑戰，淬煉出了一系列行之有效、可重複應用的結構樣板，這就是「架構模式（Architectural Patterns）」。
+
+在這一節中，我們將深入剖析六大經典模式：MVC、分層架構、儲存庫、主從式架構、管線過濾器，以及現代微服務架構。
+
+總結這張投影片，請記住這個核心觀念：架構模式為解決軟體組織的常見結構挑戰，提供了經過嚴謹驗證的標準化藍圖模板。</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>什麼是架構模式？
+
+架構模式是在無數真實專案的成功與失敗中淬煉出來的結構經驗智慧結晶。
+
+請注意：模式不是具體的程式碼，而是結構模板。當架構師宣佈「我們將採用分層架構搭配 Repository 模式」時，團隊裡的每位工程師能瞬間心領神會核心模組的切割方向與通訊路徑。
+
+模式提供了工程團隊共通的語言，並明確預告了架構權衡。
+
+總結這張投影片，請記住這個核心觀念：架構模式封裝了經過驗證的結構智慧，建立了共通的溝通詞彙與可預期的架構權衡。</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>模型-視圖-控制器（MVC）模式是互動式 GUI 軟體與現代 Web 開發的基石。
+
+請看職責劃分：
+Model 掌管核心資料與商業規則，它完全不知道什麼是 HTML 或按鈕。
+View 專注於渲染介面。
+Controller 接收使用者的點擊或 HTTP 請求，協調 Model 進行資料更新。
+
+MVC 最驚豔的價值在於解耦：你可以為同一套 Model 打造網頁版介面、手機 App 與後台管理系統，而核心商業運算邏輯完全不必重複編寫！
+
+總結這張投影片，請記住這個核心觀念：MVC 模式將核心業務資料與使用者介面呈現及輸入事件處理徹底分離。</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>分層架構（Layered Architecture）是企業級軟體最經典的組織典範。
+
+這就如同作業系統的運作方式：應用程式不會直接去控制硬碟磁頭，而是呼叫檔案系統層，檔案系統再呼叫硬體驅動程式層。
+
+在企業應用中，展示層呼叫服務層，服務層調用純領域層，領域層透過基礎設施層存取資料庫。
+
+這種嚴格向下的相依性隔離了變更風險：未來若要將 MySQL 改為 DynamoDB，只需重寫 Infrastructure 層，核心業務規則毫髮無傷。
+
+總結這張投影片，請記住這個核心觀念：分層架構透過堆疊抽象層的單向依賴，有效隔離了底層技術變更的風險。</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>在儲存庫架構中，多個獨立的子系統完全圍繞著同一個中央共享資料庫來運作。
+
+以 VS Code 為例：語法高亮引擎、編譯器、語法檢查器（Linter）與除錯器都是獨立工具，但它們共享記憶體中同一份程式碼抽象語法樹（AST）儲存庫。
+
+優點是資料共享極為高效，不必在行程間搬移數十億位元組。
+代價則是單點風險：一旦中央儲存庫崩潰或鎖定，所有相依的子系統將瞬間全部停擺。
+
+總結這張投影片，請記住這個核心觀念：儲存庫架構以中央資料庫為協同核心，以承擔單點風險為代價換取資料共享的高效率。</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>這裡對比兩種經典模式：
+
+主從式架構（Client-Server）透過網路分工：客戶端發送請求，伺服器處理並回傳。它是萬維網（World Wide Web）的運轉骨幹。
+
+管線過濾器（Pipe-and-Filter）則將運算切分為由資料串流串聯的獨立轉換步驟。這項模式最優雅之處在於「高度可組合性」：你可以任意抽換、新增或調整過濾器，就像在 Unix 終端機用直線符號管線組合指令一樣輕鬆自如。
+
+總結這張投影片，請記住這個核心觀念：主從式架構實現分散式網路運算；管線過濾器則將連續串流處理拆解為高度可重組的轉換階段。</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>當代最受熱烈討論的架構課題莫過於單體與微服務之爭。
+
+在單體（Monolith）中，使用者認證、結帳、庫存、發票全部跑在同一個程序裡。前期開發極度輕鬆，但當團隊擴展到數百人時，程式碼衝突與部署排程會成為噩夢般的瓶頸。
+
+在微服務中，每個業務領域拆成獨立服務，各自擁有私有資料庫。訂單服務不能直接下 SQL 去改使用者資料庫，必須透過 API 溝通。
+
+這帶來了團隊自主擴展與技術多元選擇，但同時引入了極為複雜的分散式系統維運挑戰。
+
+總結這張投影片，請記住這個核心觀念：單體架構在早期最大化了簡潔度，而微服務架構則以分散式網路維運複雜度為代價，實現了大規模團隊的獨立擴展。</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>請看這張生動的對比圖：「單體大樓 vs. 微服務社區」。
+
+左邊是單體大樓：一棟巨大、緊密相連的摩天大廈，共用同一個地下地基資料庫。只要十樓發生水管破裂，整棟大樓的運作都會受到嚴重威脅。
+
+右邊是微服務社區：一座座獨立、模組化的小屋，各擁有獨立的水電瓦斯。一間屋子停電，整個社區依然運作自如。
+
+然而請仔細看：連接各棟小屋的馬路與管線——那正是分散式網路延遲、網路斷線重試與分散式跨庫交易複雜度的所在！
+
+總結這張投影片，請記住這個核心觀念：微服務隔離了故障影響範圍與團隊工作流，但也引入了分散式網路通訊的維運代價。</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>讓我們透過觀念測驗 2 檢驗對架構模式的理解。
+
+檢驗選項：
+選項 A，管線過濾器，處理連續資料串流轉換。
+選項 C，儲存庫模式，透過中央資料庫共享資料。
+選項 D，主從式架構，跨網路分配運算與請求。
+
+正確答案是 B：模型-視圖-控制器模式（MVC）！Model 管理領域資料，View 渲染畫面，Controller 處理使用者輸入。
+
+總結這張投影片，請記住這個核心觀念：MVC 模式將畫面呈現（View）、領域資料模型（Model）與輸入控制（Controller）清晰解耦。</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>我們現在進入 5.4 節：架構與系統品質屬性。
+
+回顧第三章的重要觀念：決定系統架構的，往往不是功能性需求，而是非功能性需求。無論你的系統是電商網站還是訂位平台，架構決策完全取決於系統必須承受每秒 10 次請求，還是每秒 10 萬次並發！
+
+在這一節中，我們將剖析架構如何直接決定效能、安全性、可靠度與可用性，並學習架構師如何權衡互相衝突的品質目標。
+
+總結這張投影片，請記住這個核心觀念：軟體架構是透過深思熟慮的結構權衡，滿足系統非功能品質屬性的核心手段。</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>請看各大非功能品質屬性如何直接對應到特定的架構戰術：
+
+追求極致效能？盡可能減少網路通訊跳轉，在靠近使用者端設置快取層。
+追求頂級資安？採用如護城河般的分層防禦，外圍設防火牆閘道，核心資料嚴密隔離。
+追求生命安全？在飛機或醫療儀器中，將飛控系統與乘客娛樂系統在實體硬體層徹底切開。
+追求 99.999% 高可用性？全面消除單點故障，設置跨機房即時備援容錯移轉。
+
+架構正是交付這些非功能特性的結構引擎。
+
+總結這張投影片，請記住這個核心觀念：各項系統品質屬性均需透過快取、分層、隔離與冗餘等針對性架構手段來落實。</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>請看這張深刻的視覺總結：「精心設計的結構，驅動系統的行為特性」。
+
+軟體架構從來都不是在尋找一個「毫無瑕疵的完美設計」，而是在精準駕馭不可避免的「工程權衡（Trade-offs）」。
+
+請注意天平兩端的拉扯：
+追求極限資安（加入三層加密、Token 簽署驗證與完整稽核日誌），必然會犧牲部分效能（增加請求延遲）。
+追求極致可維護性（將系統拆分成 50 個微服務），必然會大幅推高網路與系統維運的複雜度。
+
+大師級軟體架構師的真正功力，就在於能洞察利害關係人的真正痛點，做出最優雅的取捨平衡。
+
+總結這張投影片，請記住這個核心觀念：架構的精髓在於理性權衡互相衝突的系統品質目標，取得最適平衡。</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>我們現在轉進 5.5 節：軟體設計核心原則。
+
+建立了巨觀架構之後，我們必須將鏡頭拉近到微觀設計層次：在一支應用程式內部，我們該如何組織個別的類別、方法與模組？
+
+在這一節中，我們將檢視四大基本設計活動，並深度剖析軟體設計界至高無上的永恆黃金律：高凝聚與低耦合。
+
+總結這張投影片，請記住這個核心觀念：軟體設計將巨觀架構藍圖轉化為高凝聚、低耦合的具體類別與模組介面。</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>軟體設計由四項環環相扣的核心活動所組成：
+
+第一，架構設計：切分子系統的高階架構。
+第二，介面設計：在動手寫程式碼之前，先定義清楚模組間的溝通合約。
+第三，組件詳細設計：充實類別內部的屬性、方法與演算法。
+第四，資料庫設計：將領域物件精確對應至持久化資料結構。
+
+這四大活動確保程式碼是在深思熟慮的藍圖下被穩健建構。
+
+總結這張投影片，請記住這個核心觀念：軟體設計有系統地兼顧了系統架構、介面契約、組件內部邏輯與資料持久化。</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>這四大原則構成了純淨軟體工程的基石：
+
+抽象化讓你在呼叫 `map.insert()` 時，不必煩惱底層是紅黑樹還是雜湊表。
+封裝與資訊隱藏以 private 修飾詞建立防護罩，防止外人隨意篡改物件內部狀態。
+關注點分離確保前端畫面絕對不去執行 SQL 語法，後端計算絕不去拼裝 HTML。
+模組化則讓大型團隊能夠平行分工、各自為政卻又天衣無縫。
+
+總結這張投影片，請記住這個核心觀念：抽象化、封裝、關注點分離與模組化，是保護系統完整性並避免工程師認知過載的四大支柱。</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>如果大家整個大學四年的軟體工程課程只能帶走一張投影片，請務必牢牢記住這八個字：最大化凝聚度，最小化耦合度！
+
+凝聚度衡量內部專注度：這個類別是專注做好一件事，還是包山包海既管資料庫、又算折扣、還順便發 Email？我們要追求「高凝聚」。
+
+耦合度衡量外部依賴性：類別 A 是否直接摸到類別 B 的私有欄位？改了 A 是不是全專案有十個檔案跟著噴錯？我們要追求「低耦合」。
+
+高凝聚搭配低耦合，是軟體能經歷數十年演進依然維持可測試、可維護的根本秘訣。
+
+總結這張投影片，請記住這個核心觀念：高凝聚確保內部職責專注清晰，低耦合消除模組間的連鎖依賴風險。</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>請看這段具體的 Java 程式碼對比：
+
+上方的不良設計中，`OrderManager` 是一個典型的「上帝類別 (God Class)」：一個方法裡混雜了原生 SQL、商業數學、HTML 拼接和底層網路 Socket！一旦郵件伺服器改通訊協定，你居然得去修改下單核心類別，極易引發災難性 Regression 臭蟲！
+
+反觀下方的優良設計：`OrderProcessor` 具備單一且高凝聚的職責——協調整個結帳流程。它把計算委派給 `DiscountCalculator`，儲存交給 `OrderRepository`，通知交給 `NotificationService`。每個類別都能完全獨立進行單元測試與置換。
+
+總結這張投影片，請記住這個核心觀念：將繁雜流程解耦為各司其職的協同類別，能完美體現高凝聚與低耦合。</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>讓我們透過觀念測驗 3 檢驗對凝聚度與耦合度的理解。
+
+檢驗選項：
+選項 A 混淆了編譯器底層最佳化與高階架構設計。
+選項 C 所描述的「全域共享變數」正是引發災難性極限耦合的萬惡之源！
+選項 D 宣稱能消除自動化測試，這完全違背軟體工程常理。
+
+正確答案是 B！高凝聚讓每個類別專注單一職責，低耦合最小化了模組間的牽扯。當需求變更時，工程師能安心修改特定類別，不必擔心引發全系統的連鎖崩潰。
+
+總結這張投影片，請記住這個核心觀念：高凝聚與低耦合在需求持續演進時，能有效防止連鎖骨牌效應式的軟體缺陷。</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>我們現在邁入 5.6 節：SOLID 物件導向設計五大原則。
+
+由軟體大師 Robert C. Martin（Uncle Bob）所總結的 SOLID 縮寫，涵蓋了五大經典的物件導向設計法則。這五大原則是指引工程師建構高可讀、可擴展且具備彈性架構的最高行動方針。
+
+在這一節中，我們將透過對比程式碼，逐字拆解這五大字母：單一職責（SRP）、開放封閉（OCP）、里氏替換（LSP）、介面隔離（ISP）與相依反轉（DIP）。
+
+總結這張投影片，請記住這個核心觀念：SOLID 原則提供了具體可操作的設計啟發式規則，防止軟體程式碼庫退化為僵化脆弱的陳年遺留系統。</p></div><div class="bespoke-marp-note" data-index="31" tabindex="0"><p>SOLID 縮寫是物件導向設計殿堂中的金科玉律。
+
+SRP 確保每個類別各司其職，焦點高度集中。
+OCP 讓我們透過多型擴充新功能，不必修改舊有經過完整測試的程式碼。
+LSP 確保繼承體系語意健全，子類別能被安心無痛替換。
+ISP 保持介面精巧專一，拒絕肥大臃腫。
+DIP 則透過依賴注入，將商業邏輯與底層資料庫或框架徹底解耦。
+
+接下來讓我們逐一深入探討每一個原則。
+
+總結這張投影片，請記住這個核心觀念：SOLID 五大原則形成了相輔相成的完整工程體系，共同守護系統的可擴展性與可維護性。</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>單一職責原則（SRP）強調：一個類別應該只有一個改變的理由。
+
+看不良範例：`UserReportManager` 竟然有三個改變的理由！如果資料庫綱要改了，你要改這支檔案；如果行銷團隊要改 PDF 上的 Logo，你也要改這支檔案；如果換了 Email 伺服器，你還是要改這支檔案。
+
+優良設計將其拆解為 `UserRepository`、`PdfReportFormatter` 與 `EmailService`。每個類別各司其職，修改報表格式絕不會意外弄壞資料庫邏輯。
+
+總結這張投影片，請記住這個核心觀念：賦予每個類別單一專屬職責，能精準隔離變更衝擊，杜絕跨領域回歸錯誤。</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>開放封閉原則（OCP）指出：面對新需求，系統應透過「新增程式碼」來擴充，而非「修改舊程式碼」。
+
+看壞範例：每次行銷提出新的折扣方案，工程師就得去改 `DiscountCalculator`，多加一段 `else if`。久而久之，這支核心方法變成 500 行的怪獸，誰動誰心驚。
+
+好設計則是定義出 `DiscountStrategy` 介面。雙十一到了？寫一個新的 `DoubleElevenDiscount` 類別注入進去即可，原本跑了一萬次測試的舊程式碼連動都不用動！
+
+總結這張投影片，請記住這個核心觀念：善用多型抽象機制，能在完全不修改既有已測試程式碼的前提下擴充全新功能。</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>由圖靈獎得主 Barbara Liskov 所提出的里氏替換原則（LSP），規範子類別必須信守父類別的行為契約。
+
+經典陷阱就是「正方形繼承長方形」。在數學上沒錯，但在程式碼中，如果一個函式接收 Rectangle，它預期將寬設為 5、高設為 4 時面積會是 20。結果傳入 Square 卻把寬高一起連動變成 16，程式當場產生隱形邏輯錯誤！
+
+若子類別拋出了非預期的 Exception，或是破壞了父類別的假設，就嚴重違反了 LSP。
+
+總結這張投影片，請記住這個核心觀念：子類別必須嚴格遵守父類別抽象契約所建立的行為不變量與正確性期待。</p></div><div class="bespoke-marp-note" data-index="35" tabindex="0"><p>介面隔離原則（ISP）警告我們切勿打造「肥大臃腫介面（Fat Interface）」。
+
+看不良範例：`MultiFunctionDevice` 介面把列印、掃描、傳真全部打包在一起。一台只要 1000 元的普通 USB 印表機如果實作了這個介面，就必須在掃描和傳真方法裡痛苦地拋出 `UnsupportedOperationException`。
+
+優良設計將其拆解為 `Printer`、`Scanner` 與 `Fax` 三個專用介面。多功能事務機同時實作三者，而普通印表機只需實作 `Printer`。
+
+總結這張投影片，請記住這個核心觀念：將臃腫介面細分為角色導向的專用契約，確保用戶端只依賴自己真正需要的方法。</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>相依反轉原則（DIP）是現代 Spring、NestJS 等主流架構的靈魂核心。
+
+看壞範例：`OrderService` 內部直接用 `new` 實例化了 `MySQLDatabase`。這等於將核心下單邏輯與 MySQL 牢牢焊死在一起！要換成 PostgreSQL 必須大改商業邏輯程式碼，而且做單元測試時一定要架設真實 MySQL 才能跑。
+
+好設計則是讓 `OrderService` 只依賴抽象的 `Database` 介面，並由外部建構子注入。正式上線注入 MySQL，跑單元測試時注入極速的記憶體 Fake 物件！
+
+總結這張投影片，請記住這個核心觀念：反轉相依方向，讓高階商業邏輯依賴於抽象介面，而非底層具體實作細節。</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>請看這張全景綜整圖表：「SOLID 原則優劣對照矩陣」。
+
+請大家退後一步，綜觀這五大原則如何相互協同：
+SRP 讓類別專注單一職責。
+OCP 讓類別在無修改下擁抱擴充。
+LSP 確保子類別替換的安全性。
+ISP 杜絕肥大介面的污染。
+DIP 徹底解除商業邏輯對底層技術框架的束縛。
+
+這五大原則共同構成了一套完整的防腐化機制，將脆弱的程式碼轉化為強韌的企業軟體資產。
+
+總結這張投影片，請記住這個核心觀念：SOLID 原則提供了完整的設計體系，打造高度可擴充、可測試與穩健的物件導向軟體架構。</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>讓我們透過觀念測驗 4 來檢驗對 SOLID 原則的精準掌握。
+
+題目問：哪一個原則主張應透過「新增類別」來擴充新功能，而非修改既有已測試的程式碼？
+
+審視選項：
+選項 A，SRP，規範每個類別只有一個改變的原因。
+選項 C，ISP，規範避免肥大介面。
+選項 D，LSP，規範子類別對父類別的替換性。
+
+正確答案是 B：開放封閉原則（Open/Closed Principle, OCP）！軟體實體應當對擴充開放（透過多型與介面），但對修改封閉。
+
+總結這張投影片，請記住這個核心觀念：開放封閉原則透過多型機制，使新功能得以無縫擴充，同時保持既有原始碼的封閉穩定。</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>現在我們前進到 5.7 節：AI 在軟體架構與系統設計中的賦能與盲點。
+
+近年來，大型語言模型（LLM）的實力已遠遠超越編寫單行程式碼。它們現在能勝任架構分析副駕駛的角色，具備評估跨方案權衡、偵測不良程式碼氣味（Code Smells），以及提議 SOLID 重構方案的強大能力。
+
+在這一節中，我們將探討 AI 在架構設計上的核心落地應用，並建立不可或缺的人機協同防護，防範架構盲點。
+
+總結這張投影片，請記住這個核心觀念：AI 是強大的架構副駕駛，但人類架構師必須對系統全局結構與最終權衡負起終極責任。</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>生成式 AI 正在深刻重塑軟體架構師的日常工作模式。
+
+當評估一套全新系統時，架構師可以將非功能性約束條件餵給 LLM——例如：「十萬台 IoT 設備並發上線、要求毫秒級寫入」，AI 可以在十秒鐘內產生詳細的 ATAM 權衡矩陣，客觀分析 Kafka 與 RabbitMQ 在該情境下的優缺點。
+
+此外，AI 能全自動生成符合規範的 OpenAPI 規格書與 gRPC Protobuf 檔案，省下數小時的介面溝通對接時間。
+
+總結這張投影片，請記住這個核心觀念：AI 大幅加速了架構權衡分析的推演，並自動化生成分散式系統間的標準通訊介面契約。</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>歸納現代 AI 在微觀軟體設計上的四大經典應用場景：
+
+第一，自動化 SOLID 重構：掃描幾千行的遺留程式碼，建議如何將其拆解為符合單一職責的獨立類別。
+第二，不良氣味偵測：在 PR 發起前，自動揪出高耦合、循環相依與複製貼上的壞味道。
+第三，GoF 設計模式推薦：在架構卡關時，精準指出該套用哪一種設計模式來解耦。
+第四，Mock 生成：自動產出 Mock 介面，讓開發者秒速啟動單元測試。
+
+總結這張投影片，請記住這個核心觀念：AI 透過自動化重構、壞味道偵測、設計模式推薦與測試替身生成，全方位賦能軟體設計。</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>儘管 AI 工具非常強大，架構師必須時刻提防「架構盲點」。
+
+大型語言模型經常患有「履歷導向架構症候群」——動輒建議上微服務、K8s 容器排程與分散式事件中介。但實際上，AI 根本不知道你們公司今年雲端預算只剩十萬，也不知道團隊裡根本沒有人會修復分散式 Race Condition！
+
+因此請務必銘記我們的黃金守則：AI 負責提出權衡分析，主架構師全權承擔最終決策！
+
+總結這張投影片，請記住這個核心觀念：人類架構師必須結合組織脈絡、預算限制與團隊技能，嚴防 AI 帶來的過度工程化陷阱。</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>在第五章的尾聲，我們來到 5.8 節：核心複習與經典文獻。
+
+我們將透過互動填空複習，全面統整今天所學到的所有關鍵架構基石——從 4+1 視圖與經典模式，到高凝聚低耦合與 SOLID 五大設計原則。
+
+最後我們將回顧奠定現代軟體架構學術與實務基礎的經典里程碑著作。
+
+總結這張投影片，請記住這個核心觀念：穩健的架構與純淨的物件導向設計，是決定軟體長青敏捷與商業成功的終極要素。</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>讓我們透過快速互動測驗，盤點今天的學習精華！
+
+1. 分層架構（Layered Architecture）將系統切分為垂直堆疊的抽象層！
+2. 儲存庫模式（Repository Pattern）圍繞中央資料庫交換資料！
+3. Kruchten 著名的 4+1 視圖模型！
+4. 凝聚度（Cohesion）衡量內部專注；耦合度（Coupling）衡量外部依賴！
+5. 開放封閉原則（OCP）對擴充開放、對修改封閉！
+6. 相依反轉原則（DIP）規定依賴於抽象介面而非具體實作！
+
+大家今天的表現極為出色！
+
+總結這張投影片，請記住這個核心觀念：這些核心原則共同構成了職業級軟體架構與系統設計的智識基石。</p></div><div class="bespoke-marp-note" data-index="45" tabindex="0"><p>這裡是第五章的權威學術論文與經典著作。
+
+Philippe Kruchten 於 1995 年發表的 4+1 視圖論文是軟工史上不可磨滅的里程碑。四人幫（GoF）的《設計模式》與 Uncle Bob 的《無瑕的程式碼 (Clean Code)》及《無瑕的架構 (Clean Architecture)》是每位資深工程師案頭必備的經典。
+
+欲進一步探索現代分散式系統，推薦閱讀 Martin Fowler 的微服務指南以及 O'Reilly 的《軟體架構黃金法則》。
+
+謝謝大家在第五章的熱烈參與！</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.5.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>

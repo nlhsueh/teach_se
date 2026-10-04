@@ -372,6 +372,7 @@ section:has(div.discussion-columns),
 section:has(div.fill-blank-columns) {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 section:has(div.ccq-columns) h2,
@@ -380,10 +381,10 @@ section:has(div.discussion-columns) h2,
 section:has(div.discussion-columns) h3,
 section:has(div.fill-blank-columns) h2,
 section:has(div.fill-blank-columns) h3 {
-  text-align: center;
+  text-align: left;
   color: #0b3c5d;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 /* CCQ & Discussion Shared Layout (Identical 70% / 30% Architecture) */
@@ -392,8 +393,8 @@ div.discussion-columns {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-top: auto !important;
-  margin-bottom: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 div.ccq-text,
@@ -436,8 +437,8 @@ div.fill-blank-columns {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-top: auto !important;
-  margin-bottom: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 div.fill-blank-text {

@@ -1,0 +1,1508 @@
+<!DOCTYPE html><html lang="C"><head><title>**軟體工程**</title><meta property="og:title" content="**軟體工程**"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent{inset:0;position:absolute}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container :is(.bespoke-marp-presenter-info-page-area,.bespoke-marp-presenter-info-time,.bespoke-marp-presenter-info-timer){box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent :is(svg.bespoke-marp-slide:active,svg.bespoke-marp-slide:focus-visible,svg.bespoke-marp-slide:hover){--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :where(:is(h1, marp-h1)){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section section:where(:is(h1, marp-h1)){--marpit-root-font-size: 2em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{top:0;left:0}div#\:\$p > svg > foreignObject > section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);color-scheme:light;background-color:var(--color-background);background-image:linear-gradient(135deg, var(--color-background), color-mix(in srgb, var(--color-background) 98%, #888 2%) 50%, var(--color-background) 50%, color-mix(in srgb, var(--color-background) 95%, #fff 5%));color:var(--color-foreground);font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;overflow-wrap:break-word}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{right:0;bottom:0;font-size:80%}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){place-content:safe center center;flex-flow:column nowrap;align-items:stretch}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"]{direction:ltr}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] > svg{overflow:visible;min-height:1px;min-width:1px}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] > svg a{fill:blue;stroke:blue}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][display="true"]{display:block;text-align:center;margin:1em 0}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][display="true"][width="full"]{display:flex}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][justify="left"]{text-align:left}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][justify="right"]{text-align:right}div#\:\$p > svg > foreignObject > section g[data-mml-node="merror"] > g{fill:red;stroke:red}div#\:\$p > svg > foreignObject > section g[data-mml-node="merror"] > rect[data-background]{fill:yellow;stroke:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > line[data-line], div#\:\$p > svg > foreignObject > section svg[data-table] > g > line[data-line]{stroke-width:70px;fill:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > rect[data-frame], div#\:\$p > svg > foreignObject > section svg[data-table] > g > rect[data-frame]{stroke-width:70px;fill:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > .mjx-dashed, div#\:\$p > svg > foreignObject > section svg[data-table] > g > .mjx-dashed{stroke-dasharray:140}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > .mjx-dotted, div#\:\$p > svg > foreignObject > section svg[data-table] > g > .mjx-dotted{stroke-linecap:round;stroke-dasharray:0,140}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > g > svg{overflow:visible}div#\:\$p > svg > foreignObject > section [jax="SVG"] mjx-tool{display:inline-block;position:relative;width:0;height:0}div#\:\$p > svg > foreignObject > section [jax="SVG"] mjx-tool > mjx-tip{position:absolute;top:0;left:0}div#\:\$p > svg > foreignObject > section mjx-tool > mjx-tip{display:inline-block;padding:.2em;border:1px solid #888;font-size:70%;background-color:#F8F8F8;color:black;box-shadow:2px 2px 5px #AAAAAA}div#\:\$p > svg > foreignObject > section g[data-mml-node="maction"][data-toggle]{cursor:pointer}div#\:\$p > svg > foreignObject > section mjx-status{display:block;position:fixed;left:1em;bottom:1em;min-width:25%;padding:.2em .4em;border:1px solid #888;font-size:90%;background-color:#F8F8F8;color:black}div#\:\$p > svg > foreignObject > section foreignObject[data-mjx-xml]{font-family:initial;line-height:normal;overflow:visible}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] path[data-c], div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] use[data-c]{stroke-width:3}@media print{div#\:\$p > svg > foreignObject > section mjx-container[jax=SVG] path[data-c],div#\:\$p > svg > foreignObject > section mjx-container[jax=SVG] use[data-c]{stroke-width:0}}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section{font-family:'Helvetica Neue', Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif;padding:40px;font-size:24px;line-height:1.55;background-color:#f5f5f5;color:#333}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 24px}div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin-top:10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section li{margin-bottom:12px;line-height:1.5}div#\:\$p > svg > foreignObject > section li > ul, div#\:\$p > svg > foreignObject > section li > ol{margin-top:4px;margin-bottom:4px}div#\:\$p > svg > foreignObject > section li > ul > li, div#\:\$p > svg > foreignObject > section li > ol > li{margin-bottom:4px;font-size:0.88em;line-height:1.35}div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns)) > ul, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns)) > ol, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns, .lead, .quote-slide)) > p, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns, .lead, .quote-slide)) > blockquote{max-width:980px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){color:#0b3c5d}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#328cc1;margin-top:0;margin-bottom:14px;font-size:1.35em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){color:#0b3c5d;margin-top:0;margin-bottom:12px;font-size:1.15em;font-weight:bold}div#\:\$p > svg > foreignObject > section header{position:absolute;top:18px;right:40px!important;left:auto!important;text-align:right;font-size:14px;line-height:1.4;color:#64748b;margin:0;padding:0!important;height:auto!important;min-height:0!important;overflow:visible!important;z-index:1000}div#\:\$p > svg > foreignObject > section header a.header-nav-arrow{display:inline-block;padding:2px 6px;border-radius:4px;color:#475569;text-decoration:none;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;font-size:13px;line-height:1;transition:background 0.15s ease, color 0.15s ease}div#\:\$p > svg > foreignObject > section header a.header-nav-arrow:hover{background:#e2e8f0;color:#1e293b}div#\:\$p > svg > foreignObject > section .header-nav-wrapper{position:relative;display:inline-block}div#\:\$p > svg > foreignObject > section .header-nav-title{display:inline-flex;align-items:center;cursor:pointer;padding:3px 8px;border-radius:6px;font-weight:500;color:#475569;transition:background 0.15s ease, color 0.15s ease}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .header-nav-title, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .header-nav-title{background:#e0f2fe;color:#0369a1}div#\:\$p > svg > foreignObject > section .nav-caret{font-size:10px;margin-left:4px;opacity:0.6;transition:transform 0.2s ease;display:inline-block}div#\:\$p > svg > foreignObject > section section.nav-caret{--marpit-root-font-size: 10px}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .nav-caret, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .nav-caret{transform:rotate(180deg);opacity:1}div#\:\$p > svg > foreignObject > section .nav-dropdown{display:none;position:absolute;right:0;top:100%;margin-top:4px;width:480px;max-height:480px;background:rgba(255, 255, 255, 0.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 16px 36px -4px rgba(15, 23, 42, 0.18), 0 6px 12px -2px rgba(15, 23, 42, 0.08);padding:12px 14px;text-align:left;z-index:99999;overflow-y:auto;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .nav-dropdown::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px;background:transparent}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .nav-dropdown, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .nav-dropdown{display:block;animation:navFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1)}@keyframes navFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}div#\:\$p > svg > foreignObject > section .nav-dropdown-header{font-size:13px;font-weight:700;color:#1e293b;border-bottom:1px solid #e2e8f0;padding-bottom:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}div#\:\$p > svg > foreignObject > section section.nav-dropdown-header{--marpit-root-font-size: 13px}div#\:\$p > svg > foreignObject > section .nav-dropdown-grid{display:grid;grid-template-columns:1fr;gap:4px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item{display:flex;align-items:center;padding:6px 8px;border-radius:6px;text-decoration:none;color:#334155!important;font-size:12.5px;line-height:1.3;transition:all 0.12s ease;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}div#\:\$p > svg > foreignObject > section section.nav-dropdown-item{--marpit-root-font-size: 12.5px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item:hover{background:#eff6ff!important;color:#1d4ed8!important;font-weight:600;transform:translateX(2px)}div#\:\$p > svg > foreignObject > section .nav-dropdown-item.active{background:#dbeafe!important;color:#1e40af!important;font-weight:700}div#\:\$p > svg > foreignObject > section .nav-dropdown-item .badge{display:inline-block;font-size:11px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;font-weight:600;color:#64748b;background:#f1f5f9;padding:1px 5px;border-radius:4px;margin-right:6px;flex-shrink:0}div#\:\$p > svg > foreignObject > section .nav-dropdown-item div#\:\$p > svg > foreignObject > section section.badge{--marpit-root-font-size: 11px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item:hover .badge{background:#bfdbfe;color:#1e40af}div#\:\$p > svg > foreignObject > section .nav-dropdown-item.active .badge{background:#3b82f6;color:#ffffff}div#\:\$p > svg > foreignObject > section .nav-dropdown-item .item-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}div#\:\$p > svg > foreignObject > section script{display:none!important}@media print{div#\:\$p > svg > foreignObject > section .nav-dropdown, div#\:\$p > svg > foreignObject > section .nav-caret, div#\:\$p > svg > foreignObject > section script, div#\:\$p > svg > foreignObject > section header a.header-nav-arrow{display:none!important}div#\:\$p > svg > foreignObject > section header{z-index:auto!important}}div#\:\$p > svg > foreignObject > section footer, div#\:\$p > svg > foreignObject > section::after{position:absolute;bottom:20px;font-size:0.5em;line-height:1;height:auto;margin:0;padding:0}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 0.5em}div#\:\$p > svg > foreignObject > section footer{left:40px;text-align:left;color:#777}div#\:\$p > svg > foreignObject > section::after{right:40px;text-align:right;color:#777}div#\:\$p > svg > foreignObject > section blockquote{font-family:'Georgia', 'Songti TC', 'Noto Serif TC', serif;font-style:italic;background:rgba(2, 132, 199, 0.05);border-left:4px solid #0284c7;margin:0.8em 0;padding:10px 20px;font-size:22.5px;line-height:1.55;color:#334155;border-radius:0 6px 6px 0}div#\:\$p > svg > foreignObject > section blockquote strong{font-weight:700;color:#0b3c5d}div#\:\$p > svg > foreignObject > section blockquote::before{content:none!important}div#\:\$p > svg > foreignObject > section table{margin:20px auto;border-collapse:collapse;font-size:20px}div#\:\$p > svg > foreignObject > section th{border-bottom:2px solid #0b3c5d;padding:8px 14px;text-align:left;background-color:#f0f4f8}div#\:\$p > svg > foreignObject > section td{padding:8px 14px;border-bottom:1px solid #e0e0e0}div#\:\$p > svg > foreignObject > section div.matrix-table table{margin:10px auto;font-size:15.5px;line-height:1.35}div#\:\$p > svg > foreignObject > section div.matrix-table th{padding:6px 12px}div#\:\$p > svg > foreignObject > section div.matrix-table td{padding:6px 12px}div#\:\$p > svg > foreignObject > section:has(div.ccq-columns), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns){display:flex;flex-direction:column;justify-content:center}div#\:\$p > svg > foreignObject > section:has(div.ccq-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.ccq-columns) :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns) :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns) :is(h3, marp-h3){text-align:left;color:#0b3c5d;margin-top:0;margin-bottom:24px}div#\:\$p > svg > foreignObject > section div.ccq-columns, div#\:\$p > svg > foreignObject > section div.discussion-columns{display:flex;align-items:center;gap:32px;margin-top:0!important;margin-bottom:0!important}div#\:\$p > svg > foreignObject > section div.ccq-text, div#\:\$p > svg > foreignObject > section div.discussion-text{flex:70%;font-size:23px;line-height:1.55}div#\:\$p > svg > foreignObject > section div.ccq-text ul, div#\:\$p > svg > foreignObject > section div.ccq-text ol, div#\:\$p > svg > foreignObject > section div.discussion-text ul, div#\:\$p > svg > foreignObject > section div.discussion-text ol{margin-top:8px;margin-bottom:8px}div#\:\$p > svg > foreignObject > section div.ccq-text li, div#\:\$p > svg > foreignObject > section div.discussion-text li{margin-bottom:8px;line-height:1.5}div#\:\$p > svg > foreignObject > section div.ccq-logo, div#\:\$p > svg > foreignObject > section div.discussion-logo{flex:30%;text-align:center;display:flex;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section div.ccq-logo img, div#\:\$p > svg > foreignObject > section div.discussion-logo img{width:100%;max-width:180px;height:auto}div#\:\$p > svg > foreignObject > section div.fill-blank-columns{display:flex;align-items:center;gap:30px;margin-top:0!important;margin-bottom:0!important}div#\:\$p > svg > foreignObject > section div.fill-blank-text{flex:75%}div#\:\$p > svg > foreignObject > section div.fill-blank-columns:has(> div.fill-blank-text:only-child) div.fill-blank-text{flex:100%}div#\:\$p > svg > foreignObject > section div.fill-blank-logo{flex:25%;text-align:center}div#\:\$p > svg > foreignObject > section div.fill-blank-logo img{width:100%;max-width:150px}div#\:\$p > svg > foreignObject > section div.split64, div#\:\$p > svg > foreignObject > section div.split46, div#\:\$p > svg > foreignObject > section div.split55{display:flex;align-items:center;gap:20px}div#\:\$p > svg > foreignObject > section div.split64 > div.left{flex:60%}div#\:\$p > svg > foreignObject > section div.split64 > div.right{flex:40%;text-align:center}div#\:\$p > svg > foreignObject > section div.split64 > div.right img{width:100%;max-width:330px}div#\:\$p > svg > foreignObject > section div.split46 > div.left{flex:40%}div#\:\$p > svg > foreignObject > section div.split46 > div.right{flex:60%;text-align:center}div#\:\$p > svg > foreignObject > section div.split46 > div.right img{width:100%;max-width:480px}div#\:\$p > svg > foreignObject > section div.split55 > div.left{flex:50%}div#\:\$p > svg > foreignObject > section div.split55 > div.right{flex:50%;text-align:center}div#\:\$p > svg > foreignObject > section div.split55 > div.right img{width:100%;max-width:400px}div#\:\$p > svg > foreignObject > section div.split73{display:flex;align-items:center;gap:28px}div#\:\$p > svg > foreignObject > section div.split73 > div.left{flex:70%}div#\:\$p > svg > foreignObject > section div.split73 > div.right{flex:30%;text-align:center;display:flex;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section div.split73 > div.right img{width:auto;max-width:100%;max-height:420px;object-fit:contain;background:transparent!important;box-shadow:none!important;border:none!important}div#\:\$p > svg > foreignObject > section div.two-columns{display:flex;gap:28px;font-size:0.85em;line-height:1.35}div#\:\$p > svg > foreignObject > section div.two-columns > div{flex:1}div#\:\$p > svg > foreignObject > section div.two-columns ol{margin:0;padding-left:20px}div#\:\$p > svg > foreignObject > section div.two-columns li{margin-bottom:6px}div#\:\$p > svg > foreignObject > section .card-deck{display:flex;flex-direction:column;width:100%;box-sizing:border-box;margin-top:auto!important;margin-bottom:auto!important;gap:16px}div#\:\$p > svg > foreignObject > section .card-deck > *{margin:0!important}div#\:\$p > svg > foreignObject > section .card-deck > ul, div#\:\$p > svg > foreignObject > section .card-deck > ul > li{list-style:none!important;margin:0!important;padding:0!important;width:100%}div#\:\$p > svg > foreignObject > section .two-columns-64{display:grid;grid-template-columns:6fr 4fr;gap:20px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .two-columns-73{display:grid;grid-template-columns:7fr 3fr;gap:20px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .three-columns{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .card{background:white;padding:18px 24px;border-radius:10px;box-shadow:none!important;border:1px solid #cbd5e1;font-size:18.5px;line-height:1.5;text-align:left!important;box-sizing:border-box}div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 18.5px}div#\:\$p > svg > foreignObject > section .card :is(h3, marp-h3){font-size:22px;margin-top:0;margin-bottom:12px;color:#0b3c5d;border-bottom:2px solid #e2e8f0;padding-bottom:8px;text-align:left!important}div#\:\$p > svg > foreignObject > section .card :is(h4, marp-h4){font-size:19px;margin-top:0;margin-bottom:6px;color:#328cc1;text-align:left!important}div#\:\$p > svg > foreignObject > section .card ul, div#\:\$p > svg > foreignObject > section .card ol{margin-top:6px!important;margin-bottom:6px!important;padding-left:20px!important;text-align:left!important;list-style-position:outside!important}div#\:\$p > svg > foreignObject > section .card li{margin-bottom:8px!important;line-height:1.5!important;text-align:left!important;font-size:18px!important}div#\:\$p > svg > foreignObject > section .card p{margin-top:0;margin-bottom:8px;text-align:left!important}div#\:\$p > svg > foreignObject > section .two-columns .card{padding:16px 20px;font-size:16px;line-height:1.4}div#\:\$p > svg > foreignObject > section .two-columns div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section .two-columns .card :is(h3, marp-h3){font-size:20px;margin-top:0;margin-bottom:10px;padding-bottom:6px}div#\:\$p > svg > foreignObject > section .two-columns .card ol, div#\:\$p > svg > foreignObject > section .two-columns .card ul{padding-left:20px!important;margin:4px 0!important}div#\:\$p > svg > foreignObject > section .two-columns .card li{font-size:15.5px!important;margin-bottom:6px!important;line-height:1.36!important}div#\:\$p > svg > foreignObject > section .three-columns .card{padding:14px 16px;font-size:16.5px}div#\:\$p > svg > foreignObject > section .three-columns div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 16.5px}div#\:\$p > svg > foreignObject > section .three-columns .card :is(h3, marp-h3){font-size:19px;margin-bottom:8px;padding-bottom:6px}div#\:\$p > svg > foreignObject > section .three-columns .card li{font-size:16px!important;margin-bottom:6px!important}div#\:\$p > svg > foreignObject > section div.content-columns{display:flex;align-items:center;gap:36px;width:100%;margin-top:auto!important;margin-bottom:auto!important;box-sizing:border-box}div#\:\$p > svg > foreignObject > section div.content-text{flex:66%;font-size:23.5px;line-height:1.55}div#\:\$p > svg > foreignObject > section div.content-text ul, div#\:\$p > svg > foreignObject > section div.content-text ol{margin-top:6px;margin-bottom:6px}div#\:\$p > svg > foreignObject > section div.content-text li{margin-bottom:10px;line-height:1.5}div#\:\$p > svg > foreignObject > section div.content-text li > ul > li, div#\:\$p > svg > foreignObject > section div.content-text li > ol > li{font-size:0.88em;line-height:1.35;margin-bottom:4px}div#\:\$p > svg > foreignObject > section div.content-figure{flex:34%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}div#\:\$p > svg > foreignObject > section div.content-figure img{max-width:360px;max-height:480px;width:auto;height:auto;object-fit:contain;background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card{background:#ffffff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:none!important;overflow:hidden;width:290px;max-width:290px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;margin:0 auto}div#\:\$p > svg > foreignObject > section div.content-figure .name-card img{width:100%!important;max-width:100%!important;height:330px!important;max-height:330px!important;object-fit:cover!important;object-position:center top!important;border-radius:0!important;box-shadow:none!important;display:block!important;margin:0!important;padding:0!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card img.contain-fit{object-fit:contain!important;padding:24px!important;box-sizing:border-box!important;background:#ffffff!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-caption{width:100%;padding:10px 12px 12px 12px;background:#ffffff;display:flex;flex-direction:column;align-items:center;gap:3px;box-sizing:border-box;border-top:1px solid #f1f5f9}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-name{font-size:16px;font-weight:700;color:#1e293b;line-height:1.3}div#\:\$p > svg > foreignObject > section div.content-figure div#\:\$p > svg > foreignObject > section section.name-card-name{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc, div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc a{font-size:11.5px;color:#64748b;text-decoration:none;line-height:1.2}div#\:\$p > svg > foreignObject > section div.content-figure div#\:\$p > svg > foreignObject > section section.name-card-cc{--marpit-root-font-size: 11.5px}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc a:hover{color:#0284c7;text-decoration:underline}div#\:\$p > svg > foreignObject > section.outline, div#\:\$p > svg > foreignObject > section.outline-slide{display:flex;flex-direction:column;justify-content:flex-start}div#\:\$p > svg > foreignObject > section.outline > ul, div#\:\$p > svg > foreignObject > section.outline-slide > ul, div#\:\$p > svg > foreignObject > section.outline > ol, div#\:\$p > svg > foreignObject > section.outline-slide > ol{columns:2;-webkit-columns:2;column-gap:40px;margin-top:auto!important;margin-bottom:auto!important;padding-left:24px!important;font-size:18px!important;line-height:1.48!important}div#\:\$p > svg > foreignObject > section.outline > ul > li, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li, div#\:\$p > svg > foreignObject > section.outline > ol > li, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li{break-inside:avoid;page-break-inside:avoid;margin-bottom:10px!important;line-height:1.42!important}div#\:\$p > svg > foreignObject > section.outline > ul > li > ul, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li > ul, div#\:\$p > svg > foreignObject > section.outline > ol > li > ol, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li > ol{margin-top:3px!important;margin-bottom:5px!important}div#\:\$p > svg > foreignObject > section.outline > ul > li > ul > li, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li > ul > li, div#\:\$p > svg > foreignObject > section.outline > ol > li > ol > li, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li > ol > li{font-size:15.5px!important;color:#475569;margin-bottom:3px!important}div#\:\$p > svg > foreignObject > section .outline-columns{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:auto!important;margin-bottom:auto!important;align-items:start;font-size:17.5px;line-height:1.42}div#\:\$p > svg > foreignObject > section section.outline-columns{--marpit-root-font-size: 17.5px}div#\:\$p > svg > foreignObject > section .outline-columns :is(h3, marp-h3){font-size:21px;color:#0b3c5d;margin-top:0;margin-bottom:10px;border-bottom:2px solid #cbd5e1;padding-bottom:4px}div#\:\$p > svg > foreignObject > section .outline-columns ul{margin:0!important;padding-left:20px!important}div#\:\$p > svg > foreignObject > section .outline-columns li{margin-bottom:8px!important;line-height:1.4!important}div#\:\$p > svg > foreignObject > section .outline-columns li > ul{margin-top:3px!important;margin-bottom:5px!important}div#\:\$p > svg > foreignObject > section .outline-columns li > ul > li{font-size:15.5px!important;margin-bottom:3px!important;color:#475569}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){margin-top:8px;margin-bottom:8px;font-size:22px;line-height:1.45;border-radius:6px}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{font-size:22px}div#\:\$p > svg > foreignObject > section code{font-family:'Fira Code', 'Consolas', 'Courier New', monospace}div#\:\$p > svg > foreignObject > section.full-image-slide{padding:0!important}div#\:\$p > svg > foreignObject > section.full-image-slide::after{display:none!important}div#\:\$p > svg > foreignObject > section.full-image-slide header, div#\:\$p > svg > foreignObject > section.full-image-slide footer{display:none!important}div#\:\$p > svg > foreignObject > section.full-image-slide div.centered-image{display:flex;justify-content:center;align-items:center;width:100%;height:720px}div#\:\$p > svg > foreignObject > section.full-image-slide div.centered-image img{width:100%;height:100%;object-fit:contain}div#\:\$p > svg > foreignObject > section.title-image-slide{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}div#\:\$p > svg > foreignObject > section.title-image-slide :is(h2, marp-h2){margin-top:0;margin-bottom:10px}div#\:\$p > svg > foreignObject > section.title-image-slide div.image-wrapper{display:flex;justify-content:center;align-items:center;flex-grow:1;height:480px}div#\:\$p > svg > foreignObject > section.title-image-slide:has(.image-source) div.image-wrapper, div#\:\$p > svg > foreignObject > section.title-image-slide:has(.image-caption) div.image-wrapper{height:456px}div#\:\$p > svg > foreignObject > section.title-image-slide div.image-wrapper img{max-width:100%;max-height:100%;object-fit:contain}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption{font-size:13px!important;color:#64748b!important;text-align:center!important;margin-top:8px!important;margin-bottom:0!important;line-height:1.3!important}div#\:\$p > svg > foreignObject > section.title-image-slide div#\:\$p > svg > foreignObject > section section.image-source, div#\:\$p > svg > foreignObject > section.title-image-slide div#\:\$p > svg > foreignObject > section section.image-caption{--marpit-root-font-size: 13px !important}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source a, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption a{color:#475569!important;text-decoration:underline!important;text-underline-offset:2px!important}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source a:hover, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption a:hover{color:#0284c7!important}div#\:\$p > svg > foreignObject > section.lead{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1){margin:0 0 16px 0}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2){margin:0 0 16px 0}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3){margin:0 0 16px 0;color:#328cc1}div#\:\$p > svg > foreignObject > section.lead p{margin:0;font-size:0.75em;line-height:1.55}div#\:\$p > svg > foreignObject > section.lead p strong{color:#0b3c5d}div#\:\$p > svg > foreignObject > section.lead blockquote{font-size:1.1em;line-height:1.5;margin-top:20px;padding:10px 24px;text-align:left;display:inline-block}div#\:\$p > svg > foreignObject > section.lead header{display:block!important}div#\:\$p > svg > foreignObject > section.lead footer, div#\:\$p > svg > foreignObject > section.lead::after{display:none!important}div#\:\$p > svg > foreignObject > section.quote-slide{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 100px;background-color:#f5f5f5!important;background:none!important;color:#333!important}div#\:\$p > svg > foreignObject > section.quote-slide header, div#\:\$p > svg > foreignObject > section.quote-slide footer, div#\:\$p > svg > foreignObject > section.quote-slide::after{display:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote{background:transparent!important;border:none!important;margin:0 0 20px 0!important;padding:0!important;font-style:normal!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote::before, div#\:\$p > svg > foreignObject > section.quote-slide blockquote::after{content:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote strong{display:block;font-size:2.05em;line-height:1.35;color:#0b3c5d!important;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;text-shadow:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote em{display:block;font-size:1.15em;color:#328cc1!important;font-style:italic;opacity:0.95;margin-bottom:10px}div#\:\$p > svg > foreignObject > section.quote-slide p:not(blockquote p){font-size:0.82em;color:#555!important;line-height:1.6;font-weight:500;max-width:820px;margin:20px auto 0 auto;border-top:1px solid #cbd5e1;padding-top:20px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<h1 id="%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B"><strong>軟體工程</strong></h1>
+<h3 id="%E7%AC%AC%E5%9B%9B%E8%AA%B2%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1%E8%88%87%E7%B5%B1%E4%B8%80%E6%9E%B6%E6%A7%8B-system-modeling--unified-architecture">第四課：系統塑模與統一架構 (System Modeling &amp; Unified Architecture)</h3>
+<p><strong>授課教師：薛念林 教授</strong><br />
+資訊工程學系<br />
+逢甲大學</p>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="outline-slide" data-theme="ase-theme" lang="C" class="outline-slide" data-marpit-pagination="2" style="--paginate:true;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:outline-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<h2 id="%E7%AC%AC%E5%9B%9B%E7%AB%A0%E8%AA%B2%E7%A8%8B%E8%97%8D%E5%9C%96%E8%88%87%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%A7%8B">第四章：課程藍圖與核心架構</h2>
+<div class="outline-columns">
+  <div>
+    <h3>第一部分：基礎理論與功能塑模</h3>
+    <ul>
+      <li><b>4.1 系統塑模基礎與 UML：</b> 什麼是塑模、四大視角、五大核心圖表、方法論之戰與 UML 三巨頭名片。</li>
+      <li><b>4.2 環境塑模與程序塑模：</b> 系統架構邊界、外部夥伴雲端服務、跨角色活動圖工作流程。</li>
+      <li><b>4.3 功能塑模與使用案例：</b> Jacobson 的歷史遺產、include 與 extend 機制、結構化規格書。</li>
+    </ul>
+  </div>
+  <div>
+    <h3>第二部分：結構、動態與 AI 塑模</h3>
+    <ul>
+      <li><b>4.4 循序圖與 BCE 架構：</b> 訊息傳遞、生命線與啟用條、邊界-控制-實體（BCE）架構模式。</li>
+      <li><b>4.5 結構塑模與領域類別圖：</b> 領域實體、可見度修飾詞、重數、組合（Composition）與聚合（Aggregation）。</li>
+      <li><b>4.6 行為塑模與有限狀態機：</b> 訂單生命週期狀態機、事件觸發、守衛條件與轉換動作。</li>
+      <li><b>4.7 AI 輔助系統塑模：</b> Text-to-UML 視覺副駕駛、人機協同審查防護、核心填空回顧。</li>
+    </ul>
+  </div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="3" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+
+<h1 id="41-%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1%E5%9F%BA%E7%A4%8E%E8%88%87-uml-%E6%BC%94%E9%80%B2"><strong>4.1 系統塑模基礎與 UML 演進</strong></h1>
+<blockquote>
+<p>&quot;A language that doesn't affect the way you think about programming is not worth knowing.&quot;<br />
+<em>(一門不能改變你程式思維的語言，就不值得去學。)</em><br />
+— <em>Alan Perlis</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="1" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="4" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1-what-is-system-modeling">什麼是系統塑模？ (What is System Modeling?)</h2>
+<blockquote>
+<p>&quot;系統塑模是為系統開發抽象模型的過程，每個模型代表該系統不同的視角或觀點。&quot;<br />
+— <em>Ian Sommerville, Software Engineering (10th ed.)</em></p>
+</blockquote>
+<ul>
+<li data-marpit-fragment="1"><strong>系統塑模的核心工程原則：</strong>
+<ul>
+<li><strong>抽象化 (Abstraction)：</strong> 隱藏不必要的實作細節，突顯關鍵的架構結構、資料流動與相依關係。</li>
+<li><strong>多重视角 (Multiple Perspectives)：</strong> 沒有任何單一圖表能解釋整個複雜軟體；不同利害關係人需要不同的視角。</li>
+<li><strong>溝通與驗證 (Communication &amp; Verification)：</strong> 作為產品經理、系統架構師、開發者與測試工程師之間的通用視覺語言。</li>
+<li><strong>實作藍圖 (Blueprint for Implementation)：</strong> 提供正式的結構與行為規格，作為後續編寫程式碼與資料庫結構的精確藍圖。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="4" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="5" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1%E7%9A%84-4-%E5%A4%A7%E6%A0%B8%E5%BF%83%E8%A6%96%E8%A7%92-4-core-perspectives">系統塑模的 4 大核心視角 (4 Core Perspectives)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 外部視角 (External Perspective)：</strong>
+<ul>
+<li>塑模系統處在的運行環境、外部合作夥伴與邊界範圍。</li>
+<li>明確劃分系統邊界：哪些由內部團隊開發，哪些委託給外部第三方服務。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 互動視角 (Interaction Perspective)：</strong>
+<ul>
+<li>塑模外部參與者與系統之間，或是內部協同物件之間的動態溝通與訊息傳遞。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 結構視角 (Structural Perspective)：</strong>
+<ul>
+<li>塑模系統資料組織、類別、屬性、方法與關聯性的靜態架構，與執行時間先後無關。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. 行為視角 (Behavioral Perspective)：</strong>
+<ul>
+<li>塑模系統的動態執行行為、業務流程步驟，以及系統針對外在事件所產生的反應式狀態轉換。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="6" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="%E7%8F%BE%E4%BB%A3%E5%AF%A6%E5%8B%99%E5%BF%85%E5%82%99%E7%9A%84-5-%E5%A4%A7-uml-%E6%A0%B8%E5%BF%83%E5%9C%96%E8%A1%A8">現代實務必備的 5 大 UML 核心圖表</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">圖表類型</th>
+<th style="text-align:left">所屬視角</th>
+<th style="text-align:left">動態 / 靜態</th>
+<th style="text-align:left">主要軟體工程職責</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>1. 環境圖 (Context Diagram)</strong></td>
+<td style="text-align:left">外部視角</td>
+<td style="text-align:left">靜態邊界</td>
+<td style="text-align:left">劃定系統邊界與外部夥伴系統的相依關係</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>2. 活動圖 (Activity Diagram)</strong></td>
+<td style="text-align:left">行為視角</td>
+<td style="text-align:left">動態流程</td>
+<td style="text-align:left">視覺化呈現連續業務工作流程與平行並行邏輯</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>3. 使用案例圖 (Use Case Diagram)</strong></td>
+<td style="text-align:left">互動視角</td>
+<td style="text-align:left">靜態契約</td>
+<td style="text-align:left">界定使用者目標與系統功能範疇邊界</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>4. 循序圖 (Sequence Diagram)</strong></td>
+<td style="text-align:left">互動視角</td>
+<td style="text-align:left">動態時間</td>
+<td style="text-align:left">沿著時間生命線追蹤物件之間的循序訊息傳遞</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>5. 類別圖 (Class Diagram)</strong></td>
+<td style="text-align:left">結構視角</td>
+<td style="text-align:left">靜態骨幹</td>
+<td style="text-align:left">定義領域實體、資料屬性、操作方法與物件關聯</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>(加分必學) 狀態機圖 (State Diagram)</em></td>
+<td style="text-align:left">行為視角</td>
+<td style="text-align:left">動態反應</td>
+<td style="text-align:left">塑模離散狀態、事件觸發與反應式生命週期</td>
+</tr>
+</tbody>
+</table>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-marpit-fragments="2" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="7" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="%E6%A8%99%E6%BA%96%E5%8C%96%E7%9A%84%E8%BF%AB%E5%88%87%E9%9C%80%E6%B1%821990-%E5%B9%B4%E4%BB%A3%E6%96%B9%E6%B3%95%E8%AB%96%E4%B9%8B%E6%88%B0">標準化的迫切需求：1990 年代「方法論之戰」</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>物件導向程式設計的崛起 (1980 年代末至 1990 年代初)：</strong>
+<ul>
+<li>軟體產業從程序導向程式碼 (C, Pascal) 大規模轉移至物件導向典範 (C++, Smalltalk)。</li>
+<li>工程師迫切需要一套圖形符號來視覺化表達類別、物件與關聯。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>百家爭鳴的「方法論之戰 (Method Wars)」時代：</strong>
+<ul>
+<li>超過 <strong>50 種相互競爭的物件導向塑模記號</strong>充斥商業市場。</li>
+<li>各派大師激烈爭論：類別究竟該畫成雲朵、矩形還是橢圓？繼承到底該用空心三角、實心箭頭還是虛線？</li>
+<li><strong>嚴重的產業割裂碎片化：</strong> 各公司之間無法交換架構模型，CASE 塑模軟體彼此互不相容，工程師換工作就得被迫重新學習一套新符號。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="4" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="8" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="%E7%B5%B1%E4%B8%80%E8%88%87%E6%A8%99%E6%BA%96%E5%8C%96%E5%BE%9E-rational-%E5%88%B0-omg">統一與標準化：從 Rational 到 OMG</h2>
+<div class="content-columns">
+<div class="content-text">
+<ul>
+<li data-marpit-fragment="1"><strong>1994 年 – Rational 展開統一整合：</strong>
+<ul>
+<li>Jim Rumbaugh 離開奇異（GE）加入 Rational Software 與 Grady Booch 攜手，將 Booch 方法與 OMT 融合成「統一方法」(Unified Method v0.8)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>1995 年 – 「三巨頭 (Three Amigos)」合體：</strong>
+<ul>
+<li>Ivar Jacobson 加入 Rational，帶來革命性的<strong>使用案例 (Use Case)</strong> 與 OOSE 架構思維。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>1997 年 – OMG 國際標準正式誕生：</strong>
+<ul>
+<li>提交給<strong>物件管理組織 (OMG)</strong>，於 1997 年 11 月獲全票通過，成為全球公認的 <strong>UML 1.1</strong> 國際標準。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>2005 年 – UML 2.0 架構大改版：</strong>
+<ul>
+<li>擴充至 13 種（後續擴增為 14 種）圖表類型，並具備嚴謹的可執行元模型 (Metamodel)。</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="content-figure">
+<div class="name-card">
+  <img class="contain-fit" src="../../img/ch05/uml_logo.svg" alt="OMG 統一塑模語言" />
+  <div class="name-card-caption">
+    <span class="name-card-name">Unified Modeling Language</span>
+    <span class="name-card-cc"><a href="https://www.omg.org/uml/" target="_blank">Object Management Group (OMG)</a></span>
+  </div>
+</div>
+</div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-fragments="4" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="9" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="uml-%E5%A5%A0%E5%9F%BA%E5%85%88%E9%A9%85grady-booch">UML 奠基先驅：Grady Booch</h2>
+<div class="content-columns">
+<div class="content-text">
+<ul>
+<li data-marpit-fragment="1"><strong>角色與學術榮譽：</strong>
+<ul>
+<li>Rational Software 首席科學家、IBM 院士 (Fellow)、ACM 院士。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>開創經典方法論：</strong>
+<ul>
+<li><strong>Booch 方法</strong>與劃時代著作：《物件導向分析與設計》(Object-Oriented Analysis and Design with Applications)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>對 UML 的核心貢獻：</strong>
+<ul>
+<li>極度專注於<strong>具體軟體設計</strong>、模組拆解、類別抽象化與架構模式。</li>
+<li>提倡為實作層級的物件結構與程式碼對應關係提供高度的視覺表現力。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>著名軟體工程箴言：</strong>
+<blockquote>
+<p><em>&quot;乾淨的程式碼讀起來，永遠就像是由深具責任心與熱忱的人所撰寫。&quot;</em></p>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="content-figure">
+<div class="name-card">
+  <img src="../../img/ch05/grady_booch.jpg" alt="Grady Booch" />
+  <div class="name-card-caption">
+    <span class="name-card-name">Grady Booch</span>
+    <span class="name-card-cc"><a href="https://en.wikipedia.org/wiki/Grady_Booch" target="_blank">Rational Software / IBM Fellow</a></span>
+  </div>
+</div>
+</div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-marpit-fragments="4" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="10" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="uml-%E5%A5%A0%E5%9F%BA%E5%85%88%E9%A9%85james-rumbaugh">UML 奠基先驅：James Rumbaugh</h2>
+<div class="content-columns">
+<div class="content-text">
+<ul>
+<li data-marpit-fragment="1"><strong>角色與學術榮譽：</strong>
+<ul>
+<li>奇異公司 (GE) 全球研發中心軟體主任研究員、Rational Software、IBM。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>開創經典方法論：</strong>
+<ul>
+<li><strong>物件塑模技術 (OMT, Object Modeling Technique)</strong> 與專書：《物件導向塑模與設計》。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>對 UML 的核心貢獻：</strong>
+<ul>
+<li>強調嚴謹的<strong>領域分析 (Domain Analysis)</strong>、語義資料塑模與實體關聯對應。</li>
+<li>首創將靜態物件結構與 David Harel 的<strong>狀態圖 (Statecharts)</strong> 深度結合，用以塑模動態反應式系統。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>著名軟體工程箴言：</strong>
+<blockquote>
+<p><em>&quot;如果不透徹理解領域的真實本質，就絕不可能打造出卓越的軟體。&quot;</em></p>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="content-figure">
+<div class="name-card">
+  <img src="../../img/ch05/james_rumbaugh.jpg" alt="James Rumbaugh" />
+  <div class="name-card-caption">
+    <span class="name-card-name">James Rumbaugh</span>
+    <span class="name-card-cc"><a href="https://en.wikipedia.org/wiki/James_Rumbaugh" target="_blank">GE Research / Rational Software</a></span>
+  </div>
+</div>
+</div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="4" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="11" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="uml-%E5%A5%A0%E5%9F%BA%E5%85%88%E9%A9%85ivar-jacobson">UML 奠基先驅：Ivar Jacobson</h2>
+<div class="content-columns">
+<div class="content-text">
+<ul>
+<li data-marpit-fragment="1"><strong>角色與學術榮譽：</strong>
+<ul>
+<li>愛立信 (Ericsson) 首席架構師、Objectory AB 創辦人、Rational Software、SEMAT 發起人。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>開創經典方法論：</strong>
+<ul>
+<li><strong>物件導向軟體工程 (OOSE)</strong>。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>對 UML 的核心貢獻：</strong>
+<ul>
+<li><strong>使用案例 (Use Cases) 的發明者 (1986)：</strong> 革命性地將系統架構錨定在可衡量的使用者目標之上。</li>
+<li>提出經典的<strong>邊界–控制–實體 (BCE, Boundary–Control–Entity)</strong> 強韌性分析模式與元件化架構。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>著名軟體工程箴言：</strong>
+<blockquote>
+<p><em>&quot;一個沒有使用者的系統，就沒有任何存在的理由。塑模永遠要先從使用者的目標開始。&quot;</em></p>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="content-figure">
+<div class="name-card">
+  <img src="../../img/ch05/ivar_jacobson.jpg" alt="Ivar Jacobson" />
+  <div class="name-card-caption">
+    <span class="name-card-name">Ivar Jacobson</span>
+    <span class="name-card-cc"><a href="https://en.wikipedia.org/wiki/Ivar_Jacobson" target="_blank">Ericsson / Objectory / Rational</a></span>
+  </div>
+</div>
+</div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="12" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h2 id="uml-%E4%B8%89%E5%B7%A8%E9%A0%AD%E8%BB%9F%E9%AB%94%E5%A1%91%E6%A8%A1%E7%9A%84%E4%B8%89%E4%BD%8D%E4%B8%80%E9%AB%94-the-trinity-of-modeling">UML 三巨頭：軟體塑模的三位一體 (The Trinity of Modeling)</h2>
+<div class="three-columns">
+  <div class="card">
+    <h3>Ivar Jacobson</h3>
+    <h4>核心回答「Why」(目標 / 使用者)</h4>
+    <ul>
+      <li><b>使用案例驅動：</b> 外部參與者想達成什麼目標？</li>
+      <li><b>BCE 強韌性分析：</b> 徹底分離 UI 邊界與核心資料實體。</li>
+      <li><b>元件契約規範：</b> 可重用子系統的架構邊界。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>James Rumbaugh</h3>
+    <h4>核心回答「What」(領域與資料)</h4>
+    <ul>
+      <li><b>領域物件分析：</b> 現實世界存在哪些核心概念？</li>
+      <li><b>類別與資料綱要：</b> 結構化的實體關聯關係。</li>
+      <li><b>有限狀態機：</b> 反應式事件驅動的生命週期。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Grady Booch</h3>
+    <h4>核心回答「How」(設計與程式碼)</h4>
+    <ul>
+      <li><b>物件導向設計：</b> 類別之間如何精巧協同運作？</li>
+      <li><b>巨觀架構拆解：</b> 分層模組與相依性控制。</li>
+      <li><b>實作直譯對應：</b> 視覺模型與 OOP 程式碼直接對齊。</li>
+    </ul>
+  </div>
+</div>
+<blockquote>
+<p><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>架構整合精髓：</strong> Jacobson 捕捉系統存在的<strong>初衷目的 (Why)</strong>；Rumbaugh 塑模領域存在的<strong>資料本質 (What)</strong>；Booch 設計程式執行的<strong>實作架構 (How)</strong>。</p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-header="4.1 塑模基礎與 UML 演進" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="13" style="--paginate:true;--header:4.1 塑模基礎與 UML 演進;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.1 塑模基礎與 UML 演進</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-1-ccq-1">觀念檢核測驗 1 (CCQ 1)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在被尊稱為「UML 三巨頭」的軟體工程大師中，哪一位以於 1986 年發明<strong>使用案例 (Use Cases)</strong>、將軟體架構直接錨定於使用者具體目標而聞名？</p>
+<ul>
+<li>
+<p><strong>A.</strong> Grady Booch</p>
+</li>
+<li>
+<p><strong>B.</strong> James Rumbaugh</p>
+</li>
+<li>
+<p><strong>C.</strong> Ivar Jacobson</p>
+</li>
+<li>
+<p><strong>D.</strong> Martin Fowler</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch05/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="14" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+
+<h1 id="42-%E7%92%B0%E5%A2%83%E5%A1%91%E6%A8%A1%E8%88%87%E7%A8%8B%E5%BA%8F%E5%A1%91%E6%A8%A1"><strong>4.2 環境塑模與程序塑模</strong></h1>
+<blockquote>
+<p>&quot;Architecture is the decisions that you wish you could get right early in a project.&quot;<br />
+<em>(架構，就是那些你希望在專案初期就能正確搞定的關鍵決策。)</em><br />
+— <em>Ralph Johnson</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="15" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+
+<h2 id="%E7%BE%8E%E9%A3%9F%E5%A4%96%E9%80%81%E5%B9%B3%E5%8F%B0%E7%B3%BB%E7%B5%B1%E7%92%B0%E5%A2%83%E6%A8%A1%E5%9E%8B-system-context-model">美食外送平台：系統環境模型 (System Context Model)</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_context.svg" alt="美食外送平台系統環境圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="3" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="16" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+<h2 id="%E7%92%B0%E5%A2%83%E6%A8%A1%E5%9E%8B%E8%A7%A3%E6%9E%90%E8%88%87%E6%9E%B6%E6%A7%8B%E9%82%8A%E7%95%8C%E5%8A%83%E5%AE%9A">環境模型解析與架構邊界劃定</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>首要營運邊界的確立：</strong>
+<ul>
+<li>明確劃分何者為<strong>內部系統</strong>（由我方團隊掌控：訂單引擎、菜單型錄、追蹤中心），何者為<strong>外部系統</strong>（第三方服務與人類參與者）。</li>
+<li>在架構生命週期早期精確定義外部相依性，杜絕「範疇蔓延 (Scope Creep)」。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>人類利害關係人介面：</strong>
+<ul>
+<li><strong>顧客 (Customer)：</strong> 透過 iOS / Android 原生 App 查詢菜單、下單與即時追蹤。</li>
+<li><strong>餐廳夥伴 (Restaurant Partner)：</strong> 透過商家平板或 Web 平台接單並回報餐點製作狀態。</li>
+<li><strong>外送夥伴 (Delivery Courier)：</strong> 透過外送專屬 App 接收派單任務並串流回傳即時 GPS 座標。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>第三方外部雲端服務相依性：</strong>
+<ul>
+<li><strong>金流閘道 (Payment Gateway, 如 Stripe)：</strong> 處理符合 PCI-DSS 規範之金融扣款，我方伺服器不儲存敏感卡號。</li>
+<li><strong>地圖導航服務 (Google Maps API)：</strong> 計算即時路徑距離、外送員預估抵達時間 (ETA) 與路線幾何。</li>
+<li><strong>推播通知雲 (Notification Cloud, 如 Firebase)：</strong> 發送非同步推播通知與 SMS 驗證簡訊。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="17" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+
+<h2 id="%E7%BE%8E%E9%A3%9F%E5%A4%96%E9%80%81%E5%B1%A5%E8%A1%8C%E9%A1%A7%E5%AE%A2%E4%B8%8B%E5%96%AE%E8%88%87%E5%BB%9A%E6%88%BF%E5%82%99%E9%A4%90%E6%B4%BB%E5%8B%95%E6%B5%81%E7%A8%8B">美食外送履行：顧客下單與廚房備餐活動流程</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_activity_order.svg" alt="下單與備餐活動圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-fragments="2" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="18" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+<h2 id="%E7%AC%AC%E4%B8%80%E9%9A%8E%E6%AE%B5%E6%B4%BB%E5%8B%95%E6%B5%81%E7%A8%8B%E8%88%87%E8%AA%9E%E6%B3%95%E7%AC%A6%E8%99%9F%E8%A7%A3%E6%9E%90">第一階段活動流程與語法符號解析</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>活動塑模的核心語法元素：</strong>
+<ul>
+<li><strong>圓角矩形 (Rounded Rectangles)：</strong> 操作動作狀態（例如 <code>瀏覽菜單並挑選餐點</code>、<code>廚房開始烹調餐點</code>）。</li>
+<li><strong>泳道分區 (Swimlanes / Partitions)：</strong> 將工作職責明確分配給顧客、平台核心與餐廳夥伴。</li>
+<li><strong>決策菱形 (Decision Diamonds)：</strong> 依據布林守衛條件進行分支判斷（<code>[授權扣款成功？]</code>、<code>[餐廳是否接單？]</code>）。</li>
+<li><strong>中斷終止節點 (Detach Node / Terminal Exit)：</strong> 代表異常分支終止（例如付款失敗或餐廳原物料短缺拒單）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>非同步解耦的工程考量：</strong>
+<ul>
+<li>顧客的互動在完成訂單提交後即告一段落；後續步驟由平台與商家非同步推進。</li>
+<li>當餐廳拒單時，平台核心能自動觸發即時退款與發票作廢，維護商業信用。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="19" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+
+<h2 id="%E7%BE%8E%E9%A3%9F%E5%A4%96%E9%80%81%E5%B1%A5%E8%A1%8C%E5%A4%96%E9%80%81%E6%B4%BE%E5%96%AE%E8%88%87%E5%AF%A6%E9%AB%94%E4%BA%A4%E4%BB%98%E6%B4%BB%E5%8B%95%E6%B5%81%E7%A8%8B">美食外送履行：外送派單與實體交付活動流程</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_activity_dispatch.svg" alt="派單與交付活動圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-fragments="2" data-paginate="true" data-header="4.2 環境塑模與程序塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="20" style="--paginate:true;--header:4.2 環境塑模與程序塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.2 環境塑模與程序塑模</header>
+<h2 id="%E7%AC%AC%E4%BA%8C%E9%9A%8E%E6%AE%B5%E6%B4%BB%E5%8B%95%E6%B5%81%E7%A8%8B%E4%B8%A6%E8%A1%8C%E4%B8%A6%E7%99%BC%E8%88%87%E5%88%86%E5%B2%94--%E5%8C%AF%E5%90%88%E6%A9%9F%E5%88%B6">第二階段活動流程：並行並發與分岔 / 匯合機制</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>分岔與匯合同步棒 (Fork &amp; Join Bars，粗水平線)：</strong>
+<ul>
+<li><strong>分岔棒 (Fork Bar，並發產生器)：</strong> 將單一控制執行緒拆分為<strong>多個平行並行的非同步活動</strong>。
+<ul>
+<li><em>實例：</em> 平台同時發送推播通知給顧客，並平行啟動 GPS 演算派單給外送員，互不卡住阻斷！</li>
+</ul>
+</li>
+<li><strong>匯合棒 (Join Bar，同步屏障)：</strong> 匯總多個平行並發分支；只有當所有流入的平行前置任務全部完成後，後續流程才會繼續。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>實體世界履行的工程防護設計：</strong>
+<ul>
+<li><strong>虛實整合握手驗證：</strong> 外送員抵達餐廳後，必須透過手機鏡頭掃描訂單 QR Code，原子化確認餐點取走。</li>
+<li><strong>資金正式清算觸發點：</strong> 信用卡的最終正式扣款（Capture）與平台抽成清算，<em>僅在實體驗收交付完成時正式觸發</em>。</li>
+<li><strong>顧客回饋閉環：</strong> 完成送達後立即推播評分與給予小費介面。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="21" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+
+<h1 id="43-%E5%8A%9F%E8%83%BD%E5%A1%91%E6%A8%A1%E8%88%87%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B%E6%A8%A1%E5%9E%8B"><strong>4.3 功能塑模與使用案例模型</strong></h1>
+<blockquote>
+<p>&quot;A use case is a contract for behavior between the system and its actors to achieve a measurable business goal.&quot;<br />
+<em>(使用案例是系統與參與者之間的行為契約，旨在達成可衡量的商業目標。)</em><br />
+— <em>Alistair Cockburn</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="22" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+
+<h2 id="%E7%BE%8E%E9%A3%9F%E5%A4%96%E9%80%81%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B%E5%9C%96-use-case-diagram">美食外送平台：使用案例圖 (Use Case Diagram)</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_usecase.svg" alt="美食外送平台使用案例圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="3" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="23" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+<h2 id="%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B%E6%A8%A1%E5%9E%8B%E8%88%87%E5%8F%83%E8%88%87%E8%80%85%E8%A7%92%E8%89%B2%E8%A7%A3%E6%9E%90">使用案例模型與參與者角色解析</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>主要參與者 vs. 支援輔助參與者：</strong>
+<ul>
+<li><strong>主要參與者 (Primary Actors，顧客、餐廳、外送員)：</strong> 主動發起使用案例，以達成個人的商業目標（例如享用美食、營收獲利、賺取配送費）。</li>
+<li><strong>次要 / 支援參與者 (Supporting / Secondary Actors，金流閘道)：</strong> 由系統主動呼叫以協助完成使用案例之外部系統（例如進行信用卡扣款與反洗錢驗證）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>系統邊界劃分原則：</strong>
+<ul>
+<li>所有使用案例橢圓一律位於矩形邊界<strong>內部</strong>；所有參與者一律位於邊界<strong>外部</strong>。</li>
+<li>連接線代表參與者參與該項功能互動。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>使用案例粒度 (Granularity) 黃金法則：</strong>
+<ul>
+<li>使用案例必須代表一項<strong>完整的、能為使用者帶來獨立商業價值的交易</strong>。</li>
+<li><em>反面教材：</em> 「輸入密碼」、「點擊送出按鈕」（這些只是微小的 UI 操作，絕非使用案例！）。</li>
+<li><em>正面典範：</em> 「美食訂餐下單」、「管理餐廳菜單」（能交付完整的商業成果）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="24" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+<h2 id="%E7%AC%A6%E8%99%9F%E6%B7%B1%E8%A7%A3include-%E8%88%87-extend-%E7%9A%84%E9%97%9C%E9%8D%B5%E5%B7%AE%E7%95%B0">符號深解：<code>&lt;&lt;include&gt;&gt;</code> 與 <code>&lt;&lt;extend&gt;&gt;</code> 的關鍵差異</h2>
+<div class="two-columns">
+  <div class="card">
+    <h3>&lt;&lt;include&gt;&gt; (必要包含)</h3>
+    <ul>
+      <li><b>核心語義：</b> 基礎使用案例在執行過程中，<b>必須且一定會執行</b>被包含的子程序。</li>
+      <li><b>箭頭方向：</b> <b>由基礎案例指向被包含案例</b> (<code>Base ..&gt; Included</code>)。</li>
+      <li><b>軟體工程目的：</b> 將多個案例共用的必要重複邏輯抽離成獨立子案例（例如：多種訂單與會員訂閱流程均強制需要<i>處理信用卡扣款</i>）。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>&lt;&lt;extend&gt;&gt; (條件擴充)</h3>
+    <ul>
+      <li><b>核心語義：</b> 擴充行為<b>僅在特定條件成立時</b>，才會外加插入基礎流程之中。</li>
+      <li><b>箭頭方向：</b> <b>由擴充案例指向基礎案例</b> (<code>Extension ..&gt; Base</code>)。</li>
+      <li><b>軟體工程目的：</b> 將偶發的選用邊界情境（如套用折扣優惠碼、無接觸配送要求）完全隔離，避免弄髒主要的正常流程。</li>
+    </ul>
+  </div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="25" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+
+<h2 id="include-%E8%88%87-extend%E8%A6%96%E8%A6%BA%E8%AA%9E%E6%B3%95%E8%88%87%E7%AE%AD%E9%A0%AD%E6%96%B9%E5%90%91%E6%A9%9F%E5%88%B6">Include 與 Extend：視覺語法與箭頭方向機制</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_include_extend.svg" alt="Include 與 Extend 語法機制圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="26" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+<h2 id="%E7%B5%90%E6%A7%8B%E5%8C%96%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B%E8%A6%8F%E6%A0%BC%E6%9B%B8%E7%BE%8E%E9%A3%9F%E8%A8%82%E9%A4%90%E4%B8%8B%E5%96%AE-uc-01">結構化使用案例規格書：美食訂餐下單 (UC-01)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">規格書欄位</th>
+<th style="text-align:left">技術規格描述與工程契約</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>使用案例編號與名稱</strong></td>
+<td style="text-align:left"><strong>UC-01: 美食訂餐下單 (Place Food Order)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>主要參與者</strong></td>
+<td style="text-align:left">顧客 (已註冊登入之美食外送 App 會員)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>前置條件 (Preconditions)</strong></td>
+<td style="text-align:left">顧客通過驗證登入；購物車內含有 ≥ 1 件營業中合作商家之餐點。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>後置條件 (Postconditions)</strong></td>
+<td style="text-align:left">訂單狀態標記為 <code>PAID</code>；通知廚房接單；外送排程佇列；收據寄發顧客信箱。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>主要成功路徑 (Happy Path)</strong></td>
+<td style="text-align:left">1. 顧客於結帳確認畫面點擊「確認付款下單」。<br />2. 系統即時驗證餐點供應庫存，並計算餐點總額、稅金、外送費與服務費。<br />3. 系統執行 <code>&lt;&lt;include&gt;&gt;</code> <strong>UC-02: 處理信用卡扣款</strong>。<br />4. 系統在資料庫中持久化建立具唯一 <code>orderId</code> 之訂單實體。<br />5. 系統傳送即時訂單明細至餐廳夥伴之後台平板。<br />6. 系統建立即時 GPS 追蹤作業並於顧客端顯示預估抵達時間。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>擴充與替代路徑</strong></td>
+<td style="text-align:left"><strong>3a. 信用卡授權遭拒：</strong><br />    3a1. 系統通知顧客卡片扣款失敗；訂單保留於 <code>DRAFT</code> 草稿狀態。<br /><strong>4a. <code>&lt;&lt;extend&gt;&gt;</code> 套用優惠折扣碼：</strong><br />    4a1. 顧客輸入有效折扣碼，系統於步驟 3 扣款前重新計算折抵金額。</td>
+</tr>
+</tbody>
+</table>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-header="4.3 功能塑模與使用案例" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="27" style="--paginate:true;--header:4.3 功能塑模與使用案例;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.3 功能塑模與使用案例</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-2-ccq-2">觀念檢核測驗 2 (CCQ 2)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在美食外送使用案例模型中，為何「套用優惠折扣碼」使用 <code>&lt;&lt;extend&gt;&gt;</code> 指向「美食訂餐下單」，而「美食訂餐下單」卻使用 <code>&lt;&lt;include&gt;&gt;</code> 指向「處理信用卡扣款」？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 折扣碼是每筆訂單強制必填的欄位；而扣款則是自由選填的項目。</p>
+</li>
+<li>
+<p><strong>B.</strong> 折扣碼為特定條件下的選用行為；而扣款則是結帳必定執行的共用程序。</p>
+</li>
+<li>
+<p><strong>C.</strong> 折扣碼由次要參與者發起執行；而扣款則由主要參與者獨立完成。</p>
+</li>
+<li>
+<p><strong>D.</strong> 折扣碼代表類別層級的繼承關係；而扣款代表物件層級的組合關係。</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch05/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-header="4.4 循序圖與 BCE 架構" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="28" style="--paginate:true;--header:4.4 循序圖與 BCE 架構;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.4 循序圖與 BCE 架構</header>
+
+<h1 id="44-%E5%BE%AA%E5%BA%8F%E5%9C%96%E8%88%87-bce-%E6%9E%B6%E6%A7%8B"><strong>4.4 循序圖與 BCE 架構</strong></h1>
+<blockquote>
+<p>&quot;Interaction modeling shows how objects collaborate over time to fulfill the promise of a use case.&quot;<br />
+<em>(互動塑模展示了物件如何在時間維度上協同運作，以實現使用案例的承諾。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-header="4.4 循序圖與 BCE 架構" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="29" style="--paginate:true;--header:4.4 循序圖與 BCE 架構;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.4 循序圖與 BCE 架構</header>
+
+<h2 id="%E8%A8%82%E5%96%AE%E4%B8%8B%E5%96%AE%E8%88%87%E6%94%AF%E4%BB%98%E6%B5%81%E7%A8%8Buml-%E5%BE%AA%E5%BA%8F%E5%9C%96">訂單下單與支付流程：UML 循序圖</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_sequence.svg" alt="美食外送下單循序圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-marpit-fragments="2" data-paginate="true" data-header="4.4 循序圖與 BCE 架構" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="30" style="--paginate:true;--header:4.4 循序圖與 BCE 架構;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.4 循序圖與 BCE 架構</header>
+<h2 id="%E5%BE%AA%E5%BA%8F%E8%A8%8A%E6%81%AF%E6%B5%81%E5%8B%95%E8%88%87-bce-%E6%9E%B6%E6%A7%8B%E6%A8%A1%E5%BC%8F%E5%89%96%E6%9E%90">循序訊息流動與 BCE 架構模式剖析</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>邊界–控制–實體 (BCE, Boundary–Control–Entity) 架構模式：</strong>
+<ul>
+<li><strong>邊界物件 (<code>&lt;&lt;Boundary&gt;&gt;</code>)：</strong> 負責與外部人類參與者及第三方 API 溝通（如 <code>CheckoutUI</code>、<code>PaymentGatewayAPI</code>）。</li>
+<li><strong>控制物件 (<code>&lt;&lt;Control&gt;&gt;</code>)：</strong> 協調交易流程、業務邏輯演算法與流程分派（如 <code>OrderController</code>、<code>DispatchService</code>）。</li>
+<li><strong>實體物件 (<code>&lt;&lt;Entity&gt;&gt;</code>)：</strong> 封裝持久化儲存的領域狀態與業務核心資料（如 <code>Order</code>、<code>Restaurant</code>）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>BCE 架構不可動搖的黃金鐵律：</strong>
+<ul>
+<li>外部使用者與 UI 邊界物件<strong>絕不可直接碰觸或存取 Entity 資料實體物件</strong>！</li>
+<li>呼叫流向必須嚴格遵守：<strong>Actor → Boundary → Control → Entity</strong>。</li>
+<li><em>原因：</em> 徹底實現介面與資料綱要的解耦。未來資料庫欄位或 ORM 變更時，UI 畫面完全不受波及。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-header="4.4 循序圖與 BCE 架構" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="31" style="--paginate:true;--header:4.4 循序圖與 BCE 架構;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.4 循序圖與 BCE 架構</header>
+<h2 id="%E5%BE%AA%E5%BA%8F%E5%9C%96%E7%AC%A6%E8%99%9F%E8%88%87%E8%AA%9E%E6%84%8F%E6%8C%87%E5%BC%95">循序圖符號與語意指引</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">視覺符號</th>
+<th style="text-align:left">語意符號名稱</th>
+<th style="text-align:left">精確技術語義</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>垂直虛線</strong></td>
+<td style="text-align:left"><strong>生命線 (Lifeline)</strong></td>
+<td style="text-align:left">代表該物件實例在記憶體中隨時間推移的存續狀態。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>狹長垂直矩形</strong></td>
+<td style="text-align:left"><strong>啟用條 (Activation Bar)</strong></td>
+<td style="text-align:left">代表該物件實例正在 CPU 上積極執行程式碼運算的時間區間。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>實線＋實心箭頭</strong></td>
+<td style="text-align:left"><strong>同步呼叫 (Synchronous Call)</strong></td>
+<td style="text-align:left">阻斷性呼叫（Blocking）；呼叫端暫停等待回傳結果後方能繼續。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>實線＋開放箭頭</strong></td>
+<td style="text-align:left"><strong>非同步訊息 (Asynchronous Call)</strong></td>
+<td style="text-align:left">非阻斷性訊息（Non-blocking）；呼叫端送出訊息後立即繼續執行。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>虛線＋開放箭頭</strong></td>
+<td style="text-align:left"><strong>回傳訊息 (Return Message)</strong></td>
+<td style="text-align:left">將運算結果或資料實例明確回傳給原始呼叫者。</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>自我迴圈箭頭</strong></td>
+<td style="text-align:left"><strong>自身調用 (Self-Invocation)</strong></td>
+<td style="text-align:left">物件呼叫自身的私有方法（例如 <code>validateCart()</code>）。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img class="emoji" draggable="false" alt="📌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/1f4cc.svg" data-marp-twemoji=""/> <strong>幾何黃金法則：</strong> 時間沿著垂直軸嚴格<strong>向下</strong>推進。任何訊息箭頭絕對不可向上逆行！</p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-header="4.4 循序圖與 BCE 架構" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="32" style="--paginate:true;--header:4.4 循序圖與 BCE 架構;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.4 循序圖與 BCE 架構</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-3-ccq-3">觀念檢核測驗 3 (CCQ 3)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在採用 <strong>邊界–控制–實體 (BCE)</strong> 架構設計的 UML 循序圖中，當使用者於 <code>CheckoutUI</code> 點擊結帳送出時，該請求應該直接交由哪一個物件接收處理？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 直接交給 <code>Order</code> 實體物件，以便第一時間將訂單寫入資料庫。</p>
+</li>
+<li>
+<p><strong>B.</strong> 直接交給 <code>PaymentGatewayAPI</code> 邊界物件，以便立刻進行信用卡扣款。</p>
+</li>
+<li>
+<p><strong>C.</strong> 交給 <code>OrderController</code> 控制物件，以統籌驗證業務規則與協調交易。</p>
+</li>
+<li>
+<p><strong>D.</strong> 直接交給 <code>Restaurant</code> 實體物件，以確認廚房產能是否充足。</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch05/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-header="4.5 結構塑模與類別圖" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="33" style="--paginate:true;--header:4.5 結構塑模與類別圖;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.5 結構塑模與類別圖</header>
+
+<h1 id="45-%E7%B5%90%E6%A7%8B%E5%A1%91%E6%A8%A1%E8%88%87%E9%A0%98%E5%9F%9F%E9%A1%9E%E5%88%A5%E5%9C%96"><strong>4.5 結構塑模與領域類別圖</strong></h1>
+<blockquote>
+<p>&quot;Classes are the static building blocks; objects are the living runtime instances.&quot;<br />
+<em>(類別是系統的靜態積木；物件是運作時的鮮活實例。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-header="4.5 結構塑模與類別圖" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="34" style="--paginate:true;--header:4.5 結構塑模與類別圖;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.5 結構塑模與類別圖</header>
+
+<h2 id="%E7%BE%8E%E9%A3%9F%E5%A4%96%E9%80%81%E9%A0%98%E5%9F%9F%E9%A1%9E%E5%88%A5%E5%9C%96%E6%9E%B6%E6%A7%8B%E8%97%8D%E5%9C%96">美食外送領域：類別圖架構藍圖</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_class.svg" alt="美食外送領域類別圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-marpit-fragments="4" data-paginate="true" data-header="4.5 結構塑模與類別圖" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="35" style="--paginate:true;--header:4.5 結構塑模與類別圖;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.5 結構塑模與類別圖</header>
+<h2 id="%E9%A0%98%E5%9F%9F%E9%A1%9E%E5%88%A5%E7%B5%90%E6%A7%8B%E8%88%87%E7%89%A9%E4%BB%B6%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%E9%97%9C%E8%81%AF%E8%A7%A3%E6%9E%90">領域類別結構與物件生命週期關聯解析</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>泛化繼承階層 (Generalization / Inheritance)：</strong>
+<ul>
+<li><code>User</code> 為抽象父類別，定義共用屬性（<code>userId</code>, <code>phone</code>, <code>email</code>）與方法（<code>login()</code>）。</li>
+<li><code>Customer</code> 與 <code>Courier</code> 特化繼承 <code>User</code>，共享帳號身分同時擴充專屬欄位（如送餐地址 vs. 載具型態與 GPS 座標）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>組合 (<code>◆</code> 實心菱形，Composition) — 強整體–部分擁有關係：</strong>
+<ul>
+<li><code>Order &quot;1&quot; *-- &quot;1..*&quot; OrderItem</code>：<code>OrderItem</code>（例如兩份辣味漢堡）脫離父層 <code>Order</code> 便無獨立存在的意義。若訂單被刪除，其下的訂單明細必須連帶被串聯刪除（Cascade Delete）！</li>
+<li><code>Restaurant &quot;1&quot; *-- &quot;1..*&quot; MenuItem</code>：菜單料理嚴格附屬於該發布餐廳。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>聚合 (<code>◇</code> 空心菱形，Aggregation) — 弱整體–部分擁有關係：</strong>
+<ul>
+<li><code>DeliveryTask &quot;0..*&quot; o-- &quot;1&quot; Courier</code>：外送任務分派給外送員，但外送員具備<strong>完全獨立的生命週期</strong>。外送任務結束或被取消時，外送員依然留在系統中！</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>關聯與價格歷史快照去耦合：</strong>
+<ul>
+<li><code>OrderItem</code> 以 <code>0..* --&gt; 1</code> 關聯 <code>MenuItem</code>。<code>OrderItem</code> 獨立記錄下單當下的歷史成交單價，未來餐廳調漲漢堡價格時，過去的歷史訂單金額絕不會受到波及。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-marpit-fragments="3" data-paginate="true" data-header="4.5 結構塑模與類別圖" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="36" style="--paginate:true;--header:4.5 結構塑模與類別圖;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.5 結構塑模與類別圖</header>
+<h2 id="%E9%A1%9E%E5%88%A5%E5%9C%96%E6%A8%99%E6%BA%96%E8%AA%9E%E6%B3%95%E4%B8%89%E6%A0%BC%E7%9F%A9%E5%BD%A2%E5%8F%AF%E8%A6%8B%E5%BA%A6%E8%88%87%E9%97%9C%E8%81%AF%E9%87%8D%E6%95%B8">類別圖標準語法：三格矩形、可見度與關聯重數</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>標準三格類別方塊 (Three-Compartment Box)：</strong>
+<ul>
+<li><strong>頂層方格：</strong> 類別名稱，採 <code>PascalCase</code>（斜體代表 <code>abstract</code> 抽象類別）。</li>
+<li><strong>中層方格：</strong> 屬性欄位：<code>[可見度] 名稱 : 型別 [= 預設值]</code>。</li>
+<li><strong>底層方格：</strong> 操作方法：<code>[可見度] 名稱(參數 : 型別) : 回傳型別</code>。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>可見度修飾詞 (Visibility Modifiers，封裝文法)：</strong>
+<ul>
+<li><code>+</code> <strong>Public (公有)：</strong> 整個系統任何類別皆可公開存取。</li>
+<li><code>-</code> <strong>Private (私有)：</strong> 嚴格封裝於本類別宣告內部。</li>
+<li><code>#</code> <strong>Protected (保護)：</strong> 僅限本類別與其衍生子類別存取。</li>
+<li><code>~</code> <strong>Package (套件私有)：</strong> 僅限同模組或命名空間內存取。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>關聯端重數標示 (Multiplicity)：</strong>
+<ul>
+<li><code>1</code>：剛好精確 1 個實例。</li>
+<li><code>0..1</code>：選用；0 個或 1 個實例。</li>
+<li><code>0..*</code> (或 <code>*</code>)：0 個至多個實例。</li>
+<li><code>1..*</code>：至少 1 個實例（上不封頂）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-header="4.5 結構塑模與類別圖" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="37" style="--paginate:true;--header:4.5 結構塑模與類別圖;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.5 結構塑模與類別圖</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-4-ccq-4">觀念檢核測驗 4 (CCQ 4)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在美食外送類別圖中，為何「訂單 (Order)」與「訂單明細 (OrderItem)」之間採用<strong>組合 (<code>◆</code>)</strong>，而「外送任務 (DeliveryTask)」與「外送員 (Courier)」之間卻採用<strong>聚合 (<code>◇</code>)</strong>？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 訂單明細可脫離訂單獨立存在；但外送員失去任務就無法存活。</p>
+</li>
+<li>
+<p><strong>B.</strong> 訂單明細隨訂單銷毀而連帶消失；外送員則具備完全獨立的生命週期。</p>
+</li>
+<li>
+<p><strong>C.</strong> 組合代表類別層級的繼承；聚合代表執行時的方法調用。</p>
+</li>
+<li>
+<p><strong>D.</strong> 組合強制規定零對一重數；聚合強制規定一對多重數。</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch05/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-header="4.6 行為塑模與狀態機" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="38" style="--paginate:true;--header:4.6 行為塑模與狀態機;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.6 行為塑模與狀態機</header>
+
+<h1 id="46-%E8%A1%8C%E7%82%BA%E5%A1%91%E6%A8%A1%E8%88%87%E6%9C%89%E9%99%90%E7%8B%80%E6%85%8B%E6%A9%9F%E6%A8%A1%E5%9E%8B"><strong>4.6 行為塑模與有限狀態機模型</strong></h1>
+<blockquote>
+<p>&quot;A system in dynamic execution is defined by the states it occupies and the events that trigger transitions.&quot;<br />
+<em>(動態執行中的系統，是由其所處的狀態以及觸發狀態轉換的事件所定義。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-header="4.6 行為塑模與狀態機" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="39" style="--paginate:true;--header:4.6 行為塑模與狀態機;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.6 行為塑模與狀態機</header>
+
+<h2 id="%E8%A8%82%E5%96%AE%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9Fuml-%E7%8B%80%E6%85%8B%E6%A9%9F%E5%9C%96-state-machine-diagram">訂單生命週期：UML 狀態機圖 (State Machine Diagram)</h2>
+<div class="image-wrapper">
+  <img src="../../img/ch05/food_delivery_state.svg" alt="訂單生命週期狀態機圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-marpit-fragments="3" data-paginate="true" data-header="4.6 行為塑模與狀態機" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="40" style="--paginate:true;--header:4.6 行為塑模與狀態機;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.6 行為塑模與狀態機</header>
+<h2 id="%E7%8B%80%E6%85%8B%E5%9C%96%E9%81%8B%E4%BD%9C%E5%8E%9F%E7%90%86%E8%88%87%E8%BD%89%E6%8F%9B%E6%96%87%E6%B3%95%E8%A7%A3%E6%9E%90">狀態圖運作原理與轉換文法解析</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>有限狀態機 (FSM) 核心原理：</strong>
+<ul>
+<li>在任何單一運行瞬間，一個 <code>Order</code> 物件實例<strong>恰好且只能處於一個</strong>離散狀態。</li>
+<li>訂單對外界事件的反應，完全取決於其<strong>當前所處的活躍狀態</strong>。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>標準狀態轉換標籤文法 (Formal Label Grammar)：</strong><p><mjx-container class="MathJax" jax="SVG" display="true" style="margin: 0;"><svg style="vertical-align: -0.566ex; display: block; width: 100%; height: auto; max-height: 2.262ex;" xmlns="http://www.w3.org/2000/svg" width="57.19ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 25278 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtext"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">觸</text><text data-variant="normal" transform="translate(1000,0) scale(1,-1)" font-size="884px" font-family="serif">發</text><text data-variant="normal" transform="translate(2000,0) scale(1,-1)" font-size="884px" font-family="serif">事</text><text data-variant="normal" transform="translate(3000,0) scale(1,-1)" font-size="884px" font-family="serif">件</text><path data-c="20" d="" transform="translate(4000,0)"></path><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" transform="translate(4250,0)"></path><path data-c="45" d="M128 619Q121 626 117 628T101 631T58 634H25V680H597V676Q599 670 611 560T625 444V440H585V444Q584 447 582 465Q578 500 570 526T553 571T528 601T498 619T457 629T411 633T353 634Q266 634 251 633T233 622Q233 622 233 621Q232 619 232 497V376H286Q359 378 377 385Q413 401 416 469Q416 471 416 473V493H456V213H416V233Q415 268 408 288T383 317T349 328T297 330Q290 330 286 330H232V196V114Q232 57 237 52Q243 47 289 47H340H391Q428 47 452 50T505 62T552 92T584 146Q594 172 599 200T607 247T612 270V273H652V270Q651 267 632 137T610 3V0H25V46H58Q100 47 109 49T128 61V619Z" transform="translate(4639,0)"></path><path data-c="76" d="M338 431Q344 429 422 429Q479 429 503 431H508V385H497Q439 381 423 345Q421 341 356 172T288 -2Q283 -11 263 -11Q244 -11 239 -2Q99 359 98 364Q93 378 82 381T43 385H19V431H25L33 430Q41 430 53 430T79 430T104 429T122 428Q217 428 232 431H240V385H226Q187 384 184 370Q184 366 235 234L286 102L377 341V349Q377 363 367 372T349 383T335 385H331V431H338Z" transform="translate(5320,0)"></path><path data-c="65" d="M28 218Q28 273 48 318T98 391T163 433T229 448Q282 448 320 430T378 380T406 316T415 245Q415 238 408 231H126V216Q126 68 226 36Q246 30 270 30Q312 30 342 62Q359 79 369 104L379 128Q382 131 395 131H398Q415 131 415 121Q415 117 412 108Q393 53 349 21T250 -11Q155 -11 92 58T28 218ZM333 275Q322 403 238 411H236Q228 411 220 410T195 402T166 381T143 340T127 274V267H333V275Z" transform="translate(5848,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(6292,0)"></path><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z" transform="translate(6848,0)"></path><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" transform="translate(7237,0)"></path></g><g data-mml-node="mstyle" transform="translate(7626,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mo" transform="translate(7904,0)"><path data-c="5B" d="M118 -250V750H255V710H158V-210H255V-250H118Z"></path></g><g data-mml-node="mtext" transform="translate(8182,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">守</text><text data-variant="normal" transform="translate(1000,0) scale(1,-1)" font-size="884px" font-family="serif">衛</text><text data-variant="normal" transform="translate(2000,0) scale(1,-1)" font-size="884px" font-family="serif">條</text><text data-variant="normal" transform="translate(3000,0) scale(1,-1)" font-size="884px" font-family="serif">件</text><path data-c="20" d="" transform="translate(4000,0)"></path><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" transform="translate(4250,0)"></path><path data-c="47" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q401 658 376 654T316 633T254 592T205 519T177 411Q173 369 173 335Q173 259 192 201T238 111T302 58T370 31T431 24Q478 24 513 45T559 100Q562 110 562 160V212Q561 213 557 216T551 220T542 223T526 225T502 226T463 227H437V273H449L609 270Q715 270 727 273H735V227H721Q674 227 668 215Q666 211 666 108V6Q660 0 657 0Q653 0 639 10Q617 25 600 42L587 54Q571 27 524 3T406 -22Q317 -22 238 22T108 151T56 342Z" transform="translate(4639,0)"></path><path data-c="75" d="M383 58Q327 -10 256 -10H249Q124 -10 105 89Q104 96 103 226Q102 335 102 348T96 369Q86 385 36 385H25V408Q25 431 27 431L38 432Q48 433 67 434T105 436Q122 437 142 438T172 441T184 442H187V261Q188 77 190 64Q193 49 204 40Q224 26 264 26Q290 26 311 35T343 58T363 90T375 120T379 144Q379 145 379 161T380 201T380 248V315Q380 361 370 372T320 385H302V431Q304 431 378 436T457 442H464V264Q464 84 465 81Q468 61 479 55T524 46H542V0Q540 0 467 -5T390 -11H383V58Z" transform="translate(5424,0)"></path><path data-c="61" d="M137 305T115 305T78 320T63 359Q63 394 97 421T218 448Q291 448 336 416T396 340Q401 326 401 309T402 194V124Q402 76 407 58T428 40Q443 40 448 56T453 109V145H493V106Q492 66 490 59Q481 29 455 12T400 -6T353 12T329 54V58L327 55Q325 52 322 49T314 40T302 29T287 17T269 6T247 -2T221 -8T190 -11Q130 -11 82 20T34 107Q34 128 41 147T68 188T116 225T194 253T304 268H318V290Q318 324 312 340Q290 411 215 411Q197 411 181 410T156 406T148 403Q170 388 170 359Q170 334 154 320ZM126 106Q126 75 150 51T209 26Q247 26 276 49T315 109Q317 116 318 175Q318 233 317 233Q309 233 296 232T251 223T193 203T147 166T126 106Z" transform="translate(5980,0)"></path><path data-c="72" d="M36 46H50Q89 46 97 60V68Q97 77 97 91T98 122T98 161T98 203Q98 234 98 269T98 328L97 351Q94 370 83 376T38 385H20V408Q20 431 22 431L32 432Q42 433 60 434T96 436Q112 437 131 438T160 441T171 442H174V373Q213 441 271 441H277Q322 441 343 419T364 373Q364 352 351 337T313 322Q288 322 276 338T263 372Q263 381 265 388T270 400T273 405Q271 407 250 401Q234 393 226 386Q179 341 179 207V154Q179 141 179 127T179 101T180 81T180 66V61Q181 59 183 57T188 54T193 51T200 49T207 48T216 47T225 47T235 46T245 46H276V0H267Q249 3 140 3Q37 3 28 0H20V46H36Z" transform="translate(6480,0)"></path><path data-c="64" d="M376 495Q376 511 376 535T377 568Q377 613 367 624T316 637H298V660Q298 683 300 683L310 684Q320 685 339 686T376 688Q393 689 413 690T443 693T454 694H457V390Q457 84 458 81Q461 61 472 55T517 46H535V0Q533 0 459 -5T380 -11H373V44L365 37Q307 -11 235 -11Q158 -11 96 50T34 215Q34 315 97 378T244 442Q319 442 376 393V495ZM373 342Q328 405 260 405Q211 405 173 369Q146 341 139 305T131 211Q131 155 138 120T173 59Q203 26 251 26Q322 26 373 103V342Z" transform="translate(6872,0)"></path><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" transform="translate(7428,0)"></path></g><g data-mml-node="mo" transform="translate(15999,0)"><path data-c="5D" d="M22 710V750H159V-250H22V-210H119V710H22Z"></path></g><g data-mml-node="mstyle" transform="translate(16277,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(16555,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mstyle" transform="translate(17055,0)"><g data-mml-node="mspace"></g></g><g data-mml-node="mtext" transform="translate(17333,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">執</text><text data-variant="normal" transform="translate(1000,0) scale(1,-1)" font-size="884px" font-family="serif">行</text><text data-variant="normal" transform="translate(2000,0) scale(1,-1)" font-size="884px" font-family="serif">動</text><text data-variant="normal" transform="translate(3000,0) scale(1,-1)" font-size="884px" font-family="serif">作</text><path data-c="20" d="" transform="translate(4000,0)"></path><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z" transform="translate(4250,0)"></path><path data-c="41" d="M255 0Q240 3 140 3Q48 3 39 0H32V46H47Q119 49 139 88Q140 91 192 245T295 553T348 708Q351 716 366 716H376Q396 715 400 709Q402 707 508 390L617 67Q624 54 636 51T687 46H717V0H708Q699 3 581 3Q458 3 437 0H427V46H440Q510 46 510 64Q510 66 486 138L462 209H229L209 150Q189 91 189 85Q189 72 209 59T259 46H264V0H255ZM447 255L345 557L244 256Q244 255 345 255H447Z" transform="translate(4639,0)"></path><path data-c="63" d="M370 305T349 305T313 320T297 358Q297 381 312 396Q317 401 317 402T307 404Q281 408 258 408Q209 408 178 376Q131 329 131 219Q131 137 162 90Q203 29 272 29Q313 29 338 55T374 117Q376 125 379 127T395 129H409Q415 123 415 120Q415 116 411 104T395 71T366 33T318 2T249 -11Q163 -11 99 53T34 214Q34 318 99 383T250 448T370 421T404 357Q404 334 387 320Z" transform="translate(5389,0)"></path><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z" transform="translate(5833,0)"></path><path data-c="69" d="M69 609Q69 637 87 653T131 669Q154 667 171 652T188 609Q188 579 171 564T129 549Q104 549 87 564T69 609ZM247 0Q232 3 143 3Q132 3 106 3T56 1L34 0H26V46H42Q70 46 91 49Q100 53 102 60T104 102V205V293Q104 345 102 359T88 378Q74 385 41 385H30V408Q30 431 32 431L42 432Q52 433 70 434T106 436Q123 437 142 438T171 441T182 442H185V62Q190 52 197 50T232 46H255V0H247Z" transform="translate(6222,0)"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(6500,0)"></path><path data-c="6E" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 122T103 161T103 203Q103 234 103 269T102 328V351Q99 370 88 376T43 385H25V408Q25 431 27 431L37 432Q47 433 65 434T102 436Q119 437 138 438T167 441T178 442H181V402Q181 364 182 364T187 369T199 384T218 402T247 421T285 437Q305 442 336 442Q450 438 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(7000,0)"></path><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z" transform="translate(7556,0)"></path></g></g></g></svg></mjx-container></p><ul>
+<li><strong>觸發事件 (Trigger Event)：</strong> 刺激狀態轉移的外部或內部事件（如 <code>chefStartsCooking()</code>, <code>courierScansPickup()</code>）。</li>
+<li><strong>守衛條件 (<code>[...]</code> Guard Condition)：</strong> 必須計算為 <code>true</code> 轉換才會被放行的布林條件（如 <code>[within 5 min]</code>, <code>[time &lt; 2 min]</code>）。</li>
+<li><strong>執行動作 (<code>/ ...</code> Action Effect)：</strong> 狀態轉移瞬間原子化執行的計算動作（如 <code>/ refundCharge()</code>, <code>/ startLiveGPSTracking()</code>）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>狀態進入動作 (State Entry Actions)：</strong>
+<ul>
+<li>進入特定狀態時自動執行的動作（例如：<code>Placed: Entry / startRestaurantAcceptTimer()</code>）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-header="4.6 行為塑模與狀態機" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="41" style="--paginate:true;--header:4.6 行為塑模與狀態機;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.6 行為塑模與狀態機</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-5-ccq-5">觀念檢核測驗 5 (CCQ 5)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>在訂單生命週期狀態機中，標籤 <code>customerCancels() [time &lt; 2 min] / refundCharge()</code> 各自代表何種技術語義？</p>
+<ul>
+<li>
+<p><strong>A.</strong> <code>customerCancels()</code> 為守衛條件；<code>[time &lt; 2 min]</code> 為觸發事件；<code>refundCharge()</code> 為目標狀態。</p>
+</li>
+<li>
+<p><strong>B.</strong> <code>customerCancels()</code> 為觸發事件；<code>[time &lt; 2 min]</code> 為布林守衛條件；<code>refundCharge()</code> 為轉換執行動作。</p>
+</li>
+<li>
+<p><strong>C.</strong> <code>customerCancels()</code> 為目標類別；<code>[time &lt; 2 min]</code> 為呼叫方法；<code>refundCharge()</code> 為傳回型別。</p>
+</li>
+<li>
+<p><strong>D.</strong> <code>customerCancels()</code> 為主要參與者；<code>[time &lt; 2 min]</code> 為逾時限制；<code>refundCharge()</code> 為物件生命線。</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch05/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-header="4.7 AI 輔助系統塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="42" style="--paginate:true;--header:4.7 AI 輔助系統塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.7 AI 輔助系統塑模</header>
+
+<h1 id="47-ai-%E8%BC%94%E5%8A%A9%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1"><strong>4.7 AI 輔助系統塑模</strong></h1>
+<blockquote>
+<p>&quot;AI is a visual copilot that eliminates diagramming friction, but human architects must ensure semantic correctness.&quot;<br />
+<em>(AI 是一具消除繪圖阻力的視覺副駕駛，但人類架構師必須確保語意的終極正確性。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-fragments="2" data-paginate="true" data-header="4.7 AI 輔助系統塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="43" style="--paginate:true;--header:4.7 AI 輔助系統塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.7 AI 輔助系統塑模</header>
+<h2 id="ai-%E5%9C%A8%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1%E4%B8%AD%E7%9A%84%E8%A7%92%E8%89%B2%E8%A6%96%E8%A6%BA%E5%89%AF%E9%A7%95%E9%A7%9B-visual-copilot">AI 在系統塑模中的角色：視覺副駕駛 (Visual Copilot)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>宣告式繪圖革命 (Text-to-Diagram Revolution)：</strong>
+<ul>
+<li>大型語言模型能直接將非結構化軟體需求轉譯為<strong>宣告式文字標記圖表</strong>（如 PlantUML、Mermaid.js、Graphviz）。</li>
+<li>在數秒內架起自然語言使用者故事與正式圖形架構模型之間的橋樑。</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: center; margin-top: 15px;">
+  <img src="../../img/ch05/ai_in_system_modeling.svg" style="max-height: 280px; width: auto;" alt="AI 輔助系統塑模工作流程" />
+</div>
+<ul>
+<li data-marpit-fragment="2"><strong>生產力的大幅躍升：</strong> 徹底消除惱人的手動排版微調，讓軟體架構師能全神貫注於架構邏輯推理，而非繪圖軟體排版。</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-marpit-fragments="4" data-paginate="true" data-header="4.7 AI 輔助系統塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="44" style="--paginate:true;--header:4.7 AI 輔助系統塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.7 AI 輔助系統塑模</header>
+<h2 id="ai-%E5%9C%A8%E7%B3%BB%E7%B5%B1%E5%A1%91%E6%A8%A1%E4%B8%AD%E7%9A%84-4-%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%87%89%E7%94%A8">AI 在系統塑模中的 4 大核心應用</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 文字直接生成 UML (Text-to-UML Generation)：</strong>
+<ul>
+<li>直接根據敏捷使用者故事與 Given-When-Then 驗收準則，自動生成循序圖、類別圖與活動圖標記。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 領域實體智能萃取 (Domain Entity Extraction)：</strong>
+<ul>
+<li>深度語意分析規格需求書，智慧提煉領域名詞（潛在類別、屬性）與動詞（方法操作、關聯）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 跨圖表一致性驗證 (Cross-Diagram Consistency Validation)：</strong>
+<ul>
+<li>比對檢查使用案例參與者、類別圖與循序圖生命線，偵測命名衝突或未被實作的方法呼叫。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. 程式碼逆向工程塑模 (Code-to-Model Reverse Engineering)：</strong>
+<ul>
+<li>讀取現有專案程式碼庫（Java/TypeScript/Python），自動逆向產出類別階層與相依圖，加速新進人員上手。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-marpit-fragments="2" data-paginate="true" data-header="4.7 AI 輔助系統塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="45" style="--paginate:true;--header:4.7 AI 輔助系統塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.7 AI 輔助系統塑模</header>
+<h2 id="%E4%BA%BA%E6%A9%9F%E5%8D%94%E5%90%8C%E9%98%B2%E8%AD%B7ai-%E5%A1%91%E6%A8%A1%E9%A2%A8%E9%9A%AA%E8%88%87%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90">人機協同防護：AI 塑模風險與最佳實踐</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>未經審查即盲信 AI 塑模的潛在風險：</strong>
+<ul>
+<li><strong>虛構關聯 (Hallucinated Associations)：</strong> 幻覺捏造出不存在於業務真實世界中的繼承或組合關聯。</li>
+<li><strong>架構過度膨脹 (Architectural Bloat)：</strong> 硬塞不必要的設計模式（如動輒套用十層工廠裝飾者），違背簡潔原則。</li>
+<li><strong>幽靈生命線 (Ghost Lifelines)：</strong> 在循序圖中憑空捏造不存在的微服務 API 或網路端點。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>不可動搖的軟體工程黃金守則：</strong>
+<blockquote>
+<p><strong>「AI 負責起草繪圖；人類架構師負責檢驗語意！」</strong><br />
+<em>(AI Drafts the Diagram; The Human Architect Validates the Semantics!)</em><br />
+軟體架構師必須以批判性工程眼光審視 AI 生成的模型，確保其忠實反映領域真相與架構邊界。</p>
+</blockquote>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-header="4.7 AI 輔助系統塑模" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="46" style="--paginate:true;--header:4.7 AI 輔助系統塑模;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.7 AI 輔助系統塑模</header>
+<h3 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-6-ccq-6">觀念檢核測驗 6 (CCQ 6)</h3>
+<div class="ccq-columns">
+  <div class="ccq-text">
+<p>當軟體工程團隊導入生成式 AI 輔助自動化產生 UML 圖表時，軟體工程師／架構師最核心的職責為何？</p>
+<ul>
+<li>
+<p><strong>A.</strong> 拒絕使用任何 AI 工具，堅持純手動編寫每一行繪圖標記語法。</p>
+</li>
+<li>
+<p><strong>B.</strong> 嚴格驗證領域業務語意正確性、結構約束條件與架構簡潔度。</p>
+</li>
+<li>
+<p><strong>C.</strong> 全面廢除傳統程式碼審查（Code Review）與架構設計評審會議。</p>
+</li>
+<li>
+<p><strong>D.</strong> 無條件全盤接受 AI 所生成的所有類別關聯與微服務生命線。</p>
+</div>
+<div class="ccq-logo">
+  <img src="../../img/ch05/question_icon.svg" alt="Question Icon" style="max-width: 140px;" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-header="4.8 核心複習與參考文獻" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="47" style="--paginate:true;--header:4.8 核心複習與參考文獻;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.8 核心複習與參考文獻</header>
+
+<h1 id="48-%E6%A0%B8%E5%BF%83%E8%A4%87%E7%BF%92%E8%88%87%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB"><strong>4.8 核心複習與參考文獻</strong></h1>
+<blockquote>
+<p>&quot;Models are the lingua franca of software engineering.&quot;<br />
+<em>(模型，是軟體工程世界的通用語彙。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-header="4.8 核心複習與參考文獻" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="48" style="--paginate:true;--header:4.8 核心複習與參考文獻;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.8 核心複習與參考文獻</header>
+<h2 id="%E6%A0%B8%E5%BF%83%E8%A7%80%E5%BF%B5%E7%B5%B1%E6%95%B4%E4%BA%92%E5%8B%95%E5%A1%AB%E7%A9%BA%E5%B0%8F%E6%B8%AC%E9%A9%97">核心觀念統整：互動填空小測驗</h2>
+<p>測試你對本章核心概念的掌握度：</p>
+<ol>
+<li>在 Rational Software 整合並催生 UML 的「三巨頭」為 Grady Booch、Jim Rumbaugh 與 <strong><code>___</code></strong>。</li>
+<li><strong><code>___</code></strong> 圖用以劃定內部軟體系統與外部夥伴服務雲端之間的營運邊界。</li>
+<li>在使用案例塑模中，多個案例必定強制共用的子流程是透過 <strong><code>___</code></strong> 關係抽離。</li>
+<li>將系統劃分為使用者介面、商業邏輯協調與持久化實體的經典架構模式是 <strong><code>___</code></strong>。</li>
+<li>在 UML 類別圖中，實心黑菱形 (<code>◆</code>) 代表 <strong><code>___</code></strong>，子物件無法脫離父物件獨立存在。</li>
+<li>在 UML 類別圖中，空心白菱形 (<code>◇</code>) 代表 <strong><code>___</code></strong>，子物件具備完全獨立的生命週期。</li>
+<li>UML 狀態機圖之狀態轉移標籤嚴格遵循標準語法：觸發事件 [<strong><code>___</code></strong>] / 執行動作。</li>
+</ol>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-marpit-fragments="2" data-paginate="true" data-header="4.8 核心複習與參考文獻" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="49" style="--paginate:true;--header:4.8 核心複習與參考文獻;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="49">
+<header>4.8 核心複習與參考文獻</header>
+<h2 id="%E7%B6%93%E5%85%B8%E6%96%87%E7%8D%BB%E8%88%87%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80-references">經典文獻與延伸閱讀 (References)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>奠基教科書與國際標準規範：</strong>
+<ul>
+<li>Sommerville, I. (2016). <em>Software Engineering</em> (10th ed.). Chapter 5: System Modeling. Pearson.</li>
+<li>Booch, G., Rumbaugh, J., &amp; Jacobson, I. (2005). <em>The Unified Modeling Language User Guide</em> (2nd ed.). Addison-Wesley.</li>
+<li>Fowler, M. (2003). <em>UML Distilled: A Brief Guide to the Standard Object Modeling Language</em> (3rd ed.). Addison-Wesley.</li>
+<li>Cockburn, A. (2000). <em>Writing Effective Use Cases</em>. Addison-Wesley.</li>
+<li>Object Management Group (OMG). (2017). <em>OMG Unified Modeling Language (OMG UML) Specification</em>, Version 2.5.1.</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>現代宣告式繪圖標準與 AI 塑模工具：</strong>
+<ul>
+<li>PlantUML 開源標準官方網站：<a href="https://plantuml.com">plantuml.com</a></li>
+<li>Mermaid.js JavaScript 宣告式繪圖文件庫：<a href="https://mermaid.js.org">mermaid.js.org</a></li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o),l=Symbol();let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[l];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();a()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[l]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>各位好，歡迎來到軟體工程第四課：系統塑模與統一架構。
+
+在第三章中，我們學習了如何透過自然語言與使用者故事來發掘、分析與規格化軟體需求。然而，自然語言天生具備模糊性與不完整性，很難直接無縫轉化為穩健且無瑕疵的程式碼。
+
+今天，我們將完成從抽象需求邁向形式化軟體模型的關鍵躍遷。我們將探討什麼是系統塑模、深入理解四大核心視角、回顧統一塑模語言（UML）的三巨頭歷史，並透徹掌握每一種不可或缺的 UML 圖表。
+
+總結這張投影片，請記住這個核心觀念：系統塑模在人類的模糊需求與可執行的軟體程式碼之間，建立了正式且精確的觀念橋樑。</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>這是我們第四章的學習藍圖。
+
+在左側的第一部分，我們從系統塑模的根本哲學出發，探索四大核心視角，回顧 UML 的統一歷史，並以美食外送平台為貫穿案例，定義系統邊界與跨角色活動流程。
+
+在右側的第二部分，我們深入探索動態循序互動、領域類別骨幹架構、反應式狀態機，以及現代生成式 AI 如何作為視覺副駕駛輔助 Text-to-UML。
+
+總結這張投影片，請記住這個核心觀念：本章將帶領大家完整走過結構、行為與 AI 賦能的系統塑模全貌。</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>我們首先進入 4.1 節：系統塑模基礎與統一塑模語言（UML）的演進歷程。
+
+在探討具體的圖表符號之前，我們必須先釐清：究竟什麼是模型？為什麼工程師在寫 code 之前必須先建構模型？軟體產業又是如何歷經波折，最終團結在同一套通用的視覺文法之下？
+
+總結這張投影片，請記住這個核心觀念：系統塑模提供具有明確目的的抽象化機制，使工程師能夠有效駕馭軟體的本質複雜度。</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>讓我們先建立系統塑模的根本定義。
+
+Ian Sommerville 教授將塑模定義為建立抽象模型的過程，每個模型展現系統不同的視角。
+
+請特別注意「抽象化」這個詞。試想：如果一張蓋房子的建築藍圖把混凝土中的每一顆分子都畫出來，工人根本不可能蓋出房子！你需要一張水電圖、一張結構圖、一張通風管線圖。
+
+軟體工程也是完全相同的道理：沒有任何一張圖能包辦整個軟體系統，我們必須透過多種互補的視角來掌控複雜度。
+
+總結這張投影片，請記住這個核心觀念：系統塑模透過多重視角的有目的抽象化，幫助軟體工程師全面駕馭軟體系統的複雜度。</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>國際軟體工程規範將系統模型有條不紊地理出四大核心視角：
+
+第一，外部視角：系統的界線劃在哪裡？外部有哪些雲端服務和人類使用者會接觸它？
+第二，互動視角：參與者與物件之間在時間軸上如何相互傳遞訊息？
+第三，結構視角：系統內部的靜態資料表、類別、屬性與關聯長什麼樣子？
+第四，行為視角：當事件發生或執行流程啟動時，系統的狀態如何動態反應與流轉？
+
+優秀的軟體工程師必須根據眼前的問題，精準挑選最合適的視角來思考。
+
+總結這張投影片，請記住這個核心觀念：四大核心塑模視角分別為外部、互動、結構與行為視角。</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>在 UML 2.5 定義的 14 種圖表中，這五種（加上狀態圖）構成了職業軟體工程師最常用的核心二八工具包：
+
+環境圖劃定系統周邊範圍。
+活動圖勾勒業務工作流程。
+使用案例圖界定功能範圍與使用者目標。
+循序圖描繪運行時隨時間發生的物件溝通。
+類別圖作為物件導向程式碼與資料庫結構的靜態建築骨幹。
+而狀態機圖則掌管事件驅動的離散反應邏輯。
+
+總結這張投影片，請記住這個核心觀念：精通這五大核心 UML 圖表，就能以精確且無歧義的視覺文法表達任何軟體架構。</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>既然塑模如此不可或缺，軟體產業究竟是如何整合出一套共同標準的呢？
+
+在 1980 年代末到 1990 年代初，C++ 與 Smalltalk 掀起物件導向狂潮，但隨之而來的是一場大混亂——所謂的「方法論之戰」。
+
+當時市場上湧現了 50 多種互相競爭的塑模符號！Grady Booch 用雲朵表示類別；James Rumbaugh 用整齊的矩形；Ivar Jacobson 提出了使用案例；還有 Coad-Yourdon 等各派學說。
+
+這造成了架構上的通天塔。你在 IBM 畫雲朵，換到 GE 得畫方塊。塑模工具彼此無法流通，軟體設計被鎖死在封閉規格中。
+
+總結這張投影片，請記住這個核心觀念：1990 年代的方法論之戰以 50 多種互不相容的符號割裂了軟體產業，催生了標準化的迫切需求。</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>這場危機是如何化解的？正是透過在 Rational Software 上演的傳奇智識大融合。
+
+1994 年，Jim Rumbaugh 離開奇異加入 Rational，與 Grady Booch 合力融合理論分析與實務設計。隔年，Ivar Jacobson 也帶著使用案例方法加入。
+
+這三位大師在軟體界被親切尊稱為「UML 三巨頭 (The Three Amigos)」。
+
+值得稱許的是，Rational 並沒有把 UML 當成自家的私有封閉規格，而是將其無私捐贈給國際開放標準組織 OMG。1997 年 11 月，UML 1.1 成為全球通用的軟體塑模國際標準。
+
+總結這張投影片，請記住這個核心觀念：Rational 公司匯聚了三巨頭的智慧，並由 OMG 正式確立 UML 為全球統一的軟體塑模語言標準。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>讓我們認識三巨頭中的第一位：Grady Booch。
+
+Grady Booch 是 IBM 院士，曾任 Rational Software 首席科學家。他所著的《物件導向分析與設計》是軟體工程領域的殿堂級經典。
+
+Booch 的獨特強項在於「具體軟體設計」——類別、繼承、多型與模組如何直接對應到可執行的程式碼架構。他早期著名的雲朵形狀類別記號，後來演變為 UML 標準的三格矩形。
+
+總結這張投影片，請記住這個核心觀念：Grady Booch 奠定了物件導向設計抽象化與程式碼具體架構對應的基石。</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>認識第二位巨頭：James Rumbaugh 博士。
+
+Jim Rumbaugh 早年在奇異公司企業研發中心帶領軟體技術研究。他所創立的 OMT 方法，被業界公認為數學結構最嚴謹的分析方法論。
+
+Rumbaugh 的天才在於領域分析——精確捕捉真實世界的實體、資料庫關聯與狀態機。當 Rumbaugh 與 Booch 攜手時，正好在「分析領域問題」與「設計軟體架構」之間架起完美的平衡木。
+
+總結這張投影片，請記住這個核心觀念：James Rumbaugh 為 UML 奠定了嚴謹的領域分析、資料關聯與狀態圖塑模根基。</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>認識第三位巨頭：Ivar Jacobson 博士。
+
+Jacobson 早年在愛立信研發龐大的電話交換機系統，後來創立 Objectory 公司。他在 1986 年發明了「使用案例 (Use Cases)」。
+
+在 Jacobson 之前，軟體需求大多是一篇篇生硬枯燥的條文式功能規格。Jacobson 徹底顛覆了這個視角，把焦點拉回人類使用者身上：究竟是「誰」在用系統？他們想達成什麼「商業目標」？他還提出了至今仍主導架構設計的 BCE 模式。
+
+總結這張投影片，請記住這個核心觀念：Ivar Jacobson 發明了使用案例與 BCE 模式，讓軟體架構真正以使用者目標為依歸。</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>請大家細細體會三巨頭之間天衣無縫的互補之美：
+
+Ivar Jacobson 從使用者視角回答了「為什麼 (Why)」系統需要存在。
+James Rumbaugh 梳理問題領域，回答了存在哪些資料實體的「本質 (What)」。
+Grady Booch 規劃軟體架構，回答了這些元件在程式碼中如何高效運行的「作法 (How)」。
+
+三巨頭的合體不僅成就了 UML，更奠定了 Rational 統一流程（RUP）等現代軟體工程方法的基石。
+
+總結這張投影片，請記住這個核心觀念：UML 完美融合了使用者目標 (Why)、領域資料 (What) 與程式架構 (How) 的三位一體。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>讓我們透過觀念測驗 1 來檢驗對 UML 發展史的理解。
+
+檢視各個選項：
+Grady Booch 開創了 Booch 方法，主攻物件導向設計與程式碼映射。
+James Rumbaugh 開發了 OMT 方法，專精領域分析與物件狀態模型。
+Martin Fowler 則是撰寫《UML 精華 (UML Distilled)》與《重構》的大師，但他並非三巨頭成員。
+
+正確答案是 C：Ivar Jacobson！Jacobson 於 1986 年在愛立信提出使用案例，徹底將軟體架構引導向以使用者目標為核心的典範。
+
+總結這張投影片，請記住這個核心觀念：Ivar Jacobson 發明了使用案例，將需求與架構聚焦於使用者具體目標。</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>現在我們推進到 4.2 節：環境塑模與程序塑模。
+
+我們將先運用環境模型（Context Model）明確界定軟體架構的週邊範圍，接著運用 UML 活動圖（Activity Diagram）剖析跨角色、端到端的完整業務流程。
+
+總結這張投影片，請記住這個核心觀念：環境模型定義系統的邊界與外在相依，活動圖則捕捉跨角色的業務協同流程。</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>請大家看螢幕上這張美食外送平台的系統環境圖 (System Context Diagram)。
+
+注意中央那個標註為「美食外送平台邊界」的大矩形。方框內部的一切，代表我們軟體團隊負責設計、部署、維護的內部程式碼與微服務。
+
+再看方框外圍的外部實體與角色：
+左側是三大核心人類角色：瀏覽菜單點餐的顧客、更新備餐進度的合作餐廳，以及外送配送的外送員。
+右側則是外部企業級雲端服務：如 Stripe/Apple Pay 等金流閘道、Google Maps 等導航服務，以及 Firebase 推播服務。
+
+總結這張投影片，請記住這個核心觀念：環境圖明確劃定了內部自主開發軟體與外部使用者、雲端服務之間的嚴謹界線。</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>深入剖析為何環境圖對軟體架構師至關重要：
+
+第一，它明確界定了工程團隊真正需要開發的職責範圍。我們「不需要」自己去開一家跨國銀行或發射導航衛星！我們透過清晰的網路合約將這些職責委託給 Stripe 與 Google Maps。
+
+第二，它揭示了關鍵的資安防護邊界：敏感的金流扣款委由外部金流處理，讓我們內部的資料庫得以排除在繁瑣昂貴的 PCI-DSS 稽核範疇之外。
+
+總結這張投影片，請記住這個核心觀念：環境圖透過清晰定義外部 API、使用者角色與安全邊界，消除了系統架構的模糊性。</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>現在我們來看外送業務的第一階段活動流程：顧客下單與廚房備餐。
+
+請注意畫面上的三條垂直泳道（Swimlanes）：左邊是顧客、中央是平台核心、右邊是餐廳夥伴。
+泳道明確標示了組織權責：每一個動作究竟該由誰負責執行！
+
+順著流程走：
+1. 顧客挑選餐點並送出訂單。
+2. 平台驗證購物車，並呼叫外部金流進行信用卡預先授權。
+3. 注意決策菱形：若扣款成功則成立訂單；失敗則進入中斷終止節點。
+4. 商家接獲通知：若接單則廚房開火烹煮；若拒單則平台自動全額退款。
+
+總結這張投影片，請記住這個核心觀念：活動圖的泳道將下單作業步驟清晰劃分給顧客、平台與餐廳三大角色。</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>回顧第一階段活動圖的視覺文法：
+
+圓角矩形代表具體的動作狀態。
+泳道按組織角色切分，誰做什麼一目了然。
+菱形代表分支決策點，依布林條件分流。
+終止節點代表流程正常或異常結束。
+
+請特別注意：當餐廳原物料不足拒單時，流程並非卡住崩潰，而是乾淨地導向補償邏輯（例如全額即時退費）後優雅終止。
+
+總結這張投影片，請記住這個核心觀念：活動圖透過角色泳道、決策分支與終止節點，精確刻畫循序與異常流程。</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>現在我們來看業務履行的第二階段：外送派單與餐點實體交付。
+
+注意這裡的三大泳道：左側是平台核心、中央是外送員、右側是顧客。
+
+請看上方那條粗黑水平橫線：那是分岔棒（Fork Bar）！
+當餐點製作完成時，系統並不需要一步一步等待，而是瞬間分岔為兩個平行的並行動作：
+第一，推播「餐點製作完成」通知給顧客。
+第二，同時啟動 GPS 演算，向最近的外送員推播派單任務！
+
+追蹤外送員的動作：接單、導航抵達餐廳、掃描 QR Code 取餐、騎車抵達顧客地址，完成實體交付。
+最後平台完成正式扣款結算，並由顧客對外送服務進行評價。
+
+總結這張投影片，請記住這個核心觀念：利用分岔棒（Fork）塑模並行並發機制，能同時啟動推播通知與外送派單。</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>深入剖析這張活動圖的並發與同步機制：
+
+請注意分岔棒：在即時分散式系統中，平行處理非常關鍵。如果後端系統必須等外送員接單後才能發通知給客人，客人的焦慮感會大幅增加。分岔棒讓系統能同時執行通知與外送媒合。
+
+另外注意金流清算：授權（Authorize）在下單時完成，但真正的清算扣款（Capture）嚴格推遲至實體驗收完成之時。
+
+總結這張投影片，請記住這個核心觀念：分岔棒將執行流程拆解為並行並發任務，實現非同步派單與即時通知。</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>我們現在前進至 4.3 節：功能塑模與使用案例模型。
+
+使用案例是由 Ivar Jacobson 所開創，是軟體工程界定義功能範疇的公認標準。它揚棄了雜亂無章的條例文字，改以「參與者（Actor）」追求「具體商業目標」的脈絡來結構化組織需求。
+
+讓我們看看美食外送平台如何規範其功能範疇。
+
+總結這張投影片，請記住這個核心觀念：使用案例界定了外部參與者與系統之間的行為規格契約。</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>請看這張精心配置的美食外送平台使用案例圖。
+
+注意參與者的視覺平衡佈局：
+左側是主要使用者：顧客與餐廳夥伴。
+右側是外送員與次要支援參與者：外部金流閘道！
+這樣的左右平衡配置，能避免圖表垂直過度拉長，非常適合現代 16:9 螢幕瀏覽。
+
+請觀察：
+顧客發起「瀏覽菜單」、「美食訂餐下單」、「即時追蹤配送」與「取消訂單」。
+餐廳管理菜單料理並確認接單。
+外送員接收外送任務並回報送達。
+而「美食訂餐下單」則透過 &lt;&lt;include&gt;&gt; 包含了「處理信用卡扣款」，進一步呼叫外部金流閘道。
+
+總結這張投影片，請記住這個核心觀念：將參與者平衡配置於系統邊界兩側，能打造出清晰易讀的使用案例圖。</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>剖析使用案例塑模的幾大關鍵法則：
+
+第一，區分主要與次要參與者。主要參與者主動觸發流程——顧客肚子餓要點餐。次要參與者（如 Stripe）是被系統叫來幫忙扣款的服務。
+
+第二，千萬注意粒度！新手工程師最容易犯的錯誤就是「功能分解濫用」，把「點擊按鈕」、「輸入文字」通通畫成橢圓，導致圖面充斥瑣碎雜訊。記住：使用案例必須為參與者交付有意義的成果。
+
+總結這張投影片，請記住這個核心觀念：使用案例應聚焦於交付完整商業價值的使用者目標，而非低階 UI 按鈕操作。</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>這是軟體工程考試與實務面談中最常被考到、也最常被搞混的觀念：Include vs. Extend。
+
+請並排對比這兩張卡片：
+Include 代表「必定發生的共用行為」。箭頭由基礎案例「指過去」被包含的案例。下單買餐點一定需要結帳扣款！抽離出來後，訂餐與儲值都能共用它。
+
+Extend 則代表「選用或有條件觸發的外加行為」。請特別注意箭頭方向：它是由擴充案例「指回」基礎案例！只有當顧客持有有效優惠券時才會套用折扣碼，沒有折扣碼時基礎下單流程依然能完美跑完。
+
+總結這張投影片，請記住這個核心觀念：Include 指向必跑的共用子程序；Extend 則從選用擴充行為指回基礎使用案例。</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>請看這張視覺比較圖，牢牢記住箭頭的方向機制：
+
+上方箭頭：`美食訂餐下單` 順向指向 `處理信用卡扣款`，標註為 `&lt;&lt;include&gt;&gt;`。為什麼？因為每一次點餐結帳，金流扣款都是強制必經的子程序。
+
+下方箭頭：`套用優惠折扣碼` 逆向指回 `美食訂餐下單`，標註為 `&lt;&lt;extend&gt;&gt;`。為什麼？因為套用折價券完全是選用的！只有在使用者輸入有效優惠碼的特定擴充點上才會觸發。
+
+請務必記住這兩個箭頭的方向差別：Include 順向指去，Extend 逆向指回！
+
+總結這張投影片，請記住這個核心觀念：Include 箭頭指向必執行的子任務，Extend 箭頭則由選用行為指回基礎使用案例。</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>使用案例圖充其量只是一張目錄；真正的軟體工程合約是這份使用案例規格書。
+
+請看規格書的嚴謹結構：
+前置條件：開始前必須滿足什麼？顧客必須登入，餐廳必須營業中。
+後置條件：完成後系統做出什麼保證？訂單已付款、廚房已受通知、收據已寄發。
+主要成功路徑：編號清晰、一步一步的標準工作流程。
+擴充替代路徑：遇到極端邊界情境時怎麼處理？信用卡刷不過該怎麼辦？
+
+這份表格是開發人員編寫程式碼與測試人員編寫整合測試的共同驗收基準。
+
+總結這張投影片，請記住這個核心觀念：結構化使用案例規格書詳細規範了前置條件、後置保證、主要成功步驟與異常替代路徑。</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>讓我們透過觀念測驗 2 來檢驗對使用案例關係的理解。
+
+分析選項：
+選項 A 完全顛倒了業務邏輯。
+選項 C 混淆了參與者角色與關聯構造型（Stereotypes）。
+選項 D 混淆了類別圖與使用案例圖的箭頭概念。
+
+正確答案是 B！套用優惠碼是有條件且非強制的選用行為——沒有折價券也能順利下單。相對地，處理扣款是每筆結帳必經的共用子流程。
+
+總結這張投影片，請記住這個核心觀念：Include 代表必定執行的共用功能，Extend 則代表有條件觸發的選用行為。</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>現在推進到 4.4 節：動態互動塑模與循序圖（Sequence Diagrams）。
+
+如果說使用案例規格書是用表格文字描繪流程，那麼真實軟體世界則是由記憶體與網路中相互傳遞訊息的協同物件所驅動。
+
+在此節中，我們將學習 UML 循序圖，追蹤美食外送的結帳訊息流，並掌握經典的邊界-控制-實體（BCE）架構模式。
+
+總結這張投影片，請記住這個核心觀念：循序圖沿著時間軸精確刻畫參與物件之間的訊息互動傳遞。</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>請看這張「美食訂餐下單」情境的循序圖。
+
+注意橫跨上方的各個參與物件：
+最左側是人類顧客。
+邊界物件：`CheckoutUI`。
+業務邏輯協調者：`OrderController` 控制器。
+外部金流介面：`PaymentGatewayAPI`。
+實體物件：`Order` 與 `Restaurant`。
+以及背景外送排程服務：`DispatchService`。
+
+順著時間軸由上往下追蹤訊息：
+1. 顧客點擊確認結帳。
+2. UI 將請求委派給 OrderController。
+3. 控制器進行內部購物車驗證。
+4. 控制器呼叫外部 PaymentGatewayAPI 進行預扣授權。
+5. 收到授權 Token 後，控制器在資料庫建立 Order 實體。
+6. 控制器非同步通知餐廳並加入外送派單佇列。
+7. 最後將確認結果與追蹤網址回傳給顧客。
+
+總結這張投影片，請記住這個核心觀念：循序圖依時間順序清晰追蹤各架構元件之間的方法調用與訊息傳遞。</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>請特別注意主導這張循序圖的核心設計模式：邊界-控制-實體（BCE）模式。
+
+邊界物件位於外圍——負責渲染畫面或解析 JSON。
+控制物件蘊含商業邏輯——協調驗證、分散式交易與派單排程。
+實體物件則代表儲存在資料庫裡的領域核心資料。
+
+這是一條軟體工程的鋼鐵紀律：前端 UI 絕對不能直接繞過控制器去讀寫資料庫實體！
+如果你的網頁表單直接寫 SQL 存取資料表，就會寫出高耦合、極端難以維護的義大利麵程式碼。
+
+總結這張投影片，請記住這個核心觀念：BCE 模式透過控制協調者，將使用者介面與底層持久化資料模型徹底解耦。</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>複習 UML 循序圖的標準符號規範：
+
+垂直虛線是生命線——代表物件存活在記憶體的時間。
+細長矩形條是啟用條——代表物件正在積極執行指令。
+實心三角箭頭代表同步呼叫，呼叫端會被阻塞等待。
+開放刺狀箭頭代表非同步訊息，送出後不等待立刻往下走。
+虛線箭頭則是運算完成後的資料回傳。
+
+請看圖中步驟 3：`validateCart()` 彎回控制器自己，這就是經典的自身調用（Self-Invocation）。
+
+總結這張投影片，請記住這個核心觀念：循序圖透過時間生命線，清楚區分了同步阻斷呼叫、非同步訊息與資料回傳。</p></div><div class="bespoke-marp-note" data-index="31" tabindex="0"><p>讓我們透過觀念測驗 3 檢核對 BCE 架構的掌握度。
+
+分析選項：
+選項 A 嚴重違反 BCE 原則：UI 絕不能直接跨層操縱 Entity 資料實體！
+選項 B 繞過了內部驗證直接呼叫外部收費 API，容易產生幽靈帳單。
+選項 D 讓前端畫面直接綁定特定的領域實體，造成高度耦合。
+
+正確答案是 C！`OrderController` 作為控制物件，負責承接請求、驗證購物車商品、協調外部扣款並處理資料庫持久化。
+
+總結這張投影片，請記住這個核心觀念：控制物件在 UI 邊界與資料實體之間擔任中介，負責落實商業規則與流程協調。</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>我們現在轉進 4.5 節：結構塑模與領域類別圖（Class Diagrams）。
+
+循序圖展現了特定場景下的動態訊息傳遞，但我們同樣需要精確定義軟體的靜態組織——包含有哪些類別、各自具備哪些欄位與方法，以及不受時間流逝影響的物件關聯。
+
+讓我們檢視美食外送平台的領域類別模型。
+
+總結這張投影片，請記住這個核心觀念：類別圖定義了物件導向系統的靜態架構骨幹與領域實體關聯。</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>請看這張完整的美食外送平台領域類別圖。
+
+觀察所有結構元素的精確整合：
+最上方是抽象父類別 `User`，由 `Customer` 與 `Courier` 繼承泛化。
+正中央核心實體是 `Order`。
+請注意實心黑菱形：`Restaurant` 組合了 `MenuItem`，而 `Order` 組合了 `OrderItem`。
+請注意空心白菱形：`DeliveryTask` 聚合了 `Courier`。
+再注意每條關聯線兩端的重數（Multiplicity）：`1`、`1..*`、`0..*` 與 `0..1`。
+
+接下來我們逐一拆解這張圖背後的軟體工程決策。
+
+總結這張投影片，請記住這個核心觀念：領域類別圖將類別、繼承、整體部分生命週期與重數綜合成完整的資料藍圖。</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>深入剖析類別關聯背後的工程考量：
+
+請大家務必釐清「組合」與「聚合」的重大差異：
+`OrderItem` 指向 `Order` 是實心菱形（組合）！如果訂單刪除，裡面的明細項目隨之消失，不可能單獨飄在記憶體裡。
+
+但 `DeliveryTask` 指向 `Courier` 是空心菱形（聚合）！任務包含了一位外送員，但外送員是獨立個體。送完這單，外送員繼續在線等待下一單。
+
+另外，`OrderItem` 獨立保存單價快照，能避免商家下個月調漲菜單時，上個月已結算訂單金額跟著跳動的嚴重財務災難！
+
+總結這張投影片，請記住這個核心觀念：在塑模整體部分關係時，務必區分組合（生命週期綁定）與聚合（具備獨立生命週期）。</p></div><div class="bespoke-marp-note" data-index="35" tabindex="0"><p>這是類別圖語法的快速參考手冊：
+
+每個類別矩形分為三格：名稱、屬性與操作方法。
+可見度符號落實物件導向封裝精神：加號代表 public，減號代表 private，井號代表 protected。
+
+關聯兩端的重數宣示了系統的關鍵業務規則：
+`1` 代表恰好一個。
+`0..1` 代表選用。
+`1..*` 代表至少一個。
+例如，我們宣告 `Order` 必須包含 `1..*` 筆 `OrderItem`，意味著商業邏輯禁止建立 0 項商品的空訂單！
+
+總結這張投影片，請記住這個核心觀念：類別方格定義名稱、屬性與操作，並透過嚴格的可見度與重數語義落實物件導向設計。</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>讓我們透過觀念測驗 4 來檢核對物件生命週期耦合的理解。
+
+檢視各選項：
+選項 A 完全顛倒了兩者的生命週期。
+選項 C 混淆了整體與部分關聯與類別繼承。
+選項 D 混淆了重數與關聯種類。
+
+正確答案是 B！`OrderItem` 在商業邏輯上無法脫離父層 `Order` 獨立存在——訂單被刪除，明細必然連帶銷毀（組合）。相反地，外送員是獨立個體，任務完成或取消都不影響外送員的存在（聚合）。
+
+總結這張投影片，請記住這個核心觀念：組合將組件生命週期與父層緊密綁定，而聚合則保有組件獨立的生命週期。</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>我們接著進入 4.6 節：行為塑模與狀態機模型（State Machine Diagrams）。
+
+類別圖展現靜態結構，循序圖描繪單一場景的互動，但是對於反應式系統——例如自駕車控制、醫療輸液幫浦，以及外送訂單的生命週期流轉——最好的塑模方式就是有限狀態機（FSM）。
+
+讓我們看看一筆外送訂單如何在各個離散運作狀態之間切換。
+
+總結這張投影片，請記住這個核心觀念：狀態機塑模了反應式系統如何針對外在事件，在離散運作狀態之間依序轉換。</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>請看這張塑模訂單完整生命週期的 UML 狀態機圖。
+
+注意標準記號：
+上方實心黑圓是起始狀態（Initial State）。
+圓角矩形代表各個離散狀態：`Placed (已下單)`、`Accepted (已接單)`、`Preparing (備餐中)`、`ReadyForPickup (待取餐)`、`OutForDelivery (配送中)`、`Delivered (已送達)`，以及 `Cancelled (已取消)`。
+同心雙圓（牛眼圓）代表結束終止狀態。
+
+注意連接狀態之間的箭頭：這些是狀態轉換（Transitions）。
+上面的標註遵循經典 UML 文法：`觸發事件 [守衛條件] / 執行動作`。
+例如，在 `Placed` 狀態下，若發生 `restaurantAccepts() [within 5 min]`，則轉移至 `Accepted` 並執行 `/ lockOrder()`。
+若顧客在兩分鐘內取消，則轉移至 `Cancelled` 並執行 `/ refundCharge()`。
+
+總結這張投影片，請記住這個核心觀念：狀態機透過事件觸發、守衛條件與轉換動作，精確規範系統的離散狀態演變。</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>深入剖析狀態機對分散式交易系統的重大價值：
+
+想像一筆訂單已經進入 `OutForDelivery (配送中)` 狀態，此時顧客在手機上猛按「取消訂單」會怎樣？
+因為在狀態機上，從 `OutForDelivery` **根本沒有任何一條箭頭**可以通往 `Cancelled`，系統在架構層級就能直接安全拒絕取消請求！外送員已經在路上，絕不允許隨意取消。
+
+再看中括號裡的守衛條件：在 `Placed` 狀態，顧客只有在 `[time &lt; 2 min]` 條件下才能取消；超過兩分鐘，守衛條件評估為 false，取消通道直接封鎖！
+
+狀態機徹底杜絕了分散式系統中的非法狀態轉移。
+
+總結這張投影片，請記住這個核心觀念：狀態機透過事件觸發、布林守衛條件與原子動作，在架構層級杜絕非法商業狀態轉移。</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>讓我們透過觀念測驗 5 驗證對狀態機標籤語法的掌握。
+
+檢視選項：
+選項 A 完全調換了定義。
+選項 C 誤用類別圖名詞解釋狀態圖。
+選項 D 混入了循序圖的參與者與生命線名詞。
+
+正確答案是 B！`customerCancels()` 是觸發事件，`[time &lt; 2 min]` 是必須成立的布林守衛條件，而 `/ refundCharge()` 則是在狀態轉移時觸發的原子執行動作。
+
+總結這張投影片，請記住這個核心觀念：UML 狀態機轉換嚴格遵循「事件 [守衛條件] / 動作」的標準文法。</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>現在我們來到現代軟體工程的最前線：4.7 節 AI 輔助系統塑模。
+
+過去幾十年來，開發者對 UML 最大的抱怨之一，就是必須在厚重的塑模軟體裡痛苦地拖拉矩形、調整箭頭對齊、維護不相容的二進位檔案。
+
+有了大型語言模型（LLM），這道阻力徹底煙消雲散。LLM 極度擅長將自然語言規格轉譯為 PlantUML 或 Mermaid 等宣告式文字圖表。在此節中，我們將探討 AI 塑模應用與人機協同防護。
+
+總結這張投影片，請記住這個核心觀念：AI 工具消除了繪圖排版阻力，但架構師必須嚴格把關語意與架構邊界。</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>生成式 AI 為軟體塑模掀起了一場徹底的解放革命。
+
+過去在 Visio 或 Rational Rose 裡拉箭頭拉到手酸的日子已經結束。現在，你可以將 Jira Ticket 或使用者故事餵給 Claude 或 ChatGPT，指令：「請產生美食結帳的 PlantUML 循序圖，包含金流閘道」。三秒鐘內，乾淨無暇的標記語法就躍然眼前，並能立即編譯成精美向量圖！
+
+這徹底消除了格式摩擦，讓團隊在衝刺規劃（Sprint Planning）時能極速視覺化各種架構替代方案。
+
+總結這張投影片，請記住這個核心觀念：AI 驅動的 Text-to-UML 技術大幅加速了架構視覺化與敏捷文件的迭代效率。</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>歸納今日 AI 在系統塑模領域的四大實務落地應用：
+
+第一，文字轉 UML：需求文字直接轉譯為 Mermaid 或 PlantUML。
+第二，領域實體萃取：從數十頁的合約需求書中自動提煉出核心實體名詞與操作動詞。
+第三，跨圖表一致性檢查：檢查模型是否存在矛盾——例如循序圖呼叫了一個類別圖上根本沒宣告的方法！
+第四，程式碼逆向塑模：接手陌生大型開源專案時，讓 AI 快速掃描並畫出架構圖，幫工程師省下數天摸索時間。
+
+總結這張投影片，請記住這個核心觀念：AI 透過自動草擬、實體萃取、一致性驗證與逆向工程，全方位賦能塑模工作。</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>與需求工程一樣，未經人工驗證的 AI 塑模伴隨著極大風險。
+
+大型語言模型經常患有「設計模式狂熱症」——明明一個簡單類別就能搞定的功能，AI 偏偏要幫你生出 AbstractFactoryDecoratorManager。它也可能產生關聯幻覺，憑空捏造出荒謬的繼承關係。
+
+因此請牢記我們的黃金守則：AI 負責起草繪圖，人類架構師負責檢驗語意！
+
+將 AI 產出的圖表視為快速初稿，永遠以專業批判的工程眼光審視它。
+
+總結這張投影片，請記住這個核心觀念：人類架構師必須針對領域本質真相與架構簡潔性，主動驗證 AI 生成之模型。</p></div><div class="bespoke-marp-note" data-index="45" tabindex="0"><p>讓我們透過觀念測驗 6 來檢核對 AI 輔助塑模人機協同的理解。
+
+使用 AI 生成 UML 時，工程師的核心定位是什麼？
+
+審視選項：
+選項 A 因噎廢食，放棄了現代工具的高效優勢。
+選項 C 與 D 代表了對未經驗證 AI 產物的盲目危險依賴。
+
+正確答案是 B！正如我們的黃金原則：「AI 負責起草繪圖，人類架構師負責檢驗語意」。工程師必須確保產出的模型忠實契合業務真實情況，並堅守架構簡潔性。
+
+總結這張投影片，請記住這個核心觀念：人類架構師的核心使命，在於嚴格驗證 AI 生成圖表的語意正確性與架構簡潔性。</p></div><div class="bespoke-marp-note" data-index="46" tabindex="0"><p>在第四章的尾聲，我們來到 4.8 節：核心複習與參考文獻。
+
+我們將透過互動填空複習，全面鞏固今天所學的所有核心基石——從三巨頭歷史、環境邊界、使用案例契約，到 BCE 循序互動、領域類別圖與有限狀態機。
+
+最後我們將回顧軟體塑模的經典學術文獻與國際標準。
+
+總結這張投影片，請記住這個核心觀念：精通系統塑模，能賦予軟體工程師推導、溝通與驗證複雜軟體架構的強大能力。</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>讓我們透過快速互動測驗，盤點今天的學習成果！
+
+1. 三巨頭是 Grady Booch、Jim Rumbaugh 與 Ivar Jacobson！
+2. 環境圖（Context Diagram）用以劃定系統與外部夥伴的營運邊界！
+3. 強制共用的子流程是透過 &lt;&lt;include&gt;&gt; 關係抽離！
+4. 切分 UI、商業邏輯與資料實體的經典架構是 BCE 模式！
+5. 實心菱形代表組合（Composition）！
+6. 空心菱形代表聚合（Aggregation）！
+7. 中括號中的是守衛條件（Guard Condition）！
+
+全體同學表現非常優異！
+
+總結這張投影片，請記住這個核心觀念：這些核心塑模概念構成了打造穩健物件導向軟體架構的堅固基石。</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>這裡是第四章的經典參考文獻、國際 OMG UML 官方規範，以及現代宣告式繪圖工具資源。
+
+Grady Booch、Jim Rumbaugh 與 Ivar Jacobson 合著的《UML 使用者手冊》，以及 Martin Fowler 的《UML 精華》是不可錯過的永恆經典。Alistair Cockburn 的著作為撰寫高效使用案例立下了黃金標準。
+
+若要實踐現代 Text-to-Diagram 與 AI 繪圖協作，強烈推薦深入研讀 PlantUML 與 Mermaid.js。
+
+謝謝大家今天的投入參與！</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.5.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>

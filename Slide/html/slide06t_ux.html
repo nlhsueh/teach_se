@@ -1,0 +1,1573 @@
+<!DOCTYPE html><html lang="C"><head><title>**軟體工程**</title><meta property="og:title" content="**軟體工程**"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent{inset:0;position:absolute}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container :is(.bespoke-marp-presenter-info-page-area,.bespoke-marp-presenter-info-time,.bespoke-marp-presenter-info-timer){box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent :is(svg.bespoke-marp-slide:active,svg.bespoke-marp-slide:focus-visible,svg.bespoke-marp-slide:hover){--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :where(:is(h1, marp-h1)){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section section:where(:is(h1, marp-h1)){--marpit-root-font-size: 2em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{top:0;left:0}div#\:\$p > svg > foreignObject > section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);color-scheme:light;background-color:var(--color-background);background-image:linear-gradient(135deg, var(--color-background), color-mix(in srgb, var(--color-background) 98%, #888 2%) 50%, var(--color-background) 50%, color-mix(in srgb, var(--color-background) 95%, #fff 5%));color:var(--color-foreground);font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;overflow-wrap:break-word}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{right:0;bottom:0;font-size:80%}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){place-content:safe center center;flex-flow:column nowrap;align-items:stretch}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > section{font-family:'Helvetica Neue', Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif;padding:40px;font-size:24px;line-height:1.55;background-color:#f5f5f5;color:#333}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 24px}div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin-top:10px;margin-bottom:10px}div#\:\$p > svg > foreignObject > section li{margin-bottom:12px;line-height:1.5}div#\:\$p > svg > foreignObject > section li > ul, div#\:\$p > svg > foreignObject > section li > ol{margin-top:4px;margin-bottom:4px}div#\:\$p > svg > foreignObject > section li > ul > li, div#\:\$p > svg > foreignObject > section li > ol > li{margin-bottom:4px;font-size:0.88em;line-height:1.35}div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns)) > ul, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns)) > ol, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns, .lead, .quote-slide)) > p, div#\:\$p > svg > foreignObject > section:not(:has(.two-columns, [class*="split"], table, .ccq-columns, .discussion-columns, .fill-blank-columns, .lead, .quote-slide)) > blockquote{max-width:980px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){color:#0b3c5d}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#328cc1;margin-top:0;margin-bottom:14px;font-size:1.35em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){color:#0b3c5d;margin-top:0;margin-bottom:12px;font-size:1.15em;font-weight:bold}div#\:\$p > svg > foreignObject > section header{position:absolute;top:18px;right:40px!important;left:auto!important;text-align:right;font-size:14px;line-height:1.4;color:#64748b;margin:0;padding:0!important;height:auto!important;min-height:0!important;overflow:visible!important;z-index:1000}div#\:\$p > svg > foreignObject > section header a.header-nav-arrow{display:inline-block;padding:2px 6px;border-radius:4px;color:#475569;text-decoration:none;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;font-size:13px;line-height:1;transition:background 0.15s ease, color 0.15s ease}div#\:\$p > svg > foreignObject > section header a.header-nav-arrow:hover{background:#e2e8f0;color:#1e293b}div#\:\$p > svg > foreignObject > section .header-nav-wrapper{position:relative;display:inline-block}div#\:\$p > svg > foreignObject > section .header-nav-title{display:inline-flex;align-items:center;cursor:pointer;padding:3px 8px;border-radius:6px;font-weight:500;color:#475569;transition:background 0.15s ease, color 0.15s ease}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .header-nav-title, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .header-nav-title{background:#e0f2fe;color:#0369a1}div#\:\$p > svg > foreignObject > section .nav-caret{font-size:10px;margin-left:4px;opacity:0.6;transition:transform 0.2s ease;display:inline-block}div#\:\$p > svg > foreignObject > section section.nav-caret{--marpit-root-font-size: 10px}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .nav-caret, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .nav-caret{transform:rotate(180deg);opacity:1}div#\:\$p > svg > foreignObject > section .nav-dropdown{display:none;position:absolute;right:0;top:100%;margin-top:4px;width:480px;max-height:480px;background:rgba(255, 255, 255, 0.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 16px 36px -4px rgba(15, 23, 42, 0.18), 0 6px 12px -2px rgba(15, 23, 42, 0.08);padding:12px 14px;text-align:left;z-index:99999;overflow-y:auto;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .nav-dropdown::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px;background:transparent}div#\:\$p > svg > foreignObject > section .header-nav-wrapper:hover .nav-dropdown, div#\:\$p > svg > foreignObject > section .header-nav-wrapper.is-open .nav-dropdown{display:block;animation:navFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1)}@keyframes navFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}div#\:\$p > svg > foreignObject > section .nav-dropdown-header{font-size:13px;font-weight:700;color:#1e293b;border-bottom:1px solid #e2e8f0;padding-bottom:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}div#\:\$p > svg > foreignObject > section section.nav-dropdown-header{--marpit-root-font-size: 13px}div#\:\$p > svg > foreignObject > section .nav-dropdown-grid{display:grid;grid-template-columns:1fr;gap:4px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item{display:flex;align-items:center;padding:6px 8px;border-radius:6px;text-decoration:none;color:#334155!important;font-size:12.5px;line-height:1.3;transition:all 0.12s ease;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}div#\:\$p > svg > foreignObject > section section.nav-dropdown-item{--marpit-root-font-size: 12.5px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item:hover{background:#eff6ff!important;color:#1d4ed8!important;font-weight:600;transform:translateX(2px)}div#\:\$p > svg > foreignObject > section .nav-dropdown-item.active{background:#dbeafe!important;color:#1e40af!important;font-weight:700}div#\:\$p > svg > foreignObject > section .nav-dropdown-item .badge{display:inline-block;font-size:11px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;font-weight:600;color:#64748b;background:#f1f5f9;padding:1px 5px;border-radius:4px;margin-right:6px;flex-shrink:0}div#\:\$p > svg > foreignObject > section .nav-dropdown-item div#\:\$p > svg > foreignObject > section section.badge{--marpit-root-font-size: 11px}div#\:\$p > svg > foreignObject > section .nav-dropdown-item:hover .badge{background:#bfdbfe;color:#1e40af}div#\:\$p > svg > foreignObject > section .nav-dropdown-item.active .badge{background:#3b82f6;color:#ffffff}div#\:\$p > svg > foreignObject > section .nav-dropdown-item .item-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}div#\:\$p > svg > foreignObject > section script{display:none!important}@media print{div#\:\$p > svg > foreignObject > section .nav-dropdown, div#\:\$p > svg > foreignObject > section .nav-caret, div#\:\$p > svg > foreignObject > section script, div#\:\$p > svg > foreignObject > section header a.header-nav-arrow{display:none!important}div#\:\$p > svg > foreignObject > section header{z-index:auto!important}}div#\:\$p > svg > foreignObject > section footer, div#\:\$p > svg > foreignObject > section::after{position:absolute;bottom:20px;font-size:0.5em;line-height:1;height:auto;margin:0;padding:0}div#\:\$p > svg > foreignObject > section::after{--marpit-root-font-size: 0.5em}div#\:\$p > svg > foreignObject > section footer{left:40px;text-align:left;color:#777}div#\:\$p > svg > foreignObject > section::after{right:40px;text-align:right;color:#777}div#\:\$p > svg > foreignObject > section blockquote{font-family:'Georgia', 'Songti TC', 'Noto Serif TC', serif;font-style:italic;background:rgba(2, 132, 199, 0.05);border-left:4px solid #0284c7;margin:0.8em 0;padding:10px 20px;font-size:22.5px;line-height:1.55;color:#334155;border-radius:0 6px 6px 0}div#\:\$p > svg > foreignObject > section blockquote strong{font-weight:700;color:#0b3c5d}div#\:\$p > svg > foreignObject > section blockquote::before{content:none!important}div#\:\$p > svg > foreignObject > section table{margin:20px auto;border-collapse:collapse;font-size:20px}div#\:\$p > svg > foreignObject > section th{border-bottom:2px solid #0b3c5d;padding:8px 14px;text-align:left;background-color:#f0f4f8}div#\:\$p > svg > foreignObject > section td{padding:8px 14px;border-bottom:1px solid #e0e0e0}div#\:\$p > svg > foreignObject > section div.matrix-table table{margin:10px auto;font-size:15.5px;line-height:1.35}div#\:\$p > svg > foreignObject > section div.matrix-table th{padding:6px 12px}div#\:\$p > svg > foreignObject > section div.matrix-table td{padding:6px 12px}div#\:\$p > svg > foreignObject > section:has(div.ccq-columns), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns){display:flex;flex-direction:column;justify-content:center}div#\:\$p > svg > foreignObject > section:has(div.ccq-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.ccq-columns) :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.discussion-columns) :is(h3, marp-h3), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns) :is(h2, marp-h2), div#\:\$p > svg > foreignObject > section:has(div.fill-blank-columns) :is(h3, marp-h3){text-align:left;color:#0b3c5d;margin-top:0;margin-bottom:24px}div#\:\$p > svg > foreignObject > section div.ccq-columns, div#\:\$p > svg > foreignObject > section div.discussion-columns{display:flex;align-items:center;gap:32px;margin-top:0!important;margin-bottom:0!important}div#\:\$p > svg > foreignObject > section div.ccq-text, div#\:\$p > svg > foreignObject > section div.discussion-text{flex:70%;font-size:23px;line-height:1.55}div#\:\$p > svg > foreignObject > section div.ccq-text ul, div#\:\$p > svg > foreignObject > section div.ccq-text ol, div#\:\$p > svg > foreignObject > section div.discussion-text ul, div#\:\$p > svg > foreignObject > section div.discussion-text ol{margin-top:8px;margin-bottom:8px}div#\:\$p > svg > foreignObject > section div.ccq-text li, div#\:\$p > svg > foreignObject > section div.discussion-text li{margin-bottom:8px;line-height:1.5}div#\:\$p > svg > foreignObject > section div.ccq-logo, div#\:\$p > svg > foreignObject > section div.discussion-logo{flex:30%;text-align:center;display:flex;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section div.ccq-logo img, div#\:\$p > svg > foreignObject > section div.discussion-logo img{width:100%;max-width:180px;height:auto}div#\:\$p > svg > foreignObject > section div.fill-blank-columns{display:flex;align-items:center;gap:30px;margin-top:0!important;margin-bottom:0!important}div#\:\$p > svg > foreignObject > section div.fill-blank-text{flex:75%}div#\:\$p > svg > foreignObject > section div.fill-blank-columns:has(> div.fill-blank-text:only-child) div.fill-blank-text{flex:100%}div#\:\$p > svg > foreignObject > section div.fill-blank-logo{flex:25%;text-align:center}div#\:\$p > svg > foreignObject > section div.fill-blank-logo img{width:100%;max-width:150px}div#\:\$p > svg > foreignObject > section div.split64, div#\:\$p > svg > foreignObject > section div.split46, div#\:\$p > svg > foreignObject > section div.split55{display:flex;align-items:center;gap:20px}div#\:\$p > svg > foreignObject > section div.split64 > div.left{flex:60%}div#\:\$p > svg > foreignObject > section div.split64 > div.right{flex:40%;text-align:center}div#\:\$p > svg > foreignObject > section div.split64 > div.right img{width:100%;max-width:330px}div#\:\$p > svg > foreignObject > section div.split46 > div.left{flex:40%}div#\:\$p > svg > foreignObject > section div.split46 > div.right{flex:60%;text-align:center}div#\:\$p > svg > foreignObject > section div.split46 > div.right img{width:100%;max-width:480px}div#\:\$p > svg > foreignObject > section div.split55 > div.left{flex:50%}div#\:\$p > svg > foreignObject > section div.split55 > div.right{flex:50%;text-align:center}div#\:\$p > svg > foreignObject > section div.split55 > div.right img{width:100%;max-width:400px}div#\:\$p > svg > foreignObject > section div.split73{display:flex;align-items:center;gap:28px}div#\:\$p > svg > foreignObject > section div.split73 > div.left{flex:70%}div#\:\$p > svg > foreignObject > section div.split73 > div.right{flex:30%;text-align:center;display:flex;justify-content:center;align-items:center}div#\:\$p > svg > foreignObject > section div.split73 > div.right img{width:auto;max-width:100%;max-height:420px;object-fit:contain;background:transparent!important;box-shadow:none!important;border:none!important}div#\:\$p > svg > foreignObject > section div.two-columns{display:flex;gap:28px;font-size:0.85em;line-height:1.35}div#\:\$p > svg > foreignObject > section div.two-columns > div{flex:1}div#\:\$p > svg > foreignObject > section div.two-columns ol{margin:0;padding-left:20px}div#\:\$p > svg > foreignObject > section div.two-columns li{margin-bottom:6px}div#\:\$p > svg > foreignObject > section .card-deck{display:flex;flex-direction:column;width:100%;box-sizing:border-box;margin-top:auto!important;margin-bottom:auto!important;gap:16px}div#\:\$p > svg > foreignObject > section .card-deck > *{margin:0!important}div#\:\$p > svg > foreignObject > section .card-deck > ul, div#\:\$p > svg > foreignObject > section .card-deck > ul > li{list-style:none!important;margin:0!important;padding:0!important;width:100%}div#\:\$p > svg > foreignObject > section .two-columns-64{display:grid;grid-template-columns:6fr 4fr;gap:20px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .two-columns-73{display:grid;grid-template-columns:7fr 3fr;gap:20px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .three-columns{display:grid;grid-template-columns:repeat(3, 1fr);gap:16px;align-items:stretch;width:100%;box-sizing:border-box}div#\:\$p > svg > foreignObject > section .card{background:white;padding:18px 24px;border-radius:10px;box-shadow:none!important;border:1px solid #cbd5e1;font-size:18.5px;line-height:1.5;text-align:left!important;box-sizing:border-box}div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 18.5px}div#\:\$p > svg > foreignObject > section .card :is(h3, marp-h3){font-size:22px;margin-top:0;margin-bottom:12px;color:#0b3c5d;border-bottom:2px solid #e2e8f0;padding-bottom:8px;text-align:left!important}div#\:\$p > svg > foreignObject > section .card :is(h4, marp-h4){font-size:19px;margin-top:0;margin-bottom:6px;color:#328cc1;text-align:left!important}div#\:\$p > svg > foreignObject > section .card ul, div#\:\$p > svg > foreignObject > section .card ol{margin-top:6px!important;margin-bottom:6px!important;padding-left:20px!important;text-align:left!important;list-style-position:outside!important}div#\:\$p > svg > foreignObject > section .card li{margin-bottom:8px!important;line-height:1.5!important;text-align:left!important;font-size:18px!important}div#\:\$p > svg > foreignObject > section .card p{margin-top:0;margin-bottom:8px;text-align:left!important}div#\:\$p > svg > foreignObject > section .two-columns .card{padding:16px 20px;font-size:16px;line-height:1.4}div#\:\$p > svg > foreignObject > section .two-columns div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section .two-columns .card :is(h3, marp-h3){font-size:20px;margin-top:0;margin-bottom:10px;padding-bottom:6px}div#\:\$p > svg > foreignObject > section .two-columns .card ol, div#\:\$p > svg > foreignObject > section .two-columns .card ul{padding-left:20px!important;margin:4px 0!important}div#\:\$p > svg > foreignObject > section .two-columns .card li{font-size:15.5px!important;margin-bottom:6px!important;line-height:1.36!important}div#\:\$p > svg > foreignObject > section .three-columns .card{padding:14px 16px;font-size:16.5px}div#\:\$p > svg > foreignObject > section .three-columns div#\:\$p > svg > foreignObject > section section.card{--marpit-root-font-size: 16.5px}div#\:\$p > svg > foreignObject > section .three-columns .card :is(h3, marp-h3){font-size:19px;margin-bottom:8px;padding-bottom:6px}div#\:\$p > svg > foreignObject > section .three-columns .card li{font-size:16px!important;margin-bottom:6px!important}div#\:\$p > svg > foreignObject > section div.content-columns{display:flex;align-items:center;gap:36px;width:100%;margin-top:auto!important;margin-bottom:auto!important;box-sizing:border-box}div#\:\$p > svg > foreignObject > section div.content-text{flex:66%;font-size:23.5px;line-height:1.55}div#\:\$p > svg > foreignObject > section div.content-text ul, div#\:\$p > svg > foreignObject > section div.content-text ol{margin-top:6px;margin-bottom:6px}div#\:\$p > svg > foreignObject > section div.content-text li{margin-bottom:10px;line-height:1.5}div#\:\$p > svg > foreignObject > section div.content-text li > ul > li, div#\:\$p > svg > foreignObject > section div.content-text li > ol > li{font-size:0.88em;line-height:1.35;margin-bottom:4px}div#\:\$p > svg > foreignObject > section div.content-figure{flex:34%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}div#\:\$p > svg > foreignObject > section div.content-figure img{max-width:360px;max-height:480px;width:auto;height:auto;object-fit:contain;background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card{background:#ffffff;border:1px solid #cbd5e1;border-radius:12px;box-shadow:none!important;overflow:hidden;width:290px;max-width:290px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;margin:0 auto}div#\:\$p > svg > foreignObject > section div.content-figure .name-card img{width:100%!important;max-width:100%!important;height:330px!important;max-height:330px!important;object-fit:cover!important;object-position:center top!important;border-radius:0!important;box-shadow:none!important;display:block!important;margin:0!important;padding:0!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card img.contain-fit{object-fit:contain!important;padding:24px!important;box-sizing:border-box!important;background:#ffffff!important}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-caption{width:100%;padding:10px 12px 12px 12px;background:#ffffff;display:flex;flex-direction:column;align-items:center;gap:3px;box-sizing:border-box;border-top:1px solid #f1f5f9}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-name{font-size:16px;font-weight:700;color:#1e293b;line-height:1.3}div#\:\$p > svg > foreignObject > section div.content-figure div#\:\$p > svg > foreignObject > section section.name-card-name{--marpit-root-font-size: 16px}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc, div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc a{font-size:11.5px;color:#64748b;text-decoration:none;line-height:1.2}div#\:\$p > svg > foreignObject > section div.content-figure div#\:\$p > svg > foreignObject > section section.name-card-cc{--marpit-root-font-size: 11.5px}div#\:\$p > svg > foreignObject > section div.content-figure .name-card-cc a:hover{color:#0284c7;text-decoration:underline}div#\:\$p > svg > foreignObject > section.outline, div#\:\$p > svg > foreignObject > section.outline-slide{display:flex;flex-direction:column;justify-content:flex-start}div#\:\$p > svg > foreignObject > section.outline > ul, div#\:\$p > svg > foreignObject > section.outline-slide > ul, div#\:\$p > svg > foreignObject > section.outline > ol, div#\:\$p > svg > foreignObject > section.outline-slide > ol{columns:2;-webkit-columns:2;column-gap:40px;margin-top:auto!important;margin-bottom:auto!important;padding-left:24px!important;font-size:18px!important;line-height:1.48!important}div#\:\$p > svg > foreignObject > section.outline > ul > li, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li, div#\:\$p > svg > foreignObject > section.outline > ol > li, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li{break-inside:avoid;page-break-inside:avoid;margin-bottom:10px!important;line-height:1.42!important}div#\:\$p > svg > foreignObject > section.outline > ul > li > ul, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li > ul, div#\:\$p > svg > foreignObject > section.outline > ol > li > ol, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li > ol{margin-top:3px!important;margin-bottom:5px!important}div#\:\$p > svg > foreignObject > section.outline > ul > li > ul > li, div#\:\$p > svg > foreignObject > section.outline-slide > ul > li > ul > li, div#\:\$p > svg > foreignObject > section.outline > ol > li > ol > li, div#\:\$p > svg > foreignObject > section.outline-slide > ol > li > ol > li{font-size:15.5px!important;color:#475569;margin-bottom:3px!important}div#\:\$p > svg > foreignObject > section .outline-columns{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:auto!important;margin-bottom:auto!important;align-items:start;font-size:17.5px;line-height:1.42}div#\:\$p > svg > foreignObject > section section.outline-columns{--marpit-root-font-size: 17.5px}div#\:\$p > svg > foreignObject > section .outline-columns :is(h3, marp-h3){font-size:21px;color:#0b3c5d;margin-top:0;margin-bottom:10px;border-bottom:2px solid #cbd5e1;padding-bottom:4px}div#\:\$p > svg > foreignObject > section .outline-columns ul{margin:0!important;padding-left:20px!important}div#\:\$p > svg > foreignObject > section .outline-columns li{margin-bottom:8px!important;line-height:1.4!important}div#\:\$p > svg > foreignObject > section .outline-columns li > ul{margin-top:3px!important;margin-bottom:5px!important}div#\:\$p > svg > foreignObject > section .outline-columns li > ul > li{font-size:15.5px!important;margin-bottom:3px!important;color:#475569}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){margin-top:8px;margin-bottom:8px;font-size:22px;line-height:1.45;border-radius:6px}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{font-size:22px}div#\:\$p > svg > foreignObject > section code{font-family:'Fira Code', 'Consolas', 'Courier New', monospace}div#\:\$p > svg > foreignObject > section.full-image-slide{padding:0!important}div#\:\$p > svg > foreignObject > section.full-image-slide::after{display:none!important}div#\:\$p > svg > foreignObject > section.full-image-slide header, div#\:\$p > svg > foreignObject > section.full-image-slide footer{display:none!important}div#\:\$p > svg > foreignObject > section.full-image-slide div.centered-image{display:flex;justify-content:center;align-items:center;width:100%;height:720px}div#\:\$p > svg > foreignObject > section.full-image-slide div.centered-image img{width:100%;height:100%;object-fit:contain}div#\:\$p > svg > foreignObject > section.title-image-slide{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}div#\:\$p > svg > foreignObject > section.title-image-slide :is(h2, marp-h2){margin-top:0;margin-bottom:10px}div#\:\$p > svg > foreignObject > section.title-image-slide div.image-wrapper{display:flex;justify-content:center;align-items:center;flex-grow:1;height:480px}div#\:\$p > svg > foreignObject > section.title-image-slide:has(.image-source) div.image-wrapper, div#\:\$p > svg > foreignObject > section.title-image-slide:has(.image-caption) div.image-wrapper{height:456px}div#\:\$p > svg > foreignObject > section.title-image-slide div.image-wrapper img{max-width:100%;max-height:100%;object-fit:contain}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption{font-size:13px!important;color:#64748b!important;text-align:center!important;margin-top:8px!important;margin-bottom:0!important;line-height:1.3!important}div#\:\$p > svg > foreignObject > section.title-image-slide div#\:\$p > svg > foreignObject > section section.image-source, div#\:\$p > svg > foreignObject > section.title-image-slide div#\:\$p > svg > foreignObject > section section.image-caption{--marpit-root-font-size: 13px !important}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source a, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption a{color:#475569!important;text-decoration:underline!important;text-underline-offset:2px!important}div#\:\$p > svg > foreignObject > section.title-image-slide .image-source a:hover, div#\:\$p > svg > foreignObject > section.title-image-slide .image-caption a:hover{color:#0284c7!important}div#\:\$p > svg > foreignObject > section.lead{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}div#\:\$p > svg > foreignObject > section.lead :is(h1, marp-h1){margin:0 0 16px 0}div#\:\$p > svg > foreignObject > section.lead :is(h2, marp-h2){margin:0 0 16px 0}div#\:\$p > svg > foreignObject > section.lead :is(h3, marp-h3){margin:0 0 16px 0;color:#328cc1}div#\:\$p > svg > foreignObject > section.lead p{margin:0;font-size:0.75em;line-height:1.55}div#\:\$p > svg > foreignObject > section.lead p strong{color:#0b3c5d}div#\:\$p > svg > foreignObject > section.lead blockquote{font-size:1.1em;line-height:1.5;margin-top:20px;padding:10px 24px;text-align:left;display:inline-block}div#\:\$p > svg > foreignObject > section.lead header{display:block!important}div#\:\$p > svg > foreignObject > section.lead footer, div#\:\$p > svg > foreignObject > section.lead::after{display:none!important}div#\:\$p > svg > foreignObject > section.quote-slide{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 100px;background-color:#f5f5f5!important;background:none!important;color:#333!important}div#\:\$p > svg > foreignObject > section.quote-slide header, div#\:\$p > svg > foreignObject > section.quote-slide footer, div#\:\$p > svg > foreignObject > section.quote-slide::after{display:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote{background:transparent!important;border:none!important;margin:0 0 20px 0!important;padding:0!important;font-style:normal!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote::before, div#\:\$p > svg > foreignObject > section.quote-slide blockquote::after{content:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote strong{display:block;font-size:2.05em;line-height:1.35;color:#0b3c5d!important;font-weight:700;letter-spacing:-0.01em;margin-bottom:16px;text-shadow:none!important}div#\:\$p > svg > foreignObject > section.quote-slide blockquote em{display:block;font-size:1.15em;color:#328cc1!important;font-style:italic;opacity:0.95;margin-bottom:10px}div#\:\$p > svg > foreignObject > section.quote-slide p:not(blockquote p){font-size:0.82em;color:#555!important;line-height:1.6;font-weight:500;max-width:820px;margin:20px auto 0 auto;border-top:1px solid #cbd5e1;padding-top:20px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-paginate="true" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="1" style="--paginate:true;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="66">
+<h1 id="%E8%BB%9F%E9%AB%94%E5%B7%A5%E7%A8%8B"><strong>軟體工程</strong></h1>
+<h3 id="%E7%AC%AC%E5%85%AD%E8%AA%B2%E4%BD%BF%E7%94%A8%E8%80%85%E9%AB%94%E9%A9%97-ux-%E8%A8%AD%E8%A8%88%E8%88%87%E4%BB%A5%E4%BA%BA%E7%82%BA%E6%9C%AC%E7%9A%84-ai-ux-design--human-centered-ai">第六課：使用者體驗 (UX) 設計與以人為本的 AI (UX Design &amp; Human-Centered AI)</h3>
+<p><strong>授課教師：薛念林 教授</strong><br />
+資訊工程學系<br />
+逢甲大學</p>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="outline-slide" data-theme="ase-theme" lang="C" class="outline-slide" data-marpit-pagination="2" style="--paginate:true;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:outline-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<h2 id="%E7%AC%AC%E5%85%AD%E7%AB%A0%E8%AA%B2%E7%A8%8B%E8%97%8D%E5%9C%96%E8%88%87%E6%A0%B8%E5%BF%83%E4%B8%BB%E9%A1%8C">第六章：課程藍圖與核心主題</h2>
+<div class="outline-columns">
+  <div>
+    <h3>第一部分：UX 基礎與易用性啟發法則</h3>
+    <ul>
+      <li><b>6.1 使用者體驗 (UX) 基礎：</b> 什麼是 UX、諾曼門（Norman Doors）、三大不良設計原型、台灣健保快易通 App 改版案例、UI 與 UX 的本質差異、設計思考五大階段。</li>
+      <li><b>6.2 尼爾森 10 大易用性啟發法則：</b> 系統狀態可見度、符合真實世界、使用者控制與自由、一致性與標準、防錯設計、辨識取代回憶、彈性與效率捷徑、簡約美學、協助使用者修復錯誤、說明文件。</li>
+    </ul>
+  </div>
+  <div>
+    <h3>第二部分：AI 賦能設計與智慧介面</h3>
+    <ul>
+      <li><b>6.3 AI 賦能 UX 設計 (AI for UX)：</b> AI 作為設計放大器、RTCF 結構化提示詞工程框架、自動化啟發式稽核、多代理人協同原型打造。</li>
+      <li><b>6.4 為 AI 打造卓越體驗 (UX for AI)：</b> 為機率性非確定性 AI 設計介面、延遲與思考軌跡管理、人類自主掌控權、幻覺防護圍欄、可解釋性 AI (XAI)。</li>
+      <li><b>6.5 易用性評估與工程整合：</b> 尼爾森 0-4 級嚴重度評級、專家啟發式評估 vs. 真人使用者測試、章節回顧測驗與工程總結。</li>
+    </ul>
+  </div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="3" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+
+<h1 id="61-%E4%BD%BF%E7%94%A8%E8%80%85%E9%AB%94%E9%A9%97-ux-%E8%A8%AD%E8%A8%88%E5%9F%BA%E7%A4%8E"><strong>6.1 使用者體驗 (UX) 設計基礎</strong></h1>
+<blockquote>
+<p>&quot;Good design is actually a lot harder to notice than poor design, in part because good designs fit our needs so well that the design is invisible.&quot;<br />
+<em>(優秀的設計往往比糟糕的設計更難被察覺，因為好設計與我們的需求契合得天衣無縫，以至於它本身隱形了。)</em><br />
+— <em>Don Norman (《設計的心理學》作者)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-marpit-fragments="3" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="4" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E7%B6%93%E5%85%B8%E5%8F%8D%E6%A8%A1%E5%BC%8F%E8%AB%BE%E6%9B%BC%E9%96%80-norman-door">經典反模式：諾曼門 (Norman Door)</h2>
+<div class="split73">
+  <div class="left">
+<ul>
+<li data-marpit-fragment="1">
+<p><strong>什麼是「諾曼門 (Norman Door)」？</strong></p>
+<ul>
+<li>指外觀設計提供了<strong>錯誤視覺線索</strong>的門（例如：裝著適合拉動的垂直把手，實際上卻必須用推的才能打開；或是裝著推板卻需要用拉的）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2">
+<p><strong>預設用途 (Affordance) vs. 示能線索 (Signifier)：</strong></p>
+<ul>
+<li><strong>預設用途 (Affordance)：</strong> 物體本身的物理特性所暗示的潛在可能動作（例如：平坦金屬板暗示著「可以推」）。</li>
+<li><strong>示能線索 (Signifier)：</strong> 明確標示「在哪裡」以及「如何」操作的視覺訊號（例如門上貼的「PUSH」貼紙）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3">
+<p><strong>至高設計箴言：</strong></p>
+<ul>
+<li>當一個日常物件連打開它都需要貼上一張說明貼紙時，它的設計本身就已經徹底失敗了！</li>
+</ul>
+</div>
+<div class="right">
+  <img src="../../img/ux/normans_door_nobg.png" alt="諾曼門範例" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-marpit-fragments="2" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="5" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E5%8A%A3%E8%B3%AA-uiux-%E6%89%80%E5%B8%B6%E4%BE%86%E7%9A%84%E6%8C%AB%E6%8A%98%E8%88%87%E4%BB%A3%E5%83%B9">劣質 UI/UX 所帶來的挫折與代價</h2>
+<div class="split73">
+  <div class="left">
+<ul>
+<li data-marpit-fragment="1">
+<p><strong>糟糕軟體對使用者心理的摧殘：</strong></p>
+<ul>
+<li>引發認知超載、困惑迷惘、焦慮無助，最後導致使用者憤而放棄（User Rage &amp; Churn）。</li>
+<li>使用者往往不會怪罪背後的資料庫或架構師，只會留下 1 星負評並怒刪 App。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2">
+<p><strong>劣質 UX 如何摧毀企業商業價值：</strong></p>
+<ul>
+<li><strong>購物車放棄率高達 70%：</strong> 結帳流程過於繁瑣、表單驗證不明確直接導致營收蒸發。</li>
+<li><strong>龐大客服成本支出：</strong> 數以萬計的客服電話與工單，根本源頭都是混亂的介面導覽。</li>
+<li><strong>企業員工生產力內耗：</strong> 難用的內部企業 ERP/CRM 系統，導致日常操作頻繁出錯與嚴重工時浪費。</li>
+</ul>
+</div>
+<div class="right">
+  <img src="../../img/ux/bad_ui_ux_frustration_nobg.png" alt="使用者挫折感" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-marpit-fragments="3" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="6" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E4%B8%89%E5%A4%A7%E7%B6%93%E5%85%B8%E4%B8%8D%E8%89%AF%E4%BB%8B%E9%9D%A2%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%9E%8B-3-bad-design-archetypes">三大經典不良介面設計原型 (3 Bad Design Archetypes)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 「夜市擺攤風」 (Night Market Chaos / 資訊過載型)：</strong>
+<ul>
+<li>將數百項商品、閃爍跑馬燈、衝突的超連結全部塞進單一螢幕，毫無視覺階層（Visual Hierarchy）。</li>
+<li>人類大腦遭受嚴重的感官認知超載（Cognitive Overload），無從聚焦。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 「油漆不用錢」 (Paint is Free / 色彩對比地獄)：</strong>
+<ul>
+<li>濫用螢光綠、刺眼亮黃、青底洋紅字等極端配色。</li>
+<li>嚴重違反 WCAG 無障礙對比度標準，使視力不佳或色弱使用者完全無法閱讀。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 「我現在該按哪裡？」 (Where Do I Start? / 缺乏視覺導引)：</strong>
+<ul>
+<li>滿螢幕充斥著數十個尺寸相同、顏色一致、未區分主次的按鈕。</li>
+<li>缺乏明確的主要行動呼籲（Call-to-Action, CTA），讓使用者陷入決策癱瘓。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="7" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+
+<h2 id="%E7%8F%BE%E5%AF%A6%E7%94%9F%E6%B4%BB%E5%8F%8D%E6%A8%A1%E5%BC%8F%E5%A4%9C%E5%B8%82%E6%93%BA%E6%94%A4%E9%A2%A8%E7%9A%84%E6%84%9F%E5%AE%98%E8%B6%85%E8%BC%89">現實生活反模式：夜市擺攤風的感官超載</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/bad_design_night_market_arngren.png" alt="Arngren 混亂介面範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-marpit-fragments="2" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="8" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E7%9C%9F%E5%AF%A6%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6%E5%8F%B0%E7%81%A3%E5%8F%A3%E7%BD%A9%E9%A0%90%E8%B3%BC-app--%E7%87%9F%E9%81%8B%E6%8C%91%E6%88%B0">真實案例研究：台灣口罩預購 App — 營運挑戰</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>歷史背景與緊急營運需求：</strong>
+<ul>
+<li>COVID-19 疫情爆發初期，台灣「健保快易通」App 承載全台每日數百萬人次的實名制口罩預購重任。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>原版介面面臨的致命易用性缺陷：</strong>
+<ul>
+<li><strong>核心功能深埋：</strong> 關鍵的「口罩預購」功能被埋藏在毫無主次邏輯、由 20 個相同尺寸方塊組成的密集九宮格中。</li>
+<li><strong>搜尋認知疲勞：</strong> 焦慮的長輩與民眾被迫在多行毫無區別的圖示中苦苦肉眼搜尋。</li>
+<li><strong>缺乏視覺階層：</strong> 平日的例行健康衛教資訊，與攸關全民防疫的緊急口罩預購享有完全相同的視覺權重。</li>
+<li><strong>系統連線瓶頸：</strong> 迷航的使用者頻繁點錯選單並反覆返回重試，造成客服電話被塞爆，伺服器連線延遲飆升。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="9" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+
+<h2 id="%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6%E5%8E%9F%E7%89%88%E5%81%A5%E4%BF%9D-app-%E4%BB%8B%E9%9D%A2-%E6%94%B9%E7%89%88%E5%89%8D-before">案例研究：原版健保 App 介面 (改版前 Before)</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/mask_order_app_before.png" alt="口罩 App 改版前介面" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="10" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+
+<h2 id="%E6%A1%88%E4%BE%8B%E7%A0%94%E7%A9%B6%E7%B7%8A%E6%80%A5%E9%98%B2%E7%96%AB%E5%8F%A3%E7%BD%A9%E5%8B%95%E7%B7%9A%E9%87%8D%E6%A7%8B-%E6%94%B9%E7%89%88%E5%BE%8C-after">案例研究：緊急防疫口罩動線重構 (改版後 After)</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/mask_order_app_after.png" alt="口罩 App 改版後介面" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-marpit-fragments="2" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="11" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90%E4%BB%A5%E4%BA%BA%E7%82%BA%E6%9C%AC%E7%9A%84%E6%87%89%E6%80%A5-ux-%E8%BD%89%E5%9E%8B">案例分析：以人為本的應急 UX 轉型</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>以人為本的重構設計策略：</strong>
+<ul>
+<li><strong>首頁重點巨幅卡片 (Hero Card)：</strong> 將口罩預購提升至頂端最顯眼的 Hero Banner，佔據手機單手操作的大拇指黃金熱區。</li>
+<li><strong>任務模組化分群 (Task Chunking)：</strong> 將次要醫療資訊依關聯性整合進清晰的卡片分區中，給予足夠間距與清晰標籤。</li>
+<li><strong>直覺極速操作：</strong> 將使用者的決策時間從數分鐘的苦苦搜尋，縮減至 2 秒內的一指直覺點擊。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>改版的核心啟示：</strong>
+<ul>
+<li><strong>情境驅動的動態體驗 (Situational UX)：</strong> 介面的導覽結構必須動態契合現實生活中使用者的急迫優先級，絕不可僵化對應政府組織架構或內部資料庫欄位！</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-marpit-fragments="3" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="12" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E7%82%BA%E4%BB%80%E9%BA%BC%E5%81%9A%E5%A5%BD-ux-%E9%82%A3%E9%BA%BC%E9%9B%A3%E7%9F%A5%E8%AD%98%E7%9A%84%E8%A9%9B%E5%92%92">為什麼做好 UX 那麼難？「知識的詛咒」</h2>
+<div class="split73">
+  <div class="left">
+<ul>
+<li data-marpit-fragment="1">
+<p><strong>1. 「你不是你的使用者」 (You Are Not The User)：</strong></p>
+<ul>
+<li>軟體工程師擁有深厚的技術心智模型（關聯式綱要、REST API 路由、多執行緒）。</li>
+<li>一般使用者只具備日常生活的心智模型（訂晚餐、掛號、查帳單）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2">
+<p><strong>2. 知識的詛咒 (The Curse of Knowledge)：</strong></p>
+<ul>
+<li>工程師自己辛苦花三個月把功能刻出來，對介面瞭若指掌，因此覺得一切操作都「極度理所當然、非常直覺」。</li>
+<li>工程師的大腦已經無法體會初次面對該介面時的陌生與困惑。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3">
+<p><strong>3. 防衛心理 vs. 同理心思考：</strong></p>
+<ul>
+<li>工程師往往依照後端資料表開畫面，要求使用者按照資料庫的邏輯填表單。</li>
+</ul>
+</div>
+<div class="right">
+  <img src="../../img/ux/why_ux_is_hard_nobg.png" alt="為什麼 UX 很困難" />
+</div>
+</li>
+</ul>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-marpit-fragments="3" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="13" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="ui-%E4%BD%BF%E7%94%A8%E8%80%85%E4%BB%8B%E9%9D%A2-vs-ux-%E4%BD%BF%E7%94%A8%E8%80%85%E9%AB%94%E9%A9%97">UI (使用者介面) vs. UX (使用者體驗)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>使用者介面 (UI / User Interface)：</strong>
+<ul>
+<li>人類與軟體互動時，所看見、聽見與觸摸的具體感官接觸點。</li>
+<li><em>元素涵蓋：</em> 按鈕外觀、字型排版、色彩配置、邊距間距、CSS 格線、圖示、過渡微動畫。</li>
+<li><em>核心關切：</em> 「這個畫面在視覺上看起來如何？渲染與動效順不順暢？」</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>使用者體驗 (UX / User Experience)：</strong>
+<ul>
+<li>人類與品牌、服務或系統在完整旅程中產生的整體心理與情感認知感受。</li>
+<li><em>元素涵蓋：</em> 任務達成效率、流程阻力、認知負擔、滿意度、容錯修復能力與信賴感。</li>
+<li><em>核心關切：</em> 「使用者是否能直覺、高效且愉悅地達成他們的目標？」</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>經典生動比喻：</strong>
+<ul>
+<li>UI 是精緻的馬鞍、韁繩與馬鐙；UX 則是騎在馬背上奔馳的整體駕馭感受！</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="14" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+
+<h2 id="%E8%A6%96%E8%A6%BA%E5%8C%96%E6%AF%94%E5%B0%8Dui-%E8%88%87-ux-%E7%9A%84%E4%BA%92%E5%8B%95%E6%9E%B6%E6%A7%8B%E8%A7%A3%E5%89%96">視覺化比對：UI 與 UX 的互動架構解剖</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ui_vs_ux_comparison_new.jpg" alt="UI vs UX 對照圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="15" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+
+<h2 id="%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83-5-%E5%A4%A7%E9%9A%8E%E6%AE%B5-the-5-stage-design-thinking">設計思考 5 大階段 (The 5-Stage Design Thinking)</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ux_core_process.jpg" alt="設計思考五大階段流程圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-fragments="5" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="16" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E8%A8%AD%E8%A8%88%E6%80%9D%E8%80%83%E4%BA%94%E5%A4%A7%E9%9A%8E%E6%AE%B5%E8%A9%B3%E7%B4%B0%E6%8B%86%E8%A7%A3">設計思考五大階段詳細拆解</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. Empathize (同理 / 探索)：</strong>
+<ul>
+<li>進行質化訪談、現地情境觀察（Contextual Inquiry）與使用者行為追蹤。</li>
+<li>挖掘未被說出口的深層挫折與真實心理痛點。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. Define (定義問題)：</strong>
+<ul>
+<li>將質化研究收斂為具象的人物誌（Personas）、同理心地圖與精確的 &quot;How Might We (我們該如何...)&quot; 問題陳述。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. Ideate (構思解法)：</strong>
+<ul>
+<li>開展多元創意思考，暫緩評判；快速繪製低保真紙上草圖（Paper Wireframes）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. Prototype (打造原型)：</strong>
+<ul>
+<li>製作可供點擊測試的實體構件（Figma 可互動點擊原型、可運行的 HTML/CSS 假資料畫面）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="5"><strong>5. Test (驗證測試)：</strong>
+<ul>
+<li>將原型交由真實目標使用者操作，觀察卡關點，量化任務達成率並快速迭代修正。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="17" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-1ux-%E5%9F%BA%E7%A4%8E%E8%88%87%E8%AB%BE%E6%9B%BC%E9%96%80">觀念檢核測驗 1：UX 基礎與諾曼門</h2>
+<p>在認知人因工程與 UX 設計中，一扇在拉動式把手上貼有「請用推的」標籤的「諾曼門 (Norman Door)」，所揭示的核心設計教訓為何？</p>
+<ul>
+<li><strong>A.</strong> 現代一般民眾普遍缺乏操作機械設施所必備的技術素養。</li>
+<li><strong>B.</strong> 門把的物理預設用途與其操作機制互相衝突，迫使設計者使用外加標籤修補不良設計。</li>
+<li><strong>C.</strong> 所有建築與數位介面為了符合法規稽核，皆必須強制張貼操作說明文件。</li>
+<li><strong>D.</strong> 在公共空間設施中，視覺藝術美感應永遠優先於日常實用性與操作易用性。</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-header="6.1 使用者體驗基礎" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="18" style="--paginate:true;--header:6.1 使用者體驗基礎;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.1 使用者體驗基礎</header>
+<h2 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-1%E8%A7%A3%E7%AD%94%E8%88%87%E8%A7%A3%E6%9E%90">觀念檢核測驗 1：解答與解析</h2>
+<ul>
+<li><strong>正確答案：B</strong></li>
+<li><strong>詳細解析：</strong>
+<ul>
+<li>諾曼門是人機互動界最經典的設計失敗範例：把手的物理預設用途（Affordance，天生適合抓取拉動）與實際的開門機制（推動）產生了正面衝突。因為設計徹底違背了人類直覺的心智模型，設計者不得不貼上一張「推 PUSH」的指示貼紙（Signifier）來防止大家拉錯門。</li>
+<li>正如 Don Norman 所言：如果一個日常物件連使用它都必須仰賴標籤說明，這項設計本身就已經不及格了。</li>
+<li><em>其他選項為何錯誤：</em> 選項 A 檢討使用者，嚴重違背以人為本的核心精神；選項 C 錯誤主張所有東西都要貼說明書；選項 D 錯誤主張美感凌駕於易用性之上。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="19" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h1 id="62-%E5%B0%BC%E7%88%BE%E6%A3%AE-10-%E5%A4%A7%E6%98%93%E7%94%A8%E6%80%A7%E5%95%9F%E7%99%BC%E6%B3%95%E5%89%87"><strong>6.2 尼爾森 10 大易用性啟發法則</strong></h1>
+<blockquote>
+<p>&quot;Jakob's Law: Users spend most of their time on other sites. This means that users prefer your site to work the same way as all the other sites they already know.&quot;<br />
+<em>(雅各布定律：使用者絕大部分的時間都在別人的網站上。這意味著他們強烈偏好你的網站運作方式，與他們早已熟知的所有其他網站完全一樣。)</em><br />
+— <em>Jakob Nielsen (Nielsen Norman Group 創辦人)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="20" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="%E6%A6%82%E8%A6%BD%E5%B0%BC%E7%88%BE%E6%A3%AE-10-%E5%A4%A7%E6%98%93%E7%94%A8%E6%80%A7%E5%95%9F%E7%99%BC%E6%B3%95%E5%89%87-overview">概覽：尼爾森 10 大易用性啟發法則 (Overview)</h2>
+<div class="outline-columns">
+  <div>
+    <ul>
+      <li><b>NS01. 系統狀態可見度：</b> 透過及時適當的回饋，讓使用者隨時掌握系統狀態。</li>
+      <li><b>NS02. 符合真實世界：</b> 採用使用者熟悉的語言詞彙、概念與實體隱喻。</li>
+      <li><b>NS03. 使用者控制與自由度：</b> 提供清晰明確的「緊急出口」（復原 Undo / 重做）。</li>
+      <li><b>NS04. 一致性與標準性：</b> 遵循平台與產業通用規範（雅各布定律）。</li>
+      <li><b>NS05. 防錯設計：</b> 事前透過審慎設計消除容易出錯的情境，勝過事後道歉。</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li><b>NS06. 辨識取代記憶：</b> 將物件、動作與選項視覺化，減輕大腦記憶負擔。</li>
+      <li><b>NS07. 彈性與使用效率：</b> 提供捷徑（Accelerators）滿足高頻專業進階用戶。</li>
+      <li><b>NS08. 簡約美學設計：</b> 消除無關雜訊，將訊噪比（Signal-to-Noise）最大化。</li>
+      <li><b>NS09. 協助辨識與修復錯誤：</b> 用白話清楚說明問題，並建設性指出解法。</li>
+      <li><b>NS10. 說明文件與求助支援：</b> 提供容易檢索、任務導向且情境化的即時引導。</li>
+    </ul>
+  </div>
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-marpit-fragments="2" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="21" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns01-%E7%B3%BB%E7%B5%B1%E7%8B%80%E6%85%8B%E5%8F%AF%E8%A6%8B%E5%BA%A6-visibility-of-system-status">NS01: 系統狀態可見度 (Visibility of System Status)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「系統應在合理的時間內，透過適當的回饋，始終讓使用者明確掌握當前正在發生什麼事。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>核心互動設計模式：</strong>
+<ul>
+<li><strong>即時觸控回饋：</strong> 按鈕點擊時的下沉態、微動效波紋（Ripple Effect），立即向使用者確認「輸入已被系統接收」。</li>
+<li><strong>進度透明化：</strong> 顯示具備確切百分比的進度條（%）、結帳步驟指示器（1. 購物車 → 2. 配送資訊 → 3. 付款）。</li>
+<li><strong>背景任務即時狀態：</strong> 旋轉進度環搭配具備動態文字的說明（<em>「正在上傳第 3 張相片，共 5 張...」</em>）。</li>
+<li><strong>連線狀態提示：</strong> 離線斷網即時警告橫幅、雲端同步狀態勾選指示。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="22" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns01-%E5%AF%A6%E8%B8%90%E5%8D%B3%E6%99%82%E7%B3%BB%E7%B5%B1%E7%8B%80%E6%85%8B%E8%88%87%E9%80%B2%E5%BA%A6%E9%80%8F%E6%98%8E%E5%8F%8D%E9%A5%8B">NS01 實踐：即時系統狀態與進度透明反饋</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns01_status_feedback_examples.png" alt="狀態反饋具體範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-fragments="3" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="23" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns02-%E7%AC%A6%E5%90%88%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C-match-system--real-world">NS02: 符合真實世界 (Match System &amp; Real World)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「系統應使用使用者的語言，採用使用者熟悉的詞彙、語句和概念，而不是系統內部的術語。遵循真實世界的通用慣例。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>自然空間映射 (Natural Mapping)：</strong>
+<ul>
+<li>操作控制器在空間上的配置，應精確對應於被控制物體的物理空間幾何。</li>
+<li><em>經典反面教材：</em> 四口瓦斯爐排列為 2x2 方陣，但四個開關旋鈕卻排成一整條直線，強迫大腦進行繁複的空間座標換算，經常開錯爐火。</li>
+<li><em>優良設計：</em> 將四個旋鈕同樣排列為 2x2 矩陣，操作直覺秒懂且零出錯。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>生活實體隱喻 (Familiar Metaphors)：</strong>
+<ul>
+<li>資源回收桶代表刪除、資料夾代表目錄階層、購物車代表待結帳商品。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="24" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns02-%E5%AF%A6%E8%B8%90%E6%8E%A7%E5%88%B6%E9%A0%85%E7%9A%84%E8%87%AA%E7%84%B6%E7%A9%BA%E9%96%93%E5%B9%BE%E4%BD%95%E6%98%A0%E5%B0%84">NS02 實踐：控制項的自然空間幾何映射</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns02_mapping_gas_stove.png" alt="瓦斯爐自然映射" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-marpit-fragments="2" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="25" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns03-%E4%BD%BF%E7%94%A8%E8%80%85%E6%8E%A7%E5%88%B6%E8%88%87%E8%87%AA%E7%94%B1%E5%BA%A6-user-control--freedom">NS03: 使用者控制與自由度 (User Control &amp; Freedom)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「使用者常因誤操作而誤入非預期的功能狀態，此時需要一個清晰標示的『緊急出口』，讓他們能迅速脫離該狀態，而不需經歷冗長的對話流程。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>必備的工程實踐模式：</strong>
+<ul>
+<li><strong>全域復原 / 重做 (Universal Undo / Redo)：</strong> 編輯器、畫布工具及破壞性狀態變更均應全面支援 <code>Ctrl+Z</code> / <code>Cmd+Z</code>。</li>
+<li><strong>清晰的取消出口：</strong> 彈跳視窗（Modals）、檔案上傳與批次處理中，必須提供高對比、易於點擊的「取消 (Cancel)」按鈕。</li>
+<li><strong>非破壞性導覽：</strong> 允許使用者隨時退出多步驟結帳或註冊精靈，且不應擅自抹煞已填寫的表單暫存資料。</li>
+<li><strong>資源回收暫存區 (Soft Deletes)：</strong> 刪除操作先移至垃圾桶，保留 30 天復原期後才永久清除。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="26" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns03-%E5%AF%A6%E8%B8%90%E4%BD%BF%E7%94%A8%E8%80%85%E6%8E%A7%E5%88%B6%E8%87%AA%E7%94%B1%E5%BA%A6%E8%88%87%E6%98%8E%E7%A2%BA%E7%B7%8A%E6%80%A5%E5%87%BA%E5%8F%A3">NS03 實踐：使用者控制、自由度與明確緊急出口</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns03_user_control.jpg" alt="使用者自由度與控制範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-marpit-fragments="3" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="27" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns04-%E4%B8%80%E8%87%B4%E6%80%A7%E8%88%87%E6%A8%99%E6%BA%96%E6%80%A7-consistency--standards">NS04: 一致性與標準性 (Consistency &amp; Standards)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「使用者不應懷疑不同的詞彙、狀態或操作是否代表相同的事物。應遵循平台與產業通用的既定慣例。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>網際網路體驗的「雅各布定律 (Jakob's Law)」：</strong>
+<ul>
+<li>你的使用者有 99% 的數位生命都在<strong>別人的網站與 App 上度過</strong>。</li>
+<li>他們預期你的軟體運作方式，與他們熟知的其他產品完全一致（例如：左上角 Logo 回首頁、右上角購物車、放大鏡代表搜尋）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>一致性的兩大工程維度：</strong>
+<ul>
+<li><strong>內部一致性 (Internal Consistency)：</strong> 產品內部統一的設計系統（Design Tokens）、按鈕樣式、字級比例與名詞定義。</li>
+<li><strong>外部一致性 (External Consistency)：</strong> 遵循作業系統平台人機介面指南（iOS HIG 與 Android Material Design）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="28" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns04-%E5%AF%A6%E8%B8%90%E9%80%9A%E7%94%A8%E6%A8%99%E6%BA%96%E6%85%A3%E4%BE%8B%E8%88%87%E5%B9%B3%E5%8F%B0%E9%9A%B1%E5%96%BB">NS04 實踐：通用標準慣例與平台隱喻</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns04_standards.jpg" alt="標準慣例實例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-marpit-fragments="2" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="29" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns05-%E9%98%B2%E9%8C%AF%E8%A8%AD%E8%A8%88-error-prevention">NS05: 防錯設計 (Error Prevention)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「比起再怎麼友善詳盡的錯誤訊息，更卓越的工程設計是在第一時間就防止錯誤發生。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>主動防禦型設計模式：</strong>
+<ul>
+<li><strong>消除容易出錯的情境：</strong> 在必填欄位尚未通過即時驗證之前，將「送出」按鈕保持反灰禁用狀態。</li>
+<li><strong>輸入約束與限制 (Input Constraints)：</strong> 使用可視化日期選擇器（Date Picker）取代純文字輸入框，徹底杜絕日期格式輸入錯誤（如 <code>YYYY/MM/DD</code> vs <code>DD/MM/YYYY</code>）。</li>
+<li><strong>針對不可逆破壞性操作引入高阻力確認：</strong> 刪除 GitHub 儲存庫前，要求使用者手動鍵入專案全名以喚醒意識。</li>
+<li><strong>智慧智慧預設值 (Intelligent Defaults)：</strong> 預填最常見的合理參數，減少空表單帶給使用者的心理壓力。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="30" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns05-%E5%AF%A6%E8%B8%90%E7%A0%B4%E5%A3%9E%E6%80%A7%E6%93%8D%E4%BD%9C%E4%B9%8B%E9%AB%98%E9%98%BB%E5%8A%9B%E7%A2%BA%E8%AA%8D%E6%A9%9F%E5%88%B6">NS05 實踐：破壞性操作之高阻力確認機制</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns05_confirmation_dialogs.png" alt="GitHub 刪除確認機制" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-marpit-fragments="3" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="31" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns06-%E8%BE%A8%E8%AD%98%E5%8F%96%E4%BB%A3%E8%A8%98%E6%86%B6-recognition-rather-than-recall">NS06: 辨識取代記憶 (Recognition Rather Than Recall)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「透過將物件、操作和選項清晰可視化，使使用者的記憶負擔降到最低。使用者不應被迫記憶從對話流程某一部分到另一部分的資訊。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>認知心理學基石：</strong>
+<ul>
+<li><strong>辨識 (Recognition / 大腦輕鬆)：</strong> 看到熟悉的視覺線索時能立刻認出（如同選擇題）。</li>
+<li><strong>回憶 (Recall / 大腦耗能)：</strong> 在毫無線索提示下，全憑記憶提取資訊（如同純文字終端機指令或申論題）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>UI 工程實踐：</strong>
+<ul>
+<li>搜尋輸入框點擊時自動展開最近搜尋歷史關鍵字與熱門建議。</li>
+<li>檔案列表顯示縮圖預覽，而非只有冰冷抽象的二進位檔名。</li>
+<li>文字選取時自動在游標旁邊浮現情境式編輯工具列。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="32" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns06-%E5%AF%A6%E8%B8%90%E6%90%9C%E5%B0%8B%E6%AD%B7%E7%A8%8B%E4%BF%9D%E7%95%99%E8%88%87%E8%A6%96%E8%A6%BA%E8%BE%A8%E8%AD%98%E9%81%B8%E9%A0%85">NS06 實踐：搜尋歷程保留與視覺辨識選項</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns06_search_keyword_retention.png" alt="搜尋歷程保留範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-marpit-fragments="3" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="33" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns07-%E5%BD%88%E6%80%A7%E8%88%87%E4%BD%BF%E7%94%A8%E6%95%88%E7%8E%87-flexibility--efficiency-of-use">NS07: 彈性與使用效率 (Flexibility &amp; Efficiency of Use)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「加速器（Accelerators，新手使用者看不見）通常能大幅加快資深專家的操作速度，讓系統能同時兼顧並滿足毫無經驗的生手與熟練的高手。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>雙軌互動設計哲學 (Dual-Track Interaction)：</strong>
+<ul>
+<li><strong>生手路徑 (Novice Path)：</strong> 引導式圖形選單、功能導覽精靈、大按鈕與詳盡的文字解說。</li>
+<li><strong>高手加速器 (Expert Accelerators)：</strong> 全域快捷鍵 (<code>Cmd+K</code> / <code>Ctrl+K</code> 命令面板)、多指觸控手勢、可重用的巨集指令與批次批次處理。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>漸進式熟練轉化：</strong>
+<ul>
+<li>在圖形選單中將快捷鍵組合標註於文字旁（如 <code>Cmd+S</code>），讓新手在日常點擊中自然習得快捷鍵，無痛晉升為進階用戶。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="34" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns07-%E5%AF%A6%E8%B8%90%E5%85%A8%E5%9F%9F%E5%BF%AB%E6%8D%B7%E9%8D%B5%E8%88%87%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF%E5%8A%A0%E9%80%9F%E5%99%A8">NS07 實踐：全域快捷鍵與命令面板加速器</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns07_keyboard_shortcuts_snippets.png" alt="快捷鍵與代碼片段加速器" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-marpit-fragments="3" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="35" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns08-%E7%B0%A1%E7%B4%84%E7%BE%8E%E5%AD%B8%E8%A8%AD%E8%A8%88-aesthetic--minimalist-design">NS08: 簡約美學設計 (Aesthetic &amp; Minimalist Design)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「對話框與介面不應包含無關或極少需要的冗餘資訊。對話框中每一單位多餘的資訊，都在與真正相關的資訊競爭使用者的有限注意力，削弱其能見度。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>極大化訊噪比 (Signal-to-Noise Ratio, SNR)：</strong>
+<ul>
+<li><strong>訊號 (Signal)：</strong> 與使用者當前任務決策直接息息相關的核心關鍵資訊。</li>
+<li><strong>雜訊 (Noise)：</strong> 喧賓奪主的裝飾線條、多餘徽章、冗長官樣廢話與閃爍橫幅。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>工程技巧：漸進式揭露 (Progressive Disclosure)：</strong>
+<ul>
+<li>首頁與預設畫面僅展示最核心、80% 使用者必備的主要功能。</li>
+<li>將進階、低頻率的專業參數優雅收納於「進階設定 (Advanced)」摺疊面板或次級分頁中。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="36" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns08-%E5%AF%A6%E8%B8%90%E7%B0%A1%E7%B4%84%E7%BE%8E%E5%AD%B8%E5%B0%8D%E6%AF%94%E8%B3%87%E8%A8%8A%E9%81%8E%E8%BC%89">NS08 實踐：簡約美學對比資訊過載</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns08_excessive_info_gates.png" alt="資訊過載對比簡約清晰" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-marpit-fragments="3" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="37" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns09-%E5%8D%94%E5%8A%A9%E4%BD%BF%E7%94%A8%E8%80%85%E8%BE%A8%E8%AD%98%E8%A8%BA%E6%96%B7%E8%88%87%E4%BF%AE%E5%BE%A9%E9%8C%AF%E8%AA%A4">NS09: 協助使用者辨識、診斷與修復錯誤</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「錯誤訊息應採用清晰平易的純文字表達（絕不出現晦澀代碼），精確指出問題的具體成因，並建設性地主動提出修復建議方案。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>災難級錯誤訊息範例：</strong>
+<ul>
+<li><img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> <em>&quot;Error 0x80004005: Unexpected runtime exception in thread main.&quot;</em> （讓使用者困惑恐慌，毫無幫助）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>卓越錯誤訊息的三大黃金法則：</strong>
+<ul>
+<li><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>平易白話：</strong> <em>&quot;我們無法為您的信用卡完成扣款。&quot;</em></li>
+<li><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>精確具體原因：</strong> <em>&quot;您輸入的有效期限 (05/23) 已經過期。&quot;</em></li>
+<li><img class="emoji" draggable="false" alt="✅" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/2705.svg" data-marp-twemoji=""/> <strong>建設性修復出口：</strong> <em>&quot;請更新您的信用卡到期日，或選擇其他付款方式 [更新付款資訊]。&quot;</em></li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="38" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns09-%E5%AF%A6%E8%B8%90%E5%BB%BA%E8%A8%AD%E6%80%A7%E9%8C%AF%E8%AA%A4%E4%BF%AE%E5%BE%A9%E8%88%87%E6%9A%96%E5%BF%83-404-%E5%B0%8E%E8%88%AA">NS09 實踐：建設性錯誤修復與暖心 404 導航</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns09_error_404_recovery.png" alt="建設性錯誤導航範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-marpit-fragments="2" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="39" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="ns10-%E8%AA%AA%E6%98%8E%E6%96%87%E4%BB%B6%E8%88%87%E6%B1%82%E5%8A%A9%E6%94%AF%E6%8F%B4-help--documentation">NS10: 說明文件與求助支援 (Help &amp; Documentation)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>啟發原則定義：</strong>
+<blockquote>
+<p>「雖然系統最好能夠達到無需任何說明手冊便能直覺操作，但仍有必要提供說明文件。相關資訊應易於搜尋、緊密聚焦於使用者的具體任務、列出明確的操作步驟，且篇幅不宜過於冗長。」</p>
+</blockquote>
+</li>
+<li data-marpit-fragment="2"><strong>現代嵌入式文件的新典範：</strong>
+<ul>
+<li><strong>情境式微提示 (Contextual Tooltips)：</strong> 在複雜欄位旁提供小問號圖示 <code>?</code>，滑鼠懸停時即時浮現具體格式說明。</li>
+<li><strong>互動式上手導覽 (Interactive Onboarding)：</strong> 新用戶首次登入時，透過高亮聚光燈與步進卡片，在真實畫面上親手演練核心功能。</li>
+<li><strong>任務導向的知識庫：</strong> 說明文件依照使用者的「任務目標」分類檢索，而非依照內部 API 模組分類。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="40" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+
+<h2 id="ns10-%E5%AF%A6%E8%B8%90%E6%83%85%E5%A2%83%E5%BE%AE%E6%8F%90%E7%A4%BA%E8%88%87%E4%BA%92%E5%8B%95%E5%BC%8F%E4%B8%8A%E6%89%8B%E5%B0%8E%E8%A6%BD">NS10 實踐：情境微提示與互動式上手導覽</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns10_onboarding_tutorial_modes.png" alt="互動導覽模式" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="41" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-2%E6%98%93%E7%94%A8%E6%80%A7%E5%95%9F%E7%99%BC%E5%8E%9F%E5%89%87%E5%AF%A6%E8%B8%90">觀念檢核測驗 2：易用性啟發原則實踐</h2>
+<p>在電商結帳流程中，工程團隊將原先自由輸入的文字日期框，替換為互動式日曆選擇器，並在所有必填地址通過格式驗證之前，自動將「確認下單」按鈕保持為反灰禁用狀態。請問這項設計主要體現了尼爾森十大原則中的哪一項？</p>
+<ul>
+<li><strong>A.</strong> NS01: 系統狀態可見度 (Visibility of System Status)</li>
+<li><strong>B.</strong> NS05: 防錯設計 (Error Prevention)</li>
+<li><strong>C.</strong> NS07: 彈性與使用效率 (Flexibility and Efficiency of Use)</li>
+<li><strong>D.</strong> NS10: 說明文件與求助支援 (Help and Documentation)</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-header="6.2 尼爾森 10 大啟發原則" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="42" style="--paginate:true;--header:6.2 尼爾森 10 大啟發原則;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.2 尼爾森 10 大啟發原則</header>
+<h2 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-2%E8%A7%A3%E7%AD%94%E8%88%87%E8%A7%A3%E6%9E%90">觀念檢核測驗 2：解答與解析</h2>
+<ul>
+<li><strong>正確答案：B</strong></li>
+<li><strong>詳細解析：</strong>
+<ul>
+<li>尼爾森原則中的 <strong>NS05: 防錯設計 (Error Prevention)</strong> 明確主張：比再好的錯誤提示訊息更卓越的，是從根本上杜絕問題發生的精心設計。</li>
+<li>透過日曆選擇器約束輸入，杜絕了格式錯誤；反灰未驗證的下單按鈕，防止了無效請求的發送，完全符合防錯原則的精神。</li>
+<li><em>其他選項為何錯誤：</em> NS01 關注系統當前進度與狀態反饋；NS07 關注專業用戶快捷鍵；NS10 關注說明手冊。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-header="6.3 AI for UX (AI4UX)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="43" style="--paginate:true;--header:6.3 AI for UX (AI4UX);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.3 AI for UX (AI4UX)</header>
+
+<h1 id="63-ai-%E8%B3%A6%E8%83%BD-ux-%E8%A8%AD%E8%A8%88ai-for-ux-ai4ux"><strong>6.3 AI 賦能 UX 設計：AI for UX (AI4UX)</strong></h1>
+<blockquote>
+<p>&quot;AI will not replace UX designers, but UX designers who use AI will replace those who do not.&quot;<br />
+<em>(AI 不會取代 UX 設計師，但善用 AI 的 UX 設計師將會取代不用 AI 的人。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-marpit-fragments="2" data-paginate="true" data-header="6.3 AI for UX (AI4UX)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="44" style="--paginate:true;--header:6.3 AI for UX (AI4UX);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.3 AI for UX (AI4UX)</header>
+<h2 id="%E4%BB%80%E9%BA%BC%E6%98%AF-ai-%E8%B3%A6%E8%83%BD-ux-ai4ux">什麼是 AI 賦能 UX (AI4UX)？</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>AI 賦能下的超級設計師：</strong>
+<ul>
+<li>生成式 AI 在設計思考流程的每一個階段，扮演<strong>認知放大器與效率倍增器</strong>。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>主要實戰應用範疇：</strong>
+<ul>
+<li><strong>使用者研究與同理：</strong> 生成多元化虛擬使用者人物誌（Synthetic Personas），模擬極端情境使用者訪談。</li>
+<li><strong>文案發想與在地化：</strong> 秒速生成數十種微文案（Microcopy）語氣變體、多國語系字串與無障礙替代文字（Alt Text）。</li>
+<li><strong>自動化啟發式稽核：</strong> 將 UI 畫面截圖餵給多模態 LLM，自動比對尼爾森十大原則並揪出違規點。</li>
+<li><strong>生成式原型開發：</strong> 文字直接生成 Wireframe 與可互動前端程式碼（v0、Figma AI、Galileo）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-header="6.3 AI for UX (AI4UX)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="45" style="--paginate:true;--header:6.3 AI for UX (AI4UX);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.3 AI for UX (AI4UX)</header>
+
+<h2 id="ai-for-ux%E4%BA%BA%E6%A9%9F%E5%8D%94%E5%90%8C%E7%9A%84%E5%A2%9E%E5%BC%B7%E8%A8%AD%E8%A8%88%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">AI for UX：人機協同的增強設計工作流程</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ai_for_ux_concept.png" alt="AI for UX 概念示意圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-marpit-fragments="4" data-paginate="true" data-header="6.3 AI for UX (AI4UX)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="46" style="--paginate:true;--header:6.3 AI for UX (AI4UX);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.3 AI for UX (AI4UX)</header>
+<h2 id="%E8%A8%AD%E8%A8%88%E5%B8%AB%E5%B0%88%E5%B1%AC%E7%9A%84%E7%B5%90%E6%A7%8B%E5%8C%96%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%A1%86%E6%9E%B6rtcf">設計師專屬的結構化提示詞框架：RTCF</h2>
+<p>為了從 AI 模型獲取精確、具備專業水準的 UX 產出，務必杜絕模糊指令（<img class="emoji" draggable="false" alt="❌" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.3/assets/svg/274c.svg" data-marp-twemoji=""/> <em>「幫我設計一個登入頁」</em>），採用嚴謹的 <strong>RTCF 提示詞工程框架</strong>：</p>
+<ul>
+<li data-marpit-fragment="1"><strong>R — Role (角色定位)：</strong>
+<ul>
+<li>明確定義 AI 的專家身分（例如：<em>「你是一位專精於 WCAG 2.1 AA 無障礙標準的資深 UX 研究員」</em>）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>T — Task (具體任務)：</strong>
+<ul>
+<li>清楚界定要達成的具體目標（例如：<em>「請對這張手機結帳線框圖進行易用性啟發式評估」</em>）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>C — Constraints (邊界約束)：</strong>
+<ul>
+<li>注入領域規則與規格限制（例如：<em>「嚴格依照尼爾森原則 NS01、NS03 與 NS05 進行評估；針對 375px 寬度手機螢幕」</em>）。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>F — Format (輸出格式)：</strong>
+<ul>
+<li>指定結構化表格（例如：<em>「請輸出為四欄 Markdown 表格：[原則編號, 觀察問題, 嚴重程度 (0-4), 具體重構建議]」</em>）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-marpit-fragments="2" data-paginate="true" data-header="6.3 AI for UX (AI4UX)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="47" style="--paginate:true;--header:6.3 AI for UX (AI4UX);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.3 AI for UX (AI4UX)</header>
+<h2 id="%E5%A4%9A%E4%BB%A3%E7%90%86%E4%BA%BA%E6%9E%B6%E6%A7%8B%E8%88%87%E7%94%9F%E6%88%90%E5%BC%8F-ui-%E5%8E%9F%E5%9E%8B">多代理人架構與生成式 UI 原型</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>自主多代理人 (Multi-Agent) 協同架構：</strong>
+<ul>
+<li>現代先進環境（如 Google Antigravity、Devin、Claude Code）協調專責代理人團隊平行運作：</li>
+<li><strong>UX 研究代理人：</strong> 自動爬梳分析客訴工單與 App Store 負評，萃取使用者痛點。</li>
+<li><strong>設計系統代理人：</strong> 依據無障礙規範生成一致的 CSS Token、字級比例與高對比色盤。</li>
+<li><strong>前端實作代理人：</strong> 將設計規格極速轉譯為具備響應式的 HTML/CSS/React 互動元件。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>人機協同 (Human-in-the-Loop) 終極守門：</strong>
+<ul>
+<li>AI 負責快速起草各類原型，人類工程師負責檢驗人因工學、品牌調性與使用者真實同理心。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-header="6.3 AI for UX (AI4UX)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="48" style="--paginate:true;--header:6.3 AI for UX (AI4UX);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.3 AI for UX (AI4UX)</header>
+
+<h2 id="%E5%A4%9A%E4%BB%A3%E7%90%86%E4%BA%BA%E6%9E%B6%E6%A7%8B%E5%8D%94%E5%90%8C%E5%8E%9F%E5%9E%8B%E6%89%93%E9%80%A0%E6%B5%81%E6%B0%B4%E7%B7%9A">多代理人架構：協同原型打造流水線</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/antigravity_agents_architecture.png" alt="多代理人協同架構圖" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="49" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+
+<h1 id="64-%E7%82%BA-ai-%E6%89%93%E9%80%A0%E5%8D%93%E8%B6%8A%E9%AB%94%E9%A9%97ux-for-ai-ux4ai"><strong>6.4 為 AI 打造卓越體驗：UX for AI (UX4AI)</strong></h1>
+<blockquote>
+<p>&quot;The hardest part of building AI products is not training the model—it is designing the interface that makes probabilistic intelligence understandable, steerable, and trustworthy.&quot;<br />
+<em>(打造 AI 產品最困難的部分從來不是訓練模型——而是設計出能讓機率性智慧變得好懂、可控且值得信賴的互動介面。)</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-marpit-fragments="4" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="50" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="ai-%E5%8E%9F%E7%94%9F%E7%94%A2%E5%93%81%E7%8D%A8%E7%89%B9%E7%9A%84-ux-%E6%8C%91%E6%88%B0">AI 原生產品獨特的 UX 挑戰</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 非確定性與不可預測性 (Non-Determinism)：</strong>
+<ul>
+<li>傳統軟體：輸入 <code>2 + 2</code> 永遠精確回傳 <code>4</code>。</li>
+<li>AI 系統：即便輸入完全相同的提示詞，每次生成的措辭、語氣或程式碼結構皆可能完全不同。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 「模型幻覺 (Hallucination)」的兩難：</strong>
+<ul>
+<li>生成式模型具備用極度自信的語氣，憑空捏造出虛構事實、不存在的函式庫或假文獻的傾向。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 推論延遲與「思考黑盒子」：</strong>
+<ul>
+<li>具備深度推論能力的模型（如 o1、Gemini Thinking）在輸出第一個字前，需要 5 到 30 秒的計算時間。</li>
+</ul>
+</li>
+<li data-marpit-fragment="4"><strong>4. 信任度的校準 (Calibration of Trust)：</strong>
+<ul>
+<li><strong>過度盲信 (Over-trust)：</strong> 使用者不加審查便直接部署 AI 程式碼，引發正式環境重大當機。</li>
+<li><strong>過度懷疑 (Under-trust)：</strong> 使用者因 AI 犯了一次小錯便徹底棄用，喪失所有生產力紅利。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-marpit-fragments="2" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="51" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="ai--ns01-%E7%8B%80%E6%85%8B%E5%8F%AF%E8%A6%8B%E5%BA%A6%E8%88%87%E6%80%9D%E8%80%83%E8%BB%8C%E8%B7%A1%E6%8F%AD%E9%9C%B2">AI + NS01: 狀態可見度與思考軌跡揭露</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>AI 推論延遲與黑盒子難題：</strong>
+<ul>
+<li>數十秒的推論延遲若只顯示傳統靜態 loading 圈圈，會讓使用者誤以為網路斷線或當機。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>突破性的互動解法：</strong>
+<ul>
+<li><strong>串流文字輸出 (Streaming Tokens)：</strong> 透過 SSE 逐字即時串流輸出，創造即時回應的極佳體感體驗。</li>
+<li><strong>可折疊思考軌跡 (Collapsible Reasoning Traces)：</strong> 提供可展開的「思考過程」面板，透明展示內部推論步驟與工具調用日誌。</li>
+<li><strong>RAG 檢索文獻引註錨點：</strong> 在回答文字中附上可點擊的引用標籤，直接定位對應的來源資料片段。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="52" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+
+<h2 id="ai--ns01-%E5%AF%A6%E8%B8%90%E6%96%87%E5%AD%97%E4%B8%B2%E6%B5%81%E8%88%87%E6%80%9D%E8%80%83%E9%81%8E%E7%A8%8B%E5%8F%AF%E6%8A%98%E7%96%8A%E9%9D%A2%E6%9D%BF">AI + NS01 實踐：文字串流與思考過程可折疊面板</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns01_thinking_process.jpg" alt="AI 思考過程面板" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-marpit-fragments="2" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="53" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="ai--ns02--ns03-%E5%9C%B0%E9%9D%A2%E9%8C%A8%E5%AE%9A%E6%8E%A7%E5%88%B6%E8%88%87%E4%BA%BA%E9%A1%9E%E8%87%AA%E4%B8%BB%E6%AC%8A">AI + NS02 &amp; NS03: 地面錨定、控制與人類自主權</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>AI + NS02 (符合真實世界 / 身份透明)：</strong>
+<ul>
+<li><strong>坦白機器人身份：</strong> 明確宣告自身為 AI 輔助系統，絕不使用欺騙性的偽人類語氣偽裝真人。</li>
+<li><strong>對話脈絡錨定：</strong> 遵循自然語言輪替習慣，與使用者建立共享上下文。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>AI + NS03 (使用者控制與自由度 / 人類自主權)：</strong>
+<ul>
+<li><strong>即時停止生成按鈕 (Stop Generation)：</strong> 當 AI 回覆偏離軌道或開始無限跳針時，提供一鍵即時中斷機制。</li>
+<li><strong>提示詞編輯與分支對話 (Prompt Branching)：</strong> 允許使用者隨時回頭編輯上一句話，分支出全新對話樹。</li>
+<li><strong>輸出操控拉桿：</strong> 提供溫度（隨機性）、回答長度與語氣風格的即時調整控制項。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="54" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+
+<h2 id="ai--ns03-%E5%AF%A6%E8%B8%90%E4%BD%BF%E7%94%A8%E8%80%85%E9%9A%A8%E6%99%82%E4%B8%AD%E6%96%B7%E8%88%87%E6%8F%90%E7%A4%BA%E8%A9%9E%E9%87%8D%E6%96%B0%E7%B7%A8%E8%BC%AF">AI + NS03 實踐：使用者隨時中斷與提示詞重新編輯</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns_ai_03.jpg" alt="AI 控制與自由度範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-marpit-fragments="2" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="55" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="ai--ns05-%E9%98%B2%E9%8C%AF%E6%A9%9F%E5%88%B6%E8%88%87%E4%BB%A3%E7%90%86%E4%BA%BA%E9%98%B2%E8%AD%B7%E5%9C%8D%E6%AC%84-guardrails">AI + NS05: 防錯機制與代理人防護圍欄 (Guardrails)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>自主代理人 (Agentic AI) 帶來的極限風險：</strong>
+<ul>
+<li>具備系統權限的自主代理人能自行執行終端機指令、修改本機專案程式碼與存取遠端資料庫。</li>
+<li>一旦產生幻覺，可能誤刪整個專案目錄、清空資料表或洩漏 API 密鑰。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>人機協同 (HITL) 關鍵防護圍欄：</strong>
+<ul>
+<li><strong>執行前強制確認 (Pre-Execution Confirmation)：</strong> 涉及終端機指令或檔案修改的高風險動作，必須強制彈窗等候人類工程師點擊「確認執行」。</li>
+<li><strong>Diff 差異視覺化預覽：</strong> 以類似 Git 的綠紅顏色清楚標示 AI 企圖新增與刪除的程式碼行數。</li>
+<li><strong>沙盒安全隔離執行 (Sandboxed Execution)：</strong> 未經驗證的代碼先在隔離容器內試跑，確認安全無虞後才套用至本機。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="56" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+
+<h2 id="ai--ns05-%E5%AF%A6%E8%B8%90%E5%9F%B7%E8%A1%8C%E5%89%8D%E7%A2%BA%E8%AA%8D%E5%BD%88%E7%AA%97%E8%88%87%E4%BB%A3%E7%A2%BC-diff-%E7%A8%BD%E6%A0%B8">AI + NS05 實踐：執行前確認彈窗與代碼 Diff 稽核</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns05_error_prevention.jpg" alt="AI 執行確認與 Diff 範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-marpit-fragments="2" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="57" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="ai--ns07--ns10-%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C%E8%88%87%E5%8F%AF%E8%A7%A3%E9%87%8B%E6%80%A7-xai">AI + NS07 &amp; NS10: 快捷操作與可解釋性 (XAI)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>AI + NS07 (彈性與高手快捷鍵)：</strong>
+<ul>
+<li><strong>斜線指令 (Slash Commands)：</strong> 透過鍵盤輸入 <code>/explain</code>、<code>/refactor</code>、<code>/fix-tests</code>，讓高手免於冗長的口語打字。</li>
+<li><strong>多模態拖曳輸入：</strong> 支援將螢幕截圖、報表 PDF 或錯誤日誌直接拖入對話框中進行即時分析。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>AI + NS10 (可解釋性 AI / Explainable AI - XAI)：</strong>
+<ul>
+<li><strong>「為什麼給出這個答案？」：</strong> 提供情境微提示，說明此回答引用了哪幾篇知識庫文件或哪一條提示詞規範。</li>
+<li><strong>信心指數與模型透明度：</strong> 清楚揭露當前運行的模型版本與預測信心水準評估。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="title-image-slide" data-theme="ase-theme" lang="C" class="title-image-slide" data-marpit-pagination="58" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:title-image-slide;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+
+<h2 id="ai--ns10-%E5%AF%A6%E8%B8%90%E5%8F%AF%E8%A7%A3%E9%87%8B%E6%80%A7%E5%BC%95%E8%A8%BB%E8%88%87%E7%9F%A5%E8%AD%98%E5%BA%AB%E5%AE%9A%E4%BD%8D">AI + NS10 實踐：可解釋性引註與知識庫定位</h2>
+<div class="image-wrapper">
+  <img src="../../img/ux/ns10_help_doc.jpg" alt="AI 可解釋性與引註範例" />
+</div>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="59" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-3%E7%82%BA-ai-%E6%89%93%E9%80%A0%E9%AB%94%E9%A9%97-ux-for-ai">觀念檢核測驗 3：為 AI 打造體驗 (UX for AI)</h2>
+<p>當設計一個具備讀取檔案目錄、修改專案原始碼與執行 Shell 終端機指令的自主 AI 寫程式代理人時，下列哪一項互動設計模式最能完整落實<strong>防錯機制 (NS05)</strong> 與 <strong>使用者自主權 (NS03)</strong>？</p>
+<ul>
+<li><strong>A.</strong> 允許代理人在背景靜默執行所有檔案刪除與終端機指令，以避免打擾使用者。</li>
+<li><strong>B.</strong> 在執行高風險檔案修改或終端機指令前，強制要求人類工程師進行審查確認並提供 Diff 預覽。</li>
+<li><strong>C.</strong> 一旦 AI 開始執行，立即鎖死並移除中斷或停止運行的按鈕，以維持交易完整性。</li>
+<li><strong>D.</strong> 將所有終端機執行日誌全部隱藏，以維持介面簡潔並降低資訊過載。</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-header="6.4 UX for AI (UX4AI)" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="60" style="--paginate:true;--header:6.4 UX for AI (UX4AI);--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.4 UX for AI (UX4AI)</header>
+<h2 id="%E8%A7%80%E5%BF%B5%E6%AA%A2%E6%A0%B8%E6%B8%AC%E9%A9%97-3%E8%A7%A3%E7%AD%94%E8%88%87%E8%A7%A3%E6%9E%90">觀念檢核測驗 3：解答與解析</h2>
+<ul>
+<li><strong>正確答案：B</strong></li>
+<li><strong>詳細解析：</strong>
+<ul>
+<li>自主代理人在程式庫中穿梭操作具有極高風險（例如遞迴誤刪檔案、覆蓋設定檔）。</li>
+<li>落實 <strong>NS05 (防錯設計)</strong> 與 <strong>NS03 (使用者控制與自由度)</strong> 的標準架構就是 <strong>Human-in-the-Loop (人機協同)</strong>：代理人負責規劃提議，但高風險的實體執行必須強制提供 Diff 預覽，並等候人類工程師明確審查核准。</li>
+<li><em>其他選項為何錯誤：</em> 選項 A 造成毀滅性的資安與資料遺失風險；選項 C 嚴重剝奪使用者主控權；選項 D 違反系統狀態可見度原則（NS01）。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-header="6.5 評估與工程整合" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-class="lead" data-theme="ase-theme" lang="C" class="lead" data-marpit-pagination="61" style="--paginate:true;--header:6.5 評估與工程整合;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--class:lead;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.5 評估與工程整合</header>
+
+<h1 id="65-%E6%98%93%E7%94%A8%E6%80%A7%E8%A9%95%E4%BC%B0%E8%88%87%E5%B7%A5%E7%A8%8B%E6%95%B4%E5%90%88"><strong>6.5 易用性評估與工程整合</strong></h1>
+<blockquote>
+<p>&quot;Evaluating usability with 5 users uncovers roughly 85% of all usability problems.&quot;<br />
+<em>(只要找 5 位代表性使用者進行測試，就能找出系統中大約 85% 的易用性問題。)</em><br />
+— <em>Jakob Nielsen</em></p>
+</blockquote>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-marpit-fragments="2" data-paginate="true" data-header="6.5 評估與工程整合" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="62" style="--paginate:true;--header:6.5 評估與工程整合;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.5 評估與工程整合</header>
+<h2 id="%E5%9F%B7%E8%A1%8C%E6%AD%A3%E5%BC%8F%E5%B0%88%E5%AE%B6%E5%95%9F%E7%99%BC%E5%BC%8F%E8%A9%95%E4%BC%B0-heuristic-evaluation">執行正式專家啟發式評估 (Heuristic Evaluation)</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>什麼是啟發式評估？</strong>
+<ul>
+<li>由獨立評估者對照既定的易用性原則（如尼爾森十大原則），對介面進行逐頁檢查的折扣式易用性檢驗方法。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>尼爾森 5 級易用性缺陷嚴重度量表 (Severity Rating Scale)：</strong>
+<ul>
+<li><strong>0 級 = 不是問題 (Not a problem)：</strong> 評估者個人的純主觀偏好，不影響任何使用者操作。</li>
+<li><strong>1 級 = 僅表面外觀瑕疵 (Cosmetic problem)：</strong> 微小的視覺排版瑕疵，僅在有多餘時間時才修復。</li>
+<li><strong>2 級 = 輕微易用性問題 (Minor usability problem)：</strong> 造成輕微不便，但使用者能自行摸索解決；修復優先級較低。</li>
+<li><strong>3 級 = 重大易用性問題 (Major usability problem)：</strong> 造成嚴重延遲或混淆，高優先級；產品發布前必須修復。</li>
+<li><strong>4 級 = 易用性災難 (Usability catastrophe)：</strong> 徹底阻斷任務進行，使用者無法完成目標；<strong>修復前產品絕對禁止上線發布！</strong></li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-paginate="true" data-header="6.5 評估與工程整合" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="63" style="--paginate:true;--header:6.5 評估與工程整合;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.5 評估與工程整合</header>
+<h2 id="%E5%B0%88%E5%AE%B6%E5%95%9F%E7%99%BC%E5%BC%8F%E8%A9%95%E4%BC%B0-vs-%E7%9C%9F%E4%BA%BA%E4%BD%BF%E7%94%A8%E8%80%85%E6%B8%AC%E8%A9%A6">專家啟發式評估 vs. 真人使用者測試</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">評估維度</th>
+<th style="text-align:left">專家啟發式評估 (Heuristic Evaluation)</th>
+<th style="text-align:left">真人使用者測試 (Empirical User Testing)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>評估人員</strong></td>
+<td style="text-align:left">3 到 5 位 UX 專家 / 資深軟體工程師</td>
+<td style="text-align:left">5 位真實代表性目標終端使用者</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>適用時機</strong></td>
+<td style="text-align:left">專案早期 (線框圖 Wireframes、早期原型)</td>
+<td style="text-align:left">專案中後期 (具備互動功能之原型、測試環境)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>時間與成本</strong></td>
+<td style="text-align:left">極為極速 (1–2 天內完成)；成本低廉</td>
+<td style="text-align:left">較耗時 (1–2 週)；需招募受測者與實驗室環境</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>核心優勢</strong></td>
+<td style="text-align:left">能極速掃除明顯原則違規與極端邊界問題</td>
+<td style="text-align:left">揭露真實人類行為中的意想不到摩擦與驚喜</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>本質局限</strong></td>
+<td style="text-align:left">專家有時難以預測深層領域特殊習慣</td>
+<td style="text-align:left">使用者能告訴你哪裡卡住，但不一定知道怎麼修</td>
+</tr>
+</tbody>
+</table>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-marpit-fragments="6" data-paginate="true" data-header="6.5 評估與工程整合" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="64" style="--paginate:true;--header:6.5 評估與工程整合;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.5 評估與工程整合</header>
+<h2 id="%E5%85%A8%E7%AB%A0%E6%A0%B8%E5%BF%83%E8%A7%80%E5%BF%B5%E7%B5%B1%E6%95%B4%E5%A1%AB%E7%A9%BA%E5%A4%A7%E6%8C%91%E6%88%B0">全章核心觀念統整：填空大挑戰</h2>
+<p>檢驗你對第六章核心概念的掌握度：</p>
+<ul>
+<li data-marpit-fragment="1"><strong>1.</strong> 一扇裝著拉手但實際上必須用推的才能打開的門，在人機互動界被著名地稱為 <strong><code>___</code></strong> 門。</li>
+<li data-marpit-fragment="2"><strong>2.</strong> <strong><code>___</code></strong> 定律指出，使用者絕大部分時間都在別人的網站上，因此預期你的系統遵循通用慣例。</li>
+<li data-marpit-fragment="3"><strong>3.</strong> 尼爾森原則中的 <strong><code>___</code></strong> 主張，事前防範錯誤發生遠比事後提供優良錯誤訊息更有價值。</li>
+<li data-marpit-fragment="4"><strong>4.</strong> 專為設計師量身定制的結構化提示詞工程框架，包含角色、任務、約束與格式，其英文縮寫為 <strong><code>___</code></strong>。</li>
+<li data-marpit-fragment="5"><strong>5.</strong> 在 AI 產品介面中，提供串流文字輸出與可折疊思考過程，完美體現了原則 <strong><code>___</code></strong>：系統狀態可見度。</li>
+<li data-marpit-fragment="6"><strong>6.</strong> 在尼爾森嚴重度評級中，會徹底阻斷任務進行、必須在發布前強制修復的缺陷被評為 <strong><code>___</code></strong> 級。</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-marpit-fragments="6" data-paginate="true" data-header="6.5 評估與工程整合" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="65" style="--paginate:true;--header:6.5 評估與工程整合;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.5 評估與工程整合</header>
+<h2 id="%E5%85%A8%E7%AB%A0%E6%A0%B8%E5%BF%83%E8%A7%80%E5%BF%B5%E7%B5%B1%E6%95%B4%E5%8F%83%E8%80%83%E8%A7%A3%E7%AD%94">全章核心觀念統整：參考解答</h2>
+<p>以下為核心概念的標準解答：</p>
+<ul>
+<li data-marpit-fragment="1"><strong>1.</strong> 一扇裝著拉手但實際上必須用推的才能打開的門，在人機互動界被著名地稱為 <strong>諾曼 (Norman)</strong> 門。</li>
+<li data-marpit-fragment="2"><strong>2.</strong> <strong>雅各布 (Jakob's)</strong> 定律指出，使用者絕大部分時間都在別人的網站上，因此預期你的系統遵循通用慣例。</li>
+<li data-marpit-fragment="3"><strong>3.</strong> 尼爾森原則中的 <strong>NS05: 防錯設計 (Error Prevention)</strong> 主張，事前防範錯誤發生遠比事後提供優良錯誤訊息更有價值。</li>
+<li data-marpit-fragment="4"><strong>4.</strong> 專為設計師量身定制的結構化提示詞工程框架，包含角色、任務、約束與格式，其英文縮寫為 <strong>RTCF</strong>。</li>
+<li data-marpit-fragment="5"><strong>5.</strong> 在 AI 產品介面中，提供串流文字輸出與可折疊思考過程，完美體現了原則 <strong>NS01</strong>：系統狀態可見度。</li>
+<li data-marpit-fragment="6"><strong>6.</strong> 在尼爾森嚴重度評級中，會徹底阻斷任務進行、必須在發布前強制修復的缺陷被評為 <strong>4 (災難級)</strong>。</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-marpit-fragments="3" data-paginate="true" data-header="6.5 評估與工程整合" data-footer="薛念林 教授 · 逢甲大學資訊工程學系" data-theme="ase-theme" lang="C" data-marpit-pagination="66" style="--paginate:true;--header:6.5 評估與工程整合;--footer:薛念林 教授 · 逢甲大學資訊工程學系;--theme:ase-theme;" data-marpit-pagination-total="66">
+<header>6.5 評估與工程整合</header>
+<h2 id="%E6%9C%AC%E7%AB%A0%E7%B8%BD%E7%B5%90%E8%88%87%E5%B7%A5%E7%A8%8B%E5%AF%A6%E5%8B%99%E6%A0%B8%E5%BF%83%E5%95%9F%E7%A4%BA">本章總結與工程實務核心啟示</h2>
+<ul>
+<li data-marpit-fragment="1"><strong>1. 人性心理學永遠優先於程式碼 (Psychology Precedes Code)：</strong>
+<ul>
+<li>卓越的軟體工程師永遠會為人類有限的認知能力（工作記憶、挫折感）而設計。</li>
+<li>當使用者操作出錯時，優先檢討介面的預設用途（Affordance），而非責怪使用者的能力。</li>
+</ul>
+</li>
+<li data-marpit-fragment="2"><strong>2. 深刻內化尼爾森十大原則：</strong>
+<ul>
+<li>隨時回饋狀態 (NS01)、符合實體隱喻 (NS02)、給予逃生出口 (NS03)、遵從平台標準 (NS04)、事前做好防錯 (NS05)、白話引導修復 (NS09)。</li>
+</ul>
+</li>
+<li data-marpit-fragment="3"><strong>3. 駕馭 AI 時代的雙向設計典範 (AI4UX &amp; UX4AI)：</strong>
+<ul>
+<li>善用 RTCF 結構化提示詞，加速使用者研究、原型生成與啟發式稽核。</li>
+<li>為 AI 產品建立校準信任：串流推論文字、揭露思考軌跡、對高風險動作設置人機協同確認，並提供原地修復動線。</li>
+</ul>
+</li>
+</ul>
+<footer>薛念林 教授 · 逢甲大學資訊工程學系</footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o),l=Symbol();let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[l];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();a()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[l]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>各位好，歡迎來到軟體工程第六課：使用者體驗 (UX) 設計與以人為本的 AI。
+
+在先前的章節中，我們學習了如何擷取需求、塑模系統架構，以及建構具備高內聚低耦合的物件導向軟體。然而，即使你的後端演算法在數學上再極致優雅、程式碼一行 bug 都沒有，如果真實的人類使用者看不懂、不會用、用得滿肚子火，那麼這個軟體專案依然是一場徹底的災難。
+
+軟體工程從本質上就是「以人為本」的學科。在這一章中，我們將跨越純工程邏輯與人類心理學之間的鴻溝。我們將探討使用者體驗（UX）的核心本質、透徹掌握 Jakob Nielsen 的十大易用性啟發式原則、學習現代工程師如何運用 AI 加速設計流程（AI for UX），並深入探討如何為具備不確定性的生成式 AI 系統打造值得信賴的使用者介面（UX for AI）。
+
+總結這張投影片，請記住這個核心觀念：卓越的軟體工程，必須將穩健的技術架構與直覺、以人為本的使用者體驗設計緊密結合。</p></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>這是我們第六章的學習藍圖。
+
+在左側的第一部分，我們從日常認知心理學切入：探討為什麼好設計往往「看不見」，為什麼壞設計會引發使用者暴怒，並系統性拆解 Jakob Nielsen 的十大易用性啟發原則。
+
+在右側的第二部分，我們邁入 AI 時代的前沿設計。我們分別探討兩大面向：第一是 AI for UX——運用大型語言模型與代理人加速設計與稽核；第二是 UX for AI——如何為充滿隨機性與潛在幻覺的 AI 系統，設計出透明、可控且令人信賴的互動介面。
+
+總結這張投影片，請記住這個核心觀念：本章將引導大家從底層的人類認知人因工程，一路躍升至現代 AI 增強的人機互動設計前沿。</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>我們首先進入 6.1 節：使用者體驗設計基礎。
+
+你有沒有過這樣的經驗：走進一棟公共大樓，看到門把用力往前推，結果門紋風不動，才發現門上貼著「請用拉的」？當時你是不是覺得自己很笨？
+
+認知心理學巨擘 Don Norman 告訴我們：你一點都不笨，笨的是那扇門！當一扇門裝著一片平板，人類的本能就是推；當裝著把手，人類的直覺就是拉。當一個把手竟然需要用「推」的，這扇門在設計上就徹底違背了人類的認知天性。
+
+在這一節中，我們將探討日常設計心理學、分析三大經典不良設計原型、剖析真實世界健保 App 的改版歷程，並確立使用者體驗的正式範疇。
+
+總結這張投影片，請記住這個核心觀念：當使用者在操作軟體犯錯時，該怪罪的是介面設計，而不是使用者的智商。</p></div><div class="bespoke-marp-note" data-index="3" tabindex="0"><p>請看畫面上這扇經典的諾曼門。
+
+注意其中的矛盾：這扇門裝著一根明顯適合握住往後拉的垂直門把，但門上卻不得不貼一張難看的貼紙寫著「推 PUSH」！因為每個人走過來直覺都會去拉它。
+
+Don Norman 提出了 Affordance（預設用途）與 Signifier（示能線索）的關鍵區別。預設用途是物理特質所引發的本能動作；示能線索則是後天加上去的提示符號。
+
+如果一扇門的推拉側設計得當——推的那面做成平板，拉的那面做成把手——人類大腦根本不需要任何文字，就能在無意識中完成正確操作。
+
+總結這張投影片，請記住這個核心觀念：直覺的設計善用自然的物理預設用途，讓使用者無須仰賴外部操作警告標籤。</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>糟糕的軟體設計背後伴隨著巨大的情緒與經濟成本。
+
+當使用者遇到雜亂的表單、找不到送出按鈕、或是突然彈出看不懂的錯誤代碼時，會產生本能的憤怒與挫折感。在消費型產品中，使用者會直接解除安裝跳槽到競爭對手那裡；在企業內部，難用的系統每天都在浪費員工數千小時的生產力。
+
+工程師必須深刻體會：易用性絕非可有可無的美化裝飾——它直接決定了產品的商業留存率、轉化率與軟體的生存命脈。
+
+總結這張投影片，請記住這個核心觀念：劣質 UX 直接造成用戶流失、龐大客服成本與嚴重的生產力內耗。</p></div><div class="bespoke-marp-note" data-index="5" tabindex="0"><p>讓我們來盤點軟體界最常見的三大不良介面原型。
+
+第一種是「夜市風」：恨不得把全公司的業務全部擠在首頁，頁面密密麻麻，使用者完全不知道眼睛該看哪裡。
+
+第二種是「油漆不用錢」：色彩斑斕刺眼，文字與底色對比嚴重不足，造成視覺疲勞與閱讀障礙。
+
+第三種是「我該按哪裡」：畫面上擺了二十個大小一模一樣的灰色方塊，沒有任何主要按鈕（CTA）引導，讓使用者陷入沉重的選擇困難。
+
+總結這張投影片，請記住這個核心觀念：杜絕認知超載、堅守無障礙對比度標準，並透過清晰的視覺階層引導使用者操作。</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>請看畫面上這張世界知名的真實網頁範例：挪威的 Arngren 網站。
+
+這是感官超載的教科書級反面教材。無人機、電動滑板車、遙控模型混雜在一起，爭搶著螢幕上的每一個像素。這裡沒有邊界、沒有留白、沒有群組分類，也沒有任何邏輯動線。
+
+當每一項元素都在對著使用者大聲尖叫時，使用者什麼聲音都聽不見。
+
+總結這張投影片，請記住這個核心觀念：缺乏群組分類與留白空間的介面，終將淪為無意義的視覺噪音。</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>這是一個發生在台灣、極具教育意義的真實人因工程案例：健保快易通 App 的口罩預購改版。
+
+在疫情剛爆發、全民搶口罩的緊張時刻，數百萬焦慮的民眾每天都要打開這款 App 預購口罩。
+
+然而當時的 App 首頁是一個由 20 個正方形圖示排成的行政總覽矩陣。口罩預購按鈕和一般的「就醫宣導」、「器官捐贈」平起平坐，長輩們戴著老花眼鏡在螢幕上反覆尋找。
+
+在緊急情境下，平頭式的視覺權重直接阻礙了關鍵任務的達成。
+
+總結這張投影片，請記住這個核心觀念：在高度壓力的情境下，若各功能享有均等視覺權重，將嚴重淹沒關鍵任務。</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>請仔細觀察螢幕上的改版前介面。
+
+一眼就能看出問題所在：二十個一模一樣的方形圖示整齊排列。
+
+你能第一時間找到口罩預購按鈕在哪裡嗎？它混雜在健康存摺、醫療院所查詢、保險費繳納之中。
+
+對於心急如焚想要確認口罩配額的民眾而言，這種均勻排列強迫大腦進行耗時的地毯式搜尋，造成極大的認知阻力。
+
+總結這張投影片，請記住這個核心觀念：均勻無差別的圖示陣列強迫使用者進行地毯式視覺搜索，無法提供即時的任務辨識。</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>現在請看改版後的介面。
+
+這是何等震撼的對比！設計團隊直接把「口罩預購」拉拔為頂部最高權重的巨型重點 Banner（Hero Card），正好座落於手機螢幕最容易點擊的大拇指熱區。
+
+其他次要的行政查詢服務，則整齊收納在下方的功能卡片中。
+
+全台灣任何一位打開 App 的民眾，不需要一秒鐘思考，一指點擊即可立即進入預購流程。
+
+總結這張投影片，請記住這個核心觀念：高優先級的情境任務應當佔據最顯著的視覺版面與最直接的預設用途。</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>深入剖析這次改版成功的根本原因：
+
+首先，團隊落實了「資訊塊分群（Chunking）」：把關聯服務打包成清晰模組。
+
+其次，也是最關鍵的一點：介面設計與人類情境即時對齊。疫情當前，95% 的民眾打開 App 只有一個目的——買口罩！軟體導覽架構絕不能僵化反映衛福部的組織分工，而是必須反映當下使用者的迫切需求。
+
+總結這張投影片，請記住這個核心觀念：動態情境 UX 依據真實世界的使用者優先級調整介面階層，而非僵化反映組織結構。</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>為什麼頂尖工程師常常做出極難使用的軟體？
+
+心理學上最大的罪魁禍首就是「知識的詛咒 (Curse of Knowledge)」。因為這套系統是你花三個月一行一行 code 敲出來的，每個按鈕藏在哪裡你都一清二楚，你很難想像一個第一次看到的素人會有多茫然。
+
+請記住人機互動界的第一天條：You Are Not The User！你絕不等於你的使用者。
+
+切勿把後端資料表的防衛性思維硬套在介面上，強迫使用者按照資料庫的欄位順序去思考。
+
+總結這張投影片，請記住這個核心觀念：擺脫「知識的詛咒」，將內部資料庫邏輯與人類自然心智模型徹底抽離。</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>讓我們精確釐清 UI 與 UX 的根本界線。
+
+UI 代表視覺感官接觸點：漂亮的漸層按鈕、優雅的 Google Fonts 字體、細緻的 CSS 動畫。
+
+UX 則掌管整趟旅程的心理感受：我花了多久才把帳單繳完？操作過程有沒有焦慮？如果不小心按錯了，系統能不能讓我秒速復原？
+
+經典的比喻非常傳神：UI 是雕刻精美的馬鞍與韁繩；UX 則是騎馬奔馳時的暢快與踏實感。
+
+一個畫面可以擁有玻璃擬態（Glassmorphism）的高級 UI，但如果送出按鈕在手機上點了沒反應，UX 就是零分。
+
+總結這張投影片，請記住這個核心觀念：UI 是使用者看見並觸摸的感官介面；UX 則是使用者在達成目標過程中所獲得的整體心理體驗。</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>請看這張 UI 與 UX 的解剖對比圖。
+
+左邊呈現 UI 的專屬範疇：視覺美學、字型、圖標、顏色搭配。
+
+右邊呈現 UX 的宏觀面向：資訊架構、互動流程動線、易用性測試、使用者的情感反饋。
+
+兩者缺一不可。但請記住：UI 是為 UX 服務的。一個視覺華麗卻讓使用者處處碰壁的介面，在軟體工程上就是失敗品。
+
+總結這張投影片，請記住這個核心觀念：UI 打造了美感觸點，而 UX 則主導了使用者的成功、滿意度與價值實現。</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>這是史丹佛大學 d.school 提出的經典設計思考（Design Thinking）五大階段架構。
+
+請注意這套工程循環：軟體專案絕對不能一上來就寫程式或畫高傳真畫面！你必須從「同理（Empathize）」開始——親自觀察目標族群在真實場景中的行為。
+
+接著「定義（Define）」真正要解決的核心痛點、天馬行空「構思（Ideate）」多元解法、動手打造低成本「原型（Prototype）」，最後交給真人進行「測試（Test）」。
+
+總結這張投影片，請記住這個核心觀念：UX 設計是一個從深度同理出發，歷經快速原型打造與驗證迭代的工程循環。</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>細看設計思考的五個階段：
+
+同理階段：放下工程師的預設立場，走入真實世界傾聽。
+定義階段：把散碎的訪談收斂成清晰具體的問題定義。
+構思階段：發想各種天馬行空的解決策略。
+原型階段：用最低的成本做出可以按、可以測的假模型。
+測試階段：觀察真人使用者的真實反應。
+
+這個流程是高度雙向反覆的：測試時發現假設錯誤，立刻倒回定義階段重新修正。
+
+總結這張投影片，請記住這個核心觀念：設計思考五大階段提供了一套結構化、可重複驗證的以人為本軟體研發方法論。</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>讓我們透過觀念測驗 1 來檢核對 UX 基礎與諾曼門概念的理解。
+
+回想 Don Norman 對預設用途（Affordance）與示能線索（Signifier）的定義。
+
+仔細評估選項，挑選出真正點破諾曼門本質的原因。</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>正確答案是 B。
+
+當門把的物理造型在向大腦發送「拉我」的訊號，但門卻只能「推」開時，這就是設計上的嚴重精神分裂。那張貼紙只是一塊遮羞布。
+
+總結這張投影片，請記住這個核心觀念：直覺的實體與數位介面透過天然的預設用途溝通操作方式，而非依賴警告標籤修補不良設計。</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>我們現在邁入 6.2 節：Jakob Nielsen 的十大易用性啟發式原則（10 Usability Heuristics）。
+
+由 Jakob Nielsen 與 Rolf Molich 於 1994 年歸納提出的這十條啟發原則，至今依然是數位互動介面設計的「世界憲法」。它們不是死板的數學公式，而是歷經數十年實證研究萃取出的經驗法則。
+
+在這一節中，我們將透過真實的介面實例——從瓦斯爐旋鈕到 iPhone 鎖定畫面——逐一掌握這十條黃金原則如何指導軟體工程決策。
+
+總結這張投影片，請記住這個核心觀念：尼爾森十大原則為評估與設計直覺流暢的軟體介面，提供了通用的啟發式評估文法。</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>這是 Jakob Nielsen 十大易用性啟發原則的全貌清單。
+
+每一位合格的軟體工程師、產品經理與 UI/UX 設計師都應該對這十條原則滾瓜爛熟。
+
+請注意這十條原則的涵蓋範疇：從即時動態回饋（NS01）、真實世界隱喻（NS02）、逃生出口（NS03）、標準一致性（NS04）、防錯機制（NS05）、認知記憶減負（NS06）、高手快捷鍵（NS07）、視覺減法（NS08）、白話錯誤修復（NS09），到情境文件（NS10）。
+
+接下來讓我們逐一深度解析。
+
+總結這張投影片，請記住這個核心觀念：這十項原則全面涵蓋了狀態回饋、認知負擔、容錯防護與操作效率等核心軟體工程品質。</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>原則一：系統狀態可見度。
+
+沒有什麼比點了按鈕之後螢幕一片死寂更能引發使用者的恐慌了。扣款成功了嗎？當機了嗎？我要不要再按一次？這一按往往造成重複刷卡！
+
+軟體必須隨時給予反饋。一秒鐘內的動作，給予按鈕回饋或輕量 spinner；數秒鐘的操作，提供確切的進度百分比；多步驟的表單，提供步驟指示器。
+
+總結這張投影片，請記住這個核心觀念：持續且及時的視覺回饋能徹底消除使用者的焦慮感，防止重複操作錯誤。</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>請看畫面上這幾個系統狀態可見度的具體實踐。
+
+百分比下載進度條讓等待具備明確預期；多步驟精靈指引使用者當前在第幾步、還剩幾步；按鈕在點擊時提供物理下沉視覺回饋。
+
+每一個互動狀態都被清清楚楚地表達出來，使用者永遠處於被充分告知的安全感之中。
+
+總結這張投影片，請記住這個核心觀念：透過進度條、步驟指示器與動態回饋，讓使用者隨時清楚掌握系統運行狀態。</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>原則二：符合真實世界。
+
+軟體應該採用人類在真實世界早已累積的生活經驗與空間隱喻。桌面上的垃圾桶、電商的購物車都是大家耳熟能詳的經典範例。
+
+請特別注意「自然空間映射（Natural Mapping）」：瓦斯爐是四個爐口排成 2x2 正方形，如果開關旋鈕硬要排成橫向一直線，你的大腦每次開火都要在腦子裡做座標映射。如果開關也排成 2x2，閉著眼睛都不會開錯。
+
+總結這張投影片，請記住這個核心觀念：將數位控制項直接映射至真實世界的空間幾何與日常語彙，消除認知轉換阻力。</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>這張對比圖完美詮釋了自然空間映射的力量。
+
+左側四個旋鈕排成一直線，使用者每次都要瞇著眼睛看標籤或在腦袋裡數「左二是哪一口爐子」，經常把空鍋子燒焦。
+
+右側將四個旋鈕依照 2x2 空間排列，人類的大腦根本不需要經過任何邏輯運算，手伸出去就是正確的開關。
+
+總結這張投影片，請記住這個核心觀念：當控制項配置與實體物理空間幾何完全對齊時，操作轉換摩擦力直接降為零。</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>原則三：使用者控制與自由度（緊急出口）。
+
+人是充滿好奇心的，但人也很容易手滑按錯。如果一個系統讓使用者覺得「只要點錯一個按鈕，資料就會灰飛煙滅，或者信用卡立刻被扣款」，使用者會變得極度畏縮、不敢探索。
+
+給使用者清晰的緊急出口！跳出來的彈跳視窗一定要有 Esc 鍵或關閉叉叉；刪除重要檔案時，提供 Undo 氣泡提示。
+
+當使用者知道自己隨時能「後悔」、隨時能回到上一動時，他們才會帶著安全感自由探索軟體。
+
+總結這張投影片，請記住這個核心觀念：清晰的緊急出口與復原機制為使用者提供心理安全防護網，激勵使用者自信操作。</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>請看畫面上這些無處不在的逃生出口設計。
+
+在主要送出按鈕旁邊永遠伴隨著高對比的「取消」按鈕；重要刪除操作完成後，底部彈出具備倒數計時的「復原（Undo）」Toast；右上角常駐醒目的關閉圖示。
+
+使用者永遠不會被困死在一個進退維谷的死胡同裡。
+
+總結這張投影片，請記住這個核心觀念：顯眼的取消按鈕與即時復原機制，保障了使用者的自主掌控權。</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>原則四：一致性與標準性。
+
+很多新進工程師或熱血設計師常有一種衝動：想要「打破常規、重新發明輪子」——把導覽選單藏在右下角，或是把購物車畫成一個皮箱。
+
+Jakob Nielsen 提出了著名的雅各布定律：你的使用者 99% 的時間都在用別人的產品！他們早就習慣了點左上角 Logo 回首頁、右上角是購物車、齒輪代表設定。
+
+切勿為了與眾不同而違背使用者的通用直覺。遵從平台標準與設計系統，才能大幅降低上手門檻。
+
+總結這張投影片，請記住這個核心觀念：遵從產業通用慣例與內部設計系統，能最大程度降低使用者的認知負擔。</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>請看這些全世界通用的標準慣例圖標。
+
+齒輪代表設定、鈴鐺代表通知、放大鏡代表搜尋、購物車代表待買清單。
+
+當你的產品完全符合這些標準慣例時，一個剛下載 App 的使用者不需要閱讀一字一句教學，就能無痛上手操作。
+
+總結這張投影片，請記住這個核心觀念：符合產業標準 UI 規範，讓初次造訪的使用者能直接套用既有心智模型。</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>原則五：防錯設計。
+
+在使用者出錯之後給予禮貌溫暖的錯誤訊息固然很好，但「一開始就設計成讓使用者根本無法犯錯」，才是最高段的工程美學。
+
+為什麼要讓使用者在文字框裡隨意亂打日期，然後再跳出紅字罵他格式錯誤？直接給他一個日曆選擇器，他就連打錯的機會都沒有！
+
+對於極度危險的動作（例如刪除整個雲端資料庫），故意加入合理的摩擦力——要求輸入資料庫名稱，徹底杜絕手滑造成的重大災難。
+
+總結這張投影片，請記住這個核心觀念：透過輸入約束、即時欄位防呆與關鍵確認機制，防範錯誤於未然。</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>請看畫面上 GitHub 刪除 Repository 的經典高阻力確認框。
+
+GitHub 絕不只是提供一個簡單的「確定」按鈕。它強制要求開發者親手敲入完整的儲存庫名稱。
+
+這個刻意設計的操作摩擦力，能瞬間喚醒使用者的專注意識，徹底防止任何手滑造成的代碼庫意外抹除。
+
+總結這張投影片，請記住這個核心觀念：針對不可逆的破壞性操作，善用確認機制防止災難性失誤。</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>原則六：辨識取代記憶。
+
+人類的工作記憶容量極度有限——同時只能處理大約 4 到 7 個資訊組塊。
+
+「辨識」是非常省力的大腦運作：就像選擇題，你看到答案就能秒選。「回憶」則非常耗能：像申論題，大腦要在虛無中搜索資訊。
+
+絕不要讓使用者在第一頁記住一串長達 12 碼的訂單編號，再叫他手動抄到第三頁貼上！把選項、歷程記錄、縮圖清清楚楚放在視野範圍內。
+
+總結這張投影片，請記住這個核心觀念：透過提供歷史記錄與視覺提示，將耗費心力的被動回憶轉化為省力的主動辨識。</p></div><div class="bespoke-marp-note" data-index="31" tabindex="0"><p>請看現代搜尋介面的設計範例。
+
+使用者點開搜尋框時，面對的不是一片空白，而是系統主動呈現的近期搜尋記錄、熱門關鍵字與自動補全建議。
+
+大腦只需要在畫面上「辨識」出自己剛剛找過的目標，直接點擊即可，徹底免去重新打字的繁瑣記憶負擔。
+
+總結這張投影片，請記住這個核心觀念：主動呈現歷史記錄與建議，讓大腦的運作從苦思回憶轉為輕鬆辨識。</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>原則七：彈性與使用效率。
+
+優良的軟體必須同時包容兩極端的族群：剛註冊的生手，以及每天泡在系統裡八小時的資深高手。
+
+生手需要按部就班的精靈引導與大圖示；但如果一位每天處理 500 張發票的會計師每次都要用滑鼠點五層選單，他會精神崩潰。
+
+提供鍵盤加速器：例如現代開發者極度仰賴的 Cmd+K 命令列，手不離鍵盤就能完成一切操作。
+
+總結這張投影片，請記住這個核心觀念：提供快捷鍵加速器讓專業用戶發揮極致效率，同時保留直覺介面包容新手。</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>請看這些當代頂尖開發者工具中的加速器實踐。
+
+按下一組 `Cmd+K`，全域搜尋面板瞬間彈出，支援模糊搜尋所有操作命令；選單右側清晰提示著快捷鍵標籤，讓工程師在操作過程中耳濡目染。
+
+生手用滑鼠點選無礙，高手用快捷鍵健步如飛。
+
+總結這張投影片，請記住這個核心觀念：命令面板與快捷鍵加速器在完全不干擾新手的同時，為進階用戶賦予極限工作效率。</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>原則八：簡約美學設計。
+
+在軟體工程中，「簡約」絕不是指把所有畫面留白或偷懶不刻功能，而是「極大化訊噪比（Signal-to-Noise Ratio）」。
+
+使用者螢幕上的注意力是極其寶貴的有限頻寬。每一個花俏的裝飾邊框、每一句廢話，都在瓜分使用者的認知資源。
+
+請掌握「漸進式揭露 (Progressive Disclosure)」的藝術：先把最核心、最常用的 20% 主要功能擺在眼前，把剩下的 80% 進階設定收進展開選單裡。
+
+總結這張投影片，請記住這個核心觀念：剔除視覺雜訊並落實漸進式揭露，讓使用者的注意力聚焦於核心任務。</p></div><div class="bespoke-marp-note" data-index="35" tabindex="0"><p>請看這張震撼的對照圖。
+
+左邊舊式系統充斥著各色圖示、走馬燈與小外掛，訊噪比極低，讓人感到疲憊壓迫。
+
+右邊現代簡約設計則大膽運用高品質留白與清晰的排版對比，將唯一的焦點留給使用者當前最重要的核心目標。
+
+總結這張投影片，請記住這個核心觀念：清晰的視覺階層與充沛的留白空間，能最大程度彰顯主要任務的能見度。</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>原則九：協助使用者辨識與修復錯誤。
+
+當使用者遇到錯誤時，他已經處於脆弱和受挫的情緒狀態中。千萬不要對著使用者吐出十六進位的記憶體代碼或是 Raw SQL Exception！
+
+一條合格的錯誤訊息必須具備三要素：第一，用一般人看得懂的白話說明發生什麼事；第二，精確指出具體原因；第三，附上一個一鍵修復的按鈕或指引。
+
+像現代網站會把冷冰冰的 404 Not Found 轉化為溫暖的搜尋導航頁，這就是極佳的修復實踐。
+
+總結這張投影片，請記住這個核心觀念：用平易語言說明原因，並提供一鍵修復的具體出口，將錯誤轉化為正向體驗。</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>請看螢幕上這張充滿同理心的 404 頁面。
+
+它沒有拋出可怕的「404 Bad Request / Nginx Server Error」，而是幽默誠懇地告知：「抱歉，這個頁面可能已經搬家了」，並立即在下方提供搜尋框與返回儀表板的捷徑按鈕。
+
+挫折感在第一時間被同理與化解，使用者無須慌張地按上一頁。
+
+總結這張投影片，請記住這個核心觀念：具備同理心的錯誤設計以白話說明緣由，並主動提供清晰的下一步復原動線。</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>原則十：說明文件與求助支援。
+
+雖然我們的終極目標是讓系統直覺到「沒有人需要讀說明書」，但在龐大複雜的企業級系統中，完備的支援依然不可或缺。
+
+現代優秀的 documentation 絕不是丟一本厚達 100 頁的 PDF 讓使用者去啃，而是「情境化嵌入」：在有疑問的欄位旁放一個問號小提示，在新功能發布時提供互動式導覽體驗。
+
+總結這張投影片，請記住這個核心觀念：提供任務導向、易於檢索且情境化嵌入操作流程的即時說明文件。</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>請看畫面上現代互動式 Onboarding 的設計。
+
+使用者不需要在動手前先念完一篇長篇大論，系統在真實操作路徑中逐步聚焦，一步步帶領使用者完成第一筆任務。
+
+學習發生在做中學的互動之中，既自然又深刻。
+
+總結這張投影片，請記住這個核心觀念：將情境提示與互動式導覽嵌入實際任務流程中，實現漸進式的做中學體驗。</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>讓我們檢驗對尼爾森十大原則的理解。
+
+分析團隊的具體行動：以受限的日曆選擇器取代自由打字，並在驗證過關前禁用按鈕。
+
+思考哪一項原則強調在錯誤發生之前就主動預防。</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>正確答案是 B。
+
+防患於未然，勝過事後收拾殘局。限制輸入元件並提前防呆，完全契合防錯設計的真諦。
+
+總結這張投影片，請記住這個核心觀念：主動的輸入約束與條件防呆機制，是體現 NS05 防錯設計原則的典範。</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>我們現在邁入第二部分：AI 時代的互動設計前沿。
+
+在 6.3 節中，我們探討 AI for UX（AI4UX）：軟體工程師與設計師如何善用大型語言模型、多模態視覺工具與自主代理人，全方位放大設計思維的每個環節？
+
+我們將介紹專業設計師專屬的 RTCF 結構化提示詞工程框架、虛擬使用者人物誌生成，以及多代理人自動化原型建構。
+
+總結這張投影片，請記住這個核心觀念：AI for UX 將生成式智慧轉化為認知協同夥伴，大幅加速介面原型設計、評估與最佳化。</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>什麼是 AI for UX？
+
+簡單來說，就是運用生成式 AI 作為設計流程中的加速齒輪。
+
+以往要花好幾天手動寫文案、整理人物誌，現在可以交由 LLM 在幾秒鐘內產出高品質草案。
+
+多模態視覺模型更能直接「看懂」你的設計稿截圖，並自動執行尼爾森原則稽核，提前發現對比度不足或標籤遺漏。
+
+總結這張投影片，請記住這個核心觀念：AI for UX 將生成式模型轉化為研究、發想、稽核與原型打造的得力助手。</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>請看這張現代人機協同設計流程圖。
+
+人類設計師負責掌舵：提供策略目標、同理心洞察與美學品味；AI 副駕駛與代理人群則在下方高效產出排版替代方案、無障礙檢查清單與樣板程式碼。
+
+設計生產力提升十倍，而人類的溫度與同理心依然穩坐駕駛座。
+
+總結這張投影片，請記住這個核心觀念：AI for UX 大幅提升設計產出效率，但絕不取代人類的創造力與同理心。</p></div><div class="bespoke-marp-note" data-index="45" tabindex="0"><p>提示詞工程是一項嚴謹的軟體工程技能。
+
+隨便輸入一句「幫我想幾個 App 點子」，AI 只會吐出空洞乏味的廢話。
+
+套用 RTCF 框架：
+Role：告訴 AI 它是無障礙專家。
+Task：指派精確任務——審查這張結帳畫面。
+Constraint：限制在尼爾森原則和手機尺寸之內。
+Format：要求輸出為四欄表格並帶有嚴重度分數。
+
+結構化的提示詞，才能換來可直接投入生產的專業分析。
+
+總結這張投影片，請記住這個核心觀念：掌握 RTCF 提示詞工程框架——角色、任務、約束與格式——方能引導 LLM 產出具備工程實戰價值的 UX 產物。</p></div><div class="bespoke-marp-note" data-index="46" tabindex="0"><p>檢視現代多代理人系統的工作模式。
+
+在 Google Antigravity 等先進開發環境中，多個專門代理人分工合作：研究代理人分析痛點、設計系統代理人產出樣式變數、程式碼代理人生成前端元件。
+
+請特別注意中央的人類工程師：Human-in-the-Loop。人類負責提供品味、架構把關與道德底線，確保產出的介面真正符合人性。
+
+總結這張投影片，請記住這個核心觀念：多代理人系統實現了 UI 原型的高速自動化產出，而人類工程師則提供關鍵的架構審查與同理心守門。</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>請看這張多代理人系統協同架構圖。
+
+研究、設計與實作代理人如同專業軟體團隊般平行分工，最後匯總至人類開發者眼前進行確認。
+
+在程式碼合併進正式分支前，人類永遠保有最終的核准把關權。
+
+總結這張投影片，請記住這個核心觀念：多代理人架構將設計挑戰分解為專業認知角色，並以人類審查閘道確保最終品質。</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>我們現在進入 6.4 節：UX for AI（UX4AI）。
+
+請大家注意這個重大的思維翻轉！在前一節，我們是「用 AI 來幫我們做設計 (AI for UX)」。現在，我們要探索一個更深奧的課題：「如何為 AI 產品本身設計出卓越的使用者體驗？(UX for AI)」。
+
+像 ChatGPT、GitHub Copilot、Gemini 這類 AI 應用，其運作本質與傳統確定性軟體截然不同。它們充滿了隨機機率、會有推論延遲、會一本正經胡說八道產生幻覺。
+
+我們該如何將尼爾森十大原則，昇華演進至這個生成式智慧的新時代？
+
+總結這張投影片，請記住這個核心觀念：UX for AI 建立了讓非確定性模型變得透明、可控且受人信賴的互動設計規範。</p></div><div class="bespoke-marp-note" data-index="49" tabindex="0"><p>為什麼為 AI 產品設計介面異常困難？
+
+傳統軟體是確定性的：按下儲存，檔案就乖乖寫入磁碟。使用者心智模型是機械且可預期的。
+
+AI 則是機率性的。它可能在週一寫出完美程式碼，週二卻憑空捏造一個不存在的 API。它還需要數十秒的推論時間。
+
+UX for AI 的核心任務就是「信任度校準」：幫助使用者清楚知道 AI 能做什麼、不能做什麼，並讓檢查錯誤與修復錯誤變得輕而易舉。
+
+總結這張投影片，請記住這個核心觀念：AI 互動設計必須正面迎擊非確定性、幻覺、推論延遲與信任度校準四大挑戰。</p></div><div class="bespoke-marp-note" data-index="50" tabindex="0"><p>看第一原則——系統狀態可見度——在 AI 時代的演進。
+
+當模型需要 15 秒推論時，傳統的轉圈圈會引發強烈焦慮。
+
+現代頂尖介面採用多重戰術：逐字打字機串流輸出、附上可展開的「思考過程」摺疊框，以及標註檢索來源的點擊膠囊。
+
+透明度化解了等待的焦慮。
+
+總結這張投影片，請記住這個核心觀念：文字串流輸出與可折疊思考軌跡，讓原本不透明的推論延遲轉化為清晰安心的系統狀態反饋。</p></div><div class="bespoke-marp-note" data-index="51" tabindex="0"><p>請看螢幕上這張現代 AI 推論介面。
+
+上方醒目的「已思考 12 秒」摺疊面板可以隨時點開，檢視模型在幕後的思考脈絡與調用的工具。
+
+搭配即時串流噴出的回答文字，等待感被即時的反饋完全取代。
+
+總結這張投影片，請記住這個核心觀念：可展開的思考軌跡與即時串流，化解了推論延遲的黑盒子焦慮。</p></div><div class="bespoke-marp-note" data-index="52" tabindex="0"><p>原則二與三在 AI 領域體現為身份透明與人類掌控權。
+
+在 NS02 中，軟體絕不能欺騙使用者自己在和真人醫生或律師對話，必須開誠布公。
+
+在 NS03 中，人類的掌控權至高無上：AI 講到一半講錯了，要有「停止生成」按鈕；使用者想換個問法，隨時能回頭編輯 prompt 開啟新分支。
+
+總結這張投影片，請記住這個核心觀念：以透明身份宣告、一鍵中斷生成與提示詞分支編輯，維護人類對 AI 的絕對掌控權。</p></div><div class="bespoke-marp-note" data-index="53" tabindex="0"><p>請看這些賦予使用者主控權的介面細節。
+
+推論中常駐的「停止生成」按鈕、游標懸停在歷史問題上時出現的編輯筆圖示，以及一鍵重新生成按鈕。
+
+主導權永遠牢牢握在人類使用者手中。
+
+總結這張投影片，請記住這個核心觀念：專屬的中斷按鈕、問題分叉編輯與重新生成機制，保障了使用者對 AI 的駕馭自由。</p></div><div class="bespoke-marp-note" data-index="54" tabindex="0"><p>在自主代理人時代，防錯原則（NS05）關乎系統的生死存亡。
+
+一個擁有終端機權限的 AI 代理人如果產生幻覺，執行了「rm -rf」，幾秒鐘內你的專案就會化為烏有。
+
+因此必須設置嚴密的人機協同防護圍欄：高風險操作必須強制暫停，展示 Git Diff 差異預覽，等待人類工程師點擊確認才准放行。
+
+總結這張投影片，請記住這個核心觀念：執行前確認彈窗與 Diff 差異預覽，是防範自主代理人產生災難性錯誤的關鍵防護防線。</p></div><div class="bespoke-marp-note" data-index="55" tabindex="0"><p>請看這張代理人執行確認介面。
+
+在執行任何終端機指令或改寫檔案之前，系統強制暫停，並用紅綠標示出每一行即將變更的程式碼，旁邊提供明確的「執行」與「取消」選項。
+
+工程師在每一行代碼觸碰硬碟前，都能進行最嚴謹的把關。
+
+總結這張投影片，請記住這個核心觀念：明確的執行前確認彈窗與 Diff 預覽，杜絕了自主代理人的脫序風險。</p></div><div class="bespoke-marp-note" data-index="56" tabindex="0"><p>最後看原則七與十在 AI 中的體現。
+
+在 NS07 中，工程師不想每次都打客氣的問句，直接輸入斜線指令 `/refactor` 或把 bug 截圖直接拖進視窗，極速解決問題。
+
+在 NS10 中，說明文件昇華為「可解釋性 AI（XAI）」：使用者有權利知道為什麼 AI 會給出這個建議。透明的文獻引註讓神秘的黑盒子轉變為可被檢驗的專業工具。
+
+總結這張投影片，請記住這個核心觀念：斜線指令加速專業工作流，而可解釋性引註則建立健全的校準信任。</p></div><div class="bespoke-marp-note" data-index="57" tabindex="0"><p>請看畫面上的引註實踐。
+
+每個段落後面標註著小小的引用編號膠囊，點擊後立刻在側邊欄展開知識庫中原本的文章段落。
+
+透明度把虛無飄渺的 AI 幻覺，定錨在扎扎實實的事實依據之上。
+
+總結這張投影片，請記住這個核心觀念：可互動的文獻引註與來源對照，提供了建立校準信任所需的透明度。</p></div><div class="bespoke-marp-note" data-index="58" tabindex="0"><p>讓我們檢核對 UX for AI 核心原則的掌握。
+
+思考自主代理人存取本機檔案系統時所面臨的嚴重安全與穩定風險。
+
+挑選出既能保護程式庫安全、又能保留人類主控權的最佳設計模式。</p></div><div class="bespoke-marp-note" data-index="59" tabindex="0"><p>正確答案是 B。
+
+無論 AI 多麼聰明，涉及修改實體檔案與執行指令的動作，永遠必須設置人類在線審查（HITL）防護網。
+
+總結這張投影片，請記住這個核心觀念：執行前預覽與人機協同審查確認，是保護系統完整性免受自主代理人誤失的關鍵安全模式。</p></div><div class="bespoke-marp-note" data-index="60" tabindex="0"><p>在第六章的尾聲，我們來到 6.5 節：易用性評估與工程整合。
+
+軟體工程團隊在產品上線前後，究竟該如何科學化地檢驗介面的易用性？
+
+在這一節中，我們將學習正式的專家啟發式評估（Heuristic Evaluation）方法、掌握尼爾森五級嚴重度評分標準、對比專家審查與真人測試的優劣，並進行全章填空回顧。
+
+總結這張投影片，請記住這個核心觀念：將專家啟發式評估與真實使用者測試相結合，能在軟體開發生命週期中系統性根絕易用性缺陷。</p></div><div class="bespoke-marp-note" data-index="61" tabindex="0"><p>如何落實專業的啟發式評估？
+
+由 3 到 5 位獨立專家逐一檢查所有畫面，對照十條原則找出問題。
+
+每發現一個缺陷，必須賦予 0 到 4 分的嚴重度：
+0 級不算是問題。
+1 級只是外觀小瑕疵。
+2 級是輕度困擾。
+3 級是重大缺陷——例如標籤嚴重誤導。
+4 級是毀滅性災難——例如付款按鈕失靈。4 級問題不清零，軟體絕對不准發布！
+
+總結這張投影片，請記住這個核心觀念：依據尼爾森五級嚴重度評級量表，有系統地排定易用性缺陷修復的優先順序。</p></div><div class="bespoke-marp-note" data-index="62" tabindex="0"><p>對比專家啟發式評估與真實使用者測試。
+
+啟發式評估快又便宜，由內部專家在設計初期執行，能快速清除 75% 明顯的排版與防錯疏漏。
+
+真實使用者測試則是將產品交到真實客戶手中，雖然耗時費力，但能揭露出專家永遠猜測不到的真實行為盲點。
+
+兩者是絕佳的互補拍檔：先用啟發式評估掃除低級錯誤，再用真人測試驗證真實工作流。
+
+總結這張投影片，請記住這個核心觀念：前期以專家啟發式評估快速掃除明顯缺陷，後期以真人測試驗證真實業務流程。</p></div><div class="bespoke-marp-note" data-index="63" tabindex="0"><p>讓我們進行全章觀念大盤點！
+
+請大家看著螢幕上的六個題目，在腦海中快速填入正確解答。</p></div><div class="bespoke-marp-note" data-index="64" tabindex="0"><p>解答揭曉：
+
+1. 諾曼門 (Norman Door)。
+2. 雅各布定律 (Jakob's Law)。
+3. NS05 防錯設計。
+4. RTCF 提示詞框架。
+5. NS01 系統狀態可見度。
+6. 4 級（易用性災難）。
+
+大家都掌握得非常精準！
+
+總結這張投影片，請記住這個核心觀念：這些核心原則構成了現代人機互動與 AI 介面設計的工程智識基石。</p></div><div class="bespoke-marp-note" data-index="65" tabindex="0"><p>在第六章的最後，請記住：科技的價值，永遠取決於它所賦能的人性體驗。
+
+你可以寫出世界上最完美的並發架構，但如果人類使用者看不懂、不會用，所有的工程心血都將付諸流水。
+
+深刻內化尼爾森原則，同理你的使用者。運用 AI 加速你的設計流程，並以透明、可控且尊嚴的原則打造 AI 產品。
+
+總結這張投影片，請記住這個核心觀念：偉大的軟體工程，將頂尖的技術結構嚴謹度，與溫暖、直覺的以人為本設計完美融合。</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.5.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>
