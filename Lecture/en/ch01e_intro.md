@@ -8,7 +8,7 @@
 > * **1.5 What is Software Engineering?**: Formal definition, the SE Process, four universal core activities (Specification, Design, Validation, Evolution), the Software Engineering Body of Knowledge (BOK), dispelling software myths (Brooks's Law, late change costs), and modern toolchains.
 > * **1.6 Software Quality Model**: Why quality is more than "no bugs", ISO/IEC 25010 (SQuaRE) 8 product characteristics, operational sub-attributes, and architectural trade-off analysis.
 > * **1.7 Professional Ethics, Social Responsibility & Dark Patterns**: The ACM/IEEE Code of Ethics 8 principles, real-world breaches (Volkswagen Dieselgate, Cambridge Analytica), and deceptive UI/UX Dark Patterns.
-> * **1.8 AI in Software Engineering**: The paradigm shift (Software 1.0 $\rightarrow$ 2.0 $\rightarrow$ 3.0), Vibe Programming risks, empirical studies (GitClear, Purdue, NYU), real-world incidents, genuine productivity triumphs (Amazon Java migration, Accenture study), and engineering rigor in the AI era.
+> * **1.8 AI in Software Engineering**: The paradigm shift (Software 1.0 → 2.0 → 3.0), Vibe Programming risks, empirical studies (GitClear, Purdue, NYU), real-world incidents, genuine productivity triumphs (Amazon Java migration, Accenture study), and engineering rigor in the AI era.
 > * **1.9 Frequently Asked Questions (FAQ) in Software Engineering**.
 > * **1.10 Concept Summary & Fill-in-the-Blank Quiz**.
 > * **Appendix: Solutions & Detailed Explanations to Interactive Activities**.
@@ -159,10 +159,10 @@ In production systems, **over 80% of total engineering effort, complexity, and c
 
 ### 1.3.3 Why the Four Pillars Demand the Software Life Cycle (SDLC)
 
-* **Documentation $\longleftrightarrow$ Requirements & Architecture:** Code only documents *how* a system works; documentation captures *why* it was designed that way. Without architectural documentation, multi-year cross-functional collaboration is impossible.
-* **Programs $\longleftrightarrow$ Implementation & Validation:** Writing code is only the initial spark. Engineering requires continuous automated testing, refactoring, and integration to prevent code rot and technical debt.
-* **Data $\longleftrightarrow$ State Persistence & Long-Term Evolution:** Code can be re-deployed in seconds, but production data must endure for decades. This requires schema versioning, backward compatibility, and zero-downtime database migration strategies.
-* **Procedures $\longleftrightarrow$ DevOps & Site Reliability Engineering (SRE):** Code running exclusively on `localhost` is a toy. Engineering requires containerization, automated rollback pipelines, canary deployments, and observability telemetry.
+* **Documentation $\longleft→ Requirements & Architecture:** Code only documents *how* a system works; documentation captures *why* it was designed that way. Without architectural documentation, multi-year cross-functional collaboration is impossible.
+* **Programs $\longleft→ Implementation & Validation:** Writing code is only the initial spark. Engineering requires continuous automated testing, refactoring, and integration to prevent code rot and technical debt.
+* **Data $\longleft→ State Persistence & Long-Term Evolution:** Code can be re-deployed in seconds, but production data must endure for decades. This requires schema versioning, backward compatibility, and zero-downtime database migration strategies.
+* **Procedures $\longleft→ DevOps & Site Reliability Engineering (SRE):** Code running exclusively on `localhost` is a toy. Engineering requires containerization, automated rollback pipelines, canary deployments, and observability telemetry.
 
 ### 1.3.4 Practical Example: YouBike (Urban Bike-Sharing System)
 
@@ -302,10 +302,10 @@ Regardless of whether a team follows Agile, Scrum, Kanban, or Waterfall, every s
 
 Which of the following pairs correctly matches a specific software engineering action with its corresponding universal core activity?
 
-* A) Conducting stakeholder interviews to draft user stories $\rightarrow$ Software Specification
-* B) Writing automated unit tests to mock database responses $\rightarrow$ Software Design & Implementation
-* C) Refactoring database schemas to improve query speed $\rightarrow$ Software Validation
-* D) Swapping a third-party payment API for a new gateway $\rightarrow$ Software Specification
+* A) Conducting stakeholder interviews to draft user stories → Software Specification
+* B) Writing automated unit tests to mock database responses → Software Design & Implementation
+* C) Refactoring database schemas to improve query speed → Software Validation
+* D) Swapping a third-party payment API for a new gateway → Software Specification
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq3)
 
@@ -474,10 +474,10 @@ ISO/IEC 25010 (Software product Quality Requirements and Evaluation) superseded 
 
 Which of the following matches a real-world software issue with its corresponding ISO 25010 quality characteristic?
 
-* A) A database query taking 15 seconds to return results $\rightarrow$ Maintainability (Testability)
-* B) A system crash occurring when a third-party API goes offline $\rightarrow$ Reliability (Fault Tolerance)
-* C) Developers struggling to write unit tests due to tight coupling $\rightarrow$ Portability (Adaptability)
-* D) An unencrypted session cookie allowing account takeover $\rightarrow$ Usability (Operability)
+* A) A database query taking 15 seconds to return results → Maintainability (Testability)
+* B) A system crash occurring when a third-party API goes offline → Reliability (Fault Tolerance)
+* C) Developers struggling to write unit tests due to tight coupling → Portability (Adaptability)
+* D) An unencrypted session cookie allowing account takeover → Usability (Operability)
 
 [Interactive Activity (線上作答)](https://nlhsueh.github.io/nickedupocket/#/student/ase-ch01-ccq6)
 
@@ -604,9 +604,9 @@ AI is not a hazard to be rejected; when governed with engineering discipline, it
 * **Enterprise Flow Acceleration (Accenture & GitHub Copilot):** Across thousands of enterprise engineers, routine task delivery accelerated by **55%**, with 90% of developers reporting greater job fulfillment and reduced cognitive fatigue when paired with peer code review.
 * **The Engineering Imperative:** **Harness and govern—neither blindly accept nor dogmatically reject!** The professional stance is to manage AI as a collaborative drafting assistant subject to strict verification.
 
-### 1.8.5 The Paradigm Shift: Software 1.0 $\rightarrow$ 2.0 $\rightarrow$ 3.0
+### 1.8.5 The Paradigm Shift: Software 1.0 → 2.0 → 3.0
 
-* **Software 1.0 (Code-Centric):** Humans write explicit, deterministic algorithms line-by-line ($f(x) \rightarrow y$).
+* **Software 1.0 (Code-Centric):** Humans write explicit, deterministic algorithms line-by-line (f(x) → y).
 * **Software 2.0 (Prompt-Driven):** Humans write natural language prompts; LLMs generate code, functions, and boilerplate.
 * **Software 3.0 (Agentic Systems):** Humans specify high-level goals and architectural constraints; autonomous AI agents iteratively plan, execute terminal tools, run test suites, and refactor code.
 * **The Engineer's Transformation:** As AI commoditizes boilerplate syntax typing, the engineer's value shifts to **System Architect, Specification Designer, and Ultimate Verification Authority**.

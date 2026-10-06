@@ -232,13 +232,13 @@ The V-Model bends the linear waterfall downward and upward into a symmetrical "V
 
 The power of the V-Model lies in the **horizontal dashed lines** linking each decomposition phase on the left with its corresponding verification phase on the right:
 
-1. **User Requirements $\longleftrightarrow$ Acceptance Testing:**
+1. **User Requirements $\longleft→ Acceptance Testing:**
    * *Core Question:* *"Are we building the right system?"* (Validation).
    * *Mechanism:* While requirements engineers define business workflows and user stories on the left, quality assurance leads simultaneously author the **User Acceptance Test (UAT) Plan** on the right.
-2. **System Architecture $\longleftrightarrow$ System Integration Testing:**
+2. **System Architecture $\longleft→ System Integration Testing:**
    * *Core Question:* *"Are subsystems and microservices communicating correctly?"* (Verification).
    * *Mechanism:* While architects define network protocols, database schemas, and API contracts on the left, integration engineers concurrently author automated integration test suites verifying inter-service boundaries.
-3. **Detailed Component Design $\longleftrightarrow$ Unit / Component Testing:**
+3. **Detailed Component Design $\longleft→ Unit / Component Testing:**
    * *Core Question:* *"Do individual algorithms and classes execute correctly without crashing?"* (Verification).
    * *Mechanism:* While software engineers specify class interfaces, data structures, and edge-case behaviors on the left, they write unit test specifications verifying algorithms before writing production code.
 

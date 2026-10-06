@@ -274,10 +274,10 @@ IEEE 標準對軟體的正式定義為：
 > 💡🧠 **觀念檢驗題 (CCQ 5) —— 實務問題與 ISO 25010 品質特徵對應**：
 > 
 > *問題*：以下哪一個選項正確將真實世界的軟體問題與其對應的 ISO 25010 品質特徵進行了配對？
-> * A) 資料庫查詢需要 15 秒才能回傳結果 $\rightarrow$ Maintainability (Testability)
-> * B) 當第三方外部 API 離線時，整個系統瞬間全面崩潰停擺 $\rightarrow$ Reliability (Fault Tolerance)
-> * C) 由於模組間強烈緊密耦合，開發者極難為其撰寫單元測試 $\rightarrow$ Portability (Adaptability)
-> * D) 未加密的 Session Cookie 導致惡意攻擊者輕易竊取身分登入他人帳號 $\rightarrow$ Usability (Operability)
+> * A) 資料庫查詢需要 15 秒才能回傳結果 → Maintainability (Testability)
+> * B) 當第三方外部 API 離線時，整個系統瞬間全面崩潰停擺 → Reliability (Fault Tolerance)
+> * C) 由於模組間強烈緊密耦合，開發者極難為其撰寫單元測試 → Portability (Adaptability)
+> * D) 未加密的 Session Cookie 導致惡意攻擊者輕易竊取身分登入他人帳號 → Usability (Operability)
 > 
 > [👉 前往附錄查看解答與詳細解析](#ccq-5--實務問題與-iso-25010-品質特徵對應)
 
@@ -412,10 +412,10 @@ IEEE 標準對軟體的正式定義為：
 > 💡🧠 **觀念檢驗題 (CCQ 6) —— 工程動作與核心活動配對**：
 > 
 > *問題*：以下哪一個配對正確將特定的軟體工程動作與其對應的通用核心活動進行了對應？
-> * A) 進行利害關係人訪談以撰寫使用者故事 $\rightarrow$ Software Specification
-> * B) 撰寫自動化單元測試以模擬資料庫回應 $\rightarrow$ Software Design & Implementation
-> * C) 重構資料庫綱要以改善查詢速度 $\rightarrow$ Software Validation
-> * D) 將第三方的付款 API 替換為新的金流閘道 $\rightarrow$ Software Specification
+> * A) 進行利害關係人訪談以撰寫使用者故事 → Software Specification
+> * B) 撰寫自動化單元測試以模擬資料庫回應 → Software Design & Implementation
+> * C) 重構資料庫綱要以改善查詢速度 → Software Validation
+> * D) 將第三方的付款 API 替換為新的金流閘道 → Software Specification
 > 
 > [👉 前往附錄查看解答與詳細解析](#ccq-6--工程動作與核心活動配對)
 
@@ -617,7 +617,7 @@ Large Language Models (LLMs) 與 AI 代理程式正在徹底改變軟體開發�
 <details>
 <summary>👉 點擊展開查看：CCQ 5 解答與詳細解析（實務問題與 ISO 25010 品質特徵對應）</summary>
 
-* **正確答案**：**B** (當第三方外部 API 離線時，整個系統瞬間全面崩潰停擺 $\rightarrow$ Reliability (Fault Tolerance))
+* **正確答案**：**B** (當第三方外部 API 離線時，整個系統瞬間全面崩潰停擺 → Reliability (Fault Tolerance))
 * **詳細解析**：
   * **B** 正確：系統在面臨外部第三方服務或 API 故障時不崩潰、能妥善捕捉例外並維持基本運作，這正是**可靠性 (Reliability)** 中**容錯性 (Fault Tolerance)** 子特徵的定義。
   * **A** 錯誤：資料庫查詢耗時 15 秒屬於效能效率（Performance Efficiency - Time Behavior）問題。
@@ -630,7 +630,7 @@ Large Language Models (LLMs) 與 AI 代理程式正在徹底改變軟體開發�
 <details>
 <summary>👉 點擊展開查看：CCQ 6 解答與詳細解析（工程動作與核心活動配對）</summary>
 
-* **正確答案**：**A** (進行利害關係人訪談以撰寫使用者故事 $\rightarrow$ Software Specification)
+* **正確答案**：**A** (進行利害關係人訪談以撰寫使用者故事 → Software Specification)
 * **詳細解析**：
   * **A** 正確：透過與利害關係人進行訪談來釐清需求並撰寫成使用者故事，是「需求規格制定 (Specification)」活動的核心工作。
   * **B** 錯誤：撰寫測試程式屬於「驗證與確認 (Validation)」活動，而非設計與實現。

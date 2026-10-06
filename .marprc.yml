@@ -1,3 +1,6 @@
 themeSet:
   - themes/ase-theme.css
+  - themes/quiz-theme.css
+  - themes/syllabus-theme.css
 html: true
+
