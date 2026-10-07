@@ -356,6 +356,18 @@
       border: 1px solid #a7f3d0;
     }
 
+    .card-tag.syllabus-tag {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .card-tag.case-tag {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
     .lang-indicator {
       font-size: 11px;
       font-weight: 700;
@@ -531,14 +543,25 @@
     }
 
     .btn-primary-syllabus {
-      background-color: #b45309;
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
       color: white !important;
       border: 1px solid #92400e;
     }
 
     .btn-primary-syllabus:hover {
-      background-color: #92400e !important;
+      background: linear-gradient(135deg, #b45309 0%, #92400e 100%) !important;
       box-shadow: 0 4px 12px rgba(180, 83, 9, 0.35);
+    }
+
+    .btn-primary-case {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: white !important;
+      border: 1px solid #0369a1;
+    }
+
+    .btn-primary-case:hover {
+      background: linear-gradient(135deg, #0369a1 0%, #075985 100%) !important;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.35);
     }
 
     /* Secondary PDF buttons */
@@ -747,17 +770,8 @@
       <p>結合經典工程嚴謹性、現代工具鏈與 AI 規格驅動工程 (Spec-Driven AI Engineering)，涵蓋全生命週期模型、需求塑模、系統架構與品質保證。</p>
       
       <div class="hero-links">
-        <a href="Slide/html/slide00t_syllabus.html" class="hero-btn" style="background-color: #b45309; color: white; border: 1px solid #92400e; box-shadow: 0 4px 14px rgba(180, 83, 9, 0.35);" target="_blank">
+        <a href="Slide/html/slide00t_syllabus.html" class="hero-btn" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(180, 83, 9, 0.4);" target="_blank">
           📋 課程綱要與學習地圖 (Syllabus)
-        </a>
-        <a href="Slide/html/slide99t_quiz.html" class="hero-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);" target="_blank">
-          🧠 觀念測驗題庫 🇹🇼 (Ch 1–3 Quiz)
-        </a>
-        <span class="hero-btn hero-btn-disabled" title="案例規格書編整中 (Coming Soon)">
-          🍕 美食外送專案規格與設計書 (編整中)
-        </span>
-        <a href="https://github.com/nlhsueh" class="hero-btn hero-btn-outline" target="_blank">
-          🐙 GitHub 課程專案庫
         </a>
       </div>
     </div>
@@ -773,17 +787,8 @@
       <p>Bridging foundational engineering rigor, modern toolchains, and Spec-Driven AI Engineering. Covering SDLC models, requirements engineering, UML modeling, architecture design, and automated QA testing.</p>
       
       <div class="hero-links">
-        <a href="Slide/html/slide00e_syllabus.html" class="hero-btn" style="background-color: #b45309; color: white; border: 1px solid #92400e; box-shadow: 0 4px 14px rgba(180, 83, 9, 0.35);" target="_blank">
+        <a href="Slide/html/slide00e_syllabus.html" class="hero-btn" style="background: linear-gradient(135deg, #d97706 0%, #b45309 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(180, 83, 9, 0.4);" target="_blank">
           📋 Course Syllabus & Roadmap
-        </a>
-        <a href="Slide/html/slide99e_quiz.html" class="hero-btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border: none; box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);" target="_blank">
-          🧠 Concept Check Quiz Deck 🇬🇧 (Ch 1–3)
-        </a>
-        <span class="hero-btn hero-btn-disabled" title="Case study in preparation (Coming Soon)">
-          🍕 Food Delivery Case Study (In Preparation)
-        </span>
-        <a href="https://github.com/nlhsueh" class="hero-btn hero-btn-outline" target="_blank">
-          🐙 GitHub Course Repository
         </a>
       </div>
     </div>
@@ -791,6 +796,71 @@
 
   <main class="container">
     <div class="modules-grid">
+
+      <!-- ==========================================================================
+           Unit 00: 課程綱要與學習地圖 (Course Syllabus & Roadmap)
+           ========================================================================== -->
+      <div class="module-card" style="border-color: #fde68a; background: linear-gradient(180deg, #ffffff 0%, #fffdf5 100%);">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
+          <div class="card-header-bar">
+            <span class="card-tag syllabus-tag">Unit 00 · 課程綱要</span>
+            <span class="lang-indicator">🇹🇼 大學部課程綱要</span>
+          </div>
+          <h2>課程綱要與學習地圖</h2>
+          <div class="en-subtitle">Course Syllabus & Learning Roadmap</div>
+          <p class="desc">115學年度課程總覽、評分標準（期中、期末、課堂互動與期末專題）、五大核心模組進度規劃，以及 AI 輔助軟體工程實務專案指引。</p>
+        </div>
+
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag syllabus-tag">Unit 00 · Syllabus</span>
+            <span class="lang-indicator">🇬🇧 Graduate Seminar</span>
+          </div>
+          <h2>Course Syllabus & Roadmap</h2>
+          <div class="en-subtitle">Curriculum Overview & Pedagogical Policy</div>
+          <p class="desc">Course philosophy, CLOs, five core modules, grading scheme, three capstone tracks (Panel Discussion, System Prototype, Empirical Experiment), and academic integrity policy.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
+          <div>
+            <div class="action-group-label">🖥️ 線上互動簡報 (HTML Slides)</div>
+            <a href="Slide/html/slide00t_syllabus.html" class="btn btn-primary-syllabus btn-full" target="_blank">
+              📋 開啟中文大綱簡報 (HTML)
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 投影片下載 (PDF)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-tw/slide00t_syllabus.pdf" class="btn btn-secondary btn-full" target="_blank" style="grid-column: span 2;">
+                📄 課程綱要 PDF 下載
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">🖥️ Interactive HTML Slides</div>
+            <a href="Slide/html/slide00e_syllabus.html" class="btn btn-primary-syllabus btn-full" target="_blank">
+              📋 Open English Syllabus (HTML)
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 Downloads (PDF)</div>
+            <div class="btn-row">
+              <a href="Slide/pdf-en/slide00e_syllabus.pdf" class="btn btn-secondary btn-full" target="_blank" style="grid-column: span 2;">
+                📄 Syllabus PDF Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- ==========================================================================
            Unit 01: 課程導論
@@ -979,11 +1049,6 @@
                 📖 課堂講義
               </a>
             </div>
-            <div style="margin-top: 6px;">
-              <span class="btn btn-outline btn-full btn-disabled" title="案例規格書編整中 (Coming Soon)">
-                🍕 美食外送案例需求規格書 (編整中)
-              </span>
-            </div>
           </div>
         </div>
 
@@ -1005,11 +1070,6 @@
               <a href="Lecture/en/ch03e_reqt.md" class="btn btn-outline" target="_blank">
                 📖 Lecture Notes
               </a>
-            </div>
-            <div style="margin-top: 6px;">
-              <span class="btn btn-outline btn-full btn-disabled" title="Case study in preparation (Coming Soon)">
-                🍕 Food Delivery Case Study (In Preparation)
-              </span>
             </div>
           </div>
         </div>
@@ -1310,6 +1370,77 @@
             <div class="btn-row">
               <span class="btn btn-disabled">📄 Slide PDF</span>
               <span class="btn btn-disabled">📖 Lecture Notes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+           Case Study: 美食外送系統實戰案例 (Food Delivery Case Study)
+           ========================================================================== -->
+      <div class="module-card" style="border-color: #bae6fd; background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);">
+        <!-- ZH-TW Card Top -->
+        <div class="card-top" data-lang="zh-tw">
+          <div class="card-header-bar">
+            <span class="card-tag case-tag">Case Study · 貫穿案例</span>
+            <span class="lang-indicator">🍕 系統規格與設計</span>
+          </div>
+          <h2>美食外送系統實戰案例</h2>
+          <div class="en-subtitle">Food Delivery System Case Study</div>
+          <p class="desc">貫穿全學期的真實軟體工程實戰案例：從需求規格說明書 (SRS) 到系統架構與物件導向設計說明書 (SDD)，展示業界標準工程文件與規格驅動開發方法。</p>
+        </div>
+
+        <!-- EN Card Top -->
+        <div class="card-top" data-lang="en">
+          <div class="card-header-bar">
+            <span class="card-tag case-tag">Case Study · Engineering Docs</span>
+            <span class="lang-indicator">🍕 Specifications & Architecture</span>
+          </div>
+          <h2>Food Delivery System Case Study</h2>
+          <div class="en-subtitle">Full-Lifecycle Spec-Driven Example</div>
+          <p class="desc">A semester-long running case study demonstrating professional SE documentation: Software Requirements Specification (SRS) and Software Design Document (SDD) with domain models.</p>
+        </div>
+
+        <!-- ZH-TW Actions -->
+        <div class="card-actions" data-lang="zh-tw">
+          <div>
+            <div class="action-group-label">📖 線上文件閱讀 (Interactive Docs)</div>
+            <a href="doc.html" class="btn btn-primary-case btn-full" target="_blank">
+              🍕 開啟案例文件中心 (Doc Viewer)
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 規格與設計文件下載 (PDF)</div>
+            <div class="btn-row">
+              <a href="Lecture/food_delivery/srs_food_delivery.pdf" class="btn btn-secondary" target="_blank">
+                📄 需求規格 (SRS)
+              </a>
+              <a href="Lecture/food_delivery/sdd_food_delivery.pdf" class="btn btn-secondary" target="_blank">
+                📐 架構設計 (SDD)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EN Actions -->
+        <div class="card-actions" data-lang="en">
+          <div>
+            <div class="action-group-label">📖 Interactive Documentation</div>
+            <a href="doc.html" class="btn btn-primary-case btn-full" target="_blank">
+              🍕 Open Case Study Docs (Viewer)
+            </a>
+          </div>
+
+          <div>
+            <div class="action-group-label">📄 PDF Downloads</div>
+            <div class="btn-row">
+              <a href="Lecture/food_delivery/srs_food_delivery_en.pdf" class="btn btn-secondary" target="_blank">
+                📄 SRS PDF (EN)
+              </a>
+              <a href="Lecture/food_delivery/sdd_food_delivery_en.pdf" class="btn btn-secondary" target="_blank">
+                📐 SDD PDF (EN)
+              </a>
             </div>
           </div>
         </div>
